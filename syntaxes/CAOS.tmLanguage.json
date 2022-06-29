@@ -1,0 +1,362 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "source.caos",
+  "patterns": [
+    {
+      "include": "#caos2comment"
+    },
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#string"
+    },
+    {
+      "include": "#gsub"
+    },
+    {
+      "include": "#subr_header"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#constants"
+    },
+    {
+      "include": "#equality"
+    },
+    {
+      "include": "#variables"
+    },
+    {
+      "include": "#commands"
+    },
+    {
+      "include": "#literals"
+    }
+  ],
+  "repository": {
+    "caos2value": {
+      "patterns": [
+        {
+          "match": "[ \t]*(\"(\\\\.|[^\"\\\\])*\")",
+          "captures": {
+            "1": {
+              "name": "string.quoted.quoted.caos2"
+            }
+          }
+        },
+        {
+          "match": "[ \t]*([+-]?[0-9]+)",
+          "captures": {
+            "1": {
+              "name": "constant.numeric.caos2"
+            }
+          }
+        },
+        {
+          "match": "[ \t]*([a-zA-Z_](\\\\.|[^ \\\\])*)",
+          "captures": {
+            "1": {
+              "name": "string.quoted.other.caos2"
+            }
+          }
+        }
+      ]
+    },
+    "caos2comment": {
+      "patterns": [
+        {
+          "match": "^\\*\\*[^* ]+(?=\n|$)",
+          "name": "markup.bold.caos2"
+        },
+        {
+          "include": "#caos2statement"
+        }
+      ]
+    },
+    "caos2statement": {
+      "begin": "^[ \t]*(\\*#)[ \t]*",
+      "end": "(?=\n|$)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.constant.character.caos2"
+        }
+      },
+      "patterns": [
+        {
+          "begin": "([^=]+?)[ \t]*(=)",
+          "end": "(?=$)",
+          "beginCaptures": {
+            "1": {
+              "name": "support.constant.caos2"
+            },
+            "2": {
+              "name": "keyword.operator.comparison.equality.caos2"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#caos2value"
+            }
+          ]
+        },{
+          "begin": "([a-zA-Z_](\\\\.|[^ \\\\])*)",
+          "end": "(?=$)",
+          "beginCaptures": {
+            "1": {
+              "name": "support.constant.caos2"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#caos2value"
+            }
+          ]
+        }
+      ]
+    },
+    "comments": {
+      "match": "^\\s*\\*[^\n]*",
+      "name": "comment.line.caos"
+    },
+    "commands": {
+      "match": "([a-zA-Z$_][a-zA-Z$_+0-9]{2}[a-zA-Z_+0-9:])",
+      "name": "entity.name.function.caos"
+    },
+    "variables": {
+      "name": "variables.other.caos",
+      "patterns": [
+        {
+          "comment": "Old variables",
+          "match": "(?i)\\b(var|obv)[0-9]\\b"
+        },
+        {
+          "comment": "variables",
+          "match": "(?i)\\b(va|ov|mv)[0-9]{2}\\b",
+          "name": "variables.other.caos"
+        }
+      ]
+    },
+    "doif": {
+      "patterns": [
+        {
+          "name": "keyword.control.doif.caos",
+          "match": "(?i)\\b(doif|elif|else|endi)\\b"
+        }
+      ]
+    },
+    "enum": {
+      "patterns": [
+        {
+          "name": "keyword.control.enum.caos",
+          "match": "(?i)\\b(enum|epas|escn|esee|etch|next|nscn|econ)\\b"
+        }
+      ]
+    },
+    "scrp": {
+      "patterns": [
+        {
+          "name": "keyword.control.scrp.caos",
+          "match": "(?i)\\b(scrp|iscr|rscr|endm)\\b"
+        }
+      ]
+    },
+    "loop": {
+      "patterns": [
+        {
+          "name": "keyword.control.loop.caos",
+          "match": "(?i)\\b(loop|untl|ever)\\b"
+        }
+      ]
+    },
+    "repe": {
+      "patterns": [
+        {
+          "name": "keyword.control.repe.caos",
+          "match": "(?i)\\b(reps|repe)\\b"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "include": "#doif"
+        },
+        {
+          "include": "#enum"
+        },
+        {
+          "include": "#scrp"
+        },
+        {
+          "include": "#retn"
+        },
+        {
+          "include": "#loop"
+        },
+        {
+          "include": "#repe"
+        }
+      ]
+    },
+    "constants": {
+      "name": "constant.language",
+      "match": "(?i)]\\b(_UP_|DOWN|LEFT|RGHT|OFF_|ON__|FORE)\\b"
+    },
+    "gsub": {
+      "begin": "(?i)\\b(gsub)\\b",
+      "end": "\\b([a-zA-Z].+|[^\\s]{4})\\b",
+      "beginCaptures": {
+        "0": {
+          "name": "entity.name.function.caos"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "entity.name.selector.subroutine_name.caos"
+        }
+      }
+    },
+    "subr_header": {
+      "begin": "(?i)\\b(subr)\\b",
+      "end": "\\b([a-zA-Z].+|[^\\s]{4})\\b",
+      "beginCaptures": {
+        "0": {
+          "name": "keyword.control.caos"
+        }
+      },
+      "endCaptures": {
+        "0": {
+          "name": "entity.name.selector.subroutine_name.caos"
+        }
+      }
+    },
+    "retn": {
+      "match": "(?i)\\b(retn)\\b",
+      "name": "keyword.control.subr.caos"
+    },
+    "equality": {
+      "patterns": [
+        {
+          "match": "(?i)\\b(gt|>)\\b",
+          "name": "keyword.operator.relational.gt.caos"
+        },
+        {
+          "match": "(?i)\\b(ge|>=)\\b",
+          "name": "keyword.operator.relational.gte.caos"
+        },
+        {
+          "match": "(?i)\\b(lt|<)\\b",
+          "name": "keyword.operator.relational.lt.caos"
+        },
+        {
+          "match": "(?i)\\b(le|<=)\\b",
+          "name": "keyword.operator.relational.lte.caos"
+        },
+        {
+          "match": "(?i)\\b(eq|=|bt)\\b",
+          "name": "keyword.operator.comparison.equality.caos"
+        },
+        {
+          "match": "(?i)\\b(ne|<>|bf)\\b",
+          "name": "keyword.operator.comparison.non-equality.caos"
+        }
+      ]
+    },
+    "string": {
+      "name": "string",
+      "patterns": [
+        {
+          "include": "#quote_string"
+        },
+        {
+          "include": "#c1_string"
+        }
+      ]
+    },
+    "quote_string": {
+      "name": "string.quoted.double.caos",
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.caos"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.caos"
+        }
+      },
+      "patterns": [
+        {
+          "match": "[^\"]"
+        },
+        {
+          "match": "\\\\.",
+          "name": "constant.character.escape.caos"
+        }
+      ]
+    },
+    "c1_string": {
+      "begin": "\\[",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.caos"
+        }
+      },
+      "end": "\\]",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.caos"
+        }
+      },
+      "match": "[^\\\\]]+"
+    },
+    "literals": {
+      "patterns": [
+        {
+          "include": "#byte_string"
+        },
+        {
+          "match": "'([^']|\\\\.)'",
+          "name": "string.unquoted.caos"
+        },
+        {
+          "match": "[-+]?[0-9]*\\.[0-9]+",
+          "name": "constant.numeric.float.caos"
+        },
+        {
+          "match": "[+-]?[0-9]+",
+          "name": "constant.numeric.caos"
+        }
+      ]
+    },
+    "byte_string": {
+      "begin": "\\[",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.caos"
+        }
+      },
+      "end": "\\]",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.caos"
+        }
+      },
+      "patterns": [
+        {
+          "match": "( |\\d|R)+"
+        }
+      ],
+      "name": "string.other.caos"
+    },
+    "subroutine_name": {
+      "match": "([a-zA-Z].+|[^\\s]{4})",
+      "name": "entity.name.section.caos"
+    }
+  }
+}

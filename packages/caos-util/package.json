@@ -1,0 +1,99 @@
+{
+  "name": "@bedalton/caos-util",
+  "version": "0.0.1",
+  "description": "Utility methods for parsing and validating CAOS scripts for the Creatures games",
+  "types": "./lib/CaosUtil.d.ts",
+  "main": "lib/CaosUtil.js",
+  "repository": {
+    "type": "git",
+    "directory": "packages/caos-util",
+    "url": "https://github.com/bedalton/caos-language-server"
+  },
+  "exports": {
+    ".": "./lib/CaosUtil.js",
+    "./commands": "./lib/commands.js",
+    "./completions": "./lib/completions.js",
+    "./constants": "./lib/constants.js",
+    "./context-walker": "./lib/context-walker.js",
+    "./cursor-data": "./lib/cursor-data.js",
+    "./formatter": "./lib/formatter.js",
+    "./goto": "./lib/goto.js",
+    "./hover-documentation": "./lib/hover-documentation.js",
+    "./inlay-hints": "./lib/inlay-hints.js",
+    "./is-similar": "./lib/is-similar.js",
+    "./position-utils": "./lib/position-utils.js",
+    "./repack": "./lib/repack.js",
+    "./semantic-highlighter": "./lib/semantic-highlighter.js",
+    "./server": "./src/server.d.ts",
+    "./subroutines": "./lib/subroutines.js",
+    "./token-range": "./lib/token-range.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo && mkdir -p lib",
+    "prepack": "yarn build",
+    "build": "yarn clean &&  cp ./src/*.{js,d.ts} ./lib/ && tsc --build",
+    "test": "echo 'no test'",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
+  },
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./lib/CaosUtil.d.ts"
+      ],
+      "./commands": [
+        "./lib/commands.d.ts"
+      ],
+      "./completions": [
+        "./lib/completions.d.ts"
+      ],
+      "./constants": [
+        "./lib/constants.d.ts"
+      ],
+      "./context-walker": [
+        "./lib/context-walker.d.ts"
+      ],
+      "./cursor-data": [
+        "./lib/cursor-data.d.ts"
+      ],
+      "./formatter": [
+        "./lib/formatter.d.ts"
+      ],
+      "./goto": [
+        "./lib/goto.d.ts"
+      ],
+      "./hover-documentation": [
+        "./lib/hover-documentation.d.ts"
+      ],
+      "./inlay-hints": [
+        "./lib/inlay-hints.d.ts"
+      ],
+      "./is-similar": [
+        "./lib/is-similar.d.ts"
+      ],
+      "./position-utils": [
+        "./lib/position-utils.d.ts"
+      ],
+      "./repack": [
+        "./lib/repack.d.ts"
+      ],
+      "./semantic-highlighter": [
+        "./lib/semantic-highlighter.d.ts"
+      ],
+      "./server": [
+        "./src/server.d.ts"
+      ],
+      "./subroutines": [
+        "./lib/subroutines.d.ts"
+      ],
+      "./token-range": [
+        "./lib/token-range.d.ts"
+      ]
+    }
+  },
+  "devDependencies": {
+    "vscode-languageserver-types": "^3.17.1"
+  }
+}

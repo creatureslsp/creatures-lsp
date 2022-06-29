@@ -1,0 +1,45 @@
+{
+  "name": "@bedalton/caos-vscode-client",
+  "displayName": "CAOSEditor",
+  "description": "An editor for the Creature's CAOS language",
+  "version": "0.0.1",
+  "main": "./dist/extension.js",
+  "types": "./dist/extension.d.ts",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.67.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "repository": {
+    "type": "git",
+    "directory": "packages/client",
+    "url": "https://github.com/bedalton/caos-language-server"
+  },
+  "dependencies": {
+    "@bedalton/caos-util": "*",
+    "vscode-languageclient": "^7.0.0"
+  },
+  "scripts": {
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "yarn clean && tsc --build && cp \"./package.json\" ./dist/",
+    "test": "echo 'no test'",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
+  },
+  "files": [
+    "./dist"
+  ],
+  "devDependencies": {
+    "@types/node": "^17.0.40",
+    "@types/vscode": "^1.63.0",
+    "@vscode/test-electron": "^2.1.2"
+  },
+  "exports": {
+    ".": {
+      "default": "./extension.js"
+    }
+  },
+  "extensionDependencies": []
+}

@@ -1,0 +1,279 @@
+{
+  "name": "@bedalton/caos-editor",
+  "displayName": "CAOSEditor",
+  "description": "An editor for the Creature's CAOS language",
+  "license": "MIT",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.67.0"
+  },
+  "private": true,
+  "categories": [
+    "Programming Languages"
+  ],
+  "activationEvents": [
+    "onLanguage:caos"
+  ],
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "main": "./packages/client/dist/extension.js",
+  "extensionDependencies": [],
+  "contributes": {
+    "capabilities": {
+      "hoverProvider": true
+    },
+    "commands": [
+      {
+        "command": "caos.setVariant",
+        "title": "Set CAOS Variant",
+        "category": "CAOS"
+      }
+    ],
+    "configurationDefaults": {
+      "[caos]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.inlayHints.padding": true,
+        "editor.wordBasedSuggestions": false
+      }
+    },
+    "configuration": {
+      "type": "object",
+      "title": "CAOSScript",
+      "properties": {
+        "caosScript.maxNumberOfProblems": {
+          "type": "number",
+          "default": 100,
+          "description": "The maximum number of errors to report"
+        },
+        "caosScript.variant": {
+          "type": "string",
+          "scope": "workspace",
+          "default": "DS",
+          "enum": [
+            "C1",
+            "C2",
+            "CV",
+            "C3",
+            "DS"
+          ],
+          "enumDescriptions": [
+            "Creatures 1",
+            "Creatures 2",
+            "Creatures Village",
+            "Creatures 3",
+            "Docking Station"
+          ],
+          "description": "The CAOS language variant to use"
+        },
+        "caosScript.inlayHints.bitFlagValues": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": true,
+          "description": "Show inlay hints for bitflag values"
+        },
+        "caosScript.inlayHints.parameterHints.showParameterHints": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": false,
+          "description": "Show parameter names before arguments"
+        },
+        "caosScript.inlayHints.parameterHints.minimumParameterCountForParameterInlayHints": {
+          "type": "integer",
+          "scope": "workspace",
+          "default": 2,
+          "description": "Hide inlay hints for commands with less than this number of parameters"
+        },
+        "caosScript.inlayHints.setvParameterHints": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": false,
+          "description": "Show parameter names before arguments"
+        },
+        "caosScript.inlayHints.genusName": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": false,
+          "description": "Shows name of genus in Family Genus Species argument list"
+        },
+        "caosScript.inlayHints.valueName": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": true,
+          "description": "Show value name for known integer and string values"
+        },
+        "caosScript.inlayHints.eventScriptName": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": true,
+          "description": "Show event script name for known event numbers"
+        },
+        "caosScript.inlayHints.ddePictDimensions": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": true,
+          "description": "Show `DDE: PICT` command dimensions from dimension characters"
+        },
+        "caosScript.inlayHints.c1ClasValue": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": true,
+          "description": "Show parsed family genus species from C1 CLAS value"
+        },
+        "caosScript.inlayHints.rvalueReturnValue": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": false,
+          "description": "Show return type for rvalue commands"
+        },
+        "caosScript.inlayHints.equality.bitFlagValues": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": true,
+          "description": "Show Bitflag value on opposing side of equality operator"
+        },
+        "caosScript.inlayHints.equalityValueName": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": true,
+          "description": "Show value name for know integer and string values on opposing side of EQ"
+        },
+        "caosScript.formatting.indentComments": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": true,
+          "description": "Indent comments inline with commands except when comment is at start of line"
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "caos",
+        "extensions": [
+          ".caos",
+          ".cos"
+        ],
+        "aliases": [
+          "CAOS",
+          "Caos"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "caos",
+        "scopeName": "source.caos",
+        "path": "./syntaxes/caos.tmLanguage.json"
+      }
+    ],
+    "semanticTokenTypes": [
+      {
+        "id": "command",
+        "superType": "namespace",
+        "description": "A general command call keyword"
+      },
+      {
+        "id": "rvalue",
+        "superType": "method",
+        "description": "A command that returns a value"
+      },
+      {
+        "id": "lvalue",
+        "superType": "property",
+        "description": "An lvalue command based variable"
+      }
+    ],
+    "semanticTokenModifiers": [
+      {
+        "id": "command-prefix",
+        "description": "First token in a multi-word command"
+      },
+      {
+        "id": "command-suffix",
+        "description": "last token in a three word command"
+      },
+      {
+        "id": "c1-string",
+        "description": "A C1 bracket enclosed string"
+      },
+      {
+        "id": "quote-string",
+        "description": "A C2e quote enclosed string"
+      },
+      {
+        "id": "byte-string",
+        "description": "A byte string for things like ANIM"
+      },
+      {
+        "id": "not-found",
+        "superType": "deprecated",
+        "description": "A C1 bracket enclosed string"
+      },
+      {
+        "id": "vaxx",
+        "description": "An indexed event script variable"
+      },
+      {
+        "id": "ovxx",
+        "description": "An indexed targ variable"
+      },
+      {
+        "id": "mvxx",
+        "description": "An indexed OWNR variable"
+      },
+      {
+        "id": "returns-number",
+        "description": "Decorates command words for commands returning a number"
+      },
+      {
+        "id": "returns-string",
+        "description": "Decorates command words for commands returning a string"
+      },
+      {
+        "id": "returns-variable",
+        "description": "Decorates command word for commands returning a variable"
+      },
+      {
+        "id": "returns-agent",
+        "description": "Decorates command words for commands which return an agent"
+      },
+      {
+        "id": "agent-constructor",
+        "description": "For commands which create a new agent"
+      },
+      {
+        "id": "command-prefix",
+        "description": "First command token in a multi-word command"
+      },
+      {
+        "id": "command-suffix",
+        "description": "Final command token in a three-word command"
+      }
+    ]
+  },
+  "scripts": {
+    "prepare": "node ./configure-references.js",
+    "vscode:prepublish": "npm run compile",
+    "build": "lerna run build --stream",
+    "lint": "lerna run lint --stream --parallel",
+    "test": "echo 'no test'"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.1.1",
+    "@types/node": "16.x",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
+    "@vscode/test-electron": "^2.1.3",
+    "eslint": "^8.16.0",
+    "glob": "^8.0.3",
+    "is-ci": "^3.0.1",
+    "lerna": "^5.1.6",
+    "mocha": "^10.0.0",
+    "typescript": "^4.7.2"
+  },
+  "packageManager": "yarn@3.2.1"
+}

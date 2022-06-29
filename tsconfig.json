@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./packages",
+        "paths": {
+            "@bedalton/caos-util/*": [
+                "./caos-util/src/*"
+            ],
+            "@bedalton/caos-vscode-client/*": [
+                "./client/src/*"
+            ],
+            "@bedalton/caos-language-server/*": [
+                "./server/src/*"
+            ]
+        }
+    },
+    "files": [],
+    "references": [
+        {
+            "path": "packages/caos-util"
+        },
+        {
+            "path": "packages/client"
+        },
+        {
+            "path": "packages/server"
+        }
+    ]
+}

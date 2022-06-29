@@ -1,0 +1,32 @@
+{
+  "name": "@bedalton/caos-language-server",
+  "author": "bedalton",
+  "displayName": "CAOSEditor",
+  "license": "MIT",
+  "description": "A language server for Creature's CAOS language",
+  "version": "0.0.1",
+  "engines": {
+    "node": "*"
+  },
+  "bin": "./dist/server.js",
+  "scripts": {
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "build": "yarn clean && tsc --build && cp \"./package.json\" ./dist/",
+    "test": "echo 'no test'",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
+  },
+  "files": [
+    "./dist"
+  ],
+  "repository": {
+    "type": "git",
+    "directory": "packages/server",
+    "url": "https://github.com/bedalton/caos-language-server"
+  },
+  "dependencies": {
+    "@bedalton/caos-util": "*",
+    "vscode-languageserver": "^8.0.1",
+    "vscode-languageserver-textdocument": "^1.0.5"
+  }
+}
