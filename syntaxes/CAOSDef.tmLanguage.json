@@ -1,0 +1,148 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "source.caosdef",
+  "patterns": [
+    {
+      "match": "//[^\r\n]*",
+      "name": "comment.line"
+    },
+    {
+      "include": "#fileScoped"
+    },
+    {
+      "include": "#command"
+    },
+    {
+      "include": "#blockComment"
+    },
+    {
+      "match": "[,;]",
+      "name": "markup.other"
+    }
+  ],
+  "repository": {
+    "fileScoped": {
+      "match": "^[ \t]*[#@][^\n]+",
+      "name": "support.constant.caosdef"
+    },
+    "tag": {
+      "match": "#[^\n, ]+",
+      "name": "entity.name.tag.caosdef"
+    },
+    "bracketParameterType": {
+      "match": "\\[[^\\]]+\\]",
+      "name": "entity.name.function.caosdef"
+    },
+    "parenParameterType": {
+      "begin": "(\\([^\\)@]+)",
+      "end": "(\\))",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.function.caosdef"
+        }
+      },
+      "endCaptures": {
+        "1": {
+          "name": "entity.name.function.caosdef"
+        }
+      },
+      "patterns": [
+        {
+          "match": "@[^\\) \t]+",
+          "name": "entity.name.tag.caosdef"
+        }
+      ]
+    },
+    "type": {
+      "name": "entity.name.class.caosdef",
+      "patterns": [
+        {
+          "include": "#bracketParameterType"
+        },
+        {
+          "include": "#parenParameterType"
+        }
+      ]
+    },
+    "param": {
+      "begin": "(?i)(@param|@return)\\s*",
+      "end": "(?=(-|$))",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.selector.caosdef"
+        }
+      },
+      "patterns": [
+        {
+          "match": "\\{[^}]+\\}",
+          "name": "variable.name.caosdef"
+        },
+        {
+          "include": "#type"
+        }
+      ]
+    },
+    "attribute": {
+      "begin": "(@[^ ]+)\\s*",
+      "end": "(?=(\r?\n|$))",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.selector.caosdef"
+        }
+      },
+      "patterns": [
+        {
+          "match": "\\S+"
+        }
+      ]
+    },
+    "blockCommentLine": {
+      "begin": "^\\s*\\*[^/]",
+      "end": "(?=$)",
+      "patterns":[
+        {
+          "include": "#param"
+        },
+        {
+          "include": "#tag"
+        },
+        {
+          "include": "#attribute"
+        },
+        {
+          "match": ".*$"
+        }
+      ]
+    },
+    "blockComment": {
+      "begin": "\\/\\*",
+      "end": "\\*\\/",
+      "patterns": [
+        {
+          "include": "#blockCommentLine"
+        }
+      ]
+    },
+    "commandParameter": {
+      "match": " ([^ (\t\\[]+)",
+      "name": "variable.name.caosdef"
+    },
+    "command": {
+      "begin": "^[ \t]*([^\\s\\(\\[]{4}( [^\\s\\(\\[]{4})*)",
+      "end": "(?=$)",
+      "beginCaptures": {
+        "1": {
+          "name": "entity.name.class"
+        }
+      },
+      "patterns": [
+        {
+          "include": "#commandParameter"
+        },
+        {
+          "include": "#type"
+        }
+      ]
+    }
+  }
+}
