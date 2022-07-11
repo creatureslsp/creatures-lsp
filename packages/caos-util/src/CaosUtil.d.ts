@@ -507,9 +507,19 @@ export namespace collectors {
      * @param text
      * @param line The line number of
      * @param character the starting character index on the line specified
+     * @param checkErrors Whether to check for errors when parsing near
+     * @param checkDelay The number of commands to parse before checking if operation should be cancelled
      * @param keepGoing return false to stop parsing early
      */
-    function parseCaosNear(variant: GameVariant, text: string, line: number, character: number, keepGoing?: () => boolean): collectors.ParseResult;
+    function parseCaosNear(
+        variant: GameVariant,
+        text: string,
+        line: number,
+        character: number,
+        checkErrors?: Nullable<boolean>,
+        checkDelay?: Nullable<Int> = null,
+        keepGoing?: Nullable<() => boolean>
+    ): collectors.ParseResult;
     
     /**
      * Parses CAOS within a given region.

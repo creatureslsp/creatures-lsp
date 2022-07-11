@@ -58,22 +58,24 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var Token = kotlin_com_strumenta_antlr_kotlin_antlr_kotlin_runtime.$crossModule$.Token;
   var NoViableAltException_init_$Create$ = kotlin_com_strumenta_antlr_kotlin_antlr_kotlin_runtime.$crossModule$.NoViableAltException_init_$Create$;
   var ParseTreeListener = kotlin_com_strumenta_antlr_kotlin_antlr_kotlin_runtime.$crossModule$.ParseTreeListener;
+  var emptyList = kotlin_kotlin.$crossModule$.emptyList;
   var lazy = kotlin_kotlin.$crossModule$.lazy;
   var getStringHashCode = kotlin_kotlin.$crossModule$.getStringHashCode;
   var hashCode = kotlin_kotlin.$crossModule$.hashCode;
   var equals = kotlin_kotlin.$crossModule$.equals;
   var Regex_init_$Create$ = kotlin_kotlin.$crossModule$.Regex_init_$Create$;
-  var emptyList = kotlin_kotlin.$crossModule$.emptyList;
   var ArrayList_init_$Create$_0 = kotlin_kotlin.$crossModule$.ArrayList_init_$Create$_1;
   var collectionSizeOrDefault = kotlin_kotlin.$crossModule$.collectionSizeOrDefault;
   var _Char___init__impl__380027157 = kotlin_kotlin.$crossModule$._Char___init__impl__380027157;
   var endsWith$default = kotlin_kotlin.$crossModule$.endsWith$default;
   var startsWith$default = kotlin_kotlin.$crossModule$.startsWith$default_1;
   var toInt = kotlin_kotlin.$crossModule$.toInt;
-  var toString = kotlin_kotlin.$crossModule$.toString_3;
+  var isCharSequence = kotlin_kotlin.$crossModule$.isCharSequence;
+  var trim = kotlin_kotlin.$crossModule$.trim_1;
+  var toString = kotlin_kotlin.$crossModule$.toString_1;
+  var toString_0 = kotlin_kotlin.$crossModule$.toString_3;
   var sortedWith = kotlin_kotlin.$crossModule$.sortedWith;
   var getOrNull = kotlin_kotlin.$crossModule$.getOrNull;
-  var Exception_init_$Create$ = kotlin_kotlin.$crossModule$.Exception_init_$Create$;
   var last = kotlin_kotlin.$crossModule$.last_1;
   var joinToString$default = kotlin_kotlin.$crossModule$.joinToString$default_2;
   var addAll = kotlin_kotlin.$crossModule$.addAll_1;
@@ -89,7 +91,6 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var sliceArray = kotlin_kotlin.$crossModule$.sliceArray;
   var contentEquals = kotlin_kotlin.$crossModule$.contentEquals;
   var contentHashCode = kotlin_kotlin.$crossModule$.contentHashCode;
-  var toString_0 = kotlin_kotlin.$crossModule$.toString_1;
   var _get_lastIndex__339712501 = kotlin_kotlin.$crossModule$._get_lastIndex__339712501_1;
   var lastOrNull = kotlin_kotlin.$crossModule$.lastOrNull;
   var firstOrNull = kotlin_kotlin.$crossModule$.firstOrNull;
@@ -109,15 +110,25 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var removeFirstOrNull = kotlin_kotlin.$crossModule$.removeFirstOrNull;
   var contains_0 = kotlin_kotlin.$crossModule$.contains_1;
   var joinToString$default_0 = kotlin_kotlin.$crossModule$.joinToString$default_1;
+  var Exception_init_$Create$ = kotlin_kotlin.$crossModule$.Exception_init_$Create$;
   var isObject = kotlin_kotlin.$crossModule$.isObject;
   var primitiveArrayConcat = kotlin_kotlin.$crossModule$.primitiveArrayConcat;
-  var lastOrNull_0 = kotlin_kotlin.$crossModule$.lastOrNull_1;
+  var compareTo = kotlin_kotlin.$crossModule$.compareTo;
+  var sortedWith_0 = kotlin_kotlin.$crossModule$.sortedWith_1;
+  var indexOf_0 = kotlin_kotlin.$crossModule$.indexOf_1;
   var listOfNotNull = kotlin_kotlin.$crossModule$.listOfNotNull;
   var arrayConcat = kotlin_kotlin.$crossModule$.arrayConcat;
-  var sortedWith_0 = kotlin_kotlin.$crossModule$.sortedWith_1;
   var throwUninitializedPropertyAccessException = kotlin_kotlin.$crossModule$.throwUninitializedPropertyAccessException;
   var contains_1 = kotlin_kotlin.$crossModule$.contains_2;
+  var endsWith$default_0 = kotlin_kotlin.$crossModule$.endsWith$default_1;
+  var drop = kotlin_kotlin.$crossModule$.drop;
+  var slice = kotlin_kotlin.$crossModule$.slice;
+  var reversed_0 = kotlin_kotlin.$crossModule$.reversed;
   var Exception = kotlin_kotlin.$crossModule$.Exception;
+  var charArrayOf = kotlin_kotlin.$crossModule$.charArrayOf;
+  var split$default_0 = kotlin_kotlin.$crossModule$.split$default;
+  var drop_0 = kotlin_kotlin.$crossModule$.drop_1;
+  var slice_0 = kotlin_kotlin.$crossModule$.slice_1;
   var Exception_init_$Init$ = kotlin_kotlin.$crossModule$.Exception_init_$Init$;
   var captureStack = kotlin_kotlin.$crossModule$.captureStack;
   var getNumberHashCode = kotlin_kotlin.$crossModule$.getNumberHashCode;
@@ -135,25 +146,36 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var CommonTokenStream = kotlin_com_strumenta_antlr_kotlin_antlr_kotlin_runtime.$crossModule$.CommonTokenStream;
   var Companion_getInstance_0 = kotlin_com_strumenta_antlr_kotlin_antlr_kotlin_runtime.$crossModule$.Companion_getInstance;
   var plus = kotlin_kotlin.$crossModule$.plus;
-  var endsWith$default_0 = kotlin_kotlin.$crossModule$.endsWith$default_1;
   var isBlank = kotlin_kotlin.$crossModule$.isBlank;
   var setOf = kotlin_kotlin.$crossModule$.setOf;
   var contains$default = kotlin_kotlin.$crossModule$.contains$default_1;
   var toMutableList = kotlin_kotlin.$crossModule$.toMutableList;
   var Exception_init_$Init$_0 = kotlin_kotlin.$crossModule$.Exception_init_$Init$_1;
   var joinToString$default_1 = kotlin_kotlin.$crossModule$.joinToString$default_3;
+  var ShortCompanionObject_getInstance = kotlin_kotlin.$crossModule$.ShortCompanionObject_getInstance;
+  var numberToInt = kotlin_kotlin.$crossModule$.numberToInt;
+  var toList = kotlin_kotlin.$crossModule$.toList_1;
+  var to = kotlin_kotlin.$crossModule$.to;
   var listOf_0 = kotlin_kotlin.$crossModule$.listOf;
+  var mapOf = kotlin_kotlin.$crossModule$.mapOf;
+  var IntCompanionObject_getInstance = kotlin_kotlin.$crossModule$.IntCompanionObject_getInstance;
+  var plus_0 = kotlin_kotlin.$crossModule$.plus_1;
+  var StringBuilder_init_$Create$ = kotlin_kotlin.$crossModule$.StringBuilder_init_$Create$;
+  var lastOrNull_0 = kotlin_kotlin.$crossModule$.lastOrNull_1;
+  var repeat = kotlin_kotlin.$crossModule$.repeat;
+  var StringBuilder = kotlin_kotlin.$crossModule$.StringBuilder;
+  var replace$default = kotlin_kotlin.$crossModule$.replace$default;
+  var _get_lastIndex__339712501_1 = kotlin_kotlin.$crossModule$._get_lastIndex__339712501_2;
+  var contains$default_0 = kotlin_kotlin.$crossModule$.contains$default;
   var toIntOrNull = kotlin_kotlin.$crossModule$.toIntOrNull_1;
-  var plus_0 = kotlin_kotlin.$crossModule$.plus_3;
+  var plus_1 = kotlin_kotlin.$crossModule$.plus_4;
   var firstOrNull_0 = kotlin_kotlin.$crossModule$.firstOrNull_1;
   var startsWith$default_0 = kotlin_kotlin.$crossModule$.startsWith$default;
-  var plus_1 = kotlin_kotlin.$crossModule$.plus_2;
+  var plus_2 = kotlin_kotlin.$crossModule$.plus_3;
   var HashSet_init_$Create$ = kotlin_kotlin.$crossModule$.HashSet_init_$Create$_1;
-  var toList = kotlin_kotlin.$crossModule$.toList;
+  var toList_0 = kotlin_kotlin.$crossModule$.toList;
   var checkIndexOverflow = kotlin_kotlin.$crossModule$.checkIndexOverflow;
   var NoSuchElementException_init_$Create$ = kotlin_kotlin.$crossModule$.NoSuchElementException_init_$Create$_1;
-  var isCharSequence = kotlin_kotlin.$crossModule$.isCharSequence;
-  var trim = kotlin_kotlin.$crossModule$.trim_1;
   var INT_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$crossModule$.INT_getInstance;
   var PrimitiveSerialDescriptor = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$crossModule$.PrimitiveSerialDescriptor;
   var KSerializer = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$crossModule$.KSerializer;
@@ -173,26 +195,18 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var noWhenBranchMatchedException = kotlin_kotlin.$crossModule$.noWhenBranchMatchedException;
   var LongSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$crossModule$.LongSerializer_getInstance;
   var BooleanSerializer_getInstance = kotlin_org_jetbrains_kotlinx_kotlinx_serialization_core.$crossModule$.BooleanSerializer_getInstance;
-  var charArrayOf = kotlin_kotlin.$crossModule$.charArrayOf;
-  var split$default_0 = kotlin_kotlin.$crossModule$.split$default;
-  var StringBuilder = kotlin_kotlin.$crossModule$.StringBuilder;
   var abs = kotlin_kotlin.$crossModule$.abs;
   var emptyMap = kotlin_kotlin.$crossModule$.emptyMap;
-  var to = kotlin_kotlin.$crossModule$.to;
   var toMap = kotlin_kotlin.$crossModule$.toMap_1;
   var copyOfRange = kotlin_kotlin.$crossModule$.copyOfRange;
   var joinToString$default_2 = kotlin_kotlin.$crossModule$.joinToString$default;
-  var toList_0 = kotlin_kotlin.$crossModule$.toList_1;
   var first_1 = kotlin_kotlin.$crossModule$.first;
   var LinkedHashMap_init_$Create$ = kotlin_kotlin.$crossModule$.LinkedHashMap_init_$Create$_1;
   var getOrNull_2 = kotlin_kotlin.$crossModule$.getOrNull_2;
-  var slice = kotlin_kotlin.$crossModule$.slice;
-  var reversed_0 = kotlin_kotlin.$crossModule$.reversed;
   var toString_1 = kotlin_kotlin.$crossModule$.toString_2;
   var padStart = kotlin_kotlin.$crossModule$.padStart;
   var toInt_0 = kotlin_kotlin.$crossModule$.toInt_1;
   var toIntOrNull_0 = kotlin_kotlin.$crossModule$.toIntOrNull;
-  var StringBuilder_init_$Create$ = kotlin_kotlin.$crossModule$.StringBuilder_init_$Create$;
   var lastIndexOf = kotlin_kotlin.$crossModule$.lastIndexOf;
   var toString_2 = kotlin_kotlin.$crossModule$.toString;
   var numberToChar = kotlin_kotlin.$crossModule$.numberToChar;
@@ -202,10 +216,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var addAll_0 = kotlin_kotlin.$crossModule$.addAll;
   var toMutableSet = kotlin_kotlin.$crossModule$.toMutableSet_1;
   var getKClassFromExpression = kotlin_kotlin.$crossModule$.getKClassFromExpression;
-  var slice_0 = kotlin_kotlin.$crossModule$.slice_1;
-  var contains$default_0 = kotlin_kotlin.$crossModule$.contains$default;
-  var replace$default = kotlin_kotlin.$crossModule$.replace$default;
-  var _get_lastIndex__339712501_1 = kotlin_kotlin.$crossModule$._get_lastIndex__339712501_2;
+  var slice_1 = kotlin_kotlin.$crossModule$.slice_2;
   var trimEnd = kotlin_kotlin.$crossModule$.trimEnd;
   var trim_0 = kotlin_kotlin.$crossModule$.trim;
   var intersect = kotlin_kotlin.$crossModule$.intersect_1;
@@ -354,6 +365,36 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   AutocompleteItemContext.prototype.constructor = AutocompleteItemContext;
   CaosUniversalParser.prototype = Object.create(Parser.prototype);
   CaosUniversalParser.prototype.constructor = CaosUniversalParser;
+  Tokens_4.prototype = Object.create(Enum.prototype);
+  Tokens_4.prototype.constructor = Tokens_4;
+  Channels_1.prototype = Object.create(Enum.prototype);
+  Channels_1.prototype.constructor = Channels_1;
+  Modes_1.prototype = Object.create(Enum.prototype);
+  Modes_1.prototype.constructor = Modes_1;
+  Rules_4.prototype = Object.create(Enum.prototype);
+  Rules_4.prototype.constructor = Rules_4;
+  CaosWhitespaceLexer.prototype = Object.create(Lexer.prototype);
+  CaosWhitespaceLexer.prototype.constructor = CaosWhitespaceLexer;
+  Tokens_5.prototype = Object.create(Enum.prototype);
+  Tokens_5.prototype.constructor = Tokens_5;
+  Rules_5.prototype = Object.create(Enum.prototype);
+  Rules_5.prototype.constructor = Rules_5;
+  FileContext_2.prototype = Object.create(ParserRuleContext.prototype);
+  FileContext_2.prototype.constructor = FileContext_2;
+  EofContext_2.prototype = Object.create(ParserRuleContext.prototype);
+  EofContext_2.prototype.constructor = EofContext_2;
+  ElementsContext_2.prototype = Object.create(ParserRuleContext.prototype);
+  ElementsContext_2.prototype.constructor = ElementsContext_2;
+  ElementContext_2.prototype = Object.create(ParserRuleContext.prototype);
+  ElementContext_2.prototype.constructor = ElementContext_2;
+  NewlineContext.prototype = Object.create(ParserRuleContext.prototype);
+  NewlineContext.prototype.constructor = NewlineContext;
+  SpaceContext.prototype = Object.create(ParserRuleContext.prototype);
+  SpaceContext.prototype.constructor = SpaceContext;
+  SkipContext.prototype = Object.create(ParserRuleContext.prototype);
+  SkipContext.prototype.constructor = SkipContext;
+  CaosWhitespaceParser.prototype = Object.create(Parser.prototype);
+  CaosWhitespaceParser.prototype.constructor = CaosWhitespaceParser;
   Caos2PrayWalker.prototype = Object.create(Caos2PrayParserBaseListener.prototype);
   Caos2PrayWalker.prototype.constructor = Caos2PrayWalker;
   CaosOffsetsWalker.prototype = Object.create(CaosOffsetsParserBaseListener.prototype);
@@ -398,18 +439,26 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   CommandToken.prototype.constructor = CommandToken;
   CompoundCommandToken.prototype = Object.create(ParserItem.prototype);
   CompoundCommandToken.prototype.constructor = CompoundCommandToken;
+  NewLine.prototype = Object.create(ParserItem.prototype);
+  NewLine.prototype.constructor = NewLine;
+  Spaces.prototype = Object.create(ParserItem.prototype);
+  Spaces.prototype.constructor = Spaces;
   RawTokenizer.prototype = Object.create(CaosUniversalParserBaseListener.prototype);
   RawTokenizer.prototype.constructor = RawTokenizer;
   ScriptOffsetsWalker.prototype = Object.create(CaosUniversalParserBaseListener.prototype);
   ScriptOffsetsWalker.prototype.constructor = ScriptOffsetsWalker;
   StopsWalker.prototype = Object.create(CaosUniversalParserBaseListener.prototype);
   StopsWalker.prototype.constructor = StopsWalker;
+  WhitespaceCollector.prototype = Object.create(CaosWhitespaceParserBaseListener.prototype);
+  WhitespaceCollector.prototype.constructor = WhitespaceCollector;
   CaosException.prototype = Object.create(Exception.prototype);
   CaosException.prototype.constructor = CaosException;
   CaosInvalidTokenLengthException.prototype = Object.create(Exception.prototype);
   CaosInvalidTokenLengthException.prototype.constructor = CaosInvalidTokenLengthException;
   CaosValidatorIllegalArgumentException.prototype = Object.create(CaosException.prototype);
   CaosValidatorIllegalArgumentException.prototype.constructor = CaosValidatorIllegalArgumentException;
+  FormatException.prototype = Object.create(CaosException.prototype);
+  FormatException.prototype.constructor = FormatException;
   ArgumentInlayTypeHint.prototype = Object.create(Enum.prototype);
   ArgumentInlayTypeHint.prototype.constructor = ArgumentInlayTypeHint;
   ArgumentInlayTypeHint$ATTRIBUTE_BITFLAGS_ARGUMENT_HINT.prototype = Object.create(ArgumentInlayTypeHint.prototype);
@@ -5309,6 +5358,9 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var Rules_SUBR_instance;
   var Rules_UNTL_instance;
   var Rules_MONACO_AUTOCOMPLETE_ITEM_instance_0;
+  var Rules_SPACE_instance_0;
+  var Rules_SPACES_instance;
+  var Rules_INTS_instance;
   var Rules_BYTE_STRING_instance;
   var Rules_ANIMATION_instance;
   var Rules_C1_STRING_instance;
@@ -5342,7 +5394,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var Rules_COMMENT_NEWLINE_instance;
   var Rules_COMMENT_BODY_instance;
   function values_10() {
-    return [Rules_A_getInstance(), Rules_B_getInstance(), Rules_C_getInstance(), Rules_D_getInstance(), Rules_E_getInstance(), Rules_F_getInstance(), Rules_G_getInstance(), Rules_H_getInstance(), Rules_I_getInstance(), Rules_J_getInstance(), Rules_K_getInstance(), Rules_L_getInstance(), Rules_M_getInstance(), Rules_N_getInstance(), Rules_O_getInstance(), Rules_P_getInstance(), Rules_Q_getInstance(), Rules_R_getInstance(), Rules_S_getInstance(), Rules_T_getInstance(), Rules_U_getInstance(), Rules_V_getInstance(), Rules_W_getInstance(), Rules_X_getInstance(), Rules_Y_getInstance(), Rules_Z_getInstance(), Rules_NUMBER_getInstance_0(), Rules_C1_STRING_BODY_getInstance(), Rules_SIGN_getInstance(), Rules_TCHAR_START_getInstance_0(), Rules_TCHAR_getInstance_0(), Rules_CAOS2_START_getInstance_0(), Rules_COMMENT_getInstance_0(), Rules_SCRP_getInstance(), Rules_ISCR_getInstance(), Rules_RSCR_getInstance(), Rules_ENDM_getInstance(), Rules_DOIF_getInstance(), Rules_ENDI_getInstance(), Rules_ENUM_getInstance(), Rules_ECON_getInstance(), Rules_EPAS_getInstance(), Rules_ESCN_getInstance(), Rules_ESEE_getInstance(), Rules_ETCH_getInstance(), Rules_EVER_getInstance(), Rules_LOOP_getInstance(), Rules_NEXT_getInstance(), Rules_NSCN_getInstance(), Rules_RETN_getInstance(), Rules_REPS_getInstance(), Rules_REPE_getInstance(), Rules_SUBR_getInstance(), Rules_UNTL_getInstance(), Rules_MONACO_AUTOCOMPLETE_ITEM_getInstance_0(), Rules_BYTE_STRING_getInstance(), Rules_ANIMATION_getInstance(), Rules_C1_STRING_getInstance(), Rules_QUOTE_STRING_FRAGMENT_getInstance(), Rules_QUOTE_STRING_getInstance(), Rules_CHAR_getInstance(), Rules_BINARY_INT_getInstance(), Rules_WORD_PLUS_getInstance(), Rules_VARx_getInstance(), Rules_VAxx_getInstance(), Rules_OBVx_getInstance(), Rules_OVxx_getInstance(), Rules_MVxx_getInstance(), Rules_WORD_getInstance(), Rules_EQ_OP_OLD_getInstance(), Rules_EQ_OP_NEW_getInstance(), Rules_EQ_JOIN_getInstance(), Rules_FLOAT_getInstance(), Rules_INT_getInstance(), Rules_WS_getInstance(), Rules_INCOMPLETE_getInstance(), Rules_ERROR_CHAR_getInstance(), Rules_CAOS2_WORD_getInstance_0(), Rules_CAOS2_STRING_getInstance_0(), Rules_SINGLE_QUOTE_STRING_getInstance_0(), Rules_CAOS2_EQUALS_getInstance_0(), Rules_CAOS2_INT_getInstance_0(), Rules_CAOS2_WS_getInstance_0(), Rules_CAOS2_END_getInstance_0(), Rules_COMMENT_FIRST_CHAR_getInstance(), Rules_COMMENT_NEWLINE_getInstance(), Rules_COMMENT_BODY_getInstance()];
+    return [Rules_A_getInstance(), Rules_B_getInstance(), Rules_C_getInstance(), Rules_D_getInstance(), Rules_E_getInstance(), Rules_F_getInstance(), Rules_G_getInstance(), Rules_H_getInstance(), Rules_I_getInstance(), Rules_J_getInstance(), Rules_K_getInstance(), Rules_L_getInstance(), Rules_M_getInstance(), Rules_N_getInstance(), Rules_O_getInstance(), Rules_P_getInstance(), Rules_Q_getInstance(), Rules_R_getInstance(), Rules_S_getInstance(), Rules_T_getInstance(), Rules_U_getInstance(), Rules_V_getInstance(), Rules_W_getInstance(), Rules_X_getInstance(), Rules_Y_getInstance(), Rules_Z_getInstance(), Rules_NUMBER_getInstance_0(), Rules_C1_STRING_BODY_getInstance(), Rules_SIGN_getInstance(), Rules_TCHAR_START_getInstance_0(), Rules_TCHAR_getInstance_0(), Rules_CAOS2_START_getInstance_0(), Rules_COMMENT_getInstance_0(), Rules_SCRP_getInstance(), Rules_ISCR_getInstance(), Rules_RSCR_getInstance(), Rules_ENDM_getInstance(), Rules_DOIF_getInstance(), Rules_ENDI_getInstance(), Rules_ENUM_getInstance(), Rules_ECON_getInstance(), Rules_EPAS_getInstance(), Rules_ESCN_getInstance(), Rules_ESEE_getInstance(), Rules_ETCH_getInstance(), Rules_EVER_getInstance(), Rules_LOOP_getInstance(), Rules_NEXT_getInstance(), Rules_NSCN_getInstance(), Rules_RETN_getInstance(), Rules_REPS_getInstance(), Rules_REPE_getInstance(), Rules_SUBR_getInstance(), Rules_UNTL_getInstance(), Rules_MONACO_AUTOCOMPLETE_ITEM_getInstance_0(), Rules_SPACE_getInstance_0(), Rules_SPACES_getInstance(), Rules_INTS_getInstance(), Rules_BYTE_STRING_getInstance(), Rules_ANIMATION_getInstance(), Rules_C1_STRING_getInstance(), Rules_QUOTE_STRING_FRAGMENT_getInstance(), Rules_QUOTE_STRING_getInstance(), Rules_CHAR_getInstance(), Rules_BINARY_INT_getInstance(), Rules_WORD_PLUS_getInstance(), Rules_VARx_getInstance(), Rules_VAxx_getInstance(), Rules_OBVx_getInstance(), Rules_OVxx_getInstance(), Rules_MVxx_getInstance(), Rules_WORD_getInstance(), Rules_EQ_OP_OLD_getInstance(), Rules_EQ_OP_NEW_getInstance(), Rules_EQ_JOIN_getInstance(), Rules_FLOAT_getInstance(), Rules_INT_getInstance(), Rules_WS_getInstance(), Rules_INCOMPLETE_getInstance(), Rules_ERROR_CHAR_getInstance(), Rules_CAOS2_WORD_getInstance_0(), Rules_CAOS2_STRING_getInstance_0(), Rules_SINGLE_QUOTE_STRING_getInstance_0(), Rules_CAOS2_EQUALS_getInstance_0(), Rules_CAOS2_INT_getInstance_0(), Rules_CAOS2_WS_getInstance_0(), Rules_CAOS2_END_getInstance_0(), Rules_COMMENT_FIRST_CHAR_getInstance(), Rules_COMMENT_NEWLINE_getInstance(), Rules_COMMENT_BODY_getInstance()];
   }
   function valueOf_10(value) {
     switch (value) {
@@ -5456,6 +5508,12 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         return Rules_UNTL_getInstance();
       case 'MONACO_AUTOCOMPLETE_ITEM':
         return Rules_MONACO_AUTOCOMPLETE_ITEM_getInstance_0();
+      case 'SPACE':
+        return Rules_SPACE_getInstance_0();
+      case 'SPACES':
+        return Rules_SPACES_getInstance();
+      case 'INTS':
+        return Rules_INTS_getInstance();
       case 'BYTE_STRING':
         return Rules_BYTE_STRING_getInstance();
       case 'ANIMATION':
@@ -5586,38 +5644,41 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     Rules_SUBR_instance = new Rules_2('SUBR', 52);
     Rules_UNTL_instance = new Rules_2('UNTL', 53);
     Rules_MONACO_AUTOCOMPLETE_ITEM_instance_0 = new Rules_2('MONACO_AUTOCOMPLETE_ITEM', 54);
-    Rules_BYTE_STRING_instance = new Rules_2('BYTE_STRING', 55);
-    Rules_ANIMATION_instance = new Rules_2('ANIMATION', 56);
-    Rules_C1_STRING_instance = new Rules_2('C1_STRING', 57);
-    Rules_QUOTE_STRING_FRAGMENT_instance = new Rules_2('QUOTE_STRING_FRAGMENT', 58);
-    Rules_QUOTE_STRING_instance = new Rules_2('QUOTE_STRING', 59);
-    Rules_CHAR_instance = new Rules_2('CHAR', 60);
-    Rules_BINARY_INT_instance = new Rules_2('BINARY_INT', 61);
-    Rules_WORD_PLUS_instance = new Rules_2('WORD_PLUS', 62);
-    Rules_VARx_instance = new Rules_2('VARx', 63);
-    Rules_VAxx_instance = new Rules_2('VAxx', 64);
-    Rules_OBVx_instance = new Rules_2('OBVx', 65);
-    Rules_OVxx_instance = new Rules_2('OVxx', 66);
-    Rules_MVxx_instance = new Rules_2('MVxx', 67);
-    Rules_WORD_instance = new Rules_2('WORD', 68);
-    Rules_EQ_OP_OLD_instance = new Rules_2('EQ_OP_OLD', 69);
-    Rules_EQ_OP_NEW_instance = new Rules_2('EQ_OP_NEW', 70);
-    Rules_EQ_JOIN_instance = new Rules_2('EQ_JOIN', 71);
-    Rules_FLOAT_instance = new Rules_2('FLOAT', 72);
-    Rules_INT_instance = new Rules_2('INT', 73);
-    Rules_WS_instance = new Rules_2('WS', 74);
-    Rules_INCOMPLETE_instance = new Rules_2('INCOMPLETE', 75);
-    Rules_ERROR_CHAR_instance = new Rules_2('ERROR_CHAR', 76);
-    Rules_CAOS2_WORD_instance_0 = new Rules_2('CAOS2_WORD', 77);
-    Rules_CAOS2_STRING_instance_0 = new Rules_2('CAOS2_STRING', 78);
-    Rules_SINGLE_QUOTE_STRING_instance_0 = new Rules_2('SINGLE_QUOTE_STRING', 79);
-    Rules_CAOS2_EQUALS_instance_0 = new Rules_2('CAOS2_EQUALS', 80);
-    Rules_CAOS2_INT_instance_0 = new Rules_2('CAOS2_INT', 81);
-    Rules_CAOS2_WS_instance_0 = new Rules_2('CAOS2_WS', 82);
-    Rules_CAOS2_END_instance_0 = new Rules_2('CAOS2_END', 83);
-    Rules_COMMENT_FIRST_CHAR_instance = new Rules_2('COMMENT_FIRST_CHAR', 84);
-    Rules_COMMENT_NEWLINE_instance = new Rules_2('COMMENT_NEWLINE', 85);
-    Rules_COMMENT_BODY_instance = new Rules_2('COMMENT_BODY', 86);
+    Rules_SPACE_instance_0 = new Rules_2('SPACE', 55);
+    Rules_SPACES_instance = new Rules_2('SPACES', 56);
+    Rules_INTS_instance = new Rules_2('INTS', 57);
+    Rules_BYTE_STRING_instance = new Rules_2('BYTE_STRING', 58);
+    Rules_ANIMATION_instance = new Rules_2('ANIMATION', 59);
+    Rules_C1_STRING_instance = new Rules_2('C1_STRING', 60);
+    Rules_QUOTE_STRING_FRAGMENT_instance = new Rules_2('QUOTE_STRING_FRAGMENT', 61);
+    Rules_QUOTE_STRING_instance = new Rules_2('QUOTE_STRING', 62);
+    Rules_CHAR_instance = new Rules_2('CHAR', 63);
+    Rules_BINARY_INT_instance = new Rules_2('BINARY_INT', 64);
+    Rules_WORD_PLUS_instance = new Rules_2('WORD_PLUS', 65);
+    Rules_VARx_instance = new Rules_2('VARx', 66);
+    Rules_VAxx_instance = new Rules_2('VAxx', 67);
+    Rules_OBVx_instance = new Rules_2('OBVx', 68);
+    Rules_OVxx_instance = new Rules_2('OVxx', 69);
+    Rules_MVxx_instance = new Rules_2('MVxx', 70);
+    Rules_WORD_instance = new Rules_2('WORD', 71);
+    Rules_EQ_OP_OLD_instance = new Rules_2('EQ_OP_OLD', 72);
+    Rules_EQ_OP_NEW_instance = new Rules_2('EQ_OP_NEW', 73);
+    Rules_EQ_JOIN_instance = new Rules_2('EQ_JOIN', 74);
+    Rules_FLOAT_instance = new Rules_2('FLOAT', 75);
+    Rules_INT_instance = new Rules_2('INT', 76);
+    Rules_WS_instance = new Rules_2('WS', 77);
+    Rules_INCOMPLETE_instance = new Rules_2('INCOMPLETE', 78);
+    Rules_ERROR_CHAR_instance = new Rules_2('ERROR_CHAR', 79);
+    Rules_CAOS2_WORD_instance_0 = new Rules_2('CAOS2_WORD', 80);
+    Rules_CAOS2_STRING_instance_0 = new Rules_2('CAOS2_STRING', 81);
+    Rules_SINGLE_QUOTE_STRING_instance_0 = new Rules_2('SINGLE_QUOTE_STRING', 82);
+    Rules_CAOS2_EQUALS_instance_0 = new Rules_2('CAOS2_EQUALS', 83);
+    Rules_CAOS2_INT_instance_0 = new Rules_2('CAOS2_INT', 84);
+    Rules_CAOS2_WS_instance_0 = new Rules_2('CAOS2_WS', 85);
+    Rules_CAOS2_END_instance_0 = new Rules_2('CAOS2_END', 86);
+    Rules_COMMENT_FIRST_CHAR_instance = new Rules_2('COMMENT_FIRST_CHAR', 87);
+    Rules_COMMENT_NEWLINE_instance = new Rules_2('COMMENT_NEWLINE', 88);
+    Rules_COMMENT_BODY_instance = new Rules_2('COMMENT_BODY', 89);
   }
   function Companion_2() {
     Companion_instance_2 = this;
@@ -5667,9 +5728,9 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       tmp_3 = tmp_3 + 1 | 0;
     }
     tmp_2.tokenNames_1 = tmp_5;
-    this.serializedATN_1 = '\x03\u608B\uA72A\u8133\uB9ED\u417C\u3BE7\u7786\u5964\x028\u027C\b\x01\b\x01\b\x01\b\x01\x04\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04\x07\t\x07\x04\b\t\b\x04\t\t\t\x04\n\t\n\x04\x0B\t\x0B\x04\f\t\f\x04\r\t\r\x04\x0E\t\x0E\x04\x0F\t\x0F\x04\x10\t\x10\x04\x11\t\x11\x04\x12\t\x12\x04\x13\t\x13\x04\x14\t\x14\x04\x15\t\x15\x04\x16\t\x16\x04\x17\t\x17\x04\x18\t\x18\x04\x19\t\x19\x04\x1A\t\x1A\x04\x1B\t\x1B\x04\x1C\t\x1C\x04\x1D\t\x1D\x04\x1E\t\x1E\x04\x1F\t\x1F\x04 \t \x04!\t!\x04"\t"\x04#\t#\x04$\t$\x04%\t%\x04&\t&\x04\'\t\'\x04(\t(\x04)\t)\x04*\t*\x04+\t+\x04,\t,\x04-\t-\x04.\t.\x04/\t/\x040\t0\x041\t1\x042\t2\x043\t3\x044\t4\x045\t5\x046\t6\x047\t7\x048\t8\x049\t9\x04:\t:\x04;\t;\x04<\t<\x04=\t=\x04>\t>\x04?\t?\x04@\t@\x04A\tA\x04B\tB\x04C\tC\x04D\tD\x04E\tE\x04F\tF\x04G\tG\x04H\tH\x04I\tI\x04J\tJ\x04K\tK\x04L\tL\x04M\tM\x04N\tN\x04O\tO\x04P\tP\x04Q\tQ\x04R\tR\x04S\tS\x04T\tT\x04U\tU\x04V\tV\x04W\tW\x04X\tX\x03\x02\x03\x02\x03\x03\x03\x03\x03\x04\x03\x04\x03\x05\x03\x05\x03\x06\x03\x06\x03\x07\x03\x07\x03\b\x03\b\x03\t\x03\t\x03\n\x03\n\x03\x0B\x03\x0B\x03\f\x03\f\x03\r\x03\r\x03\x0E\x03\x0E\x03\x0F\x03\x0F\x03\x10\x03\x10\x03\x11\x03\x11\x03\x12\x03\x12\x03\x13\x03\x13\x03\x14\x03\x14\x03\x15\x03\x15\x03\x16\x03\x16\x03\x17\x03\x17\x03\x18\x03\x18\x03\x19\x03\x19\x03\x1A\x03\x1A\x03\x1B\x03\x1B\x03\x1C\x03\x1C\x03\x1D\x06\x1D\xEC\n\x1D\r\x1D\x0E\x1D\xED\x03\x1E\x03\x1E\x03\x1F\x03\x1F\x03 \x03 \x03!\x03!\x03!\x03!\x03!\x03"\x03"\x03"\x03"\x03#\x03#\x03#\x03#\x03#\x03$\x03$\x03$\x03$\x03$\x03%\x03%\x03%\x03%\x03%\x03&\x03&\x03&\x03&\x03&\x03\'\x03\'\x03\'\x03\'\x03\'\x03(\x03(\x03(\x03(\x03(\x03)\x03)\x03)\x03)\x03)\x03*\x03*\x03*\x03*\x03*\x03+\x03+\x03+\x03+\x03+\x03,\x03,\x03,\x03,\x03,\x03-\x03-\x03-\x03-\x03-\x03.\x03.\x03.\x03.\x03.\x03/\x03/\x03/\x03/\x03/\x030\x030\x030\x030\x030\x031\x031\x031\x031\x031\x032\x032\x032\x032\x032\x033\x033\x033\x033\x033\x034\x034\x034\x034\x034\x035\x035\x035\x035\x035\x036\x036\x036\x036\x036\x037\x037\x037\x037\x037\x038\x038\x068\u016A\n8\r8\x0E8\u016B\x058\u016E\n8\x038\x038\x038\x068\u0173\n8\r8\x0E8\u0174\x038\x038\x038\x068\u017A\n8\r8\x0E8\u017B\x058\u017E\n8\x039\x039\x069\u0182\n9\r9\x0E9\u0183\x039\x039\x069\u0188\n9\r9\x0E9\u0189\x069\u018C\n9\r9\x0E9\u018D\x039\x039\x03:\x03:\x06:\u0194\n:\r:\x0E:\u0195\x03:\x05:\u0199\n:\x03:\x03:\x03;\x03;\x05;\u019F\n;\x03;\x03;\x03<\x03<\x03<\x03<\x07<\u01A7\n<\f<\x0E<\u01AA\x0B<\x03<\x03<\x03=\x03=\x03>\x03>\x03>\x03>\x05>\u01B4\n>\x03>\x03>\x03?\x03?\x06?\u01BA\n?\r?\x0E?\u01BB\x03@\x03@\x03@\x03@\x03@\x06@\u01C3\n@\r@\x0E@\u01C4\x03A\x03A\x03A\x03A\x03A\x03B\x03B\x03B\x03B\x03B\x03C\x03C\x03C\x03C\x03C\x03D\x03D\x03D\x03D\x03D\x03E\x03E\x03E\x03E\x03E\x03F\x03F\x03F\x03F\x03F\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x05G\u01FD\nG\x03H\x03H\x03H\x03H\x03H\x03H\x03H\x03H\x03H\x03H\x03H\x05H\u020A\nH\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x05I\u0213\nI\x03J\x05J\u0216\nJ\x03J\x07J\u0219\nJ\fJ\x0EJ\u021C\x0BJ\x03J\x03J\x06J\u0220\nJ\rJ\x0EJ\u0221\x03K\x05K\u0225\nK\x03K\x06K\u0228\nK\rK\x0EK\u0229\x03L\x06L\u022D\nL\rL\x0EL\u022E\x03L\x03L\x03M\x03M\x03M\x05M\u0236\nM\x05M\u0238\nM\x03N\x03N\x03O\x03O\x03O\x06O\u023F\nO\rO\x0EO\u0240\x03P\x03P\x03Q\x03Q\x03Q\x03Q\x07Q\u0249\nQ\fQ\x0EQ\u024C\x0BQ\x03Q\x03Q\x03Q\x03Q\x03R\x03R\x03S\x05S\u0255\nS\x03S\x06S\u0258\nS\rS\x0ES\u0259\x03T\x06T\u025D\nT\rT\x0ET\u025E\x03T\x03T\x03U\x05U\u0264\nU\x03U\x03U\x03U\x03U\x03V\x03V\x03V\x03V\x03W\x06W\u026F\nW\rW\x0EW\u0270\x03W\x03W\x03W\x03X\x06X\u0277\nX\rX\x0EX\u0278\x03X\x03X\x02\x02Y\x06\x02\b\x02\n\x02\f\x02\x0E\x02\x10\x02\x12\x02\x14\x02\x16\x02\x18\x02\x1A\x02\x1C\x02\x1E\x02 \x02"\x02$\x02&\x02(\x02*\x02,\x02.\x020\x022\x024\x026\x028\x02:\x02<\x02>\x02@\x02B\x02D\x03F\x04H\x05J\x06L\x07N\bP\tR\nT\x0BV\fX\rZ\x0E\\\x0F^\x10`\x11b\x12d\x13f\x14h\x15j\x16l\x17n\x18p\x19r\x1At\x1Bv\x1Cx\x1Dz\x02|\x1E~\x1F\x80 \x82!\x84"\x86#\x88$\x8A%\x8C&\x8E\'\x90(\x92)\x94*\x96+\x98,\x9A-\x9C.\x9E/\xA00\xA21\xA4\x02\xA62\xA83\xAA4\xAC5\xAE6\xB07\xB28\x06\x02\x03\x04\x05(\x04\x02CCcc\x04\x02DDdd\x04\x02EEee\x04\x02FFff\x04\x02GGgg\x04\x02HHhh\x04\x02IIii\x04\x02JJjj\x04\x02KKkk\x04\x02LLll\x04\x02MMmm\x04\x02NNnn\x04\x02OOoo\x04\x02PPpp\x04\x02QQqq\x04\x02RRrr\x04\x02SSss\x04\x02TTtt\x04\x02UUuu\x04\x02VVvv\x04\x02WWww\x04\x02XXxx\x04\x02YYyy\x04\x02ZZzz\x04\x02[[{{\x04\x02\\\\||\x03\x02__\x04\x02--//\x05\x02C\\aac|\x07\x02\x0B\f\x0F\x0F""$$))\x06\x02\f\f\x0F\x0F$$^^\x04\x02))^^\x06\x02\x0B\f\x0F\x0F""..\x06\x02\x0B\f\x0F\x0F""^^\x06\x02\f\f\x0F\x0F))^^\x04\x02\x0B\x0B""\x05\x02\f\f\x0F\x0F%%\x04\x02\f\f\x0F\x0F\x02\u028B\x02D\x03\x02\x02\x02\x02F\x03\x02\x02\x02\x02H\x03\x02\x02\x02\x02J\x03\x02\x02\x02\x02L\x03\x02\x02\x02\x02N\x03\x02\x02\x02\x02P\x03\x02\x02\x02\x02R\x03\x02\x02\x02\x02T\x03\x02\x02\x02\x02V\x03\x02\x02\x02\x02X\x03\x02\x02\x02\x02Z\x03\x02\x02\x02\x02\\\x03\x02\x02\x02\x02^\x03\x02\x02\x02\x02`\x03\x02\x02\x02\x02b\x03\x02\x02\x02\x02d\x03\x02\x02\x02\x02f\x03\x02\x02\x02\x02h\x03\x02\x02\x02\x02j\x03\x02\x02\x02\x02l\x03\x02\x02\x02\x02n\x03\x02\x02\x02\x02p\x03\x02\x02\x02\x02r\x03\x02\x02\x02\x02t\x03\x02\x02\x02\x02v\x03\x02\x02\x02\x02x\x03\x02\x02\x02\x02|\x03\x02\x02\x02\x02~\x03\x02\x02\x02\x02\x80\x03\x02\x02\x02\x02\x82\x03\x02\x02\x02\x02\x84\x03\x02\x02\x02\x02\x86\x03\x02\x02\x02\x02\x88\x03\x02\x02\x02\x02\x8A\x03\x02\x02\x02\x02\x8C\x03\x02\x02\x02\x02\x8E\x03\x02\x02\x02\x02\x90\x03\x02\x02\x02\x02\x92\x03\x02\x02\x02\x02\x94\x03\x02\x02\x02\x02\x96\x03\x02\x02\x02\x02\x98\x03\x02\x02\x02\x02\x9A\x03\x02\x02\x02\x02\x9C\x03\x02\x02\x02\x02\x9E\x03\x02\x02\x02\x03\xA0\x03\x02\x02\x02\x03\xA2\x03\x02\x02\x02\x03\xA4\x03\x02\x02\x02\x03\xA6\x03\x02\x02\x02\x03\xA8\x03\x02\x02\x02\x03\xAA\x03\x02\x02\x02\x03\xAC\x03\x02\x02\x02\x04\xAE\x03\x02\x02\x02\x04\xB0\x03\x02\x02\x02\x05\xB2\x03\x02\x02\x02\x06\xB4\x03\x02\x02\x02\b\xB6\x03\x02\x02\x02\n\xB8\x03\x02\x02\x02\f\xBA\x03\x02\x02\x02\x0E\xBC\x03\x02\x02\x02\x10\xBE\x03\x02\x02\x02\x12\xC0\x03\x02\x02\x02\x14\xC2\x03\x02\x02\x02\x16\xC4\x03\x02\x02\x02\x18\xC6\x03\x02\x02\x02\x1A\xC8\x03\x02\x02\x02\x1C\xCA\x03\x02\x02\x02\x1E\xCC\x03\x02\x02\x02 \xCE\x03\x02\x02\x02"\xD0\x03\x02\x02\x02$\xD2\x03\x02\x02\x02&\xD4\x03\x02\x02\x02(\xD6\x03\x02\x02\x02*\xD8\x03\x02\x02\x02,\xDA\x03\x02\x02\x02.\xDC\x03\x02\x02\x020\xDE\x03\x02\x02\x022\xE0\x03\x02\x02\x024\xE2\x03\x02\x02\x026\xE4\x03\x02\x02\x028\xE6\x03\x02\x02\x02:\xE8\x03\x02\x02\x02<\xEB\x03\x02\x02\x02>\xEF\x03\x02\x02\x02@\xF1\x03\x02\x02\x02B\xF3\x03\x02\x02\x02D\xF5\x03\x02\x02\x02F\xFA\x03\x02\x02\x02H\xFE\x03\x02\x02\x02J\u0103\x03\x02\x02\x02L\u0108\x03\x02\x02\x02N\u010D\x03\x02\x02\x02P\u0112\x03\x02\x02\x02R\u0117\x03\x02\x02\x02T\u011C\x03\x02\x02\x02V\u0121\x03\x02\x02\x02X\u0126\x03\x02\x02\x02Z\u012B\x03\x02\x02\x02\\\u0130\x03\x02\x02\x02^\u0135\x03\x02\x02\x02`\u013A\x03\x02\x02\x02b\u013F\x03\x02\x02\x02d\u0144\x03\x02\x02\x02f\u0149\x03\x02\x02\x02h\u014E\x03\x02\x02\x02j\u0153\x03\x02\x02\x02l\u0158\x03\x02\x02\x02n\u015D\x03\x02\x02\x02p\u0162\x03\x02\x02\x02r\u016D\x03\x02\x02\x02t\u017F\x03\x02\x02\x02v\u0191\x03\x02\x02\x02x\u019C\x03\x02\x02\x02z\u01A2\x03\x02\x02\x02|\u01AD\x03\x02\x02\x02~\u01AF\x03\x02\x02\x02\x80\u01B7\x03\x02\x02\x02\x82\u01BD\x03\x02\x02\x02\x84\u01C6\x03\x02\x02\x02\x86\u01CB\x03\x02\x02\x02\x88\u01D0\x03\x02\x02\x02\x8A\u01D5\x03\x02\x02\x02\x8C\u01DA\x03\x02\x02\x02\x8E\u01DF\x03\x02\x02\x02\x90\u01FC\x03\x02\x02\x02\x92\u0209\x03\x02\x02\x02\x94\u0212\x03\x02\x02\x02\x96\u0215\x03\x02\x02\x02\x98\u0224\x03\x02\x02\x02\x9A\u022C\x03\x02\x02\x02\x9C\u0232\x03\x02\x02\x02\x9E\u0239\x03\x02\x02\x02\xA0\u023E\x03\x02\x02\x02\xA2\u0242\x03\x02\x02\x02\xA4\u0244\x03\x02\x02\x02\xA6\u0251\x03\x02\x02\x02\xA8\u0254\x03\x02\x02\x02\xAA\u025C\x03\x02\x02\x02\xAC\u0263\x03\x02\x02\x02\xAE\u0269\x03\x02\x02\x02\xB0\u026E\x03\x02\x02\x02\xB2\u0276\x03\x02\x02\x02\xB4\xB5\t\x02\x02\x02\xB5\x07\x03\x02\x02\x02\xB6\xB7\t\x03\x02\x02\xB7\t\x03\x02\x02\x02\xB8\xB9\t\x04\x02\x02\xB9\x0B\x03\x02\x02\x02\xBA\xBB\t\x05\x02\x02\xBB\r\x03\x02\x02\x02\xBC\xBD\t\x06\x02\x02\xBD\x0F\x03\x02\x02\x02\xBE\xBF\t\x07\x02\x02\xBF\x11\x03\x02\x02\x02\xC0\xC1\t\b\x02\x02\xC1\x13\x03\x02\x02\x02\xC2\xC3\t\t\x02\x02\xC3\x15\x03\x02\x02\x02\xC4\xC5\t\n\x02\x02\xC5\x17\x03\x02\x02\x02\xC6\xC7\t\x0B\x02\x02\xC7\x19\x03\x02\x02\x02\xC8\xC9\t\f\x02\x02\xC9\x1B\x03\x02\x02\x02\xCA\xCB\t\r\x02\x02\xCB\x1D\x03\x02\x02\x02\xCC\xCD\t\x0E\x02\x02\xCD\x1F\x03\x02\x02\x02\xCE\xCF\t\x0F\x02\x02\xCF!\x03\x02\x02\x02\xD0\xD1\t\x10\x02\x02\xD1#\x03\x02\x02\x02\xD2\xD3\t\x11\x02\x02\xD3%\x03\x02\x02\x02\xD4\xD5\t\x12\x02\x02\xD5\'\x03\x02\x02\x02\xD6\xD7\t\x13\x02\x02\xD7)\x03\x02\x02\x02\xD8\xD9\t\x14\x02\x02\xD9+\x03\x02\x02\x02\xDA\xDB\t\x15\x02\x02\xDB-\x03\x02\x02\x02\xDC\xDD\t\x16\x02\x02\xDD/\x03\x02\x02\x02\xDE\xDF\t\x17\x02\x02\xDF1\x03\x02\x02\x02\xE0\xE1\t\x18\x02\x02\xE13\x03\x02\x02\x02\xE2\xE3\t\x19\x02\x02\xE35\x03\x02\x02\x02\xE4\xE5\t\x1A\x02\x02\xE57\x03\x02\x02\x02\xE6\xE7\t\x1B\x02\x02\xE79\x03\x02\x02\x02\xE8\xE9\x042;\x02\xE9;\x03\x02\x02\x02\xEA\xEC\n\x1C\x02\x02\xEB\xEA\x03\x02\x02\x02\xEC\xED\x03\x02\x02\x02\xED\xEB\x03\x02\x02\x02\xED\xEE\x03\x02\x02\x02\xEE=\x03\x02\x02\x02\xEF\xF0\t\x1D\x02\x02\xF0?\x03\x02\x02\x02\xF1\xF2\t\x1E\x02\x02\xF2A\x03\x02\x02\x02\xF3\xF4\n\x1F\x02\x02\xF4C\x03\x02\x02\x02\xF5\xF6\x07,\x02\x02\xF6\xF7\x07%\x02\x02\xF7\xF8\x03\x02\x02\x02\xF8\xF9\b!\x02\x02\xF9E\x03\x02\x02\x02\xFA\xFB\x07,\x02\x02\xFB\xFC\x03\x02\x02\x02\xFC\xFD\b"\x03\x02\xFDG\x03\x02\x02\x02\xFE\xFF\x05*\x14\x02\xFF\u0100\x05\n\x04\x02\u0100\u0101\x05(\x13\x02\u0101\u0102\x05$\x11\x02\u0102I\x03\x02\x02\x02\u0103\u0104\x05\x16\n\x02\u0104\u0105\x05*\x14\x02\u0105\u0106\x05\n\x04\x02\u0106\u0107\x05(\x13\x02\u0107K\x03\x02\x02\x02\u0108\u0109\x05(\x13\x02\u0109\u010A\x05*\x14\x02\u010A\u010B\x05\n\x04\x02\u010B\u010C\x05(\x13\x02\u010CM\x03\x02\x02\x02\u010D\u010E\x05\x0E\x06\x02\u010E\u010F\x05 \x0F\x02\u010F\u0110\x05\f\x05\x02\u0110\u0111\x05\x1E\x0E\x02\u0111O\x03\x02\x02\x02\u0112\u0113\x05\f\x05\x02\u0113\u0114\x05"\x10\x02\u0114\u0115\x05\x16\n\x02\u0115\u0116\x05\x10\x07\x02\u0116Q\x03\x02\x02\x02\u0117\u0118\x05\x0E\x06\x02\u0118\u0119\x05 \x0F\x02\u0119\u011A\x05\f\x05\x02\u011A\u011B\x05\x16\n\x02\u011BS\x03\x02\x02\x02\u011C\u011D\x05\x0E\x06\x02\u011D\u011E\x05 \x0F\x02\u011E\u011F\x05.\x16\x02\u011F\u0120\x05\x1E\x0E\x02\u0120U\x03\x02\x02\x02\u0121\u0122\x05\x0E\x06\x02\u0122\u0123\x05\n\x04\x02\u0123\u0124\x05"\x10\x02\u0124\u0125\x05 \x0F\x02\u0125W\x03\x02\x02\x02\u0126\u0127\x05\x0E\x06\x02\u0127\u0128\x05$\x11\x02\u0128\u0129\x05\x06\x02\x02\u0129\u012A\x05*\x14\x02\u012AY\x03\x02\x02\x02\u012B\u012C\x05\x0E\x06\x02\u012C\u012D\x05*\x14\x02\u012D\u012E\x05\n\x04\x02\u012E\u012F\x05 \x0F\x02\u012F[\x03\x02\x02\x02\u0130\u0131\x05\x0E\x06\x02\u0131\u0132\x05*\x14\x02\u0132\u0133\x05\x0E\x06\x02\u0133\u0134\x05\x0E\x06\x02\u0134]\x03\x02\x02\x02\u0135\u0136\x05\x0E\x06\x02\u0136\u0137\x05,\x15\x02\u0137\u0138\x05\n\x04\x02\u0138\u0139\x05\x14\t\x02\u0139_\x03\x02\x02\x02\u013A\u013B\x05\x0E\x06\x02\u013B\u013C\x050\x17\x02\u013C\u013D\x05\x0E\x06\x02\u013D\u013E\x05(\x13\x02\u013Ea\x03\x02\x02\x02\u013F\u0140\x05\x1C\r\x02\u0140\u0141\x05"\x10\x02\u0141\u0142\x05"\x10\x02\u0142\u0143\x05$\x11\x02\u0143c\x03\x02\x02\x02\u0144\u0145\x05 \x0F\x02\u0145\u0146\x05\x0E\x06\x02\u0146\u0147\x054\x19\x02\u0147\u0148\x05,\x15\x02\u0148e\x03\x02\x02\x02\u0149\u014A\x05 \x0F\x02\u014A\u014B\x05*\x14\x02\u014B\u014C\x05\n\x04\x02\u014C\u014D\x05 \x0F\x02\u014Dg\x03\x02\x02\x02\u014E\u014F\x05(\x13\x02\u014F\u0150\x05\x0E\x06\x02\u0150\u0151\x05,\x15\x02\u0151\u0152\x05 \x0F\x02\u0152i\x03\x02\x02\x02\u0153\u0154\x05(\x13\x02\u0154\u0155\x05\x0E\x06\x02\u0155\u0156\x05$\x11\x02\u0156\u0157\x05*\x14\x02\u0157k\x03\x02\x02\x02\u0158\u0159\x05(\x13\x02\u0159\u015A\x05\x0E\x06\x02\u015A\u015B\x05$\x11\x02\u015B\u015C\x05\x0E\x06\x02\u015Cm\x03\x02\x02\x02\u015D\u015E\x05*\x14\x02\u015E\u015F\x05.\x16\x02\u015F\u0160\x05\b\x03\x02\u0160\u0161\x05(\x13\x02\u0161o\x03\x02\x02\x02\u0162\u0163\x05.\x16\x02\u0163\u0164\x05 \x0F\x02\u0164\u0165\x05,\x15\x02\u0165\u0166\x05\x1C\r\x02\u0166q\x03\x02\x02\x02\u0167\u016A\x05@\x1F\x02\u0168\u016A\x05:\x1C\x02\u0169\u0167\x03\x02\x02\x02\u0169\u0168\x03\x02\x02\x02\u016A\u016B\x03\x02\x02\x02\u016B\u0169\x03\x02\x02\x02\u016B\u016C\x03\x02\x02\x02\u016C\u016E\x03\x02\x02\x02\u016D\u0169\x03\x02\x02\x02\u016D\u016E\x03\x02\x02\x02\u016E\u016F\x03\x02\x02\x02\u016F\u017D\x07<\x02\x02\u0170\u0172\x07]\x02\x02\u0171\u0173\n\x1C\x02\x02\u0172\u0171\x03\x02\x02\x02\u0173\u0174\x03\x02\x02\x02\u0174\u0172\x03\x02\x02\x02\u0174\u0175\x03\x02\x02\x02\u0175\u0176\x03\x02\x02\x02\u0176\u017E\x07_\x02\x02\u0177\u017A\x05@\x1F\x02\u0178\u017A\x05:\x1C\x02\u0179\u0177\x03\x02\x02\x02\u0179\u0178\x03\x02\x02\x02\u017A\u017B\x03\x02\x02\x02\u017B\u0179\x03\x02\x02\x02\u017B\u017C\x03\x02\x02\x02\u017C\u017E\x03\x02\x02\x02\u017D\u0170\x03\x02\x02\x02\u017D\u0179\x03\x02\x02\x02\u017Es\x03\x02\x02\x02\u017F\u0181\x07]\x02\x02\u0180\u0182\x05:\x1C\x02\u0181\u0180\x03\x02\x02\x02\u0182\u0183\x03\x02\x02\x02\u0183\u0181\x03\x02\x02\x02\u0183\u0184\x03\x02\x02\x02\u0184\u018B\x03\x02\x02\x02\u0185\u0187\x07"\x02\x02\u0186\u0188\x05:\x1C\x02\u0187\u0186\x03\x02\x02\x02\u0188\u0189\x03\x02\x02\x02\u0189\u0187\x03\x02\x02\x02\u0189\u018A\x03\x02\x02\x02\u018A\u018C\x03\x02\x02\x02\u018B\u0185\x03\x02\x02\x02\u018C\u018D\x03\x02\x02\x02\u018D\u018B\x03\x02\x02\x02\u018D\u018E\x03\x02\x02\x02\u018E\u018F\x03\x02\x02\x02\u018F\u0190\x07_\x02\x02\u0190u\x03\x02\x02\x02\u0191\u0193\x07]\x02\x02\u0192\u0194\x05:\x1C\x02\u0193\u0192\x03\x02\x02\x02\u0194\u0195\x03\x02\x02\x02\u0195\u0193\x03\x02\x02\x02\u0195\u0196\x03\x02\x02\x02\u0196\u0198\x03\x02\x02\x02\u0197\u0199\x07T\x02\x02\u0198\u0197\x03\x02\x02\x02\u0198\u0199\x03\x02\x02\x02\u0199\u019A\x03\x02\x02\x02\u019A\u019B\x07_\x02\x02\u019Bw\x03\x02\x02\x02\u019C\u019E\x07]\x02\x02\u019D\u019F\x05<\x1D\x02\u019E\u019D\x03\x02\x02\x02\u019E\u019F\x03\x02\x02\x02\u019F\u01A0\x03\x02\x02\x02\u01A0\u01A1\x07_\x02\x02\u01A1y\x03\x02\x02\x02\u01A2\u01A8\x07$\x02\x02\u01A3\u01A4\x07^\x02\x02\u01A4\u01A7\x0B\x02\x02\x02\u01A5\u01A7\n \x02\x02\u01A6\u01A3\x03\x02\x02\x02\u01A6\u01A5\x03\x02\x02\x02\u01A7\u01AA\x03\x02\x02\x02\u01A8\u01A6\x03\x02\x02\x02\u01A8\u01A9\x03\x02\x02\x02\u01A9\u01AB\x03\x02\x02\x02\u01AA\u01A8\x03\x02\x02\x02\u01AB\u01AC\x07$\x02\x02\u01AC{\x03\x02\x02\x02\u01AD\u01AE\x05z<\x02\u01AE}\x03\x02\x02\x02\u01AF\u01B3\x07)\x02\x02\u01B0\u01B4\n!\x02\x02\u01B1\u01B2\x07^\x02\x02\u01B2\u01B4\x0B\x02\x02\x02\u01B3\u01B0\x03\x02\x02\x02\u01B3\u01B1\x03\x02\x02\x02\u01B4\u01B5\x03\x02\x02\x02\u01B5\u01B6\x07)\x02\x02\u01B6\x7F\x03\x02\x02\x02\u01B7\u01B9\x07\'\x02\x02\u01B8\u01BA\x0423\x02\u01B9\u01B8\x03\x02\x02\x02\u01BA\u01BB\x03\x02\x02\x02\u01BB\u01B9\x03\x02\x02\x02\u01BB\u01BC\x03\x02\x02\x02\u01BC\x81\x03\x02\x02\x02\u01BD\u01BE\x05@\x1F\x02\u01BE\u01BF\x05B \x02\u01BF\u01C0\x05B \x02\u01C0\u01C2\x05B \x02\u01C1\u01C3\x05B \x02\u01C2\u01C1\x03\x02\x02\x02\u01C3\u01C4\x03\x02\x02\x02\u01C4\u01C2\x03\x02\x02\x02\u01C4\u01C5\x03\x02\x02\x02\u01C5\x83\x03\x02\x02\x02\u01C6\u01C7\x050\x17\x02\u01C7\u01C8\x05\x06\x02\x02\u01C8\u01C9\x05(\x13\x02\u01C9\u01CA\x05:\x1C\x02\u01CA\x85\x03\x02\x02\x02\u01CB\u01CC\x050\x17\x02\u01CC\u01CD\x05\x06\x02\x02\u01CD\u01CE\x05:\x1C\x02\u01CE\u01CF\x05:\x1C\x02\u01CF\x87\x03\x02\x02\x02\u01D0\u01D1\x05"\x10\x02\u01D1\u01D2\x05\b\x03\x02\u01D2\u01D3\x050\x17\x02\u01D3\u01D4\x05:\x1C\x02\u01D4\x89\x03\x02\x02\x02\u01D5\u01D6\x05"\x10\x02\u01D6\u01D7\x050\x17\x02\u01D7\u01D8\x05:\x1C\x02\u01D8\u01D9\x05:\x1C\x02\u01D9\x8B\x03\x02\x02\x02\u01DA\u01DB\x05\x1E\x0E\x02\u01DB\u01DC\x050\x17\x02\u01DC\u01DD\x05:\x1C\x02\u01DD\u01DE\x05:\x1C\x02\u01DE\x8D\x03\x02\x02\x02\u01DF\u01E0\x05@\x1F\x02\u01E0\u01E1\x05B \x02\u01E1\u01E2\x05B \x02\u01E2\u01E3\x05B \x02\u01E3\x8F\x03\x02\x02\x02\u01E4\u01E5\x05\x0E\x06\x02\u01E5\u01E6\x05&\x12\x02\u01E6\u01FD\x03\x02\x02\x02\u01E7\u01E8\x05 \x0F\x02\u01E8\u01E9\x05\x0E\x06\x02\u01E9\u01FD\x03\x02\x02\x02\u01EA\u01EB\x05\x1C\r\x02\u01EB\u01EC\x05,\x15\x02\u01EC\u01FD\x03\x02\x02\x02\u01ED\u01EE\x05\x12\b\x02\u01EE\u01EF\x05,\x15\x02\u01EF\u01FD\x03\x02\x02\x02\u01F0\u01F1\x05\x1C\r\x02\u01F1\u01F2\x05\x0E\x06\x02\u01F2\u01FD\x03\x02\x02\x02\u01F3\u01F4\x05\x12\b\x02\u01F4\u01F5\x05\x0E\x06\x02\u01F5\u01FD\x03\x02\x02\x02\u01F6\u01F7\x05\b\x03\x02\u01F7\u01F8\x05,\x15\x02\u01F8\u01FD\x03\x02\x02\x02\u01F9\u01FA\x05\b\x03\x02\u01FA\u01FB\x05\x10\x07\x02\u01FB\u01FD\x03\x02\x02\x02\u01FC\u01E4\x03\x02\x02\x02\u01FC\u01E7\x03\x02\x02\x02\u01FC\u01EA\x03\x02\x02\x02\u01FC\u01ED\x03\x02\x02\x02\u01FC\u01F0\x03\x02\x02\x02\u01FC\u01F3\x03\x02\x02\x02\u01FC\u01F6\x03\x02\x02\x02\u01FC\u01F9\x03\x02\x02\x02\u01FD\x91\x03\x02\x02\x02\u01FE\u020A\x07?\x02\x02\u01FF\u0200\x07#\x02\x02\u0200\u020A\x07?\x02\x02\u0201\u0202\x07>\x02\x02\u0202\u020A\x07@\x02\x02\u0203\u020A\x07@\x02\x02\u0204\u0205\x07@\x02\x02\u0205\u020A\x07?\x02\x02\u0206\u020A\x07>\x02\x02\u0207\u0208\x07>\x02\x02\u0208\u020A\x07?\x02\x02\u0209\u01FE\x03\x02\x02\x02\u0209\u01FF\x03\x02\x02\x02\u0209\u0201\x03\x02\x02\x02\u0209\u0203\x03\x02\x02\x02\u0209\u0204\x03\x02\x02\x02\u0209\u0206\x03\x02\x02\x02\u0209\u0207\x03\x02\x02\x02\u020A\x93\x03\x02\x02\x02\u020B\u020C\x05\x06\x02\x02\u020C\u020D\x05 \x0F\x02\u020D\u020E\x05\f\x05\x02\u020E\u0213\x03\x02\x02\x02\u020F\u0210\x05"\x10\x02\u0210\u0211\x05(\x13\x02\u0211\u0213\x03\x02\x02\x02\u0212\u020B\x03\x02\x02\x02\u0212\u020F\x03\x02\x02\x02\u0213\x95\x03\x02\x02\x02\u0214\u0216\x05>\x1E\x02\u0215\u0214\x03\x02\x02\x02\u0215\u0216\x03\x02\x02\x02\u0216\u021A\x03\x02\x02\x02\u0217\u0219\x05:\x1C\x02\u0218\u0217\x03\x02\x02\x02\u0219\u021C\x03\x02\x02\x02\u021A\u0218\x03\x02\x02\x02\u021A\u021B\x03\x02\x02\x02\u021B\u021D\x03\x02\x02\x02\u021C\u021A\x03\x02\x02\x02\u021D\u021F\x070\x02\x02\u021E\u0220\x05:\x1C\x02\u021F\u021E\x03\x02\x02\x02\u0220\u0221\x03\x02\x02\x02\u0221\u021F\x03\x02\x02\x02\u0221\u0222\x03\x02\x02\x02\u0222\x97\x03\x02\x02\x02\u0223\u0225\x05>\x1E\x02\u0224\u0223\x03\x02\x02\x02\u0224\u0225\x03\x02\x02\x02\u0225\u0227\x03\x02\x02\x02\u0226\u0228\x05:\x1C\x02\u0227\u0226\x03\x02\x02\x02\u0228\u0229\x03\x02\x02\x02\u0229\u0227\x03\x02\x02\x02\u0229\u022A\x03\x02\x02\x02\u022A\x99\x03\x02\x02\x02\u022B\u022D\t"\x02\x02\u022C\u022B\x03\x02\x02\x02\u022D\u022E\x03\x02\x02\x02\u022E\u022C\x03\x02\x02\x02\u022E\u022F\x03\x02\x02\x02\u022F\u0230\x03\x02\x02\x02\u0230\u0231\bL\x04\x02\u0231\x9B\x03\x02\x02\x02\u0232\u0237\x05@\x1F\x02\u0233\u0235\x05B \x02\u0234\u0236\x05B \x02\u0235\u0234\x03\x02\x02\x02\u0235\u0236\x03\x02\x02\x02\u0236\u0238\x03\x02\x02\x02\u0237\u0233\x03\x02\x02\x02\u0237\u0238\x03\x02\x02\x02\u0238\x9D\x03\x02\x02\x02\u0239\u023A\x0B\x02\x02\x02\u023A\x9F\x03\x02\x02\x02\u023B\u023C\x07^\x02\x02\u023C\u023F\x0B\x02\x02\x02\u023D\u023F\n#\x02\x02\u023E\u023B\x03\x02\x02\x02\u023E\u023D\x03\x02\x02\x02\u023F\u0240\x03\x02\x02\x02\u0240\u023E\x03\x02\x02\x02\u0240\u0241\x03\x02\x02\x02\u0241\xA1\x03\x02\x02\x02\u0242\u0243\x05z<\x02\u0243\xA3\x03\x02\x02\x02\u0244\u024A\x07)\x02\x02\u0245\u0246\x07^\x02\x02\u0246\u0249\x0B\x02\x02\x02\u0247\u0249\n$\x02\x02\u0248\u0245\x03\x02\x02\x02\u0248\u0247\x03\x02\x02\x02\u0249\u024C\x03\x02\x02\x02\u024A\u0248\x03\x02\x02\x02\u024A\u024B\x03\x02\x02\x02\u024B\u024D\x03\x02\x02\x02\u024C\u024A\x03\x02\x02\x02\u024D\u024E\x07)\x02\x02\u024E\u024F\x03\x02\x02\x02\u024F\u0250\bQ\x05\x02\u0250\xA5\x03\x02\x02\x02\u0251\u0252\x07?\x02\x02\u0252\xA7\x03\x02\x02\x02\u0253\u0255\t\x1D\x02\x02\u0254\u0253\x03\x02\x02\x02\u0254\u0255\x03\x02\x02\x02\u0255\u0257\x03\x02\x02\x02\u0256\u0258\x042;\x02\u0257\u0256\x03\x02\x02\x02\u0258\u0259\x03\x02\x02\x02\u0259\u0257\x03\x02\x02\x02\u0259\u025A\x03\x02\x02\x02\u025A\xA9\x03\x02\x02\x02\u025B\u025D\t%\x02\x02\u025C\u025B\x03\x02\x02\x02\u025D\u025E\x03\x02\x02\x02\u025E\u025C\x03\x02\x02\x02\u025E\u025F\x03\x02\x02\x02\u025F\u0260\x03\x02\x02\x02\u0260\u0261\bT\x06\x02\u0261\xAB\x03\x02\x02\x02\u0262\u0264\x07\x0F\x02\x02\u0263\u0262\x03\x02\x02\x02\u0263\u0264\x03\x02\x02\x02\u0264\u0265\x03\x02\x02\x02\u0265\u0266\x07\f\x02\x02\u0266\u0267\x03\x02\x02\x02\u0267\u0268\bU\x07\x02\u0268\xAD\x03\x02\x02\x02\u0269\u026A\n&\x02\x02\u026A\u026B\x03\x02\x02\x02\u026B\u026C\bV\b\x02\u026C\xAF\x03\x02\x02\x02\u026D\u026F\t\'\x02\x02\u026E\u026D\x03\x02\x02\x02\u026F\u0270\x03\x02\x02\x02\u0270\u026E\x03\x02\x02\x02\u0270\u0271\x03\x02\x02\x02\u0271\u0272\x03\x02\x02\x02\u0272\u0273\bW\t\x02\u0273\u0274\bW\x04\x02\u0274\xB1\x03\x02\x02\x02\u0275\u0277\n\'\x02\x02\u0276\u0275\x03\x02\x02\x02\u0277\u0278\x03\x02\x02\x02\u0278\u0276\x03\x02\x02\x02\u0278\u0279\x03\x02\x02\x02\u0279\u027A\x03\x02\x02\x02\u027A\u027B\bX\x07\x02\u027B\xB3\x03\x02\x02\x02.\x02\x03\x04\x05\xED\u0169\u016B\u016D\u0174\u0179\u017B\u017D\u0183\u0189\u018D\u0195\u0198\u019E\u01A6\u01A8\u01B3\u01BB\u01C4\u01FC\u0209\u0212\u0215\u021A\u0221\u0224\u0229\u022E\u0235\u0237\u023E\u0240\u0248\u024A\u0254\u0259\u025E\u0263\u0270\u0278\n\x07\x03\x02\x07\x04\x02\x02\x04\x02\t1\x02\b\x02\x02\x06\x02\x02\x07\x05\x02\x04\x02\x02';
+    this.serializedATN_1 = '\x03\u608B\uA72A\u8133\uB9ED\u417C\u3BE7\u7786\u5964\x028\u028E\b\x01\b\x01\b\x01\b\x01\x04\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04\x07\t\x07\x04\b\t\b\x04\t\t\t\x04\n\t\n\x04\x0B\t\x0B\x04\f\t\f\x04\r\t\r\x04\x0E\t\x0E\x04\x0F\t\x0F\x04\x10\t\x10\x04\x11\t\x11\x04\x12\t\x12\x04\x13\t\x13\x04\x14\t\x14\x04\x15\t\x15\x04\x16\t\x16\x04\x17\t\x17\x04\x18\t\x18\x04\x19\t\x19\x04\x1A\t\x1A\x04\x1B\t\x1B\x04\x1C\t\x1C\x04\x1D\t\x1D\x04\x1E\t\x1E\x04\x1F\t\x1F\x04 \t \x04!\t!\x04"\t"\x04#\t#\x04$\t$\x04%\t%\x04&\t&\x04\'\t\'\x04(\t(\x04)\t)\x04*\t*\x04+\t+\x04,\t,\x04-\t-\x04.\t.\x04/\t/\x040\t0\x041\t1\x042\t2\x043\t3\x044\t4\x045\t5\x046\t6\x047\t7\x048\t8\x049\t9\x04:\t:\x04;\t;\x04<\t<\x04=\t=\x04>\t>\x04?\t?\x04@\t@\x04A\tA\x04B\tB\x04C\tC\x04D\tD\x04E\tE\x04F\tF\x04G\tG\x04H\tH\x04I\tI\x04J\tJ\x04K\tK\x04L\tL\x04M\tM\x04N\tN\x04O\tO\x04P\tP\x04Q\tQ\x04R\tR\x04S\tS\x04T\tT\x04U\tU\x04V\tV\x04W\tW\x04X\tX\x04Y\tY\x04Z\tZ\x04[\t[\x03\x02\x03\x02\x03\x03\x03\x03\x03\x04\x03\x04\x03\x05\x03\x05\x03\x06\x03\x06\x03\x07\x03\x07\x03\b\x03\b\x03\t\x03\t\x03\n\x03\n\x03\x0B\x03\x0B\x03\f\x03\f\x03\r\x03\r\x03\x0E\x03\x0E\x03\x0F\x03\x0F\x03\x10\x03\x10\x03\x11\x03\x11\x03\x12\x03\x12\x03\x13\x03\x13\x03\x14\x03\x14\x03\x15\x03\x15\x03\x16\x03\x16\x03\x17\x03\x17\x03\x18\x03\x18\x03\x19\x03\x19\x03\x1A\x03\x1A\x03\x1B\x03\x1B\x03\x1C\x03\x1C\x03\x1D\x06\x1D\xF2\n\x1D\r\x1D\x0E\x1D\xF3\x03\x1E\x03\x1E\x03\x1F\x03\x1F\x03 \x03 \x03!\x03!\x03!\x03!\x03!\x03"\x03"\x03"\x03"\x03#\x03#\x03#\x03#\x03#\x03$\x03$\x03$\x03$\x03$\x03%\x03%\x03%\x03%\x03%\x03&\x03&\x03&\x03&\x03&\x03\'\x03\'\x03\'\x03\'\x03\'\x03(\x03(\x03(\x03(\x03(\x03)\x03)\x03)\x03)\x03)\x03*\x03*\x03*\x03*\x03*\x03+\x03+\x03+\x03+\x03+\x03,\x03,\x03,\x03,\x03,\x03-\x03-\x03-\x03-\x03-\x03.\x03.\x03.\x03.\x03.\x03/\x03/\x03/\x03/\x03/\x030\x030\x030\x030\x030\x031\x031\x031\x031\x031\x032\x032\x032\x032\x032\x033\x033\x033\x033\x033\x034\x034\x034\x034\x034\x035\x035\x035\x035\x035\x036\x036\x036\x036\x036\x037\x037\x037\x037\x037\x038\x038\x068\u0170\n8\r8\x0E8\u0171\x058\u0174\n8\x038\x038\x038\x068\u0179\n8\r8\x0E8\u017A\x038\x038\x038\x068\u0180\n8\r8\x0E8\u0181\x058\u0184\n8\x039\x039\x03:\x06:\u0189\n:\r:\x0E:\u018A\x03;\x06;\u018E\n;\r;\x0E;\u018F\x03<\x03<\x05<\u0194\n<\x03<\x03<\x03<\x03<\x07<\u019A\n<\f<\x0E<\u019D\x0B<\x03<\x05<\u01A0\n<\x03<\x03<\x03=\x03=\x06=\u01A6\n=\r=\x0E=\u01A7\x03=\x05=\u01AB\n=\x03=\x03=\x03>\x03>\x05>\u01B1\n>\x03>\x03>\x03?\x03?\x03?\x03?\x07?\u01B9\n?\f?\x0E?\u01BC\x0B?\x03?\x03?\x03@\x03@\x03A\x03A\x03A\x03A\x05A\u01C6\nA\x03A\x03A\x03B\x03B\x06B\u01CC\nB\rB\x0EB\u01CD\x03C\x03C\x03C\x03C\x03C\x06C\u01D5\nC\rC\x0EC\u01D6\x03D\x03D\x03D\x03D\x03D\x03E\x03E\x03E\x03E\x03E\x03F\x03F\x03F\x03F\x03F\x03G\x03G\x03G\x03G\x03G\x03H\x03H\x03H\x03H\x03H\x03I\x03I\x03I\x03I\x03I\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x05J\u020F\nJ\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x05K\u021C\nK\x03L\x03L\x03L\x03L\x03L\x03L\x03L\x05L\u0225\nL\x03M\x05M\u0228\nM\x03M\x07M\u022B\nM\fM\x0EM\u022E\x0BM\x03M\x03M\x06M\u0232\nM\rM\x0EM\u0233\x03N\x05N\u0237\nN\x03N\x06N\u023A\nN\rN\x0EN\u023B\x03O\x06O\u023F\nO\rO\x0EO\u0240\x03O\x03O\x03P\x03P\x03P\x05P\u0248\nP\x05P\u024A\nP\x03Q\x03Q\x03R\x03R\x03R\x06R\u0251\nR\rR\x0ER\u0252\x03S\x03S\x03T\x03T\x03T\x03T\x07T\u025B\nT\fT\x0ET\u025E\x0BT\x03T\x03T\x03T\x03T\x03U\x03U\x03V\x05V\u0267\nV\x03V\x06V\u026A\nV\rV\x0EV\u026B\x03W\x06W\u026F\nW\rW\x0EW\u0270\x03W\x03W\x03X\x05X\u0276\nX\x03X\x03X\x03X\x03X\x03Y\x03Y\x03Y\x03Y\x03Z\x06Z\u0281\nZ\rZ\x0EZ\u0282\x03Z\x03Z\x03Z\x03[\x06[\u0289\n[\r[\x0E[\u028A\x03[\x03[\x02\x02\\\x06\x02\b\x02\n\x02\f\x02\x0E\x02\x10\x02\x12\x02\x14\x02\x16\x02\x18\x02\x1A\x02\x1C\x02\x1E\x02 \x02"\x02$\x02&\x02(\x02*\x02,\x02.\x020\x022\x024\x026\x028\x02:\x02<\x02>\x02@\x02B\x02D\x03F\x04H\x05J\x06L\x07N\bP\tR\nT\x0BV\fX\rZ\x0E\\\x0F^\x10`\x11b\x12d\x13f\x14h\x15j\x16l\x17n\x18p\x19r\x1At\x02v\x02x\x02z\x1B|\x1C~\x1D\x80\x02\x82\x1E\x84\x1F\x86 \x88!\x8A"\x8C#\x8E$\x90%\x92&\x94\'\x96(\x98)\x9A*\x9C+\x9E,\xA0-\xA2.\xA4/\xA60\xA81\xAA\x02\xAC2\xAE3\xB04\xB25\xB46\xB67\xB88\x06\x02\x03\x04\x05(\x04\x02CCcc\x04\x02DDdd\x04\x02EEee\x04\x02FFff\x04\x02GGgg\x04\x02HHhh\x04\x02IIii\x04\x02JJjj\x04\x02KKkk\x04\x02LLll\x04\x02MMmm\x04\x02NNnn\x04\x02OOoo\x04\x02PPpp\x04\x02QQqq\x04\x02RRrr\x04\x02SSss\x04\x02TTtt\x04\x02UUuu\x04\x02VVvv\x04\x02WWww\x04\x02XXxx\x04\x02YYyy\x04\x02ZZzz\x04\x02[[{{\x04\x02\\\\||\x03\x02__\x04\x02--//\x05\x02C\\aac|\x07\x02\x0B\f\x0F\x0F""$$))\x04\x02\x0B\x0B""\x06\x02\f\f\x0F\x0F$$^^\x04\x02))^^\x06\x02\x0B\f\x0F\x0F""..\x06\x02\x0B\f\x0F\x0F""^^\x06\x02\f\f\x0F\x0F))^^\x05\x02\f\f\x0F\x0F%%\x04\x02\f\f\x0F\x0F\x02\u029C\x02D\x03\x02\x02\x02\x02F\x03\x02\x02\x02\x02H\x03\x02\x02\x02\x02J\x03\x02\x02\x02\x02L\x03\x02\x02\x02\x02N\x03\x02\x02\x02\x02P\x03\x02\x02\x02\x02R\x03\x02\x02\x02\x02T\x03\x02\x02\x02\x02V\x03\x02\x02\x02\x02X\x03\x02\x02\x02\x02Z\x03\x02\x02\x02\x02\\\x03\x02\x02\x02\x02^\x03\x02\x02\x02\x02`\x03\x02\x02\x02\x02b\x03\x02\x02\x02\x02d\x03\x02\x02\x02\x02f\x03\x02\x02\x02\x02h\x03\x02\x02\x02\x02j\x03\x02\x02\x02\x02l\x03\x02\x02\x02\x02n\x03\x02\x02\x02\x02p\x03\x02\x02\x02\x02r\x03\x02\x02\x02\x02z\x03\x02\x02\x02\x02|\x03\x02\x02\x02\x02~\x03\x02\x02\x02\x02\x82\x03\x02\x02\x02\x02\x84\x03\x02\x02\x02\x02\x86\x03\x02\x02\x02\x02\x88\x03\x02\x02\x02\x02\x8A\x03\x02\x02\x02\x02\x8C\x03\x02\x02\x02\x02\x8E\x03\x02\x02\x02\x02\x90\x03\x02\x02\x02\x02\x92\x03\x02\x02\x02\x02\x94\x03\x02\x02\x02\x02\x96\x03\x02\x02\x02\x02\x98\x03\x02\x02\x02\x02\x9A\x03\x02\x02\x02\x02\x9C\x03\x02\x02\x02\x02\x9E\x03\x02\x02\x02\x02\xA0\x03\x02\x02\x02\x02\xA2\x03\x02\x02\x02\x02\xA4\x03\x02\x02\x02\x03\xA6\x03\x02\x02\x02\x03\xA8\x03\x02\x02\x02\x03\xAA\x03\x02\x02\x02\x03\xAC\x03\x02\x02\x02\x03\xAE\x03\x02\x02\x02\x03\xB0\x03\x02\x02\x02\x03\xB2\x03\x02\x02\x02\x04\xB4\x03\x02\x02\x02\x04\xB6\x03\x02\x02\x02\x05\xB8\x03\x02\x02\x02\x06\xBA\x03\x02\x02\x02\b\xBC\x03\x02\x02\x02\n\xBE\x03\x02\x02\x02\f\xC0\x03\x02\x02\x02\x0E\xC2\x03\x02\x02\x02\x10\xC4\x03\x02\x02\x02\x12\xC6\x03\x02\x02\x02\x14\xC8\x03\x02\x02\x02\x16\xCA\x03\x02\x02\x02\x18\xCC\x03\x02\x02\x02\x1A\xCE\x03\x02\x02\x02\x1C\xD0\x03\x02\x02\x02\x1E\xD2\x03\x02\x02\x02 \xD4\x03\x02\x02\x02"\xD6\x03\x02\x02\x02$\xD8\x03\x02\x02\x02&\xDA\x03\x02\x02\x02(\xDC\x03\x02\x02\x02*\xDE\x03\x02\x02\x02,\xE0\x03\x02\x02\x02.\xE2\x03\x02\x02\x020\xE4\x03\x02\x02\x022\xE6\x03\x02\x02\x024\xE8\x03\x02\x02\x026\xEA\x03\x02\x02\x028\xEC\x03\x02\x02\x02:\xEE\x03\x02\x02\x02<\xF1\x03\x02\x02\x02>\xF5\x03\x02\x02\x02@\xF7\x03\x02\x02\x02B\xF9\x03\x02\x02\x02D\xFB\x03\x02\x02\x02F\u0100\x03\x02\x02\x02H\u0104\x03\x02\x02\x02J\u0109\x03\x02\x02\x02L\u010E\x03\x02\x02\x02N\u0113\x03\x02\x02\x02P\u0118\x03\x02\x02\x02R\u011D\x03\x02\x02\x02T\u0122\x03\x02\x02\x02V\u0127\x03\x02\x02\x02X\u012C\x03\x02\x02\x02Z\u0131\x03\x02\x02\x02\\\u0136\x03\x02\x02\x02^\u013B\x03\x02\x02\x02`\u0140\x03\x02\x02\x02b\u0145\x03\x02\x02\x02d\u014A\x03\x02\x02\x02f\u014F\x03\x02\x02\x02h\u0154\x03\x02\x02\x02j\u0159\x03\x02\x02\x02l\u015E\x03\x02\x02\x02n\u0163\x03\x02\x02\x02p\u0168\x03\x02\x02\x02r\u0173\x03\x02\x02\x02t\u0185\x03\x02\x02\x02v\u0188\x03\x02\x02\x02x\u018D\x03\x02\x02\x02z\u0191\x03\x02\x02\x02|\u01A3\x03\x02\x02\x02~\u01AE\x03\x02\x02\x02\x80\u01B4\x03\x02\x02\x02\x82\u01BF\x03\x02\x02\x02\x84\u01C1\x03\x02\x02\x02\x86\u01C9\x03\x02\x02\x02\x88\u01CF\x03\x02\x02\x02\x8A\u01D8\x03\x02\x02\x02\x8C\u01DD\x03\x02\x02\x02\x8E\u01E2\x03\x02\x02\x02\x90\u01E7\x03\x02\x02\x02\x92\u01EC\x03\x02\x02\x02\x94\u01F1\x03\x02\x02\x02\x96\u020E\x03\x02\x02\x02\x98\u021B\x03\x02\x02\x02\x9A\u0224\x03\x02\x02\x02\x9C\u0227\x03\x02\x02\x02\x9E\u0236\x03\x02\x02\x02\xA0\u023E\x03\x02\x02\x02\xA2\u0244\x03\x02\x02\x02\xA4\u024B\x03\x02\x02\x02\xA6\u0250\x03\x02\x02\x02\xA8\u0254\x03\x02\x02\x02\xAA\u0256\x03\x02\x02\x02\xAC\u0263\x03\x02\x02\x02\xAE\u0266\x03\x02\x02\x02\xB0\u026E\x03\x02\x02\x02\xB2\u0275\x03\x02\x02\x02\xB4\u027B\x03\x02\x02\x02\xB6\u0280\x03\x02\x02\x02\xB8\u0288\x03\x02\x02\x02\xBA\xBB\t\x02\x02\x02\xBB\x07\x03\x02\x02\x02\xBC\xBD\t\x03\x02\x02\xBD\t\x03\x02\x02\x02\xBE\xBF\t\x04\x02\x02\xBF\x0B\x03\x02\x02\x02\xC0\xC1\t\x05\x02\x02\xC1\r\x03\x02\x02\x02\xC2\xC3\t\x06\x02\x02\xC3\x0F\x03\x02\x02\x02\xC4\xC5\t\x07\x02\x02\xC5\x11\x03\x02\x02\x02\xC6\xC7\t\b\x02\x02\xC7\x13\x03\x02\x02\x02\xC8\xC9\t\t\x02\x02\xC9\x15\x03\x02\x02\x02\xCA\xCB\t\n\x02\x02\xCB\x17\x03\x02\x02\x02\xCC\xCD\t\x0B\x02\x02\xCD\x19\x03\x02\x02\x02\xCE\xCF\t\f\x02\x02\xCF\x1B\x03\x02\x02\x02\xD0\xD1\t\r\x02\x02\xD1\x1D\x03\x02\x02\x02\xD2\xD3\t\x0E\x02\x02\xD3\x1F\x03\x02\x02\x02\xD4\xD5\t\x0F\x02\x02\xD5!\x03\x02\x02\x02\xD6\xD7\t\x10\x02\x02\xD7#\x03\x02\x02\x02\xD8\xD9\t\x11\x02\x02\xD9%\x03\x02\x02\x02\xDA\xDB\t\x12\x02\x02\xDB\'\x03\x02\x02\x02\xDC\xDD\t\x13\x02\x02\xDD)\x03\x02\x02\x02\xDE\xDF\t\x14\x02\x02\xDF+\x03\x02\x02\x02\xE0\xE1\t\x15\x02\x02\xE1-\x03\x02\x02\x02\xE2\xE3\t\x16\x02\x02\xE3/\x03\x02\x02\x02\xE4\xE5\t\x17\x02\x02\xE51\x03\x02\x02\x02\xE6\xE7\t\x18\x02\x02\xE73\x03\x02\x02\x02\xE8\xE9\t\x19\x02\x02\xE95\x03\x02\x02\x02\xEA\xEB\t\x1A\x02\x02\xEB7\x03\x02\x02\x02\xEC\xED\t\x1B\x02\x02\xED9\x03\x02\x02\x02\xEE\xEF\x042;\x02\xEF;\x03\x02\x02\x02\xF0\xF2\n\x1C\x02\x02\xF1\xF0\x03\x02\x02\x02\xF2\xF3\x03\x02\x02\x02\xF3\xF1\x03\x02\x02\x02\xF3\xF4\x03\x02\x02\x02\xF4=\x03\x02\x02\x02\xF5\xF6\t\x1D\x02\x02\xF6?\x03\x02\x02\x02\xF7\xF8\t\x1E\x02\x02\xF8A\x03\x02\x02\x02\xF9\xFA\n\x1F\x02\x02\xFAC\x03\x02\x02\x02\xFB\xFC\x07,\x02\x02\xFC\xFD\x07%\x02\x02\xFD\xFE\x03\x02\x02\x02\xFE\xFF\b!\x02\x02\xFFE\x03\x02\x02\x02\u0100\u0101\x07,\x02\x02\u0101\u0102\x03\x02\x02\x02\u0102\u0103\b"\x03\x02\u0103G\x03\x02\x02\x02\u0104\u0105\x05*\x14\x02\u0105\u0106\x05\n\x04\x02\u0106\u0107\x05(\x13\x02\u0107\u0108\x05$\x11\x02\u0108I\x03\x02\x02\x02\u0109\u010A\x05\x16\n\x02\u010A\u010B\x05*\x14\x02\u010B\u010C\x05\n\x04\x02\u010C\u010D\x05(\x13\x02\u010DK\x03\x02\x02\x02\u010E\u010F\x05(\x13\x02\u010F\u0110\x05*\x14\x02\u0110\u0111\x05\n\x04\x02\u0111\u0112\x05(\x13\x02\u0112M\x03\x02\x02\x02\u0113\u0114\x05\x0E\x06\x02\u0114\u0115\x05 \x0F\x02\u0115\u0116\x05\f\x05\x02\u0116\u0117\x05\x1E\x0E\x02\u0117O\x03\x02\x02\x02\u0118\u0119\x05\f\x05\x02\u0119\u011A\x05"\x10\x02\u011A\u011B\x05\x16\n\x02\u011B\u011C\x05\x10\x07\x02\u011CQ\x03\x02\x02\x02\u011D\u011E\x05\x0E\x06\x02\u011E\u011F\x05 \x0F\x02\u011F\u0120\x05\f\x05\x02\u0120\u0121\x05\x16\n\x02\u0121S\x03\x02\x02\x02\u0122\u0123\x05\x0E\x06\x02\u0123\u0124\x05 \x0F\x02\u0124\u0125\x05.\x16\x02\u0125\u0126\x05\x1E\x0E\x02\u0126U\x03\x02\x02\x02\u0127\u0128\x05\x0E\x06\x02\u0128\u0129\x05\n\x04\x02\u0129\u012A\x05"\x10\x02\u012A\u012B\x05 \x0F\x02\u012BW\x03\x02\x02\x02\u012C\u012D\x05\x0E\x06\x02\u012D\u012E\x05$\x11\x02\u012E\u012F\x05\x06\x02\x02\u012F\u0130\x05*\x14\x02\u0130Y\x03\x02\x02\x02\u0131\u0132\x05\x0E\x06\x02\u0132\u0133\x05*\x14\x02\u0133\u0134\x05\n\x04\x02\u0134\u0135\x05 \x0F\x02\u0135[\x03\x02\x02\x02\u0136\u0137\x05\x0E\x06\x02\u0137\u0138\x05*\x14\x02\u0138\u0139\x05\x0E\x06\x02\u0139\u013A\x05\x0E\x06\x02\u013A]\x03\x02\x02\x02\u013B\u013C\x05\x0E\x06\x02\u013C\u013D\x05,\x15\x02\u013D\u013E\x05\n\x04\x02\u013E\u013F\x05\x14\t\x02\u013F_\x03\x02\x02\x02\u0140\u0141\x05\x0E\x06\x02\u0141\u0142\x050\x17\x02\u0142\u0143\x05\x0E\x06\x02\u0143\u0144\x05(\x13\x02\u0144a\x03\x02\x02\x02\u0145\u0146\x05\x1C\r\x02\u0146\u0147\x05"\x10\x02\u0147\u0148\x05"\x10\x02\u0148\u0149\x05$\x11\x02\u0149c\x03\x02\x02\x02\u014A\u014B\x05 \x0F\x02\u014B\u014C\x05\x0E\x06\x02\u014C\u014D\x054\x19\x02\u014D\u014E\x05,\x15\x02\u014Ee\x03\x02\x02\x02\u014F\u0150\x05 \x0F\x02\u0150\u0151\x05*\x14\x02\u0151\u0152\x05\n\x04\x02\u0152\u0153\x05 \x0F\x02\u0153g\x03\x02\x02\x02\u0154\u0155\x05(\x13\x02\u0155\u0156\x05\x0E\x06\x02\u0156\u0157\x05,\x15\x02\u0157\u0158\x05 \x0F\x02\u0158i\x03\x02\x02\x02\u0159\u015A\x05(\x13\x02\u015A\u015B\x05\x0E\x06\x02\u015B\u015C\x05$\x11\x02\u015C\u015D\x05*\x14\x02\u015Dk\x03\x02\x02\x02\u015E\u015F\x05(\x13\x02\u015F\u0160\x05\x0E\x06\x02\u0160\u0161\x05$\x11\x02\u0161\u0162\x05\x0E\x06\x02\u0162m\x03\x02\x02\x02\u0163\u0164\x05*\x14\x02\u0164\u0165\x05.\x16\x02\u0165\u0166\x05\b\x03\x02\u0166\u0167\x05(\x13\x02\u0167o\x03\x02\x02\x02\u0168\u0169\x05.\x16\x02\u0169\u016A\x05 \x0F\x02\u016A\u016B\x05,\x15\x02\u016B\u016C\x05\x1C\r\x02\u016Cq\x03\x02\x02\x02\u016D\u0170\x05@\x1F\x02\u016E\u0170\x05:\x1C\x02\u016F\u016D\x03\x02\x02\x02\u016F\u016E\x03\x02\x02\x02\u0170\u0171\x03\x02\x02\x02\u0171\u016F\x03\x02\x02\x02\u0171\u0172\x03\x02\x02\x02\u0172\u0174\x03\x02\x02\x02\u0173\u016F\x03\x02\x02\x02\u0173\u0174\x03\x02\x02\x02\u0174\u0175\x03\x02\x02\x02\u0175\u0183\x07<\x02\x02\u0176\u0178\x07]\x02\x02\u0177\u0179\n\x1C\x02\x02\u0178\u0177\x03\x02\x02\x02\u0179\u017A\x03\x02\x02\x02\u017A\u0178\x03\x02\x02\x02\u017A\u017B\x03\x02\x02\x02\u017B\u017C\x03\x02\x02\x02\u017C\u0184\x07_\x02\x02\u017D\u0180\x05@\x1F\x02\u017E\u0180\x05:\x1C\x02\u017F\u017D\x03\x02\x02\x02\u017F\u017E\x03\x02\x02\x02\u0180\u0181\x03\x02\x02\x02\u0181\u017F\x03\x02\x02\x02\u0181\u0182\x03\x02\x02\x02\u0182\u0184\x03\x02\x02\x02\u0183\u0176\x03\x02\x02\x02\u0183\u017F\x03\x02\x02\x02\u0184s\x03\x02\x02\x02\u0185\u0186\t \x02\x02\u0186u\x03\x02\x02\x02\u0187\u0189\x05t9\x02\u0188\u0187\x03\x02\x02\x02\u0189\u018A\x03\x02\x02\x02\u018A\u0188\x03\x02\x02\x02\u018A\u018B\x03\x02\x02\x02\u018Bw\x03\x02\x02\x02\u018C\u018E\x05:\x1C\x02\u018D\u018C\x03\x02\x02\x02\u018E\u018F\x03\x02\x02\x02\u018F\u018D\x03\x02\x02\x02\u018F\u0190\x03\x02\x02\x02\u0190y\x03\x02\x02\x02\u0191\u0193\x07]\x02\x02\u0192\u0194\x05v:\x02\u0193\u0192\x03\x02\x02\x02\u0193\u0194\x03\x02\x02\x02\u0194\u0195\x03\x02\x02\x02\u0195\u019B\x05x;\x02\u0196\u0197\x05v:\x02\u0197\u0198\x05x;\x02\u0198\u019A\x03\x02\x02\x02\u0199\u0196\x03\x02\x02\x02\u019A\u019D\x03\x02\x02\x02\u019B\u0199\x03\x02\x02\x02\u019B\u019C\x03\x02\x02\x02\u019C\u019F\x03\x02\x02\x02\u019D\u019B\x03\x02\x02\x02\u019E\u01A0\x05v:\x02\u019F\u019E\x03\x02\x02\x02\u019F\u01A0\x03\x02\x02\x02\u01A0\u01A1\x03\x02\x02\x02\u01A1\u01A2\x07_\x02\x02\u01A2{\x03\x02\x02\x02\u01A3\u01A5\x07]\x02\x02\u01A4\u01A6\x05:\x1C\x02\u01A5\u01A4\x03\x02\x02\x02\u01A6\u01A7\x03\x02\x02\x02\u01A7\u01A5\x03\x02\x02\x02\u01A7\u01A8\x03\x02\x02\x02\u01A8\u01AA\x03\x02\x02\x02\u01A9\u01AB\x07T\x02\x02\u01AA\u01A9\x03\x02\x02\x02\u01AA\u01AB\x03\x02\x02\x02\u01AB\u01AC\x03\x02\x02\x02\u01AC\u01AD\x07_\x02\x02\u01AD}\x03\x02\x02\x02\u01AE\u01B0\x07]\x02\x02\u01AF\u01B1\x05<\x1D\x02\u01B0\u01AF\x03\x02\x02\x02\u01B0\u01B1\x03\x02\x02\x02\u01B1\u01B2\x03\x02\x02\x02\u01B2\u01B3\x07_\x02\x02\u01B3\x7F\x03\x02\x02\x02\u01B4\u01BA\x07$\x02\x02\u01B5\u01B6\x07^\x02\x02\u01B6\u01B9\x0B\x02\x02\x02\u01B7\u01B9\n!\x02\x02\u01B8\u01B5\x03\x02\x02\x02\u01B8\u01B7\x03\x02\x02\x02\u01B9\u01BC\x03\x02\x02\x02\u01BA\u01B8\x03\x02\x02\x02\u01BA\u01BB\x03\x02\x02\x02\u01BB\u01BD\x03\x02\x02\x02\u01BC\u01BA\x03\x02\x02\x02\u01BD\u01BE\x07$\x02\x02\u01BE\x81\x03\x02\x02\x02\u01BF\u01C0\x05\x80?\x02\u01C0\x83\x03\x02\x02\x02\u01C1\u01C5\x07)\x02\x02\u01C2\u01C6\n"\x02\x02\u01C3\u01C4\x07^\x02\x02\u01C4\u01C6\x0B\x02\x02\x02\u01C5\u01C2\x03\x02\x02\x02\u01C5\u01C3\x03\x02\x02\x02\u01C6\u01C7\x03\x02\x02\x02\u01C7\u01C8\x07)\x02\x02\u01C8\x85\x03\x02\x02\x02\u01C9\u01CB\x07\'\x02\x02\u01CA\u01CC\x0423\x02\u01CB\u01CA\x03\x02\x02\x02\u01CC\u01CD\x03\x02\x02\x02\u01CD\u01CB\x03\x02\x02\x02\u01CD\u01CE\x03\x02\x02\x02\u01CE\x87\x03\x02\x02\x02\u01CF\u01D0\x05@\x1F\x02\u01D0\u01D1\x05B \x02\u01D1\u01D2\x05B \x02\u01D2\u01D4\x05B \x02\u01D3\u01D5\x05B \x02\u01D4\u01D3\x03\x02\x02\x02\u01D5\u01D6\x03\x02\x02\x02\u01D6\u01D4\x03\x02\x02\x02\u01D6\u01D7\x03\x02\x02\x02\u01D7\x89\x03\x02\x02\x02\u01D8\u01D9\x050\x17\x02\u01D9\u01DA\x05\x06\x02\x02\u01DA\u01DB\x05(\x13\x02\u01DB\u01DC\x05:\x1C\x02\u01DC\x8B\x03\x02\x02\x02\u01DD\u01DE\x050\x17\x02\u01DE\u01DF\x05\x06\x02\x02\u01DF\u01E0\x05:\x1C\x02\u01E0\u01E1\x05:\x1C\x02\u01E1\x8D\x03\x02\x02\x02\u01E2\u01E3\x05"\x10\x02\u01E3\u01E4\x05\b\x03\x02\u01E4\u01E5\x050\x17\x02\u01E5\u01E6\x05:\x1C\x02\u01E6\x8F\x03\x02\x02\x02\u01E7\u01E8\x05"\x10\x02\u01E8\u01E9\x050\x17\x02\u01E9\u01EA\x05:\x1C\x02\u01EA\u01EB\x05:\x1C\x02\u01EB\x91\x03\x02\x02\x02\u01EC\u01ED\x05\x1E\x0E\x02\u01ED\u01EE\x050\x17\x02\u01EE\u01EF\x05:\x1C\x02\u01EF\u01F0\x05:\x1C\x02\u01F0\x93\x03\x02\x02\x02\u01F1\u01F2\x05@\x1F\x02\u01F2\u01F3\x05B \x02\u01F3\u01F4\x05B \x02\u01F4\u01F5\x05B \x02\u01F5\x95\x03\x02\x02\x02\u01F6\u01F7\x05\x0E\x06\x02\u01F7\u01F8\x05&\x12\x02\u01F8\u020F\x03\x02\x02\x02\u01F9\u01FA\x05 \x0F\x02\u01FA\u01FB\x05\x0E\x06\x02\u01FB\u020F\x03\x02\x02\x02\u01FC\u01FD\x05\x1C\r\x02\u01FD\u01FE\x05,\x15\x02\u01FE\u020F\x03\x02\x02\x02\u01FF\u0200\x05\x12\b\x02\u0200\u0201\x05,\x15\x02\u0201\u020F\x03\x02\x02\x02\u0202\u0203\x05\x1C\r\x02\u0203\u0204\x05\x0E\x06\x02\u0204\u020F\x03\x02\x02\x02\u0205\u0206\x05\x12\b\x02\u0206\u0207\x05\x0E\x06\x02\u0207\u020F\x03\x02\x02\x02\u0208\u0209\x05\b\x03\x02\u0209\u020A\x05,\x15\x02\u020A\u020F\x03\x02\x02\x02\u020B\u020C\x05\b\x03\x02\u020C\u020D\x05\x10\x07\x02\u020D\u020F\x03\x02\x02\x02\u020E\u01F6\x03\x02\x02\x02\u020E\u01F9\x03\x02\x02\x02\u020E\u01FC\x03\x02\x02\x02\u020E\u01FF\x03\x02\x02\x02\u020E\u0202\x03\x02\x02\x02\u020E\u0205\x03\x02\x02\x02\u020E\u0208\x03\x02\x02\x02\u020E\u020B\x03\x02\x02\x02\u020F\x97\x03\x02\x02\x02\u0210\u021C\x07?\x02\x02\u0211\u0212\x07#\x02\x02\u0212\u021C\x07?\x02\x02\u0213\u0214\x07>\x02\x02\u0214\u021C\x07@\x02\x02\u0215\u021C\x07@\x02\x02\u0216\u0217\x07@\x02\x02\u0217\u021C\x07?\x02\x02\u0218\u021C\x07>\x02\x02\u0219\u021A\x07>\x02\x02\u021A\u021C\x07?\x02\x02\u021B\u0210\x03\x02\x02\x02\u021B\u0211\x03\x02\x02\x02\u021B\u0213\x03\x02\x02\x02\u021B\u0215\x03\x02\x02\x02\u021B\u0216\x03\x02\x02\x02\u021B\u0218\x03\x02\x02\x02\u021B\u0219\x03\x02\x02\x02\u021C\x99\x03\x02\x02\x02\u021D\u021E\x05\x06\x02\x02\u021E\u021F\x05 \x0F\x02\u021F\u0220\x05\f\x05\x02\u0220\u0225\x03\x02\x02\x02\u0221\u0222\x05"\x10\x02\u0222\u0223\x05(\x13\x02\u0223\u0225\x03\x02\x02\x02\u0224\u021D\x03\x02\x02\x02\u0224\u0221\x03\x02\x02\x02\u0225\x9B\x03\x02\x02\x02\u0226\u0228\x05>\x1E\x02\u0227\u0226\x03\x02\x02\x02\u0227\u0228\x03\x02\x02\x02\u0228\u022C\x03\x02\x02\x02\u0229\u022B\x05:\x1C\x02\u022A\u0229\x03\x02\x02\x02\u022B\u022E\x03\x02\x02\x02\u022C\u022A\x03\x02\x02\x02\u022C\u022D\x03\x02\x02\x02\u022D\u022F\x03\x02\x02\x02\u022E\u022C\x03\x02\x02\x02\u022F\u0231\x070\x02\x02\u0230\u0232\x05:\x1C\x02\u0231\u0230\x03\x02\x02\x02\u0232\u0233\x03\x02\x02\x02\u0233\u0231\x03\x02\x02\x02\u0233\u0234\x03\x02\x02\x02\u0234\x9D\x03\x02\x02\x02\u0235\u0237\x05>\x1E\x02\u0236\u0235\x03\x02\x02\x02\u0236\u0237\x03\x02\x02\x02\u0237\u0239\x03\x02\x02\x02\u0238\u023A\x05:\x1C\x02\u0239\u0238\x03\x02\x02\x02\u023A\u023B\x03\x02\x02\x02\u023B\u0239\x03\x02\x02\x02\u023B\u023C\x03\x02\x02\x02\u023C\x9F\x03\x02\x02\x02\u023D\u023F\t#\x02\x02\u023E\u023D\x03\x02\x02\x02\u023F\u0240\x03\x02\x02\x02\u0240\u023E\x03\x02\x02\x02\u0240\u0241\x03\x02\x02\x02\u0241\u0242\x03\x02\x02\x02\u0242\u0243\bO\x04\x02\u0243\xA1\x03\x02\x02\x02\u0244\u0249\x05@\x1F\x02\u0245\u0247\x05B \x02\u0246\u0248\x05B \x02\u0247\u0246\x03\x02\x02\x02\u0247\u0248\x03\x02\x02\x02\u0248\u024A\x03\x02\x02\x02\u0249\u0245\x03\x02\x02\x02\u0249\u024A\x03\x02\x02\x02\u024A\xA3\x03\x02\x02\x02\u024B\u024C\x0B\x02\x02\x02\u024C\xA5\x03\x02\x02\x02\u024D\u024E\x07^\x02\x02\u024E\u0251\x0B\x02\x02\x02\u024F\u0251\n$\x02\x02\u0250\u024D\x03\x02\x02\x02\u0250\u024F\x03\x02\x02\x02\u0251\u0252\x03\x02\x02\x02\u0252\u0250\x03\x02\x02\x02\u0252\u0253\x03\x02\x02\x02\u0253\xA7\x03\x02\x02\x02\u0254\u0255\x05\x80?\x02\u0255\xA9\x03\x02\x02\x02\u0256\u025C\x07)\x02\x02\u0257\u0258\x07^\x02\x02\u0258\u025B\x0B\x02\x02\x02\u0259\u025B\n%\x02\x02\u025A\u0257\x03\x02\x02\x02\u025A\u0259\x03\x02\x02\x02\u025B\u025E\x03\x02\x02\x02\u025C\u025A\x03\x02\x02\x02\u025C\u025D\x03\x02\x02\x02\u025D\u025F\x03\x02\x02\x02\u025E\u025C\x03\x02\x02\x02\u025F\u0260\x07)\x02\x02\u0260\u0261\x03\x02\x02\x02\u0261\u0262\bT\x05\x02\u0262\xAB\x03\x02\x02\x02\u0263\u0264\x07?\x02\x02\u0264\xAD\x03\x02\x02\x02\u0265\u0267\t\x1D\x02\x02\u0266\u0265\x03\x02\x02\x02\u0266\u0267\x03\x02\x02\x02\u0267\u0269\x03\x02\x02\x02\u0268\u026A\x042;\x02\u0269\u0268\x03\x02\x02\x02\u026A\u026B\x03\x02\x02\x02\u026B\u0269\x03\x02\x02\x02\u026B\u026C\x03\x02\x02\x02\u026C\xAF\x03\x02\x02\x02\u026D\u026F\t \x02\x02\u026E\u026D\x03\x02\x02\x02\u026F\u0270\x03\x02\x02\x02\u0270\u026E\x03\x02\x02\x02\u0270\u0271\x03\x02\x02\x02\u0271\u0272\x03\x02\x02\x02\u0272\u0273\bW\x06\x02\u0273\xB1\x03\x02\x02\x02\u0274\u0276\x07\x0F\x02\x02\u0275\u0274\x03\x02\x02\x02\u0275\u0276\x03\x02\x02\x02\u0276\u0277\x03\x02\x02\x02\u0277\u0278\x07\f\x02\x02\u0278\u0279\x03\x02\x02\x02\u0279\u027A\bX\x07\x02\u027A\xB3\x03\x02\x02\x02\u027B\u027C\n&\x02\x02\u027C\u027D\x03\x02\x02\x02\u027D\u027E\bY\b\x02\u027E\xB5\x03\x02\x02\x02\u027F\u0281\t\'\x02\x02\u0280\u027F\x03\x02\x02\x02\u0281\u0282\x03\x02\x02\x02\u0282\u0280\x03\x02\x02\x02\u0282\u0283\x03\x02\x02\x02\u0283\u0284\x03\x02\x02\x02\u0284\u0285\bZ\t\x02\u0285\u0286\bZ\x04\x02\u0286\xB7\x03\x02\x02\x02\u0287\u0289\n\'\x02\x02\u0288\u0287\x03\x02\x02\x02\u0289\u028A\x03\x02\x02\x02\u028A\u0288\x03\x02\x02\x02\u028A\u028B\x03\x02\x02\x02\u028B\u028C\x03\x02\x02\x02\u028C\u028D\b[\t\x02\u028D\xB9\x03\x02\x02\x020\x02\x03\x04\x05\xF3\u016F\u0171\u0173\u017A\u017F\u0181\u0183\u018A\u018F\u0193\u019B\u019F\u01A7\u01AA\u01B0\u01B8\u01BA\u01C5\u01CD\u01D6\u020E\u021B\u0224\u0227\u022C\u0233\u0236\u023B\u0240\u0247\u0249\u0250\u0252\u025A\u025C\u0266\u026B\u0270\u0275\u0282\u028A\n\x07\x03\x02\x07\x04\x02\x02\x04\x02\t1\x02\b\x02\x02\x06\x02\x02\x07\x05\x02\x04\x02\x02';
     var tmp_7 = this;
-    tmp_7.ATN_1 = ATNDeserializer_init_$Create$(null, 1, null).deserialize_c68pee_k$(asCharArray('\x03\u608B\uA72A\u8133\uB9ED\u417C\u3BE7\u7786\u5964\x028\u027C\b\x01\b\x01\b\x01\b\x01\x04\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04\x07\t\x07\x04\b\t\b\x04\t\t\t\x04\n\t\n\x04\x0B\t\x0B\x04\f\t\f\x04\r\t\r\x04\x0E\t\x0E\x04\x0F\t\x0F\x04\x10\t\x10\x04\x11\t\x11\x04\x12\t\x12\x04\x13\t\x13\x04\x14\t\x14\x04\x15\t\x15\x04\x16\t\x16\x04\x17\t\x17\x04\x18\t\x18\x04\x19\t\x19\x04\x1A\t\x1A\x04\x1B\t\x1B\x04\x1C\t\x1C\x04\x1D\t\x1D\x04\x1E\t\x1E\x04\x1F\t\x1F\x04 \t \x04!\t!\x04"\t"\x04#\t#\x04$\t$\x04%\t%\x04&\t&\x04\'\t\'\x04(\t(\x04)\t)\x04*\t*\x04+\t+\x04,\t,\x04-\t-\x04.\t.\x04/\t/\x040\t0\x041\t1\x042\t2\x043\t3\x044\t4\x045\t5\x046\t6\x047\t7\x048\t8\x049\t9\x04:\t:\x04;\t;\x04<\t<\x04=\t=\x04>\t>\x04?\t?\x04@\t@\x04A\tA\x04B\tB\x04C\tC\x04D\tD\x04E\tE\x04F\tF\x04G\tG\x04H\tH\x04I\tI\x04J\tJ\x04K\tK\x04L\tL\x04M\tM\x04N\tN\x04O\tO\x04P\tP\x04Q\tQ\x04R\tR\x04S\tS\x04T\tT\x04U\tU\x04V\tV\x04W\tW\x04X\tX\x03\x02\x03\x02\x03\x03\x03\x03\x03\x04\x03\x04\x03\x05\x03\x05\x03\x06\x03\x06\x03\x07\x03\x07\x03\b\x03\b\x03\t\x03\t\x03\n\x03\n\x03\x0B\x03\x0B\x03\f\x03\f\x03\r\x03\r\x03\x0E\x03\x0E\x03\x0F\x03\x0F\x03\x10\x03\x10\x03\x11\x03\x11\x03\x12\x03\x12\x03\x13\x03\x13\x03\x14\x03\x14\x03\x15\x03\x15\x03\x16\x03\x16\x03\x17\x03\x17\x03\x18\x03\x18\x03\x19\x03\x19\x03\x1A\x03\x1A\x03\x1B\x03\x1B\x03\x1C\x03\x1C\x03\x1D\x06\x1D\xEC\n\x1D\r\x1D\x0E\x1D\xED\x03\x1E\x03\x1E\x03\x1F\x03\x1F\x03 \x03 \x03!\x03!\x03!\x03!\x03!\x03"\x03"\x03"\x03"\x03#\x03#\x03#\x03#\x03#\x03$\x03$\x03$\x03$\x03$\x03%\x03%\x03%\x03%\x03%\x03&\x03&\x03&\x03&\x03&\x03\'\x03\'\x03\'\x03\'\x03\'\x03(\x03(\x03(\x03(\x03(\x03)\x03)\x03)\x03)\x03)\x03*\x03*\x03*\x03*\x03*\x03+\x03+\x03+\x03+\x03+\x03,\x03,\x03,\x03,\x03,\x03-\x03-\x03-\x03-\x03-\x03.\x03.\x03.\x03.\x03.\x03/\x03/\x03/\x03/\x03/\x030\x030\x030\x030\x030\x031\x031\x031\x031\x031\x032\x032\x032\x032\x032\x033\x033\x033\x033\x033\x034\x034\x034\x034\x034\x035\x035\x035\x035\x035\x036\x036\x036\x036\x036\x037\x037\x037\x037\x037\x038\x038\x068\u016A\n8\r8\x0E8\u016B\x058\u016E\n8\x038\x038\x038\x068\u0173\n8\r8\x0E8\u0174\x038\x038\x038\x068\u017A\n8\r8\x0E8\u017B\x058\u017E\n8\x039\x039\x069\u0182\n9\r9\x0E9\u0183\x039\x039\x069\u0188\n9\r9\x0E9\u0189\x069\u018C\n9\r9\x0E9\u018D\x039\x039\x03:\x03:\x06:\u0194\n:\r:\x0E:\u0195\x03:\x05:\u0199\n:\x03:\x03:\x03;\x03;\x05;\u019F\n;\x03;\x03;\x03<\x03<\x03<\x03<\x07<\u01A7\n<\f<\x0E<\u01AA\x0B<\x03<\x03<\x03=\x03=\x03>\x03>\x03>\x03>\x05>\u01B4\n>\x03>\x03>\x03?\x03?\x06?\u01BA\n?\r?\x0E?\u01BB\x03@\x03@\x03@\x03@\x03@\x06@\u01C3\n@\r@\x0E@\u01C4\x03A\x03A\x03A\x03A\x03A\x03B\x03B\x03B\x03B\x03B\x03C\x03C\x03C\x03C\x03C\x03D\x03D\x03D\x03D\x03D\x03E\x03E\x03E\x03E\x03E\x03F\x03F\x03F\x03F\x03F\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x03G\x05G\u01FD\nG\x03H\x03H\x03H\x03H\x03H\x03H\x03H\x03H\x03H\x03H\x03H\x05H\u020A\nH\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x05I\u0213\nI\x03J\x05J\u0216\nJ\x03J\x07J\u0219\nJ\fJ\x0EJ\u021C\x0BJ\x03J\x03J\x06J\u0220\nJ\rJ\x0EJ\u0221\x03K\x05K\u0225\nK\x03K\x06K\u0228\nK\rK\x0EK\u0229\x03L\x06L\u022D\nL\rL\x0EL\u022E\x03L\x03L\x03M\x03M\x03M\x05M\u0236\nM\x05M\u0238\nM\x03N\x03N\x03O\x03O\x03O\x06O\u023F\nO\rO\x0EO\u0240\x03P\x03P\x03Q\x03Q\x03Q\x03Q\x07Q\u0249\nQ\fQ\x0EQ\u024C\x0BQ\x03Q\x03Q\x03Q\x03Q\x03R\x03R\x03S\x05S\u0255\nS\x03S\x06S\u0258\nS\rS\x0ES\u0259\x03T\x06T\u025D\nT\rT\x0ET\u025E\x03T\x03T\x03U\x05U\u0264\nU\x03U\x03U\x03U\x03U\x03V\x03V\x03V\x03V\x03W\x06W\u026F\nW\rW\x0EW\u0270\x03W\x03W\x03W\x03X\x06X\u0277\nX\rX\x0EX\u0278\x03X\x03X\x02\x02Y\x06\x02\b\x02\n\x02\f\x02\x0E\x02\x10\x02\x12\x02\x14\x02\x16\x02\x18\x02\x1A\x02\x1C\x02\x1E\x02 \x02"\x02$\x02&\x02(\x02*\x02,\x02.\x020\x022\x024\x026\x028\x02:\x02<\x02>\x02@\x02B\x02D\x03F\x04H\x05J\x06L\x07N\bP\tR\nT\x0BV\fX\rZ\x0E\\\x0F^\x10`\x11b\x12d\x13f\x14h\x15j\x16l\x17n\x18p\x19r\x1At\x1Bv\x1Cx\x1Dz\x02|\x1E~\x1F\x80 \x82!\x84"\x86#\x88$\x8A%\x8C&\x8E\'\x90(\x92)\x94*\x96+\x98,\x9A-\x9C.\x9E/\xA00\xA21\xA4\x02\xA62\xA83\xAA4\xAC5\xAE6\xB07\xB28\x06\x02\x03\x04\x05(\x04\x02CCcc\x04\x02DDdd\x04\x02EEee\x04\x02FFff\x04\x02GGgg\x04\x02HHhh\x04\x02IIii\x04\x02JJjj\x04\x02KKkk\x04\x02LLll\x04\x02MMmm\x04\x02NNnn\x04\x02OOoo\x04\x02PPpp\x04\x02QQqq\x04\x02RRrr\x04\x02SSss\x04\x02TTtt\x04\x02UUuu\x04\x02VVvv\x04\x02WWww\x04\x02XXxx\x04\x02YYyy\x04\x02ZZzz\x04\x02[[{{\x04\x02\\\\||\x03\x02__\x04\x02--//\x05\x02C\\aac|\x07\x02\x0B\f\x0F\x0F""$$))\x06\x02\f\f\x0F\x0F$$^^\x04\x02))^^\x06\x02\x0B\f\x0F\x0F""..\x06\x02\x0B\f\x0F\x0F""^^\x06\x02\f\f\x0F\x0F))^^\x04\x02\x0B\x0B""\x05\x02\f\f\x0F\x0F%%\x04\x02\f\f\x0F\x0F\x02\u028B\x02D\x03\x02\x02\x02\x02F\x03\x02\x02\x02\x02H\x03\x02\x02\x02\x02J\x03\x02\x02\x02\x02L\x03\x02\x02\x02\x02N\x03\x02\x02\x02\x02P\x03\x02\x02\x02\x02R\x03\x02\x02\x02\x02T\x03\x02\x02\x02\x02V\x03\x02\x02\x02\x02X\x03\x02\x02\x02\x02Z\x03\x02\x02\x02\x02\\\x03\x02\x02\x02\x02^\x03\x02\x02\x02\x02`\x03\x02\x02\x02\x02b\x03\x02\x02\x02\x02d\x03\x02\x02\x02\x02f\x03\x02\x02\x02\x02h\x03\x02\x02\x02\x02j\x03\x02\x02\x02\x02l\x03\x02\x02\x02\x02n\x03\x02\x02\x02\x02p\x03\x02\x02\x02\x02r\x03\x02\x02\x02\x02t\x03\x02\x02\x02\x02v\x03\x02\x02\x02\x02x\x03\x02\x02\x02\x02|\x03\x02\x02\x02\x02~\x03\x02\x02\x02\x02\x80\x03\x02\x02\x02\x02\x82\x03\x02\x02\x02\x02\x84\x03\x02\x02\x02\x02\x86\x03\x02\x02\x02\x02\x88\x03\x02\x02\x02\x02\x8A\x03\x02\x02\x02\x02\x8C\x03\x02\x02\x02\x02\x8E\x03\x02\x02\x02\x02\x90\x03\x02\x02\x02\x02\x92\x03\x02\x02\x02\x02\x94\x03\x02\x02\x02\x02\x96\x03\x02\x02\x02\x02\x98\x03\x02\x02\x02\x02\x9A\x03\x02\x02\x02\x02\x9C\x03\x02\x02\x02\x02\x9E\x03\x02\x02\x02\x03\xA0\x03\x02\x02\x02\x03\xA2\x03\x02\x02\x02\x03\xA4\x03\x02\x02\x02\x03\xA6\x03\x02\x02\x02\x03\xA8\x03\x02\x02\x02\x03\xAA\x03\x02\x02\x02\x03\xAC\x03\x02\x02\x02\x04\xAE\x03\x02\x02\x02\x04\xB0\x03\x02\x02\x02\x05\xB2\x03\x02\x02\x02\x06\xB4\x03\x02\x02\x02\b\xB6\x03\x02\x02\x02\n\xB8\x03\x02\x02\x02\f\xBA\x03\x02\x02\x02\x0E\xBC\x03\x02\x02\x02\x10\xBE\x03\x02\x02\x02\x12\xC0\x03\x02\x02\x02\x14\xC2\x03\x02\x02\x02\x16\xC4\x03\x02\x02\x02\x18\xC6\x03\x02\x02\x02\x1A\xC8\x03\x02\x02\x02\x1C\xCA\x03\x02\x02\x02\x1E\xCC\x03\x02\x02\x02 \xCE\x03\x02\x02\x02"\xD0\x03\x02\x02\x02$\xD2\x03\x02\x02\x02&\xD4\x03\x02\x02\x02(\xD6\x03\x02\x02\x02*\xD8\x03\x02\x02\x02,\xDA\x03\x02\x02\x02.\xDC\x03\x02\x02\x020\xDE\x03\x02\x02\x022\xE0\x03\x02\x02\x024\xE2\x03\x02\x02\x026\xE4\x03\x02\x02\x028\xE6\x03\x02\x02\x02:\xE8\x03\x02\x02\x02<\xEB\x03\x02\x02\x02>\xEF\x03\x02\x02\x02@\xF1\x03\x02\x02\x02B\xF3\x03\x02\x02\x02D\xF5\x03\x02\x02\x02F\xFA\x03\x02\x02\x02H\xFE\x03\x02\x02\x02J\u0103\x03\x02\x02\x02L\u0108\x03\x02\x02\x02N\u010D\x03\x02\x02\x02P\u0112\x03\x02\x02\x02R\u0117\x03\x02\x02\x02T\u011C\x03\x02\x02\x02V\u0121\x03\x02\x02\x02X\u0126\x03\x02\x02\x02Z\u012B\x03\x02\x02\x02\\\u0130\x03\x02\x02\x02^\u0135\x03\x02\x02\x02`\u013A\x03\x02\x02\x02b\u013F\x03\x02\x02\x02d\u0144\x03\x02\x02\x02f\u0149\x03\x02\x02\x02h\u014E\x03\x02\x02\x02j\u0153\x03\x02\x02\x02l\u0158\x03\x02\x02\x02n\u015D\x03\x02\x02\x02p\u0162\x03\x02\x02\x02r\u016D\x03\x02\x02\x02t\u017F\x03\x02\x02\x02v\u0191\x03\x02\x02\x02x\u019C\x03\x02\x02\x02z\u01A2\x03\x02\x02\x02|\u01AD\x03\x02\x02\x02~\u01AF\x03\x02\x02\x02\x80\u01B7\x03\x02\x02\x02\x82\u01BD\x03\x02\x02\x02\x84\u01C6\x03\x02\x02\x02\x86\u01CB\x03\x02\x02\x02\x88\u01D0\x03\x02\x02\x02\x8A\u01D5\x03\x02\x02\x02\x8C\u01DA\x03\x02\x02\x02\x8E\u01DF\x03\x02\x02\x02\x90\u01FC\x03\x02\x02\x02\x92\u0209\x03\x02\x02\x02\x94\u0212\x03\x02\x02\x02\x96\u0215\x03\x02\x02\x02\x98\u0224\x03\x02\x02\x02\x9A\u022C\x03\x02\x02\x02\x9C\u0232\x03\x02\x02\x02\x9E\u0239\x03\x02\x02\x02\xA0\u023E\x03\x02\x02\x02\xA2\u0242\x03\x02\x02\x02\xA4\u0244\x03\x02\x02\x02\xA6\u0251\x03\x02\x02\x02\xA8\u0254\x03\x02\x02\x02\xAA\u025C\x03\x02\x02\x02\xAC\u0263\x03\x02\x02\x02\xAE\u0269\x03\x02\x02\x02\xB0\u026E\x03\x02\x02\x02\xB2\u0276\x03\x02\x02\x02\xB4\xB5\t\x02\x02\x02\xB5\x07\x03\x02\x02\x02\xB6\xB7\t\x03\x02\x02\xB7\t\x03\x02\x02\x02\xB8\xB9\t\x04\x02\x02\xB9\x0B\x03\x02\x02\x02\xBA\xBB\t\x05\x02\x02\xBB\r\x03\x02\x02\x02\xBC\xBD\t\x06\x02\x02\xBD\x0F\x03\x02\x02\x02\xBE\xBF\t\x07\x02\x02\xBF\x11\x03\x02\x02\x02\xC0\xC1\t\b\x02\x02\xC1\x13\x03\x02\x02\x02\xC2\xC3\t\t\x02\x02\xC3\x15\x03\x02\x02\x02\xC4\xC5\t\n\x02\x02\xC5\x17\x03\x02\x02\x02\xC6\xC7\t\x0B\x02\x02\xC7\x19\x03\x02\x02\x02\xC8\xC9\t\f\x02\x02\xC9\x1B\x03\x02\x02\x02\xCA\xCB\t\r\x02\x02\xCB\x1D\x03\x02\x02\x02\xCC\xCD\t\x0E\x02\x02\xCD\x1F\x03\x02\x02\x02\xCE\xCF\t\x0F\x02\x02\xCF!\x03\x02\x02\x02\xD0\xD1\t\x10\x02\x02\xD1#\x03\x02\x02\x02\xD2\xD3\t\x11\x02\x02\xD3%\x03\x02\x02\x02\xD4\xD5\t\x12\x02\x02\xD5\'\x03\x02\x02\x02\xD6\xD7\t\x13\x02\x02\xD7)\x03\x02\x02\x02\xD8\xD9\t\x14\x02\x02\xD9+\x03\x02\x02\x02\xDA\xDB\t\x15\x02\x02\xDB-\x03\x02\x02\x02\xDC\xDD\t\x16\x02\x02\xDD/\x03\x02\x02\x02\xDE\xDF\t\x17\x02\x02\xDF1\x03\x02\x02\x02\xE0\xE1\t\x18\x02\x02\xE13\x03\x02\x02\x02\xE2\xE3\t\x19\x02\x02\xE35\x03\x02\x02\x02\xE4\xE5\t\x1A\x02\x02\xE57\x03\x02\x02\x02\xE6\xE7\t\x1B\x02\x02\xE79\x03\x02\x02\x02\xE8\xE9\x042;\x02\xE9;\x03\x02\x02\x02\xEA\xEC\n\x1C\x02\x02\xEB\xEA\x03\x02\x02\x02\xEC\xED\x03\x02\x02\x02\xED\xEB\x03\x02\x02\x02\xED\xEE\x03\x02\x02\x02\xEE=\x03\x02\x02\x02\xEF\xF0\t\x1D\x02\x02\xF0?\x03\x02\x02\x02\xF1\xF2\t\x1E\x02\x02\xF2A\x03\x02\x02\x02\xF3\xF4\n\x1F\x02\x02\xF4C\x03\x02\x02\x02\xF5\xF6\x07,\x02\x02\xF6\xF7\x07%\x02\x02\xF7\xF8\x03\x02\x02\x02\xF8\xF9\b!\x02\x02\xF9E\x03\x02\x02\x02\xFA\xFB\x07,\x02\x02\xFB\xFC\x03\x02\x02\x02\xFC\xFD\b"\x03\x02\xFDG\x03\x02\x02\x02\xFE\xFF\x05*\x14\x02\xFF\u0100\x05\n\x04\x02\u0100\u0101\x05(\x13\x02\u0101\u0102\x05$\x11\x02\u0102I\x03\x02\x02\x02\u0103\u0104\x05\x16\n\x02\u0104\u0105\x05*\x14\x02\u0105\u0106\x05\n\x04\x02\u0106\u0107\x05(\x13\x02\u0107K\x03\x02\x02\x02\u0108\u0109\x05(\x13\x02\u0109\u010A\x05*\x14\x02\u010A\u010B\x05\n\x04\x02\u010B\u010C\x05(\x13\x02\u010CM\x03\x02\x02\x02\u010D\u010E\x05\x0E\x06\x02\u010E\u010F\x05 \x0F\x02\u010F\u0110\x05\f\x05\x02\u0110\u0111\x05\x1E\x0E\x02\u0111O\x03\x02\x02\x02\u0112\u0113\x05\f\x05\x02\u0113\u0114\x05"\x10\x02\u0114\u0115\x05\x16\n\x02\u0115\u0116\x05\x10\x07\x02\u0116Q\x03\x02\x02\x02\u0117\u0118\x05\x0E\x06\x02\u0118\u0119\x05 \x0F\x02\u0119\u011A\x05\f\x05\x02\u011A\u011B\x05\x16\n\x02\u011BS\x03\x02\x02\x02\u011C\u011D\x05\x0E\x06\x02\u011D\u011E\x05 \x0F\x02\u011E\u011F\x05.\x16\x02\u011F\u0120\x05\x1E\x0E\x02\u0120U\x03\x02\x02\x02\u0121\u0122\x05\x0E\x06\x02\u0122\u0123\x05\n\x04\x02\u0123\u0124\x05"\x10\x02\u0124\u0125\x05 \x0F\x02\u0125W\x03\x02\x02\x02\u0126\u0127\x05\x0E\x06\x02\u0127\u0128\x05$\x11\x02\u0128\u0129\x05\x06\x02\x02\u0129\u012A\x05*\x14\x02\u012AY\x03\x02\x02\x02\u012B\u012C\x05\x0E\x06\x02\u012C\u012D\x05*\x14\x02\u012D\u012E\x05\n\x04\x02\u012E\u012F\x05 \x0F\x02\u012F[\x03\x02\x02\x02\u0130\u0131\x05\x0E\x06\x02\u0131\u0132\x05*\x14\x02\u0132\u0133\x05\x0E\x06\x02\u0133\u0134\x05\x0E\x06\x02\u0134]\x03\x02\x02\x02\u0135\u0136\x05\x0E\x06\x02\u0136\u0137\x05,\x15\x02\u0137\u0138\x05\n\x04\x02\u0138\u0139\x05\x14\t\x02\u0139_\x03\x02\x02\x02\u013A\u013B\x05\x0E\x06\x02\u013B\u013C\x050\x17\x02\u013C\u013D\x05\x0E\x06\x02\u013D\u013E\x05(\x13\x02\u013Ea\x03\x02\x02\x02\u013F\u0140\x05\x1C\r\x02\u0140\u0141\x05"\x10\x02\u0141\u0142\x05"\x10\x02\u0142\u0143\x05$\x11\x02\u0143c\x03\x02\x02\x02\u0144\u0145\x05 \x0F\x02\u0145\u0146\x05\x0E\x06\x02\u0146\u0147\x054\x19\x02\u0147\u0148\x05,\x15\x02\u0148e\x03\x02\x02\x02\u0149\u014A\x05 \x0F\x02\u014A\u014B\x05*\x14\x02\u014B\u014C\x05\n\x04\x02\u014C\u014D\x05 \x0F\x02\u014Dg\x03\x02\x02\x02\u014E\u014F\x05(\x13\x02\u014F\u0150\x05\x0E\x06\x02\u0150\u0151\x05,\x15\x02\u0151\u0152\x05 \x0F\x02\u0152i\x03\x02\x02\x02\u0153\u0154\x05(\x13\x02\u0154\u0155\x05\x0E\x06\x02\u0155\u0156\x05$\x11\x02\u0156\u0157\x05*\x14\x02\u0157k\x03\x02\x02\x02\u0158\u0159\x05(\x13\x02\u0159\u015A\x05\x0E\x06\x02\u015A\u015B\x05$\x11\x02\u015B\u015C\x05\x0E\x06\x02\u015Cm\x03\x02\x02\x02\u015D\u015E\x05*\x14\x02\u015E\u015F\x05.\x16\x02\u015F\u0160\x05\b\x03\x02\u0160\u0161\x05(\x13\x02\u0161o\x03\x02\x02\x02\u0162\u0163\x05.\x16\x02\u0163\u0164\x05 \x0F\x02\u0164\u0165\x05,\x15\x02\u0165\u0166\x05\x1C\r\x02\u0166q\x03\x02\x02\x02\u0167\u016A\x05@\x1F\x02\u0168\u016A\x05:\x1C\x02\u0169\u0167\x03\x02\x02\x02\u0169\u0168\x03\x02\x02\x02\u016A\u016B\x03\x02\x02\x02\u016B\u0169\x03\x02\x02\x02\u016B\u016C\x03\x02\x02\x02\u016C\u016E\x03\x02\x02\x02\u016D\u0169\x03\x02\x02\x02\u016D\u016E\x03\x02\x02\x02\u016E\u016F\x03\x02\x02\x02\u016F\u017D\x07<\x02\x02\u0170\u0172\x07]\x02\x02\u0171\u0173\n\x1C\x02\x02\u0172\u0171\x03\x02\x02\x02\u0173\u0174\x03\x02\x02\x02\u0174\u0172\x03\x02\x02\x02\u0174\u0175\x03\x02\x02\x02\u0175\u0176\x03\x02\x02\x02\u0176\u017E\x07_\x02\x02\u0177\u017A\x05@\x1F\x02\u0178\u017A\x05:\x1C\x02\u0179\u0177\x03\x02\x02\x02\u0179\u0178\x03\x02\x02\x02\u017A\u017B\x03\x02\x02\x02\u017B\u0179\x03\x02\x02\x02\u017B\u017C\x03\x02\x02\x02\u017C\u017E\x03\x02\x02\x02\u017D\u0170\x03\x02\x02\x02\u017D\u0179\x03\x02\x02\x02\u017Es\x03\x02\x02\x02\u017F\u0181\x07]\x02\x02\u0180\u0182\x05:\x1C\x02\u0181\u0180\x03\x02\x02\x02\u0182\u0183\x03\x02\x02\x02\u0183\u0181\x03\x02\x02\x02\u0183\u0184\x03\x02\x02\x02\u0184\u018B\x03\x02\x02\x02\u0185\u0187\x07"\x02\x02\u0186\u0188\x05:\x1C\x02\u0187\u0186\x03\x02\x02\x02\u0188\u0189\x03\x02\x02\x02\u0189\u0187\x03\x02\x02\x02\u0189\u018A\x03\x02\x02\x02\u018A\u018C\x03\x02\x02\x02\u018B\u0185\x03\x02\x02\x02\u018C\u018D\x03\x02\x02\x02\u018D\u018B\x03\x02\x02\x02\u018D\u018E\x03\x02\x02\x02\u018E\u018F\x03\x02\x02\x02\u018F\u0190\x07_\x02\x02\u0190u\x03\x02\x02\x02\u0191\u0193\x07]\x02\x02\u0192\u0194\x05:\x1C\x02\u0193\u0192\x03\x02\x02\x02\u0194\u0195\x03\x02\x02\x02\u0195\u0193\x03\x02\x02\x02\u0195\u0196\x03\x02\x02\x02\u0196\u0198\x03\x02\x02\x02\u0197\u0199\x07T\x02\x02\u0198\u0197\x03\x02\x02\x02\u0198\u0199\x03\x02\x02\x02\u0199\u019A\x03\x02\x02\x02\u019A\u019B\x07_\x02\x02\u019Bw\x03\x02\x02\x02\u019C\u019E\x07]\x02\x02\u019D\u019F\x05<\x1D\x02\u019E\u019D\x03\x02\x02\x02\u019E\u019F\x03\x02\x02\x02\u019F\u01A0\x03\x02\x02\x02\u01A0\u01A1\x07_\x02\x02\u01A1y\x03\x02\x02\x02\u01A2\u01A8\x07$\x02\x02\u01A3\u01A4\x07^\x02\x02\u01A4\u01A7\x0B\x02\x02\x02\u01A5\u01A7\n \x02\x02\u01A6\u01A3\x03\x02\x02\x02\u01A6\u01A5\x03\x02\x02\x02\u01A7\u01AA\x03\x02\x02\x02\u01A8\u01A6\x03\x02\x02\x02\u01A8\u01A9\x03\x02\x02\x02\u01A9\u01AB\x03\x02\x02\x02\u01AA\u01A8\x03\x02\x02\x02\u01AB\u01AC\x07$\x02\x02\u01AC{\x03\x02\x02\x02\u01AD\u01AE\x05z<\x02\u01AE}\x03\x02\x02\x02\u01AF\u01B3\x07)\x02\x02\u01B0\u01B4\n!\x02\x02\u01B1\u01B2\x07^\x02\x02\u01B2\u01B4\x0B\x02\x02\x02\u01B3\u01B0\x03\x02\x02\x02\u01B3\u01B1\x03\x02\x02\x02\u01B4\u01B5\x03\x02\x02\x02\u01B5\u01B6\x07)\x02\x02\u01B6\x7F\x03\x02\x02\x02\u01B7\u01B9\x07\'\x02\x02\u01B8\u01BA\x0423\x02\u01B9\u01B8\x03\x02\x02\x02\u01BA\u01BB\x03\x02\x02\x02\u01BB\u01B9\x03\x02\x02\x02\u01BB\u01BC\x03\x02\x02\x02\u01BC\x81\x03\x02\x02\x02\u01BD\u01BE\x05@\x1F\x02\u01BE\u01BF\x05B \x02\u01BF\u01C0\x05B \x02\u01C0\u01C2\x05B \x02\u01C1\u01C3\x05B \x02\u01C2\u01C1\x03\x02\x02\x02\u01C3\u01C4\x03\x02\x02\x02\u01C4\u01C2\x03\x02\x02\x02\u01C4\u01C5\x03\x02\x02\x02\u01C5\x83\x03\x02\x02\x02\u01C6\u01C7\x050\x17\x02\u01C7\u01C8\x05\x06\x02\x02\u01C8\u01C9\x05(\x13\x02\u01C9\u01CA\x05:\x1C\x02\u01CA\x85\x03\x02\x02\x02\u01CB\u01CC\x050\x17\x02\u01CC\u01CD\x05\x06\x02\x02\u01CD\u01CE\x05:\x1C\x02\u01CE\u01CF\x05:\x1C\x02\u01CF\x87\x03\x02\x02\x02\u01D0\u01D1\x05"\x10\x02\u01D1\u01D2\x05\b\x03\x02\u01D2\u01D3\x050\x17\x02\u01D3\u01D4\x05:\x1C\x02\u01D4\x89\x03\x02\x02\x02\u01D5\u01D6\x05"\x10\x02\u01D6\u01D7\x050\x17\x02\u01D7\u01D8\x05:\x1C\x02\u01D8\u01D9\x05:\x1C\x02\u01D9\x8B\x03\x02\x02\x02\u01DA\u01DB\x05\x1E\x0E\x02\u01DB\u01DC\x050\x17\x02\u01DC\u01DD\x05:\x1C\x02\u01DD\u01DE\x05:\x1C\x02\u01DE\x8D\x03\x02\x02\x02\u01DF\u01E0\x05@\x1F\x02\u01E0\u01E1\x05B \x02\u01E1\u01E2\x05B \x02\u01E2\u01E3\x05B \x02\u01E3\x8F\x03\x02\x02\x02\u01E4\u01E5\x05\x0E\x06\x02\u01E5\u01E6\x05&\x12\x02\u01E6\u01FD\x03\x02\x02\x02\u01E7\u01E8\x05 \x0F\x02\u01E8\u01E9\x05\x0E\x06\x02\u01E9\u01FD\x03\x02\x02\x02\u01EA\u01EB\x05\x1C\r\x02\u01EB\u01EC\x05,\x15\x02\u01EC\u01FD\x03\x02\x02\x02\u01ED\u01EE\x05\x12\b\x02\u01EE\u01EF\x05,\x15\x02\u01EF\u01FD\x03\x02\x02\x02\u01F0\u01F1\x05\x1C\r\x02\u01F1\u01F2\x05\x0E\x06\x02\u01F2\u01FD\x03\x02\x02\x02\u01F3\u01F4\x05\x12\b\x02\u01F4\u01F5\x05\x0E\x06\x02\u01F5\u01FD\x03\x02\x02\x02\u01F6\u01F7\x05\b\x03\x02\u01F7\u01F8\x05,\x15\x02\u01F8\u01FD\x03\x02\x02\x02\u01F9\u01FA\x05\b\x03\x02\u01FA\u01FB\x05\x10\x07\x02\u01FB\u01FD\x03\x02\x02\x02\u01FC\u01E4\x03\x02\x02\x02\u01FC\u01E7\x03\x02\x02\x02\u01FC\u01EA\x03\x02\x02\x02\u01FC\u01ED\x03\x02\x02\x02\u01FC\u01F0\x03\x02\x02\x02\u01FC\u01F3\x03\x02\x02\x02\u01FC\u01F6\x03\x02\x02\x02\u01FC\u01F9\x03\x02\x02\x02\u01FD\x91\x03\x02\x02\x02\u01FE\u020A\x07?\x02\x02\u01FF\u0200\x07#\x02\x02\u0200\u020A\x07?\x02\x02\u0201\u0202\x07>\x02\x02\u0202\u020A\x07@\x02\x02\u0203\u020A\x07@\x02\x02\u0204\u0205\x07@\x02\x02\u0205\u020A\x07?\x02\x02\u0206\u020A\x07>\x02\x02\u0207\u0208\x07>\x02\x02\u0208\u020A\x07?\x02\x02\u0209\u01FE\x03\x02\x02\x02\u0209\u01FF\x03\x02\x02\x02\u0209\u0201\x03\x02\x02\x02\u0209\u0203\x03\x02\x02\x02\u0209\u0204\x03\x02\x02\x02\u0209\u0206\x03\x02\x02\x02\u0209\u0207\x03\x02\x02\x02\u020A\x93\x03\x02\x02\x02\u020B\u020C\x05\x06\x02\x02\u020C\u020D\x05 \x0F\x02\u020D\u020E\x05\f\x05\x02\u020E\u0213\x03\x02\x02\x02\u020F\u0210\x05"\x10\x02\u0210\u0211\x05(\x13\x02\u0211\u0213\x03\x02\x02\x02\u0212\u020B\x03\x02\x02\x02\u0212\u020F\x03\x02\x02\x02\u0213\x95\x03\x02\x02\x02\u0214\u0216\x05>\x1E\x02\u0215\u0214\x03\x02\x02\x02\u0215\u0216\x03\x02\x02\x02\u0216\u021A\x03\x02\x02\x02\u0217\u0219\x05:\x1C\x02\u0218\u0217\x03\x02\x02\x02\u0219\u021C\x03\x02\x02\x02\u021A\u0218\x03\x02\x02\x02\u021A\u021B\x03\x02\x02\x02\u021B\u021D\x03\x02\x02\x02\u021C\u021A\x03\x02\x02\x02\u021D\u021F\x070\x02\x02\u021E\u0220\x05:\x1C\x02\u021F\u021E\x03\x02\x02\x02\u0220\u0221\x03\x02\x02\x02\u0221\u021F\x03\x02\x02\x02\u0221\u0222\x03\x02\x02\x02\u0222\x97\x03\x02\x02\x02\u0223\u0225\x05>\x1E\x02\u0224\u0223\x03\x02\x02\x02\u0224\u0225\x03\x02\x02\x02\u0225\u0227\x03\x02\x02\x02\u0226\u0228\x05:\x1C\x02\u0227\u0226\x03\x02\x02\x02\u0228\u0229\x03\x02\x02\x02\u0229\u0227\x03\x02\x02\x02\u0229\u022A\x03\x02\x02\x02\u022A\x99\x03\x02\x02\x02\u022B\u022D\t"\x02\x02\u022C\u022B\x03\x02\x02\x02\u022D\u022E\x03\x02\x02\x02\u022E\u022C\x03\x02\x02\x02\u022E\u022F\x03\x02\x02\x02\u022F\u0230\x03\x02\x02\x02\u0230\u0231\bL\x04\x02\u0231\x9B\x03\x02\x02\x02\u0232\u0237\x05@\x1F\x02\u0233\u0235\x05B \x02\u0234\u0236\x05B \x02\u0235\u0234\x03\x02\x02\x02\u0235\u0236\x03\x02\x02\x02\u0236\u0238\x03\x02\x02\x02\u0237\u0233\x03\x02\x02\x02\u0237\u0238\x03\x02\x02\x02\u0238\x9D\x03\x02\x02\x02\u0239\u023A\x0B\x02\x02\x02\u023A\x9F\x03\x02\x02\x02\u023B\u023C\x07^\x02\x02\u023C\u023F\x0B\x02\x02\x02\u023D\u023F\n#\x02\x02\u023E\u023B\x03\x02\x02\x02\u023E\u023D\x03\x02\x02\x02\u023F\u0240\x03\x02\x02\x02\u0240\u023E\x03\x02\x02\x02\u0240\u0241\x03\x02\x02\x02\u0241\xA1\x03\x02\x02\x02\u0242\u0243\x05z<\x02\u0243\xA3\x03\x02\x02\x02\u0244\u024A\x07)\x02\x02\u0245\u0246\x07^\x02\x02\u0246\u0249\x0B\x02\x02\x02\u0247\u0249\n$\x02\x02\u0248\u0245\x03\x02\x02\x02\u0248\u0247\x03\x02\x02\x02\u0249\u024C\x03\x02\x02\x02\u024A\u0248\x03\x02\x02\x02\u024A\u024B\x03\x02\x02\x02\u024B\u024D\x03\x02\x02\x02\u024C\u024A\x03\x02\x02\x02\u024D\u024E\x07)\x02\x02\u024E\u024F\x03\x02\x02\x02\u024F\u0250\bQ\x05\x02\u0250\xA5\x03\x02\x02\x02\u0251\u0252\x07?\x02\x02\u0252\xA7\x03\x02\x02\x02\u0253\u0255\t\x1D\x02\x02\u0254\u0253\x03\x02\x02\x02\u0254\u0255\x03\x02\x02\x02\u0255\u0257\x03\x02\x02\x02\u0256\u0258\x042;\x02\u0257\u0256\x03\x02\x02\x02\u0258\u0259\x03\x02\x02\x02\u0259\u0257\x03\x02\x02\x02\u0259\u025A\x03\x02\x02\x02\u025A\xA9\x03\x02\x02\x02\u025B\u025D\t%\x02\x02\u025C\u025B\x03\x02\x02\x02\u025D\u025E\x03\x02\x02\x02\u025E\u025C\x03\x02\x02\x02\u025E\u025F\x03\x02\x02\x02\u025F\u0260\x03\x02\x02\x02\u0260\u0261\bT\x06\x02\u0261\xAB\x03\x02\x02\x02\u0262\u0264\x07\x0F\x02\x02\u0263\u0262\x03\x02\x02\x02\u0263\u0264\x03\x02\x02\x02\u0264\u0265\x03\x02\x02\x02\u0265\u0266\x07\f\x02\x02\u0266\u0267\x03\x02\x02\x02\u0267\u0268\bU\x07\x02\u0268\xAD\x03\x02\x02\x02\u0269\u026A\n&\x02\x02\u026A\u026B\x03\x02\x02\x02\u026B\u026C\bV\b\x02\u026C\xAF\x03\x02\x02\x02\u026D\u026F\t\'\x02\x02\u026E\u026D\x03\x02\x02\x02\u026F\u0270\x03\x02\x02\x02\u0270\u026E\x03\x02\x02\x02\u0270\u0271\x03\x02\x02\x02\u0271\u0272\x03\x02\x02\x02\u0272\u0273\bW\t\x02\u0273\u0274\bW\x04\x02\u0274\xB1\x03\x02\x02\x02\u0275\u0277\n\'\x02\x02\u0276\u0275\x03\x02\x02\x02\u0277\u0278\x03\x02\x02\x02\u0278\u0276\x03\x02\x02\x02\u0278\u0279\x03\x02\x02\x02\u0279\u027A\x03\x02\x02\x02\u027A\u027B\bX\x07\x02\u027B\xB3\x03\x02\x02\x02.\x02\x03\x04\x05\xED\u0169\u016B\u016D\u0174\u0179\u017B\u017D\u0183\u0189\u018D\u0195\u0198\u019E\u01A6\u01A8\u01B3\u01BB\u01C4\u01FC\u0209\u0212\u0215\u021A\u0221\u0224\u0229\u022E\u0235\u0237\u023E\u0240\u0248\u024A\u0254\u0259\u025E\u0263\u0270\u0278\n\x07\x03\x02\x07\x04\x02\x02\x04\x02\t1\x02\b\x02\x02\x06\x02\x02\x07\x05\x02\x04\x02\x02'));
+    tmp_7.ATN_1 = ATNDeserializer_init_$Create$(null, 1, null).deserialize_c68pee_k$(asCharArray('\x03\u608B\uA72A\u8133\uB9ED\u417C\u3BE7\u7786\u5964\x028\u028E\b\x01\b\x01\b\x01\b\x01\x04\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04\x07\t\x07\x04\b\t\b\x04\t\t\t\x04\n\t\n\x04\x0B\t\x0B\x04\f\t\f\x04\r\t\r\x04\x0E\t\x0E\x04\x0F\t\x0F\x04\x10\t\x10\x04\x11\t\x11\x04\x12\t\x12\x04\x13\t\x13\x04\x14\t\x14\x04\x15\t\x15\x04\x16\t\x16\x04\x17\t\x17\x04\x18\t\x18\x04\x19\t\x19\x04\x1A\t\x1A\x04\x1B\t\x1B\x04\x1C\t\x1C\x04\x1D\t\x1D\x04\x1E\t\x1E\x04\x1F\t\x1F\x04 \t \x04!\t!\x04"\t"\x04#\t#\x04$\t$\x04%\t%\x04&\t&\x04\'\t\'\x04(\t(\x04)\t)\x04*\t*\x04+\t+\x04,\t,\x04-\t-\x04.\t.\x04/\t/\x040\t0\x041\t1\x042\t2\x043\t3\x044\t4\x045\t5\x046\t6\x047\t7\x048\t8\x049\t9\x04:\t:\x04;\t;\x04<\t<\x04=\t=\x04>\t>\x04?\t?\x04@\t@\x04A\tA\x04B\tB\x04C\tC\x04D\tD\x04E\tE\x04F\tF\x04G\tG\x04H\tH\x04I\tI\x04J\tJ\x04K\tK\x04L\tL\x04M\tM\x04N\tN\x04O\tO\x04P\tP\x04Q\tQ\x04R\tR\x04S\tS\x04T\tT\x04U\tU\x04V\tV\x04W\tW\x04X\tX\x04Y\tY\x04Z\tZ\x04[\t[\x03\x02\x03\x02\x03\x03\x03\x03\x03\x04\x03\x04\x03\x05\x03\x05\x03\x06\x03\x06\x03\x07\x03\x07\x03\b\x03\b\x03\t\x03\t\x03\n\x03\n\x03\x0B\x03\x0B\x03\f\x03\f\x03\r\x03\r\x03\x0E\x03\x0E\x03\x0F\x03\x0F\x03\x10\x03\x10\x03\x11\x03\x11\x03\x12\x03\x12\x03\x13\x03\x13\x03\x14\x03\x14\x03\x15\x03\x15\x03\x16\x03\x16\x03\x17\x03\x17\x03\x18\x03\x18\x03\x19\x03\x19\x03\x1A\x03\x1A\x03\x1B\x03\x1B\x03\x1C\x03\x1C\x03\x1D\x06\x1D\xF2\n\x1D\r\x1D\x0E\x1D\xF3\x03\x1E\x03\x1E\x03\x1F\x03\x1F\x03 \x03 \x03!\x03!\x03!\x03!\x03!\x03"\x03"\x03"\x03"\x03#\x03#\x03#\x03#\x03#\x03$\x03$\x03$\x03$\x03$\x03%\x03%\x03%\x03%\x03%\x03&\x03&\x03&\x03&\x03&\x03\'\x03\'\x03\'\x03\'\x03\'\x03(\x03(\x03(\x03(\x03(\x03)\x03)\x03)\x03)\x03)\x03*\x03*\x03*\x03*\x03*\x03+\x03+\x03+\x03+\x03+\x03,\x03,\x03,\x03,\x03,\x03-\x03-\x03-\x03-\x03-\x03.\x03.\x03.\x03.\x03.\x03/\x03/\x03/\x03/\x03/\x030\x030\x030\x030\x030\x031\x031\x031\x031\x031\x032\x032\x032\x032\x032\x033\x033\x033\x033\x033\x034\x034\x034\x034\x034\x035\x035\x035\x035\x035\x036\x036\x036\x036\x036\x037\x037\x037\x037\x037\x038\x038\x068\u0170\n8\r8\x0E8\u0171\x058\u0174\n8\x038\x038\x038\x068\u0179\n8\r8\x0E8\u017A\x038\x038\x038\x068\u0180\n8\r8\x0E8\u0181\x058\u0184\n8\x039\x039\x03:\x06:\u0189\n:\r:\x0E:\u018A\x03;\x06;\u018E\n;\r;\x0E;\u018F\x03<\x03<\x05<\u0194\n<\x03<\x03<\x03<\x03<\x07<\u019A\n<\f<\x0E<\u019D\x0B<\x03<\x05<\u01A0\n<\x03<\x03<\x03=\x03=\x06=\u01A6\n=\r=\x0E=\u01A7\x03=\x05=\u01AB\n=\x03=\x03=\x03>\x03>\x05>\u01B1\n>\x03>\x03>\x03?\x03?\x03?\x03?\x07?\u01B9\n?\f?\x0E?\u01BC\x0B?\x03?\x03?\x03@\x03@\x03A\x03A\x03A\x03A\x05A\u01C6\nA\x03A\x03A\x03B\x03B\x06B\u01CC\nB\rB\x0EB\u01CD\x03C\x03C\x03C\x03C\x03C\x06C\u01D5\nC\rC\x0EC\u01D6\x03D\x03D\x03D\x03D\x03D\x03E\x03E\x03E\x03E\x03E\x03F\x03F\x03F\x03F\x03F\x03G\x03G\x03G\x03G\x03G\x03H\x03H\x03H\x03H\x03H\x03I\x03I\x03I\x03I\x03I\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x05J\u020F\nJ\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x05K\u021C\nK\x03L\x03L\x03L\x03L\x03L\x03L\x03L\x05L\u0225\nL\x03M\x05M\u0228\nM\x03M\x07M\u022B\nM\fM\x0EM\u022E\x0BM\x03M\x03M\x06M\u0232\nM\rM\x0EM\u0233\x03N\x05N\u0237\nN\x03N\x06N\u023A\nN\rN\x0EN\u023B\x03O\x06O\u023F\nO\rO\x0EO\u0240\x03O\x03O\x03P\x03P\x03P\x05P\u0248\nP\x05P\u024A\nP\x03Q\x03Q\x03R\x03R\x03R\x06R\u0251\nR\rR\x0ER\u0252\x03S\x03S\x03T\x03T\x03T\x03T\x07T\u025B\nT\fT\x0ET\u025E\x0BT\x03T\x03T\x03T\x03T\x03U\x03U\x03V\x05V\u0267\nV\x03V\x06V\u026A\nV\rV\x0EV\u026B\x03W\x06W\u026F\nW\rW\x0EW\u0270\x03W\x03W\x03X\x05X\u0276\nX\x03X\x03X\x03X\x03X\x03Y\x03Y\x03Y\x03Y\x03Z\x06Z\u0281\nZ\rZ\x0EZ\u0282\x03Z\x03Z\x03Z\x03[\x06[\u0289\n[\r[\x0E[\u028A\x03[\x03[\x02\x02\\\x06\x02\b\x02\n\x02\f\x02\x0E\x02\x10\x02\x12\x02\x14\x02\x16\x02\x18\x02\x1A\x02\x1C\x02\x1E\x02 \x02"\x02$\x02&\x02(\x02*\x02,\x02.\x020\x022\x024\x026\x028\x02:\x02<\x02>\x02@\x02B\x02D\x03F\x04H\x05J\x06L\x07N\bP\tR\nT\x0BV\fX\rZ\x0E\\\x0F^\x10`\x11b\x12d\x13f\x14h\x15j\x16l\x17n\x18p\x19r\x1At\x02v\x02x\x02z\x1B|\x1C~\x1D\x80\x02\x82\x1E\x84\x1F\x86 \x88!\x8A"\x8C#\x8E$\x90%\x92&\x94\'\x96(\x98)\x9A*\x9C+\x9E,\xA0-\xA2.\xA4/\xA60\xA81\xAA\x02\xAC2\xAE3\xB04\xB25\xB46\xB67\xB88\x06\x02\x03\x04\x05(\x04\x02CCcc\x04\x02DDdd\x04\x02EEee\x04\x02FFff\x04\x02GGgg\x04\x02HHhh\x04\x02IIii\x04\x02JJjj\x04\x02KKkk\x04\x02LLll\x04\x02MMmm\x04\x02NNnn\x04\x02OOoo\x04\x02PPpp\x04\x02QQqq\x04\x02RRrr\x04\x02SSss\x04\x02TTtt\x04\x02UUuu\x04\x02VVvv\x04\x02WWww\x04\x02XXxx\x04\x02YYyy\x04\x02ZZzz\x04\x02[[{{\x04\x02\\\\||\x03\x02__\x04\x02--//\x05\x02C\\aac|\x07\x02\x0B\f\x0F\x0F""$$))\x04\x02\x0B\x0B""\x06\x02\f\f\x0F\x0F$$^^\x04\x02))^^\x06\x02\x0B\f\x0F\x0F""..\x06\x02\x0B\f\x0F\x0F""^^\x06\x02\f\f\x0F\x0F))^^\x05\x02\f\f\x0F\x0F%%\x04\x02\f\f\x0F\x0F\x02\u029C\x02D\x03\x02\x02\x02\x02F\x03\x02\x02\x02\x02H\x03\x02\x02\x02\x02J\x03\x02\x02\x02\x02L\x03\x02\x02\x02\x02N\x03\x02\x02\x02\x02P\x03\x02\x02\x02\x02R\x03\x02\x02\x02\x02T\x03\x02\x02\x02\x02V\x03\x02\x02\x02\x02X\x03\x02\x02\x02\x02Z\x03\x02\x02\x02\x02\\\x03\x02\x02\x02\x02^\x03\x02\x02\x02\x02`\x03\x02\x02\x02\x02b\x03\x02\x02\x02\x02d\x03\x02\x02\x02\x02f\x03\x02\x02\x02\x02h\x03\x02\x02\x02\x02j\x03\x02\x02\x02\x02l\x03\x02\x02\x02\x02n\x03\x02\x02\x02\x02p\x03\x02\x02\x02\x02r\x03\x02\x02\x02\x02z\x03\x02\x02\x02\x02|\x03\x02\x02\x02\x02~\x03\x02\x02\x02\x02\x82\x03\x02\x02\x02\x02\x84\x03\x02\x02\x02\x02\x86\x03\x02\x02\x02\x02\x88\x03\x02\x02\x02\x02\x8A\x03\x02\x02\x02\x02\x8C\x03\x02\x02\x02\x02\x8E\x03\x02\x02\x02\x02\x90\x03\x02\x02\x02\x02\x92\x03\x02\x02\x02\x02\x94\x03\x02\x02\x02\x02\x96\x03\x02\x02\x02\x02\x98\x03\x02\x02\x02\x02\x9A\x03\x02\x02\x02\x02\x9C\x03\x02\x02\x02\x02\x9E\x03\x02\x02\x02\x02\xA0\x03\x02\x02\x02\x02\xA2\x03\x02\x02\x02\x02\xA4\x03\x02\x02\x02\x03\xA6\x03\x02\x02\x02\x03\xA8\x03\x02\x02\x02\x03\xAA\x03\x02\x02\x02\x03\xAC\x03\x02\x02\x02\x03\xAE\x03\x02\x02\x02\x03\xB0\x03\x02\x02\x02\x03\xB2\x03\x02\x02\x02\x04\xB4\x03\x02\x02\x02\x04\xB6\x03\x02\x02\x02\x05\xB8\x03\x02\x02\x02\x06\xBA\x03\x02\x02\x02\b\xBC\x03\x02\x02\x02\n\xBE\x03\x02\x02\x02\f\xC0\x03\x02\x02\x02\x0E\xC2\x03\x02\x02\x02\x10\xC4\x03\x02\x02\x02\x12\xC6\x03\x02\x02\x02\x14\xC8\x03\x02\x02\x02\x16\xCA\x03\x02\x02\x02\x18\xCC\x03\x02\x02\x02\x1A\xCE\x03\x02\x02\x02\x1C\xD0\x03\x02\x02\x02\x1E\xD2\x03\x02\x02\x02 \xD4\x03\x02\x02\x02"\xD6\x03\x02\x02\x02$\xD8\x03\x02\x02\x02&\xDA\x03\x02\x02\x02(\xDC\x03\x02\x02\x02*\xDE\x03\x02\x02\x02,\xE0\x03\x02\x02\x02.\xE2\x03\x02\x02\x020\xE4\x03\x02\x02\x022\xE6\x03\x02\x02\x024\xE8\x03\x02\x02\x026\xEA\x03\x02\x02\x028\xEC\x03\x02\x02\x02:\xEE\x03\x02\x02\x02<\xF1\x03\x02\x02\x02>\xF5\x03\x02\x02\x02@\xF7\x03\x02\x02\x02B\xF9\x03\x02\x02\x02D\xFB\x03\x02\x02\x02F\u0100\x03\x02\x02\x02H\u0104\x03\x02\x02\x02J\u0109\x03\x02\x02\x02L\u010E\x03\x02\x02\x02N\u0113\x03\x02\x02\x02P\u0118\x03\x02\x02\x02R\u011D\x03\x02\x02\x02T\u0122\x03\x02\x02\x02V\u0127\x03\x02\x02\x02X\u012C\x03\x02\x02\x02Z\u0131\x03\x02\x02\x02\\\u0136\x03\x02\x02\x02^\u013B\x03\x02\x02\x02`\u0140\x03\x02\x02\x02b\u0145\x03\x02\x02\x02d\u014A\x03\x02\x02\x02f\u014F\x03\x02\x02\x02h\u0154\x03\x02\x02\x02j\u0159\x03\x02\x02\x02l\u015E\x03\x02\x02\x02n\u0163\x03\x02\x02\x02p\u0168\x03\x02\x02\x02r\u0173\x03\x02\x02\x02t\u0185\x03\x02\x02\x02v\u0188\x03\x02\x02\x02x\u018D\x03\x02\x02\x02z\u0191\x03\x02\x02\x02|\u01A3\x03\x02\x02\x02~\u01AE\x03\x02\x02\x02\x80\u01B4\x03\x02\x02\x02\x82\u01BF\x03\x02\x02\x02\x84\u01C1\x03\x02\x02\x02\x86\u01C9\x03\x02\x02\x02\x88\u01CF\x03\x02\x02\x02\x8A\u01D8\x03\x02\x02\x02\x8C\u01DD\x03\x02\x02\x02\x8E\u01E2\x03\x02\x02\x02\x90\u01E7\x03\x02\x02\x02\x92\u01EC\x03\x02\x02\x02\x94\u01F1\x03\x02\x02\x02\x96\u020E\x03\x02\x02\x02\x98\u021B\x03\x02\x02\x02\x9A\u0224\x03\x02\x02\x02\x9C\u0227\x03\x02\x02\x02\x9E\u0236\x03\x02\x02\x02\xA0\u023E\x03\x02\x02\x02\xA2\u0244\x03\x02\x02\x02\xA4\u024B\x03\x02\x02\x02\xA6\u0250\x03\x02\x02\x02\xA8\u0254\x03\x02\x02\x02\xAA\u0256\x03\x02\x02\x02\xAC\u0263\x03\x02\x02\x02\xAE\u0266\x03\x02\x02\x02\xB0\u026E\x03\x02\x02\x02\xB2\u0275\x03\x02\x02\x02\xB4\u027B\x03\x02\x02\x02\xB6\u0280\x03\x02\x02\x02\xB8\u0288\x03\x02\x02\x02\xBA\xBB\t\x02\x02\x02\xBB\x07\x03\x02\x02\x02\xBC\xBD\t\x03\x02\x02\xBD\t\x03\x02\x02\x02\xBE\xBF\t\x04\x02\x02\xBF\x0B\x03\x02\x02\x02\xC0\xC1\t\x05\x02\x02\xC1\r\x03\x02\x02\x02\xC2\xC3\t\x06\x02\x02\xC3\x0F\x03\x02\x02\x02\xC4\xC5\t\x07\x02\x02\xC5\x11\x03\x02\x02\x02\xC6\xC7\t\b\x02\x02\xC7\x13\x03\x02\x02\x02\xC8\xC9\t\t\x02\x02\xC9\x15\x03\x02\x02\x02\xCA\xCB\t\n\x02\x02\xCB\x17\x03\x02\x02\x02\xCC\xCD\t\x0B\x02\x02\xCD\x19\x03\x02\x02\x02\xCE\xCF\t\f\x02\x02\xCF\x1B\x03\x02\x02\x02\xD0\xD1\t\r\x02\x02\xD1\x1D\x03\x02\x02\x02\xD2\xD3\t\x0E\x02\x02\xD3\x1F\x03\x02\x02\x02\xD4\xD5\t\x0F\x02\x02\xD5!\x03\x02\x02\x02\xD6\xD7\t\x10\x02\x02\xD7#\x03\x02\x02\x02\xD8\xD9\t\x11\x02\x02\xD9%\x03\x02\x02\x02\xDA\xDB\t\x12\x02\x02\xDB\'\x03\x02\x02\x02\xDC\xDD\t\x13\x02\x02\xDD)\x03\x02\x02\x02\xDE\xDF\t\x14\x02\x02\xDF+\x03\x02\x02\x02\xE0\xE1\t\x15\x02\x02\xE1-\x03\x02\x02\x02\xE2\xE3\t\x16\x02\x02\xE3/\x03\x02\x02\x02\xE4\xE5\t\x17\x02\x02\xE51\x03\x02\x02\x02\xE6\xE7\t\x18\x02\x02\xE73\x03\x02\x02\x02\xE8\xE9\t\x19\x02\x02\xE95\x03\x02\x02\x02\xEA\xEB\t\x1A\x02\x02\xEB7\x03\x02\x02\x02\xEC\xED\t\x1B\x02\x02\xED9\x03\x02\x02\x02\xEE\xEF\x042;\x02\xEF;\x03\x02\x02\x02\xF0\xF2\n\x1C\x02\x02\xF1\xF0\x03\x02\x02\x02\xF2\xF3\x03\x02\x02\x02\xF3\xF1\x03\x02\x02\x02\xF3\xF4\x03\x02\x02\x02\xF4=\x03\x02\x02\x02\xF5\xF6\t\x1D\x02\x02\xF6?\x03\x02\x02\x02\xF7\xF8\t\x1E\x02\x02\xF8A\x03\x02\x02\x02\xF9\xFA\n\x1F\x02\x02\xFAC\x03\x02\x02\x02\xFB\xFC\x07,\x02\x02\xFC\xFD\x07%\x02\x02\xFD\xFE\x03\x02\x02\x02\xFE\xFF\b!\x02\x02\xFFE\x03\x02\x02\x02\u0100\u0101\x07,\x02\x02\u0101\u0102\x03\x02\x02\x02\u0102\u0103\b"\x03\x02\u0103G\x03\x02\x02\x02\u0104\u0105\x05*\x14\x02\u0105\u0106\x05\n\x04\x02\u0106\u0107\x05(\x13\x02\u0107\u0108\x05$\x11\x02\u0108I\x03\x02\x02\x02\u0109\u010A\x05\x16\n\x02\u010A\u010B\x05*\x14\x02\u010B\u010C\x05\n\x04\x02\u010C\u010D\x05(\x13\x02\u010DK\x03\x02\x02\x02\u010E\u010F\x05(\x13\x02\u010F\u0110\x05*\x14\x02\u0110\u0111\x05\n\x04\x02\u0111\u0112\x05(\x13\x02\u0112M\x03\x02\x02\x02\u0113\u0114\x05\x0E\x06\x02\u0114\u0115\x05 \x0F\x02\u0115\u0116\x05\f\x05\x02\u0116\u0117\x05\x1E\x0E\x02\u0117O\x03\x02\x02\x02\u0118\u0119\x05\f\x05\x02\u0119\u011A\x05"\x10\x02\u011A\u011B\x05\x16\n\x02\u011B\u011C\x05\x10\x07\x02\u011CQ\x03\x02\x02\x02\u011D\u011E\x05\x0E\x06\x02\u011E\u011F\x05 \x0F\x02\u011F\u0120\x05\f\x05\x02\u0120\u0121\x05\x16\n\x02\u0121S\x03\x02\x02\x02\u0122\u0123\x05\x0E\x06\x02\u0123\u0124\x05 \x0F\x02\u0124\u0125\x05.\x16\x02\u0125\u0126\x05\x1E\x0E\x02\u0126U\x03\x02\x02\x02\u0127\u0128\x05\x0E\x06\x02\u0128\u0129\x05\n\x04\x02\u0129\u012A\x05"\x10\x02\u012A\u012B\x05 \x0F\x02\u012BW\x03\x02\x02\x02\u012C\u012D\x05\x0E\x06\x02\u012D\u012E\x05$\x11\x02\u012E\u012F\x05\x06\x02\x02\u012F\u0130\x05*\x14\x02\u0130Y\x03\x02\x02\x02\u0131\u0132\x05\x0E\x06\x02\u0132\u0133\x05*\x14\x02\u0133\u0134\x05\n\x04\x02\u0134\u0135\x05 \x0F\x02\u0135[\x03\x02\x02\x02\u0136\u0137\x05\x0E\x06\x02\u0137\u0138\x05*\x14\x02\u0138\u0139\x05\x0E\x06\x02\u0139\u013A\x05\x0E\x06\x02\u013A]\x03\x02\x02\x02\u013B\u013C\x05\x0E\x06\x02\u013C\u013D\x05,\x15\x02\u013D\u013E\x05\n\x04\x02\u013E\u013F\x05\x14\t\x02\u013F_\x03\x02\x02\x02\u0140\u0141\x05\x0E\x06\x02\u0141\u0142\x050\x17\x02\u0142\u0143\x05\x0E\x06\x02\u0143\u0144\x05(\x13\x02\u0144a\x03\x02\x02\x02\u0145\u0146\x05\x1C\r\x02\u0146\u0147\x05"\x10\x02\u0147\u0148\x05"\x10\x02\u0148\u0149\x05$\x11\x02\u0149c\x03\x02\x02\x02\u014A\u014B\x05 \x0F\x02\u014B\u014C\x05\x0E\x06\x02\u014C\u014D\x054\x19\x02\u014D\u014E\x05,\x15\x02\u014Ee\x03\x02\x02\x02\u014F\u0150\x05 \x0F\x02\u0150\u0151\x05*\x14\x02\u0151\u0152\x05\n\x04\x02\u0152\u0153\x05 \x0F\x02\u0153g\x03\x02\x02\x02\u0154\u0155\x05(\x13\x02\u0155\u0156\x05\x0E\x06\x02\u0156\u0157\x05,\x15\x02\u0157\u0158\x05 \x0F\x02\u0158i\x03\x02\x02\x02\u0159\u015A\x05(\x13\x02\u015A\u015B\x05\x0E\x06\x02\u015B\u015C\x05$\x11\x02\u015C\u015D\x05*\x14\x02\u015Dk\x03\x02\x02\x02\u015E\u015F\x05(\x13\x02\u015F\u0160\x05\x0E\x06\x02\u0160\u0161\x05$\x11\x02\u0161\u0162\x05\x0E\x06\x02\u0162m\x03\x02\x02\x02\u0163\u0164\x05*\x14\x02\u0164\u0165\x05.\x16\x02\u0165\u0166\x05\b\x03\x02\u0166\u0167\x05(\x13\x02\u0167o\x03\x02\x02\x02\u0168\u0169\x05.\x16\x02\u0169\u016A\x05 \x0F\x02\u016A\u016B\x05,\x15\x02\u016B\u016C\x05\x1C\r\x02\u016Cq\x03\x02\x02\x02\u016D\u0170\x05@\x1F\x02\u016E\u0170\x05:\x1C\x02\u016F\u016D\x03\x02\x02\x02\u016F\u016E\x03\x02\x02\x02\u0170\u0171\x03\x02\x02\x02\u0171\u016F\x03\x02\x02\x02\u0171\u0172\x03\x02\x02\x02\u0172\u0174\x03\x02\x02\x02\u0173\u016F\x03\x02\x02\x02\u0173\u0174\x03\x02\x02\x02\u0174\u0175\x03\x02\x02\x02\u0175\u0183\x07<\x02\x02\u0176\u0178\x07]\x02\x02\u0177\u0179\n\x1C\x02\x02\u0178\u0177\x03\x02\x02\x02\u0179\u017A\x03\x02\x02\x02\u017A\u0178\x03\x02\x02\x02\u017A\u017B\x03\x02\x02\x02\u017B\u017C\x03\x02\x02\x02\u017C\u0184\x07_\x02\x02\u017D\u0180\x05@\x1F\x02\u017E\u0180\x05:\x1C\x02\u017F\u017D\x03\x02\x02\x02\u017F\u017E\x03\x02\x02\x02\u0180\u0181\x03\x02\x02\x02\u0181\u017F\x03\x02\x02\x02\u0181\u0182\x03\x02\x02\x02\u0182\u0184\x03\x02\x02\x02\u0183\u0176\x03\x02\x02\x02\u0183\u017F\x03\x02\x02\x02\u0184s\x03\x02\x02\x02\u0185\u0186\t \x02\x02\u0186u\x03\x02\x02\x02\u0187\u0189\x05t9\x02\u0188\u0187\x03\x02\x02\x02\u0189\u018A\x03\x02\x02\x02\u018A\u0188\x03\x02\x02\x02\u018A\u018B\x03\x02\x02\x02\u018Bw\x03\x02\x02\x02\u018C\u018E\x05:\x1C\x02\u018D\u018C\x03\x02\x02\x02\u018E\u018F\x03\x02\x02\x02\u018F\u018D\x03\x02\x02\x02\u018F\u0190\x03\x02\x02\x02\u0190y\x03\x02\x02\x02\u0191\u0193\x07]\x02\x02\u0192\u0194\x05v:\x02\u0193\u0192\x03\x02\x02\x02\u0193\u0194\x03\x02\x02\x02\u0194\u0195\x03\x02\x02\x02\u0195\u019B\x05x;\x02\u0196\u0197\x05v:\x02\u0197\u0198\x05x;\x02\u0198\u019A\x03\x02\x02\x02\u0199\u0196\x03\x02\x02\x02\u019A\u019D\x03\x02\x02\x02\u019B\u0199\x03\x02\x02\x02\u019B\u019C\x03\x02\x02\x02\u019C\u019F\x03\x02\x02\x02\u019D\u019B\x03\x02\x02\x02\u019E\u01A0\x05v:\x02\u019F\u019E\x03\x02\x02\x02\u019F\u01A0\x03\x02\x02\x02\u01A0\u01A1\x03\x02\x02\x02\u01A1\u01A2\x07_\x02\x02\u01A2{\x03\x02\x02\x02\u01A3\u01A5\x07]\x02\x02\u01A4\u01A6\x05:\x1C\x02\u01A5\u01A4\x03\x02\x02\x02\u01A6\u01A7\x03\x02\x02\x02\u01A7\u01A5\x03\x02\x02\x02\u01A7\u01A8\x03\x02\x02\x02\u01A8\u01AA\x03\x02\x02\x02\u01A9\u01AB\x07T\x02\x02\u01AA\u01A9\x03\x02\x02\x02\u01AA\u01AB\x03\x02\x02\x02\u01AB\u01AC\x03\x02\x02\x02\u01AC\u01AD\x07_\x02\x02\u01AD}\x03\x02\x02\x02\u01AE\u01B0\x07]\x02\x02\u01AF\u01B1\x05<\x1D\x02\u01B0\u01AF\x03\x02\x02\x02\u01B0\u01B1\x03\x02\x02\x02\u01B1\u01B2\x03\x02\x02\x02\u01B2\u01B3\x07_\x02\x02\u01B3\x7F\x03\x02\x02\x02\u01B4\u01BA\x07$\x02\x02\u01B5\u01B6\x07^\x02\x02\u01B6\u01B9\x0B\x02\x02\x02\u01B7\u01B9\n!\x02\x02\u01B8\u01B5\x03\x02\x02\x02\u01B8\u01B7\x03\x02\x02\x02\u01B9\u01BC\x03\x02\x02\x02\u01BA\u01B8\x03\x02\x02\x02\u01BA\u01BB\x03\x02\x02\x02\u01BB\u01BD\x03\x02\x02\x02\u01BC\u01BA\x03\x02\x02\x02\u01BD\u01BE\x07$\x02\x02\u01BE\x81\x03\x02\x02\x02\u01BF\u01C0\x05\x80?\x02\u01C0\x83\x03\x02\x02\x02\u01C1\u01C5\x07)\x02\x02\u01C2\u01C6\n"\x02\x02\u01C3\u01C4\x07^\x02\x02\u01C4\u01C6\x0B\x02\x02\x02\u01C5\u01C2\x03\x02\x02\x02\u01C5\u01C3\x03\x02\x02\x02\u01C6\u01C7\x03\x02\x02\x02\u01C7\u01C8\x07)\x02\x02\u01C8\x85\x03\x02\x02\x02\u01C9\u01CB\x07\'\x02\x02\u01CA\u01CC\x0423\x02\u01CB\u01CA\x03\x02\x02\x02\u01CC\u01CD\x03\x02\x02\x02\u01CD\u01CB\x03\x02\x02\x02\u01CD\u01CE\x03\x02\x02\x02\u01CE\x87\x03\x02\x02\x02\u01CF\u01D0\x05@\x1F\x02\u01D0\u01D1\x05B \x02\u01D1\u01D2\x05B \x02\u01D2\u01D4\x05B \x02\u01D3\u01D5\x05B \x02\u01D4\u01D3\x03\x02\x02\x02\u01D5\u01D6\x03\x02\x02\x02\u01D6\u01D4\x03\x02\x02\x02\u01D6\u01D7\x03\x02\x02\x02\u01D7\x89\x03\x02\x02\x02\u01D8\u01D9\x050\x17\x02\u01D9\u01DA\x05\x06\x02\x02\u01DA\u01DB\x05(\x13\x02\u01DB\u01DC\x05:\x1C\x02\u01DC\x8B\x03\x02\x02\x02\u01DD\u01DE\x050\x17\x02\u01DE\u01DF\x05\x06\x02\x02\u01DF\u01E0\x05:\x1C\x02\u01E0\u01E1\x05:\x1C\x02\u01E1\x8D\x03\x02\x02\x02\u01E2\u01E3\x05"\x10\x02\u01E3\u01E4\x05\b\x03\x02\u01E4\u01E5\x050\x17\x02\u01E5\u01E6\x05:\x1C\x02\u01E6\x8F\x03\x02\x02\x02\u01E7\u01E8\x05"\x10\x02\u01E8\u01E9\x050\x17\x02\u01E9\u01EA\x05:\x1C\x02\u01EA\u01EB\x05:\x1C\x02\u01EB\x91\x03\x02\x02\x02\u01EC\u01ED\x05\x1E\x0E\x02\u01ED\u01EE\x050\x17\x02\u01EE\u01EF\x05:\x1C\x02\u01EF\u01F0\x05:\x1C\x02\u01F0\x93\x03\x02\x02\x02\u01F1\u01F2\x05@\x1F\x02\u01F2\u01F3\x05B \x02\u01F3\u01F4\x05B \x02\u01F4\u01F5\x05B \x02\u01F5\x95\x03\x02\x02\x02\u01F6\u01F7\x05\x0E\x06\x02\u01F7\u01F8\x05&\x12\x02\u01F8\u020F\x03\x02\x02\x02\u01F9\u01FA\x05 \x0F\x02\u01FA\u01FB\x05\x0E\x06\x02\u01FB\u020F\x03\x02\x02\x02\u01FC\u01FD\x05\x1C\r\x02\u01FD\u01FE\x05,\x15\x02\u01FE\u020F\x03\x02\x02\x02\u01FF\u0200\x05\x12\b\x02\u0200\u0201\x05,\x15\x02\u0201\u020F\x03\x02\x02\x02\u0202\u0203\x05\x1C\r\x02\u0203\u0204\x05\x0E\x06\x02\u0204\u020F\x03\x02\x02\x02\u0205\u0206\x05\x12\b\x02\u0206\u0207\x05\x0E\x06\x02\u0207\u020F\x03\x02\x02\x02\u0208\u0209\x05\b\x03\x02\u0209\u020A\x05,\x15\x02\u020A\u020F\x03\x02\x02\x02\u020B\u020C\x05\b\x03\x02\u020C\u020D\x05\x10\x07\x02\u020D\u020F\x03\x02\x02\x02\u020E\u01F6\x03\x02\x02\x02\u020E\u01F9\x03\x02\x02\x02\u020E\u01FC\x03\x02\x02\x02\u020E\u01FF\x03\x02\x02\x02\u020E\u0202\x03\x02\x02\x02\u020E\u0205\x03\x02\x02\x02\u020E\u0208\x03\x02\x02\x02\u020E\u020B\x03\x02\x02\x02\u020F\x97\x03\x02\x02\x02\u0210\u021C\x07?\x02\x02\u0211\u0212\x07#\x02\x02\u0212\u021C\x07?\x02\x02\u0213\u0214\x07>\x02\x02\u0214\u021C\x07@\x02\x02\u0215\u021C\x07@\x02\x02\u0216\u0217\x07@\x02\x02\u0217\u021C\x07?\x02\x02\u0218\u021C\x07>\x02\x02\u0219\u021A\x07>\x02\x02\u021A\u021C\x07?\x02\x02\u021B\u0210\x03\x02\x02\x02\u021B\u0211\x03\x02\x02\x02\u021B\u0213\x03\x02\x02\x02\u021B\u0215\x03\x02\x02\x02\u021B\u0216\x03\x02\x02\x02\u021B\u0218\x03\x02\x02\x02\u021B\u0219\x03\x02\x02\x02\u021C\x99\x03\x02\x02\x02\u021D\u021E\x05\x06\x02\x02\u021E\u021F\x05 \x0F\x02\u021F\u0220\x05\f\x05\x02\u0220\u0225\x03\x02\x02\x02\u0221\u0222\x05"\x10\x02\u0222\u0223\x05(\x13\x02\u0223\u0225\x03\x02\x02\x02\u0224\u021D\x03\x02\x02\x02\u0224\u0221\x03\x02\x02\x02\u0225\x9B\x03\x02\x02\x02\u0226\u0228\x05>\x1E\x02\u0227\u0226\x03\x02\x02\x02\u0227\u0228\x03\x02\x02\x02\u0228\u022C\x03\x02\x02\x02\u0229\u022B\x05:\x1C\x02\u022A\u0229\x03\x02\x02\x02\u022B\u022E\x03\x02\x02\x02\u022C\u022A\x03\x02\x02\x02\u022C\u022D\x03\x02\x02\x02\u022D\u022F\x03\x02\x02\x02\u022E\u022C\x03\x02\x02\x02\u022F\u0231\x070\x02\x02\u0230\u0232\x05:\x1C\x02\u0231\u0230\x03\x02\x02\x02\u0232\u0233\x03\x02\x02\x02\u0233\u0231\x03\x02\x02\x02\u0233\u0234\x03\x02\x02\x02\u0234\x9D\x03\x02\x02\x02\u0235\u0237\x05>\x1E\x02\u0236\u0235\x03\x02\x02\x02\u0236\u0237\x03\x02\x02\x02\u0237\u0239\x03\x02\x02\x02\u0238\u023A\x05:\x1C\x02\u0239\u0238\x03\x02\x02\x02\u023A\u023B\x03\x02\x02\x02\u023B\u0239\x03\x02\x02\x02\u023B\u023C\x03\x02\x02\x02\u023C\x9F\x03\x02\x02\x02\u023D\u023F\t#\x02\x02\u023E\u023D\x03\x02\x02\x02\u023F\u0240\x03\x02\x02\x02\u0240\u023E\x03\x02\x02\x02\u0240\u0241\x03\x02\x02\x02\u0241\u0242\x03\x02\x02\x02\u0242\u0243\bO\x04\x02\u0243\xA1\x03\x02\x02\x02\u0244\u0249\x05@\x1F\x02\u0245\u0247\x05B \x02\u0246\u0248\x05B \x02\u0247\u0246\x03\x02\x02\x02\u0247\u0248\x03\x02\x02\x02\u0248\u024A\x03\x02\x02\x02\u0249\u0245\x03\x02\x02\x02\u0249\u024A\x03\x02\x02\x02\u024A\xA3\x03\x02\x02\x02\u024B\u024C\x0B\x02\x02\x02\u024C\xA5\x03\x02\x02\x02\u024D\u024E\x07^\x02\x02\u024E\u0251\x0B\x02\x02\x02\u024F\u0251\n$\x02\x02\u0250\u024D\x03\x02\x02\x02\u0250\u024F\x03\x02\x02\x02\u0251\u0252\x03\x02\x02\x02\u0252\u0250\x03\x02\x02\x02\u0252\u0253\x03\x02\x02\x02\u0253\xA7\x03\x02\x02\x02\u0254\u0255\x05\x80?\x02\u0255\xA9\x03\x02\x02\x02\u0256\u025C\x07)\x02\x02\u0257\u0258\x07^\x02\x02\u0258\u025B\x0B\x02\x02\x02\u0259\u025B\n%\x02\x02\u025A\u0257\x03\x02\x02\x02\u025A\u0259\x03\x02\x02\x02\u025B\u025E\x03\x02\x02\x02\u025C\u025A\x03\x02\x02\x02\u025C\u025D\x03\x02\x02\x02\u025D\u025F\x03\x02\x02\x02\u025E\u025C\x03\x02\x02\x02\u025F\u0260\x07)\x02\x02\u0260\u0261\x03\x02\x02\x02\u0261\u0262\bT\x05\x02\u0262\xAB\x03\x02\x02\x02\u0263\u0264\x07?\x02\x02\u0264\xAD\x03\x02\x02\x02\u0265\u0267\t\x1D\x02\x02\u0266\u0265\x03\x02\x02\x02\u0266\u0267\x03\x02\x02\x02\u0267\u0269\x03\x02\x02\x02\u0268\u026A\x042;\x02\u0269\u0268\x03\x02\x02\x02\u026A\u026B\x03\x02\x02\x02\u026B\u0269\x03\x02\x02\x02\u026B\u026C\x03\x02\x02\x02\u026C\xAF\x03\x02\x02\x02\u026D\u026F\t \x02\x02\u026E\u026D\x03\x02\x02\x02\u026F\u0270\x03\x02\x02\x02\u0270\u026E\x03\x02\x02\x02\u0270\u0271\x03\x02\x02\x02\u0271\u0272\x03\x02\x02\x02\u0272\u0273\bW\x06\x02\u0273\xB1\x03\x02\x02\x02\u0274\u0276\x07\x0F\x02\x02\u0275\u0274\x03\x02\x02\x02\u0275\u0276\x03\x02\x02\x02\u0276\u0277\x03\x02\x02\x02\u0277\u0278\x07\f\x02\x02\u0278\u0279\x03\x02\x02\x02\u0279\u027A\bX\x07\x02\u027A\xB3\x03\x02\x02\x02\u027B\u027C\n&\x02\x02\u027C\u027D\x03\x02\x02\x02\u027D\u027E\bY\b\x02\u027E\xB5\x03\x02\x02\x02\u027F\u0281\t\'\x02\x02\u0280\u027F\x03\x02\x02\x02\u0281\u0282\x03\x02\x02\x02\u0282\u0280\x03\x02\x02\x02\u0282\u0283\x03\x02\x02\x02\u0283\u0284\x03\x02\x02\x02\u0284\u0285\bZ\t\x02\u0285\u0286\bZ\x04\x02\u0286\xB7\x03\x02\x02\x02\u0287\u0289\n\'\x02\x02\u0288\u0287\x03\x02\x02\x02\u0289\u028A\x03\x02\x02\x02\u028A\u0288\x03\x02\x02\x02\u028A\u028B\x03\x02\x02\x02\u028B\u028C\x03\x02\x02\x02\u028C\u028D\b[\t\x02\u028D\xB9\x03\x02\x02\x020\x02\x03\x04\x05\xF3\u016F\u0171\u0173\u017A\u017F\u0181\u0183\u018A\u018F\u0193\u019B\u019F\u01A7\u01AA\u01B0\u01B8\u01BA\u01C5\u01CD\u01D6\u020E\u021B\u0224\u0227\u022C\u0233\u0236\u023B\u0240\u0247\u0249\u0250\u0252\u025A\u025C\u0266\u026B\u0270\u0275\u0282\u028A\n\x07\x03\x02\x07\x04\x02\x02\x04\x02\t1\x02\b\x02\x02\x06\x02\x02\x07\x05\x02\x04\x02\x02'));
     var tmp_8 = this;
     var tmp_9 = 0;
     var tmp_10 = this.ATN_1._get_numberOfDecisions__1854093626_unvnsq_k$();
@@ -6232,6 +6293,18 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function Rules_MONACO_AUTOCOMPLETE_ITEM_getInstance_0() {
     Rules_initEntries_2();
     return Rules_MONACO_AUTOCOMPLETE_ITEM_instance_0;
+  }
+  function Rules_SPACE_getInstance_0() {
+    Rules_initEntries_2();
+    return Rules_SPACE_instance_0;
+  }
+  function Rules_SPACES_getInstance() {
+    Rules_initEntries_2();
+    return Rules_SPACES_instance;
+  }
+  function Rules_INTS_getInstance() {
+    Rules_initEntries_2();
+    return Rules_INTS_instance;
   }
   function Rules_BYTE_STRING_getInstance() {
     Rules_initEntries_2();
@@ -9866,6 +9939,2876 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     kind: 'interface',
     interfaces: [ParseTreeListener]
   };
+  function _get_LITERAL_NAMES__3195312217_4($this) {
+    return $this.LITERAL_NAMES_1;
+  }
+  function _get_SYMBOLIC_NAMES__1177529360_4($this) {
+    return $this.SYMBOLIC_NAMES_1;
+  }
+  function _get_serializedATN__3461059898_4($this) {
+    return $this.serializedATN_1;
+  }
+  var Tokens_COMMENT_instance_4;
+  var Tokens_C1_STRING_instance_2;
+  var Tokens_QUOTE_STRING_instance_2;
+  var Tokens_MONACO_AUTOCOMPLETE_ITEM_instance_4;
+  var Tokens_BYTE_STRING_instance_2;
+  var Tokens_ANIMATION_instance_2;
+  var Tokens_SCRP_instance_2;
+  var Tokens_ISCR_instance_2;
+  var Tokens_RSCR_instance_2;
+  var Tokens_ENDM_instance_2;
+  var Tokens_DOIF_instance_2;
+  var Tokens_ENDI_instance_2;
+  var Tokens_ENUM_instance_2;
+  var Tokens_ECON_instance_2;
+  var Tokens_EPAS_instance_2;
+  var Tokens_ESCN_instance_2;
+  var Tokens_ESEE_instance_2;
+  var Tokens_ETCH_instance_2;
+  var Tokens_EVER_instance_2;
+  var Tokens_LOOP_instance_2;
+  var Tokens_NEXT_instance_2;
+  var Tokens_NSCN_instance_2;
+  var Tokens_RETN_instance_2;
+  var Tokens_REPS_instance_2;
+  var Tokens_REPE_instance_2;
+  var Tokens_SUBR_instance_2;
+  var Tokens_UNTL_instance_2;
+  var Tokens_CHAR_instance_2;
+  var Tokens_BINARY_INT_instance_2;
+  var Tokens_WORD_PLUS_instance_2;
+  var Tokens_VARx_instance_2;
+  var Tokens_VAxx_instance_2;
+  var Tokens_OBVx_instance_2;
+  var Tokens_OVxx_instance_2;
+  var Tokens_MVxx_instance_2;
+  var Tokens_WORD_instance_2;
+  var Tokens_EQ_OP_OLD_instance_2;
+  var Tokens_EQ_OP_NEW_instance_2;
+  var Tokens_EQ_JOIN_instance_2;
+  var Tokens_FLOAT_instance_2;
+  var Tokens_INT_instance_2;
+  var Tokens_SPACES_instance;
+  var Tokens_NEWLINE_instance_1;
+  var Tokens_INCOMPLETE_instance_2;
+  var Tokens_ERROR_CHAR_instance_2;
+  function values_13() {
+    return [Tokens_COMMENT_getInstance_4(), Tokens_C1_STRING_getInstance_2(), Tokens_QUOTE_STRING_getInstance_2(), Tokens_MONACO_AUTOCOMPLETE_ITEM_getInstance_4(), Tokens_BYTE_STRING_getInstance_2(), Tokens_ANIMATION_getInstance_2(), Tokens_SCRP_getInstance_2(), Tokens_ISCR_getInstance_2(), Tokens_RSCR_getInstance_2(), Tokens_ENDM_getInstance_2(), Tokens_DOIF_getInstance_2(), Tokens_ENDI_getInstance_2(), Tokens_ENUM_getInstance_2(), Tokens_ECON_getInstance_2(), Tokens_EPAS_getInstance_2(), Tokens_ESCN_getInstance_2(), Tokens_ESEE_getInstance_2(), Tokens_ETCH_getInstance_2(), Tokens_EVER_getInstance_2(), Tokens_LOOP_getInstance_2(), Tokens_NEXT_getInstance_2(), Tokens_NSCN_getInstance_2(), Tokens_RETN_getInstance_2(), Tokens_REPS_getInstance_2(), Tokens_REPE_getInstance_2(), Tokens_SUBR_getInstance_2(), Tokens_UNTL_getInstance_2(), Tokens_CHAR_getInstance_2(), Tokens_BINARY_INT_getInstance_2(), Tokens_WORD_PLUS_getInstance_2(), Tokens_VARx_getInstance_2(), Tokens_VAxx_getInstance_2(), Tokens_OBVx_getInstance_2(), Tokens_OVxx_getInstance_2(), Tokens_MVxx_getInstance_2(), Tokens_WORD_getInstance_2(), Tokens_EQ_OP_OLD_getInstance_2(), Tokens_EQ_OP_NEW_getInstance_2(), Tokens_EQ_JOIN_getInstance_2(), Tokens_FLOAT_getInstance_2(), Tokens_INT_getInstance_2(), Tokens_SPACES_getInstance(), Tokens_NEWLINE_getInstance_1(), Tokens_INCOMPLETE_getInstance_2(), Tokens_ERROR_CHAR_getInstance_2()];
+  }
+  function valueOf_13(value) {
+    switch (value) {
+      case 'COMMENT':
+        return Tokens_COMMENT_getInstance_4();
+      case 'C1_STRING':
+        return Tokens_C1_STRING_getInstance_2();
+      case 'QUOTE_STRING':
+        return Tokens_QUOTE_STRING_getInstance_2();
+      case 'MONACO_AUTOCOMPLETE_ITEM':
+        return Tokens_MONACO_AUTOCOMPLETE_ITEM_getInstance_4();
+      case 'BYTE_STRING':
+        return Tokens_BYTE_STRING_getInstance_2();
+      case 'ANIMATION':
+        return Tokens_ANIMATION_getInstance_2();
+      case 'SCRP':
+        return Tokens_SCRP_getInstance_2();
+      case 'ISCR':
+        return Tokens_ISCR_getInstance_2();
+      case 'RSCR':
+        return Tokens_RSCR_getInstance_2();
+      case 'ENDM':
+        return Tokens_ENDM_getInstance_2();
+      case 'DOIF':
+        return Tokens_DOIF_getInstance_2();
+      case 'ENDI':
+        return Tokens_ENDI_getInstance_2();
+      case 'ENUM':
+        return Tokens_ENUM_getInstance_2();
+      case 'ECON':
+        return Tokens_ECON_getInstance_2();
+      case 'EPAS':
+        return Tokens_EPAS_getInstance_2();
+      case 'ESCN':
+        return Tokens_ESCN_getInstance_2();
+      case 'ESEE':
+        return Tokens_ESEE_getInstance_2();
+      case 'ETCH':
+        return Tokens_ETCH_getInstance_2();
+      case 'EVER':
+        return Tokens_EVER_getInstance_2();
+      case 'LOOP':
+        return Tokens_LOOP_getInstance_2();
+      case 'NEXT':
+        return Tokens_NEXT_getInstance_2();
+      case 'NSCN':
+        return Tokens_NSCN_getInstance_2();
+      case 'RETN':
+        return Tokens_RETN_getInstance_2();
+      case 'REPS':
+        return Tokens_REPS_getInstance_2();
+      case 'REPE':
+        return Tokens_REPE_getInstance_2();
+      case 'SUBR':
+        return Tokens_SUBR_getInstance_2();
+      case 'UNTL':
+        return Tokens_UNTL_getInstance_2();
+      case 'CHAR':
+        return Tokens_CHAR_getInstance_2();
+      case 'BINARY_INT':
+        return Tokens_BINARY_INT_getInstance_2();
+      case 'WORD_PLUS':
+        return Tokens_WORD_PLUS_getInstance_2();
+      case 'VARx':
+        return Tokens_VARx_getInstance_2();
+      case 'VAxx':
+        return Tokens_VAxx_getInstance_2();
+      case 'OBVx':
+        return Tokens_OBVx_getInstance_2();
+      case 'OVxx':
+        return Tokens_OVxx_getInstance_2();
+      case 'MVxx':
+        return Tokens_MVxx_getInstance_2();
+      case 'WORD':
+        return Tokens_WORD_getInstance_2();
+      case 'EQ_OP_OLD':
+        return Tokens_EQ_OP_OLD_getInstance_2();
+      case 'EQ_OP_NEW':
+        return Tokens_EQ_OP_NEW_getInstance_2();
+      case 'EQ_JOIN':
+        return Tokens_EQ_JOIN_getInstance_2();
+      case 'FLOAT':
+        return Tokens_FLOAT_getInstance_2();
+      case 'INT':
+        return Tokens_INT_getInstance_2();
+      case 'SPACES':
+        return Tokens_SPACES_getInstance();
+      case 'NEWLINE':
+        return Tokens_NEWLINE_getInstance_1();
+      case 'INCOMPLETE':
+        return Tokens_INCOMPLETE_getInstance_2();
+      case 'ERROR_CHAR':
+        return Tokens_ERROR_CHAR_getInstance_2();
+      default:
+        Tokens_initEntries_4();
+        THROW_ISE();
+        break;
+    }
+  }
+  var Tokens_entriesInitialized_4;
+  function Tokens_initEntries_4() {
+    if (Tokens_entriesInitialized_4)
+      return Unit_getInstance();
+    Tokens_entriesInitialized_4 = true;
+    Tokens_COMMENT_instance_4 = new Tokens_4('COMMENT', 0, 1);
+    Tokens_C1_STRING_instance_2 = new Tokens_4('C1_STRING', 1, 2);
+    Tokens_QUOTE_STRING_instance_2 = new Tokens_4('QUOTE_STRING', 2, 3);
+    Tokens_MONACO_AUTOCOMPLETE_ITEM_instance_4 = new Tokens_4('MONACO_AUTOCOMPLETE_ITEM', 3, 4);
+    Tokens_BYTE_STRING_instance_2 = new Tokens_4('BYTE_STRING', 4, 5);
+    Tokens_ANIMATION_instance_2 = new Tokens_4('ANIMATION', 5, 6);
+    Tokens_SCRP_instance_2 = new Tokens_4('SCRP', 6, 7);
+    Tokens_ISCR_instance_2 = new Tokens_4('ISCR', 7, 8);
+    Tokens_RSCR_instance_2 = new Tokens_4('RSCR', 8, 9);
+    Tokens_ENDM_instance_2 = new Tokens_4('ENDM', 9, 10);
+    Tokens_DOIF_instance_2 = new Tokens_4('DOIF', 10, 11);
+    Tokens_ENDI_instance_2 = new Tokens_4('ENDI', 11, 12);
+    Tokens_ENUM_instance_2 = new Tokens_4('ENUM', 12, 13);
+    Tokens_ECON_instance_2 = new Tokens_4('ECON', 13, 14);
+    Tokens_EPAS_instance_2 = new Tokens_4('EPAS', 14, 15);
+    Tokens_ESCN_instance_2 = new Tokens_4('ESCN', 15, 16);
+    Tokens_ESEE_instance_2 = new Tokens_4('ESEE', 16, 17);
+    Tokens_ETCH_instance_2 = new Tokens_4('ETCH', 17, 18);
+    Tokens_EVER_instance_2 = new Tokens_4('EVER', 18, 19);
+    Tokens_LOOP_instance_2 = new Tokens_4('LOOP', 19, 20);
+    Tokens_NEXT_instance_2 = new Tokens_4('NEXT', 20, 21);
+    Tokens_NSCN_instance_2 = new Tokens_4('NSCN', 21, 22);
+    Tokens_RETN_instance_2 = new Tokens_4('RETN', 22, 23);
+    Tokens_REPS_instance_2 = new Tokens_4('REPS', 23, 24);
+    Tokens_REPE_instance_2 = new Tokens_4('REPE', 24, 25);
+    Tokens_SUBR_instance_2 = new Tokens_4('SUBR', 25, 26);
+    Tokens_UNTL_instance_2 = new Tokens_4('UNTL', 26, 27);
+    Tokens_CHAR_instance_2 = new Tokens_4('CHAR', 27, 28);
+    Tokens_BINARY_INT_instance_2 = new Tokens_4('BINARY_INT', 28, 29);
+    Tokens_WORD_PLUS_instance_2 = new Tokens_4('WORD_PLUS', 29, 30);
+    Tokens_VARx_instance_2 = new Tokens_4('VARx', 30, 31);
+    Tokens_VAxx_instance_2 = new Tokens_4('VAxx', 31, 32);
+    Tokens_OBVx_instance_2 = new Tokens_4('OBVx', 32, 33);
+    Tokens_OVxx_instance_2 = new Tokens_4('OVxx', 33, 34);
+    Tokens_MVxx_instance_2 = new Tokens_4('MVxx', 34, 35);
+    Tokens_WORD_instance_2 = new Tokens_4('WORD', 35, 36);
+    Tokens_EQ_OP_OLD_instance_2 = new Tokens_4('EQ_OP_OLD', 36, 37);
+    Tokens_EQ_OP_NEW_instance_2 = new Tokens_4('EQ_OP_NEW', 37, 38);
+    Tokens_EQ_JOIN_instance_2 = new Tokens_4('EQ_JOIN', 38, 39);
+    Tokens_FLOAT_instance_2 = new Tokens_4('FLOAT', 39, 40);
+    Tokens_INT_instance_2 = new Tokens_4('INT', 40, 41);
+    Tokens_SPACES_instance = new Tokens_4('SPACES', 41, 42);
+    Tokens_NEWLINE_instance_1 = new Tokens_4('NEWLINE', 42, 43);
+    Tokens_INCOMPLETE_instance_2 = new Tokens_4('INCOMPLETE', 43, 44);
+    Tokens_ERROR_CHAR_instance_2 = new Tokens_4('ERROR_CHAR', 44, 45);
+  }
+  var Channels_DEFAULT_TOKEN_CHANNEL_instance_1;
+  var Channels_HIDDEN_instance_1;
+  function values_14() {
+    return [Channels_DEFAULT_TOKEN_CHANNEL_getInstance_1(), Channels_HIDDEN_getInstance_1()];
+  }
+  function valueOf_14(value) {
+    switch (value) {
+      case 'DEFAULT_TOKEN_CHANNEL':
+        return Channels_DEFAULT_TOKEN_CHANNEL_getInstance_1();
+      case 'HIDDEN':
+        return Channels_HIDDEN_getInstance_1();
+      default:
+        Channels_initEntries_1();
+        THROW_ISE();
+        break;
+    }
+  }
+  var Channels_entriesInitialized_1;
+  function Channels_initEntries_1() {
+    if (Channels_entriesInitialized_1)
+      return Unit_getInstance();
+    Channels_entriesInitialized_1 = true;
+    Channels_DEFAULT_TOKEN_CHANNEL_instance_1 = new Channels_1('DEFAULT_TOKEN_CHANNEL', 0, 0);
+    Channels_HIDDEN_instance_1 = new Channels_1('HIDDEN', 1, 1);
+  }
+  var Modes_DEFAULT_MODE_instance_1;
+  function values_15() {
+    return [Modes_DEFAULT_MODE_getInstance_1()];
+  }
+  function valueOf_15(value) {
+    if ('DEFAULT_MODE' === value)
+      return Modes_DEFAULT_MODE_getInstance_1();
+    else {
+      Modes_initEntries_1();
+      THROW_ISE();
+    }
+  }
+  var Modes_entriesInitialized_1;
+  function Modes_initEntries_1() {
+    if (Modes_entriesInitialized_1)
+      return Unit_getInstance();
+    Modes_entriesInitialized_1 = true;
+    Modes_DEFAULT_MODE_instance_1 = new Modes_1('DEFAULT_MODE', 0, 0);
+  }
+  var Rules_A_instance_0;
+  var Rules_B_instance_0;
+  var Rules_C_instance_0;
+  var Rules_D_instance_0;
+  var Rules_E_instance_0;
+  var Rules_F_instance_0;
+  var Rules_G_instance_0;
+  var Rules_H_instance_0;
+  var Rules_I_instance_0;
+  var Rules_J_instance_0;
+  var Rules_K_instance_0;
+  var Rules_L_instance_0;
+  var Rules_M_instance_0;
+  var Rules_N_instance_0;
+  var Rules_O_instance_0;
+  var Rules_P_instance_0;
+  var Rules_Q_instance_0;
+  var Rules_R_instance_0;
+  var Rules_S_instance_0;
+  var Rules_T_instance_0;
+  var Rules_U_instance_0;
+  var Rules_V_instance_0;
+  var Rules_W_instance_0;
+  var Rules_X_instance_0;
+  var Rules_Y_instance_0;
+  var Rules_Z_instance_0;
+  var Rules_NUMBER_instance_1;
+  var Rules_C1_STRING_BODY_instance_0;
+  var Rules_SIGN_instance_0;
+  var Rules_TCHAR_START_instance_1;
+  var Rules_TCHAR_instance_1;
+  var Rules_SPACE_instance_1;
+  var Rules_SPACES_FRAG_instance;
+  var Rules_INTS_instance_0;
+  var Rules_QUOTE_STRING_FRAGMENT_instance_0;
+  var Rules_COMMENT_instance_1;
+  var Rules_C1_STRING_instance_0;
+  var Rules_QUOTE_STRING_instance_0;
+  var Rules_MONACO_AUTOCOMPLETE_ITEM_instance_1;
+  var Rules_BYTE_STRING_instance_0;
+  var Rules_ANIMATION_instance_0;
+  var Rules_SCRP_instance_0;
+  var Rules_ISCR_instance_0;
+  var Rules_RSCR_instance_0;
+  var Rules_ENDM_instance_0;
+  var Rules_DOIF_instance_0;
+  var Rules_ENDI_instance_0;
+  var Rules_ENUM_instance_0;
+  var Rules_ECON_instance_0;
+  var Rules_EPAS_instance_0;
+  var Rules_ESCN_instance_0;
+  var Rules_ESEE_instance_0;
+  var Rules_ETCH_instance_0;
+  var Rules_EVER_instance_0;
+  var Rules_LOOP_instance_0;
+  var Rules_NEXT_instance_0;
+  var Rules_NSCN_instance_0;
+  var Rules_RETN_instance_0;
+  var Rules_REPS_instance_0;
+  var Rules_REPE_instance_0;
+  var Rules_SUBR_instance_0;
+  var Rules_UNTL_instance_0;
+  var Rules_CHAR_instance_0;
+  var Rules_BINARY_INT_instance_0;
+  var Rules_WORD_PLUS_instance_0;
+  var Rules_VARx_instance_0;
+  var Rules_VAxx_instance_0;
+  var Rules_OBVx_instance_0;
+  var Rules_OVxx_instance_0;
+  var Rules_MVxx_instance_0;
+  var Rules_WORD_instance_0;
+  var Rules_EQ_OP_OLD_instance_0;
+  var Rules_EQ_OP_NEW_instance_0;
+  var Rules_EQ_JOIN_instance_0;
+  var Rules_FLOAT_instance_0;
+  var Rules_INT_instance_0;
+  var Rules_SPACES_instance_0;
+  var Rules_NEWLINE_instance_0;
+  var Rules_INCOMPLETE_instance_0;
+  var Rules_ERROR_CHAR_instance_0;
+  function values_16() {
+    return [Rules_A_getInstance_0(), Rules_B_getInstance_0(), Rules_C_getInstance_0(), Rules_D_getInstance_0(), Rules_E_getInstance_0(), Rules_F_getInstance_0(), Rules_G_getInstance_0(), Rules_H_getInstance_0(), Rules_I_getInstance_0(), Rules_J_getInstance_0(), Rules_K_getInstance_0(), Rules_L_getInstance_0(), Rules_M_getInstance_0(), Rules_N_getInstance_0(), Rules_O_getInstance_0(), Rules_P_getInstance_0(), Rules_Q_getInstance_0(), Rules_R_getInstance_0(), Rules_S_getInstance_0(), Rules_T_getInstance_0(), Rules_U_getInstance_0(), Rules_V_getInstance_0(), Rules_W_getInstance_0(), Rules_X_getInstance_0(), Rules_Y_getInstance_0(), Rules_Z_getInstance_0(), Rules_NUMBER_getInstance_1(), Rules_C1_STRING_BODY_getInstance_0(), Rules_SIGN_getInstance_0(), Rules_TCHAR_START_getInstance_1(), Rules_TCHAR_getInstance_1(), Rules_SPACE_getInstance_1(), Rules_SPACES_FRAG_getInstance(), Rules_INTS_getInstance_0(), Rules_QUOTE_STRING_FRAGMENT_getInstance_0(), Rules_COMMENT_getInstance_1(), Rules_C1_STRING_getInstance_0(), Rules_QUOTE_STRING_getInstance_0(), Rules_MONACO_AUTOCOMPLETE_ITEM_getInstance_1(), Rules_BYTE_STRING_getInstance_0(), Rules_ANIMATION_getInstance_0(), Rules_SCRP_getInstance_0(), Rules_ISCR_getInstance_0(), Rules_RSCR_getInstance_0(), Rules_ENDM_getInstance_0(), Rules_DOIF_getInstance_0(), Rules_ENDI_getInstance_0(), Rules_ENUM_getInstance_0(), Rules_ECON_getInstance_0(), Rules_EPAS_getInstance_0(), Rules_ESCN_getInstance_0(), Rules_ESEE_getInstance_0(), Rules_ETCH_getInstance_0(), Rules_EVER_getInstance_0(), Rules_LOOP_getInstance_0(), Rules_NEXT_getInstance_0(), Rules_NSCN_getInstance_0(), Rules_RETN_getInstance_0(), Rules_REPS_getInstance_0(), Rules_REPE_getInstance_0(), Rules_SUBR_getInstance_0(), Rules_UNTL_getInstance_0(), Rules_CHAR_getInstance_0(), Rules_BINARY_INT_getInstance_0(), Rules_WORD_PLUS_getInstance_0(), Rules_VARx_getInstance_0(), Rules_VAxx_getInstance_0(), Rules_OBVx_getInstance_0(), Rules_OVxx_getInstance_0(), Rules_MVxx_getInstance_0(), Rules_WORD_getInstance_0(), Rules_EQ_OP_OLD_getInstance_0(), Rules_EQ_OP_NEW_getInstance_0(), Rules_EQ_JOIN_getInstance_0(), Rules_FLOAT_getInstance_0(), Rules_INT_getInstance_0(), Rules_SPACES_getInstance_0(), Rules_NEWLINE_getInstance_0(), Rules_INCOMPLETE_getInstance_0(), Rules_ERROR_CHAR_getInstance_0()];
+  }
+  function valueOf_16(value) {
+    switch (value) {
+      case 'A':
+        return Rules_A_getInstance_0();
+      case 'B':
+        return Rules_B_getInstance_0();
+      case 'C':
+        return Rules_C_getInstance_0();
+      case 'D':
+        return Rules_D_getInstance_0();
+      case 'E':
+        return Rules_E_getInstance_0();
+      case 'F':
+        return Rules_F_getInstance_0();
+      case 'G':
+        return Rules_G_getInstance_0();
+      case 'H':
+        return Rules_H_getInstance_0();
+      case 'I':
+        return Rules_I_getInstance_0();
+      case 'J':
+        return Rules_J_getInstance_0();
+      case 'K':
+        return Rules_K_getInstance_0();
+      case 'L':
+        return Rules_L_getInstance_0();
+      case 'M':
+        return Rules_M_getInstance_0();
+      case 'N':
+        return Rules_N_getInstance_0();
+      case 'O':
+        return Rules_O_getInstance_0();
+      case 'P':
+        return Rules_P_getInstance_0();
+      case 'Q':
+        return Rules_Q_getInstance_0();
+      case 'R':
+        return Rules_R_getInstance_0();
+      case 'S':
+        return Rules_S_getInstance_0();
+      case 'T':
+        return Rules_T_getInstance_0();
+      case 'U':
+        return Rules_U_getInstance_0();
+      case 'V':
+        return Rules_V_getInstance_0();
+      case 'W':
+        return Rules_W_getInstance_0();
+      case 'X':
+        return Rules_X_getInstance_0();
+      case 'Y':
+        return Rules_Y_getInstance_0();
+      case 'Z':
+        return Rules_Z_getInstance_0();
+      case 'NUMBER':
+        return Rules_NUMBER_getInstance_1();
+      case 'C1_STRING_BODY':
+        return Rules_C1_STRING_BODY_getInstance_0();
+      case 'SIGN':
+        return Rules_SIGN_getInstance_0();
+      case 'TCHAR_START':
+        return Rules_TCHAR_START_getInstance_1();
+      case 'TCHAR':
+        return Rules_TCHAR_getInstance_1();
+      case 'SPACE':
+        return Rules_SPACE_getInstance_1();
+      case 'SPACES_FRAG':
+        return Rules_SPACES_FRAG_getInstance();
+      case 'INTS':
+        return Rules_INTS_getInstance_0();
+      case 'QUOTE_STRING_FRAGMENT':
+        return Rules_QUOTE_STRING_FRAGMENT_getInstance_0();
+      case 'COMMENT':
+        return Rules_COMMENT_getInstance_1();
+      case 'C1_STRING':
+        return Rules_C1_STRING_getInstance_0();
+      case 'QUOTE_STRING':
+        return Rules_QUOTE_STRING_getInstance_0();
+      case 'MONACO_AUTOCOMPLETE_ITEM':
+        return Rules_MONACO_AUTOCOMPLETE_ITEM_getInstance_1();
+      case 'BYTE_STRING':
+        return Rules_BYTE_STRING_getInstance_0();
+      case 'ANIMATION':
+        return Rules_ANIMATION_getInstance_0();
+      case 'SCRP':
+        return Rules_SCRP_getInstance_0();
+      case 'ISCR':
+        return Rules_ISCR_getInstance_0();
+      case 'RSCR':
+        return Rules_RSCR_getInstance_0();
+      case 'ENDM':
+        return Rules_ENDM_getInstance_0();
+      case 'DOIF':
+        return Rules_DOIF_getInstance_0();
+      case 'ENDI':
+        return Rules_ENDI_getInstance_0();
+      case 'ENUM':
+        return Rules_ENUM_getInstance_0();
+      case 'ECON':
+        return Rules_ECON_getInstance_0();
+      case 'EPAS':
+        return Rules_EPAS_getInstance_0();
+      case 'ESCN':
+        return Rules_ESCN_getInstance_0();
+      case 'ESEE':
+        return Rules_ESEE_getInstance_0();
+      case 'ETCH':
+        return Rules_ETCH_getInstance_0();
+      case 'EVER':
+        return Rules_EVER_getInstance_0();
+      case 'LOOP':
+        return Rules_LOOP_getInstance_0();
+      case 'NEXT':
+        return Rules_NEXT_getInstance_0();
+      case 'NSCN':
+        return Rules_NSCN_getInstance_0();
+      case 'RETN':
+        return Rules_RETN_getInstance_0();
+      case 'REPS':
+        return Rules_REPS_getInstance_0();
+      case 'REPE':
+        return Rules_REPE_getInstance_0();
+      case 'SUBR':
+        return Rules_SUBR_getInstance_0();
+      case 'UNTL':
+        return Rules_UNTL_getInstance_0();
+      case 'CHAR':
+        return Rules_CHAR_getInstance_0();
+      case 'BINARY_INT':
+        return Rules_BINARY_INT_getInstance_0();
+      case 'WORD_PLUS':
+        return Rules_WORD_PLUS_getInstance_0();
+      case 'VARx':
+        return Rules_VARx_getInstance_0();
+      case 'VAxx':
+        return Rules_VAxx_getInstance_0();
+      case 'OBVx':
+        return Rules_OBVx_getInstance_0();
+      case 'OVxx':
+        return Rules_OVxx_getInstance_0();
+      case 'MVxx':
+        return Rules_MVxx_getInstance_0();
+      case 'WORD':
+        return Rules_WORD_getInstance_0();
+      case 'EQ_OP_OLD':
+        return Rules_EQ_OP_OLD_getInstance_0();
+      case 'EQ_OP_NEW':
+        return Rules_EQ_OP_NEW_getInstance_0();
+      case 'EQ_JOIN':
+        return Rules_EQ_JOIN_getInstance_0();
+      case 'FLOAT':
+        return Rules_FLOAT_getInstance_0();
+      case 'INT':
+        return Rules_INT_getInstance_0();
+      case 'SPACES':
+        return Rules_SPACES_getInstance_0();
+      case 'NEWLINE':
+        return Rules_NEWLINE_getInstance_0();
+      case 'INCOMPLETE':
+        return Rules_INCOMPLETE_getInstance_0();
+      case 'ERROR_CHAR':
+        return Rules_ERROR_CHAR_getInstance_0();
+      default:
+        Rules_initEntries_4();
+        THROW_ISE();
+        break;
+    }
+  }
+  var Rules_entriesInitialized_4;
+  function Rules_initEntries_4() {
+    if (Rules_entriesInitialized_4)
+      return Unit_getInstance();
+    Rules_entriesInitialized_4 = true;
+    Rules_A_instance_0 = new Rules_4('A', 0);
+    Rules_B_instance_0 = new Rules_4('B', 1);
+    Rules_C_instance_0 = new Rules_4('C', 2);
+    Rules_D_instance_0 = new Rules_4('D', 3);
+    Rules_E_instance_0 = new Rules_4('E', 4);
+    Rules_F_instance_0 = new Rules_4('F', 5);
+    Rules_G_instance_0 = new Rules_4('G', 6);
+    Rules_H_instance_0 = new Rules_4('H', 7);
+    Rules_I_instance_0 = new Rules_4('I', 8);
+    Rules_J_instance_0 = new Rules_4('J', 9);
+    Rules_K_instance_0 = new Rules_4('K', 10);
+    Rules_L_instance_0 = new Rules_4('L', 11);
+    Rules_M_instance_0 = new Rules_4('M', 12);
+    Rules_N_instance_0 = new Rules_4('N', 13);
+    Rules_O_instance_0 = new Rules_4('O', 14);
+    Rules_P_instance_0 = new Rules_4('P', 15);
+    Rules_Q_instance_0 = new Rules_4('Q', 16);
+    Rules_R_instance_0 = new Rules_4('R', 17);
+    Rules_S_instance_0 = new Rules_4('S', 18);
+    Rules_T_instance_0 = new Rules_4('T', 19);
+    Rules_U_instance_0 = new Rules_4('U', 20);
+    Rules_V_instance_0 = new Rules_4('V', 21);
+    Rules_W_instance_0 = new Rules_4('W', 22);
+    Rules_X_instance_0 = new Rules_4('X', 23);
+    Rules_Y_instance_0 = new Rules_4('Y', 24);
+    Rules_Z_instance_0 = new Rules_4('Z', 25);
+    Rules_NUMBER_instance_1 = new Rules_4('NUMBER', 26);
+    Rules_C1_STRING_BODY_instance_0 = new Rules_4('C1_STRING_BODY', 27);
+    Rules_SIGN_instance_0 = new Rules_4('SIGN', 28);
+    Rules_TCHAR_START_instance_1 = new Rules_4('TCHAR_START', 29);
+    Rules_TCHAR_instance_1 = new Rules_4('TCHAR', 30);
+    Rules_SPACE_instance_1 = new Rules_4('SPACE', 31);
+    Rules_SPACES_FRAG_instance = new Rules_4('SPACES_FRAG', 32);
+    Rules_INTS_instance_0 = new Rules_4('INTS', 33);
+    Rules_QUOTE_STRING_FRAGMENT_instance_0 = new Rules_4('QUOTE_STRING_FRAGMENT', 34);
+    Rules_COMMENT_instance_1 = new Rules_4('COMMENT', 35);
+    Rules_C1_STRING_instance_0 = new Rules_4('C1_STRING', 36);
+    Rules_QUOTE_STRING_instance_0 = new Rules_4('QUOTE_STRING', 37);
+    Rules_MONACO_AUTOCOMPLETE_ITEM_instance_1 = new Rules_4('MONACO_AUTOCOMPLETE_ITEM', 38);
+    Rules_BYTE_STRING_instance_0 = new Rules_4('BYTE_STRING', 39);
+    Rules_ANIMATION_instance_0 = new Rules_4('ANIMATION', 40);
+    Rules_SCRP_instance_0 = new Rules_4('SCRP', 41);
+    Rules_ISCR_instance_0 = new Rules_4('ISCR', 42);
+    Rules_RSCR_instance_0 = new Rules_4('RSCR', 43);
+    Rules_ENDM_instance_0 = new Rules_4('ENDM', 44);
+    Rules_DOIF_instance_0 = new Rules_4('DOIF', 45);
+    Rules_ENDI_instance_0 = new Rules_4('ENDI', 46);
+    Rules_ENUM_instance_0 = new Rules_4('ENUM', 47);
+    Rules_ECON_instance_0 = new Rules_4('ECON', 48);
+    Rules_EPAS_instance_0 = new Rules_4('EPAS', 49);
+    Rules_ESCN_instance_0 = new Rules_4('ESCN', 50);
+    Rules_ESEE_instance_0 = new Rules_4('ESEE', 51);
+    Rules_ETCH_instance_0 = new Rules_4('ETCH', 52);
+    Rules_EVER_instance_0 = new Rules_4('EVER', 53);
+    Rules_LOOP_instance_0 = new Rules_4('LOOP', 54);
+    Rules_NEXT_instance_0 = new Rules_4('NEXT', 55);
+    Rules_NSCN_instance_0 = new Rules_4('NSCN', 56);
+    Rules_RETN_instance_0 = new Rules_4('RETN', 57);
+    Rules_REPS_instance_0 = new Rules_4('REPS', 58);
+    Rules_REPE_instance_0 = new Rules_4('REPE', 59);
+    Rules_SUBR_instance_0 = new Rules_4('SUBR', 60);
+    Rules_UNTL_instance_0 = new Rules_4('UNTL', 61);
+    Rules_CHAR_instance_0 = new Rules_4('CHAR', 62);
+    Rules_BINARY_INT_instance_0 = new Rules_4('BINARY_INT', 63);
+    Rules_WORD_PLUS_instance_0 = new Rules_4('WORD_PLUS', 64);
+    Rules_VARx_instance_0 = new Rules_4('VARx', 65);
+    Rules_VAxx_instance_0 = new Rules_4('VAxx', 66);
+    Rules_OBVx_instance_0 = new Rules_4('OBVx', 67);
+    Rules_OVxx_instance_0 = new Rules_4('OVxx', 68);
+    Rules_MVxx_instance_0 = new Rules_4('MVxx', 69);
+    Rules_WORD_instance_0 = new Rules_4('WORD', 70);
+    Rules_EQ_OP_OLD_instance_0 = new Rules_4('EQ_OP_OLD', 71);
+    Rules_EQ_OP_NEW_instance_0 = new Rules_4('EQ_OP_NEW', 72);
+    Rules_EQ_JOIN_instance_0 = new Rules_4('EQ_JOIN', 73);
+    Rules_FLOAT_instance_0 = new Rules_4('FLOAT', 74);
+    Rules_INT_instance_0 = new Rules_4('INT', 75);
+    Rules_SPACES_instance_0 = new Rules_4('SPACES', 76);
+    Rules_NEWLINE_instance_0 = new Rules_4('NEWLINE', 77);
+    Rules_INCOMPLETE_instance_0 = new Rules_4('INCOMPLETE', 78);
+    Rules_ERROR_CHAR_instance_0 = new Rules_4('ERROR_CHAR', 79);
+  }
+  function Companion_4() {
+    Companion_instance_4 = this;
+    this.sharedContextCache_1 = new PredictionContextCache();
+    var tmp = this;
+    var tmp$ret$0;
+    $l$block: {
+      tmp$ret$0 = emptyList();
+      break $l$block;
+    }
+    tmp.LITERAL_NAMES_1 = tmp$ret$0;
+    this.SYMBOLIC_NAMES_1 = listOf([null, 'COMMENT', 'C1_STRING', 'QUOTE_STRING', 'MONACO_AUTOCOMPLETE_ITEM', 'BYTE_STRING', 'ANIMATION', 'SCRP', 'ISCR', 'RSCR', 'ENDM', 'DOIF', 'ENDI', 'ENUM', 'ECON', 'EPAS', 'ESCN', 'ESEE', 'ETCH', 'EVER', 'LOOP', 'NEXT', 'NSCN', 'RETN', 'REPS', 'REPE', 'SUBR', 'UNTL', 'CHAR', 'BINARY_INT', 'WORD_PLUS', 'VARx', 'VAxx', 'OBVx', 'OVxx', 'MVxx', 'WORD', 'EQ_OP_OLD', 'EQ_OP_NEW', 'EQ_JOIN', 'FLOAT', 'INT', 'SPACES', 'NEWLINE', 'INCOMPLETE', 'ERROR_CHAR']);
+    var tmp_0 = this;
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp0_toTypedArray_0 = this.LITERAL_NAMES_1;
+      tmp$ret$1 = copyToArray(tmp0_toTypedArray_0);
+      break $l$block_0;
+    }
+    var tmp_1 = tmp$ret$1;
+    var tmp$ret$2;
+    $l$block_1: {
+      var tmp1_toTypedArray_0 = this.SYMBOLIC_NAMES_1;
+      tmp$ret$2 = copyToArray(tmp1_toTypedArray_0);
+      break $l$block_1;
+    }
+    var tmp_2 = tmp$ret$2;
+    tmp_0.VOCABULARY_1 = VocabularyImpl_init_$Create$(tmp_1, tmp_2, null, 4, null);
+    var tmp_3 = this;
+    var tmp_4 = 0;
+    var tmp_5 = this.SYMBOLIC_NAMES_1._get_size__809037418_ddoh9m_k$();
+    var tmp$ret$3;
+    $l$block_2: {
+      tmp$ret$3 = fillArrayVal(Array(tmp_5), null);
+      break $l$block_2;
+    }
+    var tmp_6 = tmp$ret$3;
+    while (tmp_4 < tmp_5) {
+      var tmp_7 = tmp_4;
+      var tmp$ret$4;
+      $l$block_3: {
+        var el = Companion_getInstance_6().VOCABULARY_1.getLiteralName_1erz7_k$(tmp_7);
+        if (el == null) {
+          el = Companion_getInstance_6().VOCABULARY_1.getSymbolicName_yk4gge_k$(tmp_7);
+        }
+        if (el == null) {
+          el = '<INVALID>';
+        }
+        tmp$ret$4 = el;
+        break $l$block_3;
+      }
+      tmp_6[tmp_7] = tmp$ret$4;
+      tmp_4 = tmp_4 + 1 | 0;
+    }
+    tmp_3.tokenNames_1 = tmp_6;
+    this.serializedATN_1 = '\x03\u608B\uA72A\u8133\uB9ED\u417C\u3BE7\u7786\u5964\x02/\u023D\b\x01\x04\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04\x07\t\x07\x04\b\t\b\x04\t\t\t\x04\n\t\n\x04\x0B\t\x0B\x04\f\t\f\x04\r\t\r\x04\x0E\t\x0E\x04\x0F\t\x0F\x04\x10\t\x10\x04\x11\t\x11\x04\x12\t\x12\x04\x13\t\x13\x04\x14\t\x14\x04\x15\t\x15\x04\x16\t\x16\x04\x17\t\x17\x04\x18\t\x18\x04\x19\t\x19\x04\x1A\t\x1A\x04\x1B\t\x1B\x04\x1C\t\x1C\x04\x1D\t\x1D\x04\x1E\t\x1E\x04\x1F\t\x1F\x04 \t \x04!\t!\x04"\t"\x04#\t#\x04$\t$\x04%\t%\x04&\t&\x04\'\t\'\x04(\t(\x04)\t)\x04*\t*\x04+\t+\x04,\t,\x04-\t-\x04.\t.\x04/\t/\x040\t0\x041\t1\x042\t2\x043\t3\x044\t4\x045\t5\x046\t6\x047\t7\x048\t8\x049\t9\x04:\t:\x04;\t;\x04<\t<\x04=\t=\x04>\t>\x04?\t?\x04@\t@\x04A\tA\x04B\tB\x04C\tC\x04D\tD\x04E\tE\x04F\tF\x04G\tG\x04H\tH\x04I\tI\x04J\tJ\x04K\tK\x04L\tL\x04M\tM\x04N\tN\x04O\tO\x04P\tP\x04Q\tQ\x03\x02\x03\x02\x03\x03\x03\x03\x03\x04\x03\x04\x03\x05\x03\x05\x03\x06\x03\x06\x03\x07\x03\x07\x03\b\x03\b\x03\t\x03\t\x03\n\x03\n\x03\x0B\x03\x0B\x03\f\x03\f\x03\r\x03\r\x03\x0E\x03\x0E\x03\x0F\x03\x0F\x03\x10\x03\x10\x03\x11\x03\x11\x03\x12\x03\x12\x03\x13\x03\x13\x03\x14\x03\x14\x03\x15\x03\x15\x03\x16\x03\x16\x03\x17\x03\x17\x03\x18\x03\x18\x03\x19\x03\x19\x03\x1A\x03\x1A\x03\x1B\x03\x1B\x03\x1C\x03\x1C\x03\x1D\x06\x1D\xDB\n\x1D\r\x1D\x0E\x1D\xDC\x03\x1E\x03\x1E\x03\x1F\x03\x1F\x03 \x03 \x03!\x03!\x03"\x06"\xE8\n"\r"\x0E"\xE9\x03#\x06#\xED\n#\r#\x0E#\xEE\x03$\x03$\x03$\x03$\x07$\xF5\n$\f$\x0E$\xF8\x0B$\x03$\x03$\x03%\x03%\x07%\xFE\n%\f%\x0E%\u0101\x0B%\x03&\x03&\x05&\u0105\n&\x03&\x03&\x03\'\x03\'\x03(\x03(\x06(\u010D\n(\r(\x0E(\u010E\x05(\u0111\n(\x03(\x03(\x03(\x06(\u0116\n(\r(\x0E(\u0117\x03(\x03(\x03(\x06(\u011D\n(\r(\x0E(\u011E\x05(\u0121\n(\x03)\x03)\x05)\u0125\n)\x03)\x03)\x03)\x03)\x07)\u012B\n)\f)\x0E)\u012E\x0B)\x03)\x05)\u0131\n)\x03)\x03)\x03*\x03*\x06*\u0137\n*\r*\x0E*\u0138\x03*\x05*\u013C\n*\x03*\x03*\x03+\x03+\x03+\x03+\x03+\x03,\x03,\x03,\x03,\x03,\x03-\x03-\x03-\x03-\x03-\x03.\x03.\x03.\x03.\x03.\x03/\x03/\x03/\x03/\x03/\x030\x030\x030\x030\x030\x031\x031\x031\x031\x031\x032\x032\x032\x032\x032\x033\x033\x033\x033\x033\x034\x034\x034\x034\x034\x035\x035\x035\x035\x035\x036\x036\x036\x036\x036\x037\x037\x037\x037\x037\x038\x038\x038\x038\x038\x039\x039\x039\x039\x039\x03:\x03:\x03:\x03:\x03:\x03;\x03;\x03;\x03;\x03;\x03<\x03<\x03<\x03<\x03<\x03=\x03=\x03=\x03=\x03=\x03>\x03>\x03>\x03>\x03>\x03?\x03?\x03?\x03?\x03?\x03@\x03@\x03@\x03@\x05@\u01AD\n@\x03@\x03@\x03A\x03A\x06A\u01B3\nA\rA\x0EA\u01B4\x03B\x03B\x03B\x03B\x03B\x06B\u01BC\nB\rB\x0EB\u01BD\x03C\x03C\x03C\x03C\x03C\x03D\x03D\x03D\x03D\x03D\x03E\x03E\x03E\x03E\x03E\x03F\x03F\x03F\x03F\x03F\x03G\x03G\x03G\x03G\x03G\x03H\x03H\x03H\x03H\x03H\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x05I\u01F6\nI\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x05J\u0203\nJ\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x05K\u020C\nK\x03L\x05L\u020F\nL\x03L\x07L\u0212\nL\fL\x0EL\u0215\x0BL\x03L\x03L\x06L\u0219\nL\rL\x0EL\u021A\x03M\x05M\u021E\nM\x03M\x06M\u0221\nM\rM\x0EM\u0222\x03N\x06N\u0226\nN\rN\x0EN\u0227\x03O\x03O\x07O\u022C\nO\fO\x0EO\u022F\x0BO\x03O\x03O\x03P\x03P\x03P\x05P\u0236\nP\x05P\u0238\nP\x03Q\x03Q\x03Q\x03Q\x02\x02R\x03\x02\x05\x02\x07\x02\t\x02\x0B\x02\r\x02\x0F\x02\x11\x02\x13\x02\x15\x02\x17\x02\x19\x02\x1B\x02\x1D\x02\x1F\x02!\x02#\x02%\x02\'\x02)\x02+\x02-\x02/\x021\x023\x025\x027\x029\x02;\x02=\x02?\x02A\x02C\x02E\x02G\x02I\x03K\x04M\x05O\x06Q\x07S\bU\tW\nY\x0B[\f]\r_\x0Ea\x0Fc\x10e\x11g\x12i\x13k\x14m\x15o\x16q\x17s\x18u\x19w\x1Ay\x1B{\x1C}\x1D\x7F\x1E\x81\x1F\x83 \x85!\x87"\x89#\x8B$\x8D%\x8F&\x91\'\x93(\x95)\x97*\x99+\x9B,\x9D-\x9F.\xA1/\x03\x02$\x04\x02CCcc\x04\x02DDdd\x04\x02EEee\x04\x02FFff\x04\x02GGgg\x04\x02HHhh\x04\x02IIii\x04\x02JJjj\x04\x02KKkk\x04\x02LLll\x04\x02MMmm\x04\x02NNnn\x04\x02OOoo\x04\x02PPpp\x04\x02QQqq\x04\x02RRrr\x04\x02SSss\x04\x02TTtt\x04\x02UUuu\x04\x02VVvv\x04\x02WWww\x04\x02XXxx\x04\x02YYyy\x04\x02ZZzz\x04\x02[[{{\x04\x02\\\\||\x03\x02__\x04\x02--//\x05\x02C\\aac|\x07\x02\x0B\f\x0F\x0F""$$))\x05\x02\x0B\x0B""..\x06\x02\f\f\x0F\x0F$$^^\x04\x02\f\f\x0F\x0F\x04\x02))^^\x02\u0247\x02I\x03\x02\x02\x02\x02K\x03\x02\x02\x02\x02M\x03\x02\x02\x02\x02O\x03\x02\x02\x02\x02Q\x03\x02\x02\x02\x02S\x03\x02\x02\x02\x02U\x03\x02\x02\x02\x02W\x03\x02\x02\x02\x02Y\x03\x02\x02\x02\x02[\x03\x02\x02\x02\x02]\x03\x02\x02\x02\x02_\x03\x02\x02\x02\x02a\x03\x02\x02\x02\x02c\x03\x02\x02\x02\x02e\x03\x02\x02\x02\x02g\x03\x02\x02\x02\x02i\x03\x02\x02\x02\x02k\x03\x02\x02\x02\x02m\x03\x02\x02\x02\x02o\x03\x02\x02\x02\x02q\x03\x02\x02\x02\x02s\x03\x02\x02\x02\x02u\x03\x02\x02\x02\x02w\x03\x02\x02\x02\x02y\x03\x02\x02\x02\x02{\x03\x02\x02\x02\x02}\x03\x02\x02\x02\x02\x7F\x03\x02\x02\x02\x02\x81\x03\x02\x02\x02\x02\x83\x03\x02\x02\x02\x02\x85\x03\x02\x02\x02\x02\x87\x03\x02\x02\x02\x02\x89\x03\x02\x02\x02\x02\x8B\x03\x02\x02\x02\x02\x8D\x03\x02\x02\x02\x02\x8F\x03\x02\x02\x02\x02\x91\x03\x02\x02\x02\x02\x93\x03\x02\x02\x02\x02\x95\x03\x02\x02\x02\x02\x97\x03\x02\x02\x02\x02\x99\x03\x02\x02\x02\x02\x9B\x03\x02\x02\x02\x02\x9D\x03\x02\x02\x02\x02\x9F\x03\x02\x02\x02\x02\xA1\x03\x02\x02\x02\x03\xA3\x03\x02\x02\x02\x05\xA5\x03\x02\x02\x02\x07\xA7\x03\x02\x02\x02\t\xA9\x03\x02\x02\x02\x0B\xAB\x03\x02\x02\x02\r\xAD\x03\x02\x02\x02\x0F\xAF\x03\x02\x02\x02\x11\xB1\x03\x02\x02\x02\x13\xB3\x03\x02\x02\x02\x15\xB5\x03\x02\x02\x02\x17\xB7\x03\x02\x02\x02\x19\xB9\x03\x02\x02\x02\x1B\xBB\x03\x02\x02\x02\x1D\xBD\x03\x02\x02\x02\x1F\xBF\x03\x02\x02\x02!\xC1\x03\x02\x02\x02#\xC3\x03\x02\x02\x02%\xC5\x03\x02\x02\x02\'\xC7\x03\x02\x02\x02)\xC9\x03\x02\x02\x02+\xCB\x03\x02\x02\x02-\xCD\x03\x02\x02\x02/\xCF\x03\x02\x02\x021\xD1\x03\x02\x02\x023\xD3\x03\x02\x02\x025\xD5\x03\x02\x02\x027\xD7\x03\x02\x02\x029\xDA\x03\x02\x02\x02;\xDE\x03\x02\x02\x02=\xE0\x03\x02\x02\x02?\xE2\x03\x02\x02\x02A\xE4\x03\x02\x02\x02C\xE7\x03\x02\x02\x02E\xEC\x03\x02\x02\x02G\xF0\x03\x02\x02\x02I\xFB\x03\x02\x02\x02K\u0102\x03\x02\x02\x02M\u0108\x03\x02\x02\x02O\u0110\x03\x02\x02\x02Q\u0122\x03\x02\x02\x02S\u0134\x03\x02\x02\x02U\u013F\x03\x02\x02\x02W\u0144\x03\x02\x02\x02Y\u0149\x03\x02\x02\x02[\u014E\x03\x02\x02\x02]\u0153\x03\x02\x02\x02_\u0158\x03\x02\x02\x02a\u015D\x03\x02\x02\x02c\u0162\x03\x02\x02\x02e\u0167\x03\x02\x02\x02g\u016C\x03\x02\x02\x02i\u0171\x03\x02\x02\x02k\u0176\x03\x02\x02\x02m\u017B\x03\x02\x02\x02o\u0180\x03\x02\x02\x02q\u0185\x03\x02\x02\x02s\u018A\x03\x02\x02\x02u\u018F\x03\x02\x02\x02w\u0194\x03\x02\x02\x02y\u0199\x03\x02\x02\x02{\u019E\x03\x02\x02\x02}\u01A3\x03\x02\x02\x02\x7F\u01A8\x03\x02\x02\x02\x81\u01B0\x03\x02\x02\x02\x83\u01B6\x03\x02\x02\x02\x85\u01BF\x03\x02\x02\x02\x87\u01C4\x03\x02\x02\x02\x89\u01C9\x03\x02\x02\x02\x8B\u01CE\x03\x02\x02\x02\x8D\u01D3\x03\x02\x02\x02\x8F\u01D8\x03\x02\x02\x02\x91\u01F5\x03\x02\x02\x02\x93\u0202\x03\x02\x02\x02\x95\u020B\x03\x02\x02\x02\x97\u020E\x03\x02\x02\x02\x99\u021D\x03\x02\x02\x02\x9B\u0225\x03\x02\x02\x02\x9D\u022D\x03\x02\x02\x02\x9F\u0232\x03\x02\x02\x02\xA1\u0239\x03\x02\x02\x02\xA3\xA4\t\x02\x02\x02\xA4\x04\x03\x02\x02\x02\xA5\xA6\t\x03\x02\x02\xA6\x06\x03\x02\x02\x02\xA7\xA8\t\x04\x02\x02\xA8\b\x03\x02\x02\x02\xA9\xAA\t\x05\x02\x02\xAA\n\x03\x02\x02\x02\xAB\xAC\t\x06\x02\x02\xAC\f\x03\x02\x02\x02\xAD\xAE\t\x07\x02\x02\xAE\x0E\x03\x02\x02\x02\xAF\xB0\t\b\x02\x02\xB0\x10\x03\x02\x02\x02\xB1\xB2\t\t\x02\x02\xB2\x12\x03\x02\x02\x02\xB3\xB4\t\n\x02\x02\xB4\x14\x03\x02\x02\x02\xB5\xB6\t\x0B\x02\x02\xB6\x16\x03\x02\x02\x02\xB7\xB8\t\f\x02\x02\xB8\x18\x03\x02\x02\x02\xB9\xBA\t\r\x02\x02\xBA\x1A\x03\x02\x02\x02\xBB\xBC\t\x0E\x02\x02\xBC\x1C\x03\x02\x02\x02\xBD\xBE\t\x0F\x02\x02\xBE\x1E\x03\x02\x02\x02\xBF\xC0\t\x10\x02\x02\xC0 \x03\x02\x02\x02\xC1\xC2\t\x11\x02\x02\xC2"\x03\x02\x02\x02\xC3\xC4\t\x12\x02\x02\xC4$\x03\x02\x02\x02\xC5\xC6\t\x13\x02\x02\xC6&\x03\x02\x02\x02\xC7\xC8\t\x14\x02\x02\xC8(\x03\x02\x02\x02\xC9\xCA\t\x15\x02\x02\xCA*\x03\x02\x02\x02\xCB\xCC\t\x16\x02\x02\xCC,\x03\x02\x02\x02\xCD\xCE\t\x17\x02\x02\xCE.\x03\x02\x02\x02\xCF\xD0\t\x18\x02\x02\xD00\x03\x02\x02\x02\xD1\xD2\t\x19\x02\x02\xD22\x03\x02\x02\x02\xD3\xD4\t\x1A\x02\x02\xD44\x03\x02\x02\x02\xD5\xD6\t\x1B\x02\x02\xD66\x03\x02\x02\x02\xD7\xD8\x042;\x02\xD88\x03\x02\x02\x02\xD9\xDB\n\x1C\x02\x02\xDA\xD9\x03\x02\x02\x02\xDB\xDC\x03\x02\x02\x02\xDC\xDA\x03\x02\x02\x02\xDC\xDD\x03\x02\x02\x02\xDD:\x03\x02\x02\x02\xDE\xDF\t\x1D\x02\x02\xDF<\x03\x02\x02\x02\xE0\xE1\t\x1E\x02\x02\xE1>\x03\x02\x02\x02\xE2\xE3\n\x1F\x02\x02\xE3@\x03\x02\x02\x02\xE4\xE5\t \x02\x02\xE5B\x03\x02\x02\x02\xE6\xE8\x05A!\x02\xE7\xE6\x03\x02\x02\x02\xE8\xE9\x03\x02\x02\x02\xE9\xE7\x03\x02\x02\x02\xE9\xEA\x03\x02\x02\x02\xEAD\x03\x02\x02\x02\xEB\xED\x057\x1C\x02\xEC\xEB\x03\x02\x02\x02\xED\xEE\x03\x02\x02\x02\xEE\xEC\x03\x02\x02\x02\xEE\xEF\x03\x02\x02\x02\xEFF\x03\x02\x02\x02\xF0\xF6\x07$\x02\x02\xF1\xF2\x07^\x02\x02\xF2\xF5\x0B\x02\x02\x02\xF3\xF5\n!\x02\x02\xF4\xF1\x03\x02\x02\x02\xF4\xF3\x03\x02\x02\x02\xF5\xF8\x03\x02\x02\x02\xF6\xF4\x03\x02\x02\x02\xF6\xF7\x03\x02\x02\x02\xF7\xF9\x03\x02\x02\x02\xF8\xF6\x03\x02\x02\x02\xF9\xFA\x07$\x02\x02\xFAH\x03\x02\x02\x02\xFB\xFF\x07,\x02\x02\xFC\xFE\n"\x02\x02\xFD\xFC\x03\x02\x02\x02\xFE\u0101\x03\x02\x02\x02\xFF\xFD\x03\x02\x02\x02\xFF\u0100\x03\x02\x02\x02\u0100J\x03\x02\x02\x02\u0101\xFF\x03\x02\x02\x02\u0102\u0104\x07]\x02\x02\u0103\u0105\x059\x1D\x02\u0104\u0103\x03\x02\x02\x02\u0104\u0105\x03\x02\x02\x02\u0105\u0106\x03\x02\x02\x02\u0106\u0107\x07_\x02\x02\u0107L\x03\x02\x02\x02\u0108\u0109\x05G$\x02\u0109N\x03\x02\x02\x02\u010A\u010D\x05=\x1F\x02\u010B\u010D\x057\x1C\x02\u010C\u010A\x03\x02\x02\x02\u010C\u010B\x03\x02\x02\x02\u010D\u010E\x03\x02\x02\x02\u010E\u010C\x03\x02\x02\x02\u010E\u010F\x03\x02\x02\x02\u010F\u0111\x03\x02\x02\x02\u0110\u010C\x03\x02\x02\x02\u0110\u0111\x03\x02\x02\x02\u0111\u0112\x03\x02\x02\x02\u0112\u0120\x07<\x02\x02\u0113\u0115\x07]\x02\x02\u0114\u0116\n\x1C\x02\x02\u0115\u0114\x03\x02\x02\x02\u0116\u0117\x03\x02\x02\x02\u0117\u0115\x03\x02\x02\x02\u0117\u0118\x03\x02\x02\x02\u0118\u0119\x03\x02\x02\x02\u0119\u0121\x07_\x02\x02\u011A\u011D\x05=\x1F\x02\u011B\u011D\x057\x1C\x02\u011C\u011A\x03\x02\x02\x02\u011C\u011B\x03\x02\x02\x02\u011D\u011E\x03\x02\x02\x02\u011E\u011C\x03\x02\x02\x02\u011E\u011F\x03\x02\x02\x02\u011F\u0121\x03\x02\x02\x02\u0120\u0113\x03\x02\x02\x02\u0120\u011C\x03\x02\x02\x02\u0121P\x03\x02\x02\x02\u0122\u0124\x07]\x02\x02\u0123\u0125\x05C"\x02\u0124\u0123\x03\x02\x02\x02\u0124\u0125\x03\x02\x02\x02\u0125\u0126\x03\x02\x02\x02\u0126\u012C\x05E#\x02\u0127\u0128\x05C"\x02\u0128\u0129\x05E#\x02\u0129\u012B\x03\x02\x02\x02\u012A\u0127\x03\x02\x02\x02\u012B\u012E\x03\x02\x02\x02\u012C\u012A\x03\x02\x02\x02\u012C\u012D\x03\x02\x02\x02\u012D\u0130\x03\x02\x02\x02\u012E\u012C\x03\x02\x02\x02\u012F\u0131\x05C"\x02\u0130\u012F\x03\x02\x02\x02\u0130\u0131\x03\x02\x02\x02\u0131\u0132\x03\x02\x02\x02\u0132\u0133\x07_\x02\x02\u0133R\x03\x02\x02\x02\u0134\u0136\x07]\x02\x02\u0135\u0137\x057\x1C\x02\u0136\u0135\x03\x02\x02\x02\u0137\u0138\x03\x02\x02\x02\u0138\u0136\x03\x02\x02\x02\u0138\u0139\x03\x02\x02\x02\u0139\u013B\x03\x02\x02\x02\u013A\u013C\x07T\x02\x02\u013B\u013A\x03\x02\x02\x02\u013B\u013C\x03\x02\x02\x02\u013C\u013D\x03\x02\x02\x02\u013D\u013E\x07_\x02\x02\u013ET\x03\x02\x02\x02\u013F\u0140\x05\'\x14\x02\u0140\u0141\x05\x07\x04\x02\u0141\u0142\x05%\x13\x02\u0142\u0143\x05!\x11\x02\u0143V\x03\x02\x02\x02\u0144\u0145\x05\x13\n\x02\u0145\u0146\x05\'\x14\x02\u0146\u0147\x05\x07\x04\x02\u0147\u0148\x05%\x13\x02\u0148X\x03\x02\x02\x02\u0149\u014A\x05%\x13\x02\u014A\u014B\x05\'\x14\x02\u014B\u014C\x05\x07\x04\x02\u014C\u014D\x05%\x13\x02\u014DZ\x03\x02\x02\x02\u014E\u014F\x05\x0B\x06\x02\u014F\u0150\x05\x1D\x0F\x02\u0150\u0151\x05\t\x05\x02\u0151\u0152\x05\x1B\x0E\x02\u0152\\\x03\x02\x02\x02\u0153\u0154\x05\t\x05\x02\u0154\u0155\x05\x1F\x10\x02\u0155\u0156\x05\x13\n\x02\u0156\u0157\x05\r\x07\x02\u0157^\x03\x02\x02\x02\u0158\u0159\x05\x0B\x06\x02\u0159\u015A\x05\x1D\x0F\x02\u015A\u015B\x05\t\x05\x02\u015B\u015C\x05\x13\n\x02\u015C`\x03\x02\x02\x02\u015D\u015E\x05\x0B\x06\x02\u015E\u015F\x05\x1D\x0F\x02\u015F\u0160\x05+\x16\x02\u0160\u0161\x05\x1B\x0E\x02\u0161b\x03\x02\x02\x02\u0162\u0163\x05\x0B\x06\x02\u0163\u0164\x05\x07\x04\x02\u0164\u0165\x05\x1F\x10\x02\u0165\u0166\x05\x1D\x0F\x02\u0166d\x03\x02\x02\x02\u0167\u0168\x05\x0B\x06\x02\u0168\u0169\x05!\x11\x02\u0169\u016A\x05\x03\x02\x02\u016A\u016B\x05\'\x14\x02\u016Bf\x03\x02\x02\x02\u016C\u016D\x05\x0B\x06\x02\u016D\u016E\x05\'\x14\x02\u016E\u016F\x05\x07\x04\x02\u016F\u0170\x05\x1D\x0F\x02\u0170h\x03\x02\x02\x02\u0171\u0172\x05\x0B\x06\x02\u0172\u0173\x05\'\x14\x02\u0173\u0174\x05\x0B\x06\x02\u0174\u0175\x05\x0B\x06\x02\u0175j\x03\x02\x02\x02\u0176\u0177\x05\x0B\x06\x02\u0177\u0178\x05)\x15\x02\u0178\u0179\x05\x07\x04\x02\u0179\u017A\x05\x11\t\x02\u017Al\x03\x02\x02\x02\u017B\u017C\x05\x0B\x06\x02\u017C\u017D\x05-\x17\x02\u017D\u017E\x05\x0B\x06\x02\u017E\u017F\x05%\x13\x02\u017Fn\x03\x02\x02\x02\u0180\u0181\x05\x19\r\x02\u0181\u0182\x05\x1F\x10\x02\u0182\u0183\x05\x1F\x10\x02\u0183\u0184\x05!\x11\x02\u0184p\x03\x02\x02\x02\u0185\u0186\x05\x1D\x0F\x02\u0186\u0187\x05\x0B\x06\x02\u0187\u0188\x051\x19\x02\u0188\u0189\x05)\x15\x02\u0189r\x03\x02\x02\x02\u018A\u018B\x05\x1D\x0F\x02\u018B\u018C\x05\'\x14\x02\u018C\u018D\x05\x07\x04\x02\u018D\u018E\x05\x1D\x0F\x02\u018Et\x03\x02\x02\x02\u018F\u0190\x05%\x13\x02\u0190\u0191\x05\x0B\x06\x02\u0191\u0192\x05)\x15\x02\u0192\u0193\x05\x1D\x0F\x02\u0193v\x03\x02\x02\x02\u0194\u0195\x05%\x13\x02\u0195\u0196\x05\x0B\x06\x02\u0196\u0197\x05!\x11\x02\u0197\u0198\x05\'\x14\x02\u0198x\x03\x02\x02\x02\u0199\u019A\x05%\x13\x02\u019A\u019B\x05\x0B\x06\x02\u019B\u019C\x05!\x11\x02\u019C\u019D\x05\x0B\x06\x02\u019Dz\x03\x02\x02\x02\u019E\u019F\x05\'\x14\x02\u019F\u01A0\x05+\x16\x02\u01A0\u01A1\x05\x05\x03\x02\u01A1\u01A2\x05%\x13\x02\u01A2|\x03\x02\x02\x02\u01A3\u01A4\x05+\x16\x02\u01A4\u01A5\x05\x1D\x0F\x02\u01A5\u01A6\x05)\x15\x02\u01A6\u01A7\x05\x19\r\x02\u01A7~\x03\x02\x02\x02\u01A8\u01AC\x07)\x02\x02\u01A9\u01AD\n#\x02\x02\u01AA\u01AB\x07^\x02\x02\u01AB\u01AD\x0B\x02\x02\x02\u01AC\u01A9\x03\x02\x02\x02\u01AC\u01AA\x03\x02\x02\x02\u01AD\u01AE\x03\x02\x02\x02\u01AE\u01AF\x07)\x02\x02\u01AF\x80\x03\x02\x02\x02\u01B0\u01B2\x07\'\x02\x02\u01B1\u01B3\x0423\x02\u01B2\u01B1\x03\x02\x02\x02\u01B3\u01B4\x03\x02\x02\x02\u01B4\u01B2\x03\x02\x02\x02\u01B4\u01B5\x03\x02\x02\x02\u01B5\x82\x03\x02\x02\x02\u01B6\u01B7\x05=\x1F\x02\u01B7\u01B8\x05? \x02\u01B8\u01B9\x05? \x02\u01B9\u01BB\x05? \x02\u01BA\u01BC\x05? \x02\u01BB\u01BA\x03\x02\x02\x02\u01BC\u01BD\x03\x02\x02\x02\u01BD\u01BB\x03\x02\x02\x02\u01BD\u01BE\x03\x02\x02\x02\u01BE\x84\x03\x02\x02\x02\u01BF\u01C0\x05-\x17\x02\u01C0\u01C1\x05\x03\x02\x02\u01C1\u01C2\x05%\x13\x02\u01C2\u01C3\x057\x1C\x02\u01C3\x86\x03\x02\x02\x02\u01C4\u01C5\x05-\x17\x02\u01C5\u01C6\x05\x03\x02\x02\u01C6\u01C7\x057\x1C\x02\u01C7\u01C8\x057\x1C\x02\u01C8\x88\x03\x02\x02\x02\u01C9\u01CA\x05\x1F\x10\x02\u01CA\u01CB\x05\x05\x03\x02\u01CB\u01CC\x05-\x17\x02\u01CC\u01CD\x057\x1C\x02\u01CD\x8A\x03\x02\x02\x02\u01CE\u01CF\x05\x1F\x10\x02\u01CF\u01D0\x05-\x17\x02\u01D0\u01D1\x057\x1C\x02\u01D1\u01D2\x057\x1C\x02\u01D2\x8C\x03\x02\x02\x02\u01D3\u01D4\x05\x1B\x0E\x02\u01D4\u01D5\x05-\x17\x02\u01D5\u01D6\x057\x1C\x02\u01D6\u01D7\x057\x1C\x02\u01D7\x8E\x03\x02\x02\x02\u01D8\u01D9\x05=\x1F\x02\u01D9\u01DA\x05? \x02\u01DA\u01DB\x05? \x02\u01DB\u01DC\x05? \x02\u01DC\x90\x03\x02\x02\x02\u01DD\u01DE\x05\x0B\x06\x02\u01DE\u01DF\x05#\x12\x02\u01DF\u01F6\x03\x02\x02\x02\u01E0\u01E1\x05\x1D\x0F\x02\u01E1\u01E2\x05\x0B\x06\x02\u01E2\u01F6\x03\x02\x02\x02\u01E3\u01E4\x05\x19\r\x02\u01E4\u01E5\x05)\x15\x02\u01E5\u01F6\x03\x02\x02\x02\u01E6\u01E7\x05\x0F\b\x02\u01E7\u01E8\x05)\x15\x02\u01E8\u01F6\x03\x02\x02\x02\u01E9\u01EA\x05\x19\r\x02\u01EA\u01EB\x05\x0B\x06\x02\u01EB\u01F6\x03\x02\x02\x02\u01EC\u01ED\x05\x0F\b\x02\u01ED\u01EE\x05\x0B\x06\x02\u01EE\u01F6\x03\x02\x02\x02\u01EF\u01F0\x05\x05\x03\x02\u01F0\u01F1\x05)\x15\x02\u01F1\u01F6\x03\x02\x02\x02\u01F2\u01F3\x05\x05\x03\x02\u01F3\u01F4\x05\r\x07\x02\u01F4\u01F6\x03\x02\x02\x02\u01F5\u01DD\x03\x02\x02\x02\u01F5\u01E0\x03\x02\x02\x02\u01F5\u01E3\x03\x02\x02\x02\u01F5\u01E6\x03\x02\x02\x02\u01F5\u01E9\x03\x02\x02\x02\u01F5\u01EC\x03\x02\x02\x02\u01F5\u01EF\x03\x02\x02\x02\u01F5\u01F2\x03\x02\x02\x02\u01F6\x92\x03\x02\x02\x02\u01F7\u0203\x07?\x02\x02\u01F8\u01F9\x07#\x02\x02\u01F9\u0203\x07?\x02\x02\u01FA\u01FB\x07>\x02\x02\u01FB\u0203\x07@\x02\x02\u01FC\u0203\x07@\x02\x02\u01FD\u01FE\x07@\x02\x02\u01FE\u0203\x07?\x02\x02\u01FF\u0203\x07>\x02\x02\u0200\u0201\x07>\x02\x02\u0201\u0203\x07?\x02\x02\u0202\u01F7\x03\x02\x02\x02\u0202\u01F8\x03\x02\x02\x02\u0202\u01FA\x03\x02\x02\x02\u0202\u01FC\x03\x02\x02\x02\u0202\u01FD\x03\x02\x02\x02\u0202\u01FF\x03\x02\x02\x02\u0202\u0200\x03\x02\x02\x02\u0203\x94\x03\x02\x02\x02\u0204\u0205\x05\x03\x02\x02\u0205\u0206\x05\x1D\x0F\x02\u0206\u0207\x05\t\x05\x02\u0207\u020C\x03\x02\x02\x02\u0208\u0209\x05\x1F\x10\x02\u0209\u020A\x05%\x13\x02\u020A\u020C\x03\x02\x02\x02\u020B\u0204\x03\x02\x02\x02\u020B\u0208\x03\x02\x02\x02\u020C\x96\x03\x02\x02\x02\u020D\u020F\x05;\x1E\x02\u020E\u020D\x03\x02\x02\x02\u020E\u020F\x03\x02\x02\x02\u020F\u0213\x03\x02\x02\x02\u0210\u0212\x057\x1C\x02\u0211\u0210\x03\x02\x02\x02\u0212\u0215\x03\x02\x02\x02\u0213\u0211\x03\x02\x02\x02\u0213\u0214\x03\x02\x02\x02\u0214\u0216\x03\x02\x02\x02\u0215\u0213\x03\x02\x02\x02\u0216\u0218\x070\x02\x02\u0217\u0219\x057\x1C\x02\u0218\u0217\x03\x02\x02\x02\u0219\u021A\x03\x02\x02\x02\u021A\u0218\x03\x02\x02\x02\u021A\u021B\x03\x02\x02\x02\u021B\x98\x03\x02\x02\x02\u021C\u021E\x05;\x1E\x02\u021D\u021C\x03\x02\x02\x02\u021D\u021E\x03\x02\x02\x02\u021E\u0220\x03\x02\x02\x02\u021F\u0221\x057\x1C\x02\u0220\u021F\x03\x02\x02\x02\u0221\u0222\x03\x02\x02\x02\u0222\u0220\x03\x02\x02\x02\u0222\u0223\x03\x02\x02\x02\u0223\x9A\x03\x02\x02\x02\u0224\u0226\x05A!\x02\u0225\u0224\x03\x02\x02\x02\u0226\u0227\x03\x02\x02\x02\u0227\u0225\x03\x02\x02\x02\u0227\u0228\x03\x02\x02\x02\u0228\x9C\x03\x02\x02\x02\u0229\u022C\x05A!\x02\u022A\u022C\t"\x02\x02\u022B\u0229\x03\x02\x02\x02\u022B\u022A\x03\x02\x02\x02\u022C\u022F\x03\x02\x02\x02\u022D\u022B\x03\x02\x02\x02\u022D\u022E\x03\x02\x02\x02\u022E\u0230\x03\x02\x02\x02\u022F\u022D\x03\x02\x02\x02\u0230\u0231\t"\x02\x02\u0231\x9E\x03\x02\x02\x02\u0232\u0237\x05=\x1F\x02\u0233\u0235\x05? \x02\u0234\u0236\x05? \x02\u0235\u0234\x03\x02\x02\x02\u0235\u0236\x03\x02\x02\x02\u0236\u0238\x03\x02\x02\x02\u0237\u0233\x03\x02\x02\x02\u0237\u0238\x03\x02\x02\x02\u0238\xA0\x03\x02\x02\x02\u0239\u023A\x0B\x02\x02\x02\u023A\u023B\x03\x02\x02\x02\u023B\u023C\bQ\x02\x02\u023C\xA2\x03\x02\x02\x02&\x02\xDC\xE9\xEE\xF4\xF6\xFF\u0104\u010C\u010E\u0110\u0117\u011C\u011E\u0120\u0124\u012C\u0130\u0138\u013B\u01AC\u01B4\u01BD\u01F5\u0202\u020B\u020E\u0213\u021A\u021D\u0222\u0227\u022B\u022D\u0235\u0237\x03\b\x02\x02';
+    var tmp_8 = this;
+    tmp_8.ATN_1 = ATNDeserializer_init_$Create$(null, 1, null).deserialize_c68pee_k$(asCharArray('\x03\u608B\uA72A\u8133\uB9ED\u417C\u3BE7\u7786\u5964\x02/\u023D\b\x01\x04\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04\x07\t\x07\x04\b\t\b\x04\t\t\t\x04\n\t\n\x04\x0B\t\x0B\x04\f\t\f\x04\r\t\r\x04\x0E\t\x0E\x04\x0F\t\x0F\x04\x10\t\x10\x04\x11\t\x11\x04\x12\t\x12\x04\x13\t\x13\x04\x14\t\x14\x04\x15\t\x15\x04\x16\t\x16\x04\x17\t\x17\x04\x18\t\x18\x04\x19\t\x19\x04\x1A\t\x1A\x04\x1B\t\x1B\x04\x1C\t\x1C\x04\x1D\t\x1D\x04\x1E\t\x1E\x04\x1F\t\x1F\x04 \t \x04!\t!\x04"\t"\x04#\t#\x04$\t$\x04%\t%\x04&\t&\x04\'\t\'\x04(\t(\x04)\t)\x04*\t*\x04+\t+\x04,\t,\x04-\t-\x04.\t.\x04/\t/\x040\t0\x041\t1\x042\t2\x043\t3\x044\t4\x045\t5\x046\t6\x047\t7\x048\t8\x049\t9\x04:\t:\x04;\t;\x04<\t<\x04=\t=\x04>\t>\x04?\t?\x04@\t@\x04A\tA\x04B\tB\x04C\tC\x04D\tD\x04E\tE\x04F\tF\x04G\tG\x04H\tH\x04I\tI\x04J\tJ\x04K\tK\x04L\tL\x04M\tM\x04N\tN\x04O\tO\x04P\tP\x04Q\tQ\x03\x02\x03\x02\x03\x03\x03\x03\x03\x04\x03\x04\x03\x05\x03\x05\x03\x06\x03\x06\x03\x07\x03\x07\x03\b\x03\b\x03\t\x03\t\x03\n\x03\n\x03\x0B\x03\x0B\x03\f\x03\f\x03\r\x03\r\x03\x0E\x03\x0E\x03\x0F\x03\x0F\x03\x10\x03\x10\x03\x11\x03\x11\x03\x12\x03\x12\x03\x13\x03\x13\x03\x14\x03\x14\x03\x15\x03\x15\x03\x16\x03\x16\x03\x17\x03\x17\x03\x18\x03\x18\x03\x19\x03\x19\x03\x1A\x03\x1A\x03\x1B\x03\x1B\x03\x1C\x03\x1C\x03\x1D\x06\x1D\xDB\n\x1D\r\x1D\x0E\x1D\xDC\x03\x1E\x03\x1E\x03\x1F\x03\x1F\x03 \x03 \x03!\x03!\x03"\x06"\xE8\n"\r"\x0E"\xE9\x03#\x06#\xED\n#\r#\x0E#\xEE\x03$\x03$\x03$\x03$\x07$\xF5\n$\f$\x0E$\xF8\x0B$\x03$\x03$\x03%\x03%\x07%\xFE\n%\f%\x0E%\u0101\x0B%\x03&\x03&\x05&\u0105\n&\x03&\x03&\x03\'\x03\'\x03(\x03(\x06(\u010D\n(\r(\x0E(\u010E\x05(\u0111\n(\x03(\x03(\x03(\x06(\u0116\n(\r(\x0E(\u0117\x03(\x03(\x03(\x06(\u011D\n(\r(\x0E(\u011E\x05(\u0121\n(\x03)\x03)\x05)\u0125\n)\x03)\x03)\x03)\x03)\x07)\u012B\n)\f)\x0E)\u012E\x0B)\x03)\x05)\u0131\n)\x03)\x03)\x03*\x03*\x06*\u0137\n*\r*\x0E*\u0138\x03*\x05*\u013C\n*\x03*\x03*\x03+\x03+\x03+\x03+\x03+\x03,\x03,\x03,\x03,\x03,\x03-\x03-\x03-\x03-\x03-\x03.\x03.\x03.\x03.\x03.\x03/\x03/\x03/\x03/\x03/\x030\x030\x030\x030\x030\x031\x031\x031\x031\x031\x032\x032\x032\x032\x032\x033\x033\x033\x033\x033\x034\x034\x034\x034\x034\x035\x035\x035\x035\x035\x036\x036\x036\x036\x036\x037\x037\x037\x037\x037\x038\x038\x038\x038\x038\x039\x039\x039\x039\x039\x03:\x03:\x03:\x03:\x03:\x03;\x03;\x03;\x03;\x03;\x03<\x03<\x03<\x03<\x03<\x03=\x03=\x03=\x03=\x03=\x03>\x03>\x03>\x03>\x03>\x03?\x03?\x03?\x03?\x03?\x03@\x03@\x03@\x03@\x05@\u01AD\n@\x03@\x03@\x03A\x03A\x06A\u01B3\nA\rA\x0EA\u01B4\x03B\x03B\x03B\x03B\x03B\x06B\u01BC\nB\rB\x0EB\u01BD\x03C\x03C\x03C\x03C\x03C\x03D\x03D\x03D\x03D\x03D\x03E\x03E\x03E\x03E\x03E\x03F\x03F\x03F\x03F\x03F\x03G\x03G\x03G\x03G\x03G\x03H\x03H\x03H\x03H\x03H\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x03I\x05I\u01F6\nI\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x03J\x05J\u0203\nJ\x03K\x03K\x03K\x03K\x03K\x03K\x03K\x05K\u020C\nK\x03L\x05L\u020F\nL\x03L\x07L\u0212\nL\fL\x0EL\u0215\x0BL\x03L\x03L\x06L\u0219\nL\rL\x0EL\u021A\x03M\x05M\u021E\nM\x03M\x06M\u0221\nM\rM\x0EM\u0222\x03N\x06N\u0226\nN\rN\x0EN\u0227\x03O\x03O\x07O\u022C\nO\fO\x0EO\u022F\x0BO\x03O\x03O\x03P\x03P\x03P\x05P\u0236\nP\x05P\u0238\nP\x03Q\x03Q\x03Q\x03Q\x02\x02R\x03\x02\x05\x02\x07\x02\t\x02\x0B\x02\r\x02\x0F\x02\x11\x02\x13\x02\x15\x02\x17\x02\x19\x02\x1B\x02\x1D\x02\x1F\x02!\x02#\x02%\x02\'\x02)\x02+\x02-\x02/\x021\x023\x025\x027\x029\x02;\x02=\x02?\x02A\x02C\x02E\x02G\x02I\x03K\x04M\x05O\x06Q\x07S\bU\tW\nY\x0B[\f]\r_\x0Ea\x0Fc\x10e\x11g\x12i\x13k\x14m\x15o\x16q\x17s\x18u\x19w\x1Ay\x1B{\x1C}\x1D\x7F\x1E\x81\x1F\x83 \x85!\x87"\x89#\x8B$\x8D%\x8F&\x91\'\x93(\x95)\x97*\x99+\x9B,\x9D-\x9F.\xA1/\x03\x02$\x04\x02CCcc\x04\x02DDdd\x04\x02EEee\x04\x02FFff\x04\x02GGgg\x04\x02HHhh\x04\x02IIii\x04\x02JJjj\x04\x02KKkk\x04\x02LLll\x04\x02MMmm\x04\x02NNnn\x04\x02OOoo\x04\x02PPpp\x04\x02QQqq\x04\x02RRrr\x04\x02SSss\x04\x02TTtt\x04\x02UUuu\x04\x02VVvv\x04\x02WWww\x04\x02XXxx\x04\x02YYyy\x04\x02ZZzz\x04\x02[[{{\x04\x02\\\\||\x03\x02__\x04\x02--//\x05\x02C\\aac|\x07\x02\x0B\f\x0F\x0F""$$))\x05\x02\x0B\x0B""..\x06\x02\f\f\x0F\x0F$$^^\x04\x02\f\f\x0F\x0F\x04\x02))^^\x02\u0247\x02I\x03\x02\x02\x02\x02K\x03\x02\x02\x02\x02M\x03\x02\x02\x02\x02O\x03\x02\x02\x02\x02Q\x03\x02\x02\x02\x02S\x03\x02\x02\x02\x02U\x03\x02\x02\x02\x02W\x03\x02\x02\x02\x02Y\x03\x02\x02\x02\x02[\x03\x02\x02\x02\x02]\x03\x02\x02\x02\x02_\x03\x02\x02\x02\x02a\x03\x02\x02\x02\x02c\x03\x02\x02\x02\x02e\x03\x02\x02\x02\x02g\x03\x02\x02\x02\x02i\x03\x02\x02\x02\x02k\x03\x02\x02\x02\x02m\x03\x02\x02\x02\x02o\x03\x02\x02\x02\x02q\x03\x02\x02\x02\x02s\x03\x02\x02\x02\x02u\x03\x02\x02\x02\x02w\x03\x02\x02\x02\x02y\x03\x02\x02\x02\x02{\x03\x02\x02\x02\x02}\x03\x02\x02\x02\x02\x7F\x03\x02\x02\x02\x02\x81\x03\x02\x02\x02\x02\x83\x03\x02\x02\x02\x02\x85\x03\x02\x02\x02\x02\x87\x03\x02\x02\x02\x02\x89\x03\x02\x02\x02\x02\x8B\x03\x02\x02\x02\x02\x8D\x03\x02\x02\x02\x02\x8F\x03\x02\x02\x02\x02\x91\x03\x02\x02\x02\x02\x93\x03\x02\x02\x02\x02\x95\x03\x02\x02\x02\x02\x97\x03\x02\x02\x02\x02\x99\x03\x02\x02\x02\x02\x9B\x03\x02\x02\x02\x02\x9D\x03\x02\x02\x02\x02\x9F\x03\x02\x02\x02\x02\xA1\x03\x02\x02\x02\x03\xA3\x03\x02\x02\x02\x05\xA5\x03\x02\x02\x02\x07\xA7\x03\x02\x02\x02\t\xA9\x03\x02\x02\x02\x0B\xAB\x03\x02\x02\x02\r\xAD\x03\x02\x02\x02\x0F\xAF\x03\x02\x02\x02\x11\xB1\x03\x02\x02\x02\x13\xB3\x03\x02\x02\x02\x15\xB5\x03\x02\x02\x02\x17\xB7\x03\x02\x02\x02\x19\xB9\x03\x02\x02\x02\x1B\xBB\x03\x02\x02\x02\x1D\xBD\x03\x02\x02\x02\x1F\xBF\x03\x02\x02\x02!\xC1\x03\x02\x02\x02#\xC3\x03\x02\x02\x02%\xC5\x03\x02\x02\x02\'\xC7\x03\x02\x02\x02)\xC9\x03\x02\x02\x02+\xCB\x03\x02\x02\x02-\xCD\x03\x02\x02\x02/\xCF\x03\x02\x02\x021\xD1\x03\x02\x02\x023\xD3\x03\x02\x02\x025\xD5\x03\x02\x02\x027\xD7\x03\x02\x02\x029\xDA\x03\x02\x02\x02;\xDE\x03\x02\x02\x02=\xE0\x03\x02\x02\x02?\xE2\x03\x02\x02\x02A\xE4\x03\x02\x02\x02C\xE7\x03\x02\x02\x02E\xEC\x03\x02\x02\x02G\xF0\x03\x02\x02\x02I\xFB\x03\x02\x02\x02K\u0102\x03\x02\x02\x02M\u0108\x03\x02\x02\x02O\u0110\x03\x02\x02\x02Q\u0122\x03\x02\x02\x02S\u0134\x03\x02\x02\x02U\u013F\x03\x02\x02\x02W\u0144\x03\x02\x02\x02Y\u0149\x03\x02\x02\x02[\u014E\x03\x02\x02\x02]\u0153\x03\x02\x02\x02_\u0158\x03\x02\x02\x02a\u015D\x03\x02\x02\x02c\u0162\x03\x02\x02\x02e\u0167\x03\x02\x02\x02g\u016C\x03\x02\x02\x02i\u0171\x03\x02\x02\x02k\u0176\x03\x02\x02\x02m\u017B\x03\x02\x02\x02o\u0180\x03\x02\x02\x02q\u0185\x03\x02\x02\x02s\u018A\x03\x02\x02\x02u\u018F\x03\x02\x02\x02w\u0194\x03\x02\x02\x02y\u0199\x03\x02\x02\x02{\u019E\x03\x02\x02\x02}\u01A3\x03\x02\x02\x02\x7F\u01A8\x03\x02\x02\x02\x81\u01B0\x03\x02\x02\x02\x83\u01B6\x03\x02\x02\x02\x85\u01BF\x03\x02\x02\x02\x87\u01C4\x03\x02\x02\x02\x89\u01C9\x03\x02\x02\x02\x8B\u01CE\x03\x02\x02\x02\x8D\u01D3\x03\x02\x02\x02\x8F\u01D8\x03\x02\x02\x02\x91\u01F5\x03\x02\x02\x02\x93\u0202\x03\x02\x02\x02\x95\u020B\x03\x02\x02\x02\x97\u020E\x03\x02\x02\x02\x99\u021D\x03\x02\x02\x02\x9B\u0225\x03\x02\x02\x02\x9D\u022D\x03\x02\x02\x02\x9F\u0232\x03\x02\x02\x02\xA1\u0239\x03\x02\x02\x02\xA3\xA4\t\x02\x02\x02\xA4\x04\x03\x02\x02\x02\xA5\xA6\t\x03\x02\x02\xA6\x06\x03\x02\x02\x02\xA7\xA8\t\x04\x02\x02\xA8\b\x03\x02\x02\x02\xA9\xAA\t\x05\x02\x02\xAA\n\x03\x02\x02\x02\xAB\xAC\t\x06\x02\x02\xAC\f\x03\x02\x02\x02\xAD\xAE\t\x07\x02\x02\xAE\x0E\x03\x02\x02\x02\xAF\xB0\t\b\x02\x02\xB0\x10\x03\x02\x02\x02\xB1\xB2\t\t\x02\x02\xB2\x12\x03\x02\x02\x02\xB3\xB4\t\n\x02\x02\xB4\x14\x03\x02\x02\x02\xB5\xB6\t\x0B\x02\x02\xB6\x16\x03\x02\x02\x02\xB7\xB8\t\f\x02\x02\xB8\x18\x03\x02\x02\x02\xB9\xBA\t\r\x02\x02\xBA\x1A\x03\x02\x02\x02\xBB\xBC\t\x0E\x02\x02\xBC\x1C\x03\x02\x02\x02\xBD\xBE\t\x0F\x02\x02\xBE\x1E\x03\x02\x02\x02\xBF\xC0\t\x10\x02\x02\xC0 \x03\x02\x02\x02\xC1\xC2\t\x11\x02\x02\xC2"\x03\x02\x02\x02\xC3\xC4\t\x12\x02\x02\xC4$\x03\x02\x02\x02\xC5\xC6\t\x13\x02\x02\xC6&\x03\x02\x02\x02\xC7\xC8\t\x14\x02\x02\xC8(\x03\x02\x02\x02\xC9\xCA\t\x15\x02\x02\xCA*\x03\x02\x02\x02\xCB\xCC\t\x16\x02\x02\xCC,\x03\x02\x02\x02\xCD\xCE\t\x17\x02\x02\xCE.\x03\x02\x02\x02\xCF\xD0\t\x18\x02\x02\xD00\x03\x02\x02\x02\xD1\xD2\t\x19\x02\x02\xD22\x03\x02\x02\x02\xD3\xD4\t\x1A\x02\x02\xD44\x03\x02\x02\x02\xD5\xD6\t\x1B\x02\x02\xD66\x03\x02\x02\x02\xD7\xD8\x042;\x02\xD88\x03\x02\x02\x02\xD9\xDB\n\x1C\x02\x02\xDA\xD9\x03\x02\x02\x02\xDB\xDC\x03\x02\x02\x02\xDC\xDA\x03\x02\x02\x02\xDC\xDD\x03\x02\x02\x02\xDD:\x03\x02\x02\x02\xDE\xDF\t\x1D\x02\x02\xDF<\x03\x02\x02\x02\xE0\xE1\t\x1E\x02\x02\xE1>\x03\x02\x02\x02\xE2\xE3\n\x1F\x02\x02\xE3@\x03\x02\x02\x02\xE4\xE5\t \x02\x02\xE5B\x03\x02\x02\x02\xE6\xE8\x05A!\x02\xE7\xE6\x03\x02\x02\x02\xE8\xE9\x03\x02\x02\x02\xE9\xE7\x03\x02\x02\x02\xE9\xEA\x03\x02\x02\x02\xEAD\x03\x02\x02\x02\xEB\xED\x057\x1C\x02\xEC\xEB\x03\x02\x02\x02\xED\xEE\x03\x02\x02\x02\xEE\xEC\x03\x02\x02\x02\xEE\xEF\x03\x02\x02\x02\xEFF\x03\x02\x02\x02\xF0\xF6\x07$\x02\x02\xF1\xF2\x07^\x02\x02\xF2\xF5\x0B\x02\x02\x02\xF3\xF5\n!\x02\x02\xF4\xF1\x03\x02\x02\x02\xF4\xF3\x03\x02\x02\x02\xF5\xF8\x03\x02\x02\x02\xF6\xF4\x03\x02\x02\x02\xF6\xF7\x03\x02\x02\x02\xF7\xF9\x03\x02\x02\x02\xF8\xF6\x03\x02\x02\x02\xF9\xFA\x07$\x02\x02\xFAH\x03\x02\x02\x02\xFB\xFF\x07,\x02\x02\xFC\xFE\n"\x02\x02\xFD\xFC\x03\x02\x02\x02\xFE\u0101\x03\x02\x02\x02\xFF\xFD\x03\x02\x02\x02\xFF\u0100\x03\x02\x02\x02\u0100J\x03\x02\x02\x02\u0101\xFF\x03\x02\x02\x02\u0102\u0104\x07]\x02\x02\u0103\u0105\x059\x1D\x02\u0104\u0103\x03\x02\x02\x02\u0104\u0105\x03\x02\x02\x02\u0105\u0106\x03\x02\x02\x02\u0106\u0107\x07_\x02\x02\u0107L\x03\x02\x02\x02\u0108\u0109\x05G$\x02\u0109N\x03\x02\x02\x02\u010A\u010D\x05=\x1F\x02\u010B\u010D\x057\x1C\x02\u010C\u010A\x03\x02\x02\x02\u010C\u010B\x03\x02\x02\x02\u010D\u010E\x03\x02\x02\x02\u010E\u010C\x03\x02\x02\x02\u010E\u010F\x03\x02\x02\x02\u010F\u0111\x03\x02\x02\x02\u0110\u010C\x03\x02\x02\x02\u0110\u0111\x03\x02\x02\x02\u0111\u0112\x03\x02\x02\x02\u0112\u0120\x07<\x02\x02\u0113\u0115\x07]\x02\x02\u0114\u0116\n\x1C\x02\x02\u0115\u0114\x03\x02\x02\x02\u0116\u0117\x03\x02\x02\x02\u0117\u0115\x03\x02\x02\x02\u0117\u0118\x03\x02\x02\x02\u0118\u0119\x03\x02\x02\x02\u0119\u0121\x07_\x02\x02\u011A\u011D\x05=\x1F\x02\u011B\u011D\x057\x1C\x02\u011C\u011A\x03\x02\x02\x02\u011C\u011B\x03\x02\x02\x02\u011D\u011E\x03\x02\x02\x02\u011E\u011C\x03\x02\x02\x02\u011E\u011F\x03\x02\x02\x02\u011F\u0121\x03\x02\x02\x02\u0120\u0113\x03\x02\x02\x02\u0120\u011C\x03\x02\x02\x02\u0121P\x03\x02\x02\x02\u0122\u0124\x07]\x02\x02\u0123\u0125\x05C"\x02\u0124\u0123\x03\x02\x02\x02\u0124\u0125\x03\x02\x02\x02\u0125\u0126\x03\x02\x02\x02\u0126\u012C\x05E#\x02\u0127\u0128\x05C"\x02\u0128\u0129\x05E#\x02\u0129\u012B\x03\x02\x02\x02\u012A\u0127\x03\x02\x02\x02\u012B\u012E\x03\x02\x02\x02\u012C\u012A\x03\x02\x02\x02\u012C\u012D\x03\x02\x02\x02\u012D\u0130\x03\x02\x02\x02\u012E\u012C\x03\x02\x02\x02\u012F\u0131\x05C"\x02\u0130\u012F\x03\x02\x02\x02\u0130\u0131\x03\x02\x02\x02\u0131\u0132\x03\x02\x02\x02\u0132\u0133\x07_\x02\x02\u0133R\x03\x02\x02\x02\u0134\u0136\x07]\x02\x02\u0135\u0137\x057\x1C\x02\u0136\u0135\x03\x02\x02\x02\u0137\u0138\x03\x02\x02\x02\u0138\u0136\x03\x02\x02\x02\u0138\u0139\x03\x02\x02\x02\u0139\u013B\x03\x02\x02\x02\u013A\u013C\x07T\x02\x02\u013B\u013A\x03\x02\x02\x02\u013B\u013C\x03\x02\x02\x02\u013C\u013D\x03\x02\x02\x02\u013D\u013E\x07_\x02\x02\u013ET\x03\x02\x02\x02\u013F\u0140\x05\'\x14\x02\u0140\u0141\x05\x07\x04\x02\u0141\u0142\x05%\x13\x02\u0142\u0143\x05!\x11\x02\u0143V\x03\x02\x02\x02\u0144\u0145\x05\x13\n\x02\u0145\u0146\x05\'\x14\x02\u0146\u0147\x05\x07\x04\x02\u0147\u0148\x05%\x13\x02\u0148X\x03\x02\x02\x02\u0149\u014A\x05%\x13\x02\u014A\u014B\x05\'\x14\x02\u014B\u014C\x05\x07\x04\x02\u014C\u014D\x05%\x13\x02\u014DZ\x03\x02\x02\x02\u014E\u014F\x05\x0B\x06\x02\u014F\u0150\x05\x1D\x0F\x02\u0150\u0151\x05\t\x05\x02\u0151\u0152\x05\x1B\x0E\x02\u0152\\\x03\x02\x02\x02\u0153\u0154\x05\t\x05\x02\u0154\u0155\x05\x1F\x10\x02\u0155\u0156\x05\x13\n\x02\u0156\u0157\x05\r\x07\x02\u0157^\x03\x02\x02\x02\u0158\u0159\x05\x0B\x06\x02\u0159\u015A\x05\x1D\x0F\x02\u015A\u015B\x05\t\x05\x02\u015B\u015C\x05\x13\n\x02\u015C`\x03\x02\x02\x02\u015D\u015E\x05\x0B\x06\x02\u015E\u015F\x05\x1D\x0F\x02\u015F\u0160\x05+\x16\x02\u0160\u0161\x05\x1B\x0E\x02\u0161b\x03\x02\x02\x02\u0162\u0163\x05\x0B\x06\x02\u0163\u0164\x05\x07\x04\x02\u0164\u0165\x05\x1F\x10\x02\u0165\u0166\x05\x1D\x0F\x02\u0166d\x03\x02\x02\x02\u0167\u0168\x05\x0B\x06\x02\u0168\u0169\x05!\x11\x02\u0169\u016A\x05\x03\x02\x02\u016A\u016B\x05\'\x14\x02\u016Bf\x03\x02\x02\x02\u016C\u016D\x05\x0B\x06\x02\u016D\u016E\x05\'\x14\x02\u016E\u016F\x05\x07\x04\x02\u016F\u0170\x05\x1D\x0F\x02\u0170h\x03\x02\x02\x02\u0171\u0172\x05\x0B\x06\x02\u0172\u0173\x05\'\x14\x02\u0173\u0174\x05\x0B\x06\x02\u0174\u0175\x05\x0B\x06\x02\u0175j\x03\x02\x02\x02\u0176\u0177\x05\x0B\x06\x02\u0177\u0178\x05)\x15\x02\u0178\u0179\x05\x07\x04\x02\u0179\u017A\x05\x11\t\x02\u017Al\x03\x02\x02\x02\u017B\u017C\x05\x0B\x06\x02\u017C\u017D\x05-\x17\x02\u017D\u017E\x05\x0B\x06\x02\u017E\u017F\x05%\x13\x02\u017Fn\x03\x02\x02\x02\u0180\u0181\x05\x19\r\x02\u0181\u0182\x05\x1F\x10\x02\u0182\u0183\x05\x1F\x10\x02\u0183\u0184\x05!\x11\x02\u0184p\x03\x02\x02\x02\u0185\u0186\x05\x1D\x0F\x02\u0186\u0187\x05\x0B\x06\x02\u0187\u0188\x051\x19\x02\u0188\u0189\x05)\x15\x02\u0189r\x03\x02\x02\x02\u018A\u018B\x05\x1D\x0F\x02\u018B\u018C\x05\'\x14\x02\u018C\u018D\x05\x07\x04\x02\u018D\u018E\x05\x1D\x0F\x02\u018Et\x03\x02\x02\x02\u018F\u0190\x05%\x13\x02\u0190\u0191\x05\x0B\x06\x02\u0191\u0192\x05)\x15\x02\u0192\u0193\x05\x1D\x0F\x02\u0193v\x03\x02\x02\x02\u0194\u0195\x05%\x13\x02\u0195\u0196\x05\x0B\x06\x02\u0196\u0197\x05!\x11\x02\u0197\u0198\x05\'\x14\x02\u0198x\x03\x02\x02\x02\u0199\u019A\x05%\x13\x02\u019A\u019B\x05\x0B\x06\x02\u019B\u019C\x05!\x11\x02\u019C\u019D\x05\x0B\x06\x02\u019Dz\x03\x02\x02\x02\u019E\u019F\x05\'\x14\x02\u019F\u01A0\x05+\x16\x02\u01A0\u01A1\x05\x05\x03\x02\u01A1\u01A2\x05%\x13\x02\u01A2|\x03\x02\x02\x02\u01A3\u01A4\x05+\x16\x02\u01A4\u01A5\x05\x1D\x0F\x02\u01A5\u01A6\x05)\x15\x02\u01A6\u01A7\x05\x19\r\x02\u01A7~\x03\x02\x02\x02\u01A8\u01AC\x07)\x02\x02\u01A9\u01AD\n#\x02\x02\u01AA\u01AB\x07^\x02\x02\u01AB\u01AD\x0B\x02\x02\x02\u01AC\u01A9\x03\x02\x02\x02\u01AC\u01AA\x03\x02\x02\x02\u01AD\u01AE\x03\x02\x02\x02\u01AE\u01AF\x07)\x02\x02\u01AF\x80\x03\x02\x02\x02\u01B0\u01B2\x07\'\x02\x02\u01B1\u01B3\x0423\x02\u01B2\u01B1\x03\x02\x02\x02\u01B3\u01B4\x03\x02\x02\x02\u01B4\u01B2\x03\x02\x02\x02\u01B4\u01B5\x03\x02\x02\x02\u01B5\x82\x03\x02\x02\x02\u01B6\u01B7\x05=\x1F\x02\u01B7\u01B8\x05? \x02\u01B8\u01B9\x05? \x02\u01B9\u01BB\x05? \x02\u01BA\u01BC\x05? \x02\u01BB\u01BA\x03\x02\x02\x02\u01BC\u01BD\x03\x02\x02\x02\u01BD\u01BB\x03\x02\x02\x02\u01BD\u01BE\x03\x02\x02\x02\u01BE\x84\x03\x02\x02\x02\u01BF\u01C0\x05-\x17\x02\u01C0\u01C1\x05\x03\x02\x02\u01C1\u01C2\x05%\x13\x02\u01C2\u01C3\x057\x1C\x02\u01C3\x86\x03\x02\x02\x02\u01C4\u01C5\x05-\x17\x02\u01C5\u01C6\x05\x03\x02\x02\u01C6\u01C7\x057\x1C\x02\u01C7\u01C8\x057\x1C\x02\u01C8\x88\x03\x02\x02\x02\u01C9\u01CA\x05\x1F\x10\x02\u01CA\u01CB\x05\x05\x03\x02\u01CB\u01CC\x05-\x17\x02\u01CC\u01CD\x057\x1C\x02\u01CD\x8A\x03\x02\x02\x02\u01CE\u01CF\x05\x1F\x10\x02\u01CF\u01D0\x05-\x17\x02\u01D0\u01D1\x057\x1C\x02\u01D1\u01D2\x057\x1C\x02\u01D2\x8C\x03\x02\x02\x02\u01D3\u01D4\x05\x1B\x0E\x02\u01D4\u01D5\x05-\x17\x02\u01D5\u01D6\x057\x1C\x02\u01D6\u01D7\x057\x1C\x02\u01D7\x8E\x03\x02\x02\x02\u01D8\u01D9\x05=\x1F\x02\u01D9\u01DA\x05? \x02\u01DA\u01DB\x05? \x02\u01DB\u01DC\x05? \x02\u01DC\x90\x03\x02\x02\x02\u01DD\u01DE\x05\x0B\x06\x02\u01DE\u01DF\x05#\x12\x02\u01DF\u01F6\x03\x02\x02\x02\u01E0\u01E1\x05\x1D\x0F\x02\u01E1\u01E2\x05\x0B\x06\x02\u01E2\u01F6\x03\x02\x02\x02\u01E3\u01E4\x05\x19\r\x02\u01E4\u01E5\x05)\x15\x02\u01E5\u01F6\x03\x02\x02\x02\u01E6\u01E7\x05\x0F\b\x02\u01E7\u01E8\x05)\x15\x02\u01E8\u01F6\x03\x02\x02\x02\u01E9\u01EA\x05\x19\r\x02\u01EA\u01EB\x05\x0B\x06\x02\u01EB\u01F6\x03\x02\x02\x02\u01EC\u01ED\x05\x0F\b\x02\u01ED\u01EE\x05\x0B\x06\x02\u01EE\u01F6\x03\x02\x02\x02\u01EF\u01F0\x05\x05\x03\x02\u01F0\u01F1\x05)\x15\x02\u01F1\u01F6\x03\x02\x02\x02\u01F2\u01F3\x05\x05\x03\x02\u01F3\u01F4\x05\r\x07\x02\u01F4\u01F6\x03\x02\x02\x02\u01F5\u01DD\x03\x02\x02\x02\u01F5\u01E0\x03\x02\x02\x02\u01F5\u01E3\x03\x02\x02\x02\u01F5\u01E6\x03\x02\x02\x02\u01F5\u01E9\x03\x02\x02\x02\u01F5\u01EC\x03\x02\x02\x02\u01F5\u01EF\x03\x02\x02\x02\u01F5\u01F2\x03\x02\x02\x02\u01F6\x92\x03\x02\x02\x02\u01F7\u0203\x07?\x02\x02\u01F8\u01F9\x07#\x02\x02\u01F9\u0203\x07?\x02\x02\u01FA\u01FB\x07>\x02\x02\u01FB\u0203\x07@\x02\x02\u01FC\u0203\x07@\x02\x02\u01FD\u01FE\x07@\x02\x02\u01FE\u0203\x07?\x02\x02\u01FF\u0203\x07>\x02\x02\u0200\u0201\x07>\x02\x02\u0201\u0203\x07?\x02\x02\u0202\u01F7\x03\x02\x02\x02\u0202\u01F8\x03\x02\x02\x02\u0202\u01FA\x03\x02\x02\x02\u0202\u01FC\x03\x02\x02\x02\u0202\u01FD\x03\x02\x02\x02\u0202\u01FF\x03\x02\x02\x02\u0202\u0200\x03\x02\x02\x02\u0203\x94\x03\x02\x02\x02\u0204\u0205\x05\x03\x02\x02\u0205\u0206\x05\x1D\x0F\x02\u0206\u0207\x05\t\x05\x02\u0207\u020C\x03\x02\x02\x02\u0208\u0209\x05\x1F\x10\x02\u0209\u020A\x05%\x13\x02\u020A\u020C\x03\x02\x02\x02\u020B\u0204\x03\x02\x02\x02\u020B\u0208\x03\x02\x02\x02\u020C\x96\x03\x02\x02\x02\u020D\u020F\x05;\x1E\x02\u020E\u020D\x03\x02\x02\x02\u020E\u020F\x03\x02\x02\x02\u020F\u0213\x03\x02\x02\x02\u0210\u0212\x057\x1C\x02\u0211\u0210\x03\x02\x02\x02\u0212\u0215\x03\x02\x02\x02\u0213\u0211\x03\x02\x02\x02\u0213\u0214\x03\x02\x02\x02\u0214\u0216\x03\x02\x02\x02\u0215\u0213\x03\x02\x02\x02\u0216\u0218\x070\x02\x02\u0217\u0219\x057\x1C\x02\u0218\u0217\x03\x02\x02\x02\u0219\u021A\x03\x02\x02\x02\u021A\u0218\x03\x02\x02\x02\u021A\u021B\x03\x02\x02\x02\u021B\x98\x03\x02\x02\x02\u021C\u021E\x05;\x1E\x02\u021D\u021C\x03\x02\x02\x02\u021D\u021E\x03\x02\x02\x02\u021E\u0220\x03\x02\x02\x02\u021F\u0221\x057\x1C\x02\u0220\u021F\x03\x02\x02\x02\u0221\u0222\x03\x02\x02\x02\u0222\u0220\x03\x02\x02\x02\u0222\u0223\x03\x02\x02\x02\u0223\x9A\x03\x02\x02\x02\u0224\u0226\x05A!\x02\u0225\u0224\x03\x02\x02\x02\u0226\u0227\x03\x02\x02\x02\u0227\u0225\x03\x02\x02\x02\u0227\u0228\x03\x02\x02\x02\u0228\x9C\x03\x02\x02\x02\u0229\u022C\x05A!\x02\u022A\u022C\t"\x02\x02\u022B\u0229\x03\x02\x02\x02\u022B\u022A\x03\x02\x02\x02\u022C\u022F\x03\x02\x02\x02\u022D\u022B\x03\x02\x02\x02\u022D\u022E\x03\x02\x02\x02\u022E\u0230\x03\x02\x02\x02\u022F\u022D\x03\x02\x02\x02\u0230\u0231\t"\x02\x02\u0231\x9E\x03\x02\x02\x02\u0232\u0237\x05=\x1F\x02\u0233\u0235\x05? \x02\u0234\u0236\x05? \x02\u0235\u0234\x03\x02\x02\x02\u0235\u0236\x03\x02\x02\x02\u0236\u0238\x03\x02\x02\x02\u0237\u0233\x03\x02\x02\x02\u0237\u0238\x03\x02\x02\x02\u0238\xA0\x03\x02\x02\x02\u0239\u023A\x0B\x02\x02\x02\u023A\u023B\x03\x02\x02\x02\u023B\u023C\bQ\x02\x02\u023C\xA2\x03\x02\x02\x02&\x02\xDC\xE9\xEE\xF4\xF6\xFF\u0104\u010C\u010E\u0110\u0117\u011C\u011E\u0120\u0124\u012C\u0130\u0138\u013B\u01AC\u01B4\u01BD\u01F5\u0202\u020B\u020E\u0213\u021A\u021D\u0222\u0227\u022B\u022D\u0235\u0237\x03\b\x02\x02'));
+    var tmp_9 = this;
+    var tmp_10 = 0;
+    var tmp_11 = this.ATN_1._get_numberOfDecisions__1854093626_unvnsq_k$();
+    var tmp$ret$5;
+    $l$block_4: {
+      tmp$ret$5 = fillArrayVal(Array(tmp_11), null);
+      break $l$block_4;
+    }
+    var tmp_12 = tmp$ret$5;
+    while (tmp_10 < tmp_11) {
+      var tmp_13 = tmp_10;
+      var tmp$ret$6;
+      $l$block_5: {
+        tmp$ret$6 = new DFA(ensureNotNull(Companion_getInstance_6().ATN_1.getDecisionState_m2smv2_k$(tmp_13)), tmp_13);
+        break $l$block_5;
+      }
+      tmp_12[tmp_13] = tmp$ret$6;
+      tmp_10 = tmp_10 + 1 | 0;
+    }
+    tmp_9.decisionToDFA_1 = tmp_12;
+  }
+  Companion_4.prototype._get_decisionToDFA__1733740713_so82w9_k$ = function () {
+    return this.decisionToDFA_1;
+  };
+  Companion_4.prototype._get_sharedContextCache__1757505139_t2dfn7_k$ = function () {
+    return this.sharedContextCache_1;
+  };
+  Companion_4.prototype._get_VOCABULARY__1574547557_q1g0o5_k$ = function () {
+    return this.VOCABULARY_1;
+  };
+  Companion_4.prototype._get_tokenNames__755820956_chzv6k_k$ = function () {
+    return this.tokenNames_1;
+  };
+  Companion_4.prototype._get_ATN__855870838_e5ka5y_k$ = function () {
+    return this.ATN_1;
+  };
+  Companion_4.$metadata$ = {
+    simpleName: 'Companion',
+    kind: 'object',
+    interfaces: []
+  };
+  var Companion_instance_4;
+  function Companion_getInstance_6() {
+    if (Companion_instance_4 == null)
+      new Companion_4();
+    return Companion_instance_4;
+  }
+  function Tokens_4(name, ordinal, id) {
+    Enum.call(this, name, ordinal);
+    this.id_1 = id;
+  }
+  Tokens_4.prototype._get_id__1413120976_ndc34g_k$ = function () {
+    return this.id_1;
+  };
+  Tokens_4.$metadata$ = {
+    simpleName: 'Tokens',
+    kind: 'class',
+    interfaces: []
+  };
+  function Channels_1(name, ordinal, id) {
+    Enum.call(this, name, ordinal);
+    this.id_1 = id;
+  }
+  Channels_1.prototype._get_id__1413120976_ndc34g_k$ = function () {
+    return this.id_1;
+  };
+  Channels_1.$metadata$ = {
+    simpleName: 'Channels',
+    kind: 'class',
+    interfaces: []
+  };
+  function Modes_1(name, ordinal, id) {
+    Enum.call(this, name, ordinal);
+    this.id_1 = id;
+  }
+  Modes_1.prototype._get_id__1413120976_ndc34g_k$ = function () {
+    return this.id_1;
+  };
+  Modes_1.$metadata$ = {
+    simpleName: 'Modes',
+    kind: 'class',
+    interfaces: []
+  };
+  function Rules_4(name, ordinal) {
+    Enum.call(this, name, ordinal);
+  }
+  Rules_4.$metadata$ = {
+    simpleName: 'Rules',
+    kind: 'class',
+    interfaces: []
+  };
+  function Tokens_COMMENT_getInstance_4() {
+    Tokens_initEntries_4();
+    return Tokens_COMMENT_instance_4;
+  }
+  function Tokens_C1_STRING_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_C1_STRING_instance_2;
+  }
+  function Tokens_QUOTE_STRING_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_QUOTE_STRING_instance_2;
+  }
+  function Tokens_MONACO_AUTOCOMPLETE_ITEM_getInstance_4() {
+    Tokens_initEntries_4();
+    return Tokens_MONACO_AUTOCOMPLETE_ITEM_instance_4;
+  }
+  function Tokens_BYTE_STRING_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_BYTE_STRING_instance_2;
+  }
+  function Tokens_ANIMATION_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_ANIMATION_instance_2;
+  }
+  function Tokens_SCRP_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_SCRP_instance_2;
+  }
+  function Tokens_ISCR_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_ISCR_instance_2;
+  }
+  function Tokens_RSCR_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_RSCR_instance_2;
+  }
+  function Tokens_ENDM_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_ENDM_instance_2;
+  }
+  function Tokens_DOIF_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_DOIF_instance_2;
+  }
+  function Tokens_ENDI_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_ENDI_instance_2;
+  }
+  function Tokens_ENUM_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_ENUM_instance_2;
+  }
+  function Tokens_ECON_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_ECON_instance_2;
+  }
+  function Tokens_EPAS_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_EPAS_instance_2;
+  }
+  function Tokens_ESCN_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_ESCN_instance_2;
+  }
+  function Tokens_ESEE_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_ESEE_instance_2;
+  }
+  function Tokens_ETCH_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_ETCH_instance_2;
+  }
+  function Tokens_EVER_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_EVER_instance_2;
+  }
+  function Tokens_LOOP_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_LOOP_instance_2;
+  }
+  function Tokens_NEXT_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_NEXT_instance_2;
+  }
+  function Tokens_NSCN_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_NSCN_instance_2;
+  }
+  function Tokens_RETN_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_RETN_instance_2;
+  }
+  function Tokens_REPS_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_REPS_instance_2;
+  }
+  function Tokens_REPE_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_REPE_instance_2;
+  }
+  function Tokens_SUBR_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_SUBR_instance_2;
+  }
+  function Tokens_UNTL_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_UNTL_instance_2;
+  }
+  function Tokens_CHAR_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_CHAR_instance_2;
+  }
+  function Tokens_BINARY_INT_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_BINARY_INT_instance_2;
+  }
+  function Tokens_WORD_PLUS_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_WORD_PLUS_instance_2;
+  }
+  function Tokens_VARx_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_VARx_instance_2;
+  }
+  function Tokens_VAxx_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_VAxx_instance_2;
+  }
+  function Tokens_OBVx_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_OBVx_instance_2;
+  }
+  function Tokens_OVxx_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_OVxx_instance_2;
+  }
+  function Tokens_MVxx_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_MVxx_instance_2;
+  }
+  function Tokens_WORD_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_WORD_instance_2;
+  }
+  function Tokens_EQ_OP_OLD_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_EQ_OP_OLD_instance_2;
+  }
+  function Tokens_EQ_OP_NEW_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_EQ_OP_NEW_instance_2;
+  }
+  function Tokens_EQ_JOIN_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_EQ_JOIN_instance_2;
+  }
+  function Tokens_FLOAT_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_FLOAT_instance_2;
+  }
+  function Tokens_INT_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_INT_instance_2;
+  }
+  function Tokens_SPACES_getInstance() {
+    Tokens_initEntries_4();
+    return Tokens_SPACES_instance;
+  }
+  function Tokens_NEWLINE_getInstance_1() {
+    Tokens_initEntries_4();
+    return Tokens_NEWLINE_instance_1;
+  }
+  function Tokens_INCOMPLETE_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_INCOMPLETE_instance_2;
+  }
+  function Tokens_ERROR_CHAR_getInstance_2() {
+    Tokens_initEntries_4();
+    return Tokens_ERROR_CHAR_instance_2;
+  }
+  function Channels_DEFAULT_TOKEN_CHANNEL_getInstance_1() {
+    Channels_initEntries_1();
+    return Channels_DEFAULT_TOKEN_CHANNEL_instance_1;
+  }
+  function Channels_HIDDEN_getInstance_1() {
+    Channels_initEntries_1();
+    return Channels_HIDDEN_instance_1;
+  }
+  function Modes_DEFAULT_MODE_getInstance_1() {
+    Modes_initEntries_1();
+    return Modes_DEFAULT_MODE_instance_1;
+  }
+  function Rules_A_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_A_instance_0;
+  }
+  function Rules_B_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_B_instance_0;
+  }
+  function Rules_C_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_C_instance_0;
+  }
+  function Rules_D_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_D_instance_0;
+  }
+  function Rules_E_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_E_instance_0;
+  }
+  function Rules_F_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_F_instance_0;
+  }
+  function Rules_G_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_G_instance_0;
+  }
+  function Rules_H_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_H_instance_0;
+  }
+  function Rules_I_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_I_instance_0;
+  }
+  function Rules_J_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_J_instance_0;
+  }
+  function Rules_K_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_K_instance_0;
+  }
+  function Rules_L_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_L_instance_0;
+  }
+  function Rules_M_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_M_instance_0;
+  }
+  function Rules_N_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_N_instance_0;
+  }
+  function Rules_O_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_O_instance_0;
+  }
+  function Rules_P_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_P_instance_0;
+  }
+  function Rules_Q_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_Q_instance_0;
+  }
+  function Rules_R_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_R_instance_0;
+  }
+  function Rules_S_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_S_instance_0;
+  }
+  function Rules_T_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_T_instance_0;
+  }
+  function Rules_U_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_U_instance_0;
+  }
+  function Rules_V_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_V_instance_0;
+  }
+  function Rules_W_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_W_instance_0;
+  }
+  function Rules_X_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_X_instance_0;
+  }
+  function Rules_Y_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_Y_instance_0;
+  }
+  function Rules_Z_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_Z_instance_0;
+  }
+  function Rules_NUMBER_getInstance_1() {
+    Rules_initEntries_4();
+    return Rules_NUMBER_instance_1;
+  }
+  function Rules_C1_STRING_BODY_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_C1_STRING_BODY_instance_0;
+  }
+  function Rules_SIGN_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_SIGN_instance_0;
+  }
+  function Rules_TCHAR_START_getInstance_1() {
+    Rules_initEntries_4();
+    return Rules_TCHAR_START_instance_1;
+  }
+  function Rules_TCHAR_getInstance_1() {
+    Rules_initEntries_4();
+    return Rules_TCHAR_instance_1;
+  }
+  function Rules_SPACE_getInstance_1() {
+    Rules_initEntries_4();
+    return Rules_SPACE_instance_1;
+  }
+  function Rules_SPACES_FRAG_getInstance() {
+    Rules_initEntries_4();
+    return Rules_SPACES_FRAG_instance;
+  }
+  function Rules_INTS_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_INTS_instance_0;
+  }
+  function Rules_QUOTE_STRING_FRAGMENT_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_QUOTE_STRING_FRAGMENT_instance_0;
+  }
+  function Rules_COMMENT_getInstance_1() {
+    Rules_initEntries_4();
+    return Rules_COMMENT_instance_1;
+  }
+  function Rules_C1_STRING_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_C1_STRING_instance_0;
+  }
+  function Rules_QUOTE_STRING_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_QUOTE_STRING_instance_0;
+  }
+  function Rules_MONACO_AUTOCOMPLETE_ITEM_getInstance_1() {
+    Rules_initEntries_4();
+    return Rules_MONACO_AUTOCOMPLETE_ITEM_instance_1;
+  }
+  function Rules_BYTE_STRING_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_BYTE_STRING_instance_0;
+  }
+  function Rules_ANIMATION_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_ANIMATION_instance_0;
+  }
+  function Rules_SCRP_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_SCRP_instance_0;
+  }
+  function Rules_ISCR_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_ISCR_instance_0;
+  }
+  function Rules_RSCR_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_RSCR_instance_0;
+  }
+  function Rules_ENDM_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_ENDM_instance_0;
+  }
+  function Rules_DOIF_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_DOIF_instance_0;
+  }
+  function Rules_ENDI_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_ENDI_instance_0;
+  }
+  function Rules_ENUM_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_ENUM_instance_0;
+  }
+  function Rules_ECON_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_ECON_instance_0;
+  }
+  function Rules_EPAS_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_EPAS_instance_0;
+  }
+  function Rules_ESCN_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_ESCN_instance_0;
+  }
+  function Rules_ESEE_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_ESEE_instance_0;
+  }
+  function Rules_ETCH_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_ETCH_instance_0;
+  }
+  function Rules_EVER_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_EVER_instance_0;
+  }
+  function Rules_LOOP_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_LOOP_instance_0;
+  }
+  function Rules_NEXT_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_NEXT_instance_0;
+  }
+  function Rules_NSCN_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_NSCN_instance_0;
+  }
+  function Rules_RETN_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_RETN_instance_0;
+  }
+  function Rules_REPS_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_REPS_instance_0;
+  }
+  function Rules_REPE_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_REPE_instance_0;
+  }
+  function Rules_SUBR_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_SUBR_instance_0;
+  }
+  function Rules_UNTL_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_UNTL_instance_0;
+  }
+  function Rules_CHAR_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_CHAR_instance_0;
+  }
+  function Rules_BINARY_INT_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_BINARY_INT_instance_0;
+  }
+  function Rules_WORD_PLUS_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_WORD_PLUS_instance_0;
+  }
+  function Rules_VARx_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_VARx_instance_0;
+  }
+  function Rules_VAxx_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_VAxx_instance_0;
+  }
+  function Rules_OBVx_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_OBVx_instance_0;
+  }
+  function Rules_OVxx_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_OVxx_instance_0;
+  }
+  function Rules_MVxx_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_MVxx_instance_0;
+  }
+  function Rules_WORD_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_WORD_instance_0;
+  }
+  function Rules_EQ_OP_OLD_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_EQ_OP_OLD_instance_0;
+  }
+  function Rules_EQ_OP_NEW_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_EQ_OP_NEW_instance_0;
+  }
+  function Rules_EQ_JOIN_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_EQ_JOIN_instance_0;
+  }
+  function Rules_FLOAT_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_FLOAT_instance_0;
+  }
+  function Rules_INT_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_INT_instance_0;
+  }
+  function Rules_SPACES_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_SPACES_instance_0;
+  }
+  function Rules_NEWLINE_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_NEWLINE_instance_0;
+  }
+  function Rules_INCOMPLETE_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_INCOMPLETE_instance_0;
+  }
+  function Rules_ERROR_CHAR_getInstance_0() {
+    Rules_initEntries_4();
+    return Rules_ERROR_CHAR_instance_0;
+  }
+  function CaosWhitespaceLexer(input) {
+    Companion_getInstance_6();
+    Lexer_init_$Init$(input, this);
+    this.input_1 = input;
+    var tmp = this;
+    var tmp$ret$2;
+    $l$block_1: {
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp0_map_0 = values_14();
+        var tmp1_map_0 = name$factory_1();
+        var tmp$ret$0;
+        $l$block: {
+          var tmp0_mapTo_0_1 = ArrayList_init_$Create$(tmp0_map_0.length);
+          var indexedObject = tmp0_map_0;
+          var inductionVariable = 0;
+          var last = indexedObject.length;
+          while (inductionVariable < last) {
+            var item_2_3 = indexedObject[inductionVariable];
+            inductionVariable = inductionVariable + 1 | 0;
+            tmp0_mapTo_0_1.add_1j60pz_k$(tmp1_map_0(item_2_3));
+            Unit_getInstance();
+          }
+          tmp$ret$0 = tmp0_mapTo_0_1;
+          break $l$block;
+        }
+        tmp$ret$1 = tmp$ret$0;
+        break $l$block_0;
+      }
+      var tmp2_toTypedArray_0 = tmp$ret$1;
+      tmp$ret$2 = copyToArray(tmp2_toTypedArray_0);
+      break $l$block_1;
+    }
+    tmp.channelNames_1 = tmp$ret$2;
+    var tmp_0 = Companion_getInstance_6().ATN_1;
+    var tmp_1 = Companion_getInstance_6().decisionToDFA_1;
+    this._set_interpreter__1998960843_4oqlp7_k$(new LexerATNSimulator(this, tmp_0, isArray(tmp_1) ? tmp_1 : THROW_CCE(), Companion_getInstance_6().sharedContextCache_1));
+  }
+  CaosWhitespaceLexer.prototype._get_input__3323368775_g2gq7t_k$ = function () {
+    return this.input_1;
+  };
+  CaosWhitespaceLexer.prototype._get_ruleNames__2055232037_xzmr6t_k$ = function () {
+    var tmp$ret$3;
+    $l$block_2: {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp0_map_0 = values_16();
+        var tmp$ret$1;
+        $l$block_0: {
+          var tmp0_mapTo_0_1 = ArrayList_init_$Create$(tmp0_map_0.length);
+          var indexedObject = tmp0_map_0;
+          var inductionVariable = 0;
+          var last = indexedObject.length;
+          while (inductionVariable < last) {
+            var item_2_3 = indexedObject[inductionVariable];
+            inductionVariable = inductionVariable + 1 | 0;
+            var tmp$ret$0;
+            $l$block: {
+              tmp$ret$0 = item_2_3._get_name__804168992_das4rk_k$();
+              break $l$block;
+            }
+            tmp0_mapTo_0_1.add_1j60pz_k$(tmp$ret$0);
+            Unit_getInstance();
+          }
+          tmp$ret$1 = tmp0_mapTo_0_1;
+          break $l$block_0;
+        }
+        tmp$ret$2 = tmp$ret$1;
+        break $l$block_1;
+      }
+      var tmp1_toTypedArray_0 = tmp$ret$2;
+      tmp$ret$3 = copyToArray(tmp1_toTypedArray_0);
+      break $l$block_2;
+    }
+    return tmp$ret$3;
+  };
+  CaosWhitespaceLexer.prototype._get_grammarFileName__342047459_5nn9ib_k$ = function () {
+    return 'CaosWhitespaceLexer.g4';
+  };
+  CaosWhitespaceLexer.prototype._get_atn__856855894_e65e8m_k$ = function () {
+    return Companion_getInstance_6().ATN_1;
+  };
+  CaosWhitespaceLexer.prototype._get_vocabulary__3716553829_9kdeor_k$ = function () {
+    return Companion_getInstance_6().VOCABULARY_1;
+  };
+  CaosWhitespaceLexer.prototype._get_channelNames__1015995878_gswbfq_k$ = function () {
+    return this.channelNames_1;
+  };
+  CaosWhitespaceLexer.$metadata$ = {
+    simpleName: 'CaosWhitespaceLexer',
+    kind: 'class',
+    interfaces: []
+  };
+  function name$factory_1() {
+    return getPropertyCallableRef('name', 1, KProperty1, function (receiver) {
+      return receiver._get_name__804168992_das4rk_k$();
+    }, null);
+  }
+  var Tokens_EOF_instance_2;
+  var Tokens_COMMENT_instance_5;
+  var Tokens_C1_STRING_instance_3;
+  var Tokens_QUOTE_STRING_instance_3;
+  var Tokens_MONACO_AUTOCOMPLETE_ITEM_instance_5;
+  var Tokens_BYTE_STRING_instance_3;
+  var Tokens_ANIMATION_instance_3;
+  var Tokens_SCRP_instance_3;
+  var Tokens_ISCR_instance_3;
+  var Tokens_RSCR_instance_3;
+  var Tokens_ENDM_instance_3;
+  var Tokens_DOIF_instance_3;
+  var Tokens_ENDI_instance_3;
+  var Tokens_ENUM_instance_3;
+  var Tokens_ECON_instance_3;
+  var Tokens_EPAS_instance_3;
+  var Tokens_ESCN_instance_3;
+  var Tokens_ESEE_instance_3;
+  var Tokens_ETCH_instance_3;
+  var Tokens_EVER_instance_3;
+  var Tokens_LOOP_instance_3;
+  var Tokens_NEXT_instance_3;
+  var Tokens_NSCN_instance_3;
+  var Tokens_RETN_instance_3;
+  var Tokens_REPS_instance_3;
+  var Tokens_REPE_instance_3;
+  var Tokens_SUBR_instance_3;
+  var Tokens_UNTL_instance_3;
+  var Tokens_CHAR_instance_3;
+  var Tokens_BINARY_INT_instance_3;
+  var Tokens_WORD_PLUS_instance_3;
+  var Tokens_VARx_instance_3;
+  var Tokens_VAxx_instance_3;
+  var Tokens_OBVx_instance_3;
+  var Tokens_OVxx_instance_3;
+  var Tokens_MVxx_instance_3;
+  var Tokens_WORD_instance_3;
+  var Tokens_EQ_OP_OLD_instance_3;
+  var Tokens_EQ_OP_NEW_instance_3;
+  var Tokens_EQ_JOIN_instance_3;
+  var Tokens_FLOAT_instance_3;
+  var Tokens_INT_instance_3;
+  var Tokens_SPACES_instance_0;
+  var Tokens_NEWLINE_instance_2;
+  var Tokens_INCOMPLETE_instance_3;
+  var Tokens_ERROR_CHAR_instance_3;
+  function values_17() {
+    return [Tokens_EOF_getInstance_2(), Tokens_COMMENT_getInstance_5(), Tokens_C1_STRING_getInstance_3(), Tokens_QUOTE_STRING_getInstance_3(), Tokens_MONACO_AUTOCOMPLETE_ITEM_getInstance_5(), Tokens_BYTE_STRING_getInstance_3(), Tokens_ANIMATION_getInstance_3(), Tokens_SCRP_getInstance_3(), Tokens_ISCR_getInstance_3(), Tokens_RSCR_getInstance_3(), Tokens_ENDM_getInstance_3(), Tokens_DOIF_getInstance_3(), Tokens_ENDI_getInstance_3(), Tokens_ENUM_getInstance_3(), Tokens_ECON_getInstance_3(), Tokens_EPAS_getInstance_3(), Tokens_ESCN_getInstance_3(), Tokens_ESEE_getInstance_3(), Tokens_ETCH_getInstance_3(), Tokens_EVER_getInstance_3(), Tokens_LOOP_getInstance_3(), Tokens_NEXT_getInstance_3(), Tokens_NSCN_getInstance_3(), Tokens_RETN_getInstance_3(), Tokens_REPS_getInstance_3(), Tokens_REPE_getInstance_3(), Tokens_SUBR_getInstance_3(), Tokens_UNTL_getInstance_3(), Tokens_CHAR_getInstance_3(), Tokens_BINARY_INT_getInstance_3(), Tokens_WORD_PLUS_getInstance_3(), Tokens_VARx_getInstance_3(), Tokens_VAxx_getInstance_3(), Tokens_OBVx_getInstance_3(), Tokens_OVxx_getInstance_3(), Tokens_MVxx_getInstance_3(), Tokens_WORD_getInstance_3(), Tokens_EQ_OP_OLD_getInstance_3(), Tokens_EQ_OP_NEW_getInstance_3(), Tokens_EQ_JOIN_getInstance_3(), Tokens_FLOAT_getInstance_3(), Tokens_INT_getInstance_3(), Tokens_SPACES_getInstance_0(), Tokens_NEWLINE_getInstance_2(), Tokens_INCOMPLETE_getInstance_3(), Tokens_ERROR_CHAR_getInstance_3()];
+  }
+  function valueOf_17(value) {
+    switch (value) {
+      case 'EOF':
+        return Tokens_EOF_getInstance_2();
+      case 'COMMENT':
+        return Tokens_COMMENT_getInstance_5();
+      case 'C1_STRING':
+        return Tokens_C1_STRING_getInstance_3();
+      case 'QUOTE_STRING':
+        return Tokens_QUOTE_STRING_getInstance_3();
+      case 'MONACO_AUTOCOMPLETE_ITEM':
+        return Tokens_MONACO_AUTOCOMPLETE_ITEM_getInstance_5();
+      case 'BYTE_STRING':
+        return Tokens_BYTE_STRING_getInstance_3();
+      case 'ANIMATION':
+        return Tokens_ANIMATION_getInstance_3();
+      case 'SCRP':
+        return Tokens_SCRP_getInstance_3();
+      case 'ISCR':
+        return Tokens_ISCR_getInstance_3();
+      case 'RSCR':
+        return Tokens_RSCR_getInstance_3();
+      case 'ENDM':
+        return Tokens_ENDM_getInstance_3();
+      case 'DOIF':
+        return Tokens_DOIF_getInstance_3();
+      case 'ENDI':
+        return Tokens_ENDI_getInstance_3();
+      case 'ENUM':
+        return Tokens_ENUM_getInstance_3();
+      case 'ECON':
+        return Tokens_ECON_getInstance_3();
+      case 'EPAS':
+        return Tokens_EPAS_getInstance_3();
+      case 'ESCN':
+        return Tokens_ESCN_getInstance_3();
+      case 'ESEE':
+        return Tokens_ESEE_getInstance_3();
+      case 'ETCH':
+        return Tokens_ETCH_getInstance_3();
+      case 'EVER':
+        return Tokens_EVER_getInstance_3();
+      case 'LOOP':
+        return Tokens_LOOP_getInstance_3();
+      case 'NEXT':
+        return Tokens_NEXT_getInstance_3();
+      case 'NSCN':
+        return Tokens_NSCN_getInstance_3();
+      case 'RETN':
+        return Tokens_RETN_getInstance_3();
+      case 'REPS':
+        return Tokens_REPS_getInstance_3();
+      case 'REPE':
+        return Tokens_REPE_getInstance_3();
+      case 'SUBR':
+        return Tokens_SUBR_getInstance_3();
+      case 'UNTL':
+        return Tokens_UNTL_getInstance_3();
+      case 'CHAR':
+        return Tokens_CHAR_getInstance_3();
+      case 'BINARY_INT':
+        return Tokens_BINARY_INT_getInstance_3();
+      case 'WORD_PLUS':
+        return Tokens_WORD_PLUS_getInstance_3();
+      case 'VARx':
+        return Tokens_VARx_getInstance_3();
+      case 'VAxx':
+        return Tokens_VAxx_getInstance_3();
+      case 'OBVx':
+        return Tokens_OBVx_getInstance_3();
+      case 'OVxx':
+        return Tokens_OVxx_getInstance_3();
+      case 'MVxx':
+        return Tokens_MVxx_getInstance_3();
+      case 'WORD':
+        return Tokens_WORD_getInstance_3();
+      case 'EQ_OP_OLD':
+        return Tokens_EQ_OP_OLD_getInstance_3();
+      case 'EQ_OP_NEW':
+        return Tokens_EQ_OP_NEW_getInstance_3();
+      case 'EQ_JOIN':
+        return Tokens_EQ_JOIN_getInstance_3();
+      case 'FLOAT':
+        return Tokens_FLOAT_getInstance_3();
+      case 'INT':
+        return Tokens_INT_getInstance_3();
+      case 'SPACES':
+        return Tokens_SPACES_getInstance_0();
+      case 'NEWLINE':
+        return Tokens_NEWLINE_getInstance_2();
+      case 'INCOMPLETE':
+        return Tokens_INCOMPLETE_getInstance_3();
+      case 'ERROR_CHAR':
+        return Tokens_ERROR_CHAR_getInstance_3();
+      default:
+        Tokens_initEntries_5();
+        THROW_ISE();
+        break;
+    }
+  }
+  var Tokens_entriesInitialized_5;
+  function Tokens_initEntries_5() {
+    if (Tokens_entriesInitialized_5)
+      return Unit_getInstance();
+    Tokens_entriesInitialized_5 = true;
+    Tokens_EOF_instance_2 = new Tokens_5('EOF', 0, -1);
+    Tokens_COMMENT_instance_5 = new Tokens_5('COMMENT', 1, 1);
+    Tokens_C1_STRING_instance_3 = new Tokens_5('C1_STRING', 2, 2);
+    Tokens_QUOTE_STRING_instance_3 = new Tokens_5('QUOTE_STRING', 3, 3);
+    Tokens_MONACO_AUTOCOMPLETE_ITEM_instance_5 = new Tokens_5('MONACO_AUTOCOMPLETE_ITEM', 4, 4);
+    Tokens_BYTE_STRING_instance_3 = new Tokens_5('BYTE_STRING', 5, 5);
+    Tokens_ANIMATION_instance_3 = new Tokens_5('ANIMATION', 6, 6);
+    Tokens_SCRP_instance_3 = new Tokens_5('SCRP', 7, 7);
+    Tokens_ISCR_instance_3 = new Tokens_5('ISCR', 8, 8);
+    Tokens_RSCR_instance_3 = new Tokens_5('RSCR', 9, 9);
+    Tokens_ENDM_instance_3 = new Tokens_5('ENDM', 10, 10);
+    Tokens_DOIF_instance_3 = new Tokens_5('DOIF', 11, 11);
+    Tokens_ENDI_instance_3 = new Tokens_5('ENDI', 12, 12);
+    Tokens_ENUM_instance_3 = new Tokens_5('ENUM', 13, 13);
+    Tokens_ECON_instance_3 = new Tokens_5('ECON', 14, 14);
+    Tokens_EPAS_instance_3 = new Tokens_5('EPAS', 15, 15);
+    Tokens_ESCN_instance_3 = new Tokens_5('ESCN', 16, 16);
+    Tokens_ESEE_instance_3 = new Tokens_5('ESEE', 17, 17);
+    Tokens_ETCH_instance_3 = new Tokens_5('ETCH', 18, 18);
+    Tokens_EVER_instance_3 = new Tokens_5('EVER', 19, 19);
+    Tokens_LOOP_instance_3 = new Tokens_5('LOOP', 20, 20);
+    Tokens_NEXT_instance_3 = new Tokens_5('NEXT', 21, 21);
+    Tokens_NSCN_instance_3 = new Tokens_5('NSCN', 22, 22);
+    Tokens_RETN_instance_3 = new Tokens_5('RETN', 23, 23);
+    Tokens_REPS_instance_3 = new Tokens_5('REPS', 24, 24);
+    Tokens_REPE_instance_3 = new Tokens_5('REPE', 25, 25);
+    Tokens_SUBR_instance_3 = new Tokens_5('SUBR', 26, 26);
+    Tokens_UNTL_instance_3 = new Tokens_5('UNTL', 27, 27);
+    Tokens_CHAR_instance_3 = new Tokens_5('CHAR', 28, 28);
+    Tokens_BINARY_INT_instance_3 = new Tokens_5('BINARY_INT', 29, 29);
+    Tokens_WORD_PLUS_instance_3 = new Tokens_5('WORD_PLUS', 30, 30);
+    Tokens_VARx_instance_3 = new Tokens_5('VARx', 31, 31);
+    Tokens_VAxx_instance_3 = new Tokens_5('VAxx', 32, 32);
+    Tokens_OBVx_instance_3 = new Tokens_5('OBVx', 33, 33);
+    Tokens_OVxx_instance_3 = new Tokens_5('OVxx', 34, 34);
+    Tokens_MVxx_instance_3 = new Tokens_5('MVxx', 35, 35);
+    Tokens_WORD_instance_3 = new Tokens_5('WORD', 36, 36);
+    Tokens_EQ_OP_OLD_instance_3 = new Tokens_5('EQ_OP_OLD', 37, 37);
+    Tokens_EQ_OP_NEW_instance_3 = new Tokens_5('EQ_OP_NEW', 38, 38);
+    Tokens_EQ_JOIN_instance_3 = new Tokens_5('EQ_JOIN', 39, 39);
+    Tokens_FLOAT_instance_3 = new Tokens_5('FLOAT', 40, 40);
+    Tokens_INT_instance_3 = new Tokens_5('INT', 41, 41);
+    Tokens_SPACES_instance_0 = new Tokens_5('SPACES', 42, 42);
+    Tokens_NEWLINE_instance_2 = new Tokens_5('NEWLINE', 43, 43);
+    Tokens_INCOMPLETE_instance_3 = new Tokens_5('INCOMPLETE', 44, 44);
+    Tokens_ERROR_CHAR_instance_3 = new Tokens_5('ERROR_CHAR', 45, 45);
+  }
+  var Rules_RULE_file_instance_2;
+  var Rules_RULE_eof_instance_2;
+  var Rules_RULE_elements_instance_2;
+  var Rules_RULE_element_instance_2;
+  var Rules_RULE_newline_instance;
+  var Rules_RULE_space_instance;
+  var Rules_RULE_skip_instance;
+  function values_18() {
+    return [Rules_RULE_file_getInstance_2(), Rules_RULE_eof_getInstance_2(), Rules_RULE_elements_getInstance_2(), Rules_RULE_element_getInstance_2(), Rules_RULE_newline_getInstance(), Rules_RULE_space_getInstance(), Rules_RULE_skip_getInstance()];
+  }
+  function valueOf_18(value) {
+    switch (value) {
+      case 'RULE_file':
+        return Rules_RULE_file_getInstance_2();
+      case 'RULE_eof':
+        return Rules_RULE_eof_getInstance_2();
+      case 'RULE_elements':
+        return Rules_RULE_elements_getInstance_2();
+      case 'RULE_element':
+        return Rules_RULE_element_getInstance_2();
+      case 'RULE_newline':
+        return Rules_RULE_newline_getInstance();
+      case 'RULE_space':
+        return Rules_RULE_space_getInstance();
+      case 'RULE_skip':
+        return Rules_RULE_skip_getInstance();
+      default:
+        Rules_initEntries_5();
+        THROW_ISE();
+        break;
+    }
+  }
+  var Rules_entriesInitialized_5;
+  function Rules_initEntries_5() {
+    if (Rules_entriesInitialized_5)
+      return Unit_getInstance();
+    Rules_entriesInitialized_5 = true;
+    Rules_RULE_file_instance_2 = new Rules_5('RULE_file', 0, 0);
+    Rules_RULE_eof_instance_2 = new Rules_5('RULE_eof', 1, 1);
+    Rules_RULE_elements_instance_2 = new Rules_5('RULE_elements', 2, 2);
+    Rules_RULE_element_instance_2 = new Rules_5('RULE_element', 3, 3);
+    Rules_RULE_newline_instance = new Rules_5('RULE_newline', 4, 4);
+    Rules_RULE_space_instance = new Rules_5('RULE_space', 5, 5);
+    Rules_RULE_skip_instance = new Rules_5('RULE_skip', 6, 6);
+  }
+  function _get_LITERAL_NAMES__3195312217_5($this) {
+    return $this.LITERAL_NAMES_1;
+  }
+  function _get_SYMBOLIC_NAMES__1177529360_5($this) {
+    return $this.SYMBOLIC_NAMES_1;
+  }
+  function _get_serializedATN__3461059898_5($this) {
+    return $this.serializedATN_1;
+  }
+  function FileContext_init_$Init$_2(parent, invokingState, $this) {
+    ParserRuleContext_init_$Init$(parent, invokingState, $this);
+    FileContext_2.call($this);
+    return $this;
+  }
+  function FileContext_init_$Create$_2(parent, invokingState) {
+    return FileContext_init_$Init$_2(parent, invokingState, Object.create(FileContext_2.prototype));
+  }
+  function EofContext_init_$Init$_2(parent, invokingState, $this) {
+    ParserRuleContext_init_$Init$(parent, invokingState, $this);
+    EofContext_2.call($this);
+    return $this;
+  }
+  function EofContext_init_$Create$_2(parent, invokingState) {
+    return EofContext_init_$Init$_2(parent, invokingState, Object.create(EofContext_2.prototype));
+  }
+  function ElementsContext_init_$Init$_2(parent, invokingState, $this) {
+    ParserRuleContext_init_$Init$(parent, invokingState, $this);
+    ElementsContext_2.call($this);
+    return $this;
+  }
+  function ElementsContext_init_$Create$_2(parent, invokingState) {
+    return ElementsContext_init_$Init$_2(parent, invokingState, Object.create(ElementsContext_2.prototype));
+  }
+  function ElementContext_init_$Init$_2(parent, invokingState, $this) {
+    ParserRuleContext_init_$Init$(parent, invokingState, $this);
+    ElementContext_2.call($this);
+    return $this;
+  }
+  function ElementContext_init_$Create$_2(parent, invokingState) {
+    return ElementContext_init_$Init$_2(parent, invokingState, Object.create(ElementContext_2.prototype));
+  }
+  function NewlineContext_init_$Init$(parent, invokingState, $this) {
+    ParserRuleContext_init_$Init$(parent, invokingState, $this);
+    NewlineContext.call($this);
+    return $this;
+  }
+  function NewlineContext_init_$Create$(parent, invokingState) {
+    return NewlineContext_init_$Init$(parent, invokingState, Object.create(NewlineContext.prototype));
+  }
+  function SpaceContext_init_$Init$(parent, invokingState, $this) {
+    ParserRuleContext_init_$Init$(parent, invokingState, $this);
+    SpaceContext.call($this);
+    return $this;
+  }
+  function SpaceContext_init_$Create$(parent, invokingState) {
+    return SpaceContext_init_$Init$(parent, invokingState, Object.create(SpaceContext.prototype));
+  }
+  function SkipContext_init_$Init$(parent, invokingState, $this) {
+    ParserRuleContext_init_$Init$(parent, invokingState, $this);
+    SkipContext.call($this);
+    return $this;
+  }
+  function SkipContext_init_$Create$(parent, invokingState) {
+    return SkipContext_init_$Init$(parent, invokingState, Object.create(SkipContext.prototype));
+  }
+  function solver_2() {
+    solver_instance_2 = this;
+    this.classesByName_1 = listOf([getKClass(FileContext_2), getKClass(EofContext_2), getKClass(ElementsContext_2), getKClass(ElementContext_2), getKClass(NewlineContext), getKClass(SpaceContext), getKClass(SkipContext)]);
+  }
+  solver_2.prototype._get_classesByName__1088074377_hzt7k9_k$ = function () {
+    return this.classesByName_1;
+  };
+  solver_2.$metadata$ = {
+    simpleName: 'solver',
+    kind: 'object',
+    interfaces: [TypeDeclarator]
+  };
+  var solver_instance_2;
+  function solver_getInstance_2() {
+    if (solver_instance_2 == null)
+      new solver_2();
+    return solver_instance_2;
+  }
+  function Tokens_5(name, ordinal, id) {
+    Enum.call(this, name, ordinal);
+    this.id_1 = id;
+  }
+  Tokens_5.prototype._get_id__1413120976_ndc34g_k$ = function () {
+    return this.id_1;
+  };
+  Tokens_5.$metadata$ = {
+    simpleName: 'Tokens',
+    kind: 'class',
+    interfaces: []
+  };
+  function Rules_5(name, ordinal, id) {
+    Enum.call(this, name, ordinal);
+    this.id_1 = id;
+  }
+  Rules_5.prototype._get_id__1413120976_ndc34g_k$ = function () {
+    return this.id_1;
+  };
+  Rules_5.$metadata$ = {
+    simpleName: 'Rules',
+    kind: 'class',
+    interfaces: []
+  };
+  function Companion_5() {
+    Companion_instance_5 = this;
+    this.sharedContextCache_1 = new PredictionContextCache();
+    var tmp = this;
+    var tmp$ret$2;
+    $l$block_1: {
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = ['file', 'eof', 'elements', 'element', 'newline', 'space', 'skip'];
+          break $l$block;
+        }
+        tmp$ret$1 = tmp$ret$0;
+        break $l$block_0;
+      }
+      tmp$ret$2 = tmp$ret$1;
+      break $l$block_1;
+    }
+    tmp.ruleNames_1 = tmp$ret$2;
+    var tmp_0 = this;
+    var tmp$ret$3;
+    $l$block_2: {
+      tmp$ret$3 = emptyList();
+      break $l$block_2;
+    }
+    tmp_0.LITERAL_NAMES_1 = tmp$ret$3;
+    this.SYMBOLIC_NAMES_1 = listOf([null, 'COMMENT', 'C1_STRING', 'QUOTE_STRING', 'MONACO_AUTOCOMPLETE_ITEM', 'BYTE_STRING', 'ANIMATION', 'SCRP', 'ISCR', 'RSCR', 'ENDM', 'DOIF', 'ENDI', 'ENUM', 'ECON', 'EPAS', 'ESCN', 'ESEE', 'ETCH', 'EVER', 'LOOP', 'NEXT', 'NSCN', 'RETN', 'REPS', 'REPE', 'SUBR', 'UNTL', 'CHAR', 'BINARY_INT', 'WORD_PLUS', 'VARx', 'VAxx', 'OBVx', 'OVxx', 'MVxx', 'WORD', 'EQ_OP_OLD', 'EQ_OP_NEW', 'EQ_JOIN', 'FLOAT', 'INT', 'SPACES', 'NEWLINE', 'INCOMPLETE', 'ERROR_CHAR']);
+    var tmp_1 = this;
+    var tmp$ret$4;
+    $l$block_3: {
+      var tmp0_toTypedArray_0 = this.LITERAL_NAMES_1;
+      tmp$ret$4 = copyToArray(tmp0_toTypedArray_0);
+      break $l$block_3;
+    }
+    var tmp_2 = tmp$ret$4;
+    var tmp$ret$5;
+    $l$block_4: {
+      var tmp1_toTypedArray_0 = this.SYMBOLIC_NAMES_1;
+      tmp$ret$5 = copyToArray(tmp1_toTypedArray_0);
+      break $l$block_4;
+    }
+    var tmp_3 = tmp$ret$5;
+    tmp_1.VOCABULARY_1 = VocabularyImpl_init_$Create$(tmp_2, tmp_3, null, 4, null);
+    var tmp_4 = this;
+    var tmp_5 = 0;
+    var tmp_6 = this.SYMBOLIC_NAMES_1._get_size__809037418_ddoh9m_k$();
+    var tmp$ret$6;
+    $l$block_5: {
+      tmp$ret$6 = fillArrayVal(Array(tmp_6), null);
+      break $l$block_5;
+    }
+    var tmp_7 = tmp$ret$6;
+    while (tmp_5 < tmp_6) {
+      var tmp_8 = tmp_5;
+      var tmp$ret$7;
+      $l$block_6: {
+        var el = Companion_getInstance_7().VOCABULARY_1.getLiteralName_1erz7_k$(tmp_8);
+        if (el == null) {
+          el = Companion_getInstance_7().VOCABULARY_1.getSymbolicName_yk4gge_k$(tmp_8);
+        }
+        if (el == null) {
+          el = '<INVALID>';
+        }
+        tmp$ret$7 = el;
+        break $l$block_6;
+      }
+      tmp_7[tmp_8] = tmp$ret$7;
+      tmp_5 = tmp_5 + 1 | 0;
+    }
+    tmp_4.tokenNames_1 = tmp_7;
+    this.serializedATN_1 = '\x03\u608B\uA72A\u8133\uB9ED\u417C\u3BE7\u7786\u5964\x03/(\x04\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04\x07\t\x07\x04\b\t\b\x03\x02\x05\x02\x12\n\x02\x03\x02\x03\x02\x03\x03\x03\x03\x03\x04\x06\x04\x19\n\x04\r\x04\x0E\x04\x1A\x03\x05\x03\x05\x03\x05\x05\x05 \n\x05\x03\x06\x03\x06\x03\x07\x03\x07\x03\b\x03\b\x03\b\x02\x02\t\x02\x04\x06\b\n\f\x0E\x02\x03\x04\x02\x03+..\x02$\x02\x11\x03\x02\x02\x02\x04\x15\x03\x02\x02\x02\x06\x18\x03\x02\x02\x02\b\x1F\x03\x02\x02\x02\n!\x03\x02\x02\x02\f#\x03\x02\x02\x02\x0E%\x03\x02\x02\x02\x10\x12\x05\x06\x04\x02\x11\x10\x03\x02\x02\x02\x11\x12\x03\x02\x02\x02\x12\x13\x03\x02\x02\x02\x13\x14\x05\x04\x03\x02\x14\x03\x03\x02\x02\x02\x15\x16\x07\x02\x02\x03\x16\x05\x03\x02\x02\x02\x17\x19\x05\b\x05\x02\x18\x17\x03\x02\x02\x02\x19\x1A\x03\x02\x02\x02\x1A\x18\x03\x02\x02\x02\x1A\x1B\x03\x02\x02\x02\x1B\x07\x03\x02\x02\x02\x1C \x05\x0E\b\x02\x1D \x05\n\x06\x02\x1E \x05\f\x07\x02\x1F\x1C\x03\x02\x02\x02\x1F\x1D\x03\x02\x02\x02\x1F\x1E\x03\x02\x02\x02 \t\x03\x02\x02\x02!"\x07-\x02\x02"\x0B\x03\x02\x02\x02#$\x07,\x02\x02$\r\x03\x02\x02\x02%&\t\x02\x02\x02&\x0F\x03\x02\x02\x02\x05\x11\x1A\x1F';
+    var tmp_9 = this;
+    tmp_9.ATN_1 = ATNDeserializer_init_$Create$(null, 1, null).deserialize_c68pee_k$(asCharArray('\x03\u608B\uA72A\u8133\uB9ED\u417C\u3BE7\u7786\u5964\x03/(\x04\x02\t\x02\x04\x03\t\x03\x04\x04\t\x04\x04\x05\t\x05\x04\x06\t\x06\x04\x07\t\x07\x04\b\t\b\x03\x02\x05\x02\x12\n\x02\x03\x02\x03\x02\x03\x03\x03\x03\x03\x04\x06\x04\x19\n\x04\r\x04\x0E\x04\x1A\x03\x05\x03\x05\x03\x05\x05\x05 \n\x05\x03\x06\x03\x06\x03\x07\x03\x07\x03\b\x03\b\x03\b\x02\x02\t\x02\x04\x06\b\n\f\x0E\x02\x03\x04\x02\x03+..\x02$\x02\x11\x03\x02\x02\x02\x04\x15\x03\x02\x02\x02\x06\x18\x03\x02\x02\x02\b\x1F\x03\x02\x02\x02\n!\x03\x02\x02\x02\f#\x03\x02\x02\x02\x0E%\x03\x02\x02\x02\x10\x12\x05\x06\x04\x02\x11\x10\x03\x02\x02\x02\x11\x12\x03\x02\x02\x02\x12\x13\x03\x02\x02\x02\x13\x14\x05\x04\x03\x02\x14\x03\x03\x02\x02\x02\x15\x16\x07\x02\x02\x03\x16\x05\x03\x02\x02\x02\x17\x19\x05\b\x05\x02\x18\x17\x03\x02\x02\x02\x19\x1A\x03\x02\x02\x02\x1A\x18\x03\x02\x02\x02\x1A\x1B\x03\x02\x02\x02\x1B\x07\x03\x02\x02\x02\x1C \x05\x0E\b\x02\x1D \x05\n\x06\x02\x1E \x05\f\x07\x02\x1F\x1C\x03\x02\x02\x02\x1F\x1D\x03\x02\x02\x02\x1F\x1E\x03\x02\x02\x02 \t\x03\x02\x02\x02!"\x07-\x02\x02"\x0B\x03\x02\x02\x02#$\x07,\x02\x02$\r\x03\x02\x02\x02%&\t\x02\x02\x02&\x0F\x03\x02\x02\x02\x05\x11\x1A\x1F'));
+    var tmp_10 = this;
+    var tmp_11 = 0;
+    var tmp_12 = this.ATN_1._get_numberOfDecisions__1854093626_unvnsq_k$();
+    var tmp$ret$8;
+    $l$block_7: {
+      tmp$ret$8 = fillArrayVal(Array(tmp_12), null);
+      break $l$block_7;
+    }
+    var tmp_13 = tmp$ret$8;
+    while (tmp_11 < tmp_12) {
+      var tmp_14 = tmp_11;
+      var tmp$ret$9;
+      $l$block_8: {
+        tmp$ret$9 = new DFA(ensureNotNull(Companion_getInstance_7().ATN_1.getDecisionState_m2smv2_k$(tmp_14)), tmp_14);
+        break $l$block_8;
+      }
+      tmp_13[tmp_14] = tmp$ret$9;
+      tmp_11 = tmp_11 + 1 | 0;
+    }
+    tmp_10.decisionToDFA_1 = tmp_13;
+  }
+  Companion_5.prototype._get_decisionToDFA__1733740713_so82w9_k$ = function () {
+    return this.decisionToDFA_1;
+  };
+  Companion_5.prototype._get_sharedContextCache__1757505139_t2dfn7_k$ = function () {
+    return this.sharedContextCache_1;
+  };
+  Companion_5.prototype._get_ruleNames__2055232037_xzmr6t_k$ = function () {
+    return this.ruleNames_1;
+  };
+  Companion_5.prototype._get_VOCABULARY__1574547557_q1g0o5_k$ = function () {
+    return this.VOCABULARY_1;
+  };
+  Companion_5.prototype._get_tokenNames__755820956_chzv6k_k$ = function () {
+    return this.tokenNames_1;
+  };
+  Companion_5.prototype._get_ATN__855870838_e5ka5y_k$ = function () {
+    return this.ATN_1;
+  };
+  Companion_5.$metadata$ = {
+    simpleName: 'Companion',
+    kind: 'object',
+    interfaces: []
+  };
+  var Companion_instance_5;
+  function Companion_getInstance_7() {
+    if (Companion_instance_5 == null)
+      new Companion_5();
+    return Companion_instance_5;
+  }
+  function _get_COMMENT__2306222258_2($this) {
+    return $this.COMMENT_1;
+  }
+  function _get_C1_STRING__1234215279_1($this) {
+    return $this.C1_STRING_1;
+  }
+  function _get_QUOTE_STRING__1312780407_1($this) {
+    return $this.QUOTE_STRING_1;
+  }
+  function _get_MONACO_AUTOCOMPLETE_ITEM__4079543551_2($this) {
+    return $this.MONACO_AUTOCOMPLETE_ITEM_1;
+  }
+  function _get_BYTE_STRING__2275696489_1($this) {
+    return $this.BYTE_STRING_1;
+  }
+  function _get_ANIMATION__3786355565_1($this) {
+    return $this.ANIMATION_1;
+  }
+  function _get_SCRP__778313597_1($this) {
+    return $this.SCRP_1;
+  }
+  function _get_ISCR__769540690_1($this) {
+    return $this.ISCR_1;
+  }
+  function _get_RSCR__777852379_1($this) {
+    return $this.RSCR_1;
+  }
+  function _get_ENDM__765698457_1($this) {
+    return $this.ENDM_1;
+  }
+  function _get_DOIF__764809315_1($this) {
+    return $this.DOIF_1;
+  }
+  function _get_ENDI__765698333_1($this) {
+    return $this.ENDI_1;
+  }
+  function _get_ENUM__765714794_1($this) {
+    return $this.ENUM_1;
+  }
+  function _get_ECON__765381358_1($this) {
+    return $this.ECON_1;
+  }
+  function _get_EPAS__765755342_1($this) {
+    return $this.EPAS_1;
+  }
+  function _get_ESCN__765846482_1($this) {
+    return $this.ESCN_1;
+  }
+  function _get_ESEE__765848125_1($this) {
+    return $this.ESEE_1;
+  }
+  function _get_ETCH__765876087_1($this) {
+    return $this.ETCH_1;
+  }
+  function _get_EVER__765937901_1($this) {
+    return $this.EVER_1;
+  }
+  function _get_LOOP__772203559_1($this) {
+    return $this.LOOP_1;
+  }
+  function _get_NEXT__773761464_1($this) {
+    return $this.NEXT_1;
+  }
+  function _get_NSCN__774158171_1($this) {
+    return $this.NSCN_1;
+  }
+  function _get_RETN__777451518_1($this) {
+    return $this.RETN_1;
+  }
+  function _get_REPS__777447829_1($this) {
+    return $this.REPS_1;
+  }
+  function _get_REPE__777447395_1($this) {
+    return $this.REPE_1;
+  }
+  function _get_SUBR__778834521_1($this) {
+    return $this.SUBR_1;
+  }
+  function _get_UNTL__780490138_1($this) {
+    return $this.UNTL_1;
+  }
+  function _get_CHAR__763669941_1($this) {
+    return $this.CHAR_1;
+  }
+  function _get_BINARY_INT__3078242330_1($this) {
+    return $this.BINARY_INT_1;
+  }
+  function _get_WORD_PLUS__1913672322_1($this) {
+    return $this.WORD_PLUS_1;
+  }
+  function _get_VARx__781025818_1($this) {
+    return $this.VARx_1;
+  }
+  function _get_VAxx__781062336_1($this) {
+    return $this.VAxx_1;
+  }
+  function _get_OBVx__774594806_1($this) {
+    return $this.OBVx_1;
+  }
+  function _get_OVxx__775223300_1($this) {
+    return $this.OVxx_1;
+  }
+  function _get_MVxx__773376258_1($this) {
+    return $this.MVxx_1;
+  }
+  function _get_WORD__782364801_1($this) {
+    return $this.WORD_1;
+  }
+  function _get_EQ_OP_OLD__3774806069_1($this) {
+    return $this.EQ_OP_OLD_1;
+  }
+  function _get_EQ_OP_NEW__3774770140_1($this) {
+    return $this.EQ_OP_NEW_1;
+  }
+  function _get_EQ_JOIN__3784730068_1($this) {
+    return $this.EQ_JOIN_1;
+  }
+  function _get_FLOAT__2288914709_1($this) {
+    return $this.FLOAT_1;
+  }
+  function _get_INT__856103586_1($this) {
+    return $this.INT_1;
+  }
+  function _get_SPACES__991158398($this) {
+    return $this.SPACES_1;
+  }
+  function _get_NEWLINE__2683933_0($this) {
+    return $this.NEWLINE_1;
+  }
+  function _get_INCOMPLETE__3315713773_1($this) {
+    return $this.INCOMPLETE_1;
+  }
+  function _get_ERROR_CHAR__349265630_1($this) {
+    return $this.ERROR_CHAR_1;
+  }
+  FileContext_2.prototype._set_ruleIndex__152087887_m9etbz_k$ = function (value) {
+    throw RuntimeException_init_$Create$();
+  };
+  FileContext_2.prototype._get_ruleIndex__1923824091_vte863_k$ = function () {
+    return Rules_RULE_file_getInstance_2().id_1;
+  };
+  FileContext_2.prototype.findEof_e3z7gd_k$ = function () {
+    return this.getRuleContext_ytpucw_k$(getType(solver_getInstance_2(), 'EofContext'), 0);
+  };
+  FileContext_2.prototype.findElements_2a6o5s_k$ = function () {
+    return this.getRuleContext_ytpucw_k$(getType(solver_getInstance_2(), 'ElementsContext'), 0);
+  };
+  FileContext_2.prototype.enterRule_nsg4az_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).enterFile_6xd4a_k$(this);
+    } else {
+    }
+  };
+  FileContext_2.prototype.exitRule_ixwge3_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).exitFile_tnwmxo_k$(this);
+    } else {
+    }
+  };
+  function FileContext_2() {
+  }
+  FileContext_2.$metadata$ = {
+    simpleName: 'FileContext',
+    kind: 'class',
+    interfaces: []
+  };
+  EofContext_2.prototype._set_ruleIndex__152087887_m9etbz_k$ = function (value) {
+    throw RuntimeException_init_$Create$();
+  };
+  EofContext_2.prototype._get_ruleIndex__1923824091_vte863_k$ = function () {
+    return Rules_RULE_eof_getInstance_2().id_1;
+  };
+  EofContext_2.prototype.EOF_1h3w_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_EOF_getInstance_2().id_1, 0);
+  };
+  EofContext_2.prototype.enterRule_nsg4az_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).enterEof_hpqv6q_k$(this);
+    } else {
+    }
+  };
+  EofContext_2.prototype.exitRule_ixwge3_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).exitEof_1j7aw4_k$(this);
+    } else {
+    }
+  };
+  function EofContext_2() {
+  }
+  EofContext_2.$metadata$ = {
+    simpleName: 'EofContext',
+    kind: 'class',
+    interfaces: []
+  };
+  ElementsContext_2.prototype._set_ruleIndex__152087887_m9etbz_k$ = function (value) {
+    throw RuntimeException_init_$Create$();
+  };
+  ElementsContext_2.prototype._get_ruleIndex__1923824091_vte863_k$ = function () {
+    return Rules_RULE_elements_getInstance_2().id_1;
+  };
+  ElementsContext_2.prototype.findElement_do9uyl_k$ = function () {
+    return this.getRuleContexts_tryqxi_k$(getType(solver_getInstance_2(), 'ElementContext'));
+  };
+  ElementsContext_2.prototype.findElement_ikf7j6_k$ = function (i) {
+    return this.getRuleContext_ytpucw_k$(getType(solver_getInstance_2(), 'ElementContext'), i);
+  };
+  ElementsContext_2.prototype.enterRule_nsg4az_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).enterElements_x8ggqe_k$(this);
+    } else {
+    }
+  };
+  ElementsContext_2.prototype.exitRule_ixwge3_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).exitElements_9rm73w_k$(this);
+    } else {
+    }
+  };
+  function ElementsContext_2() {
+  }
+  ElementsContext_2.$metadata$ = {
+    simpleName: 'ElementsContext',
+    kind: 'class',
+    interfaces: []
+  };
+  ElementContext_2.prototype._set_ruleIndex__152087887_m9etbz_k$ = function (value) {
+    throw RuntimeException_init_$Create$();
+  };
+  ElementContext_2.prototype._get_ruleIndex__1923824091_vte863_k$ = function () {
+    return Rules_RULE_element_getInstance_2().id_1;
+  };
+  ElementContext_2.prototype.findSkip_b8e888_k$ = function () {
+    return this.getRuleContext_ytpucw_k$(getType(solver_getInstance_2(), 'SkipContext'), 0);
+  };
+  ElementContext_2.prototype.findNewline_qod10l_k$ = function () {
+    return this.getRuleContext_ytpucw_k$(getType(solver_getInstance_2(), 'NewlineContext'), 0);
+  };
+  ElementContext_2.prototype.findSpace_6xe7kd_k$ = function () {
+    return this.getRuleContext_ytpucw_k$(getType(solver_getInstance_2(), 'SpaceContext'), 0);
+  };
+  ElementContext_2.prototype.enterRule_nsg4az_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).enterElement_deyuzm_k$(this);
+    } else {
+    }
+  };
+  ElementContext_2.prototype.exitRule_ixwge3_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).exitElement_6v10yk_k$(this);
+    } else {
+    }
+  };
+  function ElementContext_2() {
+  }
+  ElementContext_2.$metadata$ = {
+    simpleName: 'ElementContext',
+    kind: 'class',
+    interfaces: []
+  };
+  NewlineContext.prototype._set_ruleIndex__152087887_m9etbz_k$ = function (value) {
+    throw RuntimeException_init_$Create$();
+  };
+  NewlineContext.prototype._get_ruleIndex__1923824091_vte863_k$ = function () {
+    return Rules_RULE_newline_getInstance().id_1;
+  };
+  NewlineContext.prototype.NEWLINE_smmob0_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_NEWLINE_getInstance_2().id_1, 0);
+  };
+  NewlineContext.prototype.enterRule_nsg4az_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).enterNewline_7t34wi_k$(this);
+    } else {
+    }
+  };
+  NewlineContext.prototype.exitRule_ixwge3_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).exitNewline_195avg_k$(this);
+    } else {
+    }
+  };
+  function NewlineContext() {
+  }
+  NewlineContext.$metadata$ = {
+    simpleName: 'NewlineContext',
+    kind: 'class',
+    interfaces: []
+  };
+  SpaceContext.prototype._set_ruleIndex__152087887_m9etbz_k$ = function (value) {
+    throw RuntimeException_init_$Create$();
+  };
+  SpaceContext.prototype._get_ruleIndex__1923824091_vte863_k$ = function () {
+    return Rules_RULE_space_getInstance().id_1;
+  };
+  SpaceContext.prototype.SPACES_uh6y8j_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_SPACES_getInstance_0().id_1, 0);
+  };
+  SpaceContext.prototype.enterRule_nsg4az_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).enterSpace_lo5o96_k$(this);
+    } else {
+    }
+  };
+  SpaceContext.prototype.exitRule_ixwge3_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).exitSpace_h9iy4w_k$(this);
+    } else {
+    }
+  };
+  function SpaceContext() {
+  }
+  SpaceContext.$metadata$ = {
+    simpleName: 'SpaceContext',
+    kind: 'class',
+    interfaces: []
+  };
+  SkipContext.prototype._set_ruleIndex__152087887_m9etbz_k$ = function (value) {
+    throw RuntimeException_init_$Create$();
+  };
+  SkipContext.prototype._get_ruleIndex__1923824091_vte863_k$ = function () {
+    return Rules_RULE_skip_getInstance().id_1;
+  };
+  SkipContext.prototype.COMMENT_rlb77j_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_COMMENT_getInstance_5().id_1, 0);
+  };
+  SkipContext.prototype.SCRP_1ifm6_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_SCRP_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.ISCR_1cd95_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_ISCR_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.RSCR_1i44w_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_RSCR_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.ENDM_19pma_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_ENDM_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.DOIF_193hk_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_DOIF_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.ENDI_19pm6_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_ENDI_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.ENUM_19q0x_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_ENUM_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.ECON_19hq5_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_ECON_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.EPAS_19r19_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_EPAS_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.ESCN_19tax_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_ESCN_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.ESEE_19tce_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_ESEE_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.ETCH_19u1g_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_ETCH_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.EVER_19vku_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_EVER_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.LOOP_1e7j8_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_LOOP_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.NEXT_1fab7_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_NEXT_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.NSCN_1fk6o_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_NSCN_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.RETN_1hu5p_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_RETN_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.REPS_1hu2e_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_REPS_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.REPE_1hu20_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_REPE_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.SUBR_1isky_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_SUBR_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.UNTL_1jxsh_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_UNTL_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.MONACO_AUTOCOMPLETE_ITEM_i0o2fg_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_MONACO_AUTOCOMPLETE_ITEM_getInstance_5().id_1, 0);
+  };
+  SkipContext.prototype.BYTE_STRING_bsdgyw_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_BYTE_STRING_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.ANIMATION_6g43vg_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_ANIMATION_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.C1_STRING_7t4nvi_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_C1_STRING_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.QUOTE_STRING_7po6dw_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_QUOTE_STRING_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.CHAR_18b4m_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_CHAR_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.BINARY_INT_6ilpbj_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_BINARY_INT_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.WORD_PLUS_9qkfo1_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_WORD_PLUS_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.VARx_1kb4h_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_VARx_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.VAxx_1kc17_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_VAxx_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.OBVx_1fv1x_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_OBVx_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.OVxx_1gap3_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_OVxx_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.MVxx_1f0q1_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_MVxx_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.WORD_1l8ga_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_WORD_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.EQ_OP_OLD_f4k2k_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_EQ_OP_OLD_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.EQ_OP_NEW_f4j6d_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_EQ_OP_NEW_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.EQ_JOIN_cv2gir_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_EQ_JOIN_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.FLOAT_13vsqk_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_FLOAT_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.INT_1k27_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_INT_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.INCOMPLETE_8oj2ci_k$ = function () {
+    return this.getToken_851db1_k$(Tokens_INCOMPLETE_getInstance_3().id_1, 0);
+  };
+  SkipContext.prototype.enterRule_nsg4az_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).enterSkip_p5zg3a_k$(this);
+    } else {
+    }
+  };
+  SkipContext.prototype.exitRule_ixwge3_k$ = function (listener) {
+    if (isInterface(listener, CaosWhitespaceParserListener)) {
+      (isInterface(listener, CaosWhitespaceParserListener) ? listener : THROW_CCE()).exitSkip_g0altw_k$(this);
+    } else {
+    }
+  };
+  function SkipContext() {
+  }
+  SkipContext.$metadata$ = {
+    simpleName: 'SkipContext',
+    kind: 'class',
+    interfaces: []
+  };
+  function Tokens_EOF_getInstance_2() {
+    Tokens_initEntries_5();
+    return Tokens_EOF_instance_2;
+  }
+  function Tokens_COMMENT_getInstance_5() {
+    Tokens_initEntries_5();
+    return Tokens_COMMENT_instance_5;
+  }
+  function Tokens_C1_STRING_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_C1_STRING_instance_3;
+  }
+  function Tokens_QUOTE_STRING_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_QUOTE_STRING_instance_3;
+  }
+  function Tokens_MONACO_AUTOCOMPLETE_ITEM_getInstance_5() {
+    Tokens_initEntries_5();
+    return Tokens_MONACO_AUTOCOMPLETE_ITEM_instance_5;
+  }
+  function Tokens_BYTE_STRING_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_BYTE_STRING_instance_3;
+  }
+  function Tokens_ANIMATION_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_ANIMATION_instance_3;
+  }
+  function Tokens_SCRP_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_SCRP_instance_3;
+  }
+  function Tokens_ISCR_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_ISCR_instance_3;
+  }
+  function Tokens_RSCR_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_RSCR_instance_3;
+  }
+  function Tokens_ENDM_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_ENDM_instance_3;
+  }
+  function Tokens_DOIF_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_DOIF_instance_3;
+  }
+  function Tokens_ENDI_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_ENDI_instance_3;
+  }
+  function Tokens_ENUM_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_ENUM_instance_3;
+  }
+  function Tokens_ECON_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_ECON_instance_3;
+  }
+  function Tokens_EPAS_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_EPAS_instance_3;
+  }
+  function Tokens_ESCN_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_ESCN_instance_3;
+  }
+  function Tokens_ESEE_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_ESEE_instance_3;
+  }
+  function Tokens_ETCH_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_ETCH_instance_3;
+  }
+  function Tokens_EVER_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_EVER_instance_3;
+  }
+  function Tokens_LOOP_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_LOOP_instance_3;
+  }
+  function Tokens_NEXT_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_NEXT_instance_3;
+  }
+  function Tokens_NSCN_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_NSCN_instance_3;
+  }
+  function Tokens_RETN_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_RETN_instance_3;
+  }
+  function Tokens_REPS_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_REPS_instance_3;
+  }
+  function Tokens_REPE_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_REPE_instance_3;
+  }
+  function Tokens_SUBR_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_SUBR_instance_3;
+  }
+  function Tokens_UNTL_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_UNTL_instance_3;
+  }
+  function Tokens_CHAR_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_CHAR_instance_3;
+  }
+  function Tokens_BINARY_INT_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_BINARY_INT_instance_3;
+  }
+  function Tokens_WORD_PLUS_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_WORD_PLUS_instance_3;
+  }
+  function Tokens_VARx_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_VARx_instance_3;
+  }
+  function Tokens_VAxx_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_VAxx_instance_3;
+  }
+  function Tokens_OBVx_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_OBVx_instance_3;
+  }
+  function Tokens_OVxx_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_OVxx_instance_3;
+  }
+  function Tokens_MVxx_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_MVxx_instance_3;
+  }
+  function Tokens_WORD_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_WORD_instance_3;
+  }
+  function Tokens_EQ_OP_OLD_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_EQ_OP_OLD_instance_3;
+  }
+  function Tokens_EQ_OP_NEW_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_EQ_OP_NEW_instance_3;
+  }
+  function Tokens_EQ_JOIN_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_EQ_JOIN_instance_3;
+  }
+  function Tokens_FLOAT_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_FLOAT_instance_3;
+  }
+  function Tokens_INT_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_INT_instance_3;
+  }
+  function Tokens_SPACES_getInstance_0() {
+    Tokens_initEntries_5();
+    return Tokens_SPACES_instance_0;
+  }
+  function Tokens_NEWLINE_getInstance_2() {
+    Tokens_initEntries_5();
+    return Tokens_NEWLINE_instance_2;
+  }
+  function Tokens_INCOMPLETE_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_INCOMPLETE_instance_3;
+  }
+  function Tokens_ERROR_CHAR_getInstance_3() {
+    Tokens_initEntries_5();
+    return Tokens_ERROR_CHAR_instance_3;
+  }
+  function Rules_RULE_file_getInstance_2() {
+    Rules_initEntries_5();
+    return Rules_RULE_file_instance_2;
+  }
+  function Rules_RULE_eof_getInstance_2() {
+    Rules_initEntries_5();
+    return Rules_RULE_eof_instance_2;
+  }
+  function Rules_RULE_elements_getInstance_2() {
+    Rules_initEntries_5();
+    return Rules_RULE_elements_instance_2;
+  }
+  function Rules_RULE_element_getInstance_2() {
+    Rules_initEntries_5();
+    return Rules_RULE_element_instance_2;
+  }
+  function Rules_RULE_newline_getInstance() {
+    Rules_initEntries_5();
+    return Rules_RULE_newline_instance;
+  }
+  function Rules_RULE_space_getInstance() {
+    Rules_initEntries_5();
+    return Rules_RULE_space_instance;
+  }
+  function Rules_RULE_skip_getInstance() {
+    Rules_initEntries_5();
+    return Rules_RULE_skip_instance;
+  }
+  function CaosWhitespaceParser(input) {
+    Companion_getInstance_7();
+    Parser.call(this, input);
+    this.COMMENT_1 = Tokens_COMMENT_getInstance_5().id_1;
+    this.C1_STRING_1 = Tokens_C1_STRING_getInstance_3().id_1;
+    this.QUOTE_STRING_1 = Tokens_QUOTE_STRING_getInstance_3().id_1;
+    this.MONACO_AUTOCOMPLETE_ITEM_1 = Tokens_MONACO_AUTOCOMPLETE_ITEM_getInstance_5().id_1;
+    this.BYTE_STRING_1 = Tokens_BYTE_STRING_getInstance_3().id_1;
+    this.ANIMATION_1 = Tokens_ANIMATION_getInstance_3().id_1;
+    this.SCRP_1 = Tokens_SCRP_getInstance_3().id_1;
+    this.ISCR_1 = Tokens_ISCR_getInstance_3().id_1;
+    this.RSCR_1 = Tokens_RSCR_getInstance_3().id_1;
+    this.ENDM_1 = Tokens_ENDM_getInstance_3().id_1;
+    this.DOIF_1 = Tokens_DOIF_getInstance_3().id_1;
+    this.ENDI_1 = Tokens_ENDI_getInstance_3().id_1;
+    this.ENUM_1 = Tokens_ENUM_getInstance_3().id_1;
+    this.ECON_1 = Tokens_ECON_getInstance_3().id_1;
+    this.EPAS_1 = Tokens_EPAS_getInstance_3().id_1;
+    this.ESCN_1 = Tokens_ESCN_getInstance_3().id_1;
+    this.ESEE_1 = Tokens_ESEE_getInstance_3().id_1;
+    this.ETCH_1 = Tokens_ETCH_getInstance_3().id_1;
+    this.EVER_1 = Tokens_EVER_getInstance_3().id_1;
+    this.LOOP_1 = Tokens_LOOP_getInstance_3().id_1;
+    this.NEXT_1 = Tokens_NEXT_getInstance_3().id_1;
+    this.NSCN_1 = Tokens_NSCN_getInstance_3().id_1;
+    this.RETN_1 = Tokens_RETN_getInstance_3().id_1;
+    this.REPS_1 = Tokens_REPS_getInstance_3().id_1;
+    this.REPE_1 = Tokens_REPE_getInstance_3().id_1;
+    this.SUBR_1 = Tokens_SUBR_getInstance_3().id_1;
+    this.UNTL_1 = Tokens_UNTL_getInstance_3().id_1;
+    this.CHAR_1 = Tokens_CHAR_getInstance_3().id_1;
+    this.BINARY_INT_1 = Tokens_BINARY_INT_getInstance_3().id_1;
+    this.WORD_PLUS_1 = Tokens_WORD_PLUS_getInstance_3().id_1;
+    this.VARx_1 = Tokens_VARx_getInstance_3().id_1;
+    this.VAxx_1 = Tokens_VAxx_getInstance_3().id_1;
+    this.OBVx_1 = Tokens_OBVx_getInstance_3().id_1;
+    this.OVxx_1 = Tokens_OVxx_getInstance_3().id_1;
+    this.MVxx_1 = Tokens_MVxx_getInstance_3().id_1;
+    this.WORD_1 = Tokens_WORD_getInstance_3().id_1;
+    this.EQ_OP_OLD_1 = Tokens_EQ_OP_OLD_getInstance_3().id_1;
+    this.EQ_OP_NEW_1 = Tokens_EQ_OP_NEW_getInstance_3().id_1;
+    this.EQ_JOIN_1 = Tokens_EQ_JOIN_getInstance_3().id_1;
+    this.FLOAT_1 = Tokens_FLOAT_getInstance_3().id_1;
+    this.INT_1 = Tokens_INT_getInstance_3().id_1;
+    this.SPACES_1 = Tokens_SPACES_getInstance_0().id_1;
+    this.NEWLINE_1 = Tokens_NEWLINE_getInstance_2().id_1;
+    this.INCOMPLETE_1 = Tokens_INCOMPLETE_getInstance_3().id_1;
+    this.ERROR_CHAR_1 = Tokens_ERROR_CHAR_getInstance_3().id_1;
+    this._set_interpreter__1998960843_4oqlp7_k$(new ParserATNSimulator(this, Companion_getInstance_7().ATN_1, Companion_getInstance_7().decisionToDFA_1, Companion_getInstance_7().sharedContextCache_1));
+  }
+  CaosWhitespaceParser.prototype._get_grammarFileName__342047459_5nn9ib_k$ = function () {
+    return 'CaosWhitespaceParser.g4';
+  };
+  CaosWhitespaceParser.prototype._get_tokenNames__755820956_chzv6k_k$ = function () {
+    return Companion_getInstance_7().tokenNames_1;
+  };
+  CaosWhitespaceParser.prototype._get_ruleNames__2055232037_xzmr6t_k$ = function () {
+    return Companion_getInstance_7().ruleNames_1;
+  };
+  CaosWhitespaceParser.prototype._get_atn__856855894_e65e8m_k$ = function () {
+    return Companion_getInstance_7().ATN_1;
+  };
+  CaosWhitespaceParser.prototype._get_vocabulary__3716553829_9kdeor_k$ = function () {
+    return Companion_getInstance_7().VOCABULARY_1;
+  };
+  CaosWhitespaceParser.prototype.file_1vd6k_k$ = function () {
+    var _localctx = FileContext_init_$Create$_2(this._get_context__1558698818_ps0bpe_k$(), this._get_state__3614753120_b8zcm8_k$());
+    this.enterRule_khu8i_k$(_localctx, 0, Rules_RULE_file_getInstance_2().id_1);
+    var _la;
+    try {
+      this.enterOuterAlt_9lkdc1_k$(_localctx, 1);
+      {
+        this._set_state__1256591060_i39zdo_k$(15);
+        this._get_errorHandler__3144593769_j0whw7_k$().sync_ns01dy_k$(this);
+        _la = ensureNotNull(this._get__input__3809942944_80rr6o_k$()).LA_y7f82c_k$(1);
+        if ((_la & -64) === 0 ? !(new Long(1, 0)).shl_po5ip6_k$(_la).and_jhajnj_k$((new Long(1, 0)).shl_po5ip6_k$(this.COMMENT_1).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.C1_STRING_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.QUOTE_STRING_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.MONACO_AUTOCOMPLETE_ITEM_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.BYTE_STRING_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ANIMATION_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.SCRP_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ISCR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.RSCR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ENDM_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.DOIF_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ENDI_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ENUM_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ECON_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EPAS_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ESCN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ESEE_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ETCH_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EVER_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.LOOP_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.NEXT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.NSCN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.RETN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.REPS_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.REPE_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.SUBR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.UNTL_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.CHAR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.BINARY_INT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.WORD_PLUS_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.VARx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.VAxx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.OBVx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.OVxx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.MVxx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.WORD_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EQ_OP_OLD_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EQ_OP_NEW_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EQ_JOIN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.FLOAT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.INT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.SPACES_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.NEWLINE_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.INCOMPLETE_1))).equals(new Long(0, 0)) : false) {
+          {
+            this._set_state__1256591060_i39zdo_k$(14);
+            this.elements_4yqkp_k$();
+            Unit_getInstance();
+          }
+        }
+        this._set_state__1256591060_i39zdo_k$(17);
+        this.eof_25mk_k$();
+        Unit_getInstance();
+      }
+    } catch ($p) {
+      if ($p instanceof RecognitionException) {
+        _localctx._set_exception__4196179798_uncphf_k$($p);
+        this._get_errorHandler__3144593769_j0whw7_k$().reportError_dgnagc_k$(this, $p);
+        this._get_errorHandler__3144593769_j0whw7_k$().recover_tphv24_k$(this, $p);
+      } else {
+        {
+          throw $p;
+        }
+      }
+    }
+    finally {
+      this.exitRule_qudul3_k$();
+    }
+    return _localctx;
+  };
+  CaosWhitespaceParser.prototype.eof_25mk_k$ = function () {
+    var _localctx = EofContext_init_$Create$_2(this._get_context__1558698818_ps0bpe_k$(), this._get_state__3614753120_b8zcm8_k$());
+    this.enterRule_khu8i_k$(_localctx, 2, Rules_RULE_eof_getInstance_2().id_1);
+    try {
+      this.enterOuterAlt_9lkdc1_k$(_localctx, 1);
+      {
+        this._set_state__1256591060_i39zdo_k$(19);
+        var tmp = this.match_vjr6ck_k$(Companion_getInstance()._get_EOF__855984949_e5mq7p_k$());
+        if (isInterface(tmp, Token))
+          tmp;
+        else
+          THROW_CCE();
+        Unit_getInstance();
+      }
+    } catch ($p) {
+      if ($p instanceof RecognitionException) {
+        _localctx._set_exception__4196179798_uncphf_k$($p);
+        this._get_errorHandler__3144593769_j0whw7_k$().reportError_dgnagc_k$(this, $p);
+        this._get_errorHandler__3144593769_j0whw7_k$().recover_tphv24_k$(this, $p);
+      } else {
+        {
+          throw $p;
+        }
+      }
+    }
+    finally {
+      this.exitRule_qudul3_k$();
+    }
+    return _localctx;
+  };
+  CaosWhitespaceParser.prototype.elements_4yqkp_k$ = function () {
+    var _localctx = ElementsContext_init_$Create$_2(this._get_context__1558698818_ps0bpe_k$(), this._get_state__3614753120_b8zcm8_k$());
+    this.enterRule_khu8i_k$(_localctx, 4, Rules_RULE_elements_getInstance_2().id_1);
+    var _la;
+    try {
+      this.enterOuterAlt_9lkdc1_k$(_localctx, 1);
+      {
+        this._set_state__1256591060_i39zdo_k$(22);
+        this._get_errorHandler__3144593769_j0whw7_k$().sync_ns01dy_k$(this);
+        _la = ensureNotNull(this._get__input__3809942944_80rr6o_k$()).LA_y7f82c_k$(1);
+        do {
+          {
+            {
+              this._set_state__1256591060_i39zdo_k$(21);
+              this.element_ri0d8k_k$();
+              Unit_getInstance();
+            }
+          }
+          this._set_state__1256591060_i39zdo_k$(24);
+          this._get_errorHandler__3144593769_j0whw7_k$().sync_ns01dy_k$(this);
+          _la = ensureNotNull(this._get__input__3809942944_80rr6o_k$()).LA_y7f82c_k$(1);
+        }
+         while ((_la & -64) === 0 ? !(new Long(1, 0)).shl_po5ip6_k$(_la).and_jhajnj_k$((new Long(1, 0)).shl_po5ip6_k$(this.COMMENT_1).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.C1_STRING_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.QUOTE_STRING_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.MONACO_AUTOCOMPLETE_ITEM_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.BYTE_STRING_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ANIMATION_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.SCRP_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ISCR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.RSCR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ENDM_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.DOIF_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ENDI_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ENUM_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ECON_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EPAS_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ESCN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ESEE_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ETCH_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EVER_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.LOOP_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.NEXT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.NSCN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.RETN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.REPS_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.REPE_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.SUBR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.UNTL_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.CHAR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.BINARY_INT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.WORD_PLUS_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.VARx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.VAxx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.OBVx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.OVxx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.MVxx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.WORD_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EQ_OP_OLD_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EQ_OP_NEW_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EQ_JOIN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.FLOAT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.INT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.SPACES_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.NEWLINE_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.INCOMPLETE_1))).equals(new Long(0, 0)) : false);
+      }
+    } catch ($p) {
+      if ($p instanceof RecognitionException) {
+        _localctx._set_exception__4196179798_uncphf_k$($p);
+        this._get_errorHandler__3144593769_j0whw7_k$().reportError_dgnagc_k$(this, $p);
+        this._get_errorHandler__3144593769_j0whw7_k$().recover_tphv24_k$(this, $p);
+      } else {
+        {
+          throw $p;
+        }
+      }
+    }
+    finally {
+      this.exitRule_qudul3_k$();
+    }
+    return _localctx;
+  };
+  CaosWhitespaceParser.prototype.element_ri0d8k_k$ = function () {
+    var _localctx = ElementContext_init_$Create$_2(this._get_context__1558698818_ps0bpe_k$(), this._get_state__3614753120_b8zcm8_k$());
+    this.enterRule_khu8i_k$(_localctx, 6, Rules_RULE_element_getInstance_2().id_1);
+    try {
+      this._set_state__1256591060_i39zdo_k$(29);
+      this._get_errorHandler__3144593769_j0whw7_k$().sync_ns01dy_k$(this);
+      var tmp0_subject = ensureNotNull(this._get__input__3809942944_80rr6o_k$()).LA_y7f82c_k$(1);
+      if (((((((((((((((((((((((((((((((((((((((((tmp0_subject === this.COMMENT_1 ? true : tmp0_subject === this.C1_STRING_1) ? true : tmp0_subject === this.QUOTE_STRING_1) ? true : tmp0_subject === this.MONACO_AUTOCOMPLETE_ITEM_1) ? true : tmp0_subject === this.BYTE_STRING_1) ? true : tmp0_subject === this.ANIMATION_1) ? true : tmp0_subject === this.SCRP_1) ? true : tmp0_subject === this.ISCR_1) ? true : tmp0_subject === this.RSCR_1) ? true : tmp0_subject === this.ENDM_1) ? true : tmp0_subject === this.DOIF_1) ? true : tmp0_subject === this.ENDI_1) ? true : tmp0_subject === this.ENUM_1) ? true : tmp0_subject === this.ECON_1) ? true : tmp0_subject === this.EPAS_1) ? true : tmp0_subject === this.ESCN_1) ? true : tmp0_subject === this.ESEE_1) ? true : tmp0_subject === this.ETCH_1) ? true : tmp0_subject === this.EVER_1) ? true : tmp0_subject === this.LOOP_1) ? true : tmp0_subject === this.NEXT_1) ? true : tmp0_subject === this.NSCN_1) ? true : tmp0_subject === this.RETN_1) ? true : tmp0_subject === this.REPS_1) ? true : tmp0_subject === this.REPE_1) ? true : tmp0_subject === this.SUBR_1) ? true : tmp0_subject === this.UNTL_1) ? true : tmp0_subject === this.CHAR_1) ? true : tmp0_subject === this.BINARY_INT_1) ? true : tmp0_subject === this.WORD_PLUS_1) ? true : tmp0_subject === this.VARx_1) ? true : tmp0_subject === this.VAxx_1) ? true : tmp0_subject === this.OBVx_1) ? true : tmp0_subject === this.OVxx_1) ? true : tmp0_subject === this.MVxx_1) ? true : tmp0_subject === this.WORD_1) ? true : tmp0_subject === this.EQ_OP_OLD_1) ? true : tmp0_subject === this.EQ_OP_NEW_1) ? true : tmp0_subject === this.EQ_JOIN_1) ? true : tmp0_subject === this.FLOAT_1) ? true : tmp0_subject === this.INT_1) ? true : tmp0_subject === this.INCOMPLETE_1) {
+        this.enterOuterAlt_9lkdc1_k$(_localctx, 1);
+        {
+          this._set_state__1256591060_i39zdo_k$(26);
+          this.skip_23pfj_k$();
+          Unit_getInstance();
+        }
+      } else if (tmp0_subject === this.NEWLINE_1) {
+        this.enterOuterAlt_9lkdc1_k$(_localctx, 2);
+        {
+          this._set_state__1256591060_i39zdo_k$(27);
+          this.newline_uj0iok_k$();
+          Unit_getInstance();
+        }
+      } else if (tmp0_subject === this.SPACES_1) {
+        this.enterOuterAlt_9lkdc1_k$(_localctx, 3);
+        {
+          this._set_state__1256591060_i39zdo_k$(28);
+          this.space_1t9x52_k$();
+          Unit_getInstance();
+        }
+      } else {
+        throw NoViableAltException_init_$Create$(this, null, null, null, null, null, 62, null);
+      }
+    } catch ($p) {
+      if ($p instanceof RecognitionException) {
+        _localctx._set_exception__4196179798_uncphf_k$($p);
+        this._get_errorHandler__3144593769_j0whw7_k$().reportError_dgnagc_k$(this, $p);
+        this._get_errorHandler__3144593769_j0whw7_k$().recover_tphv24_k$(this, $p);
+      } else {
+        {
+          throw $p;
+        }
+      }
+    }
+    finally {
+      this.exitRule_qudul3_k$();
+    }
+    return _localctx;
+  };
+  CaosWhitespaceParser.prototype.newline_uj0iok_k$ = function () {
+    var _localctx = NewlineContext_init_$Create$(this._get_context__1558698818_ps0bpe_k$(), this._get_state__3614753120_b8zcm8_k$());
+    this.enterRule_khu8i_k$(_localctx, 8, Rules_RULE_newline_getInstance().id_1);
+    try {
+      this.enterOuterAlt_9lkdc1_k$(_localctx, 1);
+      {
+        this._set_state__1256591060_i39zdo_k$(31);
+        var tmp = this.match_vjr6ck_k$(this.NEWLINE_1);
+        if (isInterface(tmp, Token))
+          tmp;
+        else
+          THROW_CCE();
+        Unit_getInstance();
+      }
+    } catch ($p) {
+      if ($p instanceof RecognitionException) {
+        _localctx._set_exception__4196179798_uncphf_k$($p);
+        this._get_errorHandler__3144593769_j0whw7_k$().reportError_dgnagc_k$(this, $p);
+        this._get_errorHandler__3144593769_j0whw7_k$().recover_tphv24_k$(this, $p);
+      } else {
+        {
+          throw $p;
+        }
+      }
+    }
+    finally {
+      this.exitRule_qudul3_k$();
+    }
+    return _localctx;
+  };
+  CaosWhitespaceParser.prototype.space_1t9x52_k$ = function () {
+    var _localctx = SpaceContext_init_$Create$(this._get_context__1558698818_ps0bpe_k$(), this._get_state__3614753120_b8zcm8_k$());
+    this.enterRule_khu8i_k$(_localctx, 10, Rules_RULE_space_getInstance().id_1);
+    try {
+      this.enterOuterAlt_9lkdc1_k$(_localctx, 1);
+      {
+        this._set_state__1256591060_i39zdo_k$(33);
+        var tmp = this.match_vjr6ck_k$(this.SPACES_1);
+        if (isInterface(tmp, Token))
+          tmp;
+        else
+          THROW_CCE();
+        Unit_getInstance();
+      }
+    } catch ($p) {
+      if ($p instanceof RecognitionException) {
+        _localctx._set_exception__4196179798_uncphf_k$($p);
+        this._get_errorHandler__3144593769_j0whw7_k$().reportError_dgnagc_k$(this, $p);
+        this._get_errorHandler__3144593769_j0whw7_k$().recover_tphv24_k$(this, $p);
+      } else {
+        {
+          throw $p;
+        }
+      }
+    }
+    finally {
+      this.exitRule_qudul3_k$();
+    }
+    return _localctx;
+  };
+  CaosWhitespaceParser.prototype.skip_23pfj_k$ = function () {
+    var _localctx = SkipContext_init_$Create$(this._get_context__1558698818_ps0bpe_k$(), this._get_state__3614753120_b8zcm8_k$());
+    this.enterRule_khu8i_k$(_localctx, 12, Rules_RULE_skip_getInstance().id_1);
+    var _la;
+    try {
+      this.enterOuterAlt_9lkdc1_k$(_localctx, 1);
+      {
+        this._set_state__1256591060_i39zdo_k$(35);
+        _la = ensureNotNull(this._get__input__3809942944_80rr6o_k$()).LA_y7f82c_k$(1);
+        if (!((_la & -64) === 0 ? !(new Long(1, 0)).shl_po5ip6_k$(_la).and_jhajnj_k$((new Long(1, 0)).shl_po5ip6_k$(this.COMMENT_1).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.C1_STRING_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.QUOTE_STRING_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.MONACO_AUTOCOMPLETE_ITEM_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.BYTE_STRING_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ANIMATION_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.SCRP_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ISCR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.RSCR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ENDM_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.DOIF_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ENDI_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ENUM_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ECON_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EPAS_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ESCN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ESEE_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.ETCH_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EVER_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.LOOP_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.NEXT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.NSCN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.RETN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.REPS_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.REPE_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.SUBR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.UNTL_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.CHAR_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.BINARY_INT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.WORD_PLUS_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.VARx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.VAxx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.OBVx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.OVxx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.MVxx_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.WORD_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EQ_OP_OLD_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EQ_OP_NEW_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.EQ_JOIN_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.FLOAT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.INT_1)).or_s401rn_k$((new Long(1, 0)).shl_po5ip6_k$(this.INCOMPLETE_1))).equals(new Long(0, 0)) : false)) {
+          this._get_errorHandler__3144593769_j0whw7_k$().recoverInline_4nx07t_k$(this);
+          Unit_getInstance();
+        } else {
+          if (ensureNotNull(this._get__input__3809942944_80rr6o_k$()).LA_y7f82c_k$(1) === Tokens_EOF_getInstance_2().id_1)
+            this._set_isMatchedEOF__3828833173_pgwb78_k$(true);
+          this._get_errorHandler__3144593769_j0whw7_k$().reportMatch_qlge1w_k$(this);
+          this.consume_fqiakc_k$();
+          Unit_getInstance();
+        }
+      }
+    } catch ($p) {
+      if ($p instanceof RecognitionException) {
+        _localctx._set_exception__4196179798_uncphf_k$($p);
+        this._get_errorHandler__3144593769_j0whw7_k$().reportError_dgnagc_k$(this, $p);
+        this._get_errorHandler__3144593769_j0whw7_k$().recover_tphv24_k$(this, $p);
+      } else {
+        {
+          throw $p;
+        }
+      }
+    }
+    finally {
+      this.exitRule_qudul3_k$();
+    }
+    return _localctx;
+  };
+  CaosWhitespaceParser.$metadata$ = {
+    simpleName: 'CaosWhitespaceParser',
+    kind: 'class',
+    interfaces: []
+  };
+  function CaosWhitespaceParserBaseListener() {
+  }
+  CaosWhitespaceParserBaseListener.prototype.enterFile_6xd4a_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.exitFile_tnwmxo_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.enterEof_hpqv6q_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.exitEof_1j7aw4_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.enterElements_x8ggqe_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.exitElements_9rm73w_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.enterElement_deyuzm_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.exitElement_6v10yk_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.enterNewline_7t34wi_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.exitNewline_195avg_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.enterSpace_lo5o96_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.exitSpace_h9iy4w_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.enterSkip_p5zg3a_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.exitSkip_g0altw_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.enterEveryRule_qb430n_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.exitEveryRule_1zne9f_k$ = function (ctx) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.visitTerminal_j27dif_k$ = function (node) {
+  };
+  CaosWhitespaceParserBaseListener.prototype.visitErrorNode_7q1wqt_k$ = function (node) {
+  };
+  CaosWhitespaceParserBaseListener.$metadata$ = {
+    simpleName: 'CaosWhitespaceParserBaseListener',
+    kind: 'class',
+    interfaces: [CaosWhitespaceParserListener]
+  };
+  function CaosWhitespaceParserListener() {
+  }
+  CaosWhitespaceParserListener.$metadata$ = {
+    simpleName: 'CaosWhitespaceParserListener',
+    kind: 'interface',
+    interfaces: [ParseTreeListener]
+  };
   function BlockRange_init_$Init$(startToken, endToken, start, end, depth, $this) {
     BlockRange.call($this, startToken, endToken, start._get_startIndex__250257659_44zw1n_k$(), end._get_stopIndex__1345867361_m9alwh_k$() + 1 | 0, toPosition(start), toPosition(end), depth);
     return $this;
@@ -10290,7 +13233,14 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var tmp_1 = _get_textRange__497794113(wordContext);
     var tmp_2 = wordContext._get_text__809840318_de5ose_k$();
     var token = new TokenVal(tmp_1, stripSurroundingQuotes$default(tmp_2, 0, 1, null));
-    this.mCaos2Comments_1.add_1j60pz_k$(new Caos2Comment(_get_textRange__497794113(ctx), ctx._get_text__809840318_de5ose_k$(), token, caos2Values(this, ctx), new TokenVal(_get_textRange__497794113_0(eq), '=')));
+    var tmp_3 = _get_textRange__497794113(ctx);
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_trim_0 = ctx._get_text__809840318_de5ose_k$();
+      tmp$ret$0 = toString(trim(isCharSequence(tmp0_trim_0) ? tmp0_trim_0 : THROW_CCE()));
+      break $l$block;
+    }
+    this.mCaos2Comments_1.add_1j60pz_k$(new Caos2Comment(tmp_3, tmp$ret$0, token, caos2Values(this, ctx), new TokenVal(_get_textRange__497794113_0(eq), '=')));
     Unit_getInstance();
   };
   Caos2PrayWalker.prototype.enterCaos2Comand_vxnvjq_k$ = function (ctx) {
@@ -10306,7 +13256,14 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var tmp_0 = withStartEndTokens(ensureNotNull(wordContext._get_start__3614751663_b8zdqp_k$()), ensureNotNull(wordContext._get_stop__809354889_ddva89_k$()));
     var tmp_1 = wordContext._get_text__809840318_de5ose_k$();
     var token = new TokenVal(tmp_0, stripSurroundingQuotes$default(tmp_1, 0, 1, null));
-    this.mCaos2Comments_1.add_1j60pz_k$(new Caos2Comment(_get_textRange__497794113(ctx), ctx._get_text__809840318_de5ose_k$(), token, caos2Values(this, ctx), null));
+    var tmp_2 = _get_textRange__497794113(ctx);
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_trim_0 = ctx._get_text__809840318_de5ose_k$();
+      tmp$ret$0 = toString(trim(isCharSequence(tmp0_trim_0) ? tmp0_trim_0 : THROW_CCE()));
+      break $l$block;
+    }
+    this.mCaos2Comments_1.add_1j60pz_k$(new Caos2Comment(tmp_2, tmp$ret$0, token, caos2Values(this, ctx), null));
     Unit_getInstance();
   };
   Caos2PrayWalker.$metadata$ = {
@@ -10447,7 +13404,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function empty(_this__1828080292) {
     return _this__1828080292.endIndex <= _this__1828080292.startIndex;
   }
-  function plus_2(_this__1828080292, other) {
+  function plus_3(_this__1828080292, other) {
     var tmp$ret$0;
     $l$block: {
       var tmp0_min_0 = _this__1828080292.startIndex;
@@ -10731,67 +13688,67 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     kind: 'class',
     interfaces: []
   };
-  function _get_DOIF__764809315_1() {
+  function _get_DOIF__764809315_2() {
     init_properties_CaosWalker_kt_2485911106();
     return DOIF;
   }
   var DOIF;
-  function _get_ESCN__765846482_1() {
+  function _get_ESCN__765846482_2() {
     init_properties_CaosWalker_kt_2485911106();
     return ESCN;
   }
   var ESCN;
-  function _get_ENUM__765714794_1() {
+  function _get_ENUM__765714794_2() {
     init_properties_CaosWalker_kt_2485911106();
     return ENUM;
   }
   var ENUM;
-  function _get_LOOP__772203559_1() {
+  function _get_LOOP__772203559_2() {
     init_properties_CaosWalker_kt_2485911106();
     return LOOP;
   }
   var LOOP;
-  function _get_SUBR__778834521_1() {
+  function _get_SUBR__778834521_2() {
     init_properties_CaosWalker_kt_2485911106();
     return SUBR;
   }
   var SUBR;
-  function _get_REPS__777447829_1() {
+  function _get_REPS__777447829_2() {
     init_properties_CaosWalker_kt_2485911106();
     return REPS;
   }
   var REPS;
-  function _get_ENDI__765698333_1() {
+  function _get_ENDI__765698333_2() {
     init_properties_CaosWalker_kt_2485911106();
     return ENDI;
   }
   var ENDI;
-  function _get_EVER__765937901_1() {
+  function _get_EVER__765937901_2() {
     init_properties_CaosWalker_kt_2485911106();
     return EVER;
   }
   var EVER;
-  function _get_NEXT__773761464_1() {
+  function _get_NEXT__773761464_2() {
     init_properties_CaosWalker_kt_2485911106();
     return NEXT;
   }
   var NEXT;
-  function _get_NSCN__774158171_1() {
+  function _get_NSCN__774158171_2() {
     init_properties_CaosWalker_kt_2485911106();
     return NSCN;
   }
   var NSCN;
-  function _get_REPE__777447395_1() {
+  function _get_REPE__777447395_2() {
     init_properties_CaosWalker_kt_2485911106();
     return REPE;
   }
   var REPE;
-  function _get_RETN__777451518_1() {
+  function _get_RETN__777451518_2() {
     init_properties_CaosWalker_kt_2485911106();
     return RETN;
   }
   var RETN;
-  function _get_UNTL__780490138_1() {
+  function _get_UNTL__780490138_2() {
     init_properties_CaosWalker_kt_2485911106();
     return UNTL;
   }
@@ -10893,7 +13850,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
                   tmp = tmp_0;
                 } else {
                   {
-                    tmp = new ErrorVal(item_2_3.textRange, "Unexpected value '" + toString(item_2_3.value) + "'", ErrorTypes_getInstance().GENERAL, item_2_3.text);
+                    tmp = new ErrorVal(item_2_3.textRange, "Unexpected value '" + toString_0(item_2_3.value) + "'", ErrorTypes_getInstance().GENERAL, item_2_3.text);
                   }
                 }
               }
@@ -10949,22 +13906,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       var inductionVariable_0 = 0;
       var last_0 = call.arguments.length;
       if (inductionVariable_0 < last_0)
-        $l$loop: do {
+        $l$loop_0: do {
           var i = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           var argument = call.arguments[i];
           var tmp2_elvis_lhs = getOrNull(call.command.parameters, i);
           var tmp;
           if (tmp2_elvis_lhs == null) {
-            throw Exception_init_$Create$('Too many arguments for command');
+            continue $l$loop_0;
           } else {
             tmp = tmp2_elvis_lhs;
           }
           var parameter = tmp;
-          var parameterType = Companion_getInstance_18().fromIntValue_8xdq7p_k$(parameter.typeId);
-          var argumentType = Companion_getInstance_18().fromIntValue_8xdq7p_k$(argument.type);
+          var parameterType = Companion_getInstance_23().fromIntValue_8xdq7p_k$(parameter.typeId);
+          var argumentType = Companion_getInstance_23().fromIntValue_8xdq7p_k$(argument.type);
           if (like(parameterType, argumentType)) {
-            continue $l$loop;
+            continue $l$loop_0;
           }
           var error = new ErrorVal(argument.textRange, ErrorFormatter_getInstance().typeMismatchError_hlrkdf_k$(call.command.command, parameter, argumentType._get_simpleName__973554894_g3mnri_k$()), ErrorTypes_getInstance().TYPE_ERROR, argument.text);
           errors.add_1j60pz_k$(error);
@@ -10984,16 +13941,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var indexedObject = _get_commandWalker__234972560($this)._get_commandCalls__3729965377_9cdy9r_k$();
     var inductionVariable = 0;
     var last_0 = indexedObject.length;
-    $l$loop: while (inductionVariable < last_0) {
+    $l$loop_0: while (inductionVariable < last_0) {
       var call = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       $this.checkCancelled_1();
       if (call.arguments.length > call.command.parameters.length) {
-        throw CaosException_init_$Create$('Invalid number of arguments passed into command', null, 2, null);
+        continue $l$loop_0;
       }
       if (!call._get_done__795351817_d5j5e1_k$()) {
         if (call._get_missingParameters__4256699745_ms7fj_k$().length === 1 ? call.command.equals(_get_ConditionCommand__1601041147()) : false) {
-          continue $l$loop;
+          continue $l$loop_0;
         }
         var tmp;
         var tmp$ret$1;
@@ -11818,7 +14775,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return EQ_OP;
   }
   var EQ_OP;
-  function _get_EQ_JOIN__3784730068_1() {
+  function _get_EQ_JOIN__3784730068_2() {
     init_properties_CommandWalker_kt_2860349299();
     return EQ_JOIN;
   }
@@ -12091,7 +15048,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.copy_vgo2fi_k$(type, command, arguments_0, tokenTextRange, inVariant, textRange, parameter, inEqualityExpression, containingCommand, tokens);
   };
   CommandCall.prototype.toString = function () {
-    return 'CommandCall(type=' + this.type_1 + ', command=' + this.command_1 + ', arguments=' + toString_0(this.arguments_1) + ', tokenTextRange=' + this.tokenTextRange_1 + ', inVariant=' + this.inVariant_1 + ', textRange=' + this.textRange_1 + ', parameter=' + this.parameter_1 + ', inEqualityExpression=' + this.inEqualityExpression_1 + ', containingCommand=' + this.containingCommand_1 + ', tokens=' + toString_0(this.tokens_1) + ')';
+    return 'CommandCall(type=' + this.type_1 + ', command=' + this.command_1 + ', arguments=' + toString(this.arguments_1) + ', tokenTextRange=' + this.tokenTextRange_1 + ', inVariant=' + this.inVariant_1 + ', textRange=' + this.textRange_1 + ', parameter=' + this.parameter_1 + ', inEqualityExpression=' + this.inEqualityExpression_1 + ', containingCommand=' + this.containingCommand_1 + ', tokens=' + toString(this.tokens_1) + ')';
   };
   CommandCall.$metadata$ = {
     simpleName: 'CommandCall',
@@ -12171,11 +15128,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     configurable: true,
     get: CommandCall.prototype._get_commandString__1529368853_pajok5_k$
   });
-  function EqualityStatement(textRange, first, second, eqToken) {
+  function EqualityStatement_init_$Init$(textRange, first, second, eqToken, join, $mask0, $marker, $this) {
+    if (!(($mask0 & 16) === 0))
+      join = null;
+    EqualityStatement.call($this, textRange, first, second, eqToken, join);
+    return $this;
+  }
+  function EqualityStatement_init_$Create$(textRange, first, second, eqToken, join, $mask0, $marker) {
+    return EqualityStatement_init_$Init$(textRange, first, second, eqToken, join, $mask0, $marker, Object.create(EqualityStatement.prototype));
+  }
+  function EqualityStatement(textRange, first, second, eqToken, join) {
+    var join_0 = join === void 1 ? null : join;
     this.textRange_1 = textRange;
     this.first_1 = first;
     this.second_1 = second;
     this.eqToken_1 = eqToken;
+    this.join_1 = join_0;
   }
   EqualityStatement.prototype._set_textRange__3021025205_pdbwzj_k$ = function (_set____804775014) {
     this.textRange_1 = _set____804775014;
@@ -12201,6 +15169,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   EqualityStatement.prototype._get_eqToken__1775544324_td42ro_k$ = function () {
     return this.eqToken_1;
   };
+  EqualityStatement.prototype._set_join__586271341_984fdd_k$ = function (_set____804775014) {
+    this.join_1 = _set____804775014;
+  };
+  EqualityStatement.prototype._get_join__800888417_d8ttgh_k$ = function () {
+    return this.join_1;
+  };
+  EqualityStatement.prototype._get_eqEnd__3210334498_hxrg0u_k$ = function () {
+    var tmp0_safe_receiver = this.join_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.eqEnd;
+    return tmp1_elvis_lhs == null ? this.textRange_1.end : tmp1_elvis_lhs;
+  };
+  EqualityStatement.prototype._get_eqEndIndex__3894934376_6m63dk_k$ = function () {
+    var tmp0_safe_receiver = this.join_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.eqEndIndex;
+    return tmp1_elvis_lhs == null ? this.textRange_1.endIndex : tmp1_elvis_lhs;
+  };
   EqualityStatement.prototype.component1 = function () {
     return this.textRange_1;
   };
@@ -12213,13 +15197,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   EqualityStatement.prototype.component4 = function () {
     return this.eqToken_1;
   };
-  EqualityStatement.prototype.copy = function (textRange, first, second, eqToken) {
-    return this.copy_exbpg9_k$(textRange === void 1 ? this.textRange_1 : textRange, first === void 1 ? this.first_1 : first, second === void 1 ? this.second_1 : second, eqToken === void 1 ? this.eqToken_1 : eqToken);
+  EqualityStatement.prototype.component5 = function () {
+    return this.join_1;
   };
-  EqualityStatement.prototype.copy_exbpg9_k$ = function (textRange, first, second, eqToken) {
-    return new EqualityStatement(textRange, first, second, eqToken);
+  EqualityStatement.prototype.copy = function (textRange, first, second, eqToken, join) {
+    return this.copy_qji0to_k$(textRange === void 1 ? this.textRange_1 : textRange, first === void 1 ? this.first_1 : first, second === void 1 ? this.second_1 : second, eqToken === void 1 ? this.eqToken_1 : eqToken, join === void 1 ? this.join_1 : join);
   };
-  EqualityStatement.prototype.copy$default_9wnrfv_k$ = function (textRange, first, second, eqToken, $mask0, $handler) {
+  EqualityStatement.prototype.copy_qji0to_k$ = function (textRange, first, second, eqToken, join) {
+    return new EqualityStatement(textRange, first, second, eqToken, join);
+  };
+  EqualityStatement.prototype.copy$default_twoqbs_k$ = function (textRange, first, second, eqToken, join, $mask0, $handler) {
     if (!(($mask0 & 1) === 0))
       textRange = this.textRange_1;
     if (!(($mask0 & 2) === 0))
@@ -12228,16 +15215,19 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       second = this.second_1;
     if (!(($mask0 & 8) === 0))
       eqToken = this.eqToken_1;
-    return this.copy_exbpg9_k$(textRange, first, second, eqToken);
+    if (!(($mask0 & 16) === 0))
+      join = this.join_1;
+    return this.copy_qji0to_k$(textRange, first, second, eqToken, join);
   };
   EqualityStatement.prototype.toString = function () {
-    return 'EqualityStatement(textRange=' + this.textRange_1 + ', first=' + this.first_1 + ', second=' + this.second_1 + ', eqToken=' + this.eqToken_1 + ')';
+    return 'EqualityStatement(textRange=' + this.textRange_1 + ', first=' + this.first_1 + ', second=' + this.second_1 + ', eqToken=' + this.eqToken_1 + ', join=' + this.join_1 + ')';
   };
   EqualityStatement.prototype.hashCode = function () {
     var result = hashCode(this.textRange_1);
     result = imul(result, 31) + (this.first_1 == null ? 0 : hashCode(this.first_1)) | 0;
     result = imul(result, 31) + (this.second_1 == null ? 0 : hashCode(this.second_1)) | 0;
     result = imul(result, 31) + (this.eqToken_1 == null ? 0 : this.eqToken_1.hashCode()) | 0;
+    result = imul(result, 31) + (this.join_1 == null ? 0 : this.join_1.hashCode()) | 0;
     return result;
   };
   EqualityStatement.prototype.equals = function (other) {
@@ -12255,6 +15245,8 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     if (!equals(this.second_1, tmp0_other_with_cast.second_1))
       return false;
     if (!equals(this.eqToken_1, tmp0_other_with_cast.eqToken_1))
+      return false;
+    if (!equals(this.join_1, tmp0_other_with_cast.join_1))
       return false;
     return true;
   };
@@ -12286,6 +15278,19 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     configurable: true,
     get: EqualityStatement.prototype._get_eqToken__1775544324_td42ro_k$,
     set: EqualityStatement.prototype._set_eqToken__3324536952_5d1134_k$
+  });
+  Object.defineProperty(EqualityStatement.prototype, 'join', {
+    configurable: true,
+    get: EqualityStatement.prototype._get_join__800888417_d8ttgh_k$,
+    set: EqualityStatement.prototype._set_join__586271341_984fdd_k$
+  });
+  Object.defineProperty(EqualityStatement.prototype, 'eqEnd', {
+    configurable: true,
+    get: EqualityStatement.prototype._get_eqEnd__3210334498_hxrg0u_k$
+  });
+  Object.defineProperty(EqualityStatement.prototype, 'eqEndIndex', {
+    configurable: true,
+    get: EqualityStatement.prototype._get_eqEndIndex__3894934376_6m63dk_k$
   });
   function Argument(textRange, parameter, type, text, inEqualityExpression, parserItem, containingCommand) {
     this.textRange_1 = textRange;
@@ -12577,7 +15582,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       } else {
       }
       if (!(token instanceof EqJoin)) {
-        while (equals(firstOrNull($this.waiting_1), _get_EQ_JOIN__3784730068_1())) {
+        while (equals(firstOrNull($this.waiting_1), _get_EQ_JOIN__3784730068_2())) {
           removeFirst($this.waiting_1);
           Unit_getInstance();
         }
@@ -12636,19 +15641,24 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
           }
         } else {
           if (token instanceof EqJoin) {
-            if (equals(firstOrNull($this.waiting_1), _get_EQ_JOIN__3784730068_1())) {
+            if (equals(firstOrNull($this.waiting_1), _get_EQ_JOIN__3784730068_2())) {
               var tmp6_safe_receiver = firstOrNull($this.working_1);
               if (equals(tmp6_safe_receiver == null ? null : tmp6_safe_receiver.command_1, _get_ConditionCommand__1601041147())) {
                 removeFirst($this.working_1);
                 Unit_getInstance();
                 done($this);
               } else {
+                var tmp7_safe_receiver = firstOrNull($this.working_1);
+                if ((tmp7_safe_receiver == null ? null : tmp7_safe_receiver._get_done__795351817_d5j5e1_k$()) === true) {
+                  done($this);
+                } else {
+                }
               }
               $this.waiting_1.addAll_oxxjjk_k$(_get_conditionParameters__3605446092());
               Unit_getInstance();
-              var tmp7_safe_receiver = firstOrNull($this.working_1);
+              var tmp8_safe_receiver = firstOrNull($this.working_1);
               var tmp_6;
-              if (tmp7_safe_receiver == null) {
+              if (tmp8_safe_receiver == null) {
                 tmp_6 = null;
               } else {
                 var tmp$ret$3;
@@ -12657,7 +15667,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
                   }
                   var tmp$ret$2;
                   $l$block_1: {
-                    tmp$ret$2 = withCommandCall(tmp7_safe_receiver, _get_lastIndex__339712501_0($this.mCommands_1));
+                    tmp$ret$2 = withCommandCall(tmp8_safe_receiver, _get_lastIndex__339712501_0($this.mCommands_1));
                     break $l$block_1;
                   }
                   tmp$ret$3 = tmp$ret$2;
@@ -12685,13 +15695,13 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
                     if (token instanceof ByteString) {
                       var tmp_8;
                       var tmp_9;
-                      var tmp8_safe_receiver = firstOrNull($this.waiting_1);
-                      if ((tmp8_safe_receiver == null ? null : tmp8_safe_receiver.typeId) === ValueType_C1_STRING_getInstance()._get_value__3683422336_a43j40_k$()) {
+                      var tmp9_safe_receiver = firstOrNull($this.waiting_1);
+                      if ((tmp9_safe_receiver == null ? null : tmp9_safe_receiver.typeId) === ValueType_C1_STRING_getInstance()._get_value__3683422336_a43j40_k$()) {
                         tmp_9 = true;
                       } else {
                         {
-                          var tmp9_safe_receiver = firstOrNull($this.waiting_1);
-                          tmp_9 = (tmp9_safe_receiver == null ? null : tmp9_safe_receiver.typeId) === ValueType_STRING_getInstance()._get_value__3683422336_a43j40_k$();
+                          var tmp10_safe_receiver = firstOrNull($this.waiting_1);
+                          tmp_9 = (tmp10_safe_receiver == null ? null : tmp10_safe_receiver.typeId) === ValueType_STRING_getInstance()._get_value__3683422336_a43j40_k$();
                         }
                       }
                       if (tmp_9) {
@@ -12706,13 +15716,13 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
                       if (token instanceof C1eStringVal) {
                         var tmp_10;
                         var tmp_11;
-                        var tmp10_safe_receiver = firstOrNull($this.waiting_1);
-                        if ((tmp10_safe_receiver == null ? null : tmp10_safe_receiver.typeId) === ValueType_BYTE_STRING_getInstance()._get_value__3683422336_a43j40_k$()) {
+                        var tmp11_safe_receiver = firstOrNull($this.waiting_1);
+                        if ((tmp11_safe_receiver == null ? null : tmp11_safe_receiver.typeId) === ValueType_BYTE_STRING_getInstance()._get_value__3683422336_a43j40_k$()) {
                           tmp_11 = true;
                         } else {
                           {
-                            var tmp11_safe_receiver = firstOrNull($this.waiting_1);
-                            tmp_11 = (tmp11_safe_receiver == null ? null : tmp11_safe_receiver.typeId) === ValueType_ANIMATION_getInstance()._get_value__3683422336_a43j40_k$();
+                            var tmp12_safe_receiver = firstOrNull($this.waiting_1);
+                            tmp_11 = (tmp12_safe_receiver == null ? null : tmp12_safe_receiver.typeId) === ValueType_ANIMATION_getInstance()._get_value__3683422336_a43j40_k$();
                           }
                         }
                         if (tmp_11) {
@@ -12742,9 +15752,9 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       $this.line_1 = token.textRange.end.line;
       $this.columnInLine_1 = token.textRange.end.character;
       $this.textPositionInFile_1 = token.textRange.endIndex;
-      var tmp12_this = $this;
-      var tmp13 = tmp12_this.tokenIndex_1;
-      tmp12_this.tokenIndex_1 = tmp13 + 1 | 0;
+      var tmp13_this = $this;
+      var tmp14 = tmp13_this.tokenIndex_1;
+      tmp13_this.tokenIndex_1 = tmp14 + 1 | 0;
       Unit_getInstance();
       $this.checkCancelled_1();
     }
@@ -13016,7 +16026,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         }
         var tmp$ret$17;
         $l$block_16: {
-          tmp$ret$17 = Companion_getInstance_18().fromIntValue_8xdq7p_k$(tmp2_safe_receiver);
+          tmp$ret$17 = Companion_getInstance_23().fromIntValue_8xdq7p_k$(tmp2_safe_receiver);
           break $l$block_16;
         }
         tmp$ret$18 = tmp$ret$17;
@@ -13196,7 +16206,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         }
         var tmp$ret$16;
         $l$block_15: {
-          tmp$ret$16 = Companion_getInstance_18().fromIntValue_8xdq7p_k$(tmp3_safe_receiver);
+          tmp$ret$16 = Companion_getInstance_23().fromIntValue_8xdq7p_k$(tmp3_safe_receiver);
           break $l$block_15;
         }
         tmp$ret$17 = tmp$ret$16;
@@ -13299,7 +16309,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       tmp_11 = true;
     } else {
       {
-        tmp_11 = equals(parameter, _get_EQ_JOIN__3784730068_1());
+        tmp_11 = equals(parameter, _get_EQ_JOIN__3784730068_2());
       }
     }
     if (tmp_11) {
@@ -13567,7 +16577,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       Unit_getInstance();
     } else if (!commandCall.command_1.isCommand) {
       var tmp_0 = Log_getInstance();
-      Companion_getInstance_6();
+      Companion_getInstance_8();
       tmp_0.e_vxqv5a_k$('CommandWalker', "L/RValue command '" + commandCall.command_1.command + "' pushed without parameter");
     } else {
     }
@@ -13606,7 +16616,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         tmp_7 = true;
       } else {
         {
-          tmp_7 = equals(parameter, _get_EQ_JOIN__3784730068_1());
+          tmp_7 = equals(parameter, _get_EQ_JOIN__3784730068_2());
         }
       }
       if (tmp_7) {
@@ -13676,7 +16686,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       break $l$block_5;
     }
     tmp_0.arguments_1 = tmp$ret$6;
-    if (equals(firstOrNull($this.waiting_1), _get_EQ_JOIN__3784730068_1())) {
+    if (equals(firstOrNull($this.waiting_1), _get_EQ_JOIN__3784730068_2())) {
       var tmp_11 = getOrNull($this.tokens_1, $this.tokenIndex_1 + 1 | 0);
       if (!(tmp_11 instanceof EqJoin)) {
         removeFirstOrNull($this.waiting_1);
@@ -13814,36 +16824,184 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var tmp0_iterator = $this.mCommands_1.iterator_jk1svi_k$();
     while (tmp0_iterator.hasNext_bitz1p_k$()) {
       var commandCall = tmp0_iterator.next_20eer_k$();
-      var tmp1_safe_receiver = lastOrNull_0(commandCall.arguments_1);
-      var trueEnd = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.textRange;
+      var trueEnd = endEnd($this, commandCall);
       if (!(trueEnd == null)) {
         var tmp = commandCall;
         var tmp_0 = commandCall.textRange_1;
-        var tmp2_$this = tmp_0 instanceof RangeWithIndex ? tmp_0 : THROW_CCE();
-        var tmp3_endIndex = trueEnd.endIndex;
-        var tmp4_end = new PositionImpl(trueEnd.end.line, trueEnd.end.character);
-        tmp.textRange_1 = tmp2_$this.copy$default_9ovvyo_k$(null, tmp4_end, 0, tmp3_endIndex, 5, null);
+        var tmp1_$this = tmp_0 instanceof RangeWithIndex ? tmp_0 : THROW_CCE();
+        var tmp2_endIndex = trueEnd.endIndex;
+        var tmp3_end = trueEnd.end;
+        tmp.textRange_1 = tmp1_$this.copy$default_9ovvyo_k$(null, tmp3_end, 0, tmp2_endIndex, 5, null);
       }
     }
   }
-  function Companion_4() {
-    Companion_instance_4 = this;
+  function endEnd($this, commandCall) {
+    var tmp0_safe_receiver = nullIfEmpty_1(commandCall.arguments_1);
+    var tmp;
+    if (tmp0_safe_receiver == null) {
+      tmp = null;
+    } else {
+      var tmp$ret$1;
+      $l$block_4: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = tmp0_safe_receiver.length === 0;
+          break $l$block;
+        }
+        if (tmp$ret$0) {
+          tmp$ret$1 = null;
+          break $l$block_4;
+        } else {
+        }
+        var maxElem_1 = tmp0_safe_receiver[0];
+        var lastIndex_2 = _get_lastIndex__339712501(tmp0_safe_receiver);
+        if (lastIndex_2 === 0) {
+          tmp$ret$1 = maxElem_1;
+          break $l$block_4;
+        }
+        var tmp$ret$2;
+        $l$block_2: {
+          var tmp0__anonymous__8_2495602528 = maxElem_1;
+          tmp$ret$2 = _get_endIndex__2798786036(tmp0__anonymous__8_2495602528);
+          break $l$block_2;
+        }
+        var maxValue_3 = tmp$ret$2;
+        var inductionVariable = 1;
+        if (inductionVariable <= lastIndex_2)
+          do {
+            var i_5 = inductionVariable;
+            inductionVariable = inductionVariable + 1 | 0;
+            var e_6 = tmp0_safe_receiver[i_5];
+            var tmp$ret$3;
+            $l$block_3: {
+              tmp$ret$3 = _get_endIndex__2798786036(e_6);
+              break $l$block_3;
+            }
+            var v_7 = tmp$ret$3;
+            if (compareTo(maxValue_3, v_7) < 0) {
+              maxElem_1 = e_6;
+              maxValue_3 = v_7;
+            }
+          }
+           while (!(i_5 === lastIndex_2));
+        tmp$ret$1 = maxElem_1;
+        break $l$block_4;
+      }
+      tmp = tmp$ret$1;
+    }
+    var tmp1_elvis_lhs = tmp;
+    var tmp_0;
+    if (tmp1_elvis_lhs == null) {
+      return null;
+    } else {
+      tmp_0 = tmp1_elvis_lhs;
+    }
+    var lastArgument = tmp_0;
+    var tmp_1;
+    if (!(lastArgument instanceof CommandCall)) {
+      tmp_1 = lastArgument.textRange;
+    } else {
+      {
+        tmp_1 = endEnd($this, lastArgument);
+      }
+    }
+    return tmp_1;
+  }
+  function Companion_6() {
+    Companion_instance_6 = this;
     this.TAG_1 = 'CommandWalker';
   }
-  Companion_4.$metadata$ = {
+  Companion_6.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_4;
-  function Companion_getInstance_6() {
-    if (Companion_instance_4 == null)
-      new Companion_4();
-    return Companion_instance_4;
+  var Companion_instance_6;
+  function Companion_getInstance_8() {
+    if (Companion_instance_6 == null)
+      new Companion_6();
+    return Companion_instance_6;
   }
+  function sam$kotlin_Comparator$0_0(function_0) {
+    this.function_1 = function_0;
+  }
+  sam$kotlin_Comparator$0_0.prototype.compare_6tbigh_k$ = function (a, b) {
+    return this.function_1(a, b);
+  };
+  sam$kotlin_Comparator$0_0.prototype.compare = function (a, b) {
+    return this.compare_6tbigh_k$(a, b);
+  };
+  sam$kotlin_Comparator$0_0.$metadata$ = {
+    simpleName: 'sam$kotlin_Comparator$0',
+    kind: 'class',
+    interfaces: [Comparator]
+  };
   function CommandWalker$variant$delegate$lambda(this$0) {
     return function () {
       return this$0.lib_1._get_variantCode__3539882943_chk2td_k$();
+    };
+  }
+  function CommandWalker$_get_equalityStatements_$lambda_3175192859() {
+    return function (a, b) {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = _get_startIndex__250257659(a);
+          break $l$block;
+        }
+        var tmp = tmp$ret$0;
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = _get_startIndex__250257659(b);
+          break $l$block_0;
+        }
+        tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+        break $l$block_1;
+      }
+      return tmp$ret$2;
+    };
+  }
+  function CommandWalker$_get_equalityStatements_$lambda_3175192859_0() {
+    return function (a, b) {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = _get_startIndex__250257659(a);
+          break $l$block;
+        }
+        var tmp = tmp$ret$0;
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = _get_startIndex__250257659(b);
+          break $l$block_0;
+        }
+        tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+        break $l$block_1;
+      }
+      return tmp$ret$2;
+    };
+  }
+  function CommandWalker$_get_equalityStatements_$lambda_3175192859_1() {
+    return function (a, b) {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = _get_startIndex__250257659(a);
+          break $l$block;
+        }
+        var tmp = tmp$ret$0;
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = _get_startIndex__250257659(b);
+          break $l$block_0;
+        }
+        tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+        break $l$block_1;
+      }
+      return tmp$ret$2;
     };
   }
   function CommandWalker$pushArgument$lambda() {
@@ -13852,7 +17010,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     };
   }
   function CommandWalker(lib, tokens, checkCancelled) {
-    Companion_getInstance_6();
+    Companion_getInstance_8();
     this.lib_1 = lib;
     this.tokens_1 = tokens;
     this.checkCancelled_1 = checkCancelled;
@@ -13960,67 +17118,159 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.caos2Comments_1;
   };
   CommandWalker.prototype._get_equalityStatements__3241573837_hf5vlf_k$ = function () {
-    var tmp$ret$6;
-    $l$block_5: {
-      var tmp$ret$5;
-      $l$block_4: {
-        var tmp$ret$2;
-        $l$block_1: {
-          var tmp0_filter_0 = this.mCommands_1;
-          var tmp$ret$1;
-          $l$block_0: {
-            var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
-            var tmp0_iterator_1_2 = tmp0_filter_0.iterator_jk1svi_k$();
-            while (tmp0_iterator_1_2.hasNext_bitz1p_k$()) {
-              var element_2_3 = tmp0_iterator_1_2.next_20eer_k$();
-              var tmp$ret$0;
-              $l$block: {
-                tmp$ret$0 = element_2_3.type_1 === ValueType_CONDITION_getInstance()._get_value__3683422336_a43j40_k$();
-                break $l$block;
+    var tmp$ret$15;
+    $l$block_14: {
+      var tmp$ret$14;
+      $l$block_13: {
+        var tmp$ret$7;
+        $l$block_6: {
+          var tmp$ret$5;
+          $l$block_4: {
+            var tmp$ret$2;
+            $l$block_1: {
+              var tmp0_filter_0 = this.mCommands_1;
+              var tmp$ret$1;
+              $l$block_0: {
+                var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
+                var tmp0_iterator_1_2 = tmp0_filter_0.iterator_jk1svi_k$();
+                while (tmp0_iterator_1_2.hasNext_bitz1p_k$()) {
+                  var element_2_3 = tmp0_iterator_1_2.next_20eer_k$();
+                  var tmp$ret$0;
+                  $l$block: {
+                    tmp$ret$0 = element_2_3.type_1 === ValueType_CONDITION_getInstance()._get_value__3683422336_a43j40_k$();
+                    break $l$block;
+                  }
+                  if (tmp$ret$0) {
+                    tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+                    Unit_getInstance();
+                  } else {
+                  }
+                }
+                tmp$ret$1 = tmp0_filterTo_0_1;
+                break $l$block_0;
               }
-              if (tmp$ret$0) {
-                tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+              tmp$ret$2 = tmp$ret$1;
+              break $l$block_1;
+            }
+            var tmp1_map_0 = tmp$ret$2;
+            var tmp$ret$4;
+            $l$block_3: {
+              var tmp0_mapTo_0_1 = ArrayList_init_$Create$(collectionSizeOrDefault(tmp1_map_0, 10));
+              var tmp0_iterator_1_2_0 = tmp1_map_0.iterator_jk1svi_k$();
+              while (tmp0_iterator_1_2_0.hasNext_bitz1p_k$()) {
+                var item_2_3 = tmp0_iterator_1_2_0.next_20eer_k$();
+                var tmp$ret$3;
+                $l$block_2: {
+                  var tmp = item_2_3.textRange_1;
+                  var tmp_0 = getOrNull(item_2_3.arguments_1, 0);
+                  var tmp_1 = getOrNull(item_2_3.arguments_1, 2);
+                  var tmp0_safe_receiver_5 = getOrNull(item_2_3.arguments_1, 1);
+                  var tmp_2 = tmp0_safe_receiver_5 == null ? null : tmp0_safe_receiver_5.parserItem;
+                  var tmp_3 = tmp_2 instanceof EqOp ? tmp_2 : null;
+                  tmp$ret$3 = EqualityStatement_init_$Create$(tmp, tmp_0, tmp_1, tmp_3, null, 16, null);
+                  break $l$block_2;
+                }
+                tmp0_mapTo_0_1.add_1j60pz_k$(tmp$ret$3);
                 Unit_getInstance();
-              } else {
               }
+              tmp$ret$4 = tmp0_mapTo_0_1;
+              break $l$block_3;
             }
-            tmp$ret$1 = tmp0_filterTo_0_1;
-            break $l$block_0;
+            tmp$ret$5 = tmp$ret$4;
+            break $l$block_4;
           }
-          tmp$ret$2 = tmp$ret$1;
-          break $l$block_1;
+          var tmp2_sortedBy_0 = tmp$ret$5;
+          var tmp$ret$6;
+          $l$block_5: {
+            var tmp_4 = CommandWalker$_get_equalityStatements_$lambda_3175192859();
+            tmp$ret$6 = new sam$kotlin_Comparator$0_0(tmp_4);
+            break $l$block_5;
+          }
+          tmp$ret$7 = sortedWith(tmp2_sortedBy_0, tmp$ret$6);
+          break $l$block_6;
         }
-        var tmp1_map_0 = tmp$ret$2;
-        var tmp$ret$4;
-        $l$block_3: {
-          var tmp0_mapTo_0_1 = ArrayList_init_$Create$(collectionSizeOrDefault(tmp1_map_0, 10));
-          var tmp0_iterator_1_2_0 = tmp1_map_0.iterator_jk1svi_k$();
-          while (tmp0_iterator_1_2_0.hasNext_bitz1p_k$()) {
-            var item_2_3 = tmp0_iterator_1_2_0.next_20eer_k$();
-            var tmp$ret$3;
-            $l$block_2: {
-              var tmp = item_2_3.textRange_1;
-              var tmp_0 = getOrNull(item_2_3.arguments_1, 0);
-              var tmp_1 = getOrNull(item_2_3.arguments_1, 2);
-              var tmp0_safe_receiver_5 = getOrNull(item_2_3.arguments_1, 1);
-              var tmp_2 = tmp0_safe_receiver_5 == null ? null : tmp0_safe_receiver_5.parserItem;
-              tmp$ret$3 = new EqualityStatement(tmp, tmp_0, tmp_1, tmp_2 instanceof EqOp ? tmp_2 : null);
-              break $l$block_2;
+        var tmp3_let_0 = tmp$ret$7;
+        {
+        }
+        var tmp$ret$13;
+        $l$block_12: {
+          var join_2 = false;
+          var tmp$ret$9;
+          $l$block_8: {
+            var tmp0_sortedBy_0_4 = this.tokens_1;
+            var tmp$ret$8;
+            $l$block_7: {
+              var tmp_5 = CommandWalker$_get_equalityStatements_$lambda_3175192859_0();
+              tmp$ret$8 = new sam$kotlin_Comparator$0_0(tmp_5);
+              break $l$block_7;
             }
-            tmp0_mapTo_0_1.add_1j60pz_k$(tmp$ret$3);
+            tmp$ret$9 = sortedWith_0(tmp0_sortedBy_0_4, tmp$ret$8);
+            break $l$block_8;
+          }
+          var items_3 = tmp$ret$9;
+          var last_6 = null;
+          var tmp$ret$10;
+          $l$block_9: {
+            tmp$ret$10 = ArrayList_init_$Create$_0();
+            break $l$block_9;
+          }
+          var out_7 = tmp$ret$10;
+          var inductionVariable = tmp3_let_0._get_size__809037418_ddoh9m_k$() - 1 | 0;
+          if (0 <= inductionVariable)
+            $l$loop: do {
+              var i_9 = inductionVariable;
+              inductionVariable = inductionVariable + -1 | 0;
+              var eq_10 = tmp3_let_0.get_fkrdnv_k$(i_9);
+              if (last_6 == null) {
+                last_6 = eq_10;
+                continue $l$loop;
+              }
+              if (join_2) {
+                var tmp_6 = eq_10;
+                eq_10 = tmp_6.copy$default_twoqbs_k$(null, null, null, null, last_6, 15, null);
+              } else {
+                out_7.add_1j60pz_k$(last_6);
+                Unit_getInstance();
+              }
+              var tmp1_safe_receiver_12 = eq_10.first_1;
+              var indexOf_11 = indexOf_0(items_3, tmp1_safe_receiver_12 == null ? null : tmp1_safe_receiver_12.parserItem) - 1 | 0;
+              var tmp_7;
+              if (indexOf_11 > 0) {
+                var tmp_8 = items_3.get_fkrdnv_k$(indexOf_11);
+                tmp_7 = tmp_8 instanceof EqJoin;
+              } else {
+                tmp_7 = false;
+              }
+              join_2 = tmp_7;
+              last_6 = eq_10;
+            }
+             while (0 <= inductionVariable);
+          if (!(last_6 == null)) {
+            out_7.add_1j60pz_k$(last_6);
             Unit_getInstance();
           }
-          tmp$ret$4 = tmp0_mapTo_0_1;
-          break $l$block_3;
+          var tmp$ret$12;
+          $l$block_11: {
+            var tmp$ret$11;
+            $l$block_10: {
+              var tmp_9 = CommandWalker$_get_equalityStatements_$lambda_3175192859_1();
+              tmp$ret$11 = new sam$kotlin_Comparator$0_0(tmp_9);
+              break $l$block_10;
+            }
+            tmp$ret$12 = sortedWith(out_7, tmp$ret$11);
+            break $l$block_11;
+          }
+          tmp$ret$13 = tmp$ret$12;
+          break $l$block_12;
         }
-        tmp$ret$5 = tmp$ret$4;
-        break $l$block_4;
+        tmp$ret$14 = tmp$ret$13;
+        break $l$block_13;
       }
-      var tmp2_toTypedArray_0 = tmp$ret$5;
-      tmp$ret$6 = copyToArray(tmp2_toTypedArray_0);
-      break $l$block_5;
+      var tmp4_toTypedArray_0 = tmp$ret$14;
+      tmp$ret$15 = copyToArray(tmp4_toTypedArray_0);
+      break $l$block_14;
     }
-    return tmp$ret$6;
+    return tmp$ret$15;
   };
   CommandWalker.$metadata$ = {
     simpleName: 'CommandWalker',
@@ -14042,6 +17292,38 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     if (!(($mask0 & 2) === 0))
       characterOffset = null;
     return start(_this__1828080292, lineOffset, characterOffset);
+  }
+  function _get_start__3614751663_0(_this__1828080292) {
+    init_properties_CommandWalker_kt_2860349299();
+    return _this__1828080292.textRange.start;
+  }
+  function _get_startLine__1396177307(_this__1828080292) {
+    init_properties_CommandWalker_kt_2860349299();
+    return _this__1828080292.textRange.start.line;
+  }
+  function _get_startCharacter__2250643972(_this__1828080292) {
+    init_properties_CommandWalker_kt_2860349299();
+    return _this__1828080292.textRange.start.character;
+  }
+  function _get_end__856968982(_this__1828080292) {
+    init_properties_CommandWalker_kt_2860349299();
+    return _this__1828080292.textRange.end;
+  }
+  function _get_endLine__3833692546(_this__1828080292) {
+    init_properties_CommandWalker_kt_2860349299();
+    return _this__1828080292.textRange.end.line;
+  }
+  function _get_endCharacter__1122527869(_this__1828080292) {
+    init_properties_CommandWalker_kt_2860349299();
+    return _this__1828080292.textRange.end.character;
+  }
+  function _get_startIndex__250257659(_this__1828080292) {
+    init_properties_CommandWalker_kt_2860349299();
+    return _this__1828080292.textRange.startIndex;
+  }
+  function _get_endIndex__2798786036(_this__1828080292) {
+    init_properties_CommandWalker_kt_2860349299();
+    return _this__1828080292.textRange.endIndex;
   }
   function end(_this__1828080292, lineOffset, characterOffset) {
     init_properties_CommandWalker_kt_2860349299();
@@ -14110,7 +17392,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       var tmp$ret$0;
       $l$block: {
         var tmp = stitch$lambda();
-        tmp$ret$0 = new sam$kotlin_Comparator$0_0(tmp);
+        tmp$ret$0 = new sam$kotlin_Comparator$0_1(tmp);
         break $l$block;
       }
       tmp$ret$1 = sortedWith_0(items, tmp$ret$0);
@@ -14148,9 +17430,9 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var padding = next.textRange.startIndex - ((lines + spaces | 0) + last.textRange.endIndex | 0) | 0;
     var tmp_0;
     if (padding > 0 ? lines > 1 : false) {
-      tmp_0 = '\n' + repeat(' ', padding) + repeat('\n', lines - 1 | 0);
+      tmp_0 = '\n' + repeat_0(' ', padding) + repeat_0('\n', lines - 1 | 0);
     } else {
-      tmp_0 = repeat('\n', lines);
+      tmp_0 = repeat_0('\n', lines);
     }
     var out = tmp_0;
     var tmp$ret$0;
@@ -14159,18 +17441,18 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       tmp$ret$0 = Math.max(0, tmp0_max_0);
       break $l$block;
     }
-    return out + repeat(' ', tmp$ret$0);
+    return out + repeat_0(' ', tmp$ret$0);
   }
-  function sam$kotlin_Comparator$0_0(function_0) {
+  function sam$kotlin_Comparator$0_1(function_0) {
     this.function_1 = function_0;
   }
-  sam$kotlin_Comparator$0_0.prototype.compare_6tbigh_k$ = function (a, b) {
+  sam$kotlin_Comparator$0_1.prototype.compare_6tbigh_k$ = function (a, b) {
     return this.function_1(a, b);
   };
-  sam$kotlin_Comparator$0_0.prototype.compare = function (a, b) {
+  sam$kotlin_Comparator$0_1.prototype.compare = function (a, b) {
     return this.compare_6tbigh_k$(a, b);
   };
-  sam$kotlin_Comparator$0_0.$metadata$ = {
+  sam$kotlin_Comparator$0_1.$metadata$ = {
     simpleName: 'sam$kotlin_Comparator$0',
     kind: 'class',
     interfaces: [Comparator]
@@ -14806,9 +18088,10 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       EQ_SECOND_PARAM = ICaosParameter_init_$Create$(2, '{second}', tmp_2, 'Any', null, null, 48, null);
       var tmp_3 = ValueType_EQ_OP_getInstance()._get_value__3683422336_a43j40_k$();
       EQ_OP = ICaosParameter_init_$Create$(1, '{EQ}', tmp_3, 'Any', null, null, 48, null);
-      var tmp_4 = ValueType_EQ_JOIN_getInstance()._get_value__3683422336_a43j40_k$();
-      EQ_JOIN = ICaosParameter_init_$Create$(1, '{AND|OR}', tmp_4, 'Any', null, null, 48, null);
-      conditionParameters = listOf([_get_EQ_FIRST_PARAM__564611200(), _get_EQ_OP__2265393149(), _get_EQ_SECOND_PARAM__1248468252(), _get_EQ_JOIN__3784730068_1()]);
+      var tmp_4 = ValueType_CONDITION_getInstance()._get_value__3683422336_a43j40_k$();
+      var tmp_5 = ValueType_CONDITION_getInstance()._get_simpleName__973554894_g3mnri_k$();
+      EQ_JOIN = ICaosParameter_init_$Create$(1, '{AND|OR}', tmp_4, tmp_5, null, null, 48, null);
+      conditionParameters = listOf([_get_EQ_FIRST_PARAM__564611200(), _get_EQ_OP__2265393149(), _get_EQ_SECOND_PARAM__1248468252(), _get_EQ_JOIN__3784730068_2()]);
       var tmp0_command = '{eq}';
       var tmp$ret$0;
       $l$block: {
@@ -14845,46 +18128,46 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       leftValueNoVar = listOf(['PUHL', 'PUPT', 'CLS2']);
     }
   }
-  function _get_SCRP__778313597_1($this) {
+  function _get_SCRP__778313597_2($this) {
     return $this.SCRP_1;
   }
-  function _get_DOIF__764809315_2($this) {
+  function _get_DOIF__764809315_3($this) {
     return $this.DOIF_1;
   }
-  function _get_ESCN__765846482_2($this) {
+  function _get_ESCN__765846482_3($this) {
     return $this.ESCN_1;
   }
-  function _get_ENUM__765714794_2($this) {
+  function _get_ENUM__765714794_3($this) {
     return $this.ENUM_1;
   }
-  function _get_LOOP__772203559_2($this) {
+  function _get_LOOP__772203559_3($this) {
     return $this.LOOP_1;
   }
-  function _get_SUBR__778834521_2($this) {
+  function _get_SUBR__778834521_3($this) {
     return $this.SUBR_1;
   }
-  function _get_REPS__777447829_2($this) {
+  function _get_REPS__777447829_3($this) {
     return $this.REPS_1;
   }
-  function _get_ENDI__765698333_2($this) {
+  function _get_ENDI__765698333_3($this) {
     return $this.ENDI_1;
   }
-  function _get_EVER__765937901_2($this) {
+  function _get_EVER__765937901_3($this) {
     return $this.EVER_1;
   }
-  function _get_NEXT__773761464_2($this) {
+  function _get_NEXT__773761464_3($this) {
     return $this.NEXT_1;
   }
-  function _get_NSCN__774158171_2($this) {
+  function _get_NSCN__774158171_3($this) {
     return $this.NSCN_1;
   }
-  function _get_REPE__777447395_2($this) {
+  function _get_REPE__777447395_3($this) {
     return $this.REPE_1;
   }
-  function _get_RETN__777451518_2($this) {
+  function _get_RETN__777451518_3($this) {
     return $this.RETN_1;
   }
-  function _get_UNTL__780490138_2($this) {
+  function _get_UNTL__780490138_3($this) {
     return $this.UNTL_1;
   }
   function _get_controlStatementStart__929597665($this) {
@@ -14975,13 +18258,13 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var token = ctx.token;
     $this.isDDe_1 = !$this.isNewVariant_1 ? token === $this.dde_1 : false;
     var tmp0_subject = token;
-    if (contains_0(Companion_getInstance_7().controlStatementStart_1, tmp0_subject))
+    if (contains_0(Companion_getInstance_9().controlStatementStart_1, tmp0_subject))
       enterControlStatementStart($this, token, ctx);
-    else if (contains_0(Companion_getInstance_7().controlStatementStop_1, tmp0_subject))
+    else if (contains_0(Companion_getInstance_9().controlStatementStop_1, tmp0_subject))
       exitControlStatementEnd($this, token, ctx);
-    else if (contains_0(Companion_getInstance_7().scriptEnclosures_1, tmp0_subject))
+    else if (contains_0(Companion_getInstance_9().scriptEnclosures_1, tmp0_subject))
       closeScript($this, token, ctx);
-    $this.skipNextNext_1 = $this.isNewVariant_1 ? contains_1(Companion_getInstance_7().hasNextNext_1, token) : false;
+    $this.skipNextNext_1 = $this.isNewVariant_1 ? contains_1(Companion_getInstance_9().hasNextNext_1, token) : false;
   }
   function enterControlStatementStart($this, token, ctx) {
     $this.isDDe_1 = false;
@@ -14996,12 +18279,12 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     $this.isDDe_1 = false;
     if ($this.skipNextNext_1) {
       $this.skipNextNext_1 = false;
-      if (token === Companion_getInstance_7().NEXT_1) {
+      if (token === Companion_getInstance_9().NEXT_1) {
         return Unit_getInstance();
       }
     }
     var tmp0_subject = token;
-    var tmp1_elvis_lhs = tmp0_subject === Companion_getInstance_7().ENDI_1 ? Companion_getInstance_7().DOIF_1 : (tmp0_subject === Companion_getInstance_7().EVER_1 ? true : tmp0_subject === Companion_getInstance_7().UNTL_1) ? Companion_getInstance_7().LOOP_1 : tmp0_subject === Companion_getInstance_7().RETN_1 ? $this.stack_1._get_size__809037418_ddoh9m_k$() <= 1 ? Companion_getInstance_7().SUBR_1 : null : tmp0_subject === Companion_getInstance_7().NEXT_1 ? Companion_getInstance_7().ENUM_1 : tmp0_subject === Companion_getInstance_7().REPE_1 ? Companion_getInstance_7().REPS_1 : tmp0_subject === Companion_getInstance_7().NSCN_1 ? Companion_getInstance_7().ESCN_1 : null;
+    var tmp1_elvis_lhs = tmp0_subject === Companion_getInstance_9().ENDI_1 ? Companion_getInstance_9().DOIF_1 : (tmp0_subject === Companion_getInstance_9().EVER_1 ? true : tmp0_subject === Companion_getInstance_9().UNTL_1) ? Companion_getInstance_9().LOOP_1 : tmp0_subject === Companion_getInstance_9().RETN_1 ? $this.stack_1._get_size__809037418_ddoh9m_k$() <= 1 ? Companion_getInstance_9().SUBR_1 : null : tmp0_subject === Companion_getInstance_9().NEXT_1 ? Companion_getInstance_9().ENUM_1 : tmp0_subject === Companion_getInstance_9().REPE_1 ? Companion_getInstance_9().REPS_1 : tmp0_subject === Companion_getInstance_9().NSCN_1 ? Companion_getInstance_9().ESCN_1 : null;
     var tmp;
     if (tmp1_elvis_lhs == null) {
       return Unit_getInstance();
@@ -15014,7 +18297,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function closeScript($this, token, ctx) {
     if ($this.isDDe_1) {
       $this.isDDe_1 = false;
-      if (token === Companion_getInstance_7().SCRP_1) {
+      if (token === Companion_getInstance_9().SCRP_1) {
         return Unit_getInstance();
       }
     }
@@ -15131,8 +18414,8 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     tmp.add_1j60pz_k$(new BlockRange(startCommand, null, tmp_0, tmp_1, tmp_2, new PositionImpl(tmp_3, tmp$ret$1), $this.depth_1));
     Unit_getInstance();
   }
-  function Companion_5() {
-    Companion_instance_5 = this;
+  function Companion_7() {
+    Companion_instance_7 = this;
     this.SCRP_1 = token('scrp');
     var tmp = this;
     var tmp$ret$0;
@@ -15261,16 +18544,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     tmp_8.hasNextNext_1 = tmp$ret$15;
   }
-  Companion_5.$metadata$ = {
+  Companion_7.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_5;
-  function Companion_getInstance_7() {
-    if (Companion_instance_5 == null)
-      new Companion_5();
-    return Companion_instance_5;
+  var Companion_instance_7;
+  function Companion_getInstance_9() {
+    if (Companion_instance_7 == null)
+      new Companion_7();
+    return Companion_instance_7;
   }
   function ControlStatementOffsetsTokenWalker$statementOffsets$delegate$lambda(this$0, $tokens) {
     return function () {
@@ -15278,7 +18561,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     };
   }
   function ControlStatementOffsetsTokenWalker(variant, tokens) {
-    Companion_getInstance_7();
+    Companion_getInstance_9();
     var tmp = this;
     var tmp$ret$0;
     $l$block: {
@@ -15325,43 +18608,43 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       return receiver._get_statementOffsets__2911529754_mvnv8m_k$();
     }, null);
   }
-  function _get_DOIF__764809315_3($this) {
+  function _get_DOIF__764809315_4($this) {
     return $this.DOIF_1;
   }
-  function _get_ESCN__765846482_3($this) {
+  function _get_ESCN__765846482_4($this) {
     return $this.ESCN_1;
   }
-  function _get_ENUM__765714794_3($this) {
+  function _get_ENUM__765714794_4($this) {
     return $this.ENUM_1;
   }
-  function _get_LOOP__772203559_3($this) {
+  function _get_LOOP__772203559_4($this) {
     return $this.LOOP_1;
   }
-  function _get_SUBR__778834521_3($this) {
+  function _get_SUBR__778834521_4($this) {
     return $this.SUBR_1;
   }
-  function _get_REPS__777447829_3($this) {
+  function _get_REPS__777447829_4($this) {
     return $this.REPS_1;
   }
-  function _get_ENDI__765698333_3($this) {
+  function _get_ENDI__765698333_4($this) {
     return $this.ENDI_1;
   }
-  function _get_EVER__765937901_3($this) {
+  function _get_EVER__765937901_4($this) {
     return $this.EVER_1;
   }
-  function _get_NEXT__773761464_3($this) {
+  function _get_NEXT__773761464_4($this) {
     return $this.NEXT_1;
   }
-  function _get_NSCN__774158171_3($this) {
+  function _get_NSCN__774158171_4($this) {
     return $this.NSCN_1;
   }
-  function _get_REPE__777447395_3($this) {
+  function _get_REPE__777447395_4($this) {
     return $this.REPE_1;
   }
-  function _get_RETN__777451518_3($this) {
+  function _get_RETN__777451518_4($this) {
     return $this.RETN_1;
   }
-  function _get_UNTL__780490138_3($this) {
+  function _get_UNTL__780490138_4($this) {
     return $this.UNTL_1;
   }
   function _get_hasNextNext__1769131089_0($this) {
@@ -15515,8 +18798,8 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     $this.mScriptOffsets_1.add_1j60pz_k$(new BlockRange(startCommand, null, tmp, tmp_0, tmp_1, new PositionImpl(tmp_2, tmp$ret$1), $this.depth_1));
     Unit_getInstance();
   }
-  function Companion_6() {
-    Companion_instance_6 = this;
+  function Companion_8() {
+    Companion_instance_8 = this;
     var tmp = this;
     var tmp$ret$0;
     $l$block: {
@@ -15591,19 +18874,19 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     tmp_5.hasNextNext_1 = tmp$ret$8;
   }
-  Companion_6.$metadata$ = {
+  Companion_8.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_6;
-  function Companion_getInstance_8() {
-    if (Companion_instance_6 == null)
-      new Companion_6();
-    return Companion_instance_6;
+  var Companion_instance_8;
+  function Companion_getInstance_10() {
+    if (Companion_instance_8 == null)
+      new Companion_8();
+    return Companion_instance_8;
   }
   function ControlStatementOffsetsWalker(variant) {
-    Companion_getInstance_8();
+    Companion_getInstance_10();
     CaosUniversalParserBaseListener.call(this);
     var tmp = this;
     var tmp$ret$0;
@@ -15642,7 +18925,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   };
   ControlStatementOffsetsWalker.prototype.enterWord_ep1fkm_k$ = function (ctx) {
     CaosUniversalParserBaseListener.prototype.enterWord_ep1fkm_k$.call(this, ctx);
-    this.skipNextNext_1 = this.isNewVariant_1 ? contains_1(Companion_getInstance_8().hasNextNext_1, token(ctx._get_text__809840318_de5ose_k$())) : false;
+    this.skipNextNext_1 = this.isNewVariant_1 ? contains_1(Companion_getInstance_10().hasNextNext_1, token(ctx._get_text__809840318_de5ose_k$())) : false;
     this.isDDe_1 = !this.isNewVariant_1 ? token(ctx._get_text__809840318_de5ose_k$()) === this.dde_1 : false;
   };
   ControlStatementOffsetsWalker.prototype.enterControlStatementStart_5oefna_k$ = function (ctx) {
@@ -15663,12 +18946,12 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     this.isDDe_1 = false;
     if (this.skipNextNext_1) {
       this.skipNextNext_1 = false;
-      if (token(ctx._get_text__809840318_de5ose_k$()) === Companion_getInstance_8().NEXT_1) {
+      if (token(ctx._get_text__809840318_de5ose_k$()) === Companion_getInstance_10().NEXT_1) {
         return Unit_getInstance();
       }
     }
     var tmp0_subject = token(ctx._get_text__809840318_de5ose_k$());
-    var tmp1_elvis_lhs = tmp0_subject === Companion_getInstance_8().ENDI_1 ? Companion_getInstance_8().DOIF_1 : (tmp0_subject === Companion_getInstance_8().EVER_1 ? true : tmp0_subject === Companion_getInstance_8().UNTL_1) ? Companion_getInstance_8().LOOP_1 : tmp0_subject === Companion_getInstance_8().RETN_1 ? this.stack_1._get_size__809037418_ddoh9m_k$() <= 1 ? Companion_getInstance_8().SUBR_1 : null : tmp0_subject === Companion_getInstance_8().NEXT_1 ? Companion_getInstance_8().ENUM_1 : tmp0_subject === Companion_getInstance_8().REPE_1 ? Companion_getInstance_8().REPS_1 : tmp0_subject === Companion_getInstance_8().NSCN_1 ? Companion_getInstance_8().ESCN_1 : null;
+    var tmp1_elvis_lhs = tmp0_subject === Companion_getInstance_10().ENDI_1 ? Companion_getInstance_10().DOIF_1 : (tmp0_subject === Companion_getInstance_10().EVER_1 ? true : tmp0_subject === Companion_getInstance_10().UNTL_1) ? Companion_getInstance_10().LOOP_1 : tmp0_subject === Companion_getInstance_10().RETN_1 ? this.stack_1._get_size__809037418_ddoh9m_k$() <= 1 ? Companion_getInstance_10().SUBR_1 : null : tmp0_subject === Companion_getInstance_10().NEXT_1 ? Companion_getInstance_10().ENUM_1 : tmp0_subject === Companion_getInstance_10().REPE_1 ? Companion_getInstance_10().REPS_1 : tmp0_subject === Companion_getInstance_10().NSCN_1 ? Companion_getInstance_10().ESCN_1 : null;
     var tmp;
     if (tmp1_elvis_lhs == null) {
       return Unit_getInstance();
@@ -15705,6 +18988,1400 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     kind: 'class',
     interfaces: []
   };
+  function _get_VAR_REGEX__3750005570() {
+    init_properties_CursorData_kt_1692095162();
+    return VAR_REGEX;
+  }
+  var VAR_REGEX;
+  function getCursorPosition(parseResult, lineNumber, column, incomplete) {
+    init_properties_CursorData_kt_1692095162();
+    var commandCalls = parseResult.commandCalls;
+    var tmp;
+    var tmp$ret$0;
+    $l$block: {
+      tmp$ret$0 = commandCalls.length === 0;
+      break $l$block;
+    }
+    if (tmp$ret$0) {
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp0_isEmpty_0 = parseResult.equalityStatements;
+        tmp$ret$1 = tmp0_isEmpty_0.length === 0;
+        break $l$block_0;
+      }
+      tmp = tmp$ret$1;
+    } else {
+      {
+        tmp = false;
+      }
+    }
+    if (tmp) {
+      return null;
+    } else {
+    }
+    var tmp$ret$4;
+    $l$block_3: {
+      var tmp$ret$3;
+      $l$block_2: {
+        var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
+        var indexedObject = commandCalls;
+        var inductionVariable = 0;
+        var last = indexedObject.length;
+        while (inductionVariable < last) {
+          var element_2_3 = indexedObject[inductionVariable];
+          inductionVariable = inductionVariable + 1 | 0;
+          var tmp$ret$2;
+          $l$block_1: {
+            tmp$ret$2 = inRange_1(element_2_3.textRange, lineNumber, column, false, true);
+            break $l$block_1;
+          }
+          if (tmp$ret$2) {
+            tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+            Unit_getInstance();
+          } else {
+          }
+        }
+        tmp$ret$3 = tmp0_filterTo_0_1;
+        break $l$block_2;
+      }
+      tmp$ret$4 = tmp$ret$3;
+      break $l$block_3;
+    }
+    var inRangeCalls = tmp$ret$4;
+    var closestResult = getClosestItem(inRangeCalls, lineNumber, column, true);
+    var tmp0_safe_receiver = closestResult;
+    var closest = {_v: tmp0_safe_receiver == null ? null : tmp0_safe_receiver.closest_1};
+    var tmp$ret$7;
+    $l$block_6: {
+      var tmp1_filter_0 = parseResult.items;
+      var tmp$ret$6;
+      $l$block_5: {
+        var tmp0_filterTo_0_1_0 = ArrayList_init_$Create$_0();
+        var indexedObject_0 = tmp1_filter_0;
+        var inductionVariable_0 = 0;
+        var last_0 = indexedObject_0.length;
+        while (inductionVariable_0 < last_0) {
+          var element_2_3_0 = indexedObject_0[inductionVariable_0];
+          inductionVariable_0 = inductionVariable_0 + 1 | 0;
+          var tmp$ret$5;
+          $l$block_4: {
+            var tmp_0 = element_2_3_0.textRange;
+            tmp$ret$5 = inRange$default(tmp_0, lineNumber, column, true, false, 16, null);
+            break $l$block_4;
+          }
+          if (tmp$ret$5) {
+            tmp0_filterTo_0_1_0.add_1j60pz_k$(element_2_3_0);
+            Unit_getInstance();
+          } else {
+          }
+        }
+        tmp$ret$6 = tmp0_filterTo_0_1_0;
+        break $l$block_5;
+      }
+      tmp$ret$7 = tmp$ret$6;
+      break $l$block_6;
+    }
+    var inRangeItems = tmp$ret$7;
+    var closestItemResult = getClosestItem(inRangeItems, lineNumber, column, true);
+    var tmp1_safe_receiver = closestItemResult;
+    var closestItem = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.closest_1;
+    var tmp$ret$8;
+    $l$block_7: {
+      tmp$ret$8 = [];
+      break $l$block_7;
+    }
+    var commandParametersTemp = {_v: tmp$ret$8};
+    var missingParameters = {_v: emptyList()};
+    var matchingEqualityStatements = {_v: emptyList()};
+    var index = {_v: 0};
+    var inCommand = {_v: true};
+    var processCommand = {_v: getCursorPosition$lambda()};
+    processCommand._v = getCursorPosition$lambda_0(lineNumber, column, closestItem, inCommand, commandParametersTemp, processCommand, parseResult, closest, missingParameters, matchingEqualityStatements, index);
+    if (!(closest._v == null)) {
+      processCommand._v(closest._v);
+    }
+    var commandParameters = commandParametersTemp._v;
+    var tmp$ret$9;
+    $l$block_8: {
+      var tmp2_isNotEmpty_0 = missingParameters._v;
+      tmp$ret$9 = !tmp2_isNotEmpty_0.isEmpty_y1axqb_k$();
+      break $l$block_8;
+    }
+    var hasMissingParameters = tmp$ret$9;
+    var isNotCompleteOrAtColumn = !(closestItem == null) ? closestItem.textRange.end.character === column ? true : !isComplete(closestItem, lineNumber, column) : false;
+    var needsParameter = hasMissingParameters ? true : isNotCompleteOrAtColumn;
+    var tmp_1;
+    var tmp_2;
+    if ((needsParameter ? inCommand._v : false) ? !(commandParameters == null) : false) {
+      var tmp$ret$11;
+      $l$block_10: {
+        var tmp$ret$10;
+        $l$block_9: {
+          tmp$ret$10 = commandParameters.length === 0;
+          break $l$block_9;
+        }
+        tmp$ret$11 = !tmp$ret$10;
+        break $l$block_10;
+      }
+      tmp_2 = tmp$ret$11;
+    } else {
+      tmp_2 = false;
+    }
+    if (tmp_2) {
+      tmp_1 = commandParameters.length > index._v;
+    } else {
+      {
+        tmp_1 = false;
+      }
+    }
+    var hasClosestParameter = tmp_1;
+    var closestParameter = hasClosestParameter ? ensureNotNull(commandParameters)[index._v] : null;
+    var tmp2_safe_receiver = closestItem;
+    var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.text;
+    var tmp_3;
+    if (tmp3_safe_receiver == null) {
+      tmp_3 = null;
+    } else {
+      var tmp$ret$13;
+      $l$block_12: {
+        var tmp$ret$12;
+        $l$block_11: {
+          tmp$ret$12 = tmp3_safe_receiver;
+          break $l$block_11;
+        }
+        tmp$ret$13 = tmp$ret$12.toLowerCase();
+        break $l$block_12;
+      }
+      tmp_3 = tmp$ret$13;
+    }
+    var closestItemText = tmp_3;
+    var tmp4_safe_receiver = closest._v;
+    var tmp5_safe_receiver = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.command;
+    var tmp6_safe_receiver = tmp5_safe_receiver == null ? null : tmp5_safe_receiver.command;
+    var tmp_4;
+    if (tmp6_safe_receiver == null) {
+      tmp_4 = null;
+    } else {
+      var tmp$ret$15;
+      $l$block_14: {
+        var tmp$ret$14;
+        $l$block_13: {
+          tmp$ret$14 = tmp6_safe_receiver;
+          break $l$block_13;
+        }
+        tmp$ret$15 = tmp$ret$14.toLowerCase();
+        break $l$block_14;
+      }
+      tmp_4 = tmp$ret$15;
+    }
+    var tmp7_elvis_lhs = tmp_4;
+    var closestCommandString = tmp7_elvis_lhs == null ? '' : tmp7_elvis_lhs;
+    var tmp_5;
+    if (!(closestItemText == null)) {
+      var tmp_6;
+      if (_get_VAR_REGEX__3750005570().matches_qvb2fs_k$(closestItemText)) {
+        tmp_6 = true;
+      } else {
+        tmp_6 = endsWith$default_0(closestCommandString, closestItemText, false, 2, null);
+      }
+      tmp_5 = tmp_6;
+    } else {
+      tmp_5 = false;
+    }
+    var beforeTextIsMatchingCommand = tmp_5;
+    var equalityValuesList = getEqualityValuesList(parseResult, lineNumber, column);
+    var tmp8_safe_receiver = closest._v;
+    var tmp13_command = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.command;
+    var tmp$ret$16;
+    $l$block_15: {
+      var tmp3_toTypedArray_0 = missingParameters._v;
+      tmp$ret$16 = copyToArray(tmp3_toTypedArray_0);
+      break $l$block_15;
+    }
+    var tmp14_missing = tmp$ret$16;
+    var tmp_7;
+    if (!beforeTextIsMatchingCommand) {
+      var tmp9_safe_receiver = closestItem;
+      tmp_7 = tmp9_safe_receiver == null ? null : tmp9_safe_receiver.text;
+    } else {
+      tmp_7 = '';
+    }
+    var tmp15_beforeText = tmp_7;
+    var tmp10_safe_receiver = closest._v;
+    var tmp_8 = tmp10_safe_receiver == null ? null : tmp10_safe_receiver.command;
+    var tmp11_safe_receiver = closestItemResult;
+    var tmp12_elvis_lhs = tmp11_safe_receiver == null ? null : tmp11_safe_receiver.previous_1;
+    var tmp_9;
+    if (tmp12_elvis_lhs == null) {
+      var tmp$ret$17;
+      $l$block_16: {
+        tmp$ret$17 = [];
+        break $l$block_16;
+      }
+      tmp_9 = tmp$ret$17;
+    } else {
+      tmp_9 = tmp12_elvis_lhs;
+    }
+    var tmp16_previousTokens = dismissTokensIfUsed(tmp_8, tmp_9);
+    var tmp$ret$18;
+    $l$block_17: {
+      var tmp4_isNotEmpty_0 = matchingEqualityStatements._v;
+      tmp$ret$18 = !tmp4_isNotEmpty_0.isEmpty_y1axqb_k$();
+      break $l$block_17;
+    }
+    var tmp17_inEqualityStatement = tmp$ret$18;
+    return new CursorData(tmp13_command, tmp14_missing, closestParameter, tmp15_beforeText, lineNumber, column, tmp16_previousTokens, closestItem, equalityValuesList, tmp17_inEqualityStatement);
+  }
+  function ClosestItemResult(closest, previous) {
+    this.closest_1 = closest;
+    this.previous_1 = previous;
+  }
+  ClosestItemResult.prototype._get_closest__3218855896_hsosvc_k$ = function () {
+    return this.closest_1;
+  };
+  ClosestItemResult.prototype._get_previous__649503668_aqp48k_k$ = function () {
+    return this.previous_1;
+  };
+  ClosestItemResult.prototype.equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof ClosestItemResult))
+      return false;
+    else {
+    }
+    if (!equals(this.closest_1, other.closest_1))
+      return false;
+    if (!contentEquals(this.previous_1, other.previous_1))
+      return false;
+    return true;
+  };
+  ClosestItemResult.prototype.hashCode = function () {
+    var result = hashCode(this.closest_1);
+    result = imul(31, result) + contentHashCode(this.previous_1) | 0;
+    return result;
+  };
+  ClosestItemResult.prototype.component1 = function () {
+    return this.closest_1;
+  };
+  ClosestItemResult.prototype.component2 = function () {
+    return this.previous_1;
+  };
+  ClosestItemResult.prototype.copy = function (closest, previous) {
+    return this.copy_wbmybn_k$(closest === void 1 ? this.closest_1 : closest, previous === void 1 ? this.previous_1 : previous);
+  };
+  ClosestItemResult.prototype.copy_wbmybn_k$ = function (closest, previous) {
+    return new ClosestItemResult(closest, previous);
+  };
+  ClosestItemResult.prototype.copy$default_e8o9ii_k$ = function (closest, previous, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      closest = this.closest_1;
+    if (!(($mask0 & 2) === 0))
+      previous = this.previous_1;
+    return this.copy_wbmybn_k$(closest, previous);
+  };
+  ClosestItemResult.prototype.toString = function () {
+    return 'ClosestItemResult(closest=' + this.closest_1 + ', previous=' + toString(this.previous_1) + ')';
+  };
+  ClosestItemResult.$metadata$ = {
+    simpleName: 'ClosestItemResult',
+    kind: 'class',
+    interfaces: []
+  };
+  Object.defineProperty(ClosestItemResult.prototype, 'closest', {
+    configurable: true,
+    get: ClosestItemResult.prototype._get_closest__3218855896_hsosvc_k$
+  });
+  Object.defineProperty(ClosestItemResult.prototype, 'previous', {
+    configurable: true,
+    get: ClosestItemResult.prototype._get_previous__649503668_aqp48k_k$
+  });
+  function getClosestItem(inRangeItemsIn, lineNumber, column, notAfter) {
+    init_properties_CursorData_kt_1692095162();
+    var inRangeItems = inRangeItemsIn;
+    if (inRangeItems.isEmpty_y1axqb_k$()) {
+      return null;
+    }
+    if (notAfter) {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp0_filter_0 = inRangeItems;
+        var tmp$ret$1;
+        $l$block_0: {
+          var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
+          var tmp0_iterator_1_2 = tmp0_filter_0.iterator_jk1svi_k$();
+          while (tmp0_iterator_1_2.hasNext_bitz1p_k$()) {
+            var element_2_3 = tmp0_iterator_1_2.next_20eer_k$();
+            var tmp$ret$0;
+            $l$block: {
+              tmp$ret$0 = element_2_3.textRange.start.line === lineNumber ? element_2_3.textRange.start.character <= column : false;
+              break $l$block;
+            }
+            if (tmp$ret$0) {
+              tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+              Unit_getInstance();
+            } else {
+            }
+          }
+          tmp$ret$1 = tmp0_filterTo_0_1;
+          break $l$block_0;
+        }
+        tmp$ret$2 = tmp$ret$1;
+        break $l$block_1;
+      }
+      inRangeItems = tmp$ret$2;
+    }
+    if (inRangeItems.isEmpty_y1axqb_k$()) {
+      return null;
+    }
+    var tmp$ret$5;
+    $l$block_4: {
+      var tmp1_map_0 = inRangeItems;
+      var tmp$ret$4;
+      $l$block_3: {
+        var tmp0_mapTo_0_1 = ArrayList_init_$Create$(collectionSizeOrDefault(tmp1_map_0, 10));
+        var tmp0_iterator_1_2_0 = tmp1_map_0.iterator_jk1svi_k$();
+        while (tmp0_iterator_1_2_0.hasNext_bitz1p_k$()) {
+          var item_2_3 = tmp0_iterator_1_2_0.next_20eer_k$();
+          var tmp$ret$3;
+          $l$block_2: {
+            tmp$ret$3 = new Distanced(item_2_3, getDistance(item_2_3.textRange, lineNumber, column));
+            break $l$block_2;
+          }
+          tmp0_mapTo_0_1.add_1j60pz_k$(tmp$ret$3);
+          Unit_getInstance();
+        }
+        tmp$ret$4 = tmp0_mapTo_0_1;
+        break $l$block_3;
+      }
+      tmp$ret$5 = tmp$ret$4;
+      break $l$block_4;
+    }
+    var distanced = tmp$ret$5;
+    var tmp$ret$8;
+    $l$block_7: {
+      var tmp$ret$7;
+      $l$block_6: {
+        var tmp0_filterTo_0_1_0 = ArrayList_init_$Create$_0();
+        var tmp0_iterator_1_2_1 = distanced.iterator_jk1svi_k$();
+        while (tmp0_iterator_1_2_1.hasNext_bitz1p_k$()) {
+          var element_2_3_0 = tmp0_iterator_1_2_1.next_20eer_k$();
+          var tmp$ret$6;
+          $l$block_5: {
+            tmp$ret$6 = element_2_3_0.distance_1.lineOffset_1 === 0;
+            break $l$block_5;
+          }
+          if (tmp$ret$6) {
+            tmp0_filterTo_0_1_0.add_1j60pz_k$(element_2_3_0);
+            Unit_getInstance();
+          } else {
+          }
+        }
+        tmp$ret$7 = tmp0_filterTo_0_1_0;
+        break $l$block_6;
+      }
+      tmp$ret$8 = tmp$ret$7;
+      break $l$block_7;
+    }
+    var tmp = tmp$ret$8;
+    var tmp_0 = getClosestItem$lambda();
+    var sameLine = sortedWith(tmp, new sam$kotlin_Comparator$0_2(tmp_0));
+    var tmp$ret$9;
+    $l$block_8: {
+      tmp$ret$9 = !sameLine.isEmpty_y1axqb_k$();
+      break $l$block_8;
+    }
+    if (tmp$ret$9) {
+      var index = null;
+      var inductionVariable = 0;
+      var last = sameLine._get_size__809037418_ddoh9m_k$() - 1 | 0;
+      if (inductionVariable <= last)
+        $l$loop: do {
+          var i = inductionVariable;
+          inductionVariable = inductionVariable + 1 | 0;
+          var item = sameLine.get_fkrdnv_k$(i);
+          if (item.item_1.textRange.start.character > column) {
+            break $l$loop;
+          }
+          index = i;
+        }
+         while (inductionVariable <= last);
+      if (index == null) {
+        return null;
+      }
+      var tmp_1 = drop(sameLine, 0);
+      var tmp$ret$10;
+      $l$block_9: {
+        var tmp2_min_0 = sameLine._get_size__809037418_ddoh9m_k$();
+        tmp$ret$10 = Math.min(5, tmp2_min_0);
+        break $l$block_9;
+      }
+      var items = slice(tmp_1, numberRangeToNumber(0, tmp$ret$10));
+      var tmp$ret$11;
+      $l$block_10: {
+        tmp$ret$11 = ArrayList_init_$Create$_0();
+        break $l$block_10;
+      }
+      var tokens = tmp$ret$11;
+      var stillTokens = true;
+      var tmp1_iterator = items.iterator_jk1svi_k$();
+      while (tmp1_iterator.hasNext_bitz1p_k$()) {
+        var temp = tmp1_iterator.next_20eer_k$();
+        var item_0 = temp.item_1;
+        if (!(item_0 instanceof CommandToken)) {
+          stillTokens = item_0 instanceof TokenVal;
+        } else {
+          if (stillTokens) {
+            tokens.add_1j60pz_k$(item_0);
+            Unit_getInstance();
+          } else {
+          }
+        }
+      }
+      var tmp_2 = sameLine.get_fkrdnv_k$(0).item_1;
+      var tmp$ret$12;
+      $l$block_11: {
+        var tmp3_toTypedArray_0 = reversed_0(tokens);
+        tmp$ret$12 = copyToArray(tmp3_toTypedArray_0);
+        break $l$block_11;
+      }
+      return new ClosestItemResult(tmp_2, tmp$ret$12);
+    } else {
+    }
+    var tmp_3 = getClosestItem$lambda_0();
+    sortedWith(distanced, new sam$kotlin_Comparator$0_2(tmp_3));
+    Unit_getInstance();
+    var min = distanced.get_fkrdnv_k$(0);
+    var tmp2_iterator = distanced.iterator_jk1svi_k$();
+    $l$loop_0: while (tmp2_iterator.hasNext_bitz1p_k$()) {
+      var call = tmp2_iterator.next_20eer_k$();
+      if (call.distance_1.lineOffset_1 > min.distance_1.lineOffset_1) {
+        break $l$loop_0;
+      }
+      if (call.distance_1.columnOffset_1 < min.distance_1.columnOffset_1) {
+        min = call;
+      }
+    }
+    var tmp_4 = min.item_1;
+    var tmp$ret$13;
+    $l$block_12: {
+      tmp$ret$13 = [];
+      break $l$block_12;
+    }
+    return new ClosestItemResult(tmp_4, tmp$ret$13);
+  }
+  function getCursorPositionFromRawText(variant, text, lineNumber, column, parseOnlyNear, incomplete, keepGoing) {
+    return getCursorPositionFromRawText_0(variant, text, lineNumber, column, parseOnlyNear === void 1 ? null : parseOnlyNear, incomplete === void 1 ? null : incomplete, keepGoing === void 1 ? null : keepGoing);
+  }
+  function getCursorPositionFromRawText_0(variant, text, lineNumber, column, parseOnlyNear, incomplete, keepGoing) {
+    init_properties_CursorData_kt_1692095162();
+    var tmp;
+    try {
+      var tmp_0;
+      if (!(parseOnlyNear === false)) {
+        tmp_0 = parseCaos$default(variant, text, lineNumber, column, null, null, keepGoing, 48, null);
+      } else {
+        tmp_0 = parseCaos_2(variant, text, keepGoing);
+      }
+      tmp = tmp_0;
+    } catch ($p) {
+      var tmp_1;
+      if ($p instanceof Exception) {
+        return null;
+      } else {
+        {
+          throw $p;
+        }
+      }
+      tmp = tmp_1;
+    }
+    var result = tmp;
+    return getCursorPosition(result, lineNumber, column, !(incomplete === false));
+  }
+  function getCursorPositionFromRawText$default(variant, text, lineNumber, column, parseOnlyNear, incomplete, keepGoing, $mask0, $handler) {
+    if (!(($mask0 & 16) === 0))
+      parseOnlyNear = null;
+    if (!(($mask0 & 32) === 0))
+      incomplete = null;
+    if (!(($mask0 & 64) === 0))
+      keepGoing = null;
+    return getCursorPositionFromRawText_0(variant, text, lineNumber, column, parseOnlyNear, incomplete, keepGoing);
+  }
+  function cancelComplete(closestItem, line, character) {
+    init_properties_CursorData_kt_1692095162();
+    if (!inRange_1(closestItem.textRange, line, character, false, false)) {
+      return false;
+    }
+    var tmp0_subject = closestItem.actualType;
+    var tmp;
+    if (((tmp0_subject === ValueType_TOKEN_getInstance()._get_value__3683422336_a43j40_k$() ? true : tmp0_subject === ValueType_COMMAND_getInstance()._get_value__3683422336_a43j40_k$()) ? true : tmp0_subject === ValueType_UNKNOWN_getInstance()._get_value__3683422336_a43j40_k$()) ? true : tmp0_subject === ValueType_STRING_getInstance()._get_value__3683422336_a43j40_k$()) {
+      tmp = false;
+    } else if (tmp0_subject === ValueType_CAOS2_COMMENT_getInstance()._get_value__3683422336_a43j40_k$()) {
+      tmp = (closestItem.textRange.start.character + 2 | 0) > character;
+    } else {
+      tmp = true;
+    }
+    return tmp;
+  }
+  function inQuotes(closestItem, line, character) {
+    init_properties_CursorData_kt_1692095162();
+    var tmp = closestItem.text;
+    var tmp_0 = _Char___init__impl__380027157(34);
+    if (!startsWith$default(tmp, tmp_0, false, 2, null)) {
+      return false;
+    } else {
+    }
+    var start = closestItem.textRange.start;
+    var end = closestItem.textRange.end;
+    if (start.line === line) {
+      var tmp_1;
+      if (!(end.line === line)) {
+        tmp_1 = true;
+      } else {
+        tmp_1 = start.character < character ? character <= end.character : false;
+      }
+      return tmp_1;
+    } else if (start.line < line) {
+      var tmp_2;
+      if (end.line > line) {
+        tmp_2 = true;
+      } else {
+        var tmp_3;
+        var tmp_4 = closestItem.text;
+        var tmp_5 = _Char___init__impl__380027157(34);
+        if (endsWith$default(tmp_4, tmp_5, false, 2, null)) {
+          tmp_3 = 1;
+        } else {
+          {
+            tmp_3 = 0;
+          }
+        }
+        var endQuote = tmp_3;
+        tmp_2 = character < (end.character - endQuote | 0);
+      }
+      return tmp_2;
+    } else if (start.line > line) {
+      return false;
+    } else {
+      return false;
+    }
+  }
+  function dismissTokensIfUsed(currentCommand, tokens) {
+    init_properties_CursorData_kt_1692095162();
+    if (currentCommand == null) {
+      return tokens;
+    }
+    var tmp$ret$6;
+    $l$block_5: {
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = tokens;
+          break $l$block;
+        }
+        tmp$ret$1 = tmp$ret$0.slice();
+        break $l$block_0;
+      }
+      var tmp0_map_0 = tmp$ret$1;
+      var tmp$ret$5;
+      $l$block_4: {
+        var tmp0_mapTo_0_1 = ArrayList_init_$Create$(tmp0_map_0.length);
+        var indexedObject = tmp0_map_0;
+        var inductionVariable = 0;
+        var last = indexedObject.length;
+        while (inductionVariable < last) {
+          var item_2_3 = indexedObject[inductionVariable];
+          inductionVariable = inductionVariable + 1 | 0;
+          var tmp$ret$4;
+          $l$block_3: {
+            var tmp$ret$3;
+            $l$block_2: {
+              var tmp0_lowercase_0_5 = item_2_3.text;
+              var tmp$ret$2;
+              $l$block_1: {
+                tmp$ret$2 = tmp0_lowercase_0_5;
+                break $l$block_1;
+              }
+              tmp$ret$3 = tmp$ret$2.toLowerCase();
+              break $l$block_2;
+            }
+            tmp$ret$4 = token(tmp$ret$3);
+            break $l$block_3;
+          }
+          tmp0_mapTo_0_1.add_1j60pz_k$(tmp$ret$4);
+          Unit_getInstance();
+        }
+        tmp$ret$5 = tmp0_mapTo_0_1;
+        break $l$block_4;
+      }
+      tmp$ret$6 = tmp$ret$5;
+      break $l$block_5;
+    }
+    var tokensTemp = tmp$ret$6;
+    var tmp$ret$11;
+    $l$block_10: {
+      var tmp$ret$8;
+      $l$block_7: {
+        var tmp1_lowercase_0 = currentCommand.command;
+        var tmp$ret$7;
+        $l$block_6: {
+          tmp$ret$7 = tmp1_lowercase_0;
+          break $l$block_6;
+        }
+        tmp$ret$8 = tmp$ret$7.toLowerCase();
+        break $l$block_7;
+      }
+      var tmp = tmp$ret$8;
+      var tmp_0 = charArrayOf([_Char___init__impl__380027157(32)]);
+      var tmp2_map_0 = split$default_0(tmp, tmp_0, false, 0, 6, null);
+      var tmp$ret$10;
+      $l$block_9: {
+        var tmp0_mapTo_0_1_0 = ArrayList_init_$Create$(collectionSizeOrDefault(tmp2_map_0, 10));
+        var tmp0_iterator_1_2 = tmp2_map_0.iterator_jk1svi_k$();
+        while (tmp0_iterator_1_2.hasNext_bitz1p_k$()) {
+          var item_2_3_0 = tmp0_iterator_1_2.next_20eer_k$();
+          var tmp$ret$9;
+          $l$block_8: {
+            tmp$ret$9 = token(item_2_3_0);
+            break $l$block_8;
+          }
+          tmp0_mapTo_0_1_0.add_1j60pz_k$(tmp$ret$9);
+          Unit_getInstance();
+        }
+        tmp$ret$10 = tmp0_mapTo_0_1_0;
+        break $l$block_9;
+      }
+      tmp$ret$11 = tmp$ret$10;
+      break $l$block_10;
+    }
+    var commandTokens = tmp$ret$11;
+    var startIndex = tokensTemp.indexOf_dcv8dt_k$(commandTokens.get_fkrdnv_k$(0));
+    if (startIndex < 0) {
+      return tokens;
+    }
+    var tmp$ret$12;
+    $l$block_11: {
+      var tmp3_min_0 = commandTokens._get_size__809037418_ddoh9m_k$();
+      var tmp4_min_0 = tokensTemp._get_size__809037418_ddoh9m_k$() - startIndex | 0;
+      tmp$ret$12 = Math.min(tmp3_min_0, tmp4_min_0);
+      break $l$block_11;
+    }
+    var availableTokens = tmp$ret$12;
+    tokensTemp = drop(tokensTemp, startIndex);
+    var i = 0;
+    while (i < availableTokens) {
+      if (!(tokensTemp.get_fkrdnv_k$(i) === commandTokens.get_fkrdnv_k$(i))) {
+        var tmp$ret$13;
+        $l$block_12: {
+          var tmp5_toTypedArray_0 = drop_0(tokens, i);
+          tmp$ret$13 = copyToArray(tmp5_toTypedArray_0);
+          break $l$block_12;
+        }
+        return tmp$ret$13;
+      }
+      var tmp0 = i;
+      i = tmp0 + 1 | 0;
+      Unit_getInstance();
+    }
+    if (i === (tokens.length - 1 | 0)) {
+      var tmp$ret$14;
+      $l$block_13: {
+        tmp$ret$14 = [];
+        break $l$block_13;
+      }
+      return tmp$ret$14;
+    }
+    var tmp$ret$15;
+    $l$block_14: {
+      var tmp6_toTypedArray_0 = drop_0(tokens, i + 1 | 0);
+      tmp$ret$15 = copyToArray(tmp6_toTypedArray_0);
+      break $l$block_14;
+    }
+    return tmp$ret$15;
+  }
+  function Distanced(item, distance) {
+    this.item_1 = item;
+    this.distance_1 = distance;
+  }
+  Distanced.prototype._get_item__800109976_d8d4t4_k$ = function () {
+    return this.item_1;
+  };
+  Distanced.prototype._get_distance__1834152566_uc096e_k$ = function () {
+    return this.distance_1;
+  };
+  Distanced.prototype.component1_7eebsc_k$ = function () {
+    return this.item_1;
+  };
+  Distanced.prototype.component2_7eebsb_k$ = function () {
+    return this.distance_1;
+  };
+  Distanced.prototype.copy_l5ij0o_k$ = function (item, distance) {
+    return new Distanced(item, distance);
+  };
+  Distanced.prototype.copy$default_venkp_k$ = function (item, distance, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      item = this.item_1;
+    if (!(($mask0 & 2) === 0))
+      distance = this.distance_1;
+    return this.copy_l5ij0o_k$(item, distance);
+  };
+  Distanced.prototype.toString = function () {
+    return 'Distanced(item=' + this.item_1 + ', distance=' + this.distance_1 + ')';
+  };
+  Distanced.prototype.hashCode = function () {
+    var result = hashCode(this.item_1);
+    result = imul(result, 31) + this.distance_1.hashCode() | 0;
+    return result;
+  };
+  Distanced.prototype.equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof Distanced))
+      return false;
+    else {
+    }
+    var tmp0_other_with_cast = other instanceof Distanced ? other : THROW_CCE();
+    if (!equals(this.item_1, tmp0_other_with_cast.item_1))
+      return false;
+    if (!this.distance_1.equals(tmp0_other_with_cast.distance_1))
+      return false;
+    return true;
+  };
+  Distanced.$metadata$ = {
+    simpleName: 'Distanced',
+    kind: 'class',
+    interfaces: []
+  };
+  function Distance(lineOffset, columnOffset) {
+    this.lineOffset_1 = lineOffset;
+    this.columnOffset_1 = columnOffset;
+  }
+  Distance.prototype._get_lineOffset__1247300548_kmlz9g_k$ = function () {
+    return this.lineOffset_1;
+  };
+  Distance.prototype._get_columnOffset__3289323234_gmqfxa_k$ = function () {
+    return this.columnOffset_1;
+  };
+  Distance.prototype.component1_7eebsc_k$ = function () {
+    return this.lineOffset_1;
+  };
+  Distance.prototype.component2_7eebsb_k$ = function () {
+    return this.columnOffset_1;
+  };
+  Distance.prototype.copy_r83ead_k$ = function (lineOffset, columnOffset) {
+    return new Distance(lineOffset, columnOffset);
+  };
+  Distance.prototype.copy$default_4541c_k$ = function (lineOffset, columnOffset, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      lineOffset = this.lineOffset_1;
+    if (!(($mask0 & 2) === 0))
+      columnOffset = this.columnOffset_1;
+    return this.copy_r83ead_k$(lineOffset, columnOffset);
+  };
+  Distance.prototype.toString = function () {
+    return 'Distance(lineOffset=' + this.lineOffset_1 + ', columnOffset=' + this.columnOffset_1 + ')';
+  };
+  Distance.prototype.hashCode = function () {
+    var result = this.lineOffset_1;
+    result = imul(result, 31) + this.columnOffset_1 | 0;
+    return result;
+  };
+  Distance.prototype.equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof Distance))
+      return false;
+    else {
+    }
+    var tmp0_other_with_cast = other instanceof Distance ? other : THROW_CCE();
+    if (!(this.lineOffset_1 === tmp0_other_with_cast.lineOffset_1))
+      return false;
+    if (!(this.columnOffset_1 === tmp0_other_with_cast.columnOffset_1))
+      return false;
+    return true;
+  };
+  Distance.$metadata$ = {
+    simpleName: 'Distance',
+    kind: 'class',
+    interfaces: []
+  };
+  function getDistance(range, lineNumber, column) {
+    init_properties_CursorData_kt_1692095162();
+    var tmp = lineNumber - range.start.line | 0;
+    var tmp_0;
+    if (lineNumber === range.start.line) {
+      tmp_0 = column - range.start.character | 0;
+    } else {
+      tmp_0 = range.start.character;
+    }
+    return new Distance(tmp, tmp_0);
+  }
+  function getEqualityValuesList(parseResult, lineNumber, column) {
+    init_properties_CursorData_kt_1692095162();
+    var tmp$ret$4;
+    $l$block_3: {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp0_filter_0 = parseResult.equalityStatements;
+        var tmp$ret$1;
+        $l$block_0: {
+          var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
+          var indexedObject = tmp0_filter_0;
+          var inductionVariable = 0;
+          var last = indexedObject.length;
+          while (inductionVariable < last) {
+            var element_2_3 = indexedObject[inductionVariable];
+            inductionVariable = inductionVariable + 1 | 0;
+            var tmp$ret$0;
+            $l$block: {
+              tmp$ret$0 = inRange_1(element_2_3.textRange, lineNumber, column, true, true);
+              break $l$block;
+            }
+            if (tmp$ret$0) {
+              tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+              Unit_getInstance();
+            } else {
+            }
+          }
+          tmp$ret$1 = tmp0_filterTo_0_1;
+          break $l$block_0;
+        }
+        tmp$ret$2 = tmp$ret$1;
+        break $l$block_1;
+      }
+      var tmp1_sortedBy_0 = tmp$ret$2;
+      var tmp$ret$3;
+      $l$block_2: {
+        var tmp = getEqualityValuesList$lambda();
+        tmp$ret$3 = new sam$kotlin_Comparator$0_3(tmp);
+        break $l$block_2;
+      }
+      tmp$ret$4 = sortedWith(tmp1_sortedBy_0, tmp$ret$3);
+      break $l$block_3;
+    }
+    var equalityStatementsInRange = tmp$ret$4;
+    if (equalityStatementsInRange.isEmpty_y1axqb_k$()) {
+      return null;
+    }
+    var equalityStatement = equalityStatementsInRange.get_fkrdnv_k$(0);
+    var shouldComplete = true;
+    var other = null;
+    var tmp_0 = equalityStatement.second;
+    if (tmp_0 instanceof CommandCall) {
+      var tmp_1;
+      if (equalityStatement.first == null) {
+        tmp_1 = true;
+      } else {
+        var tmp0_safe_receiver = equalityStatement.first;
+        var tmp_2 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.parserItem;
+        tmp_1 = tmp_2 instanceof IntVal;
+      }
+      shouldComplete = tmp_1;
+      other = equalityStatement.second;
+    } else {
+      var tmp_3 = equalityStatement.first;
+      if (tmp_3 instanceof CommandCall) {
+        var tmp_4;
+        if (equalityStatement.second == null) {
+          tmp_4 = true;
+        } else {
+          var tmp1_safe_receiver = equalityStatement.second;
+          var tmp_5 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.parserItem;
+          tmp_4 = tmp_5 instanceof IntVal;
+        }
+        shouldComplete = tmp_4;
+        other = equalityStatement.first;
+      } else {
+      }
+    }
+    var tmp_6;
+    if (!shouldComplete) {
+      tmp_6 = true;
+    } else {
+      tmp_6 = !(other instanceof CommandCall);
+    }
+    if (tmp_6) {
+      return null;
+    } else {
+    }
+    var variant = parseResult.variant;
+    var valuesListIds = other.command.returnValuesListIds;
+    var tmp2_safe_receiver = valuesListIds;
+    var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.get(variant);
+    var tmp_7;
+    if (tmp3_elvis_lhs == null) {
+      return null;
+    } else {
+      tmp_7 = tmp3_elvis_lhs;
+    }
+    var valuesListId = tmp_7;
+    return getValuesList_0(valuesListId);
+  }
+  function isComplete(parserItem, line, character) {
+    init_properties_CursorData_kt_1692095162();
+    if (inQuotes(parserItem, line, character)) {
+      return false;
+    }
+    var text = parserItem.text;
+    var tmp$ret$0;
+    $l$block: {
+      tmp$ret$0 = Regex_init_$Create$('((\\d+)?\\.\\d+)|(\\d+)');
+      break $l$block;
+    }
+    if (tmp$ret$0.matches_qvb2fs_k$(text)) {
+      return false;
+    } else {
+    }
+    if (parserItem.actualType === ValueType_TOKEN_getInstance()._get_value__3683422336_a43j40_k$()) {
+      return false;
+    }
+    var tmp;
+    var tmp_0 = _Char___init__impl__380027157(34);
+    if (startsWith$default(text, tmp_0, false, 2, null)) {
+      tmp = true;
+    } else {
+      {
+        tmp = text.length === 4;
+      }
+    }
+    return tmp;
+  }
+  function sam$kotlin_Comparator$0_2(function_0) {
+    this.function_1 = function_0;
+  }
+  sam$kotlin_Comparator$0_2.prototype.compare_6tbigh_k$ = function (a, b) {
+    return this.function_1(a, b);
+  };
+  sam$kotlin_Comparator$0_2.prototype.compare = function (a, b) {
+    return this.compare_6tbigh_k$(a, b);
+  };
+  sam$kotlin_Comparator$0_2.$metadata$ = {
+    simpleName: 'sam$kotlin_Comparator$0',
+    kind: 'class',
+    interfaces: [Comparator]
+  };
+  function sam$kotlin_Comparator$0_3(function_0) {
+    this.function_1 = function_0;
+  }
+  sam$kotlin_Comparator$0_3.prototype.compare_6tbigh_k$ = function (a, b) {
+    return this.function_1(a, b);
+  };
+  sam$kotlin_Comparator$0_3.prototype.compare = function (a, b) {
+    return this.compare_6tbigh_k$(a, b);
+  };
+  sam$kotlin_Comparator$0_3.$metadata$ = {
+    simpleName: 'sam$kotlin_Comparator$0',
+    kind: 'class',
+    interfaces: [Comparator]
+  };
+  function getCursorPosition$lambda() {
+    return function (it) {
+      return Unit_getInstance();
+    };
+  }
+  function getCursorPosition$lambda_0($lineNumber, $column, $closestItem, $inCommand, $commandParametersTemp, $processCommand, $parseResult, $closest, $missingParameters, $matchingEqualityStatements, $index) {
+    return function (closestCall) {
+      var tmp0_safe_receiver = closestCall;
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.arguments;
+      var tmp;
+      if (tmp1_elvis_lhs == null) {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = [];
+          break $l$block;
+        }
+        tmp = tmp$ret$0;
+      } else {
+        tmp = tmp1_elvis_lhs;
+      }
+      var commandArguments = tmp;
+      Unit_getInstance();
+      var tmp$ret$2;
+      $l$block_3: {
+        var inductionVariable = 0;
+        var last = commandArguments.length - 1 | 0;
+        if (inductionVariable <= last)
+          do {
+            var index_2 = inductionVariable;
+            inductionVariable = inductionVariable + 1 | 0;
+            var tmp$ret$1;
+            $l$block_1: {
+              var tmp0__anonymous__3_2495602523 = commandArguments[index_2];
+              if (inRange_1(tmp0__anonymous__3_2495602523.textRange, $lineNumber, $column, false, false)) {
+                if ($column <= tmp0__anonymous__3_2495602523.textRange.end.character) {
+                  tmp$ret$1 = true;
+                  break $l$block_1;
+                }
+              }
+              tmp$ret$1 = false;
+              break $l$block_1;
+            }
+            if (tmp$ret$1) {
+              tmp$ret$2 = index_2;
+              break $l$block_3;
+            } else {
+            }
+          }
+           while (inductionVariable <= last);
+        tmp$ret$2 = -1;
+        break $l$block_3;
+      }
+      var argumentIndex = tmp$ret$2;
+      Unit_getInstance();
+      var tmp_0;
+      if (argumentIndex < 0) {
+        var tmp_1;
+        var tmp$ret$4;
+        $l$block_5: {
+          var tmp$ret$3;
+          $l$block_4: {
+            tmp$ret$3 = commandArguments.length === 0;
+            break $l$block_4;
+          }
+          tmp$ret$4 = !tmp$ret$3;
+          break $l$block_5;
+        }
+        if (tmp$ret$4) {
+          var tmp$ret$6;
+          $l$block_8: {
+            var inductionVariable_0 = 0;
+            var last_0 = commandArguments.length - 1 | 0;
+            if (inductionVariable_0 <= last_0)
+              do {
+                var index_2_0 = inductionVariable_0;
+                inductionVariable_0 = inductionVariable_0 + 1 | 0;
+                var tmp$ret$5;
+                $l$block_6: {
+                  var tmp1__anonymous__3_4003154332 = commandArguments[index_2_0];
+                  tmp$ret$5 = $column > tmp1__anonymous__3_4003154332.textRange.end.character;
+                  break $l$block_6;
+                }
+                if (tmp$ret$5) {
+                  tmp$ret$6 = index_2_0;
+                  break $l$block_8;
+                } else {
+                }
+              }
+               while (inductionVariable_0 <= last_0);
+            tmp$ret$6 = -1;
+            break $l$block_8;
+          }
+          argumentIndex = tmp$ret$6;
+          var tmp_2;
+          if (argumentIndex < 0) {
+            commandArguments.length;
+            tmp_2 = Unit_getInstance();
+          } else {
+            var tmp_3;
+            var tmp_4;
+            var tmp$ret$8;
+            $l$block_10: {
+              var tmp$ret$7;
+              $l$block_9: {
+                tmp$ret$7 = commandArguments.length === 0;
+                break $l$block_9;
+              }
+              tmp$ret$8 = !tmp$ret$7;
+              break $l$block_10;
+            }
+            if (tmp$ret$8) {
+              var tmp2_safe_receiver = getOrNull(commandArguments, argumentIndex);
+              tmp_4 = !((tmp2_safe_receiver == null ? null : tmp2_safe_receiver.type) === ValueType_TOKEN_getInstance()._get_value__3683422336_a43j40_k$());
+            } else {
+              {
+                tmp_4 = false;
+              }
+            }
+            if (tmp_4) {
+              var tmp3_safe_receiver = getOrNull(commandArguments, argumentIndex);
+              tmp_3 = !((tmp3_safe_receiver == null ? null : tmp3_safe_receiver.type) === ValueType_UNKNOWN_getInstance()._get_value__3683422336_a43j40_k$());
+            } else {
+              {
+                tmp_3 = false;
+              }
+            }
+            if (tmp_3) {
+              argumentIndex = argumentIndex + 1 | 0;
+              tmp_2 = Unit_getInstance();
+            } else {
+            }
+          }
+          tmp_1 = tmp_2;
+        } else {
+          {
+            argumentIndex = 0;
+            tmp_1 = Unit_getInstance();
+          }
+        }
+        tmp_0 = tmp_1;
+      }
+      var tmp_5;
+      var tmp_6;
+      if (!($closestItem == null) ? !(getOrNull(commandArguments, argumentIndex) == null) : false) {
+        var tmp_7 = $closestItem.textRange.endIndex;
+        var tmp4_safe_receiver = getOrNull(commandArguments, argumentIndex);
+        var tmp5_safe_receiver = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.textRange;
+        var tmp6_elvis_lhs = tmp5_safe_receiver == null ? null : tmp5_safe_receiver.endIndex;
+        tmp_6 = tmp_7 > (tmp6_elvis_lhs == null ? 0 : tmp6_elvis_lhs);
+      } else {
+        tmp_6 = false;
+      }
+      if (tmp_6) {
+        tmp_5 = $inCommand._v = false;
+      } else {
+      }
+      var indexMod = argumentIndex === 0 ? 1 : 0;
+      Unit_getInstance();
+      var tmp7_safe_receiver = closestCall;
+      var tmp8_safe_receiver = tmp7_safe_receiver == null ? null : tmp7_safe_receiver.command;
+      $commandParametersTemp._v = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.parameters;
+      var tmp9_safe_receiver = $closestItem;
+      var argumentType = tmp9_safe_receiver == null ? null : tmp9_safe_receiver.actualType;
+      Unit_getInstance();
+      var isIncompleteToken = argumentType === ValueType_TOKEN_getInstance()._get_value__3683422336_a43j40_k$() ? true : argumentType === ValueType_UNKNOWN_getInstance()._get_value__3683422336_a43j40_k$();
+      Unit_getInstance();
+      var isCompletable = !isIncompleteToken ? !(argumentType === ValueType_VARIABLE_getInstance()._get_value__3683422336_a43j40_k$()) : false;
+      Unit_getInstance();
+      var tmp_8;
+      var tmp_9;
+      var tmp$ret$10;
+      $l$block_12: {
+        var tmp$ret$9;
+        $l$block_11: {
+          tmp$ret$9 = commandArguments.length === 0;
+          break $l$block_11;
+        }
+        tmp$ret$10 = !tmp$ret$9;
+        break $l$block_12;
+      }
+      if (tmp$ret$10) {
+        tmp_9 = (commandArguments.length - 1 | 0) >= argumentIndex;
+      } else {
+        {
+          tmp_9 = false;
+        }
+      }
+      if (tmp_9) {
+        tmp_8 = isCompletable;
+      } else {
+        {
+          tmp_8 = false;
+        }
+      }
+      var noMissing = tmp_8;
+      Unit_getInstance();
+      var tmp_10;
+      if (noMissing) {
+        tmp_10 = emptyList();
+      } else {
+        var tmp$ret$11;
+        $l$block_13: {
+          var tmp2_min_0 = argumentIndex;
+          var tmp3_min_0 = commandArguments.length - indexMod | 0;
+          tmp$ret$11 = Math.min(tmp2_min_0, tmp3_min_0);
+          break $l$block_13;
+        }
+        var missingParameterStart = tmp$ret$11;
+        var tmp12_safe_receiver = $commandParametersTemp._v;
+        var tmp_11;
+        if (tmp12_safe_receiver == null) {
+          tmp_11 = null;
+        } else {
+          var tmp10_safe_receiver = $commandParametersTemp._v;
+          var tmp11_elvis_lhs = tmp10_safe_receiver == null ? null : tmp10_safe_receiver.length;
+          tmp_11 = slice_0(tmp12_safe_receiver, numberRangeToNumber(missingParameterStart, tmp11_elvis_lhs == null ? 0 : tmp11_elvis_lhs));
+        }
+        var tmp13_elvis_lhs = tmp_11;
+        tmp_10 = tmp13_elvis_lhs == null ? emptyList() : tmp13_elvis_lhs;
+      }
+      var missing = tmp_10;
+      Unit_getInstance();
+      var tmp_12;
+      var tmp14_safe_receiver = $closestItem;
+      if ((tmp14_safe_receiver == null ? null : tmp14_safe_receiver.actualType) === ValueType_EQ_OP_getInstance()._get_value__3683422336_a43j40_k$()) {
+        tmp_12 = true;
+      } else {
+        {
+          var tmp15_safe_receiver = $closestItem;
+          tmp_12 = (tmp15_safe_receiver == null ? null : tmp15_safe_receiver.actualType) === ValueType_EQ_JOIN_getInstance()._get_value__3683422336_a43j40_k$();
+        }
+      }
+      var isEqLike = tmp_12;
+      Unit_getInstance();
+      var tmp16_safe_receiver = closestCall;
+      var tmp17_elvis_lhs = tmp16_safe_receiver == null ? null : tmp16_safe_receiver.inEqualityExpression;
+      var inEq = tmp17_elvis_lhs == null ? false : tmp17_elvis_lhs;
+      Unit_getInstance();
+      var tmp_13;
+      if (missing.isEmpty_y1axqb_k$()) {
+        var jumpOut = true;
+        var tmp18_safe_receiver = $closestItem;
+        var tmp_14 = tmp18_safe_receiver == null ? null : tmp18_safe_receiver.textRange;
+        if (inRange$default(tmp_14, $lineNumber, $column, false, false, 24, null)) {
+          if (!($closestItem == null) ? !isComplete($closestItem, $lineNumber, $column) : false) {
+            jumpOut = false;
+          }
+        } else {
+        }
+        if (!inEq ? isEqLike : false) {
+          jumpOut = false;
+        }
+        jumpOut = jumpOut ? true : !$inCommand._v;
+        var tmp_15;
+        if (jumpOut) {
+          var tmp19_safe_receiver = closestCall;
+          var tmp20_safe_receiver = tmp19_safe_receiver == null ? null : tmp19_safe_receiver.containingCommand;
+          var commandCallIndex = tmp20_safe_receiver == null ? null : tmp20_safe_receiver.commandCallIndex;
+          if (!(commandCallIndex == null)) {
+            $processCommand._v($parseResult.commandCalls[commandCallIndex]);
+          } else {
+            $inCommand._v = false;
+            $closest._v = null;
+            $missingParameters._v = emptyList();
+          }
+          return Unit_getInstance();
+        }
+        tmp_13 = tmp_15;
+      }
+      var tmp$ret$14;
+      $l$block_16: {
+        var tmp4_filter_0 = $parseResult.equalityStatements;
+        var tmp$ret$13;
+        $l$block_15: {
+          var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
+          var indexedObject = tmp4_filter_0;
+          var inductionVariable_1 = 0;
+          var last_1 = indexedObject.length;
+          while (inductionVariable_1 < last_1) {
+            var element_2_3 = indexedObject[inductionVariable_1];
+            inductionVariable_1 = inductionVariable_1 + 1 | 0;
+            var tmp$ret$12;
+            $l$block_14: {
+              tmp$ret$12 = inRange_1(element_2_3.textRange, $lineNumber, $column, true, true);
+              break $l$block_14;
+            }
+            if (tmp$ret$12) {
+              tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+              Unit_getInstance();
+            } else {
+            }
+          }
+          tmp$ret$13 = tmp0_filterTo_0_1;
+          break $l$block_15;
+        }
+        tmp$ret$14 = tmp$ret$13;
+        break $l$block_16;
+      }
+      $matchingEqualityStatements._v = tmp$ret$14;
+      $index._v = argumentIndex >= 0 ? argumentIndex : 0;
+      var tmp_16;
+      if ($inCommand._v ? !($closestItem == null) : false) {
+        var tmp21_safe_receiver = closestCall;
+        var tmp22_safe_receiver = tmp21_safe_receiver == null ? null : tmp21_safe_receiver.arguments;
+        var tmp_17;
+        if (tmp22_safe_receiver == null) {
+          tmp_17 = null;
+        } else {
+          var tmp$ret$16;
+          $l$block_19: {
+            var inductionVariable_2 = 0;
+            var last_2 = tmp22_safe_receiver.length - 1 | 0;
+            if (inductionVariable_2 <= last_2)
+              do {
+                var index_2_1 = inductionVariable_2;
+                inductionVariable_2 = inductionVariable_2 + 1 | 0;
+                var tmp$ret$15;
+                $l$block_17: {
+                  var tmp5__anonymous__3_1443426976 = tmp22_safe_receiver[index_2_1];
+                  var start_4 = $closestItem.textRange.start;
+                  var tmp_18 = tmp5__anonymous__3_1443426976.textRange;
+                  var tmp_19 = start_4.line;
+                  var tmp_20 = start_4.character + 1 | 0;
+                  tmp$ret$15 = inRange$default(tmp_18, tmp_19, tmp_20, false, false, 24, null);
+                  break $l$block_17;
+                }
+                if (tmp$ret$15) {
+                  tmp$ret$16 = index_2_1;
+                  break $l$block_19;
+                } else {
+                }
+              }
+               while (inductionVariable_2 <= last_2);
+            tmp$ret$16 = -1;
+            break $l$block_19;
+          }
+          tmp_17 = tmp$ret$16;
+        }
+        tmp_16 = orElse(tmp_17, -1) >= 0;
+      } else {
+        tmp_16 = false;
+      }
+      $inCommand._v = tmp_16;
+      var tmp_21;
+      if (!$inCommand._v ? !(inEq ? isEqLike : false) : false) {
+        var tmp23_safe_receiver = closestCall;
+        var tmp24_safe_receiver = tmp23_safe_receiver == null ? null : tmp23_safe_receiver.containingCommand;
+        var commandCallIndex_0 = tmp24_safe_receiver == null ? null : tmp24_safe_receiver.commandCallIndex;
+        var tmp_22;
+        if (!(commandCallIndex_0 == null)) {
+          $processCommand._v($parseResult.commandCalls[commandCallIndex_0]);
+          return Unit_getInstance();
+        } else {
+          $closest._v = null;
+          missing = emptyList();
+          tmp_22 = Unit_getInstance();
+        }
+        tmp_21 = tmp_22;
+      }
+      $closest._v = closestCall;
+      $missingParameters._v = missing;
+      return Unit_getInstance();
+    };
+  }
+  function getClosestItem$lambda() {
+    return function (a, b) {
+      return a.distance_1.columnOffset_1 - b.distance_1.columnOffset_1 | 0;
+    };
+  }
+  function getClosestItem$lambda_0() {
+    return function (a, b) {
+      return (a.distance_1.lineOffset_1 << 16 | a.distance_1.columnOffset_1) - (b.distance_1.lineOffset_1 << 16 | b.distance_1.columnOffset_1) | 0;
+    };
+  }
+  function getEqualityValuesList$lambda() {
+    return function (a, b) {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = _get_startIndex__250257659(a);
+          break $l$block;
+        }
+        var tmp = tmp$ret$0;
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = _get_startIndex__250257659(b);
+          break $l$block_0;
+        }
+        tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+        break $l$block_1;
+      }
+      return tmp$ret$2;
+    };
+  }
+  var properties_initialized_CursorData_kt_3132651742;
+  function init_properties_CursorData_kt_1692095162() {
+    if (!properties_initialized_CursorData_kt_3132651742) {
+      properties_initialized_CursorData_kt_3132651742 = true;
+      var tmp$ret$0;
+      $l$block: {
+        var tmp0_toRegex_0 = RegexOption_IGNORE_CASE_getInstance();
+        tmp$ret$0 = Regex_init_$Create$_0('^((va|ov|mv)\\d){2}|((obv|var)\\d)', tmp0_toRegex_0);
+        break $l$block;
+      }
+      VAR_REGEX = tmp$ret$0;
+    }
+  }
   function ParseCancelledException() {
     Exception_init_$Init$(this);
     captureStack(this, ParseCancelledException);
@@ -15773,7 +20450,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.copy_51du5j_k$(key, items, textRange);
   };
   Script.prototype.toString = function () {
-    return 'Script(key=' + this.key_1 + ', items=' + toString_0(this.items_1) + ', textRange=' + this.textRange_1 + ')';
+    return 'Script(key=' + this.key_1 + ', items=' + toString(this.items_1) + ', textRange=' + this.textRange_1 + ')';
   };
   Script.$metadata$ = {
     simpleName: 'Script',
@@ -15803,7 +20480,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return function () {
       var tmp;
       try {
-        tmp = Companion_getInstance_17().fromVal_tp3zbq_k$(this$0.variant_1);
+        tmp = Companion_getInstance_22().fromVal_tp3zbq_k$(this$0.variant_1);
       } catch ($p) {
         var tmp_0;
         if ($p instanceof Exception) {
@@ -15949,7 +20626,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.copy_4z0uyr_k$(variant, originalText, items, errors, scripts, equalityStatements, commandCalls, comments, caos2Comments, looseTokens);
   };
   ParseResult.prototype.toString = function () {
-    return 'ParseResult(variant=' + this.variant_1 + ', originalText=' + this.originalText_1 + ', items=' + toString_0(this.items_1) + ', errors=' + toString_0(this.errors_1) + ', scripts=' + toString_0(this.scripts_1) + ', equalityStatements=' + toString_0(this.equalityStatements_1) + ', commandCalls=' + toString_0(this.commandCalls_1) + ', comments=' + toString_0(this.comments_1) + ', caos2Comments=' + toString_0(this.caos2Comments_1) + ', looseTokens=' + toString_0(this.looseTokens_1) + ')';
+    return 'ParseResult(variant=' + this.variant_1 + ', originalText=' + this.originalText_1 + ', items=' + toString(this.items_1) + ', errors=' + toString(this.errors_1) + ', scripts=' + toString(this.scripts_1) + ', equalityStatements=' + toString(this.equalityStatements_1) + ', commandCalls=' + toString(this.commandCalls_1) + ', comments=' + toString(this.comments_1) + ', caos2Comments=' + toString(this.caos2Comments_1) + ', looseTokens=' + toString(this.looseTokens_1) + ')';
   };
   ParseResult.$metadata$ = {
     simpleName: 'ParseResult',
@@ -16142,7 +20819,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return tmp$ret$12;
   }
   function inside(_this__1828080292, other) {
-    return inRange_2(_this__1828080292, other);
+    return inRange_3(_this__1828080292, other);
   }
   function gameVariant$factory() {
     return getPropertyCallableRef('gameVariant', 1, KProperty1, function (receiver) {
@@ -16152,8 +20829,8 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function _get_TAG_REGEX__2151988079($this) {
     return $this.TAG_REGEX_1;
   }
-  function Companion_7() {
-    Companion_instance_7 = this;
+  function Companion_9() {
+    Companion_instance_9 = this;
     var tmp = this;
     var tmp$ret$0;
     $l$block: {
@@ -16162,16 +20839,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     tmp.TAG_REGEX_1 = tmp$ret$0;
   }
-  Companion_7.$metadata$ = {
+  Companion_9.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_7;
-  function Companion_getInstance_9() {
-    if (Companion_instance_7 == null)
-      new Companion_7();
-    return Companion_instance_7;
+  var Companion_instance_9;
+  function Companion_getInstance_11() {
+    if (Companion_instance_9 == null)
+      new Companion_9();
+    return Companion_instance_9;
   }
   function ParserItem$Caos2Comment$valuesAsStrings$delegate$lambda(this$0) {
     return function () {
@@ -16246,16 +20923,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function component1($this) {
     return $this.mTokens_1;
   }
-  function sam$kotlin_Comparator$0_1(function_0) {
+  function sam$kotlin_Comparator$0_4(function_0) {
     this.function_1 = function_0;
   }
-  sam$kotlin_Comparator$0_1.prototype.compare_6tbigh_k$ = function (a, b) {
+  sam$kotlin_Comparator$0_4.prototype.compare_6tbigh_k$ = function (a, b) {
     return this.function_1(a, b);
   };
-  sam$kotlin_Comparator$0_1.prototype.compare = function (a, b) {
+  sam$kotlin_Comparator$0_4.prototype.compare = function (a, b) {
     return this.compare_6tbigh_k$(a, b);
   };
-  sam$kotlin_Comparator$0_1.$metadata$ = {
+  sam$kotlin_Comparator$0_4.$metadata$ = {
     simpleName: 'sam$kotlin_Comparator$0',
     kind: 'class',
     interfaces: [Comparator]
@@ -16291,7 +20968,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
           var tmp$ret$0;
           $l$block: {
             var tmp = ParserItem$CompoundCommandToken$tokens$delegate$lambda$lambda();
-            tmp$ret$0 = new sam$kotlin_Comparator$0_1(tmp);
+            tmp$ret$0 = new sam$kotlin_Comparator$0_4(tmp);
             break $l$block;
           }
           tmp$ret$1 = sortedWith_0(tmp0_sortedBy_0, tmp$ret$0);
@@ -16325,6 +21002,35 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function ParserItem$CompoundCommandToken$value$delegate$lambda(this$0) {
     return function () {
       return stitch_0(this$0.tokens.slice());
+    };
+  }
+  function ParserItem$NewLine$lines$delegate$lambda(this$0) {
+    return function () {
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp0_count_0 = this$0.value_1;
+        var count_1 = 0;
+        var indexedObject = tmp0_count_0;
+        var inductionVariable = 0;
+        var last = indexedObject.length;
+        while (inductionVariable < last) {
+          var element_3 = charSequenceGet(indexedObject, inductionVariable);
+          inductionVariable = inductionVariable + 1 | 0;
+          var tmp$ret$0;
+          $l$block: {
+            tmp$ret$0 = equals(new Char(element_3), new Char(_Char___init__impl__380027157(10)));
+            break $l$block;
+          }
+          if (tmp$ret$0) {
+            count_1 = count_1 + 1 | 0;
+            Unit_getInstance();
+          } else {
+          }
+        }
+        tmp$ret$1 = count_1;
+        break $l$block_0;
+      }
+      return tmp$ret$1;
     };
   }
   function FloatVal(textRange, value) {
@@ -17629,7 +22335,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
   });
   function Caos2Comment(textRange, text, token, values, eq) {
-    Companion_getInstance_9();
+    Companion_getInstance_11();
     ParserItem.call(this);
     this.textRange_1 = textRange;
     this.text_1 = text;
@@ -17665,6 +22371,45 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   Caos2Comment.prototype.toString = function () {
     return this.text_1;
   };
+  Caos2Comment.prototype.equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof Caos2Comment))
+      return false;
+    else {
+    }
+    if (!equals(this.textRange_1, other.textRange_1))
+      return false;
+    if (!(this.text_1 === other.text_1))
+      return false;
+    if (!this.token_1.equals(other.token_1))
+      return false;
+    if (!contentEquals(this.values_1, other.values_1))
+      return false;
+    if (!equals(this.eq_1, other.eq_1))
+      return false;
+    if (!(this.typeToken_1 === other.typeToken_1))
+      return false;
+    if (!(this.actualType_1 === other.actualType_1))
+      return false;
+    if (!(this.isTag_1 === other.isTag_1))
+      return false;
+    return true;
+  };
+  Caos2Comment.prototype.hashCode = function () {
+    var result = hashCode(this.textRange_1);
+    result = imul(31, result) + getStringHashCode(this.text_1) | 0;
+    result = imul(31, result) + this.token_1.hashCode() | 0;
+    result = imul(31, result) + contentHashCode(this.values_1) | 0;
+    var tmp = imul(31, result);
+    var tmp0_safe_receiver = this.eq_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.hashCode();
+    result = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
+    result = imul(31, result) + this.typeToken_1 | 0;
+    result = imul(31, result) + this.actualType_1 | 0;
+    result = imul(31, result) + (this.isTag_1 | 0) | 0;
+    return result;
+  };
   Caos2Comment.prototype._get_valuesAsStrings__3607534307_bda2ot_k$ = function () {
     var tmp$ret$0;
     $l$block: {
@@ -17697,36 +22442,6 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       break $l$block;
     }
     return tmp$ret$0;
-  };
-  Caos2Comment.prototype.equals = function (other) {
-    if (this === other)
-      return true;
-    if (!(other instanceof Caos2Comment))
-      return false;
-    else {
-    }
-    if (!equals(this.textRange_1, other.textRange_1))
-      return false;
-    if (!this.token_1.equals(other.token_1))
-      return false;
-    if (!contentEquals(this.values_1, other.values_1))
-      return false;
-    if (!(this.isTag_1 === other.isTag_1))
-      return false;
-    if (!(this.typeToken_1 === other.typeToken_1))
-      return false;
-    if (!(this.actualType_1 === other.actualType_1))
-      return false;
-    return true;
-  };
-  Caos2Comment.prototype.hashCode = function () {
-    var result = hashCode(this.textRange_1);
-    result = imul(31, result) + this.token_1.hashCode() | 0;
-    result = imul(31, result) + contentHashCode(this.values_1) | 0;
-    result = imul(31, result) + (this.isTag_1 | 0) | 0;
-    result = imul(31, result) + this.typeToken_1 | 0;
-    result = imul(31, result) + this.actualType_1 | 0;
-    return result;
   };
   Caos2Comment.prototype.component1 = function () {
     return this.textRange_1;
@@ -18005,10 +22720,205 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       return this._get_text__809840318_de5ose_k$();
     }
   });
+  function NewLine(textRange, value) {
+    ParserItem.call(this);
+    this.textRange_1 = textRange;
+    this.value_1 = value;
+    var tmp = this;
+    tmp.lines$delegate_1 = lazy(ParserItem$NewLine$lines$delegate$lambda(this));
+    this.actualType_1 = ValueType_NEWLINE_getInstance()._get_value__3683422336_a43j40_k$();
+  }
+  NewLine.prototype._get_textRange__497794113_88dge9_k$ = function () {
+    return this.textRange_1;
+  };
+  NewLine.prototype._get_value__3683422336_a43j40_k$ = function () {
+    return this.value_1;
+  };
+  NewLine.prototype.toString = function () {
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp0_uppercase_0 = this.value_1;
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = tmp0_uppercase_0;
+        break $l$block;
+      }
+      tmp$ret$1 = tmp$ret$0.toUpperCase();
+      break $l$block_0;
+    }
+    return tmp$ret$1;
+  };
+  NewLine.prototype._get_lines__3404563634_eq4fv2_k$ = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_getValue_0 = lines$factory();
+      tmp$ret$0 = this.lines$delegate_1._get_value__3683422336_a43j40_k$();
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  NewLine.prototype._get_actualType__3823884195_7sgy1p_k$ = function () {
+    return this.actualType_1;
+  };
+  NewLine.prototype._get_text__809840318_de5ose_k$ = function () {
+    return this.value_1;
+  };
+  NewLine.prototype._get_typeToken__1588272978_q9m79u_k$ = function () {
+    return TypeTokens_getInstance().NEWLINE;
+  };
+  NewLine.prototype.component1 = function () {
+    return this.textRange_1;
+  };
+  NewLine.prototype.component2 = function () {
+    return this.value_1;
+  };
+  NewLine.prototype.copy = function (textRange, value) {
+    return this.copy_3e832n_k$(textRange === void 1 ? this.textRange_1 : textRange, value === void 1 ? this.value_1 : value);
+  };
+  NewLine.prototype.copy_3e832n_k$ = function (textRange, value) {
+    return new NewLine(textRange, value);
+  };
+  NewLine.prototype.copy$default_9l7iuk_k$ = function (textRange, value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      textRange = this.textRange_1;
+    if (!(($mask0 & 2) === 0))
+      value = this.value_1;
+    return this.copy_3e832n_k$(textRange, value);
+  };
+  NewLine.prototype.hashCode = function () {
+    var result = hashCode(this.textRange_1);
+    result = imul(result, 31) + getStringHashCode(this.value_1) | 0;
+    return result;
+  };
+  NewLine.prototype.equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof NewLine))
+      return false;
+    else {
+    }
+    var tmp0_other_with_cast = other instanceof NewLine ? other : THROW_CCE();
+    if (!equals(this.textRange_1, tmp0_other_with_cast.textRange_1))
+      return false;
+    if (!(this.value_1 === tmp0_other_with_cast.value_1))
+      return false;
+    return true;
+  };
+  NewLine.$metadata$ = {
+    simpleName: 'NewLine',
+    kind: 'class',
+    interfaces: []
+  };
+  Object.defineProperty(NewLine.prototype, 'textRange', {
+    configurable: true,
+    get: function () {
+      return this._get_textRange__497794113_88dge9_k$();
+    }
+  });
+  Object.defineProperty(NewLine.prototype, 'lines', {
+    configurable: true,
+    get: NewLine.prototype._get_lines__3404563634_eq4fv2_k$
+  });
+  Object.defineProperty(NewLine.prototype, 'text', {
+    configurable: true,
+    get: function () {
+      return this._get_text__809840318_de5ose_k$();
+    }
+  });
+  function Spaces(textRange, value) {
+    ParserItem.call(this);
+    this.textRange_1 = textRange;
+    this.value_1 = value;
+    this.actualType_1 = ValueType_NEWLINE_getInstance()._get_value__3683422336_a43j40_k$();
+  }
+  Spaces.prototype._get_textRange__497794113_88dge9_k$ = function () {
+    return this.textRange_1;
+  };
+  Spaces.prototype._get_value__3683422336_a43j40_k$ = function () {
+    return this.value_1;
+  };
+  Spaces.prototype.toString = function () {
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp0_uppercase_0 = this.value_1;
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = tmp0_uppercase_0;
+        break $l$block;
+      }
+      tmp$ret$1 = tmp$ret$0.toUpperCase();
+      break $l$block_0;
+    }
+    return tmp$ret$1;
+  };
+  Spaces.prototype._get_actualType__3823884195_7sgy1p_k$ = function () {
+    return this.actualType_1;
+  };
+  Spaces.prototype._get_text__809840318_de5ose_k$ = function () {
+    return this.value_1;
+  };
+  Spaces.prototype._get_typeToken__1588272978_q9m79u_k$ = function () {
+    return TypeTokens_getInstance().SPACES;
+  };
+  Spaces.prototype.component1 = function () {
+    return this.textRange_1;
+  };
+  Spaces.prototype.component2 = function () {
+    return this.value_1;
+  };
+  Spaces.prototype.copy = function (textRange, value) {
+    return this.copy_3e832n_k$(textRange === void 1 ? this.textRange_1 : textRange, value === void 1 ? this.value_1 : value);
+  };
+  Spaces.prototype.copy_3e832n_k$ = function (textRange, value) {
+    return new Spaces(textRange, value);
+  };
+  Spaces.prototype.copy$default_9l7iuk_k$ = function (textRange, value, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      textRange = this.textRange_1;
+    if (!(($mask0 & 2) === 0))
+      value = this.value_1;
+    return this.copy_3e832n_k$(textRange, value);
+  };
+  Spaces.prototype.hashCode = function () {
+    var result = hashCode(this.textRange_1);
+    result = imul(result, 31) + getStringHashCode(this.value_1) | 0;
+    return result;
+  };
+  Spaces.prototype.equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof Spaces))
+      return false;
+    else {
+    }
+    var tmp0_other_with_cast = other instanceof Spaces ? other : THROW_CCE();
+    if (!equals(this.textRange_1, tmp0_other_with_cast.textRange_1))
+      return false;
+    if (!(this.value_1 === tmp0_other_with_cast.value_1))
+      return false;
+    return true;
+  };
+  Spaces.$metadata$ = {
+    simpleName: 'Spaces',
+    kind: 'class',
+    interfaces: []
+  };
+  Object.defineProperty(Spaces.prototype, 'textRange', {
+    configurable: true,
+    get: function () {
+      return this._get_textRange__497794113_88dge9_k$();
+    }
+  });
+  Object.defineProperty(Spaces.prototype, 'text', {
+    configurable: true,
+    get: function () {
+      return this._get_text__809840318_de5ose_k$();
+    }
+  });
   function ParserItem() {
   }
   ParserItem.prototype.toString = function () {
-    return toString(this.value);
+    return toString_0(this.value);
   };
   ParserItem.$metadata$ = {
     simpleName: 'ParserItem',
@@ -18075,21 +22985,28 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       return receiver.value;
     }, null);
   }
+  function lines$factory() {
+    return getPropertyCallableRef('lines', 1, KProperty1, function (receiver) {
+      return receiver.lines;
+    }, null);
+  }
   function _get_TAG__856418391_0($this) {
     return $this.TAG_1;
   }
-  function RawTokenizer_init_$Init$(offsetIndex, offsetLine, offsetColumn, checkCancelled, $mask0, $marker, $this) {
+  function RawTokenizer_init_$Init$(offsetIndex, offsetLine, offsetColumn, checkCancelled, parseWhitespace, $mask0, $marker, $this) {
     if (!(($mask0 & 1) === 0))
       offsetIndex = null;
     if (!(($mask0 & 2) === 0))
       offsetLine = null;
     if (!(($mask0 & 4) === 0))
       offsetColumn = null;
-    RawTokenizer.call($this, offsetIndex, offsetLine, offsetColumn, checkCancelled);
+    if (!(($mask0 & 16) === 0))
+      parseWhitespace = false;
+    RawTokenizer.call($this, offsetIndex, offsetLine, offsetColumn, checkCancelled, parseWhitespace);
     return $this;
   }
-  function RawTokenizer_init_$Create$(offsetIndex, offsetLine, offsetColumn, checkCancelled, $mask0, $marker) {
-    return RawTokenizer_init_$Init$(offsetIndex, offsetLine, offsetColumn, checkCancelled, $mask0, $marker, Object.create(RawTokenizer.prototype));
+  function RawTokenizer_init_$Create$(offsetIndex, offsetLine, offsetColumn, checkCancelled, parseWhitespace, $mask0, $marker) {
+    return RawTokenizer_init_$Init$(offsetIndex, offsetLine, offsetColumn, checkCancelled, parseWhitespace, $mask0, $marker, Object.create(RawTokenizer.prototype));
   }
   function _get_offsetIndex__1924661618($this) {
     return $this.offsetIndex_1;
@@ -18099,6 +23016,9 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   }
   function _get_offsetColumn__2836365474($this) {
     return $this.offsetColumn_1;
+  }
+  function _get_parseWhitespace__1810055297($this) {
+    return $this.parseWhitespace_1;
   }
   function _get_mScriptRange__644231526($this) {
     return $this.mScriptRange_1;
@@ -18217,20 +23137,20 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$7;
   }
-  function Companion_8() {
-    Companion_instance_8 = this;
+  function Companion_10() {
+    Companion_instance_10 = this;
     this.TAG_1 = 'RawTokenizer';
   }
-  Companion_8.$metadata$ = {
+  Companion_10.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_8;
-  function Companion_getInstance_10() {
-    if (Companion_instance_8 == null)
-      new Companion_8();
-    return Companion_instance_8;
+  var Companion_instance_10;
+  function Companion_getInstance_12() {
+    if (Companion_instance_10 == null)
+      new Companion_10();
+    return Companion_instance_10;
   }
   function RawTokenizer$toRange$delegate$lambda$lambda(this$0) {
     return function (start, end) {
@@ -18256,13 +23176,14 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       return tmp;
     };
   }
-  function RawTokenizer(offsetIndex, offsetLine, offsetColumn, checkCancelled) {
-    Companion_getInstance_10();
+  function RawTokenizer(offsetIndex, offsetLine, offsetColumn, checkCancelled, parseWhitespace) {
+    Companion_getInstance_12();
     CaosUniversalParserBaseListener.call(this);
     this.offsetIndex_1 = offsetIndex;
     this.offsetLine_1 = offsetLine;
     this.offsetColumn_1 = offsetColumn;
     this.checkCancelled_1 = checkCancelled;
+    this.parseWhitespace_1 = parseWhitespace;
     var tmp = this;
     var tmp$ret$0;
     $l$block: {
@@ -18386,7 +23307,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var tmp_1;
     if (ctx._get_text__809840318_de5ose_k$().length === 3 ? this.mItems_1._get_size__809037418_ddoh9m_k$() > 1 : false) {
       var tmp0_safe_receiver = last_0(this.mItems_1).value;
-      var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : toString_0(tmp0_safe_receiver);
+      var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : toString(tmp0_safe_receiver);
       var tmp_2;
       if (tmp1_safe_receiver == null) {
         tmp_2 = null;
@@ -18410,7 +23331,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     if (tmp_1) {
       var tmp$ret$3;
       $l$block_2: {
-        var tmp0_uppercase_0 = toString(getOrNull_1(this.mItems_1, _get_lastIndex__339712501_0(this.mItems_1) - 1 | 0));
+        var tmp0_uppercase_0 = toString_0(getOrNull_1(this.mItems_1, _get_lastIndex__339712501_0(this.mItems_1) - 1 | 0));
         var tmp$ret$2;
         $l$block_1: {
           tmp$ret$2 = tmp0_uppercase_0;
@@ -18497,7 +23418,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       tmp = new IntVal(range, toInt(ctx._get_text__809840318_de5ose_k$()));
     } else {
       var tmp_3 = Log_getInstance();
-      Companion_getInstance_10();
+      Companion_getInstance_12();
       tmp_3.e_vxqv5a_k$('RawTokenizer', "Unhandled number context: '" + ctx._get_text__809840318_de5ose_k$() + "'");
       return Unit_getInstance();
     }
@@ -18539,7 +23460,14 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var tmp_1 = _get_textRange__497794113(wordContext);
     var tmp_2 = wordContext._get_text__809840318_de5ose_k$();
     var token = new TokenVal(tmp_1, stripSurroundingQuotes$default(tmp_2, 0, 1, null));
-    var parserItem = new Caos2Comment(_get_textRange__497794113(ctx), _get_trueText__2818392912(ctx), token, caos2Values_0(this, ctx), new TokenVal(_get_textRange__497794113_0(eq), '='));
+    var tmp_3 = _get_textRange__497794113(ctx);
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_trim_0 = _get_trueText__2818392912(ctx);
+      tmp$ret$0 = toString(trim(isCharSequence(tmp0_trim_0) ? tmp0_trim_0 : THROW_CCE()));
+      break $l$block;
+    }
+    var parserItem = new Caos2Comment(tmp_3, tmp$ret$0, token, caos2Values_0(this, ctx), new TokenVal(_get_textRange__497794113_0(eq), '='));
     this.mCao2Comments_1.add_1j60pz_k$(parserItem);
     Unit_getInstance();
     this.mItems_1.add_1j60pz_k$(parserItem);
@@ -18558,7 +23486,14 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var tmp_0 = withStartEndTokens(ensureNotNull(wordContext._get_start__3614751663_b8zdqp_k$()), ensureNotNull(wordContext._get_stop__809354889_ddva89_k$()));
     var tmp_1 = wordContext._get_text__809840318_de5ose_k$();
     var token = new TokenVal(tmp_0, stripSurroundingQuotes$default(tmp_1, 0, 1, null));
-    var parserItem = new Caos2Comment(_get_textRange__497794113(ctx), _get_trueText__2818392912(ctx), token, caos2Values_0(this, ctx), null);
+    var tmp_2 = _get_textRange__497794113(ctx);
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_trim_0 = _get_trueText__2818392912(ctx);
+      tmp$ret$0 = toString(trim(isCharSequence(tmp0_trim_0) ? tmp0_trim_0 : THROW_CCE()));
+      break $l$block;
+    }
+    var parserItem = new Caos2Comment(tmp_2, tmp$ret$0, token, caos2Values_0(this, ctx), null);
     this.mCao2Comments_1.add_1j60pz_k$(parserItem);
     Unit_getInstance();
     this.mItems_1.add_1j60pz_k$(parserItem);
@@ -18893,7 +23828,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function _set_start__1256589603_0($this, _set____804775014) {
     $this.start_1 = _set____804775014;
   }
-  function _get_start__3614751663_0($this) {
+  function _get_start__3614751663_1($this) {
     return $this.start_1;
   }
   function _set_startCommand__2619247086_0($this, _set____804775014) {
@@ -18911,23 +23846,23 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function _get_dde__856929612_2($this) {
     return $this.dde_1;
   }
-  function Companion_9() {
-    Companion_instance_9 = this;
+  function Companion_11() {
+    Companion_instance_11 = this;
     this.TAG_1 = 'OffsetWalker';
   }
-  Companion_9.$metadata$ = {
+  Companion_11.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_9;
-  function Companion_getInstance_11() {
-    if (Companion_instance_9 == null)
-      new Companion_9();
-    return Companion_instance_9;
+  var Companion_instance_11;
+  function Companion_getInstance_13() {
+    if (Companion_instance_11 == null)
+      new Companion_11();
+    return Companion_instance_11;
   }
   function ScriptOffsetsWalker() {
-    Companion_getInstance_11();
+    Companion_getInstance_13();
     CaosUniversalParserBaseListener.call(this);
     var tmp = this;
     var tmp$ret$0;
@@ -19089,6 +24024,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var scriptOffsets_0 = tmp;
     return scriptOffsetsToScriptsArray(scriptOffsets_0, parseResult.items);
   }
+  function getWhitespace(text) {
+    var tmp = CharStreams_getInstance();
+    var charStream = tmp.fromString$default_ibgbyx_k$(text, null, 2, null);
+    var lexer = new CaosWhitespaceLexer(charStream);
+    var tokenStream = new CommonTokenStream(lexer);
+    var parser = new CaosWhitespaceParser(tokenStream);
+    var walker = new WhitespaceCollector();
+    Companion_getInstance_0()._get_DEFAULT__3552918800_c9soa8_k$().walk_g0y9jc_k$(walker, parser.file_1vd6k_k$());
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_toTypedArray_0 = walker._get_whitespace__2402994606_vafjgy_k$();
+      tmp$ret$0 = copyToArray(tmp0_toTypedArray_0);
+      break $l$block;
+    }
+    return tmp$ret$0;
+  }
   function scopeOffsets(text) {
     var tmp = CharStreams_getInstance();
     var charStream = tmp.fromString$default_ibgbyx_k$(text, null, 2, null);
@@ -19197,7 +24148,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
             inductionVariable = inductionVariable + 1 | 0;
             var tmp$ret$0;
             $l$block: {
-              tmp$ret$0 = inRange_0(element_2_3, line, character, true, false) ? (element_2_3.end.line - element_2_3.start.line | 0) > 1 : false;
+              tmp$ret$0 = inRange_1(element_2_3, line, character, true, false) ? (element_2_3.end.line - element_2_3.start.line | 0) > 1 : false;
               break $l$block;
             }
             if (tmp$ret$0) {
@@ -19216,7 +24167,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       var tmp$ret$3;
       $l$block_2: {
         var tmp = parseCaos$lambda();
-        tmp$ret$3 = new sam$kotlin_Comparator$0_2(tmp);
+        tmp$ret$3 = new sam$kotlin_Comparator$0_5(tmp);
         break $l$block_2;
       }
       tmp$ret$4 = sortedWith(tmp1_sortedByDescending_0, tmp$ret$3);
@@ -19327,7 +24278,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
             inductionVariable = inductionVariable + 1 | 0;
             var tmp$ret$0;
             $l$block: {
-              tmp$ret$0 = ((element_2_3.end.line - element_2_3.start.line | 0) > 1 ? inRange_0(element_2_3, startLine, startCharacter, true, true) : false) ? inRange_0(element_2_3, endLine, endCharacter, true, true) : false;
+              tmp$ret$0 = ((element_2_3.end.line - element_2_3.start.line | 0) > 1 ? inRange_1(element_2_3, startLine, startCharacter, true, true) : false) ? inRange_1(element_2_3, endLine, endCharacter, true, true) : false;
               break $l$block;
             }
             if (tmp$ret$0) {
@@ -19346,7 +24297,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       var tmp$ret$3;
       $l$block_2: {
         var tmp = parseCaos$lambda_0();
-        tmp$ret$3 = new sam$kotlin_Comparator$0_3(tmp);
+        tmp$ret$3 = new sam$kotlin_Comparator$0_6(tmp);
         break $l$block_2;
       }
       tmp$ret$4 = sortedWith(tmp1_sortedByDescending_0, tmp$ret$3);
@@ -19501,7 +24452,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var tokenStream = new CommonTokenStream(tmp$ret$8);
     var parser = new CaosUniversalParser(tokenStream);
     var checkCancelled = createCheckCancelled(checkDelay, keepGoing);
-    var collector = new RawTokenizer(offsetIndex, offsetLine, offsetColumn, checkCancelled);
+    var collector = RawTokenizer_init_$Create$(offsetIndex, offsetLine, offsetColumn, checkCancelled, false, 16, null);
     lexer.addErrorListener_vdlry1_k$(collector);
     parser.addErrorListener_vdlry1_k$(collector);
     try {
@@ -19762,30 +24713,30 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     } else {
     }
   }
-  function sam$kotlin_Comparator$0_2(function_0) {
+  function sam$kotlin_Comparator$0_5(function_0) {
     this.function_1 = function_0;
   }
-  sam$kotlin_Comparator$0_2.prototype.compare_6tbigh_k$ = function (a, b) {
+  sam$kotlin_Comparator$0_5.prototype.compare_6tbigh_k$ = function (a, b) {
     return this.function_1(a, b);
   };
-  sam$kotlin_Comparator$0_2.prototype.compare = function (a, b) {
+  sam$kotlin_Comparator$0_5.prototype.compare = function (a, b) {
     return this.compare_6tbigh_k$(a, b);
   };
-  sam$kotlin_Comparator$0_2.$metadata$ = {
+  sam$kotlin_Comparator$0_5.$metadata$ = {
     simpleName: 'sam$kotlin_Comparator$0',
     kind: 'class',
     interfaces: [Comparator]
   };
-  function sam$kotlin_Comparator$0_3(function_0) {
+  function sam$kotlin_Comparator$0_6(function_0) {
     this.function_1 = function_0;
   }
-  sam$kotlin_Comparator$0_3.prototype.compare_6tbigh_k$ = function (a, b) {
+  sam$kotlin_Comparator$0_6.prototype.compare_6tbigh_k$ = function (a, b) {
     return this.function_1(a, b);
   };
-  sam$kotlin_Comparator$0_3.prototype.compare = function (a, b) {
+  sam$kotlin_Comparator$0_6.prototype.compare = function (a, b) {
     return this.compare_6tbigh_k$(a, b);
   };
-  sam$kotlin_Comparator$0_3.$metadata$ = {
+  sam$kotlin_Comparator$0_6.$metadata$ = {
     simpleName: 'sam$kotlin_Comparator$0',
     kind: 'class',
     interfaces: [Comparator]
@@ -20076,6 +25027,63 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     kind: 'class',
     interfaces: []
   };
+  function _get_TAG__856418391_2($this) {
+    return $this.TAG_1;
+  }
+  function _get_mWhitespace__206521351($this) {
+    return $this.mWhitespace_1;
+  }
+  function Companion_12() {
+    Companion_instance_12 = this;
+    this.TAG_1 = 'WhitespaceCollector';
+  }
+  Companion_12.$metadata$ = {
+    simpleName: 'Companion',
+    kind: 'object',
+    interfaces: []
+  };
+  var Companion_instance_12;
+  function Companion_getInstance_14() {
+    if (Companion_instance_12 == null)
+      new Companion_12();
+    return Companion_instance_12;
+  }
+  function WhitespaceCollector() {
+    Companion_getInstance_14();
+    CaosWhitespaceParserBaseListener.call(this);
+    var tmp = this;
+    var tmp$ret$0;
+    $l$block: {
+      tmp$ret$0 = ArrayList_init_$Create$_0();
+      break $l$block;
+    }
+    tmp.mWhitespace_1 = tmp$ret$0;
+  }
+  WhitespaceCollector.prototype._get_whitespace__2402994606_vafjgy_k$ = function () {
+    return this.mWhitespace_1;
+  };
+  WhitespaceCollector.prototype.enterSpace_lo5o96_k$ = function (ctx) {
+    CaosWhitespaceParserBaseListener.prototype.enterSpace_lo5o96_k$.call(this, ctx);
+    this.mWhitespace_1.add_1j60pz_k$(new Spaces(withStartEndTokens(ensureNotNull(ctx._get_start__3614751663_b8zdqp_k$()), ensureNotNull(ctx._get_stop__809354889_ddva89_k$())), _get_trueText__2818392912(ctx)));
+    Unit_getInstance();
+  };
+  WhitespaceCollector.prototype.enterNewline_7t34wi_k$ = function (ctx) {
+    CaosWhitespaceParserBaseListener.prototype.enterNewline_7t34wi_k$.call(this, ctx);
+    this.mWhitespace_1.add_1j60pz_k$(new NewLine(withStartEndTokens(ensureNotNull(ctx._get_start__3614751663_b8zdqp_k$()), ensureNotNull(ctx._get_stop__809354889_ddva89_k$())), _get_trueText__2818392912(ctx)));
+    Unit_getInstance();
+  };
+  WhitespaceCollector.$metadata$ = {
+    simpleName: 'WhitespaceCollector',
+    kind: 'class',
+    interfaces: []
+  };
+  function Completer() {
+  }
+  Completer.$metadata$ = {
+    simpleName: 'Completer',
+    kind: 'class',
+    interfaces: []
+  };
   function CaosException_init_$Init$(message, throwable, $mask0, $marker, $this) {
     if (!(($mask0 & 2) === 0))
       throwable = null;
@@ -20168,6 +25176,2357 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     kind: 'class',
     interfaces: []
   };
+  function CaosFormatterOptionsImpl$maximumEmptyLines$delegate$lambda($opts) {
+    return function () {
+      var tmp;
+      var tmp0_safe_receiver = $opts;
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.maximumEmptyLines;
+      if ((tmp1_elvis_lhs == null ? -1 : tmp1_elvis_lhs) < 0) {
+        tmp = ShortCompanionObject_getInstance()._get_MAX_VALUE__3201573499_i2z81x_k$();
+      } else {
+        {
+          var tmp2_safe_receiver = $opts;
+          var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.maximumEmptyLines;
+          tmp = tmp3_elvis_lhs == null ? ShortCompanionObject_getInstance()._get_MAX_VALUE__3201573499_i2z81x_k$() : tmp3_elvis_lhs;
+        }
+      }
+      return tmp;
+    };
+  }
+  function CaosFormatterOptionsImpl(variant, opts) {
+    this.variant_1 = variant;
+    var tmp = this;
+    var tmp0_safe_receiver = opts;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.tabSize;
+    tmp.tabSize_1 = tmp1_elvis_lhs == null ? 4 : tmp1_elvis_lhs;
+    var tmp_0 = this;
+    var tmp0_safe_receiver_0 = opts;
+    var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.insertSpaces;
+    tmp_0.insertSpaces_1 = tmp1_elvis_lhs_0 == null ? true : tmp1_elvis_lhs_0;
+    var tmp_1 = this;
+    var tmp0_safe_receiver_1 = opts;
+    var tmp1_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : tmp0_safe_receiver_1.trimTrailingWhitespace;
+    tmp_1.trimTrailingWhitespace_1 = tmp1_elvis_lhs_1 == null ? like_0(this.variant_1, 'C1') : tmp1_elvis_lhs_1;
+    var tmp_2 = this;
+    var tmp0_safe_receiver_2 = opts;
+    var tmp1_elvis_lhs_2 = tmp0_safe_receiver_2 == null ? null : tmp0_safe_receiver_2.insertFinalNewline;
+    tmp_2.insertFinalNewline_1 = tmp1_elvis_lhs_2 == null ? false : tmp1_elvis_lhs_2;
+    var tmp_3 = this;
+    var tmp0_safe_receiver_3 = opts;
+    var tmp1_elvis_lhs_3 = tmp0_safe_receiver_3 == null ? null : tmp0_safe_receiver_3.trimFinalNewlines;
+    tmp_3.trimFinalNewlines_1 = tmp1_elvis_lhs_3 == null ? like_0(this.variant_1, 'C1') : tmp1_elvis_lhs_3;
+    var tmp_4 = this;
+    var tmp0_safe_receiver_4 = opts;
+    var tmp1_elvis_lhs_4 = tmp0_safe_receiver_4 == null ? null : tmp0_safe_receiver_4.keepSameLine;
+    tmp_4.keepSameLine_1 = tmp1_elvis_lhs_4 == null ? notLike(this.variant_1, 'C1') ? notLike(this.variant_1, 'C2') : false : tmp1_elvis_lhs_4;
+    var tmp_5 = this;
+    tmp_5.maximumEmptyLines$delegate_1 = lazy(CaosFormatterOptionsImpl$maximumEmptyLines$delegate$lambda(opts));
+    var tmp_6 = this;
+    var tmp0_safe_receiver_5 = opts;
+    var tmp1_elvis_lhs_5 = tmp0_safe_receiver_5 == null ? null : tmp0_safe_receiver_5.indentComments;
+    tmp_6.indentComments_1 = tmp1_elvis_lhs_5 == null ? true : tmp1_elvis_lhs_5;
+    var tmp_7 = this;
+    var tmp0_safe_receiver_6 = opts;
+    var tmp1_elvis_lhs_6 = tmp0_safe_receiver_6 == null ? null : tmp0_safe_receiver_6.continuationIndent;
+    var tmp_8;
+    if (tmp1_elvis_lhs_6 == null) {
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp$ret$0;
+        $l$block: {
+          var tmp0_floor_0 = this.tabSize_1 / 2.0;
+          tmp$ret$0 = Math.floor(tmp0_floor_0);
+          break $l$block;
+        }
+        var tmp1_max_0 = numberToInt(tmp$ret$0);
+        tmp$ret$1 = Math.max(1, tmp1_max_0);
+        break $l$block_0;
+      }
+      tmp_8 = tmp$ret$1;
+    } else {
+      tmp_8 = tmp1_elvis_lhs_6;
+    }
+    tmp_7.continuationIndent_1 = tmp_8;
+    var tmp_9 = this;
+    var tmp0_safe_receiver_7 = opts;
+    var tmp1_elvis_lhs_7 = tmp0_safe_receiver_7 == null ? null : tmp0_safe_receiver_7.spaceBetweenByteStingBrackets;
+    tmp_9.spaceBetweenByteStingBrackets_1 = tmp1_elvis_lhs_7 == null ? false : tmp1_elvis_lhs_7;
+    var tmp_10 = this;
+    var tmp$ret$2;
+    $l$block_1: {
+      var tmp0_safe_receiver_8 = opts;
+      var tmp1_elvis_lhs_8 = tmp0_safe_receiver_8 == null ? null : tmp0_safe_receiver_8.minBlankLines;
+      var tmp0_max_0 = tmp1_elvis_lhs_8 == null ? 0 : tmp1_elvis_lhs_8;
+      tmp$ret$2 = Math.max(0, tmp0_max_0);
+      break $l$block_1;
+    }
+    tmp_10.minBlankLines_1 = tmp$ret$2;
+    var tmp_11 = this;
+    var tmp0_safe_receiver_9 = opts;
+    var tmp1_elvis_lhs_9 = tmp0_safe_receiver_9 == null ? null : tmp0_safe_receiver_9.newLineChar;
+    tmp_11.newLineChar_1 = tmp1_elvis_lhs_9 == null ? '\r\n' : tmp1_elvis_lhs_9;
+  }
+  CaosFormatterOptionsImpl.prototype._get_variant__876436268_eht2jw_k$ = function () {
+    return this.variant_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_tabSize__1207648411_jz03h7_k$ = function () {
+    return this.tabSize_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_insertSpaces__1511147973_ozp58l_k$ = function () {
+    return this.insertSpaces_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_trimTrailingWhitespace__1553967344_pp6wvk_k$ = function () {
+    return this.trimTrailingWhitespace_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_insertFinalNewline__2680491476_qp7tik_k$ = function () {
+    return this.insertFinalNewline_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_trimFinalNewlines__963031486_fxd3um_k$ = function () {
+    return this.trimFinalNewlines_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_keepSameLine__3992418572_504o38_k$ = function () {
+    return this.keepSameLine_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_maximumEmptyLines__2201756063_ym8s4h_k$ = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_getValue_0 = maximumEmptyLines$factory();
+      tmp$ret$0 = this.maximumEmptyLines$delegate_1._get_value__3683422336_a43j40_k$();
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  CaosFormatterOptionsImpl.prototype._get_indentComments__2971169611_lw5ktx_k$ = function () {
+    return this.indentComments_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_continuationIndent__1321786920_luyhbc_k$ = function () {
+    return this.continuationIndent_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_spaceBetweenByteStingBrackets__169254255_2srpf3_k$ = function () {
+    return this.spaceBetweenByteStingBrackets_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_minBlankLines__1398319732_n4iues_k$ = function () {
+    return this.minBlankLines_1;
+  };
+  CaosFormatterOptionsImpl.prototype._get_newLineChar__136319911_295t47_k$ = function () {
+    return this.newLineChar_1;
+  };
+  CaosFormatterOptionsImpl.$metadata$ = {
+    simpleName: 'CaosFormatterOptionsImpl',
+    kind: 'class',
+    interfaces: []
+  };
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'tabSize', {
+    configurable: true,
+    get: function () {
+      return this._get_tabSize__1207648411_jz03h7_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'insertSpaces', {
+    configurable: true,
+    get: function () {
+      return this._get_insertSpaces__1511147973_ozp58l_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'trimTrailingWhitespace', {
+    configurable: true,
+    get: function () {
+      return this._get_trimTrailingWhitespace__1553967344_pp6wvk_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'insertFinalNewline', {
+    configurable: true,
+    get: function () {
+      return this._get_insertFinalNewline__2680491476_qp7tik_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'trimFinalNewlines', {
+    configurable: true,
+    get: function () {
+      return this._get_trimFinalNewlines__963031486_fxd3um_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'keepSameLine', {
+    configurable: true,
+    get: function () {
+      return this._get_keepSameLine__3992418572_504o38_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'maximumEmptyLines', {
+    configurable: true,
+    get: function () {
+      return this._get_maximumEmptyLines__2201756063_ym8s4h_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'indentComments', {
+    configurable: true,
+    get: function () {
+      return this._get_indentComments__2971169611_lw5ktx_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'continuationIndent', {
+    configurable: true,
+    get: function () {
+      return this._get_continuationIndent__1321786920_luyhbc_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'spaceBetweenByteStingBrackets', {
+    configurable: true,
+    get: function () {
+      return this._get_spaceBetweenByteStingBrackets__169254255_2srpf3_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'minBlankLines', {
+    configurable: true,
+    get: function () {
+      return this._get_minBlankLines__1398319732_n4iues_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsImpl.prototype, 'newLineChar', {
+    configurable: true,
+    get: function () {
+      return this._get_newLineChar__136319911_295t47_k$();
+    }
+  });
+  function CaosFormatterOptionsEmpty_init_$Init$(initialize, $mask0, $marker, $this) {
+    if (!(($mask0 & 1) === 0))
+      initialize = null;
+    CaosFormatterOptionsEmpty.call($this, initialize);
+    return $this;
+  }
+  function CaosFormatterOptionsEmpty_init_$Create$(initialize, $mask0, $marker) {
+    return CaosFormatterOptionsEmpty_init_$Init$(initialize, $mask0, $marker, Object.create(CaosFormatterOptionsEmpty.prototype));
+  }
+  function CaosFormatterOptionsEmpty(initialize) {
+    this.tabSize_1 = 4;
+    this.insertSpaces_1 = true;
+    this.trimTrailingWhitespace_1 = null;
+    this.insertFinalNewline_1 = null;
+    this.trimFinalNewlines_1 = null;
+    this.keepSameLine_1 = null;
+    this.maximumEmptyLines_1 = null;
+    this.indentComments_1 = null;
+    this.continuationIndent_1 = null;
+    this.spaceBetweenByteStingBrackets_1 = null;
+    this.minBlankLines_1 = null;
+    this.newLineChar_1 = null;
+    if (!(initialize == null)) {
+      initialize(this);
+    }
+  }
+  CaosFormatterOptionsEmpty.prototype._set_tabSize__2756641039_qmal35_k$ = function (_set____804775014) {
+    this.tabSize_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_tabSize__1207648411_jz03h7_k$ = function () {
+    return this.tabSize_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_insertSpaces__570995153_gh5r0o_k$ = function (_set____804775014) {
+    this.insertSpaces_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_insertSpaces__1511147973_ozp58l_k$ = function () {
+    return this.insertSpaces_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_trimTrailingWhitespace__208433660_t2xrzk_k$ = function (_set____804775014) {
+    this.trimTrailingWhitespace_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_trimTrailingWhitespace__1553967344_pp6wvk_k$ = function () {
+    return this.trimTrailingWhitespace_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_insertFinalNewline__437796064_oondn8_k$ = function (_set____804775014) {
+    this.insertFinalNewline_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_insertFinalNewline__2680491476_qp7tik_k$ = function () {
+    return this.insertFinalNewline_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_trimFinalNewlines__2276159794_a1afoa_k$ = function (_set____804775014) {
+    this.trimFinalNewlines_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_trimFinalNewlines__963031486_fxd3um_k$ = function () {
+    return this.trimFinalNewlines_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_keepSameLine__3052265752_7vyz2k_k$ = function (_set____804775014) {
+    this.keepSameLine_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_keepSameLine__3992418572_504o38_k$ = function () {
+    return this.keepSameLine_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_maximumEmptyLines__3514884371_qmvnmo_k$ = function (_set____804775014) {
+    this.maximumEmptyLines_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_maximumEmptyLines__2201756063_ym8s4h_k$ = function () {
+    return this.maximumEmptyLines_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_indentComments__1427441751_esj9sb_k$ = function (_set____804775014) {
+    this.indentComments_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_indentComments__2971169611_lw5ktx_k$ = function () {
+    return this.indentComments_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_continuationIndent__3374058804_zfdoox_k$ = function (_set____804775014) {
+    this.continuationIndent_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_continuationIndent__1321786920_luyhbc_k$ = function () {
+    return this.continuationIndent_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_spaceBetweenByteStingBrackets__3885223651_s0pih_k$ = function (_set____804775014) {
+    this.spaceBetweenByteStingBrackets_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_spaceBetweenByteStingBrackets__169254255_2srpf3_k$ = function () {
+    return this.spaceBetweenByteStingBrackets_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_minBlankLines__2318353384_rkkkqz_k$ = function (_set____804775014) {
+    this.minBlankLines_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_minBlankLines__1398319732_n4iues_k$ = function () {
+    return this.minBlankLines_1;
+  };
+  CaosFormatterOptionsEmpty.prototype._set_newLineChar__2599844379_yz7kvg_k$ = function (_set____804775014) {
+    this.newLineChar_1 = _set____804775014;
+  };
+  CaosFormatterOptionsEmpty.prototype._get_newLineChar__136319911_295t47_k$ = function () {
+    return this.newLineChar_1;
+  };
+  CaosFormatterOptionsEmpty.$metadata$ = {
+    simpleName: 'CaosFormatterOptionsEmpty',
+    kind: 'class',
+    interfaces: []
+  };
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'tabSize', {
+    configurable: true,
+    get: function () {
+      return this._get_tabSize__1207648411_jz03h7_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'insertSpaces', {
+    configurable: true,
+    get: function () {
+      return this._get_insertSpaces__1511147973_ozp58l_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'trimTrailingWhitespace', {
+    configurable: true,
+    get: function () {
+      return this._get_trimTrailingWhitespace__1553967344_pp6wvk_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'insertFinalNewline', {
+    configurable: true,
+    get: function () {
+      return this._get_insertFinalNewline__2680491476_qp7tik_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'trimFinalNewlines', {
+    configurable: true,
+    get: function () {
+      return this._get_trimFinalNewlines__963031486_fxd3um_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'keepSameLine', {
+    configurable: true,
+    get: function () {
+      return this._get_keepSameLine__3992418572_504o38_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'maximumEmptyLines', {
+    configurable: true,
+    get: function () {
+      return this._get_maximumEmptyLines__2201756063_ym8s4h_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'indentComments', {
+    configurable: true,
+    get: function () {
+      return this._get_indentComments__2971169611_lw5ktx_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'continuationIndent', {
+    configurable: true,
+    get: function () {
+      return this._get_continuationIndent__1321786920_luyhbc_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'spaceBetweenByteStingBrackets', {
+    configurable: true,
+    get: function () {
+      return this._get_spaceBetweenByteStingBrackets__169254255_2srpf3_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'minBlankLines', {
+    configurable: true,
+    get: function () {
+      return this._get_minBlankLines__1398319732_n4iues_k$();
+    }
+  });
+  Object.defineProperty(CaosFormatterOptionsEmpty.prototype, 'newLineChar', {
+    configurable: true,
+    get: function () {
+      return this._get_newLineChar__136319911_295t47_k$();
+    }
+  });
+  function maximumEmptyLines$factory() {
+    return getPropertyCallableRef('maximumEmptyLines', 1, KProperty1, function (receiver) {
+      return receiver._get_maximumEmptyLines__2201756063_ym8s4h_k$();
+    }, null);
+  }
+  function FormatResult(formattedText, oldText, edits) {
+    this.formattedText_1 = formattedText;
+    this.oldText_1 = oldText;
+    this.edits_1 = edits;
+  }
+  FormatResult.prototype._get_formattedText__3122759144_jdwhlk_k$ = function () {
+    return this.formattedText_1;
+  };
+  FormatResult.prototype._get_oldText__2314198429_wrar1f_k$ = function () {
+    return this.oldText_1;
+  };
+  FormatResult.prototype._get_edits__3199407432_i49neg_k$ = function () {
+    return this.edits_1;
+  };
+  FormatResult.prototype.equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof FormatResult))
+      return false;
+    else {
+    }
+    if (!(this.formattedText_1 === other.formattedText_1))
+      return false;
+    if (!(this.oldText_1 === other.oldText_1))
+      return false;
+    if (!contentEquals(this.edits_1, other.edits_1))
+      return false;
+    return true;
+  };
+  FormatResult.prototype.hashCode = function () {
+    var result = getStringHashCode(this.formattedText_1);
+    result = imul(31, result) + getStringHashCode(this.oldText_1) | 0;
+    result = imul(31, result) + contentHashCode(this.edits_1) | 0;
+    return result;
+  };
+  FormatResult.prototype.component1 = function () {
+    return this.formattedText_1;
+  };
+  FormatResult.prototype.component2 = function () {
+    return this.oldText_1;
+  };
+  FormatResult.prototype.component3 = function () {
+    return this.edits_1;
+  };
+  FormatResult.prototype.copy = function (formattedText, oldText, edits) {
+    return this.copy_n7y2g0_k$(formattedText === void 1 ? this.formattedText_1 : formattedText, oldText === void 1 ? this.oldText_1 : oldText, edits === void 1 ? this.edits_1 : edits);
+  };
+  FormatResult.prototype.copy_n7y2g0_k$ = function (formattedText, oldText, edits) {
+    return new FormatResult(formattedText, oldText, edits);
+  };
+  FormatResult.prototype.copy$default_87kb0w_k$ = function (formattedText, oldText, edits, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      formattedText = this.formattedText_1;
+    if (!(($mask0 & 2) === 0))
+      oldText = this.oldText_1;
+    if (!(($mask0 & 4) === 0))
+      edits = this.edits_1;
+    return this.copy_n7y2g0_k$(formattedText, oldText, edits);
+  };
+  FormatResult.prototype.toString = function () {
+    return 'FormatResult(formattedText=' + this.formattedText_1 + ', oldText=' + this.oldText_1 + ', edits=' + toString(this.edits_1) + ')';
+  };
+  FormatResult.$metadata$ = {
+    simpleName: 'FormatResult',
+    kind: 'class',
+    interfaces: []
+  };
+  Object.defineProperty(FormatResult.prototype, 'formattedText', {
+    configurable: true,
+    get: FormatResult.prototype._get_formattedText__3122759144_jdwhlk_k$
+  });
+  Object.defineProperty(FormatResult.prototype, 'oldText', {
+    configurable: true,
+    get: FormatResult.prototype._get_oldText__2314198429_wrar1f_k$
+  });
+  Object.defineProperty(FormatResult.prototype, 'edits', {
+    configurable: true,
+    get: FormatResult.prototype._get_edits__3199407432_i49neg_k$
+  });
+  function format(variant, text, options) {
+    return format_0(variant, text, options === void 1 ? null : options);
+  }
+  function format_0(variant, text, options) {
+    return Companion_getInstance_15().format_51l2aj_k$(variant, text, options);
+  }
+  function format$default(variant, text, options, $mask0, $handler) {
+    if (!(($mask0 & 4) === 0))
+      options = null;
+    return format_0(variant, text, options);
+  }
+  function FormatException_init_$Init$(message, throwable, $mask0, $marker, $this) {
+    if (!(($mask0 & 2) === 0))
+      throwable = null;
+    FormatException.call($this, message, throwable);
+    return $this;
+  }
+  function FormatException_init_$Create$(message, throwable, $mask0, $marker) {
+    var tmp = FormatException_init_$Init$(message, throwable, $mask0, $marker, Object.create(FormatException.prototype));
+    captureStack(tmp, FormatException_init_$Create$);
+    return tmp;
+  }
+  function FormatException(message, throwable) {
+    var throwable_0 = throwable === void 1 ? null : throwable;
+    CaosException.call(this, message, throwable_0);
+    captureStack(this, FormatException);
+  }
+  FormatException.$metadata$ = {
+    simpleName: 'FormatException',
+    kind: 'class',
+    interfaces: []
+  };
+  function _get_variant__876436268_1($this) {
+    return $this.variant_1;
+  }
+  function _get_opts__805546539($this) {
+    return $this.opts_1;
+  }
+  function format_1($this, text) {
+    var result = parseCaos$default_1($this.variant_1, text, null, 4, null);
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp0_isNotEmpty_0 = result.errors;
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = tmp0_isNotEmpty_0.length === 0;
+        break $l$block;
+      }
+      tmp$ret$1 = !tmp$ret$0;
+      break $l$block_0;
+    }
+    if (tmp$ret$1) {
+      throw FormatException_init_$Create$('Cannot format CAOS code with known errors', null, 2, null);
+    } else {
+    }
+    $this.state_1 = new FormatterState($this.opts_1, result, toList(getWhitespace(text)));
+    if (result.items.length > 1 ? $this._get_state__3614753120_b8zcm8_k$()._get_whiteSpaceItems__2294759694_x2ve2a_k$().isEmpty_y1axqb_k$() : false) {
+      var tmp = Log_getInstance();
+      Companion_getInstance_15();
+      tmp.warn_3995e5_k$('Formatter', 'No whitespace found between items. Text: <' + text + '>');
+    }
+    loop($this);
+    var tmp_0 = $this._get_state__3614753120_b8zcm8_k$().formatted_tykou4_k$();
+    var tmp$ret$2;
+    $l$block_1: {
+      var tmp1_toTypedArray_0 = $this._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$();
+      tmp$ret$2 = copyToArray(tmp1_toTypedArray_0);
+      break $l$block_1;
+    }
+    return new FormatResult(tmp_0, text, tmp$ret$2);
+  }
+  function loop($this) {
+    while ($this._get_state__3614753120_b8zcm8_k$()._get_hasNext__2250718212_xt3cos_k$()) {
+      var tmp0_elvis_lhs = $this._get_state__3614753120_b8zcm8_k$().next_20eer_k$();
+      var tmp;
+      if (tmp0_elvis_lhs == null) {
+        return Unit_getInstance();
+      } else {
+        tmp = tmp0_elvis_lhs;
+      }
+      var item = tmp;
+      if (_get_startLine__1396177307(item) > $this._get_state__3614753120_b8zcm8_k$()._get_lastLine__3477272929_diu10f_k$()) {
+        $this._get_state__3614753120_b8zcm8_k$()._set_continuations__407641257_hkqpgn_k$(computeContinuationsForFormatter($this._get_state__3614753120_b8zcm8_k$(), item));
+      }
+      addNewLineIf($this, item);
+      formatItem($this, item);
+      if ($this._get_state__3614753120_b8zcm8_k$()._get_continuations__3782574901_8h2ci3_k$() === 0) {
+        $this._get_state__3614753120_b8zcm8_k$()._set_eqIndents__640413226_z32152_k$(0);
+      }
+      $this._get_state__3614753120_b8zcm8_k$()._set_lastLine__4251404141_n4xrkt_k$(_get_endLine__3833692546(item));
+    }
+  }
+  function formatItem($this, item) {
+    var tmp0_subject = item;
+    if (tmp0_subject instanceof Spaces) {
+      formatSpace($this, item);
+    } else {
+      if (tmp0_subject instanceof NewLine) {
+        formatNewLine($this, item);
+      } else {
+        if (tmp0_subject instanceof IndexedVar) {
+          formatIndexedVariable($this, item);
+          $this._get_state__3614753120_b8zcm8_k$()._set_newlineLast__603996923_4h47ea_k$(false);
+        } else {
+          if (tmp0_subject instanceof CommandToken) {
+            formatCommandToken($this, item);
+            $this._get_state__3614753120_b8zcm8_k$()._set_newlineLast__603996923_4h47ea_k$(false);
+          } else {
+            if (tmp0_subject instanceof CompoundCommandToken) {
+              formatCommandToken_0($this, item);
+              $this._get_state__3614753120_b8zcm8_k$()._set_newlineLast__603996923_4h47ea_k$(false);
+            } else {
+              if (tmp0_subject instanceof ByteString) {
+                formatByteString($this, item);
+                $this._get_state__3614753120_b8zcm8_k$()._set_newlineLast__603996923_4h47ea_k$(false);
+              } else {
+                if (tmp0_subject instanceof Comment) {
+                  formatComment($this, item);
+                  $this._get_state__3614753120_b8zcm8_k$()._set_newlineLast__603996923_4h47ea_k$(false);
+                } else {
+                  if (tmp0_subject instanceof Caos2Comment) {
+                    formatCaos2($this, item);
+                    $this._get_state__3614753120_b8zcm8_k$()._set_newlineLast__603996923_4h47ea_k$(false);
+                  } else {
+                    var tmp;
+                    if (tmp0_subject instanceof EqJoin) {
+                      tmp = true;
+                    } else {
+                      {
+                        tmp = tmp0_subject instanceof EqOp;
+                      }
+                    }
+                    if (tmp) {
+                      var tmp_0;
+                      if (!(_get_startLine__1396177307(item) === $this._get_state__3614753120_b8zcm8_k$()._get_lastLine__3477272929_diu10f_k$())) {
+                        tmp_0 = true;
+                      } else {
+                        var tmp_1 = _get_startLine__1396177307(item);
+                        var tmp_2 = $this._get_state__3614753120_b8zcm8_k$();
+                        var tmp1_safe_receiver = tmp_2.peak$default_41q50d_k$(0, 1, null);
+                        tmp_0 = !(tmp_1 === (tmp1_safe_receiver == null ? null : _get_startLine__1396177307(tmp1_safe_receiver)));
+                      }
+                      if (tmp_0) {
+                        var tmp2_this = $this._get_state__3614753120_b8zcm8_k$();
+                        var tmp3 = tmp2_this._get_eqIndents__2412149430_v4zbka_k$();
+                        tmp2_this._set_eqIndents__640413226_z32152_k$(tmp3 + 1 | 0);
+                        Unit_getInstance();
+                      } else {
+                      }
+                      formatLiteral($this, item);
+                      $this._get_state__3614753120_b8zcm8_k$()._set_newlineLast__603996923_4h47ea_k$(false);
+                    } else {
+                      if (tmp0_subject instanceof AutocompleteHint) {
+                        $this._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(item.textRange.start, item.textRange.end), ''));
+                        Unit_getInstance();
+                        $this._get_state__3614753120_b8zcm8_k$()._set_newlineLast__603996923_4h47ea_k$(false);
+                      } else {
+                        {
+                          formatLiteral($this, item);
+                          $this._get_state__3614753120_b8zcm8_k$()._set_newlineLast__603996923_4h47ea_k$(false);
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  function Companion_13() {
+    Companion_instance_13 = this;
+    this.TAG_1 = 'Formatter';
+    this.blockCommands_1 = mapOf([to(token('doif'), listOf([token('elif'), token('else'), token('endi')])), to(token('elif'), listOf([token('elif'), token('else'), token('endi')])), to(token('else'), listOf_0(token('endi'))), to(token('enum'), listOf_0(token('next'))), to(token('etch'), listOf_0(token('next'))), to(token('esee'), listOf_0(token('next'))), to(token('epas'), listOf_0(token('next'))), to(token('econ'), listOf_0(token('next'))), to(token('escn'), listOf_0(token('nscn'))), to(token('reps'), listOf_0(token('repe'))), to(token('loop'), listOf([token('ever'), token('untl')]))]);
+    this.blockStarts_1 = this.blockCommands_1._get_keys__801529559_d97k5z_k$();
+    this.ENDM_1 = token('endm');
+    this.ENDM_ARRAY_1 = listOf_0(this.ENDM_1);
+  }
+  Companion_13.prototype._get_TAG__856418391_e5w0nr_k$ = function () {
+    return this.TAG_1;
+  };
+  Companion_13.prototype._get_blockCommands__1489314108_omp64c_k$ = function () {
+    return this.blockCommands_1;
+  };
+  Companion_13.prototype._get_blockStarts__3299214867_ggufhp_k$ = function () {
+    return this.blockStarts_1;
+  };
+  Companion_13.prototype._get_ENDM__765698457_cnvkpl_k$ = function () {
+    return this.ENDM_1;
+  };
+  Companion_13.prototype._get_ENDM_ARRAY__3582114655_bsewm9_k$ = function () {
+    return this.ENDM_ARRAY_1;
+  };
+  Companion_13.prototype.format_51l2aj_k$ = function (variant, text, options) {
+    var formatter = new Formatter(variant, options);
+    return format_1(formatter, text);
+  };
+  Companion_13.prototype.format$default_7lp9ca_k$ = function (variant, text, options, $mask0, $handler) {
+    if (!(($mask0 & 4) === 0))
+      options = null;
+    return this.format_51l2aj_k$(variant, text, options);
+  };
+  Companion_13.$metadata$ = {
+    simpleName: 'Companion',
+    kind: 'object',
+    interfaces: []
+  };
+  var Companion_instance_13;
+  function Companion_getInstance_15() {
+    if (Companion_instance_13 == null)
+      new Companion_13();
+    return Companion_instance_13;
+  }
+  function Formatter(variant, opts) {
+    Companion_getInstance_15();
+    this.variant_1 = variant;
+    this.opts_1 = new CaosFormatterOptionsImpl(this.variant_1, opts);
+  }
+  Formatter.prototype._set_state__1256591060_nodh97_k$ = function (_set____804775014) {
+    this.state_1 = _set____804775014;
+  };
+  Formatter.prototype._get_state__3614753120_b8zcm8_k$ = function () {
+    var tmp = this.state_1;
+    if (!(tmp == null))
+      return tmp;
+    else {
+      throwUninitializedPropertyAccessException('state');
+    }
+  };
+  Formatter.prototype._get_newLine__3485471709_ddyasj_k$ = function () {
+    return this._get_state__3614753120_b8zcm8_k$()._get_newLineChar__136319911_295t47_k$();
+  };
+  Formatter.prototype.pushWaiting_thrpqb_k$ = function (token) {
+    if (Companion_getInstance_15().blockStarts_1.contains_2ehdt1_k$(token)) {
+      this._get_state__3614753120_b8zcm8_k$()._get_waiting__2371980900_vsw9ss_k$().add_ydlf05_k$(0, ensureNotNull(Companion_getInstance_15().blockCommands_1.get_1mhr4y_k$(token)));
+    }
+  };
+  Formatter.prototype.popWaiting_1emhro_k$ = function (token) {
+    var tmp0_safe_receiver = firstOrNull(this._get_state__3614753120_b8zcm8_k$()._get_waiting__2371980900_vsw9ss_k$());
+    if ((tmp0_safe_receiver == null ? null : tmp0_safe_receiver.contains_2ehdt1_k$(token)) === true) {
+      this._get_state__3614753120_b8zcm8_k$()._get_waiting__2371980900_vsw9ss_k$().removeAt_qvpkxi_k$(0);
+      Unit_getInstance();
+    } else {
+    }
+  };
+  Formatter.$metadata$ = {
+    simpleName: 'Formatter',
+    kind: 'class',
+    interfaces: []
+  };
+  function _get_TAG__856418391_3($this) {
+    return $this.TAG_1;
+  }
+  function _get_opts__805546539_0($this) {
+    return $this.opts_1;
+  }
+  function _get_parseResult__786797281($this) {
+    return $this.parseResult_1;
+  }
+  function _get_itemsCount__1218061628($this) {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_getValue_0 = itemsCount$factory();
+      tmp$ret$0 = $this.itemsCount$delegate_1._get_value__3683422336_a43j40_k$();
+      break $l$block;
+    }
+    return tmp$ret$0;
+  }
+  function _get_scriptEndIndices__3195512884($this) {
+    return $this.scriptEndIndices_1;
+  }
+  function _get_continuationTab__1511260659($this) {
+    return $this.continuationTab_1;
+  }
+  function getCommandRanges($this) {
+    var eqStatements = toList($this.parseResult_1.equalityStatements);
+    var tmp$ret$0;
+    $l$block: {
+      tmp$ret$0 = ArrayList_init_$Create$_0();
+      break $l$block;
+    }
+    var eqStatementBlocks = tmp$ret$0;
+    var start = null;
+    var eqIndex = 0;
+    while (eqIndex < eqStatements._get_size__809037418_ddoh9m_k$()) {
+      var tmp0 = eqIndex;
+      eqIndex = tmp0 + 1 | 0;
+      var current = eqStatements.get_fkrdnv_k$(tmp0).textRange;
+      var tmp1_safe_receiver = getOrNull_1(eqStatements, eqIndex);
+      var next = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.textRange;
+      if (start == null) {
+        start = current;
+      }
+      var tmp = start.start.line;
+      var tmp2_safe_receiver = next;
+      var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.start;
+      if (!(tmp === (tmp3_safe_receiver == null ? null : tmp3_safe_receiver.line))) {
+        eqStatementBlocks.add_1j60pz_k$(numberRangeToNumber(start.startIndex, current.endIndex));
+        Unit_getInstance();
+        start = next;
+      } else {
+      }
+    }
+    var requiresCondition = listOf([token('doif'), token('elif'), token('asrt')]);
+    var tmp$ret$1;
+    $l$block_0: {
+      tmp$ret$1 = ArrayList_init_$Create$_0();
+      break $l$block_0;
+    }
+    var commandCallRanges = tmp$ret$1;
+    var inductionVariable = 0;
+    var last_0 = $this._get_commandCalls__3729965377_9cdy9r_k$()._get_size__809037418_ddoh9m_k$() - 1 | 0;
+    if (inductionVariable <= last_0)
+      do {
+        var i = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        var command = $this._get_commandCalls__3729965377_9cdy9r_k$().get_fkrdnv_k$(i);
+        if (requiresCondition.contains_2ehdt1_k$(last(command.tokens).token)) {
+          var tmp5_safe_receiver = getOrNull_1($this._get_commandCalls__3729965377_9cdy9r_k$(), i + 1 | 0);
+          var next_0 = tmp5_safe_receiver == null ? null : tmp5_safe_receiver.textRange;
+          var tmp_0 = command.textRange.startIndex;
+          var tmp6_safe_receiver = next_0;
+          var tmp7_elvis_lhs = tmp6_safe_receiver == null ? null : tmp6_safe_receiver.endIndex;
+          var commandRange = until(tmp_0, tmp7_elvis_lhs == null ? IntCompanionObject_getInstance()._get_MAX_VALUE__3201573499_i2z81x_k$() : tmp7_elvis_lhs);
+          var tmp$ret$4;
+          $l$block_3: {
+            var tmp$ret$3;
+            $l$block_2: {
+              var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
+              var tmp0_iterator_1_2 = eqStatements.iterator_jk1svi_k$();
+              while (tmp0_iterator_1_2.hasNext_bitz1p_k$()) {
+                var element_2_3 = tmp0_iterator_1_2.next_20eer_k$();
+                var tmp$ret$2;
+                $l$block_1: {
+                  var containsLower = commandRange._get_first__3232921377_hkbbvj_k$();
+                  var containsUpper = commandRange._get_last__802328181_d9oodx_k$();
+                  var containsArg = element_2_3.textRange.startIndex;
+                  tmp$ret$2 = containsLower <= containsArg ? containsArg <= containsUpper : false;
+                  break $l$block_1;
+                }
+                if (tmp$ret$2) {
+                  tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+                  Unit_getInstance();
+                } else {
+                }
+              }
+              tmp$ret$3 = tmp0_filterTo_0_1;
+              break $l$block_2;
+            }
+            tmp$ret$4 = tmp$ret$3;
+            break $l$block_3;
+          }
+          var eqs = tmp$ret$4;
+          var tmp_1 = command.textRange.startIndex;
+          var tmp8_safe_receiver = lastOrNull(eqs);
+          var tmp9_elvis_lhs = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.textRange;
+          commandCallRanges.add_1j60pz_k$(numberRangeToNumber(tmp_1, (tmp9_elvis_lhs == null ? command.textRange : tmp9_elvis_lhs).endIndex));
+          Unit_getInstance();
+        } else {
+          commandCallRanges.add_1j60pz_k$(numberRangeToNumber(command.textRange.startIndex, command.textRange.endIndex));
+          Unit_getInstance();
+        }
+      }
+       while (inductionVariable <= last_0);
+    var tmp$ret$6;
+    $l$block_5: {
+      var tmp$ret$5;
+      $l$block_4: {
+        var tmp_2 = FormatterState$getCommandRanges$lambda();
+        tmp$ret$5 = new sam$kotlin_Comparator$0_10(tmp_2);
+        break $l$block_4;
+      }
+      tmp$ret$6 = sortedWith(commandCallRanges, tmp$ret$5);
+      break $l$block_5;
+    }
+    return toMutableList(tmp$ret$6);
+  }
+  function Companion_14() {
+    Companion_instance_14 = this;
+    this.TAG_1 = 'FormatterState';
+  }
+  Companion_14.$metadata$ = {
+    simpleName: 'Companion',
+    kind: 'object',
+    interfaces: []
+  };
+  var Companion_instance_14;
+  function Companion_getInstance_16() {
+    if (Companion_instance_14 == null)
+      new Companion_14();
+    return Companion_instance_14;
+  }
+  function sam$kotlin_Comparator$0_7(function_0) {
+    this.function_1 = function_0;
+  }
+  sam$kotlin_Comparator$0_7.prototype.compare_6tbigh_k$ = function (a, b) {
+    return this.function_1(a, b);
+  };
+  sam$kotlin_Comparator$0_7.prototype.compare = function (a, b) {
+    return this.compare_6tbigh_k$(a, b);
+  };
+  sam$kotlin_Comparator$0_7.$metadata$ = {
+    simpleName: 'sam$kotlin_Comparator$0',
+    kind: 'class',
+    interfaces: [Comparator]
+  };
+  function sam$kotlin_Comparator$0_8(function_0) {
+    this.function_1 = function_0;
+  }
+  sam$kotlin_Comparator$0_8.prototype.compare_6tbigh_k$ = function (a, b) {
+    return this.function_1(a, b);
+  };
+  sam$kotlin_Comparator$0_8.prototype.compare = function (a, b) {
+    return this.compare_6tbigh_k$(a, b);
+  };
+  sam$kotlin_Comparator$0_8.$metadata$ = {
+    simpleName: 'sam$kotlin_Comparator$0',
+    kind: 'class',
+    interfaces: [Comparator]
+  };
+  function sam$kotlin_Comparator$0_9(function_0) {
+    this.function_1 = function_0;
+  }
+  sam$kotlin_Comparator$0_9.prototype.compare_6tbigh_k$ = function (a, b) {
+    return this.function_1(a, b);
+  };
+  sam$kotlin_Comparator$0_9.prototype.compare = function (a, b) {
+    return this.compare_6tbigh_k$(a, b);
+  };
+  sam$kotlin_Comparator$0_9.$metadata$ = {
+    simpleName: 'sam$kotlin_Comparator$0',
+    kind: 'class',
+    interfaces: [Comparator]
+  };
+  function sam$kotlin_Comparator$0_10(function_0) {
+    this.function_1 = function_0;
+  }
+  sam$kotlin_Comparator$0_10.prototype.compare_6tbigh_k$ = function (a, b) {
+    return this.function_1(a, b);
+  };
+  sam$kotlin_Comparator$0_10.prototype.compare = function (a, b) {
+    return this.compare_6tbigh_k$(a, b);
+  };
+  sam$kotlin_Comparator$0_10.$metadata$ = {
+    simpleName: 'sam$kotlin_Comparator$0',
+    kind: 'class',
+    interfaces: [Comparator]
+  };
+  function FormatterState$itemsCount$delegate$lambda(this$0) {
+    return function () {
+      return this$0._get_items__3328574481_fzd5gv_k$()._get_size__809037418_ddoh9m_k$();
+    };
+  }
+  function FormatterState$commandCalls$delegate$lambda$lambda() {
+    return function (a, b) {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = a.textRange.startIndex;
+          break $l$block;
+        }
+        var tmp = tmp$ret$0;
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = b.textRange.startIndex;
+          break $l$block_0;
+        }
+        tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+        break $l$block_1;
+      }
+      return tmp$ret$2;
+    };
+  }
+  function FormatterState$commandCalls$delegate$lambda(this$0) {
+    return function () {
+      var tmp$ret$4;
+      $l$block_3: {
+        var tmp$ret$2;
+        $l$block_1: {
+          var tmp0_filter_0 = this$0.parseResult_1.commandCalls;
+          var tmp$ret$1;
+          $l$block_0: {
+            var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
+            var indexedObject = tmp0_filter_0;
+            var inductionVariable = 0;
+            var last = indexedObject.length;
+            while (inductionVariable < last) {
+              var element_2_3 = indexedObject[inductionVariable];
+              inductionVariable = inductionVariable + 1 | 0;
+              var tmp$ret$0;
+              $l$block: {
+                tmp$ret$0 = element_2_3.command.isCommand;
+                break $l$block;
+              }
+              if (tmp$ret$0) {
+                tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+                Unit_getInstance();
+              } else {
+              }
+            }
+            tmp$ret$1 = tmp0_filterTo_0_1;
+            break $l$block_0;
+          }
+          tmp$ret$2 = tmp$ret$1;
+          break $l$block_1;
+        }
+        var tmp1_sortedBy_0 = tmp$ret$2;
+        var tmp$ret$3;
+        $l$block_2: {
+          var tmp = FormatterState$commandCalls$delegate$lambda$lambda();
+          tmp$ret$3 = new sam$kotlin_Comparator$0_7(tmp);
+          break $l$block_2;
+        }
+        tmp$ret$4 = sortedWith(tmp1_sortedBy_0, tmp$ret$3);
+        break $l$block_3;
+      }
+      return tmp$ret$4;
+    };
+  }
+  function FormatterState$scriptEndIndices$lambda() {
+    return function (a, b) {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = a._get_first__3232921377_hkbbvj_k$();
+          break $l$block;
+        }
+        var tmp = tmp$ret$0;
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = b._get_first__3232921377_hkbbvj_k$();
+          break $l$block_0;
+        }
+        tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+        break $l$block_1;
+      }
+      return tmp$ret$2;
+    };
+  }
+  function FormatterState$items$delegate$lambda$lambda() {
+    return function (a, b) {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = a.textRange.startIndex;
+          break $l$block;
+        }
+        var tmp = tmp$ret$0;
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = b.textRange.startIndex;
+          break $l$block_0;
+        }
+        tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+        break $l$block_1;
+      }
+      return tmp$ret$2;
+    };
+  }
+  function FormatterState$items$delegate$lambda(this$0) {
+    return function () {
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp0_sortedBy_0 = plus_0(this$0.whiteSpaceItems_1, this$0.parseResult_1.items);
+        var tmp$ret$0;
+        $l$block: {
+          var tmp = FormatterState$items$delegate$lambda$lambda();
+          tmp$ret$0 = new sam$kotlin_Comparator$0_9(tmp);
+          break $l$block;
+        }
+        tmp$ret$1 = sortedWith(tmp0_sortedBy_0, tmp$ret$0);
+        break $l$block_0;
+      }
+      return tmp$ret$1;
+    };
+  }
+  function FormatterState$maximumEmptyLines$delegate$lambda(this$0) {
+    return function () {
+      var tmp;
+      var tmp0_elvis_lhs = this$0.opts_1._get_maximumEmptyLines__2201756063_ym8s4h_k$();
+      if ((tmp0_elvis_lhs == null ? -1 : tmp0_elvis_lhs) < 0) {
+        tmp = ShortCompanionObject_getInstance()._get_MAX_VALUE__3201573499_i2z81x_k$();
+      } else {
+        {
+          tmp = this$0.opts_1._get_maximumEmptyLines__2201756063_ym8s4h_k$();
+        }
+      }
+      return tmp;
+    };
+  }
+  function FormatterState$getCommandRanges$lambda() {
+    return function (a, b) {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = a._get_first__3232921377_hkbbvj_k$();
+          break $l$block;
+        }
+        var tmp = tmp$ret$0;
+        var tmp$ret$1;
+        $l$block_0: {
+          tmp$ret$1 = b._get_first__3232921377_hkbbvj_k$();
+          break $l$block_0;
+        }
+        tmp$ret$2 = compareValues(tmp, tmp$ret$1);
+        break $l$block_1;
+      }
+      return tmp$ret$2;
+    };
+  }
+  function FormatterState(opts, parseResult, whiteSpaceItems) {
+    Companion_getInstance_16();
+    this.opts_1 = opts;
+    this.parseResult_1 = parseResult;
+    this.whiteSpaceItems_1 = whiteSpaceItems;
+    var tmp = this;
+    var tmp$ret$0;
+    $l$block: {
+      tmp$ret$0 = ArrayList_init_$Create$_0();
+      break $l$block;
+    }
+    tmp.waiting_1 = tmp$ret$0;
+    this.lastLine_1 = -1;
+    this.out_1 = StringBuilder_init_$Create$();
+    var tmp_0 = this;
+    var tmp$ret$1;
+    $l$block_0: {
+      tmp$ret$1 = ArrayList_init_$Create$_0();
+      break $l$block_0;
+    }
+    tmp_0.edits_1 = tmp$ret$1;
+    var tmp_1 = this;
+    tmp_1.itemsCount$delegate_1 = lazy(FormatterState$itemsCount$delegate$lambda(this));
+    this.continuations_1 = 0;
+    var tmp_2 = this;
+    tmp_2.commandCalls$delegate_1 = lazy(FormatterState$commandCalls$delegate$lambda(this));
+    this.eqIndents_1 = 0;
+    this.index_1 = -1;
+    this.newlineLast_1 = false;
+    var tmp_3 = this;
+    var tmp$ret$6;
+    $l$block_5: {
+      var tmp$ret$4;
+      $l$block_3: {
+        var tmp0_map_0 = this.parseResult_1.scripts;
+        var tmp$ret$3;
+        $l$block_2: {
+          var tmp0_mapTo_0_1 = ArrayList_init_$Create$(tmp0_map_0.length);
+          var indexedObject = tmp0_map_0;
+          var inductionVariable = 0;
+          var last = indexedObject.length;
+          while (inductionVariable < last) {
+            var item_2_3 = indexedObject[inductionVariable];
+            inductionVariable = inductionVariable + 1 | 0;
+            var tmp$ret$2;
+            $l$block_1: {
+              var tmp_4 = lastOrNull_0(item_2_3.items);
+              var tmp0_safe_receiver_6 = tmp_4 instanceof CommandToken ? tmp_4 : null;
+              var endm_5 = (tmp0_safe_receiver_6 == null ? null : tmp0_safe_receiver_6.token) === Companion_getInstance_15()._get_ENDM__765698457_cnvkpl_k$();
+              tmp$ret$2 = new Pair(item_2_3.textRange.endIndex, endm_5);
+              break $l$block_1;
+            }
+            tmp0_mapTo_0_1.add_1j60pz_k$(tmp$ret$2);
+            Unit_getInstance();
+          }
+          tmp$ret$3 = tmp0_mapTo_0_1;
+          break $l$block_2;
+        }
+        tmp$ret$4 = tmp$ret$3;
+        break $l$block_3;
+      }
+      var tmp1_sortedBy_0 = tmp$ret$4;
+      var tmp$ret$5;
+      $l$block_4: {
+        var tmp_5 = FormatterState$scriptEndIndices$lambda();
+        tmp$ret$5 = new sam$kotlin_Comparator$0_8(tmp_5);
+        break $l$block_4;
+      }
+      tmp$ret$6 = sortedWith(tmp1_sortedBy_0, tmp$ret$5);
+      break $l$block_5;
+    }
+    tmp_3.scriptEndIndices_1 = toMutableList(tmp$ret$6);
+    var tmp_6 = this;
+    tmp_6.items$delegate_1 = lazy(FormatterState$items$delegate$lambda(this));
+    this.variant_1 = this.opts_1._get_variant__876436268_eht2jw_k$();
+    var tmp_7 = this;
+    var tmp_8;
+    if (this.opts_1._get_insertSpaces__1511147973_ozp58l_k$()) {
+      tmp_8 = repeat(' ', this.opts_1._get_tabSize__1207648411_jz03h7_k$());
+    } else {
+      tmp_8 = '\t';
+    }
+    tmp_7.tab_1 = tmp_8;
+    var tmp_9 = this;
+    var tmp_10;
+    if (this.opts_1._get_insertSpaces__1511147973_ozp58l_k$()) {
+      tmp_10 = repeat(' ', this.opts_1._get_continuationIndent__1321786920_luyhbc_k$() === 0 ? this.opts_1._get_tabSize__1207648411_jz03h7_k$() : this.opts_1._get_continuationIndent__1321786920_luyhbc_k$());
+    } else {
+      tmp_10 = repeat('\t', this.opts_1._get_continuationIndent__1321786920_luyhbc_k$() === 0 ? this.opts_1._get_tabSize__1207648411_jz03h7_k$() : this.opts_1._get_continuationIndent__1321786920_luyhbc_k$());
+    }
+    tmp_9.continuationTab_1 = tmp_10;
+    var tmp_11 = this;
+    tmp_11.maximumEmptyLines$delegate_1 = lazy(FormatterState$maximumEmptyLines$delegate$lambda(this));
+    this.spaceBetweenByteStingBrackets_1 = (!(this.variant_1 === 'C1') ? !(this.variant_1 === 'C2') : false) ? this.opts_1._get_spaceBetweenByteStingBrackets__169254255_2srpf3_k$() : false;
+    this.newLines_1 = repeat(this.opts_1._get_newLineChar__136319911_295t47_k$(), this.opts_1._get_minBlankLines__1398319732_n4iues_k$() + 1 | 0);
+    this.blockLevelCommandCalls_1 = getCommandRanges(this);
+  }
+  FormatterState.prototype._get_whiteSpaceItems__2294759694_x2ve2a_k$ = function () {
+    return this.whiteSpaceItems_1;
+  };
+  FormatterState.prototype._get_waiting__2371980900_vsw9ss_k$ = function () {
+    return this.waiting_1;
+  };
+  FormatterState.prototype._set_lastLine__4251404141_n4xrkt_k$ = function (_set____804775014) {
+    this.lastLine_1 = _set____804775014;
+  };
+  FormatterState.prototype._get_lastLine__3477272929_diu10f_k$ = function () {
+    return this.lastLine_1;
+  };
+  FormatterState.prototype._get_out__857274115_e6ecxv_k$ = function () {
+    return this.out_1;
+  };
+  FormatterState.prototype._get_edits__3199407432_i49neg_k$ = function () {
+    return this.edits_1;
+  };
+  FormatterState.prototype._get_lastItem__3474821666_dkakf2_k$ = function () {
+    var tmp;
+    if (this.index_1 > 0) {
+      tmp = this._get_items__3328574481_fzd5gv_k$().get_fkrdnv_k$(this.index_1 - 1 | 0);
+    } else {
+      tmp = null;
+    }
+    return tmp;
+  };
+  FormatterState.prototype._get_hasNext__2250718212_xt3cos_k$ = function () {
+    return _get_itemsCount__1218061628(this) > (this.index_1 + 1 | 0);
+  };
+  FormatterState.prototype._set_continuations__407641257_hkqpgn_k$ = function (_set____804775014) {
+    this.continuations_1 = _set____804775014;
+  };
+  FormatterState.prototype._get_continuations__3782574901_8h2ci3_k$ = function () {
+    return this.continuations_1;
+  };
+  FormatterState.prototype._get_commandCalls__3729965377_9cdy9r_k$ = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_getValue_0 = commandCalls$factory();
+      tmp$ret$0 = this.commandCalls$delegate_1._get_value__3683422336_a43j40_k$();
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  FormatterState.prototype._get_allCommands__1249700712_ko1f8o_k$ = function () {
+    return this.parseResult_1.commandCalls;
+  };
+  FormatterState.prototype._get_equalityStatements__3241573837_hf5vlf_k$ = function () {
+    return this.parseResult_1.equalityStatements;
+  };
+  FormatterState.prototype._get_blockLevelCommandCalls__2536396618_t309ti_k$ = function () {
+    return this.blockLevelCommandCalls_1;
+  };
+  FormatterState.prototype._set_eqIndents__640413226_z32152_k$ = function (_set____804775014) {
+    this.eqIndents_1 = _set____804775014;
+  };
+  FormatterState.prototype._get_eqIndents__2412149430_v4zbka_k$ = function () {
+    return this.eqIndents_1;
+  };
+  FormatterState.prototype._set_index__964833971_tqmhb1_k$ = function (_set____804775014) {
+    this.index_1 = _set____804775014;
+  };
+  FormatterState.prototype._get_index__3322996031_g2optt_k$ = function () {
+    return this.index_1;
+  };
+  FormatterState.prototype._get_lastIndex__339712501_5m97ud_k$ = function () {
+    return this.index_1 - 1 | 0;
+  };
+  FormatterState.prototype._set_newlineLast__603996923_4h47ea_k$ = function (_set____804775014) {
+    this.newlineLast_1 = _set____804775014;
+  };
+  FormatterState.prototype._get_newlineLast__2435439751_ur44mx_k$ = function () {
+    return this.newlineLast_1;
+  };
+  FormatterState.prototype._get_items__3328574481_fzd5gv_k$ = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_getValue_0 = items$factory();
+      tmp$ret$0 = this.items$delegate_1._get_value__3683422336_a43j40_k$();
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  FormatterState.prototype._get_variant__876436268_eht2jw_k$ = function () {
+    return this.variant_1;
+  };
+  FormatterState.prototype._get_tab__857403292_e6h4m4_k$ = function () {
+    return this.tab_1;
+  };
+  FormatterState.prototype._get_currentTab__3009892527_l93m1d_k$ = function () {
+    return repeat(this.tab_1, this.waiting_1._get_size__809037418_ddoh9m_k$()) + repeat(this.continuationTab_1, this.continuations_1) + repeat(this.continuationTab_1, this.eqIndents_1);
+  };
+  FormatterState.prototype.peak_gc964e_k$ = function (distance) {
+    var containsUpper = this._get_items__3328574481_fzd5gv_k$()._get_size__809037418_ddoh9m_k$() - 1 | 0;
+    var containsArg = this.index_1 + distance | 0;
+    if (!(0 <= containsArg ? containsArg <= containsUpper : false)) {
+      return null;
+    } else {
+    }
+    return this._get_items__3328574481_fzd5gv_k$().get_fkrdnv_k$(this.index_1 + distance | 0);
+  };
+  FormatterState.prototype.peak$default_41q50d_k$ = function (distance, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      distance = 1;
+    return this.peak_gc964e_k$(distance);
+  };
+  FormatterState.prototype.formatted_tykou4_k$ = function () {
+    return this.out_1.toString();
+  };
+  FormatterState.prototype.next_20eer_k$ = function () {
+    if ((this.index_1 + 1 | 0) >= this._get_items__3328574481_fzd5gv_k$()._get_size__809037418_ddoh9m_k$()) {
+      return null;
+    }
+    var tmp = this._get_items__3328574481_fzd5gv_k$();
+    var tmp0_this = this;
+    tmp0_this.index_1 = tmp0_this.index_1 + 1 | 0;
+    var out = tmp.get_fkrdnv_k$(tmp0_this.index_1);
+    var tmp1_safe_receiver = getOrNull_1(this.scriptEndIndices_1, 0);
+    if (tmp1_safe_receiver == null)
+      null;
+    else {
+      var tmp$ret$1;
+      $l$block_0: {
+        {
+        }
+        {
+          if (out.textRange.startIndex > tmp1_safe_receiver._get_first__3232921377_hkbbvj_k$()) {
+            this.scriptEndIndices_1.removeAt_qvpkxi_k$(0);
+            Unit_getInstance();
+            this.waiting_1.clear_j9y8zo_k$();
+            var tmp0_safe_receiver_2 = firstOrNull(this.scriptEndIndices_1);
+            if (tmp0_safe_receiver_2 == null)
+              null;
+            else {
+              var tmp$ret$0;
+              $l$block: {
+                {
+                }
+                var tmp_0;
+                if (tmp0_safe_receiver_2._get_second__4255435031_njbah_k$()) {
+                  this.waiting_1.add_1j60pz_k$(Companion_getInstance_15()._get_ENDM_ARRAY__3582114655_bsewm9_k$());
+                  tmp_0 = Unit_getInstance();
+                }
+                tmp$ret$0 = tmp_0;
+                break $l$block;
+              }
+              Unit_getInstance();
+            }
+            Unit_getInstance();
+          }
+        }
+        tmp$ret$1 = tmp1_safe_receiver;
+        break $l$block_0;
+      }
+    }
+    Unit_getInstance();
+    return out;
+  };
+  FormatterState.prototype._get_tabSize__1207648411_jz03h7_k$ = function () {
+    return this.opts_1._get_tabSize__1207648411_jz03h7_k$();
+  };
+  FormatterState.prototype._get_continuationIndent__1321786920_luyhbc_k$ = function () {
+    return this.opts_1._get_continuationIndent__1321786920_luyhbc_k$();
+  };
+  FormatterState.prototype._get_insertSpaces__1511147973_ozp58l_k$ = function () {
+    return this.opts_1._get_insertSpaces__1511147973_ozp58l_k$();
+  };
+  FormatterState.prototype._get_trimTrailingWhitespace__1553967344_pp6wvk_k$ = function () {
+    return this.opts_1._get_trimTrailingWhitespace__1553967344_pp6wvk_k$();
+  };
+  FormatterState.prototype._get_insertFinalNewline__2680491476_qp7tik_k$ = function () {
+    return this.opts_1._get_insertFinalNewline__2680491476_qp7tik_k$();
+  };
+  FormatterState.prototype._get_trimFinalNewlines__963031486_fxd3um_k$ = function () {
+    return this.opts_1._get_trimFinalNewlines__963031486_fxd3um_k$();
+  };
+  FormatterState.prototype._get_keepSameLine__3992418572_504o38_k$ = function () {
+    return this.opts_1._get_keepSameLine__3992418572_504o38_k$();
+  };
+  FormatterState.prototype._get_maximumEmptyLines__2201756063_ym8s4h_k$ = function () {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_getValue_0 = maximumEmptyLines$factory_0();
+      tmp$ret$0 = this.maximumEmptyLines$delegate_1._get_value__3683422336_a43j40_k$();
+      break $l$block;
+    }
+    return tmp$ret$0;
+  };
+  FormatterState.prototype._get_indentComments__2971169611_lw5ktx_k$ = function () {
+    return this.opts_1._get_indentComments__2971169611_lw5ktx_k$();
+  };
+  FormatterState.prototype._get_spaceBetweenByteStingBrackets__169254255_2srpf3_k$ = function () {
+    return this.spaceBetweenByteStingBrackets_1;
+  };
+  FormatterState.prototype._get_newLines__675442284_b652lo_k$ = function () {
+    return this.newLines_1;
+  };
+  FormatterState.prototype._get_minBlankLines__1398319732_n4iues_k$ = function () {
+    return this.opts_1._get_minBlankLines__1398319732_n4iues_k$();
+  };
+  FormatterState.prototype._get_newLineChar__136319911_295t47_k$ = function () {
+    return this.opts_1._get_newLineChar__136319911_295t47_k$();
+  };
+  FormatterState.$metadata$ = {
+    simpleName: 'FormatterState',
+    kind: 'class',
+    interfaces: []
+  };
+  Object.defineProperty(FormatterState.prototype, 'tabSize', {
+    configurable: true,
+    get: function () {
+      return this._get_tabSize__1207648411_jz03h7_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'continuationIndent', {
+    configurable: true,
+    get: function () {
+      return this._get_continuationIndent__1321786920_luyhbc_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'insertSpaces', {
+    configurable: true,
+    get: function () {
+      return this._get_insertSpaces__1511147973_ozp58l_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'trimTrailingWhitespace', {
+    configurable: true,
+    get: function () {
+      return this._get_trimTrailingWhitespace__1553967344_pp6wvk_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'insertFinalNewline', {
+    configurable: true,
+    get: function () {
+      return this._get_insertFinalNewline__2680491476_qp7tik_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'trimFinalNewlines', {
+    configurable: true,
+    get: function () {
+      return this._get_trimFinalNewlines__963031486_fxd3um_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'keepSameLine', {
+    configurable: true,
+    get: function () {
+      return this._get_keepSameLine__3992418572_504o38_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'maximumEmptyLines', {
+    configurable: true,
+    get: function () {
+      return this._get_maximumEmptyLines__2201756063_ym8s4h_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'indentComments', {
+    configurable: true,
+    get: function () {
+      return this._get_indentComments__2971169611_lw5ktx_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'spaceBetweenByteStingBrackets', {
+    configurable: true,
+    get: function () {
+      return this._get_spaceBetweenByteStingBrackets__169254255_2srpf3_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'minBlankLines', {
+    configurable: true,
+    get: function () {
+      return this._get_minBlankLines__1398319732_n4iues_k$();
+    }
+  });
+  Object.defineProperty(FormatterState.prototype, 'newLineChar', {
+    configurable: true,
+    get: function () {
+      return this._get_newLineChar__136319911_295t47_k$();
+    }
+  });
+  function itemsCount$factory() {
+    return getPropertyCallableRef('itemsCount', 1, KProperty1, function (receiver) {
+      return _get_itemsCount__1218061628(receiver);
+    }, null);
+  }
+  function commandCalls$factory() {
+    return getPropertyCallableRef('commandCalls', 1, KProperty1, function (receiver) {
+      return receiver._get_commandCalls__3729965377_9cdy9r_k$();
+    }, null);
+  }
+  function items$factory() {
+    return getPropertyCallableRef('items', 1, KProperty1, function (receiver) {
+      return receiver._get_items__3328574481_fzd5gv_k$();
+    }, null);
+  }
+  function maximumEmptyLines$factory_0() {
+    return getPropertyCallableRef('maximumEmptyLines', 1, KProperty1, function (receiver) {
+      return receiver._get_maximumEmptyLines__2201756063_ym8s4h_k$();
+    }, null);
+  }
+  function formatComment(_this__1828080292, item) {
+    if (_get_startCharacter__2250643972(item) === 0 ? true : !_this__1828080292._get_state__3614753120_b8zcm8_k$()._get_indentComments__2971169611_lw5ktx_k$()) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(item.text);
+      Unit_getInstance();
+      return Unit_getInstance();
+    }
+    var newTab = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_currentTab__3009892527_l93m1d_k$();
+    var lastItem = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_lastItem__3474821666_dkakf2_k$();
+    var tmp;
+    if (!(lastItem == null)) {
+      var tmp_0;
+      if (lastItem instanceof Spaces) {
+        tmp_0 = _get_start__3614751663_0(lastItem);
+      } else {
+        {
+          tmp_0 = _get_end__856968982(lastItem);
+        }
+      }
+      tmp = tmp_0;
+    } else {
+      tmp = _get_start__3614751663_0(item);
+    }
+    var start = tmp;
+    var tmp0_safe_receiver = lastItem;
+    if (!((tmp0_safe_receiver == null ? null : tmp0_safe_receiver.text) === newTab)) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(start, _get_start__3614751663_0(item)), newTab));
+      Unit_getInstance();
+    } else {
+    }
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(newTab).append_ssq29y_k$(item.text);
+    Unit_getInstance();
+  }
+  function formatCaos2(_this__1828080292, item) {
+    var builder = new StringBuilder('*# ');
+    if (item.isTag) {
+      var tmp = ensureNotNull(item.tag);
+      builder.append_ssq29y_k$(replace$default(tmp, '\\s\\s+', ' ', false, 4, null));
+      Unit_getInstance();
+      builder.append_ssq29y_k$(' = ');
+      Unit_getInstance();
+    } else {
+      builder.append_ssq29y_k$(item.command).append_t8oh9e_k$(_Char___init__impl__380027157(32));
+      Unit_getInstance();
+    }
+    var tmp$ret$3;
+    $l$block_2: {
+      var tmp0_filter_0 = item.values;
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
+        var indexedObject = tmp0_filter_0;
+        var inductionVariable = 0;
+        var last = indexedObject.length;
+        while (inductionVariable < last) {
+          var element_2_3 = indexedObject[inductionVariable];
+          inductionVariable = inductionVariable + 1 | 0;
+          var tmp$ret$1;
+          $l$block_0: {
+            var tmp$ret$0;
+            $l$block: {
+              var tmp0_isNotBlank_0_5 = element_2_3.text;
+              tmp$ret$0 = !isBlank(tmp0_isNotBlank_0_5);
+              break $l$block;
+            }
+            tmp$ret$1 = tmp$ret$0;
+            break $l$block_0;
+          }
+          if (tmp$ret$1) {
+            tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+            Unit_getInstance();
+          } else {
+          }
+        }
+        tmp$ret$2 = tmp0_filterTo_0_1;
+        break $l$block_1;
+      }
+      tmp$ret$3 = tmp$ret$2;
+      break $l$block_2;
+    }
+    var tmp_0 = tmp$ret$3;
+    trim(builder.append_ssq29y_k$(joinToString$default_0(tmp_0, ' ', null, null, 0, null, formatCaos2$lambda(), 30, null)));
+    Unit_getInstance();
+    var newText = builder.toString();
+    if (!(item.text === newText)) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(item.textRange.start, item.textRange.end), newText));
+      Unit_getInstance();
+    }
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(newText);
+    Unit_getInstance();
+  }
+  function formatCaos2$lambda() {
+    return function (it) {
+      return it.text;
+    };
+  }
+  function formatByteString(_this__1828080292, item) {
+    ensureSpace(_this__1828080292, item);
+    var oldText = item.text;
+    var spaceBetween = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_spaceBetweenByteStingBrackets__169254255_2srpf3_k$() ? ' ' : '';
+    var tmp$ret$4;
+    $l$block_3: {
+      var tmp$ret$2;
+      $l$block_1: {
+        var tmp$ret$1;
+        $l$block_0: {
+          var tmp0_substring_0 = _get_lastIndex__339712501_1(oldText);
+          var tmp$ret$0;
+          $l$block: {
+            tmp$ret$0 = oldText;
+            break $l$block;
+          }
+          tmp$ret$1 = tmp$ret$0.substring(1, tmp0_substring_0);
+          break $l$block_0;
+        }
+        var tmp1_trim_0 = tmp$ret$1;
+        tmp$ret$2 = toString(trim(isCharSequence(tmp1_trim_0) ? tmp1_trim_0 : THROW_CCE()));
+        break $l$block_1;
+      }
+      var tmp2_replace_0 = tmp$ret$2;
+      var tmp$ret$3;
+      $l$block_2: {
+        tmp$ret$3 = Regex_init_$Create$('\\s\\s+');
+        break $l$block_2;
+      }
+      var tmp3_replace_0 = tmp$ret$3;
+      tmp$ret$4 = tmp3_replace_0.replace_838ra0_k$(tmp2_replace_0, ' ');
+      break $l$block_3;
+    }
+    var items = tmp$ret$4;
+    var newText = '[' + spaceBetween + items + spaceBetween + ']';
+    if (!(oldText === newText)) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(item.textRange.start, item.textRange.end), newText));
+      Unit_getInstance();
+    }
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(newText);
+    Unit_getInstance();
+  }
+  function formatLiteral(_this__1828080292, item) {
+    ensureSpace(_this__1828080292, item);
+    var oldText = item.text;
+    if (!contains$default_0(oldText, '  ', false, 2, null)) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(oldText);
+      Unit_getInstance();
+      return Unit_getInstance();
+    } else {
+    }
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = Regex_init_$Create$('\\s\\s+');
+        break $l$block;
+      }
+      var tmp0_replace_0 = tmp$ret$0;
+      tmp$ret$1 = tmp0_replace_0.replace_838ra0_k$(oldText, ' ');
+      break $l$block_0;
+    }
+    var newText = tmp$ret$1;
+    if (!(oldText === newText)) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(_get_start__3614751663_0(item), _get_end__856968982(item)), newText));
+      Unit_getInstance();
+    }
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(newText);
+    Unit_getInstance();
+  }
+  function formatCommandToken(_this__1828080292, item) {
+    _this__1828080292.popWaiting_1emhro_k$(item.token);
+    ensureSpace(_this__1828080292, item);
+    var oldText = item.text;
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp0_lowercase_0 = item.text;
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = tmp0_lowercase_0;
+        break $l$block;
+      }
+      tmp$ret$1 = tmp$ret$0.toLowerCase();
+      break $l$block_0;
+    }
+    var newText = tmp$ret$1;
+    if (!(oldText === newText)) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(_get_start__3614751663_0(item), _get_end__856968982(item)), newText));
+      Unit_getInstance();
+    }
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(newText);
+    Unit_getInstance();
+    _this__1828080292.pushWaiting_thrpqb_k$(item.token);
+  }
+  function formatCommandToken_0(_this__1828080292, item) {
+    if (item.tokens.length === 1) {
+      _this__1828080292.popWaiting_1emhro_k$(first(item.tokens).token);
+    }
+    ensureSpace(_this__1828080292, item);
+    var oldText = item.text;
+    var tmp$ret$0;
+    $l$block: {
+      var tmp = item.tokens;
+      var tmp0_trim_0 = joinToString$default(tmp, ' ', null, null, 0, null, formatCommandToken$lambda(), 30, null);
+      tmp$ret$0 = toString(trim(isCharSequence(tmp0_trim_0) ? tmp0_trim_0 : THROW_CCE()));
+      break $l$block;
+    }
+    var newText = tmp$ret$0;
+    if (!(oldText === newText)) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(item.textRange.start, item.textRange.end), newText));
+      Unit_getInstance();
+    }
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(newText);
+    Unit_getInstance();
+    if (item.tokens.length === 1) {
+      _this__1828080292.pushWaiting_thrpqb_k$(first(item.tokens).token);
+    }
+  }
+  function formatIndexedVariable(_this__1828080292, item) {
+    ensureSpace(_this__1828080292, item);
+    var oldText = item.text;
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp$ret$0;
+      $l$block: {
+        tmp$ret$0 = oldText;
+        break $l$block;
+      }
+      tmp$ret$1 = tmp$ret$0.toLowerCase();
+      break $l$block_0;
+    }
+    var newText = tmp$ret$1;
+    if (!(oldText === newText)) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(item.textRange.start, item.textRange.end), newText));
+      Unit_getInstance();
+    }
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(newText);
+    Unit_getInstance();
+  }
+  function formatCommandToken$lambda() {
+    return function (it) {
+      return token_0(it.token);
+    };
+  }
+  function isComment(_this__1828080292) {
+    var tmp;
+    if (_this__1828080292 instanceof Comment) {
+      tmp = true;
+    } else {
+      {
+        tmp = _this__1828080292 instanceof Caos2Comment;
+      }
+    }
+    return tmp;
+  }
+  function isWhitespace(_this__1828080292) {
+    var tmp;
+    if (_this__1828080292 instanceof NewLine) {
+      tmp = true;
+    } else {
+      {
+        tmp = _this__1828080292 instanceof Spaces;
+      }
+    }
+    return tmp;
+  }
+  function inRange(_this__1828080292, parent) {
+    var tmp$ret$2;
+    $l$block_1: {
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
+        var tmp0_iterator_1_2 = _this__1828080292.iterator_jk1svi_k$();
+        while (tmp0_iterator_1_2.hasNext_bitz1p_k$()) {
+          var element_2_3 = tmp0_iterator_1_2.next_20eer_k$();
+          var tmp$ret$0;
+          $l$block: {
+            tmp$ret$0 = inRange_3(element_2_3.textRange, parent);
+            break $l$block;
+          }
+          if (tmp$ret$0) {
+            tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+            Unit_getInstance();
+          } else {
+          }
+        }
+        tmp$ret$1 = tmp0_filterTo_0_1;
+        break $l$block_0;
+      }
+      tmp$ret$2 = tmp$ret$1;
+      break $l$block_1;
+    }
+    return tmp$ret$2;
+  }
+  function combine(first, second) {
+    var firstText;
+    var secondText;
+    var tmp;
+    if (first.textRange.startIndex < second.textRange.startIndex) {
+      firstText = first.text;
+      secondText = second.text;
+      tmp = _get_start__3614751663_0(first);
+    } else {
+      firstText = second.text;
+      secondText = first.text;
+      tmp = _get_start__3614751663_0(second);
+    }
+    var min = tmp;
+    var tmp_0;
+    if (first.textRange.endIndex < second.textRange.endIndex) {
+      tmp_0 = _get_end__856968982(first);
+    } else {
+      tmp_0 = _get_end__856968982(second);
+    }
+    var max = tmp_0;
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_min_0 = first.textRange.startIndex;
+      var tmp1_min_0 = second.textRange.startIndex;
+      tmp$ret$0 = Math.min(tmp0_min_0, tmp1_min_0);
+      break $l$block;
+    }
+    var tmp_1 = tmp$ret$0;
+    var tmp$ret$1;
+    $l$block_0: {
+      var tmp2_max_0 = first.textRange.endIndex;
+      var tmp3_max_0 = second.textRange.endIndex;
+      tmp$ret$1 = Math.max(tmp2_max_0, tmp3_max_0);
+      break $l$block_0;
+    }
+    return new NewLine(new RangeWithIndex(min, max, tmp_1, tmp$ret$1), firstText + secondText);
+  }
+  function isWhitespaceOrComment(_this__1828080292) {
+    var tmp;
+    var tmp0_safe_receiver = _this__1828080292;
+    if ((tmp0_safe_receiver == null ? null : isWhitespace(tmp0_safe_receiver)) === true) {
+      tmp = true;
+    } else {
+      {
+        var tmp1_safe_receiver = _this__1828080292;
+        tmp = (tmp1_safe_receiver == null ? null : isComment(tmp1_safe_receiver)) === true;
+      }
+    }
+    return tmp;
+  }
+  function formatNewLine(_this__1828080292, item) {
+    var tmp = item.lines;
+    var tmp_0;
+    var tmp_1 = _this__1828080292._get_state__3614753120_b8zcm8_k$().peak_gc964e_k$(-1);
+    if (tmp_1 instanceof Comment) {
+      var tmp_2 = _this__1828080292._get_state__3614753120_b8zcm8_k$();
+      var tmp0_safe_receiver = tmp_2.peak$default_41q50d_k$(0, 1, null);
+      tmp_0 = (tmp0_safe_receiver == null ? null : isComment(tmp0_safe_receiver)) === true;
+    } else {
+      {
+        tmp_0 = false;
+      }
+    }
+    var newLines = newLineCountConstrained(_this__1828080292, tmp, tmp_0);
+    var newLineText = newLines > 0 ? repeat(_this__1828080292._get_newLine__3485471709_ddyasj_k$(), newLines) : ' ';
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._set_newlineLast__603996923_4h47ea_k$(newLines > 0);
+    if (!(item.text === newLineText)) {
+      var range = new RangeImpl(item.textRange.start, item.textRange.end);
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(range, newLineText));
+      Unit_getInstance();
+    }
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(newLineText);
+    Unit_getInstance();
+  }
+  function formatSpace(_this__1828080292, item) {
+    var lastItem = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_lastItem__3474821666_dkakf2_k$();
+    var tmp = _this__1828080292._get_state__3614753120_b8zcm8_k$();
+    var nextItem = tmp.peak$default_41q50d_k$(0, 1, null);
+    if (lastItem == null ? true : isWhitespaceOrComment(nextItem)) {
+      if (!(nextItem instanceof Comment)) {
+        _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(_get_start__3614751663_0(item), _get_end__856968982(item)), ''));
+        Unit_getInstance();
+      } else {
+      }
+      return Unit_getInstance();
+    }
+    var tmp_0;
+    if (willNewlineNext(_this__1828080292, 1)) {
+      tmp_0 = '';
+    } else {
+      if (lastItem instanceof NewLine) {
+        tmp_0 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_currentTab__3009892527_l93m1d_k$();
+      } else {
+        if (willNewlineNext(_this__1828080292, -1)) {
+          tmp_0 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_currentTab__3009892527_l93m1d_k$();
+        } else {
+          if (_get_endLine__3833692546(lastItem) === _get_startLine__1396177307(item)) {
+            tmp_0 = ' ';
+          } else {
+            {
+              tmp_0 = item.text;
+            }
+          }
+        }
+      }
+    }
+    var space = tmp_0;
+    var tmp$ret$0;
+    $l$block: {
+      var tmp0_orEmpty_0 = firstOrNull(_this__1828080292._get_state__3614753120_b8zcm8_k$()._get_waiting__2371980900_vsw9ss_k$());
+      var tmp0_elvis_lhs_1 = tmp0_orEmpty_0;
+      tmp$ret$0 = tmp0_elvis_lhs_1 == null ? emptyList() : tmp0_elvis_lhs_1;
+      break $l$block;
+    }
+    var tmp_1 = tmp$ret$0;
+    var tmp_2 = _this__1828080292._get_state__3614753120_b8zcm8_k$().peak_gc964e_k$(1);
+    var tmp0_safe_receiver = tmp_2 instanceof CommandToken ? tmp_2 : null;
+    if (contains(tmp_1, tmp0_safe_receiver == null ? null : tmp0_safe_receiver.token)) {
+      if (space.length >= _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_tab__857403292_e6h4m4_k$().length) {
+        var tmp$ret$2;
+        $l$block_1: {
+          var tmp1_substring_0 = space;
+          var tmp2_substring_0 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_tab__857403292_e6h4m4_k$().length;
+          var tmp$ret$1;
+          $l$block_0: {
+            tmp$ret$1 = tmp1_substring_0;
+            break $l$block_0;
+          }
+          tmp$ret$2 = tmp$ret$1.substring(tmp2_substring_0);
+          break $l$block_1;
+        }
+        space = tmp$ret$2;
+      }
+    } else {
+    }
+    if (!(item.text === space)) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(_get_start__3614751663_0(item), _get_end__856968982(item)), space));
+      Unit_getInstance();
+    }
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(space);
+    Unit_getInstance();
+  }
+  function willNewlineNext(_this__1828080292, offset) {
+    if (_this__1828080292._get_state__3614753120_b8zcm8_k$()._get_keepSameLine__3992418572_504o38_k$()) {
+      return false;
+    }
+    var tmp0_elvis_lhs = _this__1828080292._get_state__3614753120_b8zcm8_k$().peak_gc964e_k$(offset);
+    var tmp;
+    if (tmp0_elvis_lhs == null) {
+      return false;
+    } else {
+      tmp = tmp0_elvis_lhs;
+    }
+    var item = tmp;
+    var next = _this__1828080292._get_state__3614753120_b8zcm8_k$().peak_gc964e_k$(offset + 1 | 0);
+    var tmp_0;
+    var tmp_1;
+    if (isComment(item)) {
+      tmp_1 = true;
+    } else {
+      tmp_1 = item instanceof NewLine;
+    }
+    if (tmp_1) {
+      tmp_0 = true;
+    } else {
+      {
+        tmp_0 = next instanceof NewLine;
+      }
+    }
+    if (tmp_0) {
+      return false;
+    } else {
+    }
+    var currentCommand = firstOrNull(_this__1828080292._get_state__3614753120_b8zcm8_k$()._get_blockLevelCommandCalls__2536396618_t309ti_k$());
+    return !(currentCommand == null ? true : currentCommand.contains_1pg60y_k$(item.textRange.startIndex));
+  }
+  function willNewlineNext$default(_this__1828080292, offset, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      offset = 0;
+    return willNewlineNext(_this__1828080292, offset);
+  }
+  function addNewLineIf(_this__1828080292, item) {
+    var willNewlineNext_0 = willNewlineNext(_this__1828080292, 0);
+    var tmp = item.textRange.startIndex;
+    var tmp0_safe_receiver = firstOrNull(_this__1828080292._get_state__3614753120_b8zcm8_k$()._get_blockLevelCommandCalls__2536396618_t309ti_k$());
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver._get_endInclusive__731268122_c3dm3e_k$();
+    if (tmp > (tmp1_elvis_lhs == null ? IntCompanionObject_getInstance()._get_MAX_VALUE__3201573499_i2z81x_k$() : tmp1_elvis_lhs)) {
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_blockLevelCommandCalls__2536396618_t309ti_k$().removeAt_qvpkxi_k$(0);
+      Unit_getInstance();
+    } else {
+    }
+    if (!willNewlineNext_0) {
+      return Unit_getInstance();
+    }
+    var i = -1;
+    $l$loop: while (true) {
+      var tmp2_safe_receiver = _this__1828080292._get_state__3614753120_b8zcm8_k$().peak_gc964e_k$(i);
+      if (!((tmp2_safe_receiver == null ? null : isWhitespace(tmp2_safe_receiver)) === true)) {
+        break $l$loop;
+      }
+      var tmp_0 = _this__1828080292._get_state__3614753120_b8zcm8_k$().peak_gc964e_k$(i);
+      if (tmp_0 instanceof NewLine) {
+        return Unit_getInstance();
+      } else {
+      }
+      i = i - 1 | 0;
+      Unit_getInstance();
+    }
+    var newLine = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_newLines__675442284_b652lo_k$();
+    var space = newLineSpace(_this__1828080292, item);
+    var final = newLine + space;
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(final);
+    Unit_getInstance();
+    _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(_get_start__3614751663_0(item), _get_start__3614751663_0(item)), final));
+    Unit_getInstance();
+  }
+  function newLineSpace(_this__1828080292, item) {
+    var tmp = _this__1828080292._get_state__3614753120_b8zcm8_k$();
+    var tmp0_safe_receiver = tmp.peak$default_41q50d_k$(0, 1, null);
+    if (!((tmp0_safe_receiver == null ? null : isWhitespace(tmp0_safe_receiver)) === false)) {
+      return '';
+    } else {
+    }
+    var tmp1_subject = item;
+    var tmp_0;
+    if (tmp1_subject instanceof Spaces) {
+      tmp_0 = '';
+    } else {
+      if (tmp1_subject instanceof Comment) {
+        var tmp_1;
+        if (_this__1828080292._get_state__3614753120_b8zcm8_k$()._get_indentComments__2971169611_lw5ktx_k$()) {
+          tmp_1 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_currentTab__3009892527_l93m1d_k$();
+        } else {
+          tmp_1 = '';
+        }
+        tmp_0 = tmp_1;
+      } else {
+        if (tmp1_subject instanceof Caos2Comment) {
+          tmp_0 = '';
+        } else {
+          if (tmp1_subject instanceof NewLine) {
+            tmp_0 = '';
+          } else {
+            if (tmp1_subject instanceof CommandToken) {
+              var tmp_2;
+              var tmp$ret$0;
+              $l$block: {
+                var tmp0_orEmpty_0 = getOrNull_1(_this__1828080292._get_state__3614753120_b8zcm8_k$()._get_waiting__2371980900_vsw9ss_k$(), 0);
+                var tmp0_elvis_lhs_1 = tmp0_orEmpty_0;
+                tmp$ret$0 = tmp0_elvis_lhs_1 == null ? emptyList() : tmp0_elvis_lhs_1;
+                break $l$block;
+              }
+              if (tmp$ret$0.contains_2ehdt1_k$(item.token)) {
+                var tmp$ret$2;
+                $l$block_1: {
+                  var tmp1_substring_0 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_currentTab__3009892527_l93m1d_k$();
+                  var tmp2_substring_0 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_tab__857403292_e6h4m4_k$().length;
+                  var tmp$ret$1;
+                  $l$block_0: {
+                    tmp$ret$1 = tmp1_substring_0;
+                    break $l$block_0;
+                  }
+                  tmp$ret$2 = tmp$ret$1.substring(tmp2_substring_0);
+                  break $l$block_1;
+                }
+                tmp_2 = tmp$ret$2;
+              } else {
+                {
+                  tmp_2 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_currentTab__3009892527_l93m1d_k$();
+                }
+              }
+              tmp_0 = tmp_2;
+            } else {
+              {
+                tmp_0 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_currentTab__3009892527_l93m1d_k$();
+              }
+            }
+          }
+        }
+      }
+    }
+    return tmp_0;
+  }
+  function ensureSpace(_this__1828080292, item) {
+    var tmp;
+    if (!isWhitespaceOrComment(item)) {
+      var tmp0_safe_receiver = _this__1828080292._get_state__3614753120_b8zcm8_k$().peak_gc964e_k$(-1);
+      var tmp_0;
+      if (tmp0_safe_receiver == null) {
+        tmp_0 = null;
+      } else {
+        var tmp$ret$1;
+        $l$block_0: {
+          {
+          }
+          var tmp$ret$0;
+          $l$block: {
+            var tmp_1;
+            if (isComment(tmp0_safe_receiver)) {
+              tmp_1 = true;
+            } else {
+              tmp_1 = tmp0_safe_receiver instanceof Spaces;
+            }
+            tmp$ret$0 = tmp_1;
+            break $l$block;
+          }
+          tmp$ret$1 = tmp$ret$0;
+          break $l$block_0;
+        }
+        tmp_0 = tmp$ret$1;
+      }
+      tmp = !(tmp_0 === true);
+    } else {
+      tmp = false;
+    }
+    if (tmp) {
+      var space = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_currentTab__3009892527_l93m1d_k$();
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_edits__3199407432_i49neg_k$().add_1j60pz_k$(new TextEditImpl(new RangeImpl(_get_start__3614751663_0(item), _get_start__3614751663_0(item)), space));
+      Unit_getInstance();
+      _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_out__857274115_e6ecxv_k$().append_ssq29y_k$(space);
+      Unit_getInstance();
+    } else {
+    }
+  }
+  function computeContinuationsForFormatter(state, item) {
+    var line = _get_startLine__1396177307(item);
+    var character = _get_startCharacter__2250643972(item) + 1 | 0;
+    var startIndex = _get_startIndex__250257659(item);
+    var startLine = _get_startLine__1396177307(item);
+    var indents = 0;
+    var tmp$ret$1;
+    $l$block_1: {
+      var tmp0_firstOrNull_0 = state._get_equalityStatements__3241573837_hf5vlf_k$();
+      var indexedObject = tmp0_firstOrNull_0;
+      var inductionVariable = 0;
+      var last = indexedObject.length;
+      while (inductionVariable < last) {
+        var element_2 = indexedObject[inductionVariable];
+        inductionVariable = inductionVariable + 1 | 0;
+        var tmp$ret$0;
+        $l$block: {
+          var containsLower = _get_startIndex__250257659(element_2);
+          tmp$ret$0 = startIndex <= element_2.eqEndIndex ? containsLower <= startIndex : false;
+          break $l$block;
+        }
+        if (tmp$ret$0) {
+          tmp$ret$1 = element_2;
+          break $l$block_1;
+        } else {
+        }
+      }
+      tmp$ret$1 = null;
+      break $l$block_1;
+    }
+    var tmp0_safe_receiver = tmp$ret$1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else {
+      var tmp$ret$2;
+      $l$block_2: {
+        {
+        }
+        var tmp;
+        if (!(_get_startLine__1396177307(tmp0_safe_receiver) === startLine)) {
+          var last_2 = tmp0_safe_receiver;
+          var lastLine_3 = -1;
+          $l$loop: while (!(last_2 == null)) {
+            if (_get_startIndex__250257659(last_2) > startIndex) {
+              break $l$loop;
+            }
+            if (!(lastLine_3 === _get_startLine__1396177307(last_2))) {
+              var tmp0_4 = indents;
+              indents = tmp0_4 + 1 | 0;
+              Unit_getInstance();
+            }
+            lastLine_3 = _get_endLine__3833692546(last_2);
+            last_2 = last_2.join;
+          }
+          tmp = Unit_getInstance();
+        }
+        tmp$ret$2 = tmp;
+        break $l$block_2;
+      }
+      Unit_getInstance();
+    }
+    Unit_getInstance();
+    var tmp$ret$5;
+    $l$block_5: {
+      var tmp1_filter_0 = state._get_allCommands__1249700712_ko1f8o_k$();
+      var tmp$ret$4;
+      $l$block_4: {
+        var tmp0_filterTo_0_1 = ArrayList_init_$Create$_0();
+        var indexedObject_0 = tmp1_filter_0;
+        var inductionVariable_0 = 0;
+        var last_0 = indexedObject_0.length;
+        while (inductionVariable_0 < last_0) {
+          var element_2_3 = indexedObject_0[inductionVariable_0];
+          inductionVariable_0 = inductionVariable_0 + 1 | 0;
+          var tmp$ret$3;
+          $l$block_3: {
+            var tmp_0 = element_2_3.textRange;
+            tmp$ret$3 = inRange$default(tmp_0, line, character, false, false, 24, null);
+            break $l$block_3;
+          }
+          if (tmp$ret$3) {
+            tmp0_filterTo_0_1.add_1j60pz_k$(element_2_3);
+            Unit_getInstance();
+          } else {
+          }
+        }
+        tmp$ret$4 = tmp0_filterTo_0_1;
+        break $l$block_4;
+      }
+      tmp$ret$5 = tmp$ret$4;
+      break $l$block_5;
+    }
+    var enclosingCommands = tmp$ret$5;
+    var tmp1_safe_receiver = firstOrNull(enclosingCommands);
+    var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : _get_startLine__1396177307(tmp1_safe_receiver);
+    var tmp_1;
+    if (tmp2_elvis_lhs == null) {
+      return indents;
+    } else {
+      tmp_1 = tmp2_elvis_lhs;
+    }
+    var lastLine = tmp_1;
+    var ensureOne = false;
+    var tmp3_iterator = drop(enclosingCommands, 1).iterator_jk1svi_k$();
+    while (tmp3_iterator.hasNext_bitz1p_k$()) {
+      var command = tmp3_iterator.next_20eer_k$();
+      if (!(lastLine === _get_startLine__1396177307(command))) {
+        var tmp4 = indents;
+        indents = tmp4 + 1 | 0;
+        Unit_getInstance();
+        lastLine = _get_startLine__1396177307(command);
+      } else if (_get_endIndex__2798786036(item) === _get_endIndex__2798786036(command) ? !(_get_startLine__1396177307(command) === _get_endLine__3833692546(command)) : false) {
+        ensureOne = true;
+      }
+    }
+    var tmp5_safe_receiver = lastOrNull(enclosingCommands);
+    if (!((tmp5_safe_receiver == null ? null : _get_startLine__1396177307(tmp5_safe_receiver)) === startLine)) {
+      var tmp$ret$12;
+      $l$block_14: {
+        var tmp$ret$6;
+        $l$block_9: {
+          var iterator_1 = enclosingCommands.iterator_jk1svi_k$();
+          if (!iterator_1.hasNext_bitz1p_k$()) {
+            tmp$ret$6 = null;
+            break $l$block_9;
+          }
+          var tmp$ret$7;
+          $l$block_7: {
+            var tmp2__anonymous__4_1215738846 = iterator_1.next_20eer_k$();
+            tmp$ret$7 = _get_endLine__3833692546(tmp2__anonymous__4_1215738846);
+            break $l$block_7;
+          }
+          var maxValue_2 = tmp$ret$7;
+          while (iterator_1.hasNext_bitz1p_k$()) {
+            var tmp$ret$8;
+            $l$block_8: {
+              var tmp3__anonymous__4_2723290655 = iterator_1.next_20eer_k$();
+              tmp$ret$8 = _get_endLine__3833692546(tmp3__anonymous__4_2723290655);
+              break $l$block_8;
+            }
+            var v_3 = tmp$ret$8;
+            if (compareTo(maxValue_2, v_3) < 0) {
+              maxValue_2 = v_3;
+            }
+          }
+          tmp$ret$6 = maxValue_2;
+          break $l$block_9;
+        }
+        var tmp7_elvis_lhs = tmp$ret$6;
+        var tmp_2 = tmp7_elvis_lhs == null ? 0 : tmp7_elvis_lhs;
+        var tmp$ret$9;
+        $l$block_13: {
+          var iterator_1_0 = enclosingCommands.iterator_jk1svi_k$();
+          if (!iterator_1_0.hasNext_bitz1p_k$()) {
+            tmp$ret$9 = null;
+            break $l$block_13;
+          }
+          var tmp$ret$10;
+          $l$block_11: {
+            var tmp4__anonymous__4_4230842464 = iterator_1_0.next_20eer_k$();
+            tmp$ret$10 = _get_startLine__1396177307(tmp4__anonymous__4_4230842464);
+            break $l$block_11;
+          }
+          var minValue_2 = tmp$ret$10;
+          while (iterator_1_0.hasNext_bitz1p_k$()) {
+            var tmp$ret$11;
+            $l$block_12: {
+              var tmp5__anonymous__4_1443426977 = iterator_1_0.next_20eer_k$();
+              tmp$ret$11 = _get_startLine__1396177307(tmp5__anonymous__4_1443426977);
+              break $l$block_12;
+            }
+            var v_3_0 = tmp$ret$11;
+            if (compareTo(minValue_2, v_3_0) > 0) {
+              minValue_2 = v_3_0;
+            }
+          }
+          tmp$ret$9 = minValue_2;
+          break $l$block_13;
+        }
+        var tmp6_elvis_lhs = tmp$ret$9;
+        var tmp6_min_0 = tmp_2 - (tmp6_elvis_lhs == null ? 0 : tmp6_elvis_lhs) | 0;
+        indents = indents + 1 | 0;
+        var tmp7_min_0 = indents;
+        tmp$ret$12 = Math.min(tmp6_min_0, tmp7_min_0);
+        break $l$block_14;
+      }
+      indents = tmp$ret$12;
+    } else {
+    }
+    var tmp8_safe_receiver = firstOrNull(enclosingCommands);
+    var commandRange = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.textRange;
+    if (indents === 0) {
+      if (ensureOne) {
+        indents = 1;
+      } else if (!(commandRange == null) ? !(commandRange.start.line === startLine) : false) {
+        indents = 1;
+      } else if ((!(commandRange == null) ? _get_endIndex__2798786036(item) === commandRange.endIndex : false) ? !(commandRange.start.line === commandRange.end.line) : false) {
+        indents = 1;
+      }
+    }
+    return indents;
+  }
+  function newLineCountConstrained(_this__1828080292, lines, commentNext) {
+    if (commentNext) {
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp$ret$0;
+        $l$block: {
+          var tmp0_max_0 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_maximumEmptyLines__2201756063_ym8s4h_k$();
+          tmp$ret$0 = Math.max(tmp0_max_0, 1);
+          break $l$block;
+        }
+        var tmp1_min_0 = tmp$ret$0;
+        tmp$ret$1 = Math.min(lines, tmp1_min_0);
+        break $l$block_0;
+      }
+      return tmp$ret$1;
+    }
+    var tmp;
+    if ((lines - 1 | 0) > _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_maximumEmptyLines__2201756063_ym8s4h_k$()) {
+      tmp = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_maximumEmptyLines__2201756063_ym8s4h_k$() + 1 | 0;
+    } else {
+      var tmp$ret$3;
+      $l$block_2: {
+        var tmp3_min_0 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_maximumEmptyLines__2201756063_ym8s4h_k$() + 1 | 0;
+        var tmp$ret$2;
+        $l$block_1: {
+          var tmp2_max_0 = _this__1828080292._get_state__3614753120_b8zcm8_k$()._get_minBlankLines__1398319732_n4iues_k$() + 1 | 0;
+          tmp$ret$2 = Math.max(tmp2_max_0, lines);
+          break $l$block_1;
+        }
+        var tmp4_min_0 = tmp$ret$2;
+        tmp$ret$3 = Math.min(tmp3_min_0, tmp4_min_0);
+        break $l$block_2;
+      }
+      tmp = tmp$ret$3;
+    }
+    var temp = tmp;
+    var tmp$ret$4;
+    $l$block_3: {
+      tmp$ret$4 = Math.max(0, temp);
+      break $l$block_3;
+    }
+    return tmp$ret$4;
+  }
+  function showWhitespace(_this__1828080292) {
+    var tmp = replace$default(_this__1828080292, '\\r\\n', '[\\n]', false, 4, null);
+    var tmp_0 = replace$default(tmp, '\r', '', false, 4, null);
+    var tmp_1 = replace$default(tmp_0, '\n', '[\\n]', false, 4, null);
+    var tmp_2 = replace$default(tmp_1, '\t', '[\\t]', false, 4, null);
+    return replace$default(tmp_2, ' ', '[ ]', false, 4, null);
+  }
   function usesBitFlags($this, variant, element) {
     var tmp0_safe_receiver = getValuesList(variant, element);
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.bitflag;
@@ -20458,7 +27817,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     var value = tmp_3;
     var tmp_4 = '(' + value.name + ')';
-    return plus_0(items, InlayHintImpl_init_$Create$(end, tmp_4, null, null, null, null, null, null, 252, null));
+    return plus_1(items, InlayHintImpl_init_$Create$(end, tmp_4, null, null, null, null, null, null, 252, null));
   };
   ArgumentInlayTypeHint$ASSUMED_EVENT_SCRIPT_NAME_HINT.prototype.provideHints_nwvsp8_k$ = function (variant, element) {
     return this.provideHints_gymhgn_k$(variant, element instanceof Pair ? element : THROW_CCE());
@@ -20653,10 +28012,10 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     interfaces: []
   };
   var ArgumentInlayTypeHint_COMMAND_RETURN_TYPE_instance;
-  function values_13() {
+  function values_19() {
     return [ArgumentInlayTypeHint_ATTRIBUTE_BITFLAGS_ARGUMENT_HINT_getInstance(), ArgumentInlayTypeHint_ASSUMED_GENUS_NAME_HINT_getInstance(), ArgumentInlayTypeHint_ASSUMED_VALUE_NAME_HINT_getInstance(), ArgumentInlayTypeHint_ASSUMED_EVENT_SCRIPT_NAME_HINT_getInstance(), ArgumentInlayTypeHint_DDE_PIC_DIMENSIONS_getInstance(), ArgumentInlayTypeHint_C1_CLAS_VALUE_getInstance(), ArgumentInlayTypeHint_COMMAND_RETURN_TYPE_getInstance()];
   }
-  function valueOf_13(value) {
+  function valueOf_19(value) {
     switch (value) {
       case 'ATTRIBUTE_BITFLAGS_ARGUMENT_HINT':
         return ArgumentInlayTypeHint_ATTRIBUTE_BITFLAGS_ARGUMENT_HINT_getInstance();
@@ -20734,6 +28093,34 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       break $l$block;
     }
     var values = tmp$ret$0;
+    var tmp;
+    var tmp$ret$2;
+    $l$block_1: {
+      var tmp0_lowercase_0 = typeList.name;
+      var tmp$ret$1;
+      $l$block_0: {
+        tmp$ret$1 = tmp0_lowercase_0;
+        break $l$block_0;
+      }
+      tmp$ret$2 = tmp$ret$1.toLowerCase();
+      break $l$block_1;
+    }
+    var tmp_0 = tmp$ret$2;
+    if (startsWith$default_0(tmp_0, 'attr', false, 2, null)) {
+      var tmp$ret$3;
+      $l$block_2: {
+        var tmp1_toRegex_0 = RegexOption_IGNORE_CASE_getInstance();
+        tmp$ret$3 = Regex_init_$Create$_0('^suffers?\\s+', tmp1_toRegex_0);
+        break $l$block_2;
+      }
+      var regex = tmp$ret$3;
+      tmp = getBitFlagText$lambda(regex);
+    } else {
+      {
+        tmp = getBitFlagText$lambda_0();
+      }
+    }
+    var stripSuffers = tmp;
     var indexedObject = typeList.values;
     var inductionVariable = 0;
     var last = indexedObject.length;
@@ -20742,15 +28129,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       inductionVariable = inductionVariable + 1 | 0;
       try {
         var tmp1_elvis_lhs = typeListValue.intValue;
-        var tmp;
+        var tmp_1;
         if (tmp1_elvis_lhs == null) {
           continue $l$loop;
         } else {
-          tmp = tmp1_elvis_lhs;
+          tmp_1 = tmp1_elvis_lhs;
         }
-        var typeListValueValue = tmp;
+        var typeListValueValue = tmp_1;
         if ((bitFlagValue & typeListValueValue) > 0) {
-          values.add_1j60pz_k$(typeListValue.name);
+          var name = stripSuffers(typeListValue.name);
+          values.add_1j60pz_k$(name);
           Unit_getInstance();
         }
       } catch ($p) {
@@ -20762,8 +28150,8 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         }
       }
     }
-    var tmp_0 = filterNotNull(values);
-    return joinToString$default_0(tmp_0, delimiter, null, null, 0, null, null, 62, null);
+    var tmp_2 = filterNotNull(values);
+    return joinToString$default_0(tmp_2, delimiter, null, null, 0, null, null, 62, null);
   }
   function getValuesList(variant, element) {
     var tmp0_container = element;
@@ -20878,6 +28266,40 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     var valuesListValue = tmp_0;
     return valuesListValue.name;
+  }
+  function getBitFlagText$lambda($regex) {
+    return function (name) {
+      var tmp;
+      var tmp$ret$1;
+      $l$block_0: {
+        var tmp$ret$0;
+        $l$block: {
+          tmp$ret$0 = name;
+          break $l$block;
+        }
+        tmp$ret$1 = tmp$ret$0.toLowerCase();
+        break $l$block_0;
+      }
+      var tmp_0 = tmp$ret$1;
+      if (startsWith$default_0(tmp_0, 'suffer', false, 2, null)) {
+        var tmp$ret$2;
+        $l$block_1: {
+          tmp$ret$2 = $regex.replace_838ra0_k$(name, '');
+          break $l$block_1;
+        }
+        tmp = tmp$ret$2;
+      } else {
+        {
+          tmp = name;
+        }
+      }
+      return tmp;
+    };
+  }
+  function getBitFlagText$lambda_0() {
+    return function (name) {
+      return name;
+    };
   }
   function ArgumentInlayTypeHint_ATTRIBUTE_BITFLAGS_ARGUMENT_HINT_getInstance() {
     ArgumentInlayTypeHint_initEntries();
@@ -21024,14 +28446,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       tmp_3 = tmp3_elvis_lhs;
     }
     var typeList = tmp_3;
-    var tmp4_elvis_lhs = end$default(expression, null, null, 3, null);
-    var tmp_4;
-    if (tmp4_elvis_lhs == null) {
-      return _get_EMPTY_INLAY_LIST__2610684891();
-    } else {
-      tmp_4 = tmp4_elvis_lhs;
-    }
-    var position = tmp_4;
+    var position = end$default(expression, null, null, 3, null);
     return getBitFlagHintValues(typeList, bitFlagValue, position);
   };
   EqualityInlayHints$ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS.prototype.provideHints_nwvsp8_k$ = function (variant, element) {
@@ -21207,16 +28622,9 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       var tmp_13 = ensureNotNull(element.second);
       tmp_11 = end$default(tmp_13, null, null, 3, null);
     }
-    var tmp5_elvis_lhs = tmp_11;
-    var tmp_14;
-    if (tmp5_elvis_lhs == null) {
-      return _get_EMPTY_INLAY_LIST__2610684891();
-    } else {
-      tmp_14 = tmp5_elvis_lhs;
-    }
-    var position = tmp_14;
-    var tmp_15 = '(' + valuesListValue.name + ')';
-    return listOf_0(InlayHintImpl_init_$Create$(position, tmp_15, null, null, null, null, null, null, 252, null));
+    var position = tmp_11;
+    var tmp_14 = '(' + valuesListValue.name + ')';
+    return listOf_0(InlayHintImpl_init_$Create$(position, tmp_14, null, null, null, null, null, null, 252, null));
   };
   EqualityInlayHints$ASSUMED_EQ_VALUE_NAME_HINT.prototype.provideHints_nwvsp8_k$ = function (variant, element) {
     return this.provideHints_dv9h9n_k$(variant, element instanceof EqualityStatement ? element : THROW_CCE());
@@ -21227,10 +28635,10 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     interfaces: []
   };
   var EqualityInlayHints_ASSUMED_EQ_VALUE_NAME_HINT_instance;
-  function values_14() {
+  function values_20() {
     return [EqualityInlayHints_ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS_getInstance(), EqualityInlayHints_ASSUMED_EQ_VALUE_NAME_HINT_getInstance()];
   }
-  function valueOf_14(value) {
+  function valueOf_20(value) {
     switch (value) {
       case 'ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS':
         return EqualityInlayHints_ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS_getInstance();
@@ -21300,8 +28708,8 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     $l$block_2: {
       var tmp$ret$1;
       $l$block_0: {
-        var tmp0_plus_0 = Companion_getInstance_12()._get_options__2046994483_xuq71v_k$();
-        var tmp1_plus_0 = Companion_getInstance_13()._get_options__2046994483_xuq71v_k$();
+        var tmp0_plus_0 = Companion_getInstance_17()._get_options__2046994483_xuq71v_k$();
+        var tmp1_plus_0 = Companion_getInstance_18()._get_options__2046994483_xuq71v_k$();
         var tmp$ret$0;
         $l$block: {
           tmp$ret$0 = tmp0_plus_0;
@@ -21311,7 +28719,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         break $l$block_0;
       }
       var tmp2_plus_0 = tmp$ret$1;
-      var tmp3_plus_0 = Companion_getInstance_14()._get_options__2046994483_xuq71v_k$();
+      var tmp3_plus_0 = Companion_getInstance_19()._get_options__2046994483_xuq71v_k$();
       var tmp$ret$2;
       $l$block_1: {
         tmp$ret$2 = tmp2_plus_0;
@@ -21355,7 +28763,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
             if (tmp_1 > (tmp0_elvis_lhs_7 == null ? 2 : tmp0_elvis_lhs_7)) {
               var tmp$ret$0;
               $l$block: {
-                var tmp1_safe_receiver_9 = Companion_getInstance_12().resolve_allvw_k$(variant, disabled, folds, element_2_3);
+                var tmp1_safe_receiver_9 = Companion_getInstance_17().resolve_allvw_k$(variant, disabled, folds, element_2_3);
                 var tmp0_orEmpty_0_8 = tmp1_safe_receiver_9 == null ? null : tmp1_safe_receiver_9.provideHints_nwvsp8_k$(variant, element_2_3);
                 var tmp0_elvis_lhs_1_10 = tmp0_orEmpty_0_8;
                 tmp$ret$0 = tmp0_elvis_lhs_1_10 == null ? emptyList() : tmp0_elvis_lhs_1_10;
@@ -21385,7 +28793,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
                     var element_6_16 = new Pair(element_2_3, element_2_3_14);
                     var tmp$ret$1;
                     $l$block_0: {
-                      var tmp0_safe_receiver_8_18 = Companion_getInstance_13().resolve_v2948s_k$(variant, disabled, folds, element_6_16);
+                      var tmp0_safe_receiver_8_18 = Companion_getInstance_18().resolve_v2948s_k$(variant, disabled, folds, element_6_16);
                       var tmp0_orEmpty_0_7_17 = tmp0_safe_receiver_8_18 == null ? null : tmp0_safe_receiver_8_18.provideHints_nwvsp8_k$(variant, element_6_16);
                       var tmp0_elvis_lhs_1_9_19 = tmp0_orEmpty_0_7_17;
                       tmp$ret$1 = tmp0_elvis_lhs_1_9_19 == null ? emptyList() : tmp0_elvis_lhs_1_9_19;
@@ -21404,7 +28812,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
               tmp$ret$4 = tmp$ret$3;
               break $l$block_3;
             }
-            tmp$ret$5 = plus_1(commandHints_6, tmp$ret$4);
+            tmp$ret$5 = plus_2(commandHints_6, tmp$ret$4);
             break $l$block_4;
           }
           var list_3_4 = tmp$ret$5;
@@ -21434,7 +28842,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
           $l$block_8: {
             var tmp$ret$8;
             $l$block_7: {
-              var tmp0_safe_receiver_7 = Companion_getInstance_14().resolve_71mjvc_k$(variant, disabled, folds, element_2_3_0);
+              var tmp0_safe_receiver_7 = Companion_getInstance_19().resolve_71mjvc_k$(variant, disabled, folds, element_2_3_0);
               var tmp0_orEmpty_0_6 = tmp0_safe_receiver_7 == null ? null : tmp0_safe_receiver_7.provideHints_nwvsp8_k$(variant, element_2_3_0);
               var tmp0_elvis_lhs_1_8 = tmp0_orEmpty_0_6;
               tmp$ret$8 = tmp0_elvis_lhs_1_8 == null ? emptyList() : tmp0_elvis_lhs_1_8;
@@ -21458,7 +28866,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     $l$block_13: {
       var tmp$ret$13;
       $l$block_12: {
-        var tmp1_distinctBy_0 = plus_1(commandHints, equalityStatementHints);
+        var tmp1_distinctBy_0 = plus_2(commandHints, equalityStatementHints);
         var set_1 = HashSet_init_$Create$();
         var list_2 = ArrayList_init_$Create$_0();
         var tmp0_iterator_3 = tmp1_distinctBy_0.iterator_jk1svi_k$();
@@ -21518,16 +28926,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     kind: 'interface',
     interfaces: []
   };
-  function sam$kotlin_Comparator$0_4(function_0) {
+  function sam$kotlin_Comparator$0_11(function_0) {
     this.function_1 = function_0;
   }
-  sam$kotlin_Comparator$0_4.prototype.compare_6tbigh_k$ = function (a, b) {
+  sam$kotlin_Comparator$0_11.prototype.compare_6tbigh_k$ = function (a, b) {
     return this.function_1(a, b);
   };
-  sam$kotlin_Comparator$0_4.prototype.compare = function (a, b) {
+  sam$kotlin_Comparator$0_11.prototype.compare = function (a, b) {
     return this.compare_6tbigh_k$(a, b);
   };
-  sam$kotlin_Comparator$0_4.$metadata$ = {
+  sam$kotlin_Comparator$0_11.$metadata$ = {
     simpleName: 'sam$kotlin_Comparator$0',
     kind: 'class',
     interfaces: [Comparator]
@@ -21557,11 +28965,11 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return function () {
       var tmp$ret$1;
       $l$block_0: {
-        var tmp0_sortedByDescending_0 = values_15();
+        var tmp0_sortedByDescending_0 = values_21();
         var tmp$ret$0;
         $l$block: {
           var tmp = CommandInlayHintsProvider$Companion$values$delegate$lambda$lambda();
-          tmp$ret$0 = new sam$kotlin_Comparator$0_4(tmp);
+          tmp$ret$0 = new sam$kotlin_Comparator$0_11(tmp);
           break $l$block;
         }
         tmp$ret$1 = sortedWith_0(tmp0_sortedByDescending_0, tmp$ret$0);
@@ -21570,18 +28978,18 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       return tmp$ret$1;
     };
   }
-  function Companion_10() {
-    Companion_instance_10 = this;
+  function Companion_15() {
+    Companion_instance_15 = this;
     this.prefix_1 = 'inlayHints.';
     var tmp = this;
     tmp.values$delegate_1 = lazy(CommandInlayHintsProvider$Companion$values$delegate$lambda());
   }
-  Companion_10.prototype._get_prefix__1966677689_wiwq7t_k$ = function () {
+  Companion_15.prototype._get_prefix__1966677689_wiwq7t_k$ = function () {
     return this.prefix_1;
   };
-  Companion_10.prototype.resolve_allvw_k$ = function (variant, disabled, folds, element) {
+  Companion_15.prototype.resolve_allvw_k$ = function (variant, disabled, folds, element) {
     var tmp;
-    if (!inRange_1(element.textRange, folds)) {
+    if (!inRange_2(element.textRange, folds)) {
       var tmp$ret$1;
       $l$block_1: {
         var tmp0_firstOrNull_0 = this._get_values__2516944425_tel787_k$();
@@ -21591,7 +28999,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
           var tmp$ret$0;
           $l$block: {
             var tmp_0;
-            Companion_getInstance_12();
+            Companion_getInstance_17();
             if (!contains_1(disabled, 'inlayHints.' + element_2._get_option__1035863350_h4q59y_k$())) {
               tmp_0 = element_2.isApplicable_k6d0ni_k$(variant, element);
             } else {
@@ -21617,7 +29025,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp;
   };
-  Companion_10.prototype._get_values__2516944425_tel787_k$ = function () {
+  Companion_15.prototype._get_values__2516944425_tel787_k$ = function () {
     var tmp$ret$0;
     $l$block: {
       var tmp0_getValue_0 = values$factory();
@@ -21626,7 +29034,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$0;
   };
-  Companion_10.prototype._get_options__2046994483_xuq71v_k$ = function () {
+  Companion_15.prototype._get_options__2046994483_xuq71v_k$ = function () {
     var tmp$ret$3;
     $l$block_2: {
       var tmp$ret$2;
@@ -21640,7 +29048,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
             var item_2_3 = tmp0_iterator_1_2.next_20eer_k$();
             var tmp$ret$0;
             $l$block: {
-              Companion_getInstance_12();
+              Companion_getInstance_17();
               tmp$ret$0 = 'inlayHints.' + item_2_3._get_option__1035863350_h4q59y_k$();
               break $l$block;
             }
@@ -21659,35 +29067,35 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$3;
   };
-  Companion_10.$metadata$ = {
+  Companion_15.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_10;
-  function Companion_getInstance_12() {
-    if (Companion_instance_10 == null)
-      new Companion_10();
-    return Companion_instance_10;
+  var Companion_instance_15;
+  function Companion_getInstance_17() {
+    if (Companion_instance_15 == null)
+      new Companion_15();
+    return Companion_instance_15;
   }
   function CommandInlayHintsProvider() {
-    Companion_getInstance_12();
+    Companion_getInstance_17();
   }
   CommandInlayHintsProvider.$metadata$ = {
     simpleName: 'CommandInlayHintsProvider',
     kind: 'interface',
     interfaces: [CaosScriptHintsProvider]
   };
-  function sam$kotlin_Comparator$0_5(function_0) {
+  function sam$kotlin_Comparator$0_12(function_0) {
     this.function_1 = function_0;
   }
-  sam$kotlin_Comparator$0_5.prototype.compare_6tbigh_k$ = function (a, b) {
+  sam$kotlin_Comparator$0_12.prototype.compare_6tbigh_k$ = function (a, b) {
     return this.function_1(a, b);
   };
-  sam$kotlin_Comparator$0_5.prototype.compare = function (a, b) {
+  sam$kotlin_Comparator$0_12.prototype.compare = function (a, b) {
     return this.compare_6tbigh_k$(a, b);
   };
-  sam$kotlin_Comparator$0_5.$metadata$ = {
+  sam$kotlin_Comparator$0_12.$metadata$ = {
     simpleName: 'sam$kotlin_Comparator$0',
     kind: 'class',
     interfaces: [Comparator]
@@ -21717,11 +29125,11 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return function () {
       var tmp$ret$1;
       $l$block_0: {
-        var tmp0_sortedByDescending_0 = values_13();
+        var tmp0_sortedByDescending_0 = values_19();
         var tmp$ret$0;
         $l$block: {
           var tmp = ArgumentInlayHintsProvider$Companion$values$delegate$lambda$lambda();
-          tmp$ret$0 = new sam$kotlin_Comparator$0_5(tmp);
+          tmp$ret$0 = new sam$kotlin_Comparator$0_12(tmp);
           break $l$block;
         }
         tmp$ret$1 = sortedWith_0(tmp0_sortedByDescending_0, tmp$ret$0);
@@ -21730,18 +29138,18 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       return tmp$ret$1;
     };
   }
-  function Companion_11() {
-    Companion_instance_11 = this;
+  function Companion_16() {
+    Companion_instance_16 = this;
     this.prefix_1 = 'inlayHints.';
     var tmp = this;
     tmp.values$delegate_1 = lazy(ArgumentInlayHintsProvider$Companion$values$delegate$lambda());
   }
-  Companion_11.prototype._get_prefix__1966677689_wiwq7t_k$ = function () {
+  Companion_16.prototype._get_prefix__1966677689_wiwq7t_k$ = function () {
     return this.prefix_1;
   };
-  Companion_11.prototype.resolve_v2948s_k$ = function (variant, disabled, folds, element) {
+  Companion_16.prototype.resolve_v2948s_k$ = function (variant, disabled, folds, element) {
     var tmp;
-    if (!inRange_1(element._get_second__4255435031_njbah_k$().textRange, folds)) {
+    if (!inRange_2(element._get_second__4255435031_njbah_k$().textRange, folds)) {
       var tmp$ret$1;
       $l$block_1: {
         var tmp0_firstOrNull_0 = this._get_values__2516944425_tel787_k$();
@@ -21751,7 +29159,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
           var tmp$ret$0;
           $l$block: {
             var tmp_0;
-            Companion_getInstance_13();
+            Companion_getInstance_18();
             if (!contains_1(disabled, 'inlayHints.' + element_2._get_option__1035863350_h4q59y_k$())) {
               tmp_0 = element_2.isApplicable_k6d0ni_k$(variant, element);
             } else {
@@ -21777,7 +29185,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp;
   };
-  Companion_11.prototype._get_values__2516944425_tel787_k$ = function () {
+  Companion_16.prototype._get_values__2516944425_tel787_k$ = function () {
     var tmp$ret$0;
     $l$block: {
       var tmp0_getValue_0 = values$factory_0();
@@ -21786,7 +29194,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$0;
   };
-  Companion_11.prototype._get_options__2046994483_xuq71v_k$ = function () {
+  Companion_16.prototype._get_options__2046994483_xuq71v_k$ = function () {
     var tmp$ret$3;
     $l$block_2: {
       var tmp$ret$2;
@@ -21800,7 +29208,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
             var item_2_3 = tmp0_iterator_1_2.next_20eer_k$();
             var tmp$ret$0;
             $l$block: {
-              Companion_getInstance_13();
+              Companion_getInstance_18();
               tmp$ret$0 = 'inlayHints.' + item_2_3._get_option__1035863350_h4q59y_k$();
               break $l$block;
             }
@@ -21819,19 +29227,19 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$3;
   };
-  Companion_11.$metadata$ = {
+  Companion_16.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_11;
-  function Companion_getInstance_13() {
-    if (Companion_instance_11 == null)
-      new Companion_11();
-    return Companion_instance_11;
+  var Companion_instance_16;
+  function Companion_getInstance_18() {
+    if (Companion_instance_16 == null)
+      new Companion_16();
+    return Companion_instance_16;
   }
   function ArgumentInlayHintsProvider() {
-    Companion_getInstance_13();
+    Companion_getInstance_18();
   }
   ArgumentInlayHintsProvider.$metadata$ = {
     simpleName: 'ArgumentInlayHintsProvider',
@@ -21847,16 +29255,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$0;
   }
-  function sam$kotlin_Comparator$0_6(function_0) {
+  function sam$kotlin_Comparator$0_13(function_0) {
     this.function_1 = function_0;
   }
-  sam$kotlin_Comparator$0_6.prototype.compare_6tbigh_k$ = function (a, b) {
+  sam$kotlin_Comparator$0_13.prototype.compare_6tbigh_k$ = function (a, b) {
     return this.function_1(a, b);
   };
-  sam$kotlin_Comparator$0_6.prototype.compare = function (a, b) {
+  sam$kotlin_Comparator$0_13.prototype.compare = function (a, b) {
     return this.compare_6tbigh_k$(a, b);
   };
-  sam$kotlin_Comparator$0_6.$metadata$ = {
+  sam$kotlin_Comparator$0_13.$metadata$ = {
     simpleName: 'sam$kotlin_Comparator$0',
     kind: 'class',
     interfaces: [Comparator]
@@ -21886,11 +29294,11 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return function () {
       var tmp$ret$1;
       $l$block_0: {
-        var tmp0_sortedByDescending_0 = values_14();
+        var tmp0_sortedByDescending_0 = values_20();
         var tmp$ret$0;
         $l$block: {
           var tmp = EqualityInlayHintsProvider$Companion$values$delegate$lambda$lambda();
-          tmp$ret$0 = new sam$kotlin_Comparator$0_6(tmp);
+          tmp$ret$0 = new sam$kotlin_Comparator$0_13(tmp);
           break $l$block;
         }
         tmp$ret$1 = sortedWith_0(tmp0_sortedByDescending_0, tmp$ret$0);
@@ -21899,18 +29307,18 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       return tmp$ret$1;
     };
   }
-  function Companion_12() {
-    Companion_instance_12 = this;
+  function Companion_17() {
+    Companion_instance_17 = this;
     this.prefix_1 = 'inlayHints.equality.';
     var tmp = this;
     tmp.values$delegate_1 = lazy(EqualityInlayHintsProvider$Companion$values$delegate$lambda());
   }
-  Companion_12.prototype._get_prefix__1966677689_wiwq7t_k$ = function () {
+  Companion_17.prototype._get_prefix__1966677689_wiwq7t_k$ = function () {
     return this.prefix_1;
   };
-  Companion_12.prototype.resolve_71mjvc_k$ = function (variant, disabled, folds, element) {
+  Companion_17.prototype.resolve_71mjvc_k$ = function (variant, disabled, folds, element) {
     var tmp;
-    if (!inRange_1(element.textRange, folds)) {
+    if (!inRange_2(element.textRange, folds)) {
       var tmp$ret$1;
       $l$block_1: {
         var tmp0_firstOrNull_0 = _get_values__2516944425(this);
@@ -21920,7 +29328,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
           var tmp$ret$0;
           $l$block: {
             var tmp_0;
-            Companion_getInstance_14();
+            Companion_getInstance_19();
             if (!contains_1(disabled, 'inlayHints.equality.' + element_2._get_option__1035863350_h4q59y_k$())) {
               tmp_0 = element_2.isApplicable_k6d0ni_k$(variant, element);
             } else {
@@ -21946,7 +29354,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp;
   };
-  Companion_12.prototype._get_options__2046994483_xuq71v_k$ = function () {
+  Companion_17.prototype._get_options__2046994483_xuq71v_k$ = function () {
     var tmp$ret$3;
     $l$block_2: {
       var tmp$ret$2;
@@ -21960,7 +29368,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
             var item_2_3 = tmp0_iterator_1_2.next_20eer_k$();
             var tmp$ret$0;
             $l$block: {
-              Companion_getInstance_14();
+              Companion_getInstance_19();
               tmp$ret$0 = 'inlayHints.equality.' + item_2_3._get_option__1035863350_h4q59y_k$();
               break $l$block;
             }
@@ -21979,19 +29387,19 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$3;
   };
-  Companion_12.$metadata$ = {
+  Companion_17.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_12;
-  function Companion_getInstance_14() {
-    if (Companion_instance_12 == null)
-      new Companion_12();
-    return Companion_instance_12;
+  var Companion_instance_17;
+  function Companion_getInstance_19() {
+    if (Companion_instance_17 == null)
+      new Companion_17();
+    return Companion_instance_17;
   }
   function EqualityInlayHintsProvider() {
-    Companion_getInstance_14();
+    Companion_getInstance_19();
   }
   EqualityInlayHintsProvider.$metadata$ = {
     simpleName: 'EqualityInlayHintsProvider',
@@ -22164,7 +29572,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.copy_7yyzle_k$(position, label, kind, textEdits, tooltip, paddingLeft, paddingRight, data);
   };
   InlayHintImpl.prototype.toString = function () {
-    return 'InlayHintImpl(position=' + this.position_1 + ', label=' + this.label_1 + ', kind=' + this.kind_1 + ', textEdits=' + toString_0(this.textEdits_1) + ', tooltip=' + this.tooltip_1 + ', paddingLeft=' + this.paddingLeft_1 + ', paddingRight=' + this.paddingRight_1 + ', data=' + toString(this.data_1) + ')';
+    return 'InlayHintImpl(position=' + this.position_1 + ', label=' + this.label_1 + ', kind=' + this.kind_1 + ', textEdits=' + toString(this.textEdits_1) + ', tooltip=' + this.tooltip_1 + ', paddingLeft=' + this.paddingLeft_1 + ', paddingRight=' + this.paddingRight_1 + ', data=' + toString_0(this.data_1) + ')';
   };
   InlayHintImpl.$metadata$ = {
     simpleName: 'InlayHintImpl',
@@ -22374,9 +29782,9 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     if (_get_setLike__3523698456().contains_2ehdt1_k$(referencedCommand.command)) {
       return _get_EMPTY_INLAY_LIST__2610684891();
     }
-    var skipLast_0 = skipLast(Companion_getInstance_15(), element);
+    var skipLast_0 = skipLast(Companion_getInstance_20(), element);
     var parameterStructs = referencedCommand.parameters;
-    var parameters = getParametersAsStrings(Companion_getInstance_15(), parameterStructs, skipLast_0);
+    var parameters = getParametersAsStrings(Companion_getInstance_20(), parameterStructs, skipLast_0);
     var arguments_0 = element.arguments;
     var tmp$ret$3;
     $l$block_4: {
@@ -22442,7 +29850,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       tmp$ret$3 = tmp$ret$2;
       break $l$block_4;
     }
-    return toList(tmp$ret$3);
+    return toList_0(tmp$ret$3);
   };
   ParameterHintsProvider$PARAMETER_NAME_HINT.prototype.provideHints_nwvsp8_k$ = function (variant, element) {
     return this.provideHints_g9yps9_k$(variant, element instanceof CommandCall ? element : THROW_CCE());
@@ -22486,7 +29894,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var parameters = command.parameters;
     var lastArgument = lastOrNull_0(arguments_0);
     var tmp_1;
-    if (!skipLast(Companion_getInstance_15(), lvalueElement) ? !(nullIfEmpty(command.lvalueName) == null) : false) {
+    if (!skipLast(Companion_getInstance_20(), lvalueElement) ? !(nullIfEmpty(command.lvalueName) == null) : false) {
       var tmp$ret$2;
       $l$block_1: {
         var tmp$ret$1;
@@ -22512,7 +29920,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         tmp$ret$2 = tmp$ret$1;
         break $l$block_1;
       }
-      tmp_1 = plus_0(tmp$ret$2, ensureNotNull(command.lvalueName));
+      tmp_1 = plus_1(tmp$ret$2, ensureNotNull(command.lvalueName));
     } else {
       var tmp$ret$5;
       $l$block_4: {
@@ -22738,7 +30146,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       tmp$ret$23 = tmp$ret$22;
       break $l$block_26;
     }
-    var hints = plus_1(tmp_5, tmp$ret$23);
+    var hints = plus_2(tmp_5, tmp$ret$23);
     return distinct(hints);
   };
   ParameterHintsProvider$SETV_PARAMETER_NAME_HINT.prototype.provideHints_nwvsp8_k$ = function (variant, element) {
@@ -22750,25 +30158,25 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     interfaces: []
   };
   var ParameterHintsProvider_SETV_PARAMETER_NAME_HINT_instance;
-  function Companion_13() {
-    Companion_instance_13 = this;
+  function Companion_18() {
+    Companion_instance_18 = this;
   }
-  Companion_13.$metadata$ = {
+  Companion_18.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_13;
-  function Companion_getInstance_15() {
+  var Companion_instance_18;
+  function Companion_getInstance_20() {
     ParameterHintsProvider_initEntries();
-    if (Companion_instance_13 == null)
-      new Companion_13();
-    return Companion_instance_13;
+    if (Companion_instance_18 == null)
+      new Companion_18();
+    return Companion_instance_18;
   }
-  function values_15() {
+  function values_21() {
     return [ParameterHintsProvider_PARAMETER_NAME_HINT_getInstance(), ParameterHintsProvider_SETV_PARAMETER_NAME_HINT_getInstance()];
   }
-  function valueOf_15(value) {
+  function valueOf_21(value) {
     switch (value) {
       case 'PARAMETER_NAME_HINT':
         return ParameterHintsProvider_PARAMETER_NAME_HINT_getInstance();
@@ -22787,7 +30195,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     ParameterHintsProvider_entriesInitialized = true;
     ParameterHintsProvider_PARAMETER_NAME_HINT_instance = new ParameterHintsProvider$PARAMETER_NAME_HINT();
     ParameterHintsProvider_SETV_PARAMETER_NAME_HINT_instance = new ParameterHintsProvider$SETV_PARAMETER_NAME_HINT();
-    Companion_getInstance_15();
+    Companion_getInstance_20();
   }
   function ParameterHintsProvider(name, ordinal, option, description, priority) {
     Enum.call(this, name, ordinal);
@@ -22831,13 +30239,13 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var CaosScriptVarTokenGroup_VAxx_instance;
   var CaosScriptVarTokenGroup_OVxx_instance;
   var CaosScriptVarTokenGroup_MVxx_instance;
-  function Companion_14() {
-    Companion_instance_14 = this;
+  function Companion_19() {
+    Companion_instance_19 = this;
   }
-  Companion_14.prototype.fromValue_sa2c9m_k$ = function (value) {
+  Companion_19.prototype.fromValue_sa2c9m_k$ = function (value) {
     var tmp$ret$1;
     $l$block_0: {
-      var tmp0_first_0 = values_16();
+      var tmp0_first_0 = values_22();
       var indexedObject = tmp0_first_0;
       var inductionVariable = 0;
       var last = indexedObject.length;
@@ -22859,7 +30267,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$1;
   };
-  Companion_14.prototype.fromText_7sfgcq_k$ = function (text) {
+  Companion_19.prototype.fromText_7sfgcq_k$ = function (text) {
     var tmp$ret$4;
     $l$block_3: {
       var tmp$ret$3;
@@ -22885,7 +30293,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         break $l$block_2;
       }
       var tmp2_trim_0 = tmp$ret$3;
-      tmp$ret$4 = toString_0(trim(isCharSequence(tmp2_trim_0) ? tmp2_trim_0 : THROW_CCE()));
+      tmp$ret$4 = toString(trim(isCharSequence(tmp2_trim_0) ? tmp2_trim_0 : THROW_CCE()));
       break $l$block_3;
     }
     var variablePrefix = tmp$ret$4;
@@ -22912,22 +30320,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp;
   };
-  Companion_14.$metadata$ = {
+  Companion_19.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_14;
-  function Companion_getInstance_16() {
+  var Companion_instance_19;
+  function Companion_getInstance_21() {
     CaosScriptVarTokenGroup_initEntries();
-    if (Companion_instance_14 == null)
-      new Companion_14();
-    return Companion_instance_14;
+    if (Companion_instance_19 == null)
+      new Companion_19();
+    return Companion_instance_19;
   }
-  function values_16() {
+  function values_22() {
     return [CaosScriptVarTokenGroup_UNKNOWN_getInstance(), CaosScriptVarTokenGroup_VARx_getInstance(), CaosScriptVarTokenGroup_OBVx_getInstance(), CaosScriptVarTokenGroup_VAxx_getInstance(), CaosScriptVarTokenGroup_OVxx_getInstance(), CaosScriptVarTokenGroup_MVxx_getInstance()];
   }
-  function valueOf_16(value) {
+  function valueOf_22(value) {
     switch (value) {
       case 'UNKNOWN':
         return CaosScriptVarTokenGroup_UNKNOWN_getInstance();
@@ -22958,7 +30366,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     CaosScriptVarTokenGroup_VAxx_instance = new CaosScriptVarTokenGroup('VAxx', 3, 'VAxx');
     CaosScriptVarTokenGroup_OVxx_instance = new CaosScriptVarTokenGroup('OVxx', 4, 'OVxx');
     CaosScriptVarTokenGroup_MVxx_instance = new CaosScriptVarTokenGroup('MVxx', 5, 'MVxx');
-    Companion_getInstance_16();
+    Companion_getInstance_21();
   }
   function CaosScriptVarTokenGroup(name, ordinal, value) {
     Enum.call(this, name, ordinal);
@@ -23109,8 +30517,8 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       new UNKNOWN();
     return UNKNOWN_instance;
   }
-  function Companion_15() {
-    Companion_instance_15 = this;
+  function Companion_20() {
+    Companion_instance_20 = this;
     var tmp = this;
     var tmp$ret$0;
     $l$block: {
@@ -23119,7 +30527,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     tmp.others_1 = tmp$ret$0;
   }
-  Companion_15.prototype.fromVal_tp3zbq_k$ = function (variant) {
+  Companion_20.prototype.fromVal_tp3zbq_k$ = function (variant) {
     var tmp0_subject = variant;
     var tmp;
     switch (tmp0_subject) {
@@ -23169,19 +30577,19 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp;
   };
-  Companion_15.$metadata$ = {
+  Companion_20.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_15;
-  function Companion_getInstance_17() {
-    if (Companion_instance_15 == null)
-      new Companion_15();
-    return Companion_instance_15;
+  var Companion_instance_20;
+  function Companion_getInstance_22() {
+    if (Companion_instance_20 == null)
+      new Companion_20();
+    return Companion_instance_20;
   }
   function CaosVariant(code, fullName, index) {
-    Companion_getInstance_17();
+    Companion_getInstance_22();
     this.code_1 = code;
     this.fullName_1 = fullName;
     this.index_1 = index;
@@ -23242,10 +30650,10 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var CommandType_COMMAND_instance;
   var CommandType_RVALUE_instance;
   var CommandType_LVALUE_instance;
-  function values_17() {
+  function values_23() {
     return [CommandType_COMMAND_getInstance(), CommandType_RVALUE_getInstance(), CommandType_LVALUE_getInstance()];
   }
-  function valueOf_17(value) {
+  function valueOf_23(value) {
     switch (value) {
       case 'COMMAND':
         return CommandType_COMMAND_getInstance();
@@ -23346,7 +30754,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     ValueTypeSerializer_instance = this;
   }
   ValueTypeSerializer.prototype.deserialize_2t41fm_k$ = function (decoder) {
-    return Companion_getInstance_18().fromIntValue_8xdq7p_k$(decoder.decodeInt_8iq8f5_k$());
+    return Companion_getInstance_23().fromIntValue_8xdq7p_k$(decoder.decodeInt_8iq8f5_k$());
   };
   ValueTypeSerializer.prototype._get_descriptor__684124924_bbb664_k$ = function () {
     return PrimitiveSerialDescriptor('value', INT_getInstance());
@@ -23390,15 +30798,17 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var ValueType_PLACEHOLDER_instance;
   var ValueType_COMMENT_instance;
   var ValueType_CAOS2_COMMENT_instance;
-  function Companion_16() {
-    Companion_instance_16 = this;
+  var ValueType_NEWLINE_instance;
+  var ValueType_SPACES_instance;
+  function Companion_21() {
+    Companion_instance_21 = this;
   }
-  Companion_16.prototype.fromSimpleName_e5eg4m_k$ = function (simpleName) {
+  Companion_21.prototype.fromSimpleName_e5eg4m_k$ = function (simpleName) {
     var tmp$ret$2;
     $l$block_1: {
       var tmp$ret$0;
       $l$block: {
-        tmp$ret$0 = toString_0(trim(isCharSequence(simpleName) ? simpleName : THROW_CCE()));
+        tmp$ret$0 = toString(trim(isCharSequence(simpleName) ? simpleName : THROW_CCE()));
         break $l$block;
       }
       var tmp0_lowercase_0 = tmp$ret$0;
@@ -23476,7 +30886,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp;
   };
-  Companion_16.prototype.simpleName_v18130_k$ = function (value) {
+  Companion_21.prototype.simpleName_v18130_k$ = function (value) {
     var tmp0_subject = value;
     switch (tmp0_subject) {
       case 1:
@@ -23519,7 +30929,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         return null;
     }
   };
-  Companion_16.prototype.fromIntValue_8xdq7p_k$ = function (value) {
+  Companion_21.prototype.fromIntValue_8xdq7p_k$ = function (value) {
     var tmp0_subject = value;
     var tmp;
     switch (tmp0_subject) {
@@ -23588,25 +30998,25 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp;
   };
-  Companion_16.prototype.serializer_9w0wvi_k$ = function () {
+  Companion_21.prototype.serializer_9w0wvi_k$ = function () {
     return ValueTypeSerializer_getInstance();
   };
-  Companion_16.$metadata$ = {
+  Companion_21.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_16;
-  function Companion_getInstance_18() {
+  var Companion_instance_21;
+  function Companion_getInstance_23() {
     ValueType_initEntries();
-    if (Companion_instance_16 == null)
-      new Companion_16();
-    return Companion_instance_16;
+    if (Companion_instance_21 == null)
+      new Companion_21();
+    return Companion_instance_21;
   }
-  function values_18() {
-    return [ValueType_INT_getInstance(), ValueType_FLOAT_getInstance(), ValueType_TOKEN_getInstance(), ValueType_STRING_getInstance(), ValueType_VARIABLE_getInstance(), ValueType_COMMAND_getInstance(), ValueType_C1_STRING_getInstance(), ValueType_BYTE_STRING_getInstance(), ValueType_AGENT_getInstance(), ValueType_ANY_getInstance(), ValueType_CONDITION_getInstance(), ValueType_DECIMAL_getInstance(), ValueType_ANIMATION_getInstance(), ValueType_HEXADECIMAL_getInstance(), ValueType_NULL_getInstance(), ValueType_PICT_DIMENSION_getInstance(), ValueType_EQ_OP_getInstance(), ValueType_EQ_JOIN_getInstance(), ValueType_UNKNOWN_getInstance(), ValueType_PLACEHOLDER_getInstance(), ValueType_COMMENT_getInstance(), ValueType_CAOS2_COMMENT_getInstance()];
+  function values_24() {
+    return [ValueType_INT_getInstance(), ValueType_FLOAT_getInstance(), ValueType_TOKEN_getInstance(), ValueType_STRING_getInstance(), ValueType_VARIABLE_getInstance(), ValueType_COMMAND_getInstance(), ValueType_C1_STRING_getInstance(), ValueType_BYTE_STRING_getInstance(), ValueType_AGENT_getInstance(), ValueType_ANY_getInstance(), ValueType_CONDITION_getInstance(), ValueType_DECIMAL_getInstance(), ValueType_ANIMATION_getInstance(), ValueType_HEXADECIMAL_getInstance(), ValueType_NULL_getInstance(), ValueType_PICT_DIMENSION_getInstance(), ValueType_EQ_OP_getInstance(), ValueType_EQ_JOIN_getInstance(), ValueType_UNKNOWN_getInstance(), ValueType_PLACEHOLDER_getInstance(), ValueType_COMMENT_getInstance(), ValueType_CAOS2_COMMENT_getInstance(), ValueType_NEWLINE_getInstance(), ValueType_SPACES_getInstance()];
   }
-  function valueOf_18(value) {
+  function valueOf_24(value) {
     switch (value) {
       case 'INT':
         return ValueType_INT_getInstance();
@@ -23652,6 +31062,10 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         return ValueType_COMMENT_getInstance();
       case 'CAOS2_COMMENT':
         return ValueType_CAOS2_COMMENT_getInstance();
+      case 'NEWLINE':
+        return ValueType_NEWLINE_getInstance();
+      case 'SPACES':
+        return ValueType_SPACES_getInstance();
       default:
         ValueType_initEntries();
         THROW_ISE();
@@ -23685,7 +31099,9 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     ValueType_PLACEHOLDER_instance = new ValueType('PLACEHOLDER', 19, -4, 'PLACEHOLDER');
     ValueType_COMMENT_instance = new ValueType('COMMENT', 20, -5, '*comment');
     ValueType_CAOS2_COMMENT_instance = new ValueType('CAOS2_COMMENT', 21, -6, '*#CAOS2Pray comment');
-    Companion_getInstance_18();
+    ValueType_NEWLINE_instance = new ValueType('NEWLINE', 22, -7, 'NEWLINE');
+    ValueType_SPACES_instance = new ValueType('SPACES', 23, -8, 'SPACES');
+    Companion_getInstance_23();
   }
   function ValueType(name, ordinal, value, simpleName) {
     Enum.call(this, name, ordinal);
@@ -23829,6 +31245,14 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function ValueType_CAOS2_COMMENT_getInstance() {
     ValueType_initEntries();
     return ValueType_CAOS2_COMMENT_instance;
+  }
+  function ValueType_NEWLINE_getInstance() {
+    ValueType_initEntries();
+    return ValueType_NEWLINE_instance;
+  }
+  function ValueType_SPACES_getInstance() {
+    ValueType_initEntries();
+    return ValueType_SPACES_instance;
   }
   var properties_initialized_ValueType_kt_1847154213;
   function init_properties_ValueType_kt_830853321() {
@@ -24282,7 +31706,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.copy_cmdvf1_k$(command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr);
   };
   ICaosCommand.prototype.toString = function () {
-    return 'ICaosCommand(command=' + this.command_1 + ', parameters=' + toString_0(this.parameters_1) + ', isLvalue=' + this.isLvalue_1 + ', isRvalue=' + this.isRvalue_1 + ', isCommand=' + this.isCommand_1 + ', returnTypeId=' + this.returnTypeId_1 + ', returnTypeName=' + this.returnTypeName_1 + ', variants=' + toString_0(this.variants_1) + ', description=' + this.description_1 + ', lvalueName=' + this.lvalueName_1 + ', returnValuesListIds=' + this.returnValuesListIds_1 + ', requiresOwnr=' + this.requiresOwnr_1 + ', commandGroup=' + this.commandGroup_1 + ', doifFormat=' + this.doifFormat_1 + ', requiresCreatureOwnr=' + this.requiresCreatureOwnr_1 + ')';
+    return 'ICaosCommand(command=' + this.command_1 + ', parameters=' + toString(this.parameters_1) + ', isLvalue=' + this.isLvalue_1 + ', isRvalue=' + this.isRvalue_1 + ', isCommand=' + this.isCommand_1 + ', returnTypeId=' + this.returnTypeId_1 + ', returnTypeName=' + this.returnTypeName_1 + ', variants=' + toString(this.variants_1) + ', description=' + this.description_1 + ', lvalueName=' + this.lvalueName_1 + ', returnValuesListIds=' + this.returnValuesListIds_1 + ', requiresOwnr=' + this.requiresOwnr_1 + ', commandGroup=' + this.commandGroup_1 + ', doifFormat=' + this.doifFormat_1 + ', requiresCreatureOwnr=' + this.requiresCreatureOwnr_1 + ')';
   };
   ICaosCommand.$metadata$ = {
     simpleName: 'ICaosCommand',
@@ -24368,6 +31792,8 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     this.PLACEHOLDER_TOKEN_1 = token('plch');
     this.COMMENT_1 = token('****');
     this.CAOS2_COMMENT_1 = token('*###');
+    this.NEWLINE_1 = token('\\r\\n');
+    this.SPACES_1 = token('_WS_');
   }
   TypeTokens.prototype._get_FLOAT__2288914709_x6co2z_k$ = function () {
     return this.FLOAT_1;
@@ -24419,6 +31845,12 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   };
   TypeTokens.prototype._get_CAOS2_COMMENT__940781601_fk47q9_k$ = function () {
     return this.CAOS2_COMMENT_1;
+  };
+  TypeTokens.prototype._get_NEWLINE__2683933_1lixp_k$ = function () {
+    return this.NEWLINE_1;
+  };
+  TypeTokens.prototype._get_SPACES__991158398_ge3ypq_k$ = function () {
+    return this.SPACES_1;
   };
   TypeTokens.$metadata$ = {
     simpleName: 'TypeTokens',
@@ -24492,6 +31924,14 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   Object.defineProperty(TypeTokens.prototype, 'CAOS2_COMMENT', {
     configurable: true,
     get: TypeTokens.prototype._get_CAOS2_COMMENT__940781601_fk47q9_k$
+  });
+  Object.defineProperty(TypeTokens.prototype, 'NEWLINE', {
+    configurable: true,
+    get: TypeTokens.prototype._get_NEWLINE__2683933_1lixp_k$
+  });
+  Object.defineProperty(TypeTokens.prototype, 'SPACES', {
+    configurable: true,
+    get: TypeTokens.prototype._get_SPACES__991158398_ge3ypq_k$
   });
   var TypeTokens_instance;
   function TypeTokens_getInstance() {
@@ -24790,7 +32230,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         var tmp$ret$3;
         $l$block_2: {
           var tmp = toJsCommand$lambda();
-          tmp$ret$3 = new sam$kotlin_Comparator$0_7(tmp);
+          tmp$ret$3 = new sam$kotlin_Comparator$0_14(tmp);
           break $l$block_2;
         }
         tmp$ret$4 = sortedWith(tmp1_sortedBy_0, tmp$ret$3);
@@ -24835,16 +32275,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var tmp15_isCommand = _this__1828080292._get_isCommand__1591387056_qbgy40_k$();
     return new ICaosCommand(tmp1_command, tmp2_parameters, tmp3_isLvalue, tmp4_isRvalue, tmp15_isCommand, tmp5_returnTypeId, tmp6_returnTypeName, tmp7_variants, tmp8_description, tmp11_lvalueName, tmp14_returnValuesListIds, tmp13_requiresOwnr, tmp9_commandGroup, tmp10_doifFormat, tmp12_requiresCreatureOwnr);
   }
-  function sam$kotlin_Comparator$0_7(function_0) {
+  function sam$kotlin_Comparator$0_14(function_0) {
     this.function_1 = function_0;
   }
-  sam$kotlin_Comparator$0_7.prototype.compare_6tbigh_k$ = function (a, b) {
+  sam$kotlin_Comparator$0_14.prototype.compare_6tbigh_k$ = function (a, b) {
     return this.function_1(a, b);
   };
-  sam$kotlin_Comparator$0_7.prototype.compare = function (a, b) {
+  sam$kotlin_Comparator$0_14.prototype.compare = function (a, b) {
     return this.compare_6tbigh_k$(a, b);
   };
-  sam$kotlin_Comparator$0_7.$metadata$ = {
+  sam$kotlin_Comparator$0_14.$metadata$ = {
     simpleName: 'sam$kotlin_Comparator$0',
     kind: 'class',
     interfaces: [Comparator]
@@ -24887,22 +32327,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function _get_greaterThan__268972086($this) {
     return $this.greaterThan_1;
   }
-  function Companion_17() {
-    Companion_instance_17 = this;
+  function Companion_22() {
+    Companion_instance_22 = this;
   }
-  Companion_17.prototype.serializer = function () {
+  Companion_22.prototype.serializer = function () {
     return $serializer_getInstance();
   };
-  Companion_17.$metadata$ = {
+  Companion_22.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_17;
-  function Companion_getInstance_19() {
-    if (Companion_instance_17 == null)
-      new Companion_17();
-    return Companion_instance_17;
+  var Companion_instance_22;
+  function Companion_getInstance_24() {
+    if (Companion_instance_22 == null)
+      new Companion_22();
+    return Companion_instance_22;
   }
   function $serializer() {
     $serializer_instance = this;
@@ -25224,7 +32664,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     };
   }
   function CaosValuesList(id, name, values, description, extensionType) {
-    Companion_getInstance_19();
+    Companion_getInstance_24();
     var description_0 = description === void 1 ? null : description;
     var extensionType_0 = extensionType === void 1 ? null : extensionType;
     this.id_1 = id;
@@ -25562,7 +33002,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.copy_zgjbar_k$(id, name, values, description, extensionType);
   };
   CaosValuesList.prototype.toString = function () {
-    return 'CaosValuesList(id=' + this.id_1 + ', name=' + this.name_1 + ', values=' + toString_0(this.values_1) + ', description=' + this.description_1 + ', extensionType=' + this.extensionType_1 + ')';
+    return 'CaosValuesList(id=' + this.id_1 + ', name=' + this.name_1 + ', values=' + toString(this.values_1) + ', description=' + this.description_1 + ', extensionType=' + this.extensionType_1 + ')';
   };
   CaosValuesList.$metadata$ = {
     simpleName: 'CaosValuesList',
@@ -25605,22 +33045,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function CaosValuesListValue_init_$Create$(value, name, description, beforeRegion, $mask0, $marker) {
     return CaosValuesListValue_init_$Init$(value, name, description, beforeRegion, $mask0, $marker, Object.create(ValuesListValue.prototype));
   }
-  function Companion_18() {
-    Companion_instance_18 = this;
+  function Companion_23() {
+    Companion_instance_23 = this;
   }
-  Companion_18.prototype.serializer = function () {
+  Companion_23.prototype.serializer = function () {
     return $serializer_getInstance_0();
   };
-  Companion_18.$metadata$ = {
+  Companion_23.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_18;
-  function Companion_getInstance_20() {
-    if (Companion_instance_18 == null)
-      new Companion_18();
-    return Companion_instance_18;
+  var Companion_instance_23;
+  function Companion_getInstance_25() {
+    if (Companion_instance_23 == null)
+      new Companion_23();
+    return Companion_instance_23;
   }
   function $serializer_0() {
     $serializer_instance_0 = this;
@@ -25763,7 +33203,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       var tmp$ret$0;
       $l$block: {
         var tmp0_trim_0 = this$0.value_1;
-        tmp$ret$0 = toString_0(trim(isCharSequence(tmp0_trim_0) ? tmp0_trim_0 : THROW_CCE()));
+        tmp$ret$0 = toString(trim(isCharSequence(tmp0_trim_0) ? tmp0_trim_0 : THROW_CCE()));
         break $l$block;
       }
       var value = tmp$ret$0;
@@ -25818,7 +33258,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       var tmp$ret$0;
       $l$block: {
         var tmp0_trim_0 = this$0.value_1;
-        tmp$ret$0 = toString_0(trim(isCharSequence(tmp0_trim_0) ? tmp0_trim_0 : THROW_CCE()));
+        tmp$ret$0 = toString(trim(isCharSequence(tmp0_trim_0) ? tmp0_trim_0 : THROW_CCE()));
         break $l$block;
       }
       var value = tmp$ret$0;
@@ -25869,7 +33309,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     };
   }
   function ValuesListValue(value, name, description, beforeRegion) {
-    Companion_getInstance_20();
+    Companion_getInstance_25();
     var description_0 = description === void 1 ? null : description;
     var beforeRegion_0 = beforeRegion === void 1 ? null : beforeRegion;
     this.value_1 = value;
@@ -26176,7 +33616,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.copy_rcih36_k$(commands, rvalues, lvalues);
   };
   Commands.prototype.toString = function () {
-    return 'Commands(commands=' + toString_0(this.commands_1) + ', rvalues=' + toString_0(this.rvalues_1) + ', lvalues=' + toString_0(this.lvalues_1) + ')';
+    return 'Commands(commands=' + toString(this.commands_1) + ', rvalues=' + toString(this.rvalues_1) + ', lvalues=' + toString(this.lvalues_1) + ')';
   };
   Commands.$metadata$ = {
     simpleName: 'Commands',
@@ -26212,22 +33652,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function CaosVariantData_init_$Create$(name, code, vars, commands, lvalues, rvalues, valuesListsIds, $mask0, $marker) {
     return CaosVariantData_init_$Init$(name, code, vars, commands, lvalues, rvalues, valuesListsIds, $mask0, $marker, Object.create(CaosVariantData.prototype));
   }
-  function Companion_19() {
-    Companion_instance_19 = this;
+  function Companion_24() {
+    Companion_instance_24 = this;
   }
-  Companion_19.prototype.serializer_9w0wvi_k$ = function () {
+  Companion_24.prototype.serializer_9w0wvi_k$ = function () {
     return $serializer_getInstance_1();
   };
-  Companion_19.$metadata$ = {
+  Companion_24.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_19;
-  function Companion_getInstance_21() {
-    if (Companion_instance_19 == null)
-      new Companion_19();
-    return Companion_instance_19;
+  var Companion_instance_24;
+  function Companion_getInstance_26() {
+    if (Companion_instance_24 == null)
+      new Companion_24();
+    return Companion_instance_24;
   }
   function $serializer_1() {
     $serializer_instance_1 = this;
@@ -26419,16 +33859,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function CaosVariantData_init_$Create$_0(seen1, name, code, vars, commands, lvalues, rvalues, valuesListsIds, serializationConstructorMarker) {
     return CaosVariantData_init_$Init$_0(seen1, name, code, vars, commands, lvalues, rvalues, valuesListsIds, serializationConstructorMarker, Object.create(CaosVariantData.prototype));
   }
-  function sam$kotlin_Comparator$0_8(function_0) {
+  function sam$kotlin_Comparator$0_15(function_0) {
     this.function_1 = function_0;
   }
-  sam$kotlin_Comparator$0_8.prototype.compare_6tbigh_k$ = function (a, b) {
+  sam$kotlin_Comparator$0_15.prototype.compare_6tbigh_k$ = function (a, b) {
     return this.function_1(a, b);
   };
-  sam$kotlin_Comparator$0_8.prototype.compare = function (a, b) {
+  sam$kotlin_Comparator$0_15.prototype.compare = function (a, b) {
     return this.compare_6tbigh_k$(a, b);
   };
-  sam$kotlin_Comparator$0_8.$metadata$ = {
+  sam$kotlin_Comparator$0_15.$metadata$ = {
     simpleName: 'sam$kotlin_Comparator$0',
     kind: 'class',
     interfaces: [Comparator]
@@ -26475,7 +33915,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     };
   }
   function CaosVariantData(name, code, vars, commands, lvalues, rvalues, valuesListsIds) {
-    Companion_getInstance_21();
+    Companion_getInstance_26();
     this.name_1 = name;
     this.code_1 = code;
     this.vars_1 = vars;
@@ -26534,7 +33974,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       var tmp$ret$0;
       $l$block: {
         var tmp = CaosVariantData$_get_valuesLists_$lambda_1873792516();
-        tmp$ret$0 = new sam$kotlin_Comparator$0_8(tmp);
+        tmp$ret$0 = new sam$kotlin_Comparator$0_15(tmp);
         break $l$block;
       }
       tmp$ret$1 = sortedWith_0(tmp0_sortedBy_0, tmp$ret$0);
@@ -26617,7 +34057,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.copy_78y7hn_k$(name, code, vars, commands, lvalues, rvalues, valuesListsIds);
   };
   CaosVariantData.prototype.toString = function () {
-    return 'CaosVariantData(name=' + this.name_1 + ', code=' + this.code_1 + ', vars=' + this.vars_1 + ', commands=' + this.commands_1 + ', lvalues=' + this.lvalues_1 + ', rvalues=' + this.rvalues_1 + ', valuesListsIds=' + toString_0(this.valuesListsIds_1) + ')';
+    return 'CaosVariantData(name=' + this.name_1 + ', code=' + this.code_1 + ', vars=' + this.vars_1 + ', commands=' + this.commands_1 + ', lvalues=' + this.lvalues_1 + ', rvalues=' + this.rvalues_1 + ', valuesListsIds=' + toString(this.valuesListsIds_1) + ')';
   };
   CaosVariantData.$metadata$ = {
     simpleName: 'CaosVariantData',
@@ -26625,22 +34065,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     interfaces: [],
     associatedObjects: {0: $serializer_getInstance_1}
   };
-  function Companion_20() {
-    Companion_instance_20 = this;
+  function Companion_25() {
+    Companion_instance_25 = this;
   }
-  Companion_20.prototype.serializer_9w0wvi_k$ = function () {
+  Companion_25.prototype.serializer_9w0wvi_k$ = function () {
     return $serializer_getInstance_2();
   };
-  Companion_20.$metadata$ = {
+  Companion_25.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_20;
-  function Companion_getInstance_22() {
-    if (Companion_instance_20 == null)
-      new Companion_20();
-    return Companion_instance_20;
+  var Companion_instance_25;
+  function Companion_getInstance_27() {
+    if (Companion_instance_25 == null)
+      new Companion_25();
+    return Companion_instance_25;
   }
   function $serializer_2() {
     $serializer_instance_2 = this;
@@ -26781,7 +34221,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return CaosVarConstraints_init_$Init$(seen1, VARx, VAxx, OBVx, OVxx, MVxx, serializationConstructorMarker, Object.create(CaosVarConstraints.prototype));
   }
   function CaosVarConstraints(VARx, VAxx, OBVx, OVxx, MVxx) {
-    Companion_getInstance_22();
+    Companion_getInstance_27();
     this.VARx_1 = VARx;
     this.VAxx_1 = VAxx;
     this.OBVx_1 = OBVx;
@@ -26903,22 +34343,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     interfaces: [HasGetter],
     associatedObjects: {0: $serializer_getInstance_2}
   };
-  function Companion_21() {
-    Companion_instance_21 = this;
+  function Companion_26() {
+    Companion_instance_26 = this;
   }
-  Companion_21.prototype.serializer_9w0wvi_k$ = function () {
+  Companion_26.prototype.serializer_9w0wvi_k$ = function () {
     return $serializer_getInstance_3();
   };
-  Companion_21.$metadata$ = {
+  Companion_26.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_21;
-  function Companion_getInstance_23() {
-    if (Companion_instance_21 == null)
-      new Companion_21();
-    return Companion_instance_21;
+  var Companion_instance_26;
+  function Companion_getInstance_28() {
+    if (Companion_instance_26 == null)
+      new Companion_26();
+    return Companion_instance_26;
   }
   function $serializer_3() {
     $serializer_instance_3 = this;
@@ -27046,7 +34486,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return CaosLibDefinitions_init_$Init$(seen1, modDate, commands, variantMap, valuesLists, serializationConstructorMarker, Object.create(CaosLibDefinitions.prototype));
   }
   function CaosLibDefinitions(modDate, commands, variantMap, valuesLists) {
-    Companion_getInstance_23();
+    Companion_getInstance_28();
     this.modDate_1 = modDate;
     this.commands_1 = commands;
     this.variantMap_1 = variantMap;
@@ -27091,7 +34531,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.copy_lvp0j8_k$(modDate, commands, variantMap, valuesLists);
   };
   CaosLibDefinitions.prototype.toString = function () {
-    return 'CaosLibDefinitions(modDate=' + toString_0(this.modDate_1) + ', commands=' + this.commands_1 + ', variantMap=' + this.variantMap_1 + ', valuesLists=' + this.valuesLists_1 + ')';
+    return 'CaosLibDefinitions(modDate=' + toString(this.modDate_1) + ', commands=' + this.commands_1 + ', variantMap=' + this.variantMap_1 + ', valuesLists=' + this.valuesLists_1 + ')';
   };
   CaosLibDefinitions.prototype.hashCode = function () {
     var result = this.modDate_1.hashCode();
@@ -27143,22 +34583,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function CaosCommand_init_$Create$(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, $mask0, $marker) {
     return CaosCommand_init_$Init$(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, $mask0, $marker, Object.create(CaosCommand.prototype));
   }
-  function Companion_22() {
-    Companion_instance_22 = this;
+  function Companion_27() {
+    Companion_instance_27 = this;
   }
-  Companion_22.prototype.serializer_9w0wvi_k$ = function () {
+  Companion_27.prototype.serializer_9w0wvi_k$ = function () {
     return $serializer_getInstance_4();
   };
-  Companion_22.$metadata$ = {
+  Companion_27.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_22;
-  function Companion_getInstance_24() {
-    if (Companion_instance_22 == null)
-      new Companion_22();
-    return Companion_instance_22;
+  var Companion_instance_27;
+  function Companion_getInstance_29() {
+    if (Companion_instance_27 == null)
+      new Companion_27();
+    return Companion_instance_27;
   }
   function $serializer_4() {
     $serializer_instance_4 = this;
@@ -27616,7 +35056,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     };
   }
   function CaosCommand(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr) {
-    Companion_getInstance_24();
+    Companion_getInstance_29();
     this.id_1 = id;
     this.command_1 = command;
     this.parameters_1 = parameters;
@@ -27683,7 +35123,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.requiresCreatureOwnr_1;
   };
   CaosCommand.prototype._get_returnType__912406849_f381mp_k$ = function () {
-    return Companion_getInstance_18().fromIntValue_8xdq7p_k$(this.returnTypeId_1);
+    return Companion_getInstance_23().fromIntValue_8xdq7p_k$(this.returnTypeId_1);
   };
   CaosCommand.prototype._get_tokens__1141353649_ivj641_k$ = function () {
     var tmp$ret$0;
@@ -27873,7 +35313,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return this.copy_vg14jh_k$(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr);
   };
   CaosCommand.prototype.toString = function () {
-    return 'CaosCommand(id=' + this.id_1 + ', command=' + this.command_1 + ', parameters=' + toString_0(this.parameters_1) + ', returnTypeId=' + this.returnTypeId_1 + ', description=' + this.description_1 + ', returnValuesListIds=' + this.returnValuesListIds_1 + ', requiresOwnr=' + this.requiresOwnr_1 + ', variants=' + toString_0(this.variants_1) + ', rvalue=' + this.rvalue_1 + ', lvalue=' + this.lvalue_1 + ', lvalueName=' + this.lvalueName_1 + ', commandGroup=' + this.commandGroup_1 + ', doifFormat=' + this.doifFormat_1 + ', requiresCreatureOwnr=' + this.requiresCreatureOwnr_1 + ')';
+    return 'CaosCommand(id=' + this.id_1 + ', command=' + this.command_1 + ', parameters=' + toString(this.parameters_1) + ', returnTypeId=' + this.returnTypeId_1 + ', description=' + this.description_1 + ', returnValuesListIds=' + this.returnValuesListIds_1 + ', requiresOwnr=' + this.requiresOwnr_1 + ', variants=' + toString(this.variants_1) + ', rvalue=' + this.rvalue_1 + ', lvalue=' + this.lvalue_1 + ', lvalueName=' + this.lvalueName_1 + ', commandGroup=' + this.commandGroup_1 + ', doifFormat=' + this.doifFormat_1 + ', requiresCreatureOwnr=' + this.requiresCreatureOwnr_1 + ')';
   };
   CaosCommand.$metadata$ = {
     simpleName: 'CaosCommand',
@@ -27942,22 +35382,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function CaosParameter_init_$Create$_1(index, name, type, valuesListIds, description, min, max, $mask0, $marker) {
     return CaosParameter_init_$Init$_1(index, name, type, valuesListIds, description, min, max, $mask0, $marker, Object.create(CaosParameter.prototype));
   }
-  function Companion_23() {
-    Companion_instance_23 = this;
+  function Companion_28() {
+    Companion_instance_28 = this;
   }
-  Companion_23.prototype.serializer_9w0wvi_k$ = function () {
+  Companion_28.prototype.serializer_9w0wvi_k$ = function () {
     return $serializer_getInstance_5();
   };
-  Companion_23.$metadata$ = {
+  Companion_28.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_23;
-  function Companion_getInstance_25() {
-    if (Companion_instance_23 == null)
-      new Companion_23();
-    return Companion_instance_23;
+  var Companion_instance_28;
+  function Companion_getInstance_30() {
+    if (Companion_instance_28 == null)
+      new Companion_28();
+    return Companion_instance_28;
   }
   function $serializer_5() {
     $serializer_instance_5 = this;
@@ -28135,7 +35575,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   }
   function CaosParameter$type$delegate$lambda(this$0) {
     return function () {
-      return Companion_getInstance_18().fromIntValue_8xdq7p_k$(this$0.typeId_1);
+      return Companion_getInstance_23().fromIntValue_8xdq7p_k$(this$0.typeId_1);
     };
   }
   function CaosParameter$valuesList$delegate$lambda$lambda() {
@@ -28180,7 +35620,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   }
   function CaosParameter$_init_$lambda_4094402364(this$0) {
     return function () {
-      return Companion_getInstance_18().fromIntValue_8xdq7p_k$(this$0.typeId_1);
+      return Companion_getInstance_23().fromIntValue_8xdq7p_k$(this$0.typeId_1);
     };
   }
   function CaosParameter$_init_$lambda$lambda_3681529391() {
@@ -28224,7 +35664,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     };
   }
   function CaosParameter(index, name, typeId, valuesListIds, description, min, max) {
-    Companion_getInstance_25();
+    Companion_getInstance_30();
     this.index_1 = index;
     this.name_1 = name;
     this.typeId_1 = typeId;
@@ -28367,10 +35807,10 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var CaosScriptNamedGameVarType_EAME_instance;
   var CaosScriptNamedGameVarType_GAME_instance;
   var CaosScriptNamedGameVarType_MAME_instance;
-  function Companion_24() {
-    Companion_instance_24 = this;
+  function Companion_29() {
+    Companion_instance_29 = this;
   }
-  Companion_24.prototype.fromValue_pw7q9m_k$ = function (value) {
+  Companion_29.prototype.fromValue_pw7q9m_k$ = function (value) {
     var tmp0_subject = value;
     var tmp;
     if (tmp0_subject === CaosScriptNamedGameVarType_NAME_getInstance().value_1) {
@@ -28386,22 +35826,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp;
   };
-  Companion_24.$metadata$ = {
+  Companion_29.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_24;
-  function Companion_getInstance_26() {
+  var Companion_instance_29;
+  function Companion_getInstance_31() {
     CaosScriptNamedGameVarType_initEntries();
-    if (Companion_instance_24 == null)
-      new Companion_24();
-    return Companion_instance_24;
+    if (Companion_instance_29 == null)
+      new Companion_29();
+    return Companion_instance_29;
   }
-  function values_19() {
+  function values_25() {
     return [CaosScriptNamedGameVarType_NAME_getInstance(), CaosScriptNamedGameVarType_EAME_getInstance(), CaosScriptNamedGameVarType_GAME_getInstance(), CaosScriptNamedGameVarType_MAME_getInstance()];
   }
-  function valueOf_19(value) {
+  function valueOf_25(value) {
     switch (value) {
       case 'NAME':
         return CaosScriptNamedGameVarType_NAME_getInstance();
@@ -28426,7 +35866,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     CaosScriptNamedGameVarType_EAME_instance = new CaosScriptNamedGameVarType('EAME', 1, 2, 'EAME');
     CaosScriptNamedGameVarType_GAME_instance = new CaosScriptNamedGameVarType('GAME', 2, 3, 'GAME');
     CaosScriptNamedGameVarType_MAME_instance = new CaosScriptNamedGameVarType('MAME', 3, 4, 'MAME');
-    Companion_getInstance_26();
+    Companion_getInstance_31();
   }
   function CaosScriptNamedGameVarType(name, ordinal, value, token) {
     Enum.call(this, name, ordinal);
@@ -28693,7 +36133,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         tmp$ret$2 = tmp$ret$1;
         break $l$block_1;
       }
-      var commandIds = plus_1(plus_1(tmp$ret$2, this$0.variant_1._get_lvalues__1602572355_qi4oqr_k$()._get_values__2516944425_tel787_k$()), this$0.variant_1._get_commands__4278076995_a20n1_k$()._get_values__2516944425_tel787_k$());
+      var commandIds = plus_2(plus_2(tmp$ret$2, this$0.variant_1._get_lvalues__1602572355_qi4oqr_k$()._get_values__2516944425_tel787_k$()), this$0.variant_1._get_commands__4278076995_a20n1_k$()._get_values__2516944425_tel787_k$());
       Unit_getInstance();
       var tmp$ret$6;
       $l$block_5: {
@@ -29137,7 +36577,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         noWhenBranchMatchedException();
         break;
     }
-    return tmp.get_ljsq2k_k$(tokens, Companion_getInstance_18().fromIntValue_8xdq7p_k$(bias));
+    return tmp.get_ljsq2k_k$(tokens, Companion_getInstance_23().fromIntValue_8xdq7p_k$(bias));
   };
   CaosLib.prototype.get$default_j9db4m_k$ = function (type, tokens, bias, $mask0, $handler) {
     if (!(($mask0 & 4) === 0))
@@ -29153,7 +36593,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return _get_universalLib__480998481()._get_valuesLists__1918267486_vq34ny_k$().get_1mhr4y_k$('list_' + id);
   }
   function getValueTypeName(value) {
-    return Companion_getInstance_18().simpleName_v18130_k$(value);
+    return Companion_getInstance_23().simpleName_v18130_k$(value);
   }
   function CommandGetter() {
   }
@@ -29308,7 +36748,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
           var element_2_3_2 = tmp0_iterator_1_2_2.next_20eer_k$();
           var tmp$ret$10;
           $l$block_9: {
-            tmp$ret$10 = toList_0(element_2_3_2._get_second__4255435031_njbah_k$());
+            tmp$ret$10 = toList(element_2_3_2._get_second__4255435031_njbah_k$());
             break $l$block_9;
           }
           var list_3_4 = tmp$ret$10;
@@ -29876,10 +37316,10 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var EqOp_BITWISE_AND_instance;
   var EqOp_BITWISE_NAND_instance;
   var EqOp_INVALID_instance;
-  function Companion_25() {
-    Companion_instance_25 = this;
+  function Companion_30() {
+    Companion_instance_30 = this;
   }
-  Companion_25.prototype.fromValue_sa2c9m_k$ = function (value) {
+  Companion_30.prototype.fromValue_sa2c9m_k$ = function (value) {
     var tmp$ret$1;
     $l$block_0: {
       var tmp$ret$0;
@@ -29919,22 +37359,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         return EqOp_INVALID_getInstance();
     }
   };
-  Companion_25.$metadata$ = {
+  Companion_30.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_25;
-  function Companion_getInstance_27() {
+  var Companion_instance_30;
+  function Companion_getInstance_32() {
     EqOp_initEntries();
-    if (Companion_instance_25 == null)
-      new Companion_25();
-    return Companion_instance_25;
+    if (Companion_instance_30 == null)
+      new Companion_30();
+    return Companion_instance_30;
   }
-  function values_20() {
+  function values_26() {
     return [EqOp_EQUAL_getInstance(), EqOp_NOT_EQUAL_getInstance(), EqOp_GREATER_THAN_getInstance(), EqOp_LESS_THAN_getInstance(), EqOp_GREATER_THAN_EQUAL_getInstance(), EqOp_LESS_THAN_EQUAL_getInstance(), EqOp_BITWISE_AND_getInstance(), EqOp_BITWISE_NAND_getInstance(), EqOp_INVALID_getInstance()];
   }
-  function valueOf_20(value) {
+  function valueOf_26(value) {
     switch (value) {
       case 'EQUAL':
         return EqOp_EQUAL_getInstance();
@@ -29974,7 +37414,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     EqOp_BITWISE_AND_instance = new EqOp_0('BITWISE_AND', 6, 'Bitwise And', ['BT']);
     EqOp_BITWISE_NAND_instance = new EqOp_0('BITWISE_NAND', 7, 'Bitwise Nand', ['BF']);
     EqOp_INVALID_instance = new EqOp_0('INVALID', 8, 'INVALID', ['??']);
-    Companion_getInstance_27();
+    Companion_getInstance_32();
   }
   function EqOp_0(name, ordinal, commonName, values) {
     Enum.call(this, name, ordinal);
@@ -30112,12 +37552,12 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       return receiver._get_valuesLists__1918267486_vq34ny_k$();
     }, null);
   }
-  function _get_VAR_REGEX__3750005570() {
+  function _get_VAR_REGEX__3750005570_0() {
     init_properties_cursor_kt_3049128292();
-    return VAR_REGEX;
+    return VAR_REGEX_0;
   }
-  var VAR_REGEX;
-  function CursorData(command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem) {
+  var VAR_REGEX_0;
+  function CursorData(command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem, eqValueList, inEqualityStatement) {
     this.command_1 = command;
     this.missing_1 = missing;
     this.closestParameter_1 = closestParameter;
@@ -30126,6 +37566,8 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     this.character_1 = character;
     this.previousTokens_1 = previousTokens;
     this.closestItem_1 = closestItem;
+    this.eqValueList_1 = eqValueList;
+    this.inEqualityStatement_1 = inEqualityStatement;
   }
   CursorData.prototype._get_command__1523475750_p71deu_k$ = function () {
     return this.command_1;
@@ -30151,6 +37593,12 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   CursorData.prototype._get_closestItem__1020097029_gvc7wl_k$ = function () {
     return this.closestItem_1;
   };
+  CursorData.prototype._get_eqValueList__338549646_5lkaku_k$ = function () {
+    return this.eqValueList_1;
+  };
+  CursorData.prototype._get_inEqualityStatement__1335313825_m30eqp_k$ = function () {
+    return this.inEqualityStatement_1;
+  };
   CursorData.prototype.equals = function (other) {
     if (this === other)
       return true;
@@ -30174,6 +37622,10 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       return false;
     if (!equals(this.closestItem_1, other.closestItem_1))
       return false;
+    if (!equals(this.eqValueList_1, other.eqValueList_1))
+      return false;
+    if (!(this.inEqualityStatement_1 === other.inEqualityStatement_1))
+      return false;
     return true;
   };
   CursorData.prototype.hashCode = function () {
@@ -30196,6 +37648,11 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var tmp6_safe_receiver = this.closestItem_1;
     var tmp7_elvis_lhs = tmp6_safe_receiver == null ? null : hashCode(tmp6_safe_receiver);
     result = tmp_1 + (tmp7_elvis_lhs == null ? 0 : tmp7_elvis_lhs) | 0;
+    var tmp_2 = imul(31, result);
+    var tmp8_safe_receiver = this.eqValueList_1;
+    var tmp9_elvis_lhs = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.hashCode();
+    result = tmp_2 + (tmp9_elvis_lhs == null ? 0 : tmp9_elvis_lhs) | 0;
+    result = imul(31, result) + (this.inEqualityStatement_1 | 0) | 0;
     return result;
   };
   CursorData.prototype.component1 = function () {
@@ -30222,13 +37679,19 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   CursorData.prototype.component8 = function () {
     return this.closestItem_1;
   };
-  CursorData.prototype.copy = function (command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem) {
-    return this.copy_vy86zj_k$(command === void 1 ? this.command_1 : command, missing === void 1 ? this.missing_1 : missing, closestParameter === void 1 ? this.closestParameter_1 : closestParameter, beforeText === void 1 ? this.beforeText_1 : beforeText, line === void 1 ? this.line_1 : line, character === void 1 ? this.character_1 : character, previousTokens === void 1 ? this.previousTokens_1 : previousTokens, closestItem === void 1 ? this.closestItem_1 : closestItem);
+  CursorData.prototype.component9 = function () {
+    return this.eqValueList_1;
   };
-  CursorData.prototype.copy_vy86zj_k$ = function (command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem) {
-    return new CursorData(command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem);
+  CursorData.prototype.component10 = function () {
+    return this.inEqualityStatement_1;
   };
-  CursorData.prototype.copy$default_qntshu_k$ = function (command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem, $mask0, $handler) {
+  CursorData.prototype.copy = function (command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem, eqValueList, inEqualityStatement) {
+    return this.copy_f561vh_k$(command === void 1 ? this.command_1 : command, missing === void 1 ? this.missing_1 : missing, closestParameter === void 1 ? this.closestParameter_1 : closestParameter, beforeText === void 1 ? this.beforeText_1 : beforeText, line === void 1 ? this.line_1 : line, character === void 1 ? this.character_1 : character, previousTokens === void 1 ? this.previousTokens_1 : previousTokens, closestItem === void 1 ? this.closestItem_1 : closestItem, eqValueList === void 1 ? this.eqValueList_1 : eqValueList, inEqualityStatement === void 1 ? this.inEqualityStatement_1 : inEqualityStatement);
+  };
+  CursorData.prototype.copy_f561vh_k$ = function (command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem, eqValueList, inEqualityStatement) {
+    return new CursorData(command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem, eqValueList, inEqualityStatement);
+  };
+  CursorData.prototype.copy$default_2h2y78_k$ = function (command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem, eqValueList, inEqualityStatement, $mask0, $handler) {
     if (!(($mask0 & 1) === 0))
       command = this.command_1;
     if (!(($mask0 & 2) === 0))
@@ -30245,10 +37708,14 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       previousTokens = this.previousTokens_1;
     if (!(($mask0 & 128) === 0))
       closestItem = this.closestItem_1;
-    return this.copy_vy86zj_k$(command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem);
+    if (!(($mask0 & 256) === 0))
+      eqValueList = this.eqValueList_1;
+    if (!(($mask0 & 512) === 0))
+      inEqualityStatement = this.inEqualityStatement_1;
+    return this.copy_f561vh_k$(command, missing, closestParameter, beforeText, line, character, previousTokens, closestItem, eqValueList, inEqualityStatement);
   };
   CursorData.prototype.toString = function () {
-    return 'CursorData(command=' + this.command_1 + ', missing=' + toString_0(this.missing_1) + ', closestParameter=' + this.closestParameter_1 + ', beforeText=' + this.beforeText_1 + ', line=' + this.line_1 + ', character=' + this.character_1 + ', previousTokens=' + toString_0(this.previousTokens_1) + ', closestItem=' + this.closestItem_1 + ')';
+    return 'CursorData(command=' + this.command_1 + ', missing=' + toString(this.missing_1) + ', closestParameter=' + this.closestParameter_1 + ', beforeText=' + this.beforeText_1 + ', line=' + this.line_1 + ', character=' + this.character_1 + ', previousTokens=' + toString(this.previousTokens_1) + ', closestItem=' + this.closestItem_1 + ', eqValueList=' + this.eqValueList_1 + ', inEqualityStatement=' + this.inEqualityStatement_1 + ')';
   };
   CursorData.$metadata$ = {
     simpleName: 'CursorData',
@@ -30291,7 +37758,15 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     configurable: true,
     get: CursorData.prototype._get_closestItem__1020097029_gvc7wl_k$
   });
-  function dismissTokensIfUsed(currentCommand, tokens) {
+  Object.defineProperty(CursorData.prototype, 'eqValueList', {
+    configurable: true,
+    get: CursorData.prototype._get_eqValueList__338549646_5lkaku_k$
+  });
+  Object.defineProperty(CursorData.prototype, 'inEqualityStatement', {
+    configurable: true,
+    get: CursorData.prototype._get_inEqualityStatement__1335313825_m30eqp_k$
+  });
+  function dismissTokensIfUsed_0(currentCommand, tokens) {
     init_properties_cursor_kt_3049128292();
     if (currentCommand == null) {
       return tokens;
@@ -30394,7 +37869,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return slice(tokens, numberRangeToNumber(i + 1 | 0, _get_lastIndex__339712501_0(tokens)));
   }
-  function getClosestItem(inRangeCalls, lineNumber, column) {
+  function getClosestItem_0(inRangeCalls, lineNumber, column) {
     init_properties_cursor_kt_3049128292();
     if (inRangeCalls.isEmpty_y1axqb_k$()) {
       return null;
@@ -30409,7 +37884,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
           var item_2_3 = tmp0_iterator_1_2.next_20eer_k$();
           var tmp$ret$0;
           $l$block: {
-            tmp$ret$0 = new Distanced(item_2_3, getDistance(item_2_3.textRange, lineNumber, column));
+            tmp$ret$0 = new Distanced_0(item_2_3, getDistance_0(item_2_3.textRange, lineNumber, column));
             break $l$block;
           }
           tmp0_mapTo_0_1.add_1j60pz_k$(tmp$ret$0);
@@ -30462,14 +37937,13 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       var i = 0;
       $l$loop: while (i < sameLine._get_size__809037418_ddoh9m_k$()) {
         var item = sameLine.get_fkrdnv_k$(i);
-        var tmp0_elvis_lhs = item.item_1.textRange.start.character;
-        var thisColumn = tmp0_elvis_lhs == null ? -1 : tmp0_elvis_lhs;
+        var thisColumn = item.item_1.textRange.start.character;
         if (thisColumn > column) {
           break $l$loop;
         }
-        var tmp1 = i;
-        i = tmp1 + 1 | 0;
-        index = tmp1;
+        var tmp0 = i;
+        i = tmp0 + 1 | 0;
+        index = tmp0;
       }
       var tmp$ret$7;
       $l$block_6: {
@@ -30488,9 +37962,9 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         var j = 0;
         $l$loop_0: while (j <= maxItems) {
           var tmp = index;
-          var tmp2 = j;
-          j = tmp2 + 1 | 0;
-          var prevIndex = tmp - tmp2 | 0;
+          var tmp1 = j;
+          j = tmp1 + 1 | 0;
+          var prevIndex = tmp - tmp1 | 0;
           var prevItem = sameLine.get_fkrdnv_k$(prevIndex).item_1;
           if (prevItem instanceof CommandToken) {
             prevItems.add_1j60pz_k$(prevItem);
@@ -30506,12 +37980,12 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     } else {
     }
     var tmp_0 = distanced;
-    var tmp_1 = getClosestItem$lambda();
-    distanced = sortedWith(tmp_0, new sam$kotlin_Comparator$0_9(tmp_1));
+    var tmp_1 = getClosestItem$lambda_1();
+    distanced = sortedWith(tmp_0, new sam$kotlin_Comparator$0_16(tmp_1));
     var min = distanced.get_fkrdnv_k$(0);
-    var tmp3_iterator = distanced.iterator_jk1svi_k$();
-    $l$loop_1: while (tmp3_iterator.hasNext_bitz1p_k$()) {
-      var call = tmp3_iterator.next_20eer_k$();
+    var tmp2_iterator = distanced.iterator_jk1svi_k$();
+    $l$loop_1: while (tmp2_iterator.hasNext_bitz1p_k$()) {
+      var call = tmp2_iterator.next_20eer_k$();
       if (call.distance_1.lineOffset_1 > min.distance_1.lineOffset_1) {
         break $l$loop_1;
       }
@@ -30521,7 +37995,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return new Closest(min.item_1, emptyList());
   }
-  function getDistance(textRange, lineNumber, column) {
+  function getDistance_0(textRange, lineNumber, column) {
     init_properties_cursor_kt_3049128292();
     var tmp = lineNumber - textRange.start.line | 0;
     var tmp_0;
@@ -30530,7 +38004,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     } else {
       tmp_0 = textRange.start.character;
     }
-    return new Distance(tmp, tmp_0);
+    return new Distance_0(tmp, tmp_0);
   }
   function Closest(closest, previous) {
     this.closest_1 = closest;
@@ -30585,127 +38059,127 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     kind: 'class',
     interfaces: []
   };
-  function Distanced(item, distance) {
+  function Distanced_0(item, distance) {
     this.item_1 = item;
     this.distance_1 = distance;
   }
-  Distanced.prototype._get_item__800109976_d8d4t4_k$ = function () {
+  Distanced_0.prototype._get_item__800109976_d8d4t4_k$ = function () {
     return this.item_1;
   };
-  Distanced.prototype._get_distance__1834152566_uc096e_k$ = function () {
+  Distanced_0.prototype._get_distance__1834152566_uc096e_k$ = function () {
     return this.distance_1;
   };
-  Distanced.prototype.component1_7eebsc_k$ = function () {
+  Distanced_0.prototype.component1_7eebsc_k$ = function () {
     return this.item_1;
   };
-  Distanced.prototype.component2_7eebsb_k$ = function () {
+  Distanced_0.prototype.component2_7eebsb_k$ = function () {
     return this.distance_1;
   };
-  Distanced.prototype.copy_pjfnx1_k$ = function (item, distance) {
-    return new Distanced(item, distance);
+  Distanced_0.prototype.copy_pjfnx1_k$ = function (item, distance) {
+    return new Distanced_0(item, distance);
   };
-  Distanced.prototype.copy$default_ke5ozo_k$ = function (item, distance, $mask0, $handler) {
+  Distanced_0.prototype.copy$default_ke5ozo_k$ = function (item, distance, $mask0, $handler) {
     if (!(($mask0 & 1) === 0))
       item = this.item_1;
     if (!(($mask0 & 2) === 0))
       distance = this.distance_1;
     return this.copy_pjfnx1_k$(item, distance);
   };
-  Distanced.prototype.toString = function () {
+  Distanced_0.prototype.toString = function () {
     return 'Distanced(item=' + this.item_1 + ', distance=' + this.distance_1 + ')';
   };
-  Distanced.prototype.hashCode = function () {
+  Distanced_0.prototype.hashCode = function () {
     var result = hashCode(this.item_1);
     result = imul(result, 31) + this.distance_1.hashCode() | 0;
     return result;
   };
-  Distanced.prototype.equals = function (other) {
+  Distanced_0.prototype.equals = function (other) {
     if (this === other)
       return true;
-    if (!(other instanceof Distanced))
+    if (!(other instanceof Distanced_0))
       return false;
     else {
     }
-    var tmp0_other_with_cast = other instanceof Distanced ? other : THROW_CCE();
+    var tmp0_other_with_cast = other instanceof Distanced_0 ? other : THROW_CCE();
     if (!equals(this.item_1, tmp0_other_with_cast.item_1))
       return false;
     if (!this.distance_1.equals(tmp0_other_with_cast.distance_1))
       return false;
     return true;
   };
-  Distanced.$metadata$ = {
+  Distanced_0.$metadata$ = {
     simpleName: 'Distanced',
     kind: 'class',
     interfaces: []
   };
-  function Distance(lineOffset, columnOffset) {
+  function Distance_0(lineOffset, columnOffset) {
     this.lineOffset_1 = lineOffset;
     this.columnOffset_1 = columnOffset;
   }
-  Distance.prototype._get_lineOffset__1247300548_kmlz9g_k$ = function () {
+  Distance_0.prototype._get_lineOffset__1247300548_kmlz9g_k$ = function () {
     return this.lineOffset_1;
   };
-  Distance.prototype._get_columnOffset__3289323234_gmqfxa_k$ = function () {
+  Distance_0.prototype._get_columnOffset__3289323234_gmqfxa_k$ = function () {
     return this.columnOffset_1;
   };
-  Distance.prototype.component1_7eebsc_k$ = function () {
+  Distance_0.prototype.component1_7eebsc_k$ = function () {
     return this.lineOffset_1;
   };
-  Distance.prototype.component2_7eebsb_k$ = function () {
+  Distance_0.prototype.component2_7eebsb_k$ = function () {
     return this.columnOffset_1;
   };
-  Distance.prototype.copy_r83ead_k$ = function (lineOffset, columnOffset) {
-    return new Distance(lineOffset, columnOffset);
+  Distance_0.prototype.copy_r83ead_k$ = function (lineOffset, columnOffset) {
+    return new Distance_0(lineOffset, columnOffset);
   };
-  Distance.prototype.copy$default_4541c_k$ = function (lineOffset, columnOffset, $mask0, $handler) {
+  Distance_0.prototype.copy$default_4541c_k$ = function (lineOffset, columnOffset, $mask0, $handler) {
     if (!(($mask0 & 1) === 0))
       lineOffset = this.lineOffset_1;
     if (!(($mask0 & 2) === 0))
       columnOffset = this.columnOffset_1;
     return this.copy_r83ead_k$(lineOffset, columnOffset);
   };
-  Distance.prototype.toString = function () {
+  Distance_0.prototype.toString = function () {
     return 'Distance(lineOffset=' + this.lineOffset_1 + ', columnOffset=' + this.columnOffset_1 + ')';
   };
-  Distance.prototype.hashCode = function () {
+  Distance_0.prototype.hashCode = function () {
     var result = this.lineOffset_1;
     result = imul(result, 31) + this.columnOffset_1 | 0;
     return result;
   };
-  Distance.prototype.equals = function (other) {
+  Distance_0.prototype.equals = function (other) {
     if (this === other)
       return true;
-    if (!(other instanceof Distance))
+    if (!(other instanceof Distance_0))
       return false;
     else {
     }
-    var tmp0_other_with_cast = other instanceof Distance ? other : THROW_CCE();
+    var tmp0_other_with_cast = other instanceof Distance_0 ? other : THROW_CCE();
     if (!(this.lineOffset_1 === tmp0_other_with_cast.lineOffset_1))
       return false;
     if (!(this.columnOffset_1 === tmp0_other_with_cast.columnOffset_1))
       return false;
     return true;
   };
-  Distance.$metadata$ = {
+  Distance_0.$metadata$ = {
     simpleName: 'Distance',
     kind: 'class',
     interfaces: []
   };
-  function sam$kotlin_Comparator$0_9(function_0) {
+  function sam$kotlin_Comparator$0_16(function_0) {
     this.function_1 = function_0;
   }
-  sam$kotlin_Comparator$0_9.prototype.compare_6tbigh_k$ = function (a, b) {
+  sam$kotlin_Comparator$0_16.prototype.compare_6tbigh_k$ = function (a, b) {
     return this.function_1(a, b);
   };
-  sam$kotlin_Comparator$0_9.prototype.compare = function (a, b) {
+  sam$kotlin_Comparator$0_16.prototype.compare = function (a, b) {
     return this.compare_6tbigh_k$(a, b);
   };
-  sam$kotlin_Comparator$0_9.$metadata$ = {
+  sam$kotlin_Comparator$0_16.$metadata$ = {
     simpleName: 'sam$kotlin_Comparator$0',
     kind: 'class',
     interfaces: [Comparator]
   };
-  function getClosestItem$lambda() {
+  function getClosestItem$lambda_1() {
     return function (a, b) {
       var lineDistance = a.distance_1.lineOffset_1 - b.distance_1.lineOffset_1 | 0;
       Unit_getInstance();
@@ -30728,13 +38202,13 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         tmp$ret$0 = Regex_init_$Create$_0('^((va|ov|mv)\\d)|((obv|var)\\d{2})', tmp0_toRegex_0);
         break $l$block;
       }
-      VAR_REGEX = tmp$ret$0;
+      VAR_REGEX_0 = tmp$ret$0;
     }
   }
-  function inRange(range, lineNumber, column, ignoreColumn, soft) {
-    return inRange_0(range, lineNumber, column, ignoreColumn === void 1 ? false : ignoreColumn, soft === void 1 ? true : soft);
-  }
   function inRange_0(range, lineNumber, column, ignoreColumn, soft) {
+    return inRange_1(range, lineNumber, column, ignoreColumn === void 1 ? false : ignoreColumn, soft === void 1 ? true : soft);
+  }
+  function inRange_1(range, lineNumber, column, ignoreColumn, soft) {
     if (range == null) {
       throw Exception_init_$Create$('TextRange is invalid in getRange');
     }
@@ -30746,10 +38220,16 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       if (!(lineNumber === startLineNumber)) {
         return false;
       }
+      if (ignoreColumn) {
+        return true;
+      }
       var mod = soft ? 2 : 0;
       var containsLower = range.start.character - mod | 0;
       tmp = column <= (range.end.character + mod | 0) ? containsLower <= column : false;
     } else if (startLineNumber === lineNumber) {
+      if (ignoreColumn) {
+        return true;
+      }
       var tmp_0;
       if (soft) {
         tmp_0 = (range.start.character - 2 | 0) <= offsetColumn;
@@ -30758,11 +38238,14 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       }
       tmp = tmp_0;
     } else if (endLineNumber === lineNumber) {
+      if (ignoreColumn) {
+        return true;
+      }
       var tmp_1;
       if (soft) {
-        tmp_1 = (range.end.character + 2 | 0) <= offsetColumn;
+        tmp_1 = (range.end.character + 2 | 0) >= offsetColumn;
       } else {
-        tmp_1 = range.end.character <= offsetColumn;
+        tmp_1 = range.end.character >= offsetColumn;
       }
       tmp = tmp_1;
     } else {
@@ -30775,9 +38258,9 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       ignoreColumn = false;
     if (!(($mask0 & 16) === 0))
       soft = true;
-    return inRange_0(range, lineNumber, column, ignoreColumn, soft);
+    return inRange_1(range, lineNumber, column, ignoreColumn, soft);
   }
-  function inRange_1(range, ranges) {
+  function inRange_2(range, ranges) {
     var tmp$ret$1;
     $l$block_1: {
       var indexedObject = ranges;
@@ -30788,7 +38271,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         inductionVariable = inductionVariable + 1 | 0;
         var tmp$ret$0;
         $l$block: {
-          tmp$ret$0 = inRange_2(range, element_2);
+          tmp$ret$0 = inRange_3(range, element_2);
           break $l$block;
         }
         if (tmp$ret$0) {
@@ -30827,7 +38310,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp;
   }
-  function inRange_2(child, parent) {
+  function inRange_3(child, parent) {
     if (child.start.line < parent.start.line) {
       return false;
     }
@@ -31111,6 +38594,136 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       return this._get_endIndex__2798786036_oqscuk_k$();
     }
   });
+  function RangeImpl(start, end) {
+    this.start_1 = start;
+    this.end_1 = end;
+  }
+  RangeImpl.prototype._get_start__3614751663_b8zdqp_k$ = function () {
+    return this.start_1;
+  };
+  RangeImpl.prototype._get_end__856968982_e67thy_k$ = function () {
+    return this.end_1;
+  };
+  RangeImpl.prototype.component1_7eebsc_k$ = function () {
+    return this.start_1;
+  };
+  RangeImpl.prototype.component2_7eebsb_k$ = function () {
+    return this.end_1;
+  };
+  RangeImpl.prototype.copy_tspsdd_k$ = function (start, end) {
+    return new RangeImpl(start, end);
+  };
+  RangeImpl.prototype.copy$default_bysrcg_k$ = function (start, end, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      start = this.start_1;
+    if (!(($mask0 & 2) === 0))
+      end = this.end_1;
+    return this.copy_tspsdd_k$(start, end);
+  };
+  RangeImpl.prototype.toString = function () {
+    return 'RangeImpl(start=' + this.start_1 + ', end=' + this.end_1 + ')';
+  };
+  RangeImpl.prototype.hashCode = function () {
+    var result = hashCode(this.start_1);
+    result = imul(result, 31) + hashCode(this.end_1) | 0;
+    return result;
+  };
+  RangeImpl.prototype.equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof RangeImpl))
+      return false;
+    else {
+    }
+    var tmp0_other_with_cast = other instanceof RangeImpl ? other : THROW_CCE();
+    if (!equals(this.start_1, tmp0_other_with_cast.start_1))
+      return false;
+    if (!equals(this.end_1, tmp0_other_with_cast.end_1))
+      return false;
+    return true;
+  };
+  RangeImpl.$metadata$ = {
+    simpleName: 'RangeImpl',
+    kind: 'class',
+    interfaces: []
+  };
+  Object.defineProperty(RangeImpl.prototype, 'start', {
+    configurable: true,
+    get: function () {
+      return this._get_start__3614751663_b8zdqp_k$();
+    }
+  });
+  Object.defineProperty(RangeImpl.prototype, 'end', {
+    configurable: true,
+    get: function () {
+      return this._get_end__856968982_e67thy_k$();
+    }
+  });
+  function TextEditImpl(range, newText) {
+    this.range_1 = range;
+    this.newText_1 = newText;
+  }
+  TextEditImpl.prototype._get_range__3568951860_c0913g_k$ = function () {
+    return this.range_1;
+  };
+  TextEditImpl.prototype._get_newText__3492750788_d9ma7w_k$ = function () {
+    return this.newText_1;
+  };
+  TextEditImpl.prototype.component1_7eebsc_k$ = function () {
+    return this.range_1;
+  };
+  TextEditImpl.prototype.component2_7eebsb_k$ = function () {
+    return this.newText_1;
+  };
+  TextEditImpl.prototype.copy_r8b5rv_k$ = function (range, newText) {
+    return new TextEditImpl(range, newText);
+  };
+  TextEditImpl.prototype.copy$default_ddgn7m_k$ = function (range, newText, $mask0, $handler) {
+    if (!(($mask0 & 1) === 0))
+      range = this.range_1;
+    if (!(($mask0 & 2) === 0))
+      newText = this.newText_1;
+    return this.copy_r8b5rv_k$(range, newText);
+  };
+  TextEditImpl.prototype.toString = function () {
+    return 'TextEditImpl(range=' + this.range_1 + ', newText=' + this.newText_1 + ')';
+  };
+  TextEditImpl.prototype.hashCode = function () {
+    var result = hashCode(this.range_1);
+    result = imul(result, 31) + getStringHashCode(this.newText_1) | 0;
+    return result;
+  };
+  TextEditImpl.prototype.equals = function (other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof TextEditImpl))
+      return false;
+    else {
+    }
+    var tmp0_other_with_cast = other instanceof TextEditImpl ? other : THROW_CCE();
+    if (!equals(this.range_1, tmp0_other_with_cast.range_1))
+      return false;
+    if (!(this.newText_1 === tmp0_other_with_cast.newText_1))
+      return false;
+    return true;
+  };
+  TextEditImpl.$metadata$ = {
+    simpleName: 'TextEditImpl',
+    kind: 'class',
+    interfaces: []
+  };
+  Object.defineProperty(TextEditImpl.prototype, 'range', {
+    configurable: true,
+    get: function () {
+      return this._get_range__3568951860_c0913g_k$();
+    }
+  });
+  Object.defineProperty(TextEditImpl.prototype, 'newText', {
+    configurable: true,
+    get: function () {
+      return this._get_newText__3492750788_d9ma7w_k$();
+    }
+  });
   function toPosition(_this__1828080292) {
     return new PositionImpl(_this__1828080292._get_line__802561239_d9to7r_k$() - 1 | 0, _this__1828080292._get_charPositionInLine__2377044051_vpvr1p_k$());
   }
@@ -31132,8 +38745,8 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   function notMatches($this, val1, val2) {
     return (!(val1 === val2) ? !(val1 === 0) : false) ? !(val2 === 0) : false;
   }
-  function Companion_26() {
-    Companion_instance_26 = this;
+  function Companion_31() {
+    Companion_instance_31 = this;
     var tmp = this;
     tmp.POINTER$delegate_1 = lazy(AgentClass$Companion$POINTER$delegate$lambda());
     var tmp_0 = this;
@@ -31141,7 +38754,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var tmp_1 = this;
     tmp_1.ZERO$delegate_1 = lazy(AgentClass$Companion$ZERO$delegate$lambda());
   }
-  Companion_26.prototype._get_POINTER__3374765204_f7v4h8_k$ = function () {
+  Companion_31.prototype._get_POINTER__3374765204_f7v4h8_k$ = function () {
     var tmp$ret$0;
     $l$block: {
       var tmp0_getValue_0 = POINTER$factory();
@@ -31150,7 +38763,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$0;
   };
-  Companion_26.prototype._get_CREATURE__572324716_9gqwks_k$ = function () {
+  Companion_31.prototype._get_CREATURE__572324716_9gqwks_k$ = function () {
     var tmp$ret$0;
     $l$block: {
       var tmp0_getValue_0 = CREATURE$factory();
@@ -31159,7 +38772,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$0;
   };
-  Companion_26.prototype._get_ZERO__784837795_cz9spv_k$ = function () {
+  Companion_31.prototype._get_ZERO__784837795_cz9spv_k$ = function () {
     var tmp$ret$0;
     $l$block: {
       var tmp0_getValue_0 = ZERO$factory();
@@ -31168,19 +38781,19 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     }
     return tmp$ret$0;
   };
-  Companion_26.$metadata$ = {
+  Companion_31.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_26;
-  function Companion_getInstance_28() {
-    if (Companion_instance_26 == null)
-      new Companion_26();
-    return Companion_instance_26;
+  var Companion_instance_31;
+  function Companion_getInstance_33() {
+    if (Companion_instance_31 == null)
+      new Companion_31();
+    return Companion_instance_31;
   }
   function AgentClass(family, genus, species) {
-    Companion_getInstance_28();
+    Companion_getInstance_33();
     this.family_1 = family;
     this.genus_1 = genus;
     this.species_1 = species;
@@ -31405,7 +39018,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     init_properties_CaosStringUtils_kt_961619830();
     return CaosStringUtil_getInstance().substringFromEnd_twbqht_k$(_this__1828080292, start, subtractFromEnd);
   }
-  function repeat(_this__1828080292, times) {
+  function repeat_0(_this__1828080292, times) {
     init_properties_CaosStringUtils_kt_961619830();
     var stringBuilder = StringBuilder_init_$Create$();
     var inductionVariable = 1;
@@ -31524,10 +39137,10 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   var Case_UPPER_CASE_instance;
   var Case_LOWER_CASE_instance;
   var Case_CAPITAL_FIRST_instance;
-  function values_21() {
+  function values_27() {
     return [Case_UPPER_CASE_getInstance(), Case_LOWER_CASE_getInstance(), Case_CAPITAL_FIRST_getInstance()];
   }
-  function valueOf_21(value) {
+  function valueOf_27(value) {
     switch (value) {
       case 'UPPER_CASE':
         return Case_UPPER_CASE_getInstance();
@@ -32119,7 +39732,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       addAll_0(_this__1828080292, more);
       Unit_getInstance();
     } else {
-      _this__1828080292.addAll_ikuqlt_k$(0, toList_0(more));
+      _this__1828080292.addAll_ikuqlt_k$(0, toList(more));
       Unit_getInstance();
     }
     return _this__1828080292;
@@ -32371,7 +39984,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        nGrams[i] = slice_0(stringPadded, until(i, i + nGramLength | 0));
+        nGrams[i] = slice_1(stringPadded, until(i, i + nGramLength | 0));
       }
        while (inductionVariable <= last);
     return nGrams;
@@ -32438,7 +40051,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     if (trim_0 > 0) {
       var tmp$ret$1;
       $l$block_0: {
-        tmp$ret$1 = toString_0(trim(isCharSequence(_this__1828080292) ? _this__1828080292 : THROW_CCE()));
+        tmp$ret$1 = toString(trim(isCharSequence(_this__1828080292) ? _this__1828080292 : THROW_CCE()));
         break $l$block_0;
       }
       tmp = tmp$ret$1;
@@ -32513,7 +40126,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
         if (trim_0 > 1) {
           var tmp$ret$6;
           $l$block_5: {
-            tmp$ret$6 = toString_0(trim(isCharSequence(tmp4_let_0) ? tmp4_let_0 : THROW_CCE()));
+            tmp$ret$6 = toString(trim(isCharSequence(tmp4_let_0) ? tmp4_let_0 : THROW_CCE()));
             break $l$block_5;
           }
           tmp_10 = tmp$ret$6;
@@ -32543,7 +40156,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var out = tmp$ret$0;
     var tmp$ret$1;
     $l$block_0: {
-      tmp$ret$1 = toString_0(trim(isCharSequence(string) ? string : THROW_CCE()));
+      tmp$ret$1 = toString(trim(isCharSequence(string) ? string : THROW_CCE()));
       break $l$block_0;
     }
     var working = tmp$ret$1;
@@ -32576,7 +40189,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
       } else {
         var tmp$ret$3;
         $l$block_2: {
-          tmp$ret$3 = toString_0(trim((!(tmp2_safe_receiver == null) ? isCharSequence(tmp2_safe_receiver) : false) ? tmp2_safe_receiver : THROW_CCE()));
+          tmp$ret$3 = toString(trim((!(tmp2_safe_receiver == null) ? isCharSequence(tmp2_safe_receiver) : false) ? tmp2_safe_receiver : THROW_CCE()));
           break $l$block_2;
         }
         tmp_1 = tmp$ret$3;
@@ -32813,22 +40426,22 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return variantsByCommandJson;
   }
   var variantsByCommandJson;
-  function Companion_27() {
-    Companion_instance_27 = this;
+  function Companion_32() {
+    Companion_instance_32 = this;
   }
-  Companion_27.prototype.serializer_9w0wvi_k$ = function () {
+  Companion_32.prototype.serializer_9w0wvi_k$ = function () {
     return $serializer_getInstance_6();
   };
-  Companion_27.$metadata$ = {
+  Companion_32.$metadata$ = {
     simpleName: 'Companion',
     kind: 'object',
     interfaces: []
   };
-  var Companion_instance_27;
-  function Companion_getInstance_29() {
-    if (Companion_instance_27 == null)
-      new Companion_27();
-    return Companion_instance_27;
+  var Companion_instance_32;
+  function Companion_getInstance_34() {
+    if (Companion_instance_32 == null)
+      new Companion_32();
+    return Companion_instance_32;
   }
   function $serializer_6() {
     $serializer_instance_6 = this;
@@ -32943,7 +40556,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return VariantsByCommand_init_$Init$(seen1, command, rvalue, lvalue, serializationConstructorMarker, Object.create(VariantsByCommand.prototype));
   }
   function VariantsByCommand(command, rvalue, lvalue) {
-    Companion_getInstance_29();
+    Companion_getInstance_34();
     this.command_1 = command;
     this.rvalue_1 = rvalue;
     this.lvalue_1 = lvalue;
@@ -33011,7 +40624,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
   };
   function variantsByCommand$delegate$lambda() {
     return function () {
-      return Default_getInstance().decodeFromString_ink0ik_k$(Companion_getInstance_29().serializer_9w0wvi_k$(), '{"command":{"SCRP":["C1","C2","CV","C3","DS","AL"],"NEW: SCEN":["C1","C2"],"NEW: SIMP":["C1","C2","CV","C3","DS"],"NEW: CBTN":["C1","C2"],"NEW: COMP":["C1","C2","CV","C3","DS"],"NEW: PART":["C1","C2"],"NEW: VHCL":["C1","C2","CV","C3","DS"],"NEW: LIFT":["C1","C2"],"NEW: BKBD":["C1","C2"],"NEW: CREA":["C1","C2","CV","C3","DS"],"NEW: GENE":["C1","C2"],"NEW: CBUB":["C2"],"NEW: BBTX":["C2"],"TARG":["C1","C2","CV","C3","DS"],"EDIT":["C1","C2"],"BHVR":["C1","C2","CV","C3","DS"],"KILL":["C1","C2","CV","C3","DS"],"TICK":["C1","C2","CV","C3","DS"],"SLIM":["C1","C2"],"ADDV":["C1","C2","CV","C3","DS"],"SUBV":["C1","C2","CV","C3","DS"],"MULV":["C1","C2","CV","C3","DS"],"DIVV":["C1","C2","CV","C3","DS"],"MODV":["C1","C2","CV","C3","DS"],"NEGV":["C1","C2","CV","C3","DS"],"ANDV":["C1","C2","C2","CV","C3","DS"],"RNDV":["C1","C2"],"SETV":["C1","C2","CV","C3","DS"],"BBLE":["C2"],"STOP":["C1","C1","C2","CV","C3","DS"],"ENDM":["C1","C2","CV","C3","DS"],"SUBR":["C1","C2","CV","C3","DS"],"GSUB":["C1","C2","CV","C3","DS"],"RETN":["C1","C2","CV","C3","DS"],"REPS":["C1","C2","CV","C3","DS"],"REPE":["C1","C2","CV","C3","DS"],"LOOP":["C1","C2","CV","C3","DS"],"UNTL":["C1","C2","CV","C3","DS"],"ENUM":["C1","C2","CV","C3","DS"],"ESEE":["C2","CV","C3","DS"],"ETCH":["C2","CV","C3","DS"],"NEXT":["C1","C2","CV","C3","DS"],"ESCN":["C2"],"NSCN":["C2"],"RTAR":["C1","C2","CV","C3","DS"],"STAR":["C2","CV","C3","DS"],"INST":["C1","C2","CV","C3","DS"],"SLOW":["C2","CV","C3","DS"],"EVER":["C1","C2","CV","C3","DS"],"DOIF":["C1","C2","CV","C3","DS"],"ELSE":["C1","C2","CV","C3","DS"],"ENDI":["C1","C2","CV","C3","DS"],"WAIT":["C1","C1","C2","CV","C3","DS"],"ANIM":["C1","C1","C2","CV","C3","DS"],"OVER":["C1","C2","CV","C3","DS"],"POSE":["C1","C2","CV","C3","DS"],"PRLD":["C1","C2"],"BASE":["C1","C2","CV","C3","DS"],"MVTO":["C1","C2","CV","C3","DS"],"MCRT":["C1","C2"],"MVBY":["C1","C2","CV","C3","DS"],"MESG SHOU":["C1","C2"],"MESG SIGN":["C1","C2"],"MESG TACT":["C1","C2"],"MESG WRT+":["C2","CV","C3","DS"],"STM# SHOU":["C1","C2"],"STM# SIGN":["C1","C2"],"STM# TACT":["C1","C2"],"STM# WRIT":["C1","C2"],"STIM SHOU":["C1","C2","CV","C3","DS"],"STIM SIGN":["C1","C2","CV","C3","DS"],"STIM TACT":["C1","C2","CV","C3","DS"],"STIM WRIT":["C1","C2","CV","C3","DS"],"ROOM":["C1","C2"],"DELR":["C2","CV","C3","DS"],"DELN":["C2","C3","DS"],"TECO":["C2"],"ASEA":["C2"],"SPOT":["C1","C2"],"KNOB":["C1","C2"],"KMSG":["C2"],"PART":["C1","C2","CV","C3","DS"],"CABN":["C1","C2","CV","C3","DS"],"DPS2":["C2"],"DPAS":["C1","C2","CV","C3","DS"],"GPAS":["C1","C2","CV","C3","DS"],"SPAS":["C1","C2","CV","C3","DS"],"TELE":["C1","C2"],"BBD: VOCB":["C2"],"BBD: VCB1":["C2"],"BBD: WORD":["C1","C2"],"BBD: SHOW":["C1","C2"],"BBD: EMIT":["C1","C2"],"BBTX":["C2"],"BBT2":["C2"],"BBFD":["C2"],"CBRG":["C2"],"CBRX":["C2"],"NEW: RAIN":["C2"],"RAIN":["C2"],"SYS: CMRP":["C2"],"SYS: CMRA":["C1","C2"],"RMSC":["C2","CV","C3","DS"],"RCLR":["C2","CV","C3","DS"],"SNDE":["C1","C2","CV","C3","DS"],"SNDQ":["C1","C2","CV","C3","DS"],"SNDC":["C1","C2","CV","C3","DS"],"SNDL":["C1","C2","CV","C3","DS"],"PLDS":["C1","C2"],"STPC":["C1","C2","CV","C3","DS"],"FADE":["C1","C2","CV","C3","DS"],"CHEM":["C1","C2","CV","C3","DS"],"ASLP":["C1","C2","CV","C3","DS"],"INJR":["C2","CV","C3","DS"],"FIRE":["C1","C2"],"TRIG":["C1","C2"],"APPR":["C1","C2","CV","C3","DS"],"WALK":["C1","C2","CV","C3","DS"],"TOUC":["C1","C2","CV","C3","DS"],"POIN":["C1","C2"],"AIM:":["C1","C2"],"SAY#":["C1","C2"],"SAY$":["C1","C2"],"SAYN":["C1","C2","CV","C3","DS"],"IMPT":["C1","C2"],"DONE":["C1","C2","CV","C3","DS"],"LTCY":["C1","C2","CV","C3","DS"],"DREA":["C1","C2","CV","C3","DS"],"DROP":["C1","C2","CV","C3","DS"],"MATE":["C1","C2","CV","C3","DS"],"SNEZ":["C1","C2"],"CAMN":["C2"],"DDE: GIDS ROOT":["C2"],"DDE: GIDS FMLY":["C2"],"DDE: GIDS GNUS":["C2"],"DDE: GIDS SPCS":["C2"],"DDE: GETB ALLR":["C2"],"DDE: GETB RPTY":["C2"],"DDE: GETB RRCT":["C2"],"DDE: GETB NEWV":["C2"],"DDE: GETB LVOB":["C2"],"DDE: GETB BIOC":["C2"],"DDE: GETB ORGN":["C2"],"DDE: GETB EMTR":["C2"],"DDE: GETB RCTN":["C2"],"DDE: PIC2":["C2"],"DDE: PUTV":["C1","C2"],"DDE: NACT":["C2"],"DDE: LNEU":["C2"],"DDE: LCUS":["C2"],"DDE: PUTS":["C1","C2"],"DDE: GETB DATA":["C1","C2"],"DDE: GETB CNAM":["C1","C2"],"DDE: GETB CTIM":["C1","C2"],"DDE: GETB MONK":["C1","C2"],"DDE: GETB OVVD":["C1","C2"],"DDE: NEGG":["C1","C2"],"DDE: PANC":["C1","C2"],"DDE: LOBE":["C1","C2"],"DDE: GENE":["C1","C2"],"DDE: WORD":["C1","C2"],"DDE: CELL":["C1","C2"],"DDE: DIED":["C1","C2"],"DDE: LIVE":["C1","C2"],"DDE: HATC":["C1","C2"],"DBUG":["C1","C2"],"DBGV":["C1","C2"],"DBGM":["C1","C2"],"SCRX":["C1","C2","CV","C3","DS"],"LOCK":["C2","CV","C3","DS"],"UNLK":["C2","CV","C3","DS"],"EVNT":["C1","C2"],"RMEV":["C1","C2"],"SYS: EDIT":["C1","C2"],"SYS: DMAP":["C2"],"SYS: WTOP":["C1","C2"],"SYS: QUIT":["C1","C2"],"SYS: ABRT":["C1","C2"],"SYS: WRLD":["C1","C2"],"SYS: CONV":["C2"],"VRSN":["C1","C2"],"ISCR":["C2","CV","C3","DS"],"RSCR":["C2","CV","C3","DS"],"DDE: SCRP":["C1","C2"],"DDE: PUTB":["C1","C2"],"DDE: PICT":["C1"],"SYS: CMND":["C1","C2"],"SYS: WPOS":["C1","C2"],"SYS: CAMT":["C1","C2"],"SYS: GRND":["C1","C2"],"BBD: EDIT":["C1"],"ORRV":["C1","C2","CV","C3","DS"],"TOOL":["C1","C2"],"SNDF":["C1"],"SNDV":["C1"],"MESG WRIT":["C1","C2","CV","C3","DS"],"ALPH":["CV","C3","DS"],"ANMS":["CV","C3","DS"],"ATTR":["CV","C3","DS"],"BMPS":["CV"],"FRAT":["CV","C3","DS"],"GAIT":["CV","C3","DS"],"GALL":["CV","C3","DS"],"HAND":["CV","C3","DS"],"IMGE":["CV"],"MIRA":["CV","C3","DS"],"NOHH":["CV","C3","DS"],"PAUS":["CV","C3","DS"],"PLNE":["CV","C3","DS"],"PUHL":["CV","C3","DS"],"PUPT":["CV","C3","DS"],"RNGE":["CV","C3","DS"],"SCLE":["CV"],"SHOW":["CV","C3","DS"],"TINT":["CV","C3","DS"],"TTAR":["CV","C3","DS"],"BKGD":["CV","C3","DS"],"BRMI":["CV","C3","DS"],"CMRA":["CV","C3","DS"],"CMRP":["CV","C3","DS"],"CMRT":["CV","C3","DS"],"FRSH":["CV","C3","DS"],"LINE":["CV","C3","DS"],"META":["CV","C3","DS"],"MIRR":["CV"],"PRNT":["CV"],"SCAM":["CV","C3","DS"],"SCRL":["CV"],"SNAP":["CV","C3","DS"],"TNTO":["CV"],"TRCK":["CV","C3","DS"],"WDOW":["CV","C3","DS"],"ZOOM":["CV","C3","DS"],"FCUS":["CV","C3","DS"],"FRMT":["CV","C3","DS"],"GRPL":["CV","C3","DS"],"GRPV":["CV","C3","DS"],"PAGE":["CV","C3","DS"],"PTXT":["CV","C3","DS"],"AGES":["CV","C3","DS"],"BODY":["CV","C3","DS"],"BORN":["CV","C3","DS"],"DEAD":["CV","C3","DS"],"DIRN":["CV","C3","DS"],"DRIV":["CV","C3","DS"],"DYED":["CV"],"EXPR":["CV"],"FACE":["CV","C3","DS"],"FORF":["CV","C3","DS"],"HAIR":["CV","C3","DS"],"LIKE":["CV","C3","DS"],"LOCI":["CV","C3","DS"],"MVFT":["CV","C3","DS"],"NEWC":["CV","C3","DS"],"NORN":["CV","C3","DS"],"NUDE":["CV","C3","DS"],"RSET":["CV"],"SPNL":["CV","C3","DS"],"STRE":["CV"],"SWAP":["CV"],"TNTC":["CV"],"UNCS":["CV","C3","DS"],"VOCB":["CV","C3","DS"],"WEAR":["CV","C3","DS"],"ZOMB":["CV","C3","DS"],"APRO":["CV","C3","DS"],"HELP":["CV","C3","DS"],"MANN":["CV","C3","DS"],"MEMX":["CV","C3","DS"],"OUTS":["CV","C3","DS"],"OUTV":["CV","C3","DS"],"OUTX":["CV","C3","DS"],"ELIF":["CV","C3","DS"],"GOTO":["CV","C3","DS"],"CLAC":["CV","C3","DS"],"CLIK":["CV","C3","DS"],"IMSK":["CV","C3","DS"],"MOUS":["CV","C3","DS"],"PURE":["CV","C3","DS"],"TRAN":["CV","C3","DS"],"ADDB":["CV","C3","DS"],"ALTR":["CV","C3","DS"],"CACL":["CV","C3","DS"],"DELM":["CV","C3","DS"],"DMAP":["CV","C3","DS"],"DOCA":["CV","C3","DS"],"DOOR":["CV","C3","DS"],"EMIT":["CV","C3","DS"],"LINK":["CV","C3","DS"],"MAPD":["CV","C3","DS"],"MAPK":["CV","C3","DS"],"PERM":["CV","C3","DS"],"PROP":["CV","C3","DS"],"RATE":["CV","C3","DS"],"RTYP":["CV","C3","DS"],"ACCG":["CV","C3","DS"],"AERO":["CV","C3","DS"],"ELAS":["CV","C3","DS"],"FLTO":["CV","C3","DS"],"FREL":["CV","C3","DS"],"FRIC":["CV","C3","DS"],"MVSF":["CV","C3","DS"],"VELO":["CV","C3","DS"],"ECON":["CV","C3","DS"],"STPT":["CV","C3","DS"],"MCLR":["CV","C3","DS"],"MIDI":["CV","C3","DS"],"MMSC":["CV","C3","DS"],"SEZZ":["CV","C3","DS"],"STRK":["CV","C3","DS"],"VOIC":["CV","C3","DS"],"VOIS":["CV","C3","DS"],"VOLM":["CV","C3","DS"],"WPAU":["CV","C3","DS"],"ABSV":["CV","C3","DS"],"ADDS":["CV","C3","DS"],"CHAR":["CV","C3","DS"],"DELG":["CV","C3","DS"],"REAF":["CV","C3","DS"],"SETA":["CV","C3","DS"],"SETS":["CV","C3","DS"],"CABP":["CV","C3","DS"],"CABV":["CV","C3","DS"],"CABW":["CV","C3","DS"],"EPAS":["CV","C3","DS"],"RPAS":["CV","C3","DS"],"DELW":["CV","C3","DS"],"LOAD":["CV","C3","DS"],"PSWD":["CV","C3","DS"],"QUIT":["CV","C3","DS"],"RGAM":["CV","C3","DS"],"SAVE":["CV","C3","DS"],"TNTW":["CV","C3","DS"],"WRLD":["CV","C3","DS"],"WTNT":["CV","C3","DS"],"CALL":["C3","DS"],"CATO":["C3","DS"],"CORE":["C3","DS"],"DCOR":["C3","DS"],"DSEE":["C3","DS"],"TINO":["C3","DS"],"UCLN":["C3","DS"],"ADIN":["C3","DS"],"BRN: DMPB":["CV","C3","DS"],"BRN: DMPD":["CV","C3","DS"],"BRN: DMPL":["CV","C3","DS"],"BRN: DMPN":["CV","C3","DS"],"BRN: DMPT":["CV","C3","DS"],"BRN: SETD":["CV","C3","DS"],"BRN: SETL":["CV","C3","DS"],"BRN: SETN":["CV","C3","DS"],"BRN: SETT":["CV","C3","DS"],"DOIN":["C3","DS"],"_CD_ EJCT":["C3","DS"],"_CD_ INIT":["C3","DS"],"_CD_ PAWS":["C3","DS"],"_CD_ PLAY":["C3","DS"],"_CD_ SHUT":["C3","DS"],"_CD_ STOP":["C3","DS"],"PAT: BUTT":["CV","C3","DS"],"PAT: CMRA":["CV","C3","DS"],"PAT: DULL":["CV","C3","DS"],"PAT: FIXD":["CV","C3","DS"],"PAT: GRPH":["CV","C3","DS"],"PAT: KILL":["CV","C3","DS"],"PAT: MOVE":["C3","DS"],"PAT: TEXT":["CV","C3","DS"],"BOOT":["C3","DS"],"CALG":["C3","DS"],"MIND":["C3","DS"],"MOTR":["C3","DS"],"NEW: CRAG":["C3","DS"],"ORDR SHOU":["CV","C3","DS"],"ORDR SIGN":["CV","C3","DS"],"ORDR TACT":["CV","C3","DS"],"ORDR WRIT":["CV","C3","DS"],"PLMD":["C3","DS"],"PLMU":["C3","DS"],"SOUL":["C3","DS"],"STEP":["C3","DS"],"SWAY SHOU":["CV","C3","DS"],"SWAY SIGN":["CV","C3","DS"],"SWAY TACT":["CV","C3","DS"],"SWAY WRIT":["CV","C3","DS"],"URGE SHOU":["CV","C3","DS"],"URGE SIGN":["CV","C3","DS"],"URGE TACT":["CV","C3","DS"],"URGE WRIT":["CV","C3","DS"],"BANG":["C3","DS"],"DBG: ASRT":["CV","C3","DS"],"DBG: CPRO":["CV","C3","DS"],"DBG: FLSH":["CV","C3","DS"],"DBG: HTML":["CV","C3","DS"],"DBG: OUTS":["CV","C3","DS"],"DBG: OUTV":["CV","C3","DS"],"DBG: PAWS":["CV","C3","DS"],"DBG: PLAY":["CV","C3","DS"],"DBG: POLL":["CV","C3","DS"],"DBG: PROF":["CV","C3","DS"],"DBG: TACK":["CV","C3","DS"],"DBG: TOCK":["CV","C3","DS"],"DBG: WTIK":["CV","C3","DS"],"FILE GLOB":["CV","C3","DS"],"FILE ICLO":["CV","C3","DS"],"FILE IOPE":["CV","C3","DS"],"FILE JDEL":["CV","C3","DS"],"FILE OCLO":["CV","C3","DS"],"FILE OFLU":["CV","C3","DS"],"FILE OOPE":["CV","C3","DS"],"WEBB":["C3","DS"],"GENE CLON":["CV","C3","DS"],"GENE CROS":["CV","C3","DS"],"GENE KILL":["CV","C3","DS"],"GENE LOAD":["CV","C3","DS"],"GENE MOVE":["CV","C3","DS"],"HIST EVNT":["CV","C3","DS"],"HIST FOTO":["CV","C3","DS"],"HIST NAME":["CV","C3","DS"],"HIST UTXT":["CV","C3","DS"],"HIST WIPE":["CV","C3","DS"],"CALC":["C3","DS"],"ADMP":["C3","DS"],"AVEL":["C3","DS"],"FDMP":["C3","DS"],"FVEL":["C3","DS"],"ROTN":["C3","DS"],"SDMP":["C3","DS"],"SPIN":["C3","DS"],"SVEL":["C3","DS"],"VARC":["C3","DS"],"NET: HEAD":["DS"],"NET: HEAR":["DS"],"NET: LINE":["DS"],"NET: PASS":["DS"],"NET: RUSO":["DS"],"NET: STAT":["DS"],"NET: UNIK":["DS"],"NET: WHOD":["DS"],"NET: WHOF":["DS"],"NET: WHON":["DS"],"NET: WHOZ":["DS"],"NET: WRIT":["DS"],"PRT: BANG":["CV","C3","DS"],"PRT: INEW":["CV","C3","DS"],"PRT: IZAP":["CV","C3","DS"],"PRT: JOIN":["CV","C3","DS"],"PRT: KRAK":["CV","C3","DS"],"PRT: ONEW":["CV","C3","DS"],"PRT: OZAP":["CV","C3","DS"],"PRT: SEND":["CV","C3","DS"],"PRAY GARB":["CV","C3","DS"],"PRAY REFR":["CV","C3","DS"],"GIDS FMLY":["CV","C3","DS"],"GIDS GNUS":["CV","C3","DS"],"GIDS ROOT":["CV","C3","DS"],"GIDS SPCS":["CV","C3","DS"],"JECT":["C3","DS"],"BUZZ":["C3","DS"],"DELE":["C3","DS"],"NAMN":["C3","DS"],"NOTV":["C3","DS"],"PAT: CHAR":["CV"],"FILE EXEC":["CV"],"STIM FROM":["C1"],"F**K":["C1"],"EXEC":["C1","C2"],"DDE: GETB RCPR":["C2"],"DDE: DEND":["C2"],"APP: QUIT":["C1","C2"],"SSFC":["C2"],"DDE: GETB SSFC":["C2"]},"rvalue":{"TOKN":["C1","C2"],"TARG":["C1","C2","CV","C3","DS"],"FROM":["C1","C2","CV","C3","DS"],"NORN":["C1","C2","CV","C3","DS"],"PNTR":["C1","C2","CV","C3","DS"],"_IT_":["C1","C2","CV","C3","DS"],"CARR":["C1","C2","CV","C3","DS"],"EDIT":["C1","C2"],"TCAR":["C1","C2"],"OBJP":["C1","C2"],"ACCG":["C2","CV","C3","DS"],"AERO":["C2","CV","C3","DS"],"REST":["C2"],"SIZE":["C2"],"RNGE":["C2","CV","C3","DS"],"ATTR":["C1","C2","CV","C3","DS"],"WDTH":["C1","C2","CV","C3","DS"],"HGHT":["C1","C2","CV","C3","DS"],"_P1_":["C2","CV","C3","DS"],"_P2_":["C2","CV","C3","DS"],"UNID":["C2","CV","C3","DS"],"GRAV":["C2"],"WALL":["C2","CV","C3","DS"],"RELX":["C2","CV","C3","DS"],"RELY":["C2","CV","C3","DS"],"TICK":["C2","CV","C3","DS"],"FRZN":["C2"],"POSX":["C2","CV","C3","DS"],"POSY":["C2","CV","C3","DS"],"POSL":["C1","C2","CV","C3","DS"],"POSR":["C1","C2","CV","C3","DS"],"POSB":["C1","C2","CV","C3","DS"],"POST":["C1","C2","CV","C3","DS"],"LIML":["C1","C2"],"LIMR":["C1","C2"],"LIMT":["C1","C2"],"LIMB":["C1","C2","C3","DS"],"FMLY":["C1","C2","CV","C3","DS"],"GNUS":["C1","C2","CV","C3","DS"],"SPCS":["C1","C2","CV","C3","DS"],"MOVS":["C1","C2","CV","C3","DS"],"ACTV":["C1","C2"],"NEID":["C1","C2"],"TOTL":["C1","C2","CV","C3","DS"],"TOUC":["C1","C2","CV","C3","DS"],"POSE":["C1","C2","CV","C3","DS"],"VELX":["C2","CV","C3","DS"],"VELY":["C2","CV","C3","DS"],"TEMP":["C1","C2"],"LITE":["C2"],"RADN":["C2"],"ONTR":["C2"],"INTR":["C2"],"PRES":["C2"],"WNDX":["C2"],"WNDY":["C2"],"HSRC":["C2"],"PSRC":["C2"],"LSRC":["C2"],"RSRC":["C2"],"RMNO":["C2"],"RTYP":["C2","CV","C3","DS"],"RMN#":["C2"],"RMND":["C2"],"RMNR":["C2"],"ROOM":["C1","C2","CV","C3","DS"],"DOOR":["C2","CV","C3","DS"],"WLDW":["C2"],"WLDH":["C2"],"OBST":["C2","CV","C3","DS"],"OBDT":["C2"],"OBSV":["C2"],"FLOR":["C2"],"RMS#":["C1","C2"],"GRND":["C1","C2"],"ISAR":["C2"],"SEAN":["C2","CV","C3","DS"],"SEAV":["C2"],"TMOD":["C2"],"YEAR":["C2","CV","C3","DS"],"EGGL":["C2"],"HATL":["C2"],"LACB":["C2"],"XVEC":["C1","C2"],"YVEC":["C1","C2"],"BUMP":["C1","C2"],"RAIN":["C2"],"CMRX":["C2","CV","C3","DS"],"CMRY":["C2","CV","C3","DS"],"THRT":["C2"],"MUSC":["C2"],"DRIV":["C1","C2","CV","C3","DS"],"DRV!":["C1","C2","CV","C3","DS"],"CHEM":["C1","C2","CV","C3","DS"],"BABY":["C1","C2"],"ASLP":["C1","C2","CV","C3","DS"],"INS#":["C2","CV","C3","DS"],"DIRN":["C2","CV","C3","DS"],"MONK":["C2"],"CREA":["C2","CV","C3","DS"],"ORGN":["C2","CV","C3","DS"],"CAGE":["C1","C2","CV","C3","DS"],"PAUS":["C2","CV","C3","DS"],"HOUR":["C1","C2"],"MINS":["C1","C2"],"VRSN":["C1","C2"],"LANG":["C2","CV"],"OWNR":["C1","C2","CV","C3","DS"],"ATTN":["C1","C2","CV","C3","DS"],"EXEC":["C1","C2"],"SNDS":["C1","C2"],"WINW":["C1","C2"],"WINH":["C1","C2"],"CLAS":["C1","C1","C2"],"SCOR":["C1","C2"],"CAMN":["C1"],"DEAD":["C1","C2","CV","C3","DS"],"WIND":["C1","C2"],"GND#":["C1","C2"],"GNDW":["C1","C2"],"BASE":["CV","C3","DS"],"BHVR":["CV","C3","DS"],"CATI":["CV","C3","DS"],"CATX":["CV","C3","DS"],"CLAC":["CV","C3","DS"],"CLIK":["CV","C3","DS"],"DISQ":["CV","C3","DS"],"FLTX":["CV","C3","DS"],"FLTY":["CV","C3","DS"],"HAND":["CV","C3","DS"],"HEDX":["CV"],"HEDY":["CV"],"HELD":["CV","C3","DS"],"IITT":["CV","C3","DS"],"IMSK":["CV","C3","DS"],"MIRA":["CV","C3","DS"],"MOWS":["CV","C3","DS"],"MTHX":["CV","C3","DS"],"MTHY":["CV","C3","DS"],"NCLS":["CV","C3","DS"],"NULL":["C2","CV","C3","DS"],"ONTV":["CV"],"PCLS":["CV","C3","DS"],"PLNE":["CV","C3","DS"],"PUHL":["CV","C3","DS"],"PUPT":["CV","C3","DS"],"SEEE":["CV","C3","DS"],"SHOW":["CV"],"TRAN":["CV","CV","C3","DS"],"TWIN":["CV","C3","DS"],"VISI":["CV","C3","DS"],"WILD":["CV","C3","DS"],"BKGD":["CV","C3","DS"],"LOFT":["CV","C3","DS"],"META":["CV","C3","DS"],"SNAX":["CV","C3","DS"],"TRCK":["CV","C3","DS"],"WDOW":["CV","C3","DS"],"WNDB":["CV","C3","DS"],"WNDH":["CV","C3","DS"],"WNDL":["CV","C3","DS"],"WNDR":["CV","C3","DS"],"WNDT":["CV","C3","DS"],"WNDW":["CV","C3","DS"],"CHAR":["CV","CV","C3","DS"],"NPGS":["CV","C3","DS"],"PAGE":["CV","C3","DS"],"PTXT":["CV","C3","DS"],"BODY":["CV","C3","DS"],"BRED":["CV"],"BVAR":["CV","C3","DS"],"BYIT":["CV","C3","DS"],"DECN":["CV","C3","DS"],"DFTX":["CV","C3","DS"],"DFTY":["CV","C3","DS"],"DREA":["CV","C3","DS"],"EXPR":["CV","C3","DS"],"FACE":["CV","CV","C3","C3","DS","DS"],"HHLD":["CV","C3","DS"],"LOCI":["CV","C3","DS"],"ORGF":["CV","C3","DS"],"ORGI":["CV","C3","DS"],"TAGE":["CV","C3","DS"],"UFTX":["CV","C3","DS"],"UFTY":["CV","C3","DS"],"UNCS":["C2","CV","C3","DS"],"WEAR":["CV"],"ZOMB":["CV","C3","DS"],"AGNT":["CV","C3","DS"],"CODE":["CV","C3","DS"],"CODF":["CV","C3","DS"],"CODG":["CV","C3","DS"],"CODP":["CV","C3","DS"],"CODS":["CV","C3","DS"],"DBG#":["CV","C3","DS"],"DBGA":["CV","C3","DS"],"HEAP":["CV","C3","DS"],"PAWS":["CV","C3","DS"],"TACK":["CV","C3","DS"],"FVWM":["CV","C3","DS"],"INNF":["CV","C3","DS"],"INNI":["CV","C3","DS"],"INNL":["CV","C3","DS"],"INOK":["CV","C3","DS"],"GTOS":["CV","C3","DS"],"MTOA":["CV","C3","DS"],"MTOC":["CV","C3","DS"],"OOWW":["CV","C3","DS"],"HOTS":["CV","C3","DS"],"KEYD":["CV","C3","DS"],"MOPX":["CV","C3","DS"],"MOPY":["CV","C3","DS"],"MOVX":["CV","C3","DS"],"MOVY":["CV","C3","DS"],"PURE":["CV","C3","DS"],"ADDM":["CV","C3","DS"],"ADDR":["CV","C3","DS"],"BKDS":["CV","C3","DS"],"DOWN":["CV","C3","DS"],"EMID":["CV","C3","DS"],"ERID":["CV","C3","DS"],"GMAP":["CV","C3","DS"],"GRAP":["CV","C3","DS"],"GRID":["CV","C3","DS"],"HIRP":["CV","C3","DS"],"LEFT":["CV","C3","DS"],"LINK":["CV","C3","DS"],"LORP":["CV","C3","DS"],"MAPH":["CV","C3","DS"],"MAPW":["CV","C3","DS"],"MLOC":["CV","C3","DS"],"PERM":["CV","C3","DS"],"PROP":["CV","C3","DS"],"RATE":["CV","C3","DS"],"RGHT":["CV","C3","DS"],"RLOC":["CV","C3","DS"],"TORX":["CV","C3","DS"],"TORY":["CV","C3","DS"],"_UP_":["CV","C3","DS"],"ELAS":["CV","C3","DS"],"FALL":["CV","C3","DS"],"FRIC":["CV","C3","DS"],"TMVB":["CV","C3","DS"],"TMVF":["CV","C3","DS"],"TMVT":["CV","C3","DS"],"CAOS":["CV","C3","DS"],"SORC":["CV","C3","DS"],"SORQ":["CV","C3","DS"],"MMSC":["CV","C3","DS"],"MUTE":["CV","C3","DS"],"RMSC":["CV","C3","DS"],"VOIS":["CV","C3","DS"],"DATE":["CV","C3","DS"],"DAYT":["CV","C3","DS"],"ETIK":["CV","C3","DS"],"MONT":["CV","C3","DS"],"MSEC":["CV","C3","DS"],"PACE":["CV","C3","DS"],"RACE":["CV","C3","DS"],"RTIF":["CV","C3","DS"],"RTIM":["CV","C3","DS"],"SCOL":["CV","C3","DS"],"TIME":["CV","C3","DS"],"WOLF":["CV","C3","DS"],"WPAU":["CV","C3","DS"],"WTIK":["CV","C3","DS"],"ACOS":["CV","C3","DS"],"ASIN":["CV","C3","DS"],"ATAN":["CV","C3","DS"],"AVAR":["CV","C3","DS"],"COS_":["CV","C3","DS"],"FTOI":["CV","C3","DS"],"GAME":["C2","CV","C3","DS"],"GAMN":["CV","C3","DS"],"GNAM":["CV","C3","DS"],"ITOF":["CV","C3","DS"],"MVxx":["CV","C3","DS"],"OVxx":["C2","CV","C3","DS"],"RAND":["CV","C3","DS"],"READ":["CV","C3","DS"],"REAN":["CV","C3","DS"],"REAQ":["CV","C3","DS"],"SIN_":["CV","C3","DS"],"SQRT":["CV","C3","DS"],"STOF":["CV","C3","DS"],"STOI":["CV","C3","DS"],"STRL":["CV","C3","DS"],"SUBS":["CV","C3","DS"],"TAN_":["CV","C3","DS"],"TYPE":["CV","C3","DS"],"VAxx":["C2","CV","C3","DS"],"VMJR":["CV","C3","DS"],"VMNR":["CV","C3","DS"],"VTOS":["CV","C3","DS"],"CABB":["CV","C3","DS"],"CABL":["CV","C3","DS"],"CABP":["CV","C3","DS"],"CABR":["CV","C3","DS"],"CABT":["CV","C3","DS"],"CABV":["CV","C3","DS"],"NWLD":["CV","C3","DS"],"PSWD":["CV","C3","DS"],"WNAM":["CV","C3","DS"],"WNTI":["CV","C3","DS"],"WRLD":["CV","C3","DS"],"WUID":["CV","C3","DS"],"ABBA":["C3","DS"],"CATA":["C3","DS"],"GALL":["C3","DS"],"TCOR":["C3","DS"],"TINT":["C3","DS"],"_CD_ FRQH":["C3","DS"],"_CD_ FRQL":["C3","DS"],"_CD_ FRQM":["C3","DS"],"PART":["C3","DS"],"PNXT":["C3","DS"],"CALG":["C3","DS"],"MIND":["C3","DS"],"MOTR":["C3","DS"],"SEEN":["C3","DS"],"SOUL":["C3","DS"],"HIST CAGE":["CV","C3","DS"],"HIST COUN":["CV","C3","DS"],"HIST CROS":["CV","C3","DS"],"HIST FIND":["CV","C3","DS"],"HIST FINR":["CV","C3","DS"],"HIST FOTO":["CV","C3","DS"],"HIST GEND":["CV","C3","DS"],"HIST GNUS":["CV","C3","DS"],"HIST MUTE":["CV","C3","DS"],"HIST NAME":["CV","C3","DS"],"HIST NETU":["C3","DS"],"HIST NEXT":["CV","C3","DS"],"HIST PREV":["CV","C3","DS"],"HIST RTIM":["CV","C3","DS"],"HIST TAGE":["CV","C3","DS"],"HIST TYPE":["CV","C3","DS"],"HIST UTXT":["CV","C3","DS"],"HIST VARI":["CV","C3","DS"],"HIST WNAM":["CV","C3","DS"],"HIST WTIK":["CV","C3","DS"],"HIST WUID":["CV","C3","DS"],"HIST WVET":["C3","DS"],"HOTP":["C3","DS"],"ADMP":["C3","DS"],"ANGL":["C3","DS"],"AVEL":["C3","DS"],"FDMP":["C3","DS"],"FVEL":["C3","DS"],"SDMP":["C3","DS"],"SPIN":["C3","DS"],"SVEL":["C3","DS"],"VARC":["C3","DS"],"VECX":["C3","DS"],"VECY":["C3","DS"],"NET: ERRA":["DS"],"NET: EXPO":["DS"],"NET: FROM":["DS"],"NET: HOST":["DS"],"NET: LINE":["DS"],"NET: PASS":["DS"],"NET: RAWE":["DS"],"NET: ULIN":["DS"],"NET: USER":["DS"],"NET: WHAT":["DS"],"PRT: FRMA":["CV","C3","DS"],"PRT: FROM":["CV","C3","DS"],"PRT: ITOT":["CV","C3","DS"],"PRT: NAME":["CV","C3","DS"],"PRT: OTOT":["CV","C3","DS"],"NET: MAKE":["DS"],"PRAY AGTI":["CV","C3","DS"],"PRAY AGTS":["CV","C3","DS"],"PRAY BACK":["C3","DS"],"PRAY COUN":["CV","C3","DS"],"PRAY DEPS":["CV","C3","DS"],"PRAY EXPO":["CV","C3","DS"],"PRAY FILE":["CV","C3","DS"],"PRAY FORE":["C3","DS"],"PRAY IMPO":["CV","C3","DS"],"PRAY INJT":["CV","C3","DS"],"PRAY KILL":["C3","DS"],"PRAY MAKE":["CV","C3","DS"],"PRAY NEXT":["CV","C3","DS"],"PRAY PREV":["CV","C3","DS"],"PRAY TEST":["CV","C3","DS"],"VOLM":["C3","DS"],"BUZZ":["C3","DS"],"HIST DATE":["CV","C3","DS"],"HIST SEAN":["CV","C3","DS"],"HIST TIME":["CV","C3","DS"],"HIST YEAR":["CV","C3","DS"],"EAME":["C3","DS"],"EAMN":["C3","DS"],"LOWA":["C3","DS"],"MAME":["C3","DS"],"MODU":["C3","DS"],"NAME":["C3","DS"],"SINS":["C3","DS"],"UFOS":["C3","DS"],"UPPA":["C3","DS"],"PRAY SIZE":["CV"],"HIST MON1":["CV","C3","DS"],"HIST MON2":["CV","C3","DS"],"RNDR":["C2"],"LNG+":["C2"],"VARx":["C1","C2"],"OBVx":["C1","C2"],"XIST":["C2"],"GEND":["C1","C2"]},"lvalue":{"NORN":["C1","C2"],"OBJP":["C1","C2"],"PUPT":["C2"],"PUHL":["C2"],"ACCG":["C2"],"AERO":["C2"],"REST":["C2"],"SIZE":["C2"],"RNGE":["C2"],"ATTR":["C1","C2"],"_P1_":["C2","CV","C3","DS"],"_P2_":["C2","CV","C3","DS"],"CLS2":["C2"],"GRAV":["C2"],"FRZN":["C2"],"MOVS":["C1","C2"],"ACTV":["C1","C2"],"VELX":["C2","CV","C3","DS"],"VELY":["C2","CV","C3","DS"],"TEMP":["C2"],"LITE":["C2"],"RADN":["C2"],"ONTR":["C2"],"INTR":["C2"],"PRES":["C2"],"HSRC":["C2"],"PSRC":["C2"],"LSRC":["C2"],"RSRC":["C2"],"RTYP":["C2"],"RMND":["C2"],"RMNR":["C2"],"DOOR":["C2"],"LACB":["C2"],"XVEC":["C1","C2"],"YVEC":["C1","C2"],"THRT":["C2"],"MUSC":["C2"],"BABY":["C1","C2"],"PAUS":["C2"],"WINW":["C1","C2"],"WINH":["C1","C2"],"CLAS":["C1"],"AVAR":["CV","C3","DS"],"GAME":["C2","CV","C3","DS"],"MVxx":["CV","C3","DS"],"OVxx":["C2","CV","C3","DS"],"VAxx":["C2","CV","C3","DS"],"FROM":["C3","DS"],"EAME":["C3","DS"],"MAME":["C3","DS"],"NAME":["C3","DS"],"VARx":["C1","C2"],"OBVx":["C1","C2"]}}');
+      return Default_getInstance().decodeFromString_ink0ik_k$(Companion_getInstance_34().serializer_9w0wvi_k$(), '{"command":{"SCRP":["C1","C2","CV","C3","DS","AL"],"NEW: SCEN":["C1","C2"],"NEW: SIMP":["C1","C2","CV","C3","DS"],"NEW: CBTN":["C1","C2"],"NEW: COMP":["C1","C2","CV","C3","DS"],"NEW: PART":["C1","C2"],"NEW: VHCL":["C1","C2","CV","C3","DS"],"NEW: LIFT":["C1","C2"],"NEW: BKBD":["C1","C2"],"NEW: CREA":["C1","C2","CV","C3","DS"],"NEW: GENE":["C1","C2"],"NEW: CBUB":["C2"],"NEW: BBTX":["C2"],"TARG":["C1","C2","CV","C3","DS"],"EDIT":["C1","C2"],"BHVR":["C1","C2","CV","C3","DS"],"KILL":["C1","C2","CV","C3","DS"],"TICK":["C1","C2","CV","C3","DS"],"SLIM":["C1","C2"],"ADDV":["C1","C2","CV","C3","DS"],"SUBV":["C1","C2","CV","C3","DS"],"MULV":["C1","C2","CV","C3","DS"],"DIVV":["C1","C2","CV","C3","DS"],"MODV":["C1","C2","CV","C3","DS"],"NEGV":["C1","C2","CV","C3","DS"],"ANDV":["C1","C2","C2","CV","C3","DS"],"RNDV":["C1","C2"],"SETV":["C1","C2","CV","C3","DS"],"BBLE":["C2"],"STOP":["C1","C1","C2","CV","C3","DS"],"ENDM":["C1","C2","CV","C3","DS"],"SUBR":["C1","C2","CV","C3","DS"],"GSUB":["C1","C2","CV","C3","DS"],"RETN":["C1","C2","CV","C3","DS"],"REPS":["C1","C2","CV","C3","DS"],"REPE":["C1","C2","CV","C3","DS"],"LOOP":["C1","C2","CV","C3","DS"],"UNTL":["C1","C2","CV","C3","DS"],"ENUM":["C1","C2","CV","C3","DS"],"ESEE":["C2","CV","C3","DS"],"ETCH":["C2","CV","C3","DS"],"NEXT":["C1","C2","CV","C3","DS"],"ESCN":["C2"],"NSCN":["C2"],"RTAR":["C1","C2","CV","C3","DS"],"STAR":["C2","CV","C3","DS"],"INST":["C1","C2","CV","C3","DS"],"SLOW":["C2","CV","C3","DS"],"EVER":["C1","C2","CV","C3","DS"],"DOIF":["C1","C2","CV","C3","DS"],"ELSE":["C1","C2","CV","C3","DS"],"ENDI":["C1","C2","CV","C3","DS"],"WAIT":["C1","C1","C2","CV","C3","DS"],"ANIM":["C1","C1","C2","CV","C3","DS"],"OVER":["C1","C2","CV","C3","DS"],"POSE":["C1","C2","CV","C3","DS"],"PRLD":["C1","C2"],"BASE":["C1","C2","CV","C3","DS"],"MVTO":["C1","C2","CV","C3","DS"],"MCRT":["C1","C2"],"MVBY":["C1","C2","CV","C3","DS"],"MESG SHOU":["C1","C2"],"MESG SIGN":["C1","C2"],"MESG TACT":["C1","C2"],"MESG WRT+":["C2","CV","C3","DS"],"STM# SHOU":["C1","C2"],"STM# SIGN":["C1","C2"],"STM# TACT":["C1","C2"],"STM# WRIT":["C1","C2"],"STIM SHOU":["C1","C2","CV","C3","DS"],"STIM SIGN":["C1","C2","CV","C3","DS"],"STIM TACT":["C1","C2","CV","C3","DS"],"STIM WRIT":["C1","C2","CV","C3","DS"],"ROOM":["C1","C2"],"DELR":["C2","CV","C3","DS"],"DELN":["C2","C3","DS"],"TECO":["C2"],"ASEA":["C2"],"SPOT":["C1","C2"],"KNOB":["C1","C2"],"KMSG":["C2"],"PART":["C1","C2","CV","C3","DS"],"CABN":["C1","C2","CV","C3","DS"],"DPS2":["C2"],"DPAS":["C1","C2","CV","C3","DS"],"GPAS":["C1","C2","CV","C3","DS"],"SPAS":["C1","C2","CV","C3","DS"],"TELE":["C1","C2"],"BBD: VOCB":["C2"],"BBD: VCB1":["C2"],"BBD: WORD":["C1","C2"],"BBD: SHOW":["C1","C2"],"BBD: EMIT":["C1","C2"],"BBTX":["C2"],"BBT2":["C2"],"BBFD":["C2"],"CBRG":["C2"],"CBRX":["C2"],"NEW: RAIN":["C2"],"RAIN":["C2"],"SYS: CMRP":["C2"],"SYS: CMRA":["C1","C2"],"RMSC":["C2","CV","C3","DS"],"RCLR":["C2","CV","C3","DS"],"SNDE":["C1","C2","CV","C3","DS"],"SNDQ":["C1","C2","CV","C3","DS"],"SNDC":["C1","C2","CV","C3","DS"],"SNDL":["C1","C2","CV","C3","DS"],"PLDS":["C1","C2"],"STPC":["C1","C2","CV","C3","DS"],"FADE":["C1","C2","CV","C3","DS"],"CHEM":["C1","C2","CV","C3","DS"],"ASLP":["C1","C2","CV","C3","DS"],"INJR":["C2","CV","C3","DS"],"FIRE":["C1","C2"],"TRIG":["C1","C2"],"APPR":["C1","C2","CV","C3","DS"],"WALK":["C1","C2","CV","C3","DS"],"TOUC":["C1","C2","CV","C3","DS"],"POIN":["C1","C2"],"AIM:":["C1","C2"],"SAY#":["C1","C2"],"SAY$":["C1","C2"],"SAYN":["C1","C2","CV","C3","DS"],"IMPT":["C1","C2"],"DONE":["C1","C2","CV","C3","DS"],"LTCY":["C1","C2","CV","C3","DS"],"DREA":["C1","C2","CV","C3","DS"],"DROP":["C1","C2","CV","C3","DS"],"MATE":["C1","C2","CV","C3","DS"],"SNEZ":["C1","C2"],"CAMN":["C2"],"DDE: GIDS ROOT":["C2"],"DDE: GIDS FMLY":["C2"],"DDE: GIDS GNUS":["C2"],"DDE: GIDS SPCS":["C2"],"DDE: GETB ALLR":["C2"],"DDE: GETB RPTY":["C2"],"DDE: GETB RRCT":["C2"],"DDE: GETB NEWV":["C2"],"DDE: GETB LVOB":["C2"],"DDE: GETB BIOC":["C2"],"DDE: GETB ORGN":["C2"],"DDE: GETB EMTR":["C2"],"DDE: GETB RCTN":["C2"],"DDE: PIC2":["C2"],"DDE: PUTV":["C1","C2"],"DDE: NACT":["C2"],"DDE: LNEU":["C2"],"DDE: LCUS":["C2"],"DDE: PUTS":["C1","C2"],"DDE: GETB DATA":["C1","C2"],"DDE: GETB CNAM":["C1","C2"],"DDE: GETB CTIM":["C1","C2"],"DDE: GETB MONK":["C1","C2"],"DDE: GETB OVVD":["C1","C2"],"DDE: NEGG":["C1","C2"],"DDE: PANC":["C1","C2"],"DDE: LOBE":["C1","C2"],"DDE: GENE":["C1","C2"],"DDE: WORD":["C1","C2"],"DDE: CELL":["C1","C2"],"DDE: DIED":["C1","C2"],"DDE: LIVE":["C1","C2"],"DDE: HATC":["C1","C2"],"DBUG":["C1","C2"],"DBGV":["C1","C2"],"DBGM":["C1","C2"],"SCRX":["C1","C2","CV","C3","DS"],"LOCK":["C2","CV","C3","DS"],"UNLK":["C2","CV","C3","DS"],"EVNT":["C1","C2"],"RMEV":["C1","C2"],"SYS: EDIT":["C1","C2"],"SYS: DMAP":["C2"],"SYS: WTOP":["C1","C2"],"SYS: QUIT":["C1","C2"],"SYS: ABRT":["C1","C2"],"SYS: WRLD":["C1","C2"],"SYS: CONV":["C2"],"VRSN":["C1","C2"],"ISCR":["C2","CV","C3","DS"],"RSCR":["C2","CV","C3","DS"],"DDE: SCRP":["C1","C2"],"DDE: PUTB":["C1","C2"],"DDE: PICT":["C1"],"SYS: CMND":["C1","C2"],"SYS: WPOS":["C1","C2"],"SYS: CAMT":["C1","C2"],"SYS: GRND":["C1","C2"],"BBD: EDIT":["C1"],"ORRV":["C1","C2","CV","C3","DS"],"TOOL":["C1","C2"],"SNDF":["C1"],"SNDV":["C1"],"MESG WRIT":["C1","C2","CV","C3","DS"],"ALPH":["CV","C3","DS"],"ANMS":["CV","C3","DS"],"ATTR":["CV","C3","DS"],"BMPS":["CV"],"FRAT":["CV","C3","DS"],"GAIT":["CV","C3","DS"],"GALL":["CV","C3","DS"],"HAND":["CV","C3","DS"],"IMGE":["CV"],"MIRA":["CV","C3","DS"],"NOHH":["CV","C3","DS"],"PAUS":["CV","C3","DS"],"PLNE":["CV","C3","DS"],"PUHL":["CV","C3","DS"],"PUPT":["CV","C3","DS"],"RNGE":["CV","C3","DS"],"SCLE":["CV"],"SHOW":["CV","C3","DS"],"TINT":["CV","C3","DS"],"TTAR":["CV","C3","DS"],"BKGD":["CV","C3","DS"],"BRMI":["CV","C3","DS"],"CMRA":["CV","C3","DS"],"CMRP":["CV","C3","DS"],"CMRT":["CV","C3","DS"],"FRSH":["CV","C3","DS"],"LINE":["CV","C3","DS"],"META":["CV","C3","DS"],"MIRR":["CV"],"PRNT":["CV"],"SCAM":["CV","C3","DS"],"SCRL":["CV"],"SNAP":["CV","C3","DS"],"TNTO":["CV"],"TRCK":["CV","C3","DS"],"WDOW":["CV","C3","DS"],"ZOOM":["CV","C3","DS"],"FCUS":["CV","C3","DS"],"FRMT":["CV","C3","DS"],"GRPL":["CV","C3","DS"],"GRPV":["CV","C3","DS"],"PAGE":["CV","C3","DS"],"PTXT":["CV","C3","DS"],"AGES":["CV","C3","DS"],"BODY":["CV","C3","DS"],"BORN":["CV","C3","DS"],"DEAD":["CV","C3","DS"],"DIRN":["CV","C3","DS"],"DRIV":["CV","C3","DS"],"DYED":["CV"],"EXPR":["CV"],"FACE":["CV","C3","DS"],"FORF":["CV","C3","DS"],"HAIR":["CV","C3","DS"],"LIKE":["CV","C3","DS"],"LOCI":["CV","C3","DS"],"MVFT":["CV","C3","DS"],"NEWC":["CV","C3","DS"],"NORN":["CV","C3","DS"],"NUDE":["CV","C3","DS"],"RSET":["CV"],"SPNL":["CV","C3","DS"],"STRE":["CV"],"SWAP":["CV"],"TNTC":["CV"],"UNCS":["CV","C3","DS"],"VOCB":["CV","C3","DS"],"WEAR":["CV","C3","DS"],"ZOMB":["CV","C3","DS"],"APRO":["CV","C3","DS"],"HELP":["CV","C3","DS"],"MANN":["CV","C3","DS"],"MEMX":["CV","C3","DS"],"OUTS":["CV","C3","DS"],"OUTV":["CV","C3","DS"],"OUTX":["CV","C3","DS"],"ELIF":["CV","C3","DS"],"GOTO":["CV","C3","DS"],"CLAC":["CV","C3","DS"],"CLIK":["CV","C3","DS"],"IMSK":["CV","C3","DS"],"MOUS":["CV","C3","DS"],"PURE":["CV","C3","DS"],"TRAN":["CV","C3","DS"],"ADDB":["CV","C3","DS"],"ALTR":["CV","C3","DS"],"CACL":["CV","C3","DS"],"DELM":["CV","C3","DS"],"DMAP":["CV","C3","DS"],"DOCA":["CV","C3","DS"],"DOOR":["CV","C3","DS"],"EMIT":["CV","C3","DS"],"LINK":["CV","C3","DS"],"MAPD":["CV","C3","DS"],"MAPK":["CV","C3","DS"],"PERM":["CV","C3","DS"],"PROP":["CV","C3","DS"],"RATE":["CV","C3","DS"],"RTYP":["CV","C3","DS"],"ACCG":["CV","C3","DS"],"AERO":["CV","C3","DS"],"ELAS":["CV","C3","DS"],"FLTO":["CV","C3","DS"],"FREL":["CV","C3","DS"],"FRIC":["CV","C3","DS"],"MVSF":["CV","C3","DS"],"VELO":["CV","C3","DS"],"ECON":["CV","C3","DS"],"STPT":["CV","C3","DS"],"MCLR":["CV","C3","DS"],"MIDI":["CV","C3","DS"],"MMSC":["CV","C3","DS"],"SEZZ":["CV","C3","DS"],"STRK":["CV","C3","DS"],"VOIC":["CV","C3","DS"],"VOIS":["CV","C3","DS"],"VOLM":["CV","C3","DS"],"WPAU":["CV","C3","DS"],"ABSV":["CV","C3","DS"],"ADDS":["CV","C3","DS"],"CHAR":["CV","C3","DS"],"DELG":["CV","C3","DS"],"REAF":["CV","C3","DS"],"SETA":["CV","C3","DS"],"SETS":["CV","C3","DS"],"CABP":["CV","C3","DS"],"CABV":["CV","C3","DS"],"CABW":["CV","C3","DS"],"EPAS":["CV","C3","DS"],"RPAS":["CV","C3","DS"],"DELW":["CV","C3","DS"],"LOAD":["CV","C3","DS"],"PSWD":["CV","C3","DS"],"QUIT":["CV","C3","DS"],"RGAM":["CV","C3","DS"],"SAVE":["CV","C3","DS"],"TNTW":["CV","C3","DS"],"WRLD":["CV","C3","DS"],"WTNT":["CV","C3","DS"],"CALL":["C3","DS"],"CATO":["C3","DS"],"CORE":["C3","DS"],"DCOR":["C3","DS"],"DSEE":["C3","DS"],"TINO":["C3","DS"],"UCLN":["C3","DS"],"ADIN":["C3","DS"],"BRN: DMPB":["CV","C3","DS"],"BRN: DMPD":["CV","C3","DS"],"BRN: DMPL":["CV","C3","DS"],"BRN: DMPN":["CV","C3","DS"],"BRN: DMPT":["CV","C3","DS"],"BRN: SETD":["CV","C3","DS"],"BRN: SETL":["CV","C3","DS"],"BRN: SETN":["CV","C3","DS"],"BRN: SETT":["CV","C3","DS"],"DOIN":["C3","DS"],"_CD_ EJCT":["C3","DS"],"_CD_ INIT":["C3","DS"],"_CD_ PAWS":["C3","DS"],"_CD_ PLAY":["C3","DS"],"_CD_ SHUT":["C3","DS"],"_CD_ STOP":["C3","DS"],"PAT: BUTT":["CV","C3","DS"],"PAT: CMRA":["CV","C3","DS"],"PAT: DULL":["CV","C3","DS"],"PAT: FIXD":["CV","C3","DS"],"PAT: GRPH":["CV","C3","DS"],"PAT: KILL":["CV","C3","DS"],"PAT: MOVE":["C3","DS"],"PAT: TEXT":["CV","C3","DS"],"BOOT":["C3","DS"],"CALG":["C3","DS"],"MIND":["C3","DS"],"MOTR":["C3","DS"],"NEW: CRAG":["C3","DS"],"ORDR SHOU":["CV","C3","DS"],"ORDR SIGN":["CV","C3","DS"],"ORDR TACT":["CV","C3","DS"],"ORDR WRIT":["CV","C3","DS"],"PLMD":["C3","DS"],"PLMU":["C3","DS"],"SOUL":["C3","DS"],"STEP":["C3","DS"],"SWAY SHOU":["CV","C3","DS"],"SWAY SIGN":["CV","C3","DS"],"SWAY TACT":["CV","C3","DS"],"SWAY WRIT":["CV","C3","DS"],"URGE SHOU":["CV","C3","DS"],"URGE SIGN":["CV","C3","DS"],"URGE TACT":["CV","C3","DS"],"URGE WRIT":["CV","C3","DS"],"BANG":["C3","DS"],"DBG: ASRT":["CV","C3","DS"],"DBG: CPRO":["CV","C3","DS"],"DBG: FLSH":["CV","C3","DS"],"DBG: HTML":["CV","C3","DS"],"DBG: OUTS":["CV","C3","DS"],"DBG: OUTV":["CV","C3","DS"],"DBG: PAWS":["CV","C3","DS"],"DBG: PLAY":["CV","C3","DS"],"DBG: POLL":["CV","C3","DS"],"DBG: PROF":["CV","C3","DS"],"DBG: TACK":["CV","C3","DS"],"DBG: TOCK":["CV","C3","DS"],"DBG: WTIK":["CV","C3","DS"],"FILE GLOB":["CV","C3","DS"],"FILE ICLO":["CV","C3","DS"],"FILE IOPE":["CV","C3","DS"],"FILE JDEL":["CV","C3","DS"],"FILE OCLO":["CV","C3","DS"],"FILE OFLU":["CV","C3","DS"],"FILE OOPE":["CV","C3","DS"],"WEBB":["C3","DS"],"GENE CLON":["CV","C3","DS"],"GENE CROS":["CV","C3","DS"],"GENE KILL":["CV","C3","DS"],"GENE LOAD":["CV","C3","DS"],"GENE MOVE":["CV","C3","DS"],"HIST EVNT":["CV","C3","DS"],"HIST FOTO":["CV","C3","DS"],"HIST NAME":["CV","C3","DS"],"HIST UTXT":["CV","C3","DS"],"HIST WIPE":["CV","C3","DS"],"CALC":["C3","DS"],"ADMP":["C3","DS"],"AVEL":["C3","DS"],"FDMP":["C3","DS"],"FVEL":["C3","DS"],"ROTN":["C3","DS"],"SDMP":["C3","DS"],"SPIN":["C3","DS"],"SVEL":["C3","DS"],"VARC":["C3","DS"],"NET: HEAD":["DS"],"NET: HEAR":["DS"],"NET: LINE":["DS"],"NET: PASS":["DS"],"NET: RUSO":["DS"],"NET: STAT":["DS"],"NET: UNIK":["DS"],"NET: WHOD":["DS"],"NET: WHOF":["DS"],"NET: WHON":["DS"],"NET: WHOZ":["DS"],"NET: WRIT":["DS"],"PRT: BANG":["CV","C3","DS"],"PRT: INEW":["CV","C3","DS"],"PRT: IZAP":["CV","C3","DS"],"PRT: JOIN":["CV","C3","DS"],"PRT: KRAK":["CV","C3","DS"],"PRT: ONEW":["CV","C3","DS"],"PRT: OZAP":["CV","C3","DS"],"PRT: SEND":["CV","C3","DS"],"PRAY GARB":["CV","C3","DS"],"PRAY REFR":["CV","C3","DS"],"GIDS FMLY":["CV","C3","DS"],"GIDS GNUS":["CV","C3","DS"],"GIDS ROOT":["CV","C3","DS"],"GIDS SPCS":["CV","C3","DS"],"JECT":["C3","DS"],"BUZZ":["C3","DS"],"DELE":["C3","DS"],"NAMN":["C3","DS"],"NOTV":["C3","DS"],"PAT: CHAR":["CV"],"FILE EXEC":["CV"],"STIM FROM":["C1"],"F**K":["C1"],"EXEC":["C1","C2"],"DDE: GETB RCPR":["C2"],"DDE: DEND":["C2"],"APP: QUIT":["C1","C2"],"SSFC":["C2"],"DDE: GETB SSFC":["C2"]},"rvalue":{"TOKN":["C1","C2"],"TARG":["C1","C2","CV","C3","DS"],"FROM":["C1","C2","CV","C3","DS"],"NORN":["C1","C2","CV","C3","DS"],"PNTR":["C1","C2","CV","C3","DS"],"_IT_":["C1","C2","CV","C3","DS"],"CARR":["C1","C2","CV","C3","DS"],"EDIT":["C1","C2"],"TCAR":["C1","C2"],"OBJP":["C1","C2"],"ACCG":["C2","CV","C3","DS"],"AERO":["C2","CV","C3","DS"],"REST":["C2"],"SIZE":["C2"],"RNGE":["C2","CV","C3","DS"],"ATTR":["C1","C2","CV","C3","DS"],"WDTH":["C1","C2","CV","C3","DS"],"HGHT":["C1","C2","CV","C3","DS"],"_P1_":["C2","CV","C3","DS"],"_P2_":["C2","CV","C3","DS"],"UNID":["C2","CV","C3","DS"],"GRAV":["C2"],"WALL":["C2","CV","C3","DS"],"RELX":["C2","CV","C3","DS"],"RELY":["C2","CV","C3","DS"],"TICK":["C2","CV","C3","DS"],"FRZN":["C2"],"POSX":["C2","CV","C3","DS"],"POSY":["C2","CV","C3","DS"],"POSL":["C1","C2","CV","C3","DS"],"POSR":["C1","C2","CV","C3","DS"],"POSB":["C1","C2","CV","C3","DS"],"POST":["C1","C2","CV","C3","DS"],"LIML":["C1","C2"],"LIMR":["C1","C2"],"LIMT":["C1","C2"],"LIMB":["C1","C2","C3","DS"],"FMLY":["C1","C2","CV","C3","DS"],"GNUS":["C1","C2","CV","C3","DS"],"SPCS":["C1","C2","CV","C3","DS"],"MOVS":["C1","C2","CV","C3","DS"],"ACTV":["C1","C2"],"NEID":["C1","C2"],"TOTL":["C1","C2","CV","C3","DS"],"TOUC":["C1","C2","CV","C3","DS"],"POSE":["C1","C2","CV","C3","DS"],"VELX":["C2","CV","C3","DS"],"VELY":["C2","CV","C3","DS"],"TEMP":["C1","C2"],"LITE":["C2"],"RADN":["C2"],"ONTR":["C2"],"INTR":["C2"],"PRES":["C2"],"WNDX":["C2"],"WNDY":["C2"],"HSRC":["C2"],"PSRC":["C2"],"LSRC":["C2"],"RSRC":["C2"],"RMNO":["C2"],"RTYP":["C2","CV","C3","DS"],"RMN#":["C2"],"RMND":["C2"],"RMNR":["C2"],"ROOM":["C1","C2","CV","C3","DS"],"DOOR":["C2","CV","C3","DS"],"WLDW":["C2"],"WLDH":["C2"],"OBST":["C2","CV","C3","DS"],"OBDT":["C2"],"OBSV":["C2"],"FLOR":["C2"],"RMS#":["C1","C2"],"GRND":["C1","C2"],"ISAR":["C2"],"SEAN":["C2","CV","C3","DS"],"SEAV":["C2"],"TMOD":["C2"],"YEAR":["C2","CV","C3","DS"],"EGGL":["C2"],"HATL":["C2"],"LACB":["C2"],"XVEC":["C1","C2"],"YVEC":["C1","C2"],"BUMP":["C1","C2"],"RAIN":["C2"],"CMRX":["C2","CV","C3","DS"],"CMRY":["C2","CV","C3","DS"],"THRT":["C2"],"MUSC":["C2"],"DRIV":["C1","C2","CV","C3","DS"],"DRV!":["C1","C2","CV","C3","DS"],"CHEM":["C1","C2","CV","C3","DS"],"BABY":["C1","C2"],"ASLP":["C1","C2","CV","C3","DS"],"INS#":["C2","CV","C3","DS"],"DIRN":["C2","CV","C3","DS"],"MONK":["C2"],"CREA":["C2","CV","C3","DS"],"ORGN":["C2","CV","C3","DS"],"CAGE":["C1","C2","CV","C3","DS"],"PAUS":["C2","CV","C3","DS"],"HOUR":["C1","C2"],"MINS":["C1","C2"],"VRSN":["C1","C2"],"LANG":["C2","CV"],"OWNR":["C1","C2","CV","C3","DS"],"ATTN":["C1","C2","CV","C3","DS"],"EXEC":["C1","C2"],"SNDS":["C1","C2"],"WINW":["C1","C2"],"WINH":["C1","C2"],"CLAS":["C1","C1","C2"],"SCOR":["C1","C2"],"CAMN":["C1"],"DEAD":["C1","C2","CV","C3","DS"],"WIND":["C1","C2"],"GND#":["C1","C2"],"GNDW":["C1","C2"],"BASE":["CV","C3","DS"],"BHVR":["CV","C3","DS"],"CATI":["CV","C3","DS"],"CATX":["CV","C3","DS"],"CLAC":["CV","C3","DS"],"CLIK":["CV","C3","DS"],"DISQ":["CV","C3","DS"],"FLTX":["CV","C3","DS"],"FLTY":["CV","C3","DS"],"HAND":["CV","C3","DS"],"HEDX":["CV"],"HEDY":["CV"],"HELD":["CV","C3","DS"],"IITT":["CV","C3","DS"],"IMSK":["CV","C3","DS"],"MIRA":["CV","C3","DS"],"MOWS":["CV","C3","DS"],"MTHX":["CV","C3","DS"],"MTHY":["CV","C3","DS"],"NCLS":["CV","C3","DS"],"NULL":["C2","CV","C3","DS"],"ONTV":["CV"],"PCLS":["CV","C3","DS"],"PLNE":["CV","C3","DS"],"PUHL":["CV","C3","DS"],"PUPT":["CV","C3","DS"],"SEEE":["CV","C3","DS"],"SHOW":["CV"],"TRAN":["CV","CV","C3","DS"],"TWIN":["CV","C3","DS"],"VISI":["CV","C3","DS"],"WILD":["CV","C3","DS"],"BKGD":["CV","C3","DS"],"LOFT":["CV","C3","DS"],"META":["CV","C3","DS"],"SNAX":["CV","C3","DS"],"TRCK":["CV","C3","DS"],"WDOW":["CV","C3","DS"],"WNDB":["CV","C3","DS"],"WNDH":["CV","C3","DS"],"WNDL":["CV","C3","DS"],"WNDR":["CV","C3","DS"],"WNDT":["CV","C3","DS"],"WNDW":["CV","C3","DS"],"CHAR":["CV","CV","C3","DS"],"NPGS":["CV","C3","DS"],"PAGE":["CV","C3","DS"],"PTXT":["CV","C3","DS"],"BODY":["CV","C3","DS"],"BRED":["CV"],"BVAR":["CV","C3","DS"],"BYIT":["CV","C3","DS"],"DECN":["CV","C3","DS"],"DFTX":["CV","C3","DS"],"DFTY":["CV","C3","DS"],"DREA":["CV","C3","DS"],"EXPR":["CV","C3","DS"],"FACE":["CV","CV","C3","C3","DS","DS"],"HHLD":["CV","C3","DS"],"LOCI":["CV","C3","DS"],"ORGF":["CV","C3","DS"],"ORGI":["CV","C3","DS"],"TAGE":["CV","C3","DS"],"UFTX":["CV","C3","DS"],"UFTY":["CV","C3","DS"],"UNCS":["C2","CV","C3","DS"],"WEAR":["CV"],"ZOMB":["CV","C3","DS"],"AGNT":["CV","C3","DS"],"CODE":["CV","C3","DS"],"CODF":["CV","C3","DS"],"CODG":["CV","C3","DS"],"CODP":["CV","C3","DS"],"CODS":["CV","C3","DS"],"DBG#":["CV","C3","DS"],"DBGA":["CV","C3","DS"],"HEAP":["CV","C3","DS"],"PAWS":["CV","C3","DS"],"TACK":["CV","C3","DS"],"FVWM":["CV","C3","DS"],"INNF":["CV","C3","DS"],"INNI":["CV","C3","DS"],"INNL":["CV","C3","DS"],"INOK":["CV","C3","DS"],"GTOS":["CV","C3","DS"],"MTOA":["CV","C3","DS"],"MTOC":["CV","C3","DS"],"OOWW":["CV","C3","DS"],"HOTS":["CV","C3","DS"],"KEYD":["CV","C3","DS"],"MOPX":["CV","C3","DS"],"MOPY":["CV","C3","DS"],"MOVX":["CV","C3","DS"],"MOVY":["CV","C3","DS"],"PURE":["CV","C3","DS"],"ADDM":["CV","C3","DS"],"ADDR":["CV","C3","DS"],"BKDS":["CV","C3","DS"],"DOWN":["CV","C3","DS"],"EMID":["CV","C3","DS"],"ERID":["CV","C3","DS"],"GMAP":["CV","C3","DS"],"GRAP":["CV","C3","DS"],"GRID":["CV","C3","DS"],"HIRP":["CV","C3","DS"],"LEFT":["CV","C3","DS"],"LINK":["CV","C3","DS"],"LORP":["CV","C3","DS"],"MAPH":["CV","C3","DS"],"MAPW":["CV","C3","DS"],"MLOC":["CV","C3","DS"],"PERM":["CV","C3","DS"],"PROP":["CV","C3","DS"],"RATE":["CV","C3","DS"],"RGHT":["CV","C3","DS"],"RLOC":["CV","C3","DS"],"TORX":["CV","C3","DS"],"TORY":["CV","C3","DS"],"_UP_":["CV","C3","DS"],"ELAS":["CV","C3","DS"],"FALL":["CV","C3","DS"],"FRIC":["CV","C3","DS"],"TMVB":["CV","C3","DS"],"TMVF":["CV","C3","DS"],"TMVT":["CV","C3","DS"],"CAOS":["CV","C3","DS"],"SORC":["CV","C3","DS"],"SORQ":["CV","C3","DS"],"MMSC":["CV","C3","DS"],"MUTE":["CV","C3","DS"],"RMSC":["CV","C3","DS"],"VOIS":["CV","C3","DS"],"DATE":["CV","C3","DS"],"DAYT":["CV","C3","DS"],"ETIK":["CV","C3","DS"],"MONT":["CV","C3","DS"],"MSEC":["CV","C3","DS"],"PACE":["CV","C3","DS"],"RACE":["CV","C3","DS"],"RTIF":["CV","C3","DS"],"RTIM":["CV","C3","DS"],"SCOL":["CV","C3","DS"],"TIME":["CV","C3","DS"],"WOLF":["CV","C3","DS"],"WPAU":["CV","C3","DS"],"WTIK":["CV","C3","DS"],"ACOS":["CV","C3","DS"],"ASIN":["CV","C3","DS"],"ATAN":["CV","C3","DS"],"AVAR":["CV","C3","DS"],"COS_":["CV","C3","DS"],"FTOI":["CV","C3","DS"],"GAME":["C2","CV","C3","DS"],"GAMN":["CV","C3","DS"],"GNAM":["CV","C3","DS"],"ITOF":["CV","C3","DS"],"MVxx":["CV","C3","DS"],"OVxx":["C2","CV","C3","DS"],"RAND":["CV","C3","DS"],"READ":["CV","C3","DS"],"REAN":["CV","C3","DS"],"REAQ":["CV","C3","DS"],"SIN_":["CV","C3","DS"],"SQRT":["CV","C3","DS"],"STOF":["CV","C3","DS"],"STOI":["CV","C3","DS"],"STRL":["CV","C3","DS"],"SUBS":["CV","C3","DS"],"TAN_":["CV","C3","DS"],"TYPE":["CV","C3","DS"],"VAxx":["C2","CV","C3","DS"],"VMJR":["CV","C3","DS"],"VMNR":["CV","C3","DS"],"VTOS":["CV","C3","DS"],"CABB":["CV","C3","DS"],"CABL":["CV","C3","DS"],"CABP":["CV","C3","DS"],"CABR":["CV","C3","DS"],"CABT":["CV","C3","DS"],"CABV":["CV","C3","DS"],"NWLD":["CV","C3","DS"],"PSWD":["CV","C3","DS"],"WNAM":["CV","C3","DS"],"WNTI":["CV","C3","DS"],"WRLD":["CV","C3","DS"],"WUID":["CV","C3","DS"],"ABBA":["C3","DS"],"CATA":["C3","DS"],"GALL":["C3","DS"],"TCOR":["C3","DS"],"TINT":["C3","DS"],"_CD_ FRQH":["C3","DS"],"_CD_ FRQL":["C3","DS"],"_CD_ FRQM":["C3","DS"],"PART":["C3","DS"],"PNXT":["C3","DS"],"CALG":["C3","DS"],"MIND":["C3","DS"],"MOTR":["C3","DS"],"SEEN":["C3","DS"],"SOUL":["C3","DS"],"HIST CAGE":["CV","C3","DS"],"HIST COUN":["CV","C3","DS"],"HIST CROS":["CV","C3","DS"],"HIST FIND":["CV","C3","DS"],"HIST FINR":["CV","C3","DS"],"HIST FOTO":["CV","C3","DS"],"HIST GEND":["CV","C3","DS"],"HIST GNUS":["CV","C3","DS"],"HIST MUTE":["CV","C3","DS"],"HIST NAME":["CV","C3","DS"],"HIST NETU":["C3","DS"],"HIST NEXT":["CV","C3","DS"],"HIST PREV":["CV","C3","DS"],"HIST RTIM":["CV","C3","DS"],"HIST TAGE":["CV","C3","DS"],"HIST TYPE":["CV","C3","DS"],"HIST UTXT":["CV","C3","DS"],"HIST VARI":["CV","C3","DS"],"HIST WNAM":["CV","C3","DS"],"HIST WTIK":["CV","C3","DS"],"HIST WUID":["CV","C3","DS"],"HIST WVET":["C3","DS"],"HOTP":["C3","DS"],"ADMP":["C3","DS"],"ANGL":["C3","DS"],"AVEL":["C3","DS"],"FDMP":["C3","DS"],"FVEL":["C3","DS"],"SDMP":["C3","DS"],"SPIN":["C3","DS"],"SVEL":["C3","DS"],"VARC":["C3","DS"],"VECX":["C3","DS"],"VECY":["C3","DS"],"NET: ERRA":["DS"],"NET: EXPO":["DS"],"NET: FROM":["DS"],"NET: HOST":["DS"],"NET: LINE":["DS"],"NET: PASS":["DS"],"NET: RAWE":["DS"],"NET: ULIN":["DS"],"NET: USER":["DS"],"NET: WHAT":["DS"],"PRT: FRMA":["CV","C3","DS"],"PRT: FROM":["CV","C3","DS"],"PRT: ITOT":["CV","C3","DS"],"PRT: NAME":["CV","C3","DS"],"PRT: OTOT":["CV","C3","DS"],"NET: MAKE":["DS"],"PRAY AGTI":["CV","C3","DS"],"PRAY AGTS":["CV","C3","DS"],"PRAY BACK":["C3","DS"],"PRAY COUN":["CV","C3","DS"],"PRAY DEPS":["CV","C3","DS"],"PRAY EXPO":["CV","C3","DS"],"PRAY FILE":["CV","C3","DS"],"PRAY FORE":["C3","DS"],"PRAY IMPO":["CV","C3","DS"],"PRAY INJT":["CV","C3","DS"],"PRAY KILL":["C3","DS"],"PRAY MAKE":["CV","C3","DS"],"PRAY NEXT":["CV","C3","DS"],"PRAY PREV":["CV","C3","DS"],"PRAY TEST":["CV","C3","DS"],"VOLM":["C3","DS"],"BUZZ":["C3","DS"],"HIST DATE":["CV","C3","DS"],"HIST SEAN":["CV","C3","DS"],"HIST TIME":["CV","C3","DS"],"HIST YEAR":["CV","C3","DS"],"EAME":["C3","DS"],"EAMN":["C3","DS"],"LOWA":["C3","DS"],"MAME":["C3","DS"],"MODU":["C3","DS"],"NAME":["C3","DS"],"SINS":["C3","DS"],"UFOS":["C3","DS"],"UPPA":["C3","DS"],"PRAY SIZE":["CV"],"HIST MON1":["CV","C3","DS"],"HIST MON2":["CV","C3","DS"],"RNDR":["C2"],"LNG+":["C2"],"VARx":["C1","C2"],"OBVx":["C1","C2"],"XIST":["C2"],"GEND":["C1","C2"]},"lvalue":{"NORN":["C1","C2"],"OBJP":["C1","C2"],"PUPT":["C2"],"PUHL":["C2"],"ACCG":["C2"],"AERO":["C2"],"REST":["C2"],"SIZE":["C2"],"RNGE":["C2"],"ATTR":["C1","C2"],"_P1_":["C2","CV","C3","DS"],"_P2_":["C2","CV","C3","DS"],"CLS2":["C2"],"GRAV":["C2"],"FRZN":["C2"],"MOVS":["C1","C2"],"ACTV":["C1","C2"],"VELX":["C2","CV","C3","DS"],"VELY":["C2","CV","C3","DS"],"TEMP":["C2"],"LITE":["C2"],"RADN":["C2"],"ONTR":["C2"],"INTR":["C2"],"PRES":["C2"],"HSRC":["C2"],"PSRC":["C2"],"LSRC":["C2"],"RSRC":["C2"],"RTYP":["C2"],"RMND":["C2"],"RMNR":["C2"],"DOOR":["C2"],"LACB":["C2"],"XVEC":["C1","C2"],"YVEC":["C1","C2"],"THRT":["C2"],"MUSC":["C2"],"BABY":["C1","C2"],"PAUS":["C2"],"WINW":["C1","C2"],"WINH":["C1","C2"],"CLAS":["C1"],"AVAR":["CV","C3","DS"],"GAME":["C2","CV","C3","DS"],"MVxx":["CV","C3","DS"],"OVxx":["C2","CV","C3","DS"],"VAxx":["C2","CV","C3","DS"],"FROM":["C3","DS"],"EAME":["C3","DS"],"MAME":["C3","DS"],"NAME":["C3","DS"],"VARx":["C1","C2"],"OBVx":["C1","C2"]}}');
     };
   }
   function variantsByCommand$factory() {
@@ -33048,7 +40661,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     return function () {
       var universalLibString = JSON.stringify(universalLibTemp);
       Unit_getInstance();
-      return Json$default(null, universalLib$delegate$lambda$lambda(), 1, null).decodeFromString_ink0ik_k$(Companion_getInstance_23().serializer_9w0wvi_k$(), universalLibString);
+      return Json$default(null, universalLib$delegate$lambda$lambda(), 1, null).decodeFromString_ink0ik_k$(Companion_getInstance_28().serializer_9w0wvi_k$(), universalLibString);
     };
   }
   function universalLib$factory() {
@@ -33070,7 +40683,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     localStorage.setItem('variant', value._get_code__794418686_d4z5dq_k$());
   };
   Preferences.prototype._get_variant__876436268_eht2jw_k$ = function () {
-    var tmp = Companion_getInstance_17();
+    var tmp = Companion_getInstance_22();
     var tmp0_elvis_lhs = localStorage.getItem('variant');
     return tmp.fromVal_tp3zbq_k$(tmp0_elvis_lhs == null ? 'DS' : tmp0_elvis_lhs);
   };
@@ -33139,6 +40752,12 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     $collectors.EqualityStatement = EqualityStatement;
     $collectors.Argument = Argument;
     var $collectors = _.collectors || (_.collectors = {});
+    $collectors.getCursorPosition = getCursorPosition;
+    $collectors.ClosestItemResult = ClosestItemResult;
+    $collectors.getCursorPositionFromRawText = getCursorPositionFromRawText;
+    $collectors.cancelComplete = cancelComplete;
+    $collectors.inQuotes = inQuotes;
+    var $collectors = _.collectors || (_.collectors = {});
     $collectors.Script = Script;
     $collectors.ParseResult = ParseResult;
     var $collectors = _.collectors || (_.collectors = {});
@@ -33161,15 +40780,18 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     $collectors.ParserItem.Caos2Comment = Caos2Comment;
     Object.defineProperty($collectors.ParserItem.Caos2Comment, 'Companion', {
       configurable: true,
-      get: Companion_getInstance_9
+      get: Companion_getInstance_11
     });
     $collectors.ParserItem.CommandToken = CommandToken;
     $collectors.ParserItem.CompoundCommandToken = CompoundCommandToken;
+    $collectors.ParserItem.NewLine = NewLine;
+    $collectors.ParserItem.Spaces = Spaces;
     var $collectors = _.collectors || (_.collectors = {});
     $collectors.getStops = getStops;
     $collectors.scriptOffsets = scriptOffsets;
     $collectors.getCaos2PrayComments = getCaos2PrayComments;
     $collectors.getScriptsFromParseResult = getScriptsFromParseResult;
+    $collectors.getWhitespace = getWhitespace;
     $collectors.scopeOffsets = scopeOffsets;
     $collectors.parseTokens = parseTokens;
     $collectors.parseCaosNear = parseCaosNear;
@@ -33180,6 +40802,11 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     $exceptions.CaosException = CaosException;
     $exceptions.CaosInvalidTokenLengthException = CaosInvalidTokenLengthException;
     $exceptions.CaosValidatorIllegalArgumentException = CaosValidatorIllegalArgumentException;
+    var $formatter = _.formatter || (_.formatter = {});
+    $formatter.FormatResult = FormatResult;
+    var $formatter = _.formatter || (_.formatter = {});
+    $formatter.format = format;
+    $formatter.FormatException = FormatException;
     var $hints = _.hints || (_.hints = {});
     $hints.getInlayOptions = getInlayOptions;
     $hints.getInlayHints = getInlayHints;
@@ -33200,7 +40827,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     $libs.CaosValuesList.CaosValuesList_init_$Create$ = CaosValuesList_init_$Create$_0;
     Object.defineProperty($libs.CaosValuesList, 'Companion', {
       configurable: true,
-      get: Companion_getInstance_19
+      get: Companion_getInstance_24
     });
     Object.defineProperty($libs.CaosValuesList, '$serializer', {
       configurable: true,
@@ -33210,7 +40837,7 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     $libs.ValuesListValue.CaosValuesListValue_init_$Create$ = CaosValuesListValue_init_$Create$_0;
     Object.defineProperty($libs.ValuesListValue, 'Companion', {
       configurable: true,
-      get: Companion_getInstance_20
+      get: Companion_getInstance_25
     });
     Object.defineProperty($libs.ValuesListValue, '$serializer', {
       configurable: true,
@@ -33224,11 +40851,12 @@ const { universalLibTemp } = require("./caos.universal.lib.js");
     var $server = _.server || (_.server = {});
     $server.CursorData = CursorData;
     var $server = _.server || (_.server = {});
-    $server.inRange = inRange;
+    $server.inRange = inRange_0;
     var $server = _.server || (_.server = {});
     $server.PositionImpl = PositionImpl;
     $server.RangeWithIndex = RangeWithIndex;
     var $collectors = _.collectors || (_.collectors = {});
+    var $formatter = _.formatter || (_.formatter = {});
     var $server = _.server || (_.server = {});
     var $server = _.server || (_.server = {});
   }

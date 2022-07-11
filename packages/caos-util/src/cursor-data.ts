@@ -2,10 +2,11 @@
 import {Argument, collectors, CursorData, GameVariant, HasRange, libs, Nullable, RangeWithIndex} from "./CaosUtil";
 import {inRange, sortTextRanges} from "./position-utils";
 import {
-    CAOS2_COMMENT_TYPE_ID, COMMAND_TYPE_ID,
-    COMMENT_TYPE_ID,
+    CAOS2_COMMENT_TYPE_ID,
+    COMMAND_TYPE_ID,
     EQ_JOIN_TYPE_ID,
-    EQ_OP_TYPE_ID, STRING_TYPE_ID,
+    EQ_OP_TYPE_ID,
+    STRING_TYPE_ID,
     tok,
     TOKEN_TYPE_ID,
     UNKNOWN_TYPE_ID,
@@ -22,7 +23,6 @@ import CaosValuesList = libs.CaosValuesList;
 import ICaosParameter = libs.ICaosParameter;
 import getValuesList = libs.getValuesList;
 import EqualityStatement = collectors.EqualityStatement;
-import {repack} from "./repack";
 
 const VAR_REGEX = /^((va|ov|mv)\d)|((obv|var)\d{2})/i;
 
@@ -140,7 +140,7 @@ export function getCursorPosition(
                 } else {
                     inCommand = false;
                     closest = null;
-                    missingParameters = [];;
+                    missingParameters = [];
                 }
                 return;
             }
@@ -437,7 +437,7 @@ export function getCursorPositionFromRawText(
 ): Nullable<CursorData> {
     
     const result = parseOnlyNear ?
-        parseCaosNear(variant, text, lineNumber, column, keepGoing) :
+        parseCaosNear(variant, text, lineNumber, column, false, false, keepGoing) :
         parseCaos(variant, text, keepGoing);//parseCaosNear(variant, text, lineNumber + 1, column + 1);
     
     if (result == null) {
@@ -462,6 +462,8 @@ export function cancelComplete(closestItem: ParserItem<any>, line: number, chara
             return true;
     }
 }
+
+
 export function inQuotes(closestItem: ParserItem<any>, line: number, character: number): boolean {
     if (!closestItem.text.startsWith('"')) {
         return false;
