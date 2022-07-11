@@ -581,7 +581,6 @@ export function getCompletionItemsWithCursorData(
     const closestItem = positionData.closestItem
     
     let raw: CompletionItem[];
-    console.log(tok(closestItem?.typeToken ?? tok('????')) + ":" + closestItem?.actualType);
     if (closestItem && cancelComplete(positionData.closestItem!!, positionData.line, positionData.character)) {
         return [];
     }
