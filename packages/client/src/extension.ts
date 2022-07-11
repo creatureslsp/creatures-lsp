@@ -11,6 +11,7 @@ const disposables: Disposable[] = [];
 
 let defaultClient: LanguageClient;
 const clients: Map<string, LanguageClient> = new Map();
+let nextListenerId = 0;
 
 let _sortedWorkspaceFolders: Nullable<string[]>;
 function getSortedWorkspaceFolders(): string[] {
@@ -56,23 +57,7 @@ export function activate(context: vscode.ExtensionContext) {
         path.join('packages', 'server', 'dist', 'server.js')
     );
     const outputChannel: OutputChannel = window.createOutputChannel('caos-language-server');
-    
-    // The debug options for the server
-    // --inspect=6009: runs the server in Node's Inspector mode so VS Code can attach to the server for debugging
-    // noinspection SpellCheckingInspection
-    const debugOptions = {execArgv: ['--nolazy', '--inspect=6009']};
-    
-    
-    // If the extension is launched in debug mode then the debug server options are used
-    // Otherwise the run options are used
-    const serverOptions: ServerOptions = {
-        run: {module: serverModule, transport: TransportKind.ipc},
-        debug: {
-            module: serverModule,
-            transport: TransportKind.ipc,
-            options: debugOptions
-        }
-    };
+
     
     // Options to control the language client
     const clientOptions: LanguageClientOptions = {
@@ -96,14 +81,25 @@ export function activate(context: vscode.ExtensionContext) {
         }
         
         const uri = document.uri;
+    
         
         // Untitled/unsaved  files go to a default client.
-        if (uri.scheme === 'untitled' && !defaultClient) {
+        if (uri.scheme === 'untitled') {
+            if (defaultClient) {
+                return;
+            }
             const untitledFileClientOptions = {
                 ...clientOptions,
                 documentSelector: [
                     { scheme: 'untitled', language: 'caos' }
                 ]
+            };
+            // If the extension is launched in debug mode then the debug server options are used
+            // Otherwise the run options are used
+            const debugOptions = { execArgv: ["--nolazy", "--inspect=6010"] };
+            const serverOptions: ServerOptions = {
+                run: { module: serverModule, transport: TransportKind.ipc },
+                debug: { module: serverModule, transport: TransportKind.ipc, options: debugOptions}
             };
             defaultClient = new LanguageClient(
                 'caos-language-server',
@@ -126,9 +122,16 @@ export function activate(context: vscode.ExtensionContext) {
         folder = getOuterMostWorkspaceFolder(folder);
         
         if (!clients.has(folder.uri.toString())) {
+            clients.set(folder.uri.toString(), <any>null);
             // Initialize options with a specific workspace folder
             const clientWithFolderOptions: LanguageClientOptions = {...clientOptions, workspaceFolder: folder};
-            
+            // If the extension is launched in debug mode then the debug server options are used
+            // Otherwise the run options are used
+            const debugOptions = { execArgv: ["--nolazy", `--inspect=${6011 + nextListenerId++}`] };
+            const serverOptions: ServerOptions = {
+                run: { module: serverModule, transport: TransportKind.ipc },
+                debug: { module: serverModule, transport: TransportKind.ipc, options: debugOptions}
+            };
             // Create the language client and start the client.
             const client = new LanguageClient(
                 'caos-language-server',
@@ -136,9 +139,6 @@ export function activate(context: vscode.ExtensionContext) {
                 serverOptions,
                 clientWithFolderOptions
             );
-    
-            // Start the client. This will also launch the server
-            client.start();
     
             // Register notification listener to allow server to show message in VS Code
             client.onReady().then(() => {
@@ -154,8 +154,8 @@ export function activate(context: vscode.ExtensionContext) {
                     }
                 }));
             })
-            client.start();
             clients.set(folder.uri.toString(), client);
+            client.start();
         }
     }
     
