@@ -6,6 +6,7 @@ import {collectors, Nullable, RangeWithIndex} from "./CaosUtil";
 import {formatCaosDocumentation} from "./documentation-formattter";
 import CommandCall = collectors.CommandCall;
 import {repack} from "./repack";
+import {toVsRange} from "./position-utils";
 
 /**
  * Checks that a position is in range
@@ -47,10 +48,7 @@ function drillDown(position: Position, commandCall: CommandCall): Nullable<Hover
     if (inRange(position, commandCall.tokenTextRange)) {
         // console.log("Position in command tokens: " + commandCall.command.command  +'; Position: ' + JSON.stringify(position) + "; Range" + JSON.stringify(repack(commandCall.tokenTextRange)));
         return <Hover> {
-            range: {
-                start: commandCall.tokenTextRange.start,
-                end: commandCall.tokenTextRange.end
-            },
+            range: toVsRange(commandCall.tokenTextRange),
             contents: {
                 kind: 'markdown',
                 value: formatCaosDocumentation(commandCall.command)
