@@ -15,7 +15,7 @@
   var listOf = kotlin_kotlin.$crossModule$.listOf_1;
   var _Char___init__impl__380027157 = kotlin_kotlin.$crossModule$._Char___init__impl__380027157;
   var Char__rangeTo_impl_2506766091 = kotlin_kotlin.$crossModule$.Char__rangeTo_impl_2506766091;
-  var plus = kotlin_kotlin.$crossModule$.plus_1;
+  var plus = kotlin_kotlin.$crossModule$.plus_2;
   //endregion
   'use strict';
   //region block: pre-declaration

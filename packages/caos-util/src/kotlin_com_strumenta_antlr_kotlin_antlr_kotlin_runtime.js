@@ -109,7 +109,7 @@
   var IndexOutOfBoundsException_init_$Create$_0 = kotlin_kotlin.$crossModule$.IndexOutOfBoundsException_init_$Create$;
   var sort = kotlin_kotlin.$crossModule$.sort;
   var joinToString$default_1 = kotlin_kotlin.$crossModule$.joinToString$default;
-  var indexOf = kotlin_kotlin.$crossModule$.indexOf_1;
+  var indexOf = kotlin_kotlin.$crossModule$.indexOf_2;
   var numberRangeToNumber = kotlin_kotlin.$crossModule$.numberRangeToNumber;
   var sliceArray = kotlin_kotlin.$crossModule$.sliceArray_1;
   var charArray = kotlin_kotlin.$crossModule$.charArray;
