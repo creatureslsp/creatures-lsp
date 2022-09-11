@@ -1,70 +1,104 @@
-# caoseditor README
+# CAOS Language Extension
 
-This is the README for your extension "caoseditor". After writing up a brief description, we recommend including the following sections.
+This extension adds CAOS language support to Visual Studio Code for the Creatures series of games.
+
+Allows editing of CAOS in any variant (i.e. C1, C2, CV, C3, DS). Variant can be set in settings.   
+To quickly navigate to CAOS variant settings, use `cmd+shift+p` or `ctrl+shift+p` to
+launch actions, then select "Set CAOS Variant"  
+**Variant is set per workspace*
 
 ## Features
-
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
-
-\!\[feature X\]\(images/feature-x.png\)
-
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- CAOS syntax error highlighting
+    - Invalid command
+    - Unclosed control blocks (i.e. `DOIF`, `ENUM`)
+    - Out of variant commands and variables
+    - Missing parameters
+    - Very basic type checking
+- Code completion
+    - Commands scoped to type (i.e. Command, R/L value)
+    - Subroutine Name
+    - Simple game/name variable name completions (does not scope or restrict `NAME` variables to agent class)
+    - Named value completion (i.e. type `hung`, select 'Hunger for Protein' and completion inserts corresponding numeric value)
+- Hover documentation
+- Inlay Hints (can be disabled)
+    - Known value names (i.e. Show drive name for corresponding numeric value)
+    - Bitflag breakdown (i.e. Append inlay hint `(activatable, mousable)` after `attr 3`)
+    - Parameter names (minimum number of parameters before showing hint is configurable)
+    - Command return values
+- Basic code formatting
+- Semantic tokens for use in custom highlighting
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
 This extension contributes the following settings:
+### General
+* `caosScript.maxNumberOfProblems`: Set maximum number of errors to report
+* `caosScript.variant`: Workspace CAOS variant. Can be **[C1,C2,CV,C3,DS]**. Default **DS**
+* `caosScript.formatting.indentComments`: Indent comments inline with commands except when comment is at start of line
+* ### Inlay Hints
+* `caosScript.inlayHints.bitFlagValues`: Show inlay hints for bitflag value
+* `caosScript.inlayHints.parameterHints.showParameterHints`: Show parameter names before arguments
+* `caosScript.inlayHints.parameterHints.minimumParameterCount`: Hide inlay hints for commands with less than this number of parameters
+* `caosScript.inlayHints.setvParameterHints`: Show parameter names before SETV like command arguments
+* `caosScript.inlayHints.genusName`: Show genus name for known family/genus combinations
+* `caosScript.inlayHints.valueName`: Show value name for known integer and string values
+* `caosScript.inlayHints.eventScriptName`: Show event script name for known event numbers
+* `caosScript.inlayHints.ddePictDimensions`: Show `DDE: PICT` command dimensions from dimension characters
+* `caosScript.inlayHints.c1ClasValue`: Show parsed family, genus, and specie from C1 CLAS value
+* `caosScript.inlayHints.rvalueReturnValue`: Show return type for rvalue commands
+* `caosScript.inlayHints.equality.bitFlagValues`: Show Bitflag value on opposing side of equality operator
+* `caosScript.inlayHints.equalityValueName`: Show value name for know integer and string values on opposing side of EQ
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+## Semantic Tokens
+Some CAOS file elements have additional semantic token selectors on them which allows
+for more specific styling
+### Main Tokens
+* `command`: root level command name tokens
+* `rvalue`: rvalue command name tokens
+* `lvalue`: command tokens when command is used as lvalue
+### Token Modifiers
+* `command-prefix`: First token in a multi-word command
+* `command-suffix`: Last token in a three word command
+* `c1-string`: A C1 style bracket string
+* `quote-string`: A C2e style quoted string
+* `byte-string`: A byte string for things like ANIM
+* `not-found`: For a command that cannot be found in context
+* `vaxx`: for VAxx and VARx variables
+* `ovxx`: for OVxx and OBVx variables
+* `mvxx`: For MVxx variables
+* `returns-number`: Decorates command words for commands that return a number
+* `returns-string`: Decorates command words for commands returning a string
+* `returns-variable`: Decorates command word for commands returning a variable
+* `returns-agent`: Decorates command word for commands returning an agent
+* `agent-constructor`: Decorates agent constructor commands like those starting with `new:`
+
+### How to theme semantic tokens
+You can these tokens in settings by using
+```JSON
+{
+  "editor.semanticTokenColorCustomizations": {
+    "[Default Dark+]": {
+      "*.returns-string:caos": "#ff0011"
+    }
+  }
+}
+```
 
 ## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- Occasionally completion becomes confused.
+    - Suggests commands instead of R/L values unexpectedly
+    - Suggests known values for values already completed previously
+    - Fails to show suggestions for named values
+- Navigation fails from `SUBR` names to their usages
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.1.0
 
-### 1.0.0
+Initial release
 
-Initial release of ...
+## Upcoming
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-## Following extension guidelines
-
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
-
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+* **Rename support:**
+    * subroutine (`SUBR`) names
+    * `GAME`/`EAME`/`NAME` variable names

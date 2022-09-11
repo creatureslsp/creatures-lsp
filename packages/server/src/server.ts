@@ -19,6 +19,7 @@ import {registerHoverDocumentationProvider} from "./register.hover-documentation
 import {registerInlayHintsProvider} from "./register.inlay-hints";
 import {MessageType} from "@bedalton/caos-util";
 import {registerGotoDefinitionsProvider} from "./register.goto";
+import {registerDocumentSymbolProvider} from "./register.breadcrumbs";
 
 // Create a connection for the server, using Node's IPC as transport.
 // Also include all preview / proposed LSP features.
@@ -33,7 +34,8 @@ export const clientCapabilities = {
     hasFormatting: false,
     hasInlayHintsCapabilities: false,
     hasCompletionCapabilities: false,
-    hasHoverCapabilities: false
+    hasHoverCapabilities: false,
+    hasSymbolsCapabilities: false
 };
 
 
@@ -79,12 +81,17 @@ connection.onInitialize((params: InitializeParams) => {
     clientCapabilities.hasCompletionCapabilities = (
         !!capabilities.textDocument &&
         !!capabilities.textDocument.completion
-    )
+    );
     
     clientCapabilities.hasHoverCapabilities = (
         !!capabilities.textDocument &&
         !!capabilities.textDocument.hover
-    )
+    );
+    
+    clientCapabilities.hasSymbolsCapabilities = (
+        !!capabilities.textDocument &&
+            !!capabilities.textDocument.documentSymbol
+    );
     
     const result: InitializeResult = {
         capabilities: {
@@ -138,6 +145,7 @@ connection.onInitialize((params: InitializeParams) => {
     registerGotoDefinitionsProvider(clientCapabilities.hasGotoDefinition);
     registerFormattingProvider(clientCapabilities.hasFormatting);
     registerHoverDocumentationProvider(clientCapabilities.hasHoverCapabilities);
+    registerDocumentSymbolProvider(clientCapabilities.hasSymbolsCapabilities);
     return result;
 });
 

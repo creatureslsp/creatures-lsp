@@ -8,3 +8,14 @@ vsc-extension-quickstart.md
 **/.eslintrc.json
 **/*.map
 **/*.ts
+.vscode
+test_files/**
+tsconfig.json
+webpack.config.js
+.gitignore
+**/*.ts
+.yarn
+.idea
+lerna-debug.log
+lerna.json
+*.vsix

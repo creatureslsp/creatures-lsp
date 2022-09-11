@@ -3,6 +3,7 @@ import {clientCapabilities, connection} from "./server";
 import {GameVariant, hints, Nullable} from "@bedalton/caos-util";
 import getInlayOptions = hints.getInlayOptions;
 import {revalidateAll} from "./validator";
+import {HashUtil} from "@bedalton/caos-util/hash-util";
 
 const DEFAULT_INDENT_COMMENTS = true;
 
@@ -17,7 +18,19 @@ export interface CaosSettings {
     dumbMode: boolean,
     usePlaceholders: boolean,
     formatting: {
-        indentComments: boolean
+        tabSize?: number;
+        insertSpaces?: boolean;
+        trimTrailingWhitespace?: Nullable<boolean>;
+        insertFinalNewline?: Nullable<boolean>;
+        trimFinalNewlines?: Nullable<boolean>;
+        keepSameLine?: Nullable<boolean>;
+        maximumEmptyLines?: Nullable<number>;
+        indentComments?: Nullable<boolean>;
+        continuationIndent?: Nullable<number>;
+        spaceBetweenByteStingBrackets?: Nullable<boolean>;
+        minBlankLines?: Nullable<number>;
+        newLineChar?: Nullable<string>;
+        forceMinBlankLinesAfterComments?: Nullable<boolean>;
     }
     inlayHints?: {
         bitFlagValues: boolean,
@@ -136,10 +149,7 @@ export function getDocumentSettings(resource: string): Thenable<CaosSettings> {
             const clientConfig = await result;
             const config: CaosSettings & { [key: string]: any } = clientConfig?.caosScript ?? globalSettings
             config.minimumParameterCount = config.minimumParameterCount ?? config?.inlayHints?.parameterHints.minimumParameterCountForParameterInlayHints ?? 3
-            config.disabledInlayHints = getInlayOptions()
-                .filter((option) => {
-                    return config[option] === false
-                });
+            config.disabledInlayHints = getDisabledInlayHints(clientConfig ?? {inlayHints: {}}) ?? globalSettings.disabledInlayHints;
             if (config.formatting == null) {
                 config.formatting = {
                     indentComments: DEFAULT_INDENT_COMMENTS
@@ -152,6 +162,14 @@ export function getDocumentSettings(resource: string): Thenable<CaosSettings> {
             resolve(globalSettings);
         }
     });
+}
+
+function getDisabledInlayHints(settings: { [id:string]: any }): string[] {
+    return getInlayOptions()
+        .filter((option) => {
+            const value = HashUtil.get(settings, option) ?? HashUtil.get(settings, 'caosScript.' + option);
+            return value === false
+        });
 }
 
 export function deleteDocumentSettings(documentUri: string) {

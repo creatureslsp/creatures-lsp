@@ -275,7 +275,7 @@ function addCommandTokenDecorations(tokens: SemanticToken[], context: ICommandCa
         return;
     }
     
-    commandDescription = formatCaosDocumentation(command);
+    // commandDescription = formatCaosDocumentation(variant, command);
     const modifierTokens = (tok(command.command.substring(0, 4)) === NEW_TOK) ? [SemanticTokenModifiers.AGENT_CONSTRUCTOR] : getTypeModifierTokens(command.returnTypeId);
     const commandTypeDecoration = context.type === COMMAND_TYPE_ID ? SemanticTokensTypes.COMMAND_TOKEN : (context.type != VARIABLE_TYPE_ID ? SemanticTokensTypes.RVALUE_TOKEN : SemanticTokensTypes.LVALUE_TOKEN);
     switch (context.tokens.length) {

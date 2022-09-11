@@ -1,10 +1,10 @@
 import {collectors, Nullable} from "@bedalton/caos-util";
 import {getHoverItem} from "@bedalton/caos-util/hover-documentation";
-import {Hover, HoverParams, Position} from "vscode-languageserver";
+import {Hover, HoverParams} from "vscode-languageserver";
 import {getDocument} from "./documents";
 import {CAOS_LANGUAGE_ID, getDocumentSettings} from "./settings";
-import parseCaosNear = collectors.parseCaosNear;
 import {connection} from "./server";
+import parseCaosNear = collectors.parseCaosNear;
 
 
 // Empty placeholder hover value
@@ -33,7 +33,7 @@ async function onHoverCallback(e: HoverParams): Promise<Nullable<Hover>> {
     if (commandCalls.length < 1) {
         return EMPTY_HOVER;
     }
-    return getHoverItem(e.position, commandCalls);
+    return getHoverItem(settings.variant, e.position, commandCalls);
 }
 
 /**

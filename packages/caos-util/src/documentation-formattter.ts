@@ -1,4 +1,4 @@
-import {libs, Nullable} from "./CaosUtil";
+import {GameVariant, libs, Nullable} from "./CaosUtil";
 import ICaosParameter = libs.ICaosParameter;
 import getValueTypeName = libs.getValueTypeName;
 import ICaosCommand = libs.ICaosCommand;
@@ -26,12 +26,18 @@ function formatParameter(parameter:ICaosParameter, withValuesList: boolean) : st
     return "**"+parameter.name +"** " + formattedType;
 }
 
-export function formatCaosDocumentation(command:ICaosCommand, withValuesLists: boolean = false) : Nullable<string> {
+export function formatCaosDocumentation(variant: GameVariant, command:ICaosCommand, withValuesLists: boolean = false) : Nullable<string> {
     if (command == null)
         return null;
     let out = "";
     out += "**"+command.command.replace('_', '\\_')+"**";
-    out += ' ' + (command.returnTypeName.startsWith('[') ? command.returnTypeName : "(" + command.returnTypeName + ')');
+    let returnTypeName = command.returnTypeName;
+    if (variant != 'C1' && variant != 'C2') {
+        if (command.command === 'VELX' || command.command === 'VELY') {
+            returnTypeName = 'float';
+        }
+    }
+    out += ' ' + (returnTypeName.startsWith('[') ? returnTypeName : "(" + returnTypeName + ')');
     for(let parameter of command.parameters) {
         out += ' ' + formatParameter(parameter, withValuesLists)
     }

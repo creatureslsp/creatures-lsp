@@ -6,6 +6,7 @@ import {Disposable, OutputChannel, TextDocument, Uri, window, workspace, Workspa
 import {LanguageClient, LanguageClientOptions, ServerOptions, TransportKind} from "vscode-languageclient/node";
 import {CaosInlayHintsProvider} from "./inlay-hints";
 import {Nullable} from "@bedalton/caos-util";
+import {CaosSymbolProvider} from "./breadcrumbs";
 
 const disposables: Disposable[] = [];
 
@@ -179,6 +180,8 @@ export function activate(context: vscode.ExtensionContext) {
         vscode.commands.executeCommand( 'workbench.action.openSettings', 'caosScript.variant' )
     }));
     disposables.push(vscode.languages.registerInlayHintsProvider({language: 'caos'}, new CaosInlayHintsProvider()));
+    
+    disposables.push(vscode.languages.registerDocumentSymbolProvider({language: 'caos'}, new CaosSymbolProvider()));
     
 }
 

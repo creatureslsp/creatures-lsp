@@ -2,6 +2,8 @@ import {DocumentFormattingParams, TextEdit} from "vscode-languageserver";
 import {format} from "@bedalton/caos-util/formatter"
 import {connection, showMessage} from "./server";
 import {unpack} from "./server.utils";
+import {formatter} from "@bedalton/caos-util";
+import CaosFormatterOptions = formatter.CaosFormatterOptions;
 
 
 /**
@@ -14,12 +16,15 @@ async function onFormatCallback(params: DocumentFormattingParams): Promise<TextE
         return [];
     }
     const {variant, text, settings} = document;
+    const formattingSettings: CaosFormatterOptions = {
+        ...(settings.formatting ?? {}),
+        ...<any>params.options
+    };
     try {
         return format(
             variant,
             text,
-            params.options,
-            settings.formatting?.indentComments ?? true,
+            formattingSettings,
             showMessage
         );
     } catch (e) {

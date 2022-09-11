@@ -267,6 +267,10 @@
         {
           "match": "(?i)\\b(ne|<>|bf)\\b",
           "name": "keyword.operator.comparison.non-equality.caos"
+        },
+        {
+          "match": "(?i)\\b(and|or)\\b",
+          "name": "keyword.operator.comparison.join.caos"
         }
       ]
     },

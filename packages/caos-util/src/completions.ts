@@ -11,12 +11,11 @@ import {
     Range,
     TextEdit
 } from "vscode-languageserver-types";
-import {ANY_TYPE_ID, CAOS2_COMMENT_TYPE_ID, COMMAND_TYPE_ID, tok, VARIABLE_TYPE_ID} from "./constants";
+import {ANY_TYPE_ID, CAOS2_COMMENT_TYPE_ID, COMMAND_TYPE_ID, tok, UNKNOWN_TYPE_ID, VARIABLE_TYPE_ID} from "./constants";
 import {repack} from "./repack";
 import {getSubroutines} from "./subroutines";
 import {inRange} from "./position-utils";
 import {isSimilarType} from "./is-similar";
-import {cancelComplete, getClosestItem, getCursorPosition, getCursorPositionFromRawText, inQuotes} from "./cursor-data";
 import {getCommands} from "./commands";
 import ICaosCommand = libs.ICaosCommand;
 import ICaosParameter = libs.ICaosParameter;
@@ -32,7 +31,7 @@ import getScriptsFromParseResult = collectors.getScriptsFromParseResult;
 import Caos2Comment = collectors.ParserItem.Caos2Comment;
 import getCaos2PrayComments = collectors.getCaos2PrayComments;
 
-
+const {cancelComplete, getClosestItem, getCursorPosition, getCursorPositionFromRawText, inQuotes} = collectors;
 export type NamedVarPrefix = 'game' | 'eame' | 'name';
 
 /**
@@ -164,7 +163,7 @@ function getMultiTokenCommands(
     if (!commandsContainer.hasOwnProperty(variant)) {
         const commandsOfType = getFromCommandType(commandType, commands.commands, commands.rvalues, commands.lvalues);
         commandsContainer[variant] = commandsOfType
-            .filter(({command}) => command.indexOf(' '))
+            .filter(({command}) => command.indexOf(' ') > 0)
             .map(command => <CompletionItem>commandToCompletionItem(command))
             .filter(c => c != null);
     }
@@ -271,13 +270,12 @@ function getSingleTokenCommands(
         .filter(({command}) => {
             // Ensure is not multiword, and is not variable command
             // Variable commands are placeholders and not valid commands
-            command.indexOf(' ') < 0 && !VAR_TYPES_REGEX.test(command);
+            return command.indexOf(' ') < 0 && !VAR_TYPES_REGEX.test(command);
         })
         .map(command => {
             return <CompletionItem>commandToCompletionItem(command)
         })
         .filter(c => c != null);
-    
     // Assign and return results
     return commandsContainer[variant] = items;
     
@@ -325,7 +323,7 @@ function getCommandCompletions(
         out = out.concat(getSingleTokenCommands(variant, commands, commandType));
     }
     
-    return out.map(item => {
+    return  (returnType == ANY_TYPE_ID || returnType == UNKNOWN_TYPE_ID) ? out : out.map(item => {
         const prefix = isSimilarType((<ICaosCommand>item.data)?.returnTypeId, returnType) ? '0_' : '1_';
         return {
             ...item,
@@ -365,7 +363,7 @@ function addVariablesOfType(
 
 const variables: VariantArray<CompletionItem> = <any>{};
 
-function addVariables(variant: GameVariant, commands: ICaosCommand[]): CompletionItem[] {
+function getIndexedVariableCompletions(variant: GameVariant, commands: ICaosCommand[]): CompletionItem[] {
     if (variables.hasOwnProperty(variant)) {
         return variables[variant];
     }
@@ -416,7 +414,7 @@ function getRvalueCompletions(
     const parameterType = parameter?.typeId ?? ANY_TYPE_ID;
     const valuesListId = parameter?.valuesListId
     const valuesListValues: ValuesListValue[] = (valuesListId != null ? getValuesList(valuesListId)?.values : null) ??
-        data.eqValueList?.values ??
+        data.eqValuesList?.values ??
         [];
     let valuesListValuesCompletions: CompletionItem[] = [];
     if (valuesListValues.length > 0) {
@@ -442,7 +440,9 @@ function getRvalueCompletions(
         data.previousTokens,
         parameterType,
     );
-    const variableCompletions = addVariables(variant, commands.rvalues);
+    const variableCompletions = data.previousTokens.length == 0 && data.beforeText != null && data.beforeText.length > 0
+        ? getIndexedVariableCompletions(variant, commands.rvalues)
+        : [];
     return [...valuesListValuesCompletions, ...commandCompletions, ...variableCompletions];
 }
 
@@ -461,7 +461,7 @@ function getLvalueCompletions(variant: GameVariant, commands: Commands, position
         [],
         VARIABLE_TYPE_ID,
     )
-    const variableCompletions = addVariables(variant, commands.rvalues);
+    const variableCompletions = getIndexedVariableCompletions(variant, commands.rvalues);
     return [...commandCompletions, ...variableCompletions];
 }
 
@@ -810,13 +810,11 @@ export function getCompletionItems(
             text,
             position.line,
             position.character,
-            opts?.incomplete ?? true,
-            opts?.parseNear ?? true
+            opts?.incomplete ?? true
         )
     }
     
     if (cursor == null) {
-        console.error('Failed to get cursor data');
         return emptyCompletionList;
     }
     

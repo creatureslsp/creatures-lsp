@@ -3,10 +3,11 @@
 import ParserItem = collectors.ParserItem;
 import CommandCall = collectors.CommandCall;
 import CommandReference = collectors.CommandReference;
-import {InlayHint} from "./server";
+import {FormattingOptions, InlayHint} from "./server";
 import ICaosParameter = libs.ICaosParameter;
 import CommandToken = collectors.ParserItem.CommandToken;
 import CaosValuesList = libs.CaosValuesList;
+import {DocumentSymbol} from "vscode-languageserver-types";
 
 /**
  * A spe
@@ -213,12 +214,31 @@ interface CursorData extends Position {
     /**
      * The values list if this cursor occurs within an EQ statement and there is a known list of values
      */
-    readonly eqValueList: Nullable<CaosValuesList>;
+    readonly eqValuesList: Nullable<CaosValuesList>;
     
     /**
      * Whether the cursor is inside an equality statement
      */
     readonly inEqualityStatement: boolean;
+}
+
+
+export namespace collectors {
+    function getCursorPosition(parseResult: collectors.ParseResult, lineNumber: number, character: number, incomplete: boolean): Nullable<server.CursorData>;
+    class ClosestItemResult<T> {
+        constructor(closest: T, previous: Array<collectors.ParserItem.CommandToken>);
+        get closest(): T;
+        get previous(): Array<collectors.ParserItem.CommandToken>;
+    }
+    function getCursorPositionFromRawText(variant: string, text: string, lineNumber: number, character: number, parseOnlyNear: Nullable<boolean>, incomplete: Nullable<boolean>, keepGoing: Nullable<() => boolean>): Nullable<server.CursorData>;
+    function cancelComplete(closestItem: collectors.ParserItem<any /*UnknownType **/>, line: number, character: number): boolean;
+    function inQuotes(closestItem: collectors.ParserItem<any /*UnknownType **/>, line: number, character: number): boolean;
+    function getClosestItem<T extends HasRange>(
+        inRangeItems: Array<T>,
+        lineNumber: Int,
+        character: Int,
+        notAfter: Boolean,
+): ClosestItemResult<T>|null|undefined;
 }
 
 
@@ -1500,6 +1520,23 @@ export namespace hints {
     ): InlayHint[]
 }
 
+export namespace hints {
+    /**
+     * Gets the CAOS scope symbols from a parser result
+     * @param parserResult
+     * @param addDoifLikeStatements add control statements like DOIF, REPS, LOOP
+     */
+    function getDocumentSymbols(parserResult: ParseResult, addDoifLikeStatements?: boolean): DocumentSymbol[]
+    
+    /**
+     * Gets the CAOS scope symbols for a given CAOS document
+     * @param variant [C1,C2,CV,C3,DS]
+     * @param text the document text
+     * @param addDoifLikeStatements add control statements like DOIF, REPS, LOOP
+     */
+    function getDocumentSymbolsFromText(variant: string, text: string, addDoifLikeStatements: boolean): Array<server.DocumentSymbol>;
+}
+
 export namespace libs {
     /**
      * Gets a value list by its internal id number
@@ -1566,6 +1603,149 @@ type CancellationToken = {
      * Is `true` when the token has been cancelled, `false` otherwise.
      */
     readonly isCancellationRequested: boolean;
+}
+
+/**
+ * Formatting commands
+ */
+export namespace formatter {
+    
+    /**
+     * Format a CAOS string using the given formatting options
+     * @param variant Game variant [C1,C2,CV,C3,DS]
+     * @param text the document text
+     * @param options the options to use when formatting
+     */
+    function format(variant: string, text: string, options: Nullable<formatter.CaosFormatterOptions>): formatter.FormatResult;
+    
+}
+
+/**
+ * Formatting Objects/Classes
+ */
+export namespace formatter {
+    
+    /**
+     * The result of a CAOS format call
+     */
+    class FormatResult {
+        get formattedText(): string;
+        get oldText(): string;
+    }
+    
+    /**
+     * Options used in formatting
+     */
+    interface CaosFormatterOptions extends FormattingOptions {
+        /**
+         * The size of each tab
+         * If using spaces, this is the number of spaces
+         */
+        readonly tabSize: number;
+        
+        /**
+         * Whether to prefer spaces to tabs
+         * If tabSize is set to 4, and insertSpaces is true. 4 spaces will be inserted for each indent needed
+         */
+        readonly insertSpaces: boolean;
+        
+        /**
+         * Whether to trim trailing whitespace after format
+         * @default false
+         */
+        readonly trimTrailingWhitespace?: Nullable<boolean>;
+        
+        /**
+         * Whether to insert a final new line character after indent
+         * @default false
+         */
+        readonly insertFinalNewline?: Nullable<boolean>;
+    
+        /**
+         * Trim all newlines after the final newline at the end of the file.
+         */
+        readonly trimFinalNewlines?: Nullable<boolean>;
+    
+        /**
+         * Whether to keep inline commands on the same line or move them to the next
+         */
+        readonly keepSameLine?: Nullable<boolean>;
+    
+        /**
+         * The maximum number of blank lines to allow between character
+         * If there is a conflict between this an minNewLines, maxNewLines wins
+         */
+        readonly maxBlankLines?: Nullable<number>;
+    
+        /**
+         * The minimum number of blank lines to have between commands
+         * If minBlankLines > maxBlankLines, maxBlankLines wins
+         */
+        readonly minBlankLines?: Nullable<number>;
+    
+        /**
+         * Whether to re-indent comments or leave them alone
+         */
+        readonly indentComments?: Nullable<boolean>;
+        
+        /**
+         * The number of spaces to use for a continuation indent. This respects the prefersSpaces attribute
+         */
+        readonly continuationIndent?: Nullable<number>;
+        
+        /**
+         * Whether to add a space between numbers and brackets in a byte-string `[ 1 2 3 ]` or `[1 2 3]`
+         */
+        readonly spaceBetweenByteStingBrackets?: Nullable<boolean>;
+        
+        /**
+         * Whether to enforce the minimum blank lines rule after a comment
+         * If false, no blank lines are required after a comment
+         */
+        readonly forceMinBlankLinesAfterComments?: Nullable<boolean>;
+    }
+    
+    /**
+     * Exception for when formatting fails
+     */
+    class FormatException extends exceptions.CaosException {
+        constructor(message: string, throwable: Nullable<Error>);
+    }
+}
+
+export namespace server {
+    interface DocumentSymbol {
+        /**
+         * Display name for symbol
+         */
+        readonly name: string;
+        /**
+         * An additional descriptor
+         */
+        readonly detail: Nullable<string>;
+        /**
+         * The kind of symbol it is
+         */
+        readonly kind: number;
+        /**
+         * Symbol modifier tags (at the moment only tag is deprecated)
+         */
+        readonly tags: Array<number>;
+        /**
+         * The range of this entire element
+         * i.e. The entire function (header and body)
+         */
+        readonly range: Range;
+        /**
+         * The range to select for the symbol
+         * i.e. The function name
+         */
+        readonly selectionRange: Range;
+        /**
+         * Any symbol children contained within this symbol's range
+         */
+        readonly children: Array<DocumentSymbol>;
+    }
 }
 
 export as namespace CaosValidator;

@@ -2,7 +2,7 @@
 // noinspection JSUnusedGlobalSymbols
 
 import {Hover, Position} from "vscode-languageserver-types";
-import {collectors, Nullable, RangeWithIndex} from "./CaosUtil";
+import {collectors, GameVariant, Nullable, RangeWithIndex} from "./CaosUtil";
 import {formatCaosDocumentation} from "./documentation-formattter";
 import CommandCall = collectors.CommandCall;
 import {repack} from "./repack";
@@ -36,10 +36,11 @@ function inRange(position: Position, range: RangeWithIndex): boolean {
 
 /**
  * Drill down into the command call to find its closest command and get its hover information
+ * @param variant
  * @param position
  * @param commandCall
  */
-function drillDown(position: Position, commandCall: CommandCall): Nullable<Hover> {
+function drillDown(variant: GameVariant, position: Position, commandCall: CommandCall): Nullable<Hover> {
     if (!inRange(position, commandCall.textRange)) {
         // console.log("Position: " + JSON.stringify(position) + "; Is not in Range: " + JSON.stringify(repack(commandCall.textRange)))
         return null;
@@ -51,7 +52,7 @@ function drillDown(position: Position, commandCall: CommandCall): Nullable<Hover
             range: toVsRange(commandCall.tokenTextRange),
             contents: {
                 kind: 'markdown',
-                value: formatCaosDocumentation(commandCall.command)
+                value: formatCaosDocumentation(variant, commandCall.command)
             }
         };
     } else {
@@ -60,7 +61,7 @@ function drillDown(position: Position, commandCall: CommandCall): Nullable<Hover
     for (const argument of commandCall.arguments) {
         if (argument.hasOwnProperty('arguments')) {
             // console.log("Checking Argument: " + argument.text)
-            const drilled = drillDown(position, <CommandCall>argument);
+            const drilled = drillDown(variant, position, <CommandCall>argument);
             if (drilled) {
                 return drilled;
             }
@@ -84,12 +85,13 @@ function drillDown(position: Position, commandCall: CommandCall): Nullable<Hover
 
 /**
  * Gets the hover information as close to the position as possible, drilling down through all child command calls
+ * @param variant
  * @param position
  * @param commandCalls
  */
-export function getHoverItem(position: Position, commandCalls: CommandCall[]): Nullable<Hover> {
+export function getHoverItem(variant: GameVariant, position: Position, commandCalls: CommandCall[]): Nullable<Hover> {
     for (const call of commandCalls) {
-        const hover = drillDown(position, call);
+        const hover = drillDown(variant, position, call);
         // eslint-disable-next-line eqeqeq
         if (hover != null) {
             return hover;

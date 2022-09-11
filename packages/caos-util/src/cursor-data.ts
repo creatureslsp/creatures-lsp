@@ -205,7 +205,7 @@ export function getCursorPosition(
         closestItem,
         line: lineNumber,
         character: column,
-        eqValueList: equalityValuesList,
+        eqValuesList: equalityValuesList,
         inEqualityStatement: matchingEqualityStatements.length > 0
     };
 }
@@ -384,7 +384,7 @@ function getEqualityValuesList(
 ): Nullable<CaosValuesList> {
     
     const equalityStatementsInRange = parseResult.equalityStatements
-        .filter(eq => inRange(eq.textRange, lineNumber, column, true, true))
+        .filter(eq => eq.textRange != null && inRange(eq.textRange, lineNumber, column, true, true))
         .sort((a, b) => sortTextRanges(a.textRange, b.textRange));
     if (equalityStatementsInRange.length < 1) {
         return null;

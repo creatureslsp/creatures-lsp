@@ -4,6 +4,7 @@
   "description": "Utility methods for parsing and validating CAOS scripts for the Creatures games",
   "types": "./lib/CaosUtil.d.ts",
   "main": "lib/CaosUtil.js",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "directory": "packages/caos-util",
@@ -18,6 +19,7 @@
     "./cursor-data": "./lib/cursor-data.js",
     "./formatter": "./lib/formatter.js",
     "./goto": "./lib/goto.js",
+    "./hash-util": "./lib/hash-util.js",
     "./hover-documentation": "./lib/hover-documentation.js",
     "./inlay-hints": "./lib/inlay-hints.js",
     "./is-similar": "./lib/is-similar.js",
@@ -64,6 +66,9 @@
       "./goto": [
         "./lib/goto.d.ts"
       ],
+      "./hash-util": [
+        "./lib/hash-util.d.ts"
+      ],
       "./hover-documentation": [
         "./lib/hover-documentation.d.ts"
       ],
@@ -94,6 +99,7 @@
     }
   },
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "vscode-languageserver-types": "^3.17.1"
   }
 }

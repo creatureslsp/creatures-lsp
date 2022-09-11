@@ -1,24 +1,28 @@
 {
-  "name": "@bedalton/caos-editor",
-  "displayName": "CAOSEditor",
+  "name": "caos-and-agenteering",
+  "displayName": "Creatures CAOS and Agenteering",
   "description": "An editor for the Creature's CAOS language",
   "license": "MIT",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.67.0"
   },
+  "publisher": "bedalton",
+  "icon": "icons/extension-icon.png",
   "private": true,
   "categories": [
     "Programming Languages"
   ],
   "activationEvents": [
-    "onLanguage:caos"
+    "onLanguage:caos",
+    "onLanguage:caosdef"
   ],
   "workspaces": {
     "packages": [
       "packages/*"
     ]
   },
+  "repository": "https://github.com/bedalton/vs-caos-editor",
   "main": "./packages/client/dist/extension.js",
   "extensionDependencies": [],
   "contributes": {
@@ -68,7 +72,7 @@
           ],
           "description": "The CAOS language variant to use"
         },
-        "caosScript.inlayHints.bitFlagValues": {
+        "caosScript.inlayHints.parameterBitFlagValues": {
           "type": "boolean",
           "scope": "workspace",
           "default": true,
@@ -84,7 +88,7 @@
           "type": "integer",
           "scope": "workspace",
           "default": 2,
-          "description": "Hide inlay hints for commands with less than this number of parameters"
+          "description": "Hide inlay hints for commands pwith less than this number of parameters"
         },
         "caosScript.inlayHints.setvParameterHints": {
           "type": "boolean",
@@ -92,13 +96,13 @@
           "default": false,
           "description": "Show parameter names before arguments"
         },
-        "caosScript.inlayHints.genusName": {
+        "caosScript.inlayHints.assumedGenusName": {
           "type": "boolean",
           "scope": "workspace",
           "default": false,
           "description": "Shows name of genus in Family Genus Species argument list"
         },
-        "caosScript.inlayHints.valueName": {
+        "caosScript.inlayHints.assumedValueName": {
           "type": "boolean",
           "scope": "workspace",
           "default": true,
@@ -134,7 +138,7 @@
           "default": true,
           "description": "Show Bitflag value on opposing side of equality operator"
         },
-        "caosScript.inlayHints.equalityValueName": {
+        "caosScript.inlayHints.equality.equalityValueName": {
           "type": "boolean",
           "scope": "workspace",
           "default": true,
@@ -145,6 +149,51 @@
           "scope": "workspace",
           "default": true,
           "description": "Indent comments inline with commands except when comment is at start of line"
+        },
+        "caosScript.formatting.keepSameLine": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": true,
+          "description": "Allow multiple commands on the same line"
+        },
+        "caosScript.formatting.minBlankLines": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "scope": "workspace",
+          "default": null,
+          "description": "Minimum number of blank lines between commands"
+        },
+        "caosScript.formatting.forceMinBlankLinesAfterComments": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": false,
+          "description": "Whether to enforce the min blank line settings after a comment. If true, it may add a space between comments and the command that comes after it"
+        },
+        "caosScript.formatting.maxBlankLines": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "scope": "workspace",
+          "default": -1,
+          "description": "The maximum number of blank lines to keep between commands. Use a negative value for unlimited spaces"
+        },
+        "caosScript.formatting.continuationIndent": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "scope": "workspace",
+          "default": null,
+          "description": "The number of spaces to use for continuation indents. i.e. When a newline exists between arguements in a command"
+        },
+        "caosScript.formatting.spaceBetweenByteStingBrackets": {
+          "type": "boolean",
+          "scope": "workspace",
+          "default": false,
+          "description": "Place a space between the numbers and the brackets in a byte-string. i.e. `[ 1 2 3 ]` vs `[1 2 3]`"
         }
       }
     },
@@ -152,21 +201,55 @@
       {
         "id": "caos",
         "extensions": [
-          ".caos",
           ".cos"
         ],
         "aliases": [
           "CAOS",
           "Caos"
         ],
+        "icon": {
+          "light": "./icons/caos-light.png",
+          "dark": "./icons/caos-dark.png"
+        },
         "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "creatures-pray",
+        "extensions": [
+          ".ps",
+          "txt"
+        ],
+        "aliases": [
+          "PRAY",
+          "Pray"
+        ],
+        "icon": {
+          "light": "./icons/pray-light.png",
+          "dark": "./icons/pray-dark.png"
+        },
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "caosdef",
+        "extensions": [
+          ".caosdef"
+        ],
+        "icon": {
+          "light": "./icons/caosdef-light.png",
+          "dark": "./icons/caosdef-dark.png"
+        }
       }
     ],
     "grammars": [
       {
+        "language": "caosdef",
+        "scopeName": "source.caosdef",
+        "path": "./syntaxes/CAOSDef.tmLanguage.json"
+      },
+      {
         "language": "caos",
         "scopeName": "source.caos",
-        "path": "./syntaxes/caos.tmLanguage.json"
+        "path": "./syntaxes/CAOS.tmLanguage.json"
       }
     ],
     "semanticTokenTypes": [
@@ -256,10 +339,14 @@
   },
   "scripts": {
     "prepare": "node ./configure-references.js",
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "lerna run build",
     "build": "lerna run build --stream",
     "lint": "lerna run lint --stream --parallel",
-    "test": "echo 'no test'"
+    "test": "echo 'no test'",
+    "webpack": "webpack --mode development",
+    "webpack-dev": "webpack --mode development --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "test-compile": "tsc -p ./"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
@@ -273,7 +360,14 @@
     "is-ci": "^3.0.1",
     "lerna": "^5.1.6",
     "mocha": "^10.0.0",
-    "typescript": "^4.7.2"
+    "rimraf": "^3.0.2",
+    "ts-loader": "9.3.1",
+    "typescript": "^4.7.2",
+    "webpack": "5.74.0",
+    "webpack-cli": "4.10.0"
   },
-  "packageManager": "yarn@3.2.1"
+  "dependencies": {
+    "vsce-yarn-patch": "1.66.2"
+  },
+  "packageManager": "yarn@1.22.19"
 }

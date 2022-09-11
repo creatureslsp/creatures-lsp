@@ -58,7 +58,7 @@ export async function registerCompletionProvider(init: boolean = true) {
             const variant = settings.variant ?? 'DS';
             
             const completionSettings: CompletionSettings = {
-                parameterInlayHints: settings.disabledInlayHints.indexOf('inlayHints.parameterHints') < 0,
+                parameterInlayHints: settings.disabledInlayHints.indexOf('inlayHints.parameterHints.showParameterHints') < 0,
                 usePlaceholders: settings.usePlaceholders ?? true,
                 dumbMode: settings.dumbMode ?? false,
                 minimumParameterCount: settings.minimumParameterCount ?? 2

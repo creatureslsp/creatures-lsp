@@ -461,14 +461,37 @@
       return copyOfRange_0(_this__1828080292, 0, 0);
     return copyOfRange_0(_this__1828080292, indices._get_start__3614751663_b8zdqp_k$(), indices._get_endInclusive__731268122_c3dm3e_k$() + 1 | 0);
   }
-  function sortedBy(_this__1828080292, selector) {
+  function firstOrNull(_this__1828080292) {
+    var tmp;
     var tmp$ret$0;
     $l$block: {
-      var tmp = sortedBy$lambda(selector);
-      tmp$ret$0 = new sam$kotlin_Comparator$0(tmp);
+      tmp$ret$0 = _this__1828080292.length === 0;
       break $l$block;
     }
-    return sortedWith(_this__1828080292, tmp$ret$0);
+    if (tmp$ret$0) {
+      tmp = null;
+    } else {
+      {
+        tmp = _this__1828080292[0];
+      }
+    }
+    return tmp;
+  }
+  function lastOrNull(_this__1828080292) {
+    var tmp;
+    var tmp$ret$0;
+    $l$block: {
+      tmp$ret$0 = _this__1828080292.length === 0;
+      break $l$block;
+    }
+    if (tmp$ret$0) {
+      tmp = null;
+    } else {
+      {
+        tmp = _this__1828080292[_this__1828080292.length - 1 | 0];
+      }
+    }
+    return tmp;
   }
   function isNotEmpty(_this__1828080292) {
     var tmp$ret$0;
@@ -553,6 +576,15 @@
       }
        while (!(i === lastIndex));
     return maxElem;
+  }
+  function sortedBy(_this__1828080292, selector) {
+    var tmp$ret$0;
+    $l$block: {
+      var tmp = sortedBy$lambda(selector);
+      tmp$ret$0 = new sam$kotlin_Comparator$0(tmp);
+      break $l$block;
+    }
+    return sortedWith(_this__1828080292, tmp$ret$0);
   }
   function contains_1(_this__1828080292, element) {
     return indexOf_0(_this__1828080292, element) >= 0;
@@ -681,23 +713,7 @@
       transform = null;
     return joinToString_1(_this__1828080292, separator, prefix, postfix, limit, truncated, transform);
   }
-  function lastOrNull(_this__1828080292) {
-    var tmp;
-    var tmp$ret$0;
-    $l$block: {
-      tmp$ret$0 = _this__1828080292.length === 0;
-      break $l$block;
-    }
-    if (tmp$ret$0) {
-      tmp = null;
-    } else {
-      {
-        tmp = _this__1828080292[_this__1828080292.length - 1 | 0];
-      }
-    }
-    return tmp;
-  }
-  function firstOrNull(_this__1828080292, predicate) {
+  function firstOrNull_0(_this__1828080292, predicate) {
     var indexedObject = _this__1828080292;
     var inductionVariable = 0;
     var last = indexedObject.length;
@@ -708,22 +724,6 @@
         return element;
     }
     return null;
-  }
-  function firstOrNull_0(_this__1828080292) {
-    var tmp;
-    var tmp$ret$0;
-    $l$block: {
-      tmp$ret$0 = _this__1828080292.length === 0;
-      break $l$block;
-    }
-    if (tmp$ret$0) {
-      tmp = null;
-    } else {
-      {
-        tmp = _this__1828080292[0];
-      }
-    }
-    return tmp;
   }
   function flatMap(_this__1828080292, transform) {
     var tmp$ret$0;
@@ -1035,9 +1035,6 @@
     }
     return destination;
   }
-  function sortedWith(_this__1828080292, comparator) {
-    return asList(sortedArrayWith(_this__1828080292, comparator));
-  }
   function take(_this__1828080292, n) {
     {
       var tmp0_require_0 = n >= 0;
@@ -1076,6 +1073,9 @@
       }
     }
     return list;
+  }
+  function sortedWith(_this__1828080292, comparator) {
+    return asList(sortedArrayWith(_this__1828080292, comparator));
   }
   function takeLast(_this__1828080292, n) {
     {
@@ -1806,9 +1806,6 @@
   function firstOrNull_2(_this__1828080292) {
     return _this__1828080292.isEmpty_y1axqb_k$() ? null : _this__1828080292.get_fkrdnv_k$(0);
   }
-  function indexOf_5(_this__1828080292, element) {
-    return _this__1828080292.indexOf_dcv8dt_k$(element);
-  }
   function lastOrNull_0(_this__1828080292) {
     return _this__1828080292.isEmpty_y1axqb_k$() ? null : _this__1828080292.get_fkrdnv_k$(_this__1828080292._get_size__809037418_ddoh9m_k$() - 1 | 0);
   }
@@ -1817,7 +1814,7 @@
       return _this__1828080292.contains_2ehdt1_k$(element);
     else {
     }
-    return indexOf_6(_this__1828080292, element) >= 0;
+    return indexOf_5(_this__1828080292, element) >= 0;
   }
   function sortedWith_0(_this__1828080292, comparator) {
     if (isInterface(_this__1828080292, Collection)) {
@@ -2142,10 +2139,73 @@
     }
     return tmp$ret$1;
   }
+  function any_1(_this__1828080292, predicate) {
+    var tmp;
+    if (isInterface(_this__1828080292, Collection)) {
+      tmp = _this__1828080292.isEmpty_y1axqb_k$();
+    } else {
+      {
+        tmp = false;
+      }
+    }
+    if (tmp)
+      return false;
+    else {
+    }
+    var tmp0_iterator = _this__1828080292.iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var element = tmp0_iterator.next_20eer_k$();
+      if (predicate(element))
+        return true;
+    }
+    return false;
+  }
+  function indexOfFirst_0(_this__1828080292, predicate) {
+    var index = 0;
+    var tmp0_iterator = _this__1828080292.iterator_jk1svi_k$();
+    while (tmp0_iterator.hasNext_bitz1p_k$()) {
+      var item = tmp0_iterator.next_20eer_k$();
+      if (predicate(item))
+        return index;
+      var tmp1 = index;
+      index = tmp1 + 1 | 0;
+      Unit_getInstance();
+    }
+    return -1;
+  }
   function first_1(_this__1828080292) {
     if (_this__1828080292.isEmpty_y1axqb_k$())
       throw NoSuchElementException_init_$Create$_0('List is empty.');
     return _this__1828080292.get_fkrdnv_k$(0);
+  }
+  function toSet_0(_this__1828080292) {
+    if (isInterface(_this__1828080292, Collection)) {
+      var tmp0_subject = _this__1828080292._get_size__809037418_ddoh9m_k$();
+      var tmp;
+      switch (tmp0_subject) {
+        case 0:
+          tmp = emptySet();
+          break;
+        case 1:
+          var tmp_0;
+          if (isInterface(_this__1828080292, List)) {
+            tmp_0 = _this__1828080292.get_fkrdnv_k$(0);
+          } else {
+            {
+              tmp_0 = _this__1828080292.iterator_jk1svi_k$().next_20eer_k$();
+            }
+          }
+
+          tmp = setOf_0(tmp_0);
+          break;
+        default:
+          tmp = toCollection_0(_this__1828080292, LinkedHashSet_init_$Create$_3(mapCapacity(_this__1828080292._get_size__809037418_ddoh9m_k$())));
+          break;
+      }
+      return tmp;
+    } else {
+    }
+    return optimizeReadOnlySet(toCollection_0(_this__1828080292, LinkedHashSet_init_$Create$_0()));
   }
   function none(_this__1828080292, predicate) {
     var tmp;
@@ -2167,27 +2227,6 @@
         return false;
     }
     return true;
-  }
-  function any_1(_this__1828080292, predicate) {
-    var tmp;
-    if (isInterface(_this__1828080292, Collection)) {
-      tmp = _this__1828080292.isEmpty_y1axqb_k$();
-    } else {
-      {
-        tmp = false;
-      }
-    }
-    if (tmp)
-      return false;
-    else {
-    }
-    var tmp0_iterator = _this__1828080292.iterator_jk1svi_k$();
-    while (tmp0_iterator.hasNext_bitz1p_k$()) {
-      var element = tmp0_iterator.next_20eer_k$();
-      if (predicate(element))
-        return true;
-    }
-    return false;
   }
   function intersect_0(_this__1828080292, other) {
     var set = toMutableSet_0(_this__1828080292);
@@ -2286,7 +2325,7 @@
     }
     return destination;
   }
-  function indexOf_6(_this__1828080292, element) {
+  function indexOf_5(_this__1828080292, element) {
     if (isInterface(_this__1828080292, List))
       return _this__1828080292.indexOf_dcv8dt_k$(element);
     else {
@@ -2400,35 +2439,6 @@
       }
     }
   }
-  function toSet_0(_this__1828080292) {
-    if (isInterface(_this__1828080292, Collection)) {
-      var tmp0_subject = _this__1828080292._get_size__809037418_ddoh9m_k$();
-      var tmp;
-      switch (tmp0_subject) {
-        case 0:
-          tmp = emptySet();
-          break;
-        case 1:
-          var tmp_0;
-          if (isInterface(_this__1828080292, List)) {
-            tmp_0 = _this__1828080292.get_fkrdnv_k$(0);
-          } else {
-            {
-              tmp_0 = _this__1828080292.iterator_jk1svi_k$().next_20eer_k$();
-            }
-          }
-
-          tmp = setOf_0(tmp_0);
-          break;
-        default:
-          tmp = toCollection_0(_this__1828080292, LinkedHashSet_init_$Create$_3(mapCapacity(_this__1828080292._get_size__809037418_ddoh9m_k$())));
-          break;
-      }
-      return tmp;
-    } else {
-    }
-    return optimizeReadOnlySet(toCollection_0(_this__1828080292, LinkedHashSet_init_$Create$_0()));
-  }
   function asSequence(_this__1828080292) {
     var tmp$ret$0;
     $l$block: {
@@ -2471,19 +2481,6 @@
         throw IllegalArgumentException_init_$Create$_0('List has more than one element.');
     }
     return tmp;
-  }
-  function indexOfFirst_0(_this__1828080292, predicate) {
-    var index = 0;
-    var tmp0_iterator = _this__1828080292.iterator_jk1svi_k$();
-    while (tmp0_iterator.hasNext_bitz1p_k$()) {
-      var item = tmp0_iterator.next_20eer_k$();
-      if (predicate(item))
-        return index;
-      var tmp1 = index;
-      index = tmp1 + 1 | 0;
-      Unit_getInstance();
-    }
-    return -1;
   }
   function indexOfLast(_this__1828080292, predicate) {
     var iterator = _this__1828080292.listIterator_5hanv9_k$(_this__1828080292._get_size__809037418_ddoh9m_k$());
@@ -5809,6 +5806,17 @@
   function emptySet() {
     return EmptySet_getInstance();
   }
+  function optimizeReadOnlySet(_this__1828080292) {
+    var tmp0_subject = _this__1828080292._get_size__809037418_ddoh9m_k$();
+    switch (tmp0_subject) {
+      case 0:
+        return emptySet();
+      case 1:
+        return setOf_0(_this__1828080292.iterator_jk1svi_k$().next_20eer_k$());
+      default:
+        return _this__1828080292;
+    }
+  }
   function _get_serialVersionUID__3358653151_1($this) {
     return $this.serialVersionUID_1;
   }
@@ -5882,17 +5890,6 @@
   }
   function hashSetOf(elements) {
     return toCollection(elements, HashSet_init_$Create$_2(mapCapacity(elements.length)));
-  }
-  function optimizeReadOnlySet(_this__1828080292) {
-    var tmp0_subject = _this__1828080292._get_size__809037418_ddoh9m_k$();
-    switch (tmp0_subject) {
-      case 0:
-        return emptySet();
-      case 1:
-        return setOf_0(_this__1828080292.iterator_jk1svi_k$().next_20eer_k$());
-      default:
-        return _this__1828080292;
-    }
   }
   function linkedSetOf() {
     return LinkedHashSet_init_$Create$_0();
@@ -7850,7 +7847,7 @@
       tmp_0 = !(typeof _this__1828080292 === 'string');
     }
     if (tmp_0) {
-      tmp = indexOf_9(_this__1828080292, string, startIndex, 0, ignoreCase, true);
+      tmp = indexOf_8(_this__1828080292, string, startIndex, 0, ignoreCase, true);
     } else {
       {
         var tmp$ret$1;
@@ -7962,7 +7959,7 @@
   function split_2(_this__1828080292, delimiter, ignoreCase, limit) {
     requireNonNegativeLimit(limit);
     var currentOffset = 0;
-    var nextIndex = indexOf_8(_this__1828080292, delimiter, currentOffset, ignoreCase);
+    var nextIndex = indexOf_7(_this__1828080292, delimiter, currentOffset, ignoreCase);
     if (nextIndex === -1 ? true : limit === 1) {
       return listOf_1(toString_3(_this__1828080292));
     }
@@ -7981,7 +7978,7 @@
       currentOffset = nextIndex + delimiter.length | 0;
       if (isLimited ? result._get_size__809037418_ddoh9m_k$() === (limit - 1 | 0) : false)
         break $l$loop;
-      nextIndex = indexOf_8(_this__1828080292, delimiter, currentOffset, ignoreCase);
+      nextIndex = indexOf_7(_this__1828080292, delimiter, currentOffset, ignoreCase);
     }
      while (!(nextIndex === -1));
     var tmp$ret$1;
@@ -8050,7 +8047,7 @@
       padChar = _Char___init__impl__380027157(32);
     return padEnd_0(_this__1828080292, length, padChar);
   }
-  function indexOf_7(_this__1828080292, char, startIndex, ignoreCase) {
+  function indexOf_6(_this__1828080292, char, startIndex, ignoreCase) {
     var tmp;
     var tmp_0;
     if (ignoreCase) {
@@ -8094,7 +8091,7 @@
       startIndex = 0;
     if (!(($mask0 & 4) === 0))
       ignoreCase = false;
-    return indexOf_7(_this__1828080292, char, startIndex, ignoreCase);
+    return indexOf_6(_this__1828080292, char, startIndex, ignoreCase);
   }
   function trim_2(_this__1828080292, predicate) {
     var startIndex = 0;
@@ -8117,7 +8114,7 @@
     }
     return charSequenceSubSequence(_this__1828080292, startIndex, endIndex + 1 | 0);
   }
-  function indexOf_8(_this__1828080292, string, startIndex, ignoreCase) {
+  function indexOf_7(_this__1828080292, string, startIndex, ignoreCase) {
     var tmp;
     var tmp_0;
     if (ignoreCase) {
@@ -8151,9 +8148,9 @@
       startIndex = 0;
     if (!(($mask0 & 4) === 0))
       ignoreCase = false;
-    return indexOf_8(_this__1828080292, string, startIndex, ignoreCase);
+    return indexOf_7(_this__1828080292, string, startIndex, ignoreCase);
   }
-  function indexOf_9(_this__1828080292, other, startIndex, endIndex, ignoreCase, last) {
+  function indexOf_8(_this__1828080292, other, startIndex, endIndex, ignoreCase, last) {
     var indices = !last ? numberRangeToNumber(coerceAtLeast(startIndex, 0), coerceAtMost(endIndex, charSequenceLength(_this__1828080292))) : downTo(coerceAtMost(startIndex, _get_lastIndex__339712501_7(_this__1828080292)), coerceAtLeast(endIndex, 0));
     var tmp;
     if (typeof _this__1828080292 === 'string') {
@@ -8195,7 +8192,7 @@
   function indexOf$default_1(_this__1828080292, other, startIndex, endIndex, ignoreCase, last, $mask0, $handler) {
     if (!(($mask0 & 16) === 0))
       last = false;
-    return indexOf_9(_this__1828080292, other, startIndex, endIndex, ignoreCase, last);
+    return indexOf_8(_this__1828080292, other, startIndex, endIndex, ignoreCase, last);
   }
   function padStart_0(_this__1828080292, length, padChar) {
     if (length < 0)
@@ -16113,6 +16110,9 @@
   function setOf_0(element) {
     return hashSetOf([element]);
   }
+  function mapCapacity(expectedSize) {
+    return expectedSize;
+  }
   function checkCountOverflow(count) {
     if (count < 0) {
       throwCountOverflow();
@@ -16124,9 +16124,6 @@
   }
   function mapOf_1(pair) {
     return hashMapOf([pair]);
-  }
-  function mapCapacity(expectedSize) {
-    return expectedSize;
   }
   function toSingletonMapOrSelf(_this__1828080292) {
     return _this__1828080292;
@@ -26910,7 +26907,7 @@
   _.$crossModule$.filterNotNull = filterNotNull;
   _.$crossModule$.filterNotNull_1 = filterNotNull_0;
   _.$crossModule$.firstOrNull = firstOrNull_2;
-  _.$crossModule$.firstOrNull_1 = firstOrNull_0;
+  _.$crossModule$.firstOrNull_1 = firstOrNull;
   _.$crossModule$.first = first_1;
   _.$crossModule$.first_1 = first;
   _.$crossModule$.getOrNull = getOrNull;
@@ -26918,8 +26915,7 @@
   _.$crossModule$.getOrNull_2 = getOrNull_0;
   _.$crossModule$.getValue = getValue;
   _.$crossModule$.indexOf = indexOf_0;
-  _.$crossModule$.indexOf_1 = indexOf_5;
-  _.$crossModule$.indexOf_2 = indexOf;
+  _.$crossModule$.indexOf_1 = indexOf;
   _.$crossModule$._get_indices__2241594442 = _get_indices__2241594442_0;
   _.$crossModule$._get_indices__2241594442_1 = _get_indices__2241594442;
   _.$crossModule$.intersect = intersect_0;
@@ -26965,6 +26961,7 @@
   _.$crossModule$.toMutableList = toMutableList_1;
   _.$crossModule$.toMutableSet = toMutableSet_0;
   _.$crossModule$.toMutableSet_1 = toMutableSet;
+  _.$crossModule$.toSet = toSet_0;
   _.$crossModule$.toTypedArray = toTypedArray_0;
   _.$crossModule$.toTypedArray_1 = toTypedArray_1;
   _.$crossModule$.withIndex = withIndex;
@@ -26983,7 +26980,6 @@
   _.$crossModule$.compareTo = compareTo_0;
   _.$crossModule$.equals = equals_1;
   _.$crossModule$.fillArrayVal = fillArrayVal;
-  _.$crossModule$.getNumberHashCode = getNumberHashCode;
   _.$crossModule$.getPropertyCallableRef = getPropertyCallableRef;
   _.$crossModule$.getStringHashCode = getStringHashCode;
   _.$crossModule$.hashCode = hashCode_0;
