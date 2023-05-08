@@ -7,7 +7,10 @@ node_modules
 *.vsix
 .idea
 .vscode
-
+# Yarn
+.yarn/unplugged
+.yarn/build-state.yml
+.pnp.*
 # Logs
 logs
 *.log
