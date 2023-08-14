@@ -19,7 +19,9 @@
   ],
   "workspaces": {
     "packages": [
-      "packages/*"
+      "packages/caos-util",
+      "packages/client",
+      "packages/server"
     ]
   },
   "repository": "https://github.com/bedalton/vs-caos-editor",
