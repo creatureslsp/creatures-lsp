@@ -6,7 +6,6 @@ node_modules
 .vscode-test/
 *.vsix
 .idea
-.vscode
 # Yarn
 .yarn/unplugged
 .yarn/build-state.yml
