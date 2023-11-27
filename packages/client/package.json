@@ -4,6 +4,7 @@
   "description": "An editor for the Creature's CAOS language",
   "version": "0.0.1",
   "main": "./dist/extension.js",
+  "browser": "./dist/extension.js",
   "types": "./dist/extension.d.ts",
   "license": "MIT",
   "engines": {
@@ -35,7 +36,8 @@
     "@types/node": "^17.0.40",
     "@types/vscode": "^1.63.0",
     "@vscode/test-electron": "^2.1.2",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "@vscode/test-web": "^0.0.48"
   },
   "exports": {
     ".": {

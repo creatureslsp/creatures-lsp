@@ -31,15 +31,15 @@ config.references = [];
         return;
     }
 
-    const { stdout, stderr } = await exec('yarn workspaces list -v --json');
+    const { stdout, stderr } = await exec('yarn workspaces info --json');
 
-    const lines = stdout.split('\n')
-    const last = lines.pop();
-    const jsonString = '[' + lines.join(',\n') + '\n' + last + ']';
-    const workspacesTemp = JSON.parse
-    for (const line of lines) {
-        const workspace = JSON.parse(line.trim());
-        const name = workspace.name
+    const lines = stdout.split('\n');
+    lines.shift()
+    lines.pop()
+    lines.pop()
+    const workspacesTemp = JSON.parse(lines.join("\n"))
+    for (const name of Object.keys(workspacesTemp)) {
+        const workspace = workspacesTemp[name];
         const location = path.resolve(process.cwd(), workspace.location);
         const tsconfigPath = path.resolve(location, 'tsconfig.json');
         if (fs.existsSync(tsconfigPath)) {
@@ -52,7 +52,7 @@ config.references = [];
             for (const dependency of workspace.workspaceDependencies) {
                 const dependencyLocation = path.resolve(
                     process.cwd(),
-                    workspaces[dependency].location,
+                    workspacesTemp[dependency].location,
                 );
                 if (
                     fs.existsSync(
