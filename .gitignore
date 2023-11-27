@@ -40,3 +40,6 @@ typings/
 
 # Optional eslint cache
 .eslintcache
+
+.vscode-test-web
+test-project
