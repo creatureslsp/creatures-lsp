@@ -1,6 +1,7 @@
 import {walkParseResult} from "./context-walker";
 import {RequestCancelledException, SemanticToken, SemanticTokensWalker} from "./semantic-highlighter";
-import {CancellationToken, collectors, GameVariant, Nullable} from "./CaosUtil";
+import {GameVariant, Nullable, com} from "./caos-util";
+import collectors = com.bedalton.creatures.caos.collectors;
 import {Range} from "vscode-languageserver-types";
 import {getCommands} from "./commands";
 import ParseResult = collectors.ParseResult;

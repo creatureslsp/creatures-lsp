@@ -1,4 +1,4 @@
-import {Nullable} from "./CaosUtil";
+import {Nullable} from "./caos-util";
 
 
 function tempGet(temp: any, key: string): Nullable<any> {

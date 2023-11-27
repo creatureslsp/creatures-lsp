@@ -1,6 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {Position, Range} from './CaosUtil';
+import {Position, Range} from './caos-util';
 
 /**
  * A text edit applicable to a text document.

@@ -1,6 +1,9 @@
 // noinspection SpellCheckingInspection
 
-import {collectors, CursorData, GameVariant, libs, Nullable, Script} from "./CaosUtil";
+import {CursorData, GameVariant, Nullable, com} from "./caos-util";
+import libs = com.bedalton.creatures.caos.libs;
+import collectors = com.bedalton.creatures.caos.collectors;
+import Script = collectors.Script;
 import {
     CompletionItem,
     CompletionItemKind,
@@ -662,8 +665,8 @@ export function getSubroutinesInDocument(variant: GameVariant, text: string | Pa
     } else {
         scripts = tokens.scripts
     }
-    const line = cursor.lineNumber;
-    const character = cursor.column;
+    const line = cursor.line;
+    const character = cursor.character;
     const scriptTokens = scripts.find(s => inRange(s.textRange, line, character))?.items;
     return getSubroutines(scriptTokens ?? [])
         .map((t: ParserItem<any>) => {

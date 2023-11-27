@@ -3,15 +3,15 @@
 import {formatCaosDocumentation, formatCommandStringAsMarkdown} from "./documentation-formattter";
 import {semanticLegend, SemanticTokenModifiers, SemanticTokensMap, SemanticTokensTypes} from "./semantics-legend";
 import {
-    CancellationToken,
-    collectors,
+    com,
     GameVariant,
     ICaosContextListener,
-    ICommandCall,
-    libs,
     Nullable,
     RangeWithIndex
-} from "./CaosUtil";
+} from "./caos-util";
+import collectors = com.bedalton.creatures.caos.collectors;
+import libs = com.bedalton.creatures.caos.libs;
+import ICommandCall = collectors.CommandCall;
 import {
     AGENT_TYPE_ID,
     ANIMATION_TYPE_ID,
@@ -40,6 +40,7 @@ import {getCommands} from "./commands";
 import {walkParseResult} from "./context-walker";
 import parseCaosWithin = collectors.parseCaosWithin;
 import parseCaos = collectors.parseCaos;
+import {CancellationToken} from "../lib/CaosUtil";
 
 
 /**

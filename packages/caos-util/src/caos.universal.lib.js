@@ -1,4 +1,4 @@
-const universalLibTemp = {
+export const universalLibTemp = {
     "modDate": 1644692798,
     "commands": {
         "722": {

@@ -1,5 +1,6 @@
 import {Definition, LocationLink, Range} from "vscode-languageserver-types";
-import {collectors, GameVariant, RangeWithIndex} from "./CaosUtil";
+import {com, GameVariant, RangeWithIndex} from "./caos-util";
+import collectors = com.bedalton.creatures.caos.collectors;
 import {inRange, toVsRange} from "./position-utils";
 import {getCursorPosition} from "./cursor-data";
 import {repack} from "./repack";

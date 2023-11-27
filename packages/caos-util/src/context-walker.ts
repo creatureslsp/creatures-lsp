@@ -1,6 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {collectors, ICaosContextListener} from "./CaosUtil";
+import {com, ICaosContextListener} from "./caos-util";
+import collectors = com.bedalton.creatures.caos.collectors;
 import {
     BINARY_PARSER_TYPE,
     BRACKET_STRING_PARSER_TYPE,
@@ -56,7 +57,7 @@ export function walkParseResult(result: ParseResult, listener: ICaosContextListe
                 listener.onIndexedVar(<any>item);
                 continue;
             case EQ_OP_PARSER_TYPE:
-                listener.onEqOp(item);
+                listener.onEqOp(<ParserItem.EqOp>item);
                 continue;
             case QUOTE_STRING_PARSER_TYPE:
                 listener.onC2eString(item);
@@ -92,7 +93,7 @@ export function walkParseResult(result: ParseResult, listener: ICaosContextListe
                 listener.onComment(item);
                 continue;
             case CAOS2_COMMENT_TYPE:
-                listener.onCaos2Comment(item);
+                listener.onCaos2Comment(<ParserItem.Caos2Comment>item);
                 continue;
             default:
                 throw Error("Failed to route item " + tok(item.typeToken) + '(' + item.value + ')');

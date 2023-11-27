@@ -2,10 +2,10 @@
 // noinspection JSUnusedGlobalSymbols
 
 import {Hover, Position} from "vscode-languageserver-types";
-import {collectors, GameVariant, Nullable, RangeWithIndex} from "./CaosUtil";
+import {com, GameVariant, Nullable, RangeWithIndex} from "./caos-util";
 import {formatCaosDocumentation} from "./documentation-formattter";
+import collectors = com.bedalton.creatures.caos.collectors;
 import CommandCall = collectors.CommandCall;
-import {repack} from "./repack";
 import {toVsRange} from "./position-utils";
 
 /**

@@ -1,5 +1,7 @@
 /* eslint-disable eqeqeq */
-import {Argument, collectors, CursorData, GameVariant, HasRange, libs, Nullable, RangeWithIndex} from "./CaosUtil";
+import {Argument, com, CursorData, GameVariant, HasRange,Nullable, RangeWithIndex} from "./caos-util";
+import libs = com.bedalton.creatures.caos.libs;
+import collectors = com.bedalton.creatures.caos.collectors;
 import {inRange, sortTextRanges} from "./position-utils";
 import {
     CAOS2_COMMENT_TYPE_ID,
@@ -72,7 +74,7 @@ export function getCursorPosition(
     let inCommand = true;
     const run = (closestCall: CommandCall) => {
         // Get current command calls arguments
-        const commandArguments: Argument[] = closestCall?.arguments ?? [];
+        const commandArguments: collectors.Argument[] = closestCall?.arguments ?? [];
         let argumentIndex = commandArguments.findIndex((a) => {
             if (inRange(a.textRange, lineNumber, column, false, false)) {
                 if (column <= a.textRange.end.character) {
@@ -403,11 +405,11 @@ function getEqualityValuesList(
         return null;
     }
     const variant = parseResult.variant;
-    const valuesListIds: { [variant in GameVariant]?: Nullable<number> } = other.command?.returnValuesListIds ?? {};
-    if (!valuesListIds.hasOwnProperty(variant) && valuesListIds[variant] == null) {
+    const valuesListIds = other.command?.returnValuesListIds ?? {get: () => null };
+    if (!valuesListIds.hasOwnProperty(variant) && valuesListIds.get(variant) == null) {
         return null;
     }
-    const valuesListId = valuesListIds[variant];
+    const valuesListId = valuesListIds.get(variant);
     if (valuesListId == null) {
         return null;
     }
@@ -437,7 +439,7 @@ export function getCursorPositionFromRawText(
 ): Nullable<CursorData> {
     
     const result = parseOnlyNear ?
-        parseCaosNear(variant, text, lineNumber, column, false, false, keepGoing) :
+        parseCaosNear(variant, text, lineNumber, column, false, null, keepGoing) :
         parseCaos(variant, text, keepGoing);//parseCaosNear(variant, text, lineNumber + 1, column + 1);
     
     if (result == null) {

@@ -2,7 +2,7 @@
 // noinspection JSUnusedGlobalSymbols
 /*eslint eqeqeq: ["error", {"null": "never"}] */
 
-import {Nullable, Range, RangeWithIndex} from "./CaosUtil";
+import {Nullable, Range, RangeWithIndex} from "./caos-util";
 
 /**
  * Checks that a text range, contains a

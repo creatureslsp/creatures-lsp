@@ -1,5 +1,7 @@
 import {InlayHint} from "vscode-languageserver-types";
-import {collectors, GameVariant, hints, Nullable} from './CaosUtil';
+import {GameVariant, com, Nullable} from './caos-util';
+import collectors = com.bedalton.creatures.caos.collectors;
+import hints = com.bedalton.creatures.caos.hints;
 import {repack} from "./repack";
 import parseCaos = collectors.parseCaos;
 import ParseResult = collectors.ParseResult;

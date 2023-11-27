@@ -1,9 +1,10 @@
 /* eslint-disable eqeqeq */
 // noinspection JSUnusedGlobalSymbols
 
-import {collectors} from "./CaosUtil";
 import {COMMAND_TOKEN_PARSER_TYPE, tok, TOKEN_PARSER_TYPE} from "./constants";
 import {inRange} from "./position-utils";
+import {com} from "./caos-util";
+import collectors = com.bedalton.creatures.caos.collectors;
 import ParserItem = collectors.ParserItem;
 import ParseResult = collectors.ParseResult;
 

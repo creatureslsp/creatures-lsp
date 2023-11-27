@@ -1,4 +1,5 @@
-import {GameVariant, libs, Nullable} from "./CaosUtil";
+import {GameVariant, com, Nullable} from "./caos-util";
+import libs = com.bedalton.creatures.caos.libs;
 import ICaosParameter = libs.ICaosParameter;
 import getValueTypeName = libs.getValueTypeName;
 import ICaosCommand = libs.ICaosCommand;

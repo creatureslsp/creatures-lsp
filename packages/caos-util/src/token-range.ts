@@ -1,6 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {collectors, Nullable, RangeWithIndex} from "./CaosUtil";
+import {com, Nullable, RangeWithIndex} from "./caos-util";
+import collectors = com.bedalton.creatures.caos.collectors;
 import ParserItem = collectors.ParserItem;
 
 /**

@@ -1,9 +1,9 @@
 /* eslint-disable eqeqeq */
 // noinspection JSUnusedLocalSymbols,GrazieInspection
 
-import {formatter, GameVariant, MessageType} from "./CaosUtil";
+import {GameVariant, com, MessageType, CaosFormatterOptions} from "./caos-util";
+import formatter = com.bedalton.creatures.caos.formatter;
 import {TextEdit} from "vscode-languageserver-types";
-import CaosFormatterOptions = formatter.CaosFormatterOptions;
 
 
 export function format(
