@@ -42,3 +42,5 @@ typings/
 
 .vscode-test-web
 test-project
+.vscode/extensions.json
+.vscode/settings.json
