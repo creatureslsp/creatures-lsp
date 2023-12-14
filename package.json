@@ -25,7 +25,7 @@
     ]
   },
   "repository": "https://github.com/bedalton/vs-caos-editor",
-  "main": "./packages/client/dist/extension.js",
+  "main": "./packages/client/dist/node/extension.js",
   "browser": "./packages/client/dist/web/extension.js",
   "extensionDependencies": [],
   "contributes": {
@@ -43,7 +43,7 @@
       "[caos]": {
         "editor.semanticHighlighting.enabled": true,
         "editor.inlayHints.padding": true,
-        "editor.wordBasedSuggestions": false
+        "editor.wordBasedSuggestions": "matchingDocuments"
       }
     },
     "configuration": {
@@ -344,11 +344,9 @@
     "prepare": "node ./configure-references.js",
     "vscode:prepublish": "lerna run build",
     "build": "lerna run build --stream",
+    "webpack": "lerna run webpack --stream",
     "lint": "lerna run lint --stream --parallel",
     "test": "echo 'no test'",
-    "webpack": "webpack --mode development",
-    "webpack-dev": "webpack --mode development --watch",
-    "package": "webpack --mode production --devtool hidden-source-map",
     "test-compile": "tsc -p ./",
     "open-in-browser": "vscode-test-web --extensionDevelopmentPath=. test-project"
   },
