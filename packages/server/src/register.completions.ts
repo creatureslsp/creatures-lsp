@@ -9,7 +9,7 @@ import {
     NamedVarPrefix
 } from "@bedalton/caos-util/completions";
 import {getNamedVariableKeys, updateRecent, updateRecentCommandsInDocument} from "./completions-cache";
-import {connection} from "./server";
+import {connection} from "./connection.vscode";
 import {com} from "@bedalton/caos-util";
 import ICaosCommand = com.bedalton.creatures.caos.libs.ICaosCommand;
 

@@ -192,11 +192,6 @@ connection.onDidChangeWatchedFiles(_change => {
     // Monitored files that have changed in VS Code
 });
 
-export function showMessage(type: MessageType, message: string): void {
-    // noinspection JSIgnoredPromiseFromCall
-    connection.sendNotification('caos/show-message', [type, message]);
-}
-
 // Make the text document manager listen on the connection
 // for open, change and close text document events
 documents.listen(connection);

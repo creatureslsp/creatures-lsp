@@ -1,5 +1,5 @@
 // The example settings
-import {clientCapabilities, connection} from "./server";
+import {connection} from "./connection.vscode";
 import {GameVariant, com, Nullable} from "@bedalton/caos-util";
 import hints = com.bedalton.creatures.caos.hints;
 import getInlayOptions = hints.getInlayOptions;
