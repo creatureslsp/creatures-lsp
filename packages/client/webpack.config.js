@@ -7,10 +7,10 @@
 'use strict';
 
 //@ts-check
+// noinspection NodeCoreCodingAssistance
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
 
 const path = require('path');
-const webpack = require('webpack');
 const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
 
 /** @type WebpackConfig */

@@ -7,6 +7,7 @@
 'use strict';
 
 //@ts-check
+// noinspection NodeCoreCodingAssistance
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
 
 const path = require('path');
