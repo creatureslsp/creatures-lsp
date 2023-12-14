@@ -68,7 +68,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 
 // this method is called when your extension is deactivated
-export function deactivate(): Thenable<void> {
+export async function deactivate(): Promise<void> {
     const promises: Thenable<void>[] = [];
     if (defaultClient) {
         promises.push(defaultClient.stop());
@@ -77,5 +77,6 @@ export function deactivate(): Thenable<void> {
         promises.push(client.stop());
     }
     // After all clients are stopped, close all disposables
-    return Promise.all(promises).then(closeDisposables);
+    await Promise.all(promises);
+    return closeDisposables();
 }
