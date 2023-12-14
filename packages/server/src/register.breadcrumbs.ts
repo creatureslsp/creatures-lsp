@@ -1,5 +1,5 @@
 import {Disposable} from "vscode-languageserver";
-import {connection} from "./server";
+import {connection} from "./connection.vscode";
 import {DocumentSymbol, DocumentSymbolParams, SymbolInformation} from "vscode-languageserver-protocol";
 import {Nullable, com, DocumentSymbol as IDocSymbol} from "@bedalton/caos-util";
 import hints = com.bedalton.creatures.caos.hints;

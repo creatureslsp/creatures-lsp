@@ -1,4 +1,4 @@
-import {connection} from "./server";
+import {connection} from './connection.vscode';
 import {HandlerResult, SemanticTokens} from "vscode-languageserver";
 import {getDocumentSemanticTokens} from "@bedalton/caos-util/semantic-highlighter";
 import {unpack} from "./server.utils";

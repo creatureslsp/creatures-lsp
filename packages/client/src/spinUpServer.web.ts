@@ -1,8 +1,6 @@
-import {ExtensionContext, TextDocument, Uri, workspace} from "vscode";
+import {ExtensionContext, TextDocument, Uri} from "vscode";
 import {LanguageClient, LanguageClientOptions} from "vscode-languageclient/browser";
-import path from "path";
-import {getOuterMostWorkspaceFolder} from "./workspace-folders";
-import {hasClient, putClient, registerClientDisposable} from "./clients";
+import {registerClientDisposable} from "./clients";
 import {Nullable} from "@bedalton/caos-util";
 
 let defaultClient: Nullable<LanguageClient> = null;
@@ -10,16 +8,22 @@ let defaultClient: Nullable<LanguageClient> = null;
 export function spinUpServer(context: ExtensionContext, document: TextDocument, clientOptions: LanguageClientOptions) {
     
     // Do not start client for non-CAOS files
-    if (document.languageId !== 'caos' || (document.uri.scheme !== 'file' && document.uri.scheme !== 'untitled')) {
+    
+    
+    // Do not start client for non-CAOS files
+    if (document.languageId !== 'caos') {
+        // console.log("File is not CAOS; Language: " + document.languageId + "; Document.URI.Scheme: "  + document.uri.scheme);
         return;
     }
+    console.log("Spinning Up WEBWORKER CAOS Server; Language: " + document.languageId + "; Document.URI.Scheme: "  + document.uri.scheme);
+    
     if (defaultClient) {
         return;
     }
     const clientOptionsWithoutFolder = {
         ...clientOptions,
         documentSelector: [
-            {scheme: 'untitled', language: 'caos'}
+            {scheme: 'file', language: 'caos'}
         ]
     };
     defaultClient = createClient(context, clientOptionsWithoutFolder);
@@ -82,8 +86,13 @@ export function spinUpServer(context: ExtensionContext, document: TextDocument, 
 
 function createClient(context: ExtensionContext, clientOptions: LanguageClientOptions): LanguageClient {
     
+    // Stash caos lib url
+    (<any>self).caosLibUrl = Uri.joinPath(context.extensionUri, 'packages', 'caos-util', 'lib', 'caos.universal.lib.json')
+        .toString(true);
+    
     // Create a worker. The worker main file implements the language server.
-    const serverMain = Uri.joinPath(context.extensionUri, 'server', 'dist', 'server.js');
+    const serverMain: Uri = Uri.joinPath(context.extensionUri, 'packages', 'server', 'dist', 'web', 'server.js');
+    
     const worker = new Worker(serverMain.toString(true));
     
     // create the language server client to communicate with the server running in the worker

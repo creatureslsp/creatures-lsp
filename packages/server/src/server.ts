@@ -1,10 +1,8 @@
 #!/usr/bin/env node
 import {
-    createConnection,
     DidChangeConfigurationNotification,
     InitializeParams,
     InitializeResult,
-    ProposedFeatures,
     TextDocumentSyncKind
 } from 'vscode-languageserver/node';
 import {registerSemanticTokenHighlighter} from "./register.semantic-highlighter";
@@ -20,22 +18,7 @@ import {registerInlayHintsProvider} from "./register.inlay-hints";
 import {registerGotoDefinitionsProvider} from "./register.goto";
 import {registerDocumentSymbolProvider} from "./register.breadcrumbs";
 
-// Create a connection for the server, using Node's IPC as transport.
-// Also include all preview / proposed LSP features.
-export let connection = createConnection(ProposedFeatures.all);
-
-export const clientCapabilities = {
-    hasConfigurationCapability: false,
-    hasWorkspaceFolderCapability: false,
-    hasDiagnosticRelatedInformationCapability: false,
-    hasSemanticTokensCapabilities: false,
-    hasGotoDefinition: false,
-    hasFormatting: false,
-    hasInlayHintsCapabilities: false,
-    hasCompletionCapabilities: false,
-    hasHoverCapabilities: false,
-    hasSymbolsCapabilities: false
-};
+import {connection} from './connection.vscode';
 
 
 connection.onInitialize((params: InitializeParams) => {
@@ -46,6 +29,7 @@ connection.onInitialize((params: InitializeParams) => {
     
     let capabilities = params.capabilities;
     
+    // noinspection JSUnresolvedReference
     const noCompletions = params.initializationOptions?.noCompletions ?? false;
     
     // Does the client support the `workspace/configuration` request?

@@ -8,7 +8,7 @@ import {offsetRange, sortTextRanges} from "@bedalton/caos-util/position-utils";
 import {DiagnosticSeverity} from "vscode-languageserver-types";
 import {TextDocument} from "vscode-languageserver-textdocument";
 import {CAOS_LANGUAGE_ID, CaosSettings, getDocumentSettings} from "./settings";
-import {connection} from "./server";
+import {connection} from "./connection.vscode";
 import {getDocument, getDocuments} from "./documents";
 import {Range} from "vscode-languageserver";
 import ParseResult = collectors.ParseResult;

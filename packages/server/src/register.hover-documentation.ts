@@ -4,7 +4,7 @@ import {getHoverItem} from "@bedalton/caos-util/hover-documentation";
 import {Hover, HoverParams} from "vscode-languageserver";
 import {getDocument} from "./documents";
 import {CAOS_LANGUAGE_ID, getDocumentSettings} from "./settings";
-import {connection} from "./server";
+import {connection} from "./connection.vscode";
 import parseCaosNear = collectors.parseCaosNear;
 
 

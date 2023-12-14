@@ -1,6 +1,6 @@
 import {Nullable} from "@bedalton/caos-util";
 import {Disposable} from "vscode-languageserver";
-import {connection} from "./server";
+import {connection} from "./connection.vscode";
 import {getDocument} from "./documents";
 import {CAOS_LANGUAGE_ID, getDocumentSettings} from "./settings";
 import {getInlayHints} from "@bedalton/caos-util/inlay-hints";

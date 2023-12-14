@@ -3,7 +3,7 @@ import {getDocumentSettings} from "./settings";
 import {getDocument} from "./documents";
 import {DefinitionParams} from "vscode-languageserver";
 import {Definition, LocationLink} from "vscode-languageserver-types";
-import {connection} from "./server";
+import {connection} from "./connection.vscode";
 
 export function registerGotoDefinitionsProvider(init: boolean) {
     if (!init) {

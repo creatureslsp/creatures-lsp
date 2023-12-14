@@ -1,4 +1,4 @@
-import {ExtensionContext, TextDocument, workspace} from "vscode";
+import {ExtensionContext, TextDocument, Uri, workspace} from "vscode";
 import {LanguageClient, LanguageClientOptions, ServerOptions, TransportKind} from "vscode-languageclient/node";
 import path from "path";
 import {getOuterMostWorkspaceFolder} from "./workspace-folders";
@@ -8,15 +8,22 @@ import {hasClient, putClient, registerClientDisposable} from "./clients";
 let _nextListenerId = 0;
 
 export function spinUpServer(context: ExtensionContext, document: TextDocument, defaultClient: LanguageClient, clientOptions: LanguageClientOptions) {
+
+    
+    // Do not start client for non-CAOS files
+    if (document.languageId !== 'caos') {
+        return;
+    }
+    
+    // Stash caos lib url
+    (<any>self).caosLibUrl = Uri.joinPath(context.extensionUri, 'packages', 'caos-util', 'lib', 'caos.universal.lib.json')
+        .toString(true);
+    
+    console.log("Spinning Up NODE CAOS Server; Language: " + document.languageId + "; Document.URI.Scheme: "  + document.uri.scheme);
     // The server is implemented in node
     const serverModule = context.asAbsolutePath(
         path.join('packages', 'server', 'dist', 'server.js')
     );
-    
-    // Do not start client for non-CAOS files
-    if (document.languageId !== 'caos' || (document.uri.scheme !== 'file' && document.uri.scheme !== 'untitled')) {
-        return;
-    }
     
     const uri = document.uri;
     
@@ -29,11 +36,12 @@ export function spinUpServer(context: ExtensionContext, document: TextDocument, 
         const untitledFileClientOptions = {
             ...clientOptions,
             documentSelector: [
-                { scheme: 'untitled', language: 'caos' }
+                { scheme: 'file', language: 'caos' }
             ]
         };
         // If the extension is launched in debug mode then the debug server options are used
         // Otherwise the run options are used
+        // noinspection SpellCheckingInspection
         const debugOptions = { execArgv: ["--nolazy", "--inspect=6010"] };
         const serverOptions: ServerOptions = {
             run: { module: serverModule, transport: TransportKind.ipc },
@@ -70,6 +78,7 @@ export function spinUpServer(context: ExtensionContext, document: TextDocument, 
         
         // If the extension is launched in debug mode then the debug server options are used
         // Otherwise the run options are used
+        // noinspection SpellCheckingInspection
         const debugOptions = { execArgv: ["--nolazy", `--inspect=${6011 + _nextListenerId++}`] };
         
         const serverOptions: ServerOptions = {
