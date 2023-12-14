@@ -1,13 +1,17 @@
 import {CompletionItem, CompletionList, TextDocumentPositionParams} from "vscode-languageserver";
 import {EMPTY_DOCUMENT_URI, getAllDocuments, getDocuments} from "./documents";
 import {CAOS_LANGUAGE_ID, getDocumentSettings} from "./settings";
-import {CompletionSettings, createEmptyCompletionList, getCompletionItems} from "@bedalton/caos-util/completions";
+import {
+    CompletionOptions,
+    CompletionSettings,
+    createEmptyCompletionList,
+    getCompletionItems,
+    NamedVarPrefix
+} from "@bedalton/caos-util/completions";
 import {getNamedVariableKeys, updateRecent, updateRecentCommandsInDocument} from "./completions-cache";
 import {connection} from "./server";
-import {CompletionOptions} from "@bedalton/caos-util/completions";
-import {NamedVarPrefix} from "@bedalton/caos-util/completions";
-import {libs} from "@bedalton/caos-util";
-import ICaosCommand = libs.ICaosCommand;
+import {com} from "@bedalton/caos-util";
+import ICaosCommand = com.bedalton.creatures.caos.libs.ICaosCommand;
 
 // The current attempt id for completion item requests
 const completionAttempts: { [id: string]: number; } = {};
@@ -46,7 +50,7 @@ export async function registerCompletionProvider(init: boolean = true) {
             };
             
             // Get document text
-            const text = await textDocument?.getText()
+            const text = textDocument?.getText()
             
             // Ensure there is enough text
             if (textDocument == null || text == null || text.length < 1) {

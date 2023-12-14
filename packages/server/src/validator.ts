@@ -1,6 +1,7 @@
 /* eslint-disable eqeqeq */
 import {ERROR_TYPE_TYPE_ERROR} from "@bedalton/caos-util/constants";
-import {collectors, GameVariant, Nullable} from "@bedalton/caos-util";
+import {com, GameVariant, Nullable} from "@bedalton/caos-util";
+import collectors = com.bedalton.creatures.caos.collectors;
 import {hasSubroutine} from "@bedalton/caos-util/subroutines";
 import {Diagnostic} from "vscode-languageserver/node";
 import {offsetRange, sortTextRanges} from "@bedalton/caos-util/position-utils";

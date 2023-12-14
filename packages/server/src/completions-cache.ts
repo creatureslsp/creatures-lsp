@@ -1,5 +1,7 @@
 import {getDocumentSettings} from "./settings";
-import {Argument, collectors, libs, Nullable} from "@bedalton/caos-util";
+import {Argument, com, Nullable} from "@bedalton/caos-util";
+import collectors = com.bedalton.creatures.caos.collectors;
+import libs = com.bedalton.creatures.caos.libs;
 import {tok} from "@bedalton/caos-util/constants";
 import parseCaos = collectors.parseCaos;
 import ICaosCommand = libs.ICaosCommand;

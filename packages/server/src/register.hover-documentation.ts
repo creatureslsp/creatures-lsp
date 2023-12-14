@@ -1,4 +1,5 @@
-import {collectors, Nullable} from "@bedalton/caos-util";
+import {com, Nullable} from "@bedalton/caos-util";
+import collectors = com.bedalton.creatures.caos.collectors;
 import {getHoverItem} from "@bedalton/caos-util/hover-documentation";
 import {Hover, HoverParams} from "vscode-languageserver";
 import {getDocument} from "./documents";

@@ -1,18 +1,18 @@
 import {Disposable} from "vscode";
 
 
-const disposables: Disposable[] = [];
+const _disposables: Disposable[] = [];
 
 export function pushDisposable(disposable: Disposable) {
-    disposables.push(disposable)
+    _disposables.push(disposable)
 }
 
 export function getDisposables(): Disposable[] {
-    return [...disposables];
+    return [..._disposables];
 }
 
 function clearDisposables() {
-    disposables.splice(0)
+    _disposables.splice(0)
 }
 
 
@@ -20,7 +20,7 @@ function clearDisposables() {
  * Close all registered disposables
  */
 export function closeDisposables() {
-    for (const disposable of disposables) {
+    for (const disposable of _disposables) {
         disposable.dispose();
     }
     clearDisposables();

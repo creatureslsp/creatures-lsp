@@ -1,9 +1,24 @@
 // The example settings
 import {clientCapabilities, connection} from "./server";
-import {GameVariant, hints, Nullable} from "@bedalton/caos-util";
+import {GameVariant, com, Nullable} from "@bedalton/caos-util";
+import hints = com.bedalton.creatures.caos.hints;
 import getInlayOptions = hints.getInlayOptions;
 import {revalidateAll} from "./validator";
 import {HashUtil} from "@bedalton/caos-util/hash-util";
+
+
+export const clientCapabilities = {
+    hasConfigurationCapability: false,
+    hasWorkspaceFolderCapability: false,
+    hasDiagnosticRelatedInformationCapability: false,
+    hasSemanticTokensCapabilities: false,
+    hasGotoDefinition: false,
+    hasFormatting: false,
+    hasInlayHintsCapabilities: false,
+    hasCompletionCapabilities: false,
+    hasHoverCapabilities: false,
+    hasSymbolsCapabilities: false
+};
 
 const DEFAULT_INDENT_COMMENTS = true;
 

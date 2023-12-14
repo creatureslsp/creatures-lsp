@@ -1,7 +1,8 @@
 import {Disposable} from "vscode-languageserver";
 import {connection} from "./server";
 import {DocumentSymbol, DocumentSymbolParams, SymbolInformation} from "vscode-languageserver-protocol";
-import {hints, Nullable, server} from "@bedalton/caos-util";
+import {Nullable, com, DocumentSymbol as IDocSymbol} from "@bedalton/caos-util";
+import hints = com.bedalton.creatures.caos.hints;
 import {CaosDocument, unpack} from "./server.utils";
 import getDocumentSymbolsFromText = hints.getDocumentSymbolsFromText;
 
@@ -16,7 +17,7 @@ async function getDocumentSymbolsFromParams(handler: DocumentSymbolParams): Prom
     
     const {text, variant} = result;
     const symbols = getDocumentSymbolsFromText(variant, text, false);
-    console.log("Symbols in Server: " + symbols.map((s: server.DocumentSymbol) => s.name).join())
+    console.log("Symbols in Server: " + symbols.map((s: IDocSymbol) => s.name).join())
 }
 
 export function registerDocumentSymbolProvider(use: boolean): Disposable {

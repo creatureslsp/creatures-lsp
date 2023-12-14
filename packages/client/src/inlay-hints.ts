@@ -1,16 +1,21 @@
 import {
     CancellationToken,
     InlayHint,
+    InlayHintKind,
     InlayHintsProvider,
     Position,
     ProviderResult,
     TextDocument,
-    workspace, WorkspaceConfiguration
+    workspace,
+    WorkspaceConfiguration
 } from "vscode"
 import {Range} from "vscode-languageserver";
-import {collectors, GameVariant, hints, Nullable} from '@bedalton/caos-util';
+import {com, GameVariant, Nullable} from '@bedalton/caos-util';
+import parseCaos = com.bedalton.creatures.caos.collectors.parseCaos;
+import hints = com.bedalton.creatures.caos.hints;
 import getInlayOptions = hints.getInlayOptions;
-import parseCaos = collectors.parseCaos;
+import ParseResult = com.bedalton.creatures.caos.collectors.ParseResult;
+import parseCaosWithin = com.bedalton.creatures.caos.collectors.parseCaosWithin;
 
 function getSettings(): WorkspaceConfiguration {
     return workspace.getConfiguration('caosScript');
@@ -20,19 +25,22 @@ export class CaosInlayHintsProvider implements InlayHintsProvider {
     
     provideInlayHints(document: TextDocument, range: Range, token: CancellationToken): ProviderResult<InlayHint[]> {
         const text = document.getText()
-    
+
         if (text.length < 9) {
             return [];
         }
         
         const settings = getSettings();
         const variant: GameVariant = settings.get('variant') ?? 'DS';
-        const hintSettings: { get(key: string): (boolean | undefined); has(key: string): boolean } | undefined = settings;
+        const hintSettings: {
+            get(key: string): (boolean | undefined);
+            has(key: string): boolean
+        } | undefined = settings;
         let disabled: string[];
         if (settings) {
             const inlayOptions = getInlayOptions();
             // Get disabled type hints
-             disabled = inlayOptions
+            disabled = inlayOptions
                 .filter((option) => {
                     return hintSettings?.has(option) == true && hintSettings?.get(option) === false;
                 });
@@ -40,18 +48,41 @@ export class CaosInlayHintsProvider implements InlayHintsProvider {
             disabled = [];
         }
         const minimumParameters: Nullable<number> = settings.get('inlayHints.parameterHints.minimumParameterCountForParameterInlayHints');
-        const parseResult = parseCaos(variant, text)
+        const keepGoing = () => token?.isCancellationRequested != true
+        let parseResult: ParseResult;
+        if (range != null) {
+            parseResult = parseCaosWithin(
+                variant,
+                text,
+                range.start.line,
+                range.start.character,
+                range.end.line,
+                range.end.character,
+                false,
+                null,
+                keepGoing
+            )
+        } else {
+            parseResult = parseCaos(
+                variant,
+                text,
+                keepGoing
+            )
+        }
+        if (parseResult == null) {
+            return [];
+        }
         const raw = hints.getInlayHints(parseResult, disabled, [], minimumParameters);
         return raw.map((hint) => {
             return new InlayHint(
                 new Position(hint.position.line, hint.position.character),
                 <string>hint.label,
-                hint.kind
+                hint.kind ?? InlayHintKind.Parameter
             )
         });
     }
     
-    resolveInlayHint(hint: InlayHint, token: CancellationToken): ProviderResult<InlayHint> {
+    resolveInlayHint(_hint: InlayHint, _token: CancellationToken): ProviderResult<InlayHint> {
         return undefined;
     }
     

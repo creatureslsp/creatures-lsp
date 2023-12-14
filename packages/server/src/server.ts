@@ -11,13 +11,12 @@ import {registerSemanticTokenHighlighter} from "./register.semantic-highlighter"
 import {getSemanticTokensLegend} from "@bedalton/caos-util/semantic-highlighter";
 import {registerFormattingProvider} from "./register.formatter";
 import {getDocuments} from "./documents";
-import {CAOS_LANGUAGE_ID, deleteDocumentSettings, registerSettingsChangeListener} from "./settings";
+import {CAOS_LANGUAGE_ID, clientCapabilities, deleteDocumentSettings, registerSettingsChangeListener} from "./settings";
 import {updateRecentCommandsInDocument} from "./completions-cache";
 import {validateTextDocument} from "./validator";
 import {registerCompletionProvider} from "./register.completions";
 import {registerHoverDocumentationProvider} from "./register.hover-documentation";
 import {registerInlayHintsProvider} from "./register.inlay-hints";
-import {MessageType} from "@bedalton/caos-util";
 import {registerGotoDefinitionsProvider} from "./register.goto";
 import {registerDocumentSymbolProvider} from "./register.breadcrumbs";
 
@@ -40,6 +39,10 @@ export const clientCapabilities = {
 
 
 connection.onInitialize((params: InitializeParams) => {
+    
+    (<any>self).caosLibUrl = (__dirname.endsWith('web') ? '../' : '') + '../../caos-util/lib/caos.universal.lib.json';
+    
+    console.log("Inititializing server");
     
     let capabilities = params.capabilities;
     
@@ -186,7 +189,7 @@ documents.onDidChangeContent(change => {
 
 // Called when file system changed
 connection.onDidChangeWatchedFiles(_change => {
-    // Monitored files have change in VS Code
+    // Monitored files that have changed in VS Code
 });
 
 export function showMessage(type: MessageType, message: string): void {

@@ -2,8 +2,8 @@ import {DocumentFormattingParams, TextEdit} from "vscode-languageserver";
 import {format} from "@bedalton/caos-util/formatter"
 import {connection, showMessage} from "./server";
 import {unpack} from "./server.utils";
-import {formatter} from "@bedalton/caos-util";
-import CaosFormatterOptions = formatter.CaosFormatterOptions;
+import {CaosFormatterOptions} from "@bedalton/caos-util";
+import {showMessage} from "./showMessage";
 
 
 /**

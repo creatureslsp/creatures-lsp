@@ -12,7 +12,7 @@ export function registerSemanticTokenHighlighter(use: boolean) {
         return;
     }
 // ADD semantic highlighting
-    connection.languages.semanticTokens.on((params, token): HandlerResult<SemanticTokens, void> => {
+    connection.languages.semanticTokens.on((params, token: any): HandlerResult<SemanticTokens, void> => {
         return new Promise<SemanticTokens>(async (resolve) => {
             const document = await unpack(params);
             if (document == null) {

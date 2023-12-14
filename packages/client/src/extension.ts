@@ -1,16 +1,13 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
-import * as path from 'path';
 import * as vscode from 'vscode';
-import {Disposable, OutputChannel, TextDocument, Uri, window, workspace, WorkspaceFolder} from 'vscode';
-import {LanguageClient, LanguageClientOptions, ServerOptions, TransportKind} from "vscode-languageclient/node";
+import {OutputChannel, TextDocument, Uri, window, workspace} from 'vscode';
+import {LanguageClient, LanguageClientOptions} from "vscode-languageclient/node";
 import {CaosInlayHintsProvider} from "./inlay-hints";
-import {Nullable} from "@bedalton/caos-util";
 import {CaosSymbolProvider} from "./breadcrumbs";
 import {spinUpServer} from "./spinUpServer.vscode";
 import {closeDisposables, pushDisposable} from "./disposables";
 import {deleteClient, getClient, getClients} from "./clients";
-
 
 let defaultClient: LanguageClient;
 
@@ -18,6 +15,10 @@ let defaultClient: LanguageClient;
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+    
+    (<any>self).caosLibUrl = Uri.joinPath(context.extensionUri, 'packages', 'caos-util', 'lib', 'caos.universal.lib.json')
+        .toString(true);
+    
     const outputChannel: OutputChannel = window.createOutputChannel('caos-language-server');
 
     
