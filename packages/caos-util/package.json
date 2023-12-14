@@ -2,8 +2,8 @@
   "name": "@bedalton/caos-util",
   "version": "0.0.1",
   "description": "Utility methods for parsing and validating CAOS scripts for the Creatures games",
-  "types": "./lib/CaosUtil.d.ts",
-  "main": "lib/CaosUtil.js",
+  "types": "./lib/caos-util.d.ts",
+  "main": "lib/caos-util.js",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -11,7 +11,7 @@
     "url": "https://github.com/bedalton/caos-language-server"
   },
   "exports": {
-    ".": "./lib/CaosUtil.js",
+    ".": "./lib/caos-util.js",
     "./commands": "./lib/commands.js",
     "./completions": "./lib/completions.js",
     "./constants": "./lib/constants.js",
@@ -36,7 +36,7 @@
   "scripts": {
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo && mkdir -p lib",
     "prepack": "yarn build",
-    "build": "yarn clean &&  cp ./src/*.{js,d.ts} ./lib/ && tsc --build",
+    "build": "yarn clean &&  find ./src -type f \\( -iname \\*.js -o -iname \\*.js.map -o -iname \\*.json -o -iname \\*.d.ts \\) -exec cp {} ./lib/ \\; && tsc --build",
     "test": "echo 'no test'",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },

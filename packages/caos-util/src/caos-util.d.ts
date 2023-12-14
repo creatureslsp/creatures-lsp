@@ -295,7 +295,9 @@ export namespace com.bedalton.common.util {
     }
 }
 
-export function setLogger(logger: (p0: string, p1: string) => void): void;
+export function setSingleFunctionLogger(logger: (p0: string, p1: string) => void): void;
+
+export function setLogger(logger: ILoggerObject): void;
 
 export namespace com.bedalton.common.util {
     function unixToDateComponents(unix: number): com.bedalton.common.util.DateComponents;
@@ -399,6 +401,10 @@ export namespace com.bedalton.creatures.caos.collectors {
 
     class EqualityStatement implements Argument {
         constructor(textRange: RangeWithIndex, first: Nullable<Argument>, second: Nullable<Argument>, eqToken: Nullable<com.bedalton.creatures.caos.collectors.ParserItem.EqOp>, containingCommand: Nullable<com.bedalton.creatures.caos.collectors.CommandReference>, parameter: com.bedalton.creatures.caos.libs.ICaosParameter, getTextActual: () => string);
+        
+        lineNumber: number;
+        startIndex: number;
+        endIndex: number;
 
         get textRange(): RangeWithIndex;
         set textRange(value: RangeWithIndex);
@@ -423,34 +429,6 @@ export namespace com.bedalton.creatures.caos.collectors {
         get inEqualityExpression(): boolean;
 
         get parserItem(): Nullable<com.bedalton.creatures.caos.collectors.ParserItem<any /*UnknownType **/>>;
-
-        get parserIndexStart(): Nullable<number>;
-
-        get parserIndexEnd(): Nullable<number>;
-
-        toString(): string;
-
-    }
-
-    class Argument implements Argument {
-        constructor(textRange: RangeWithIndex, parameter: com.bedalton.creatures.caos.libs.ICaosParameter, type: number, text: string, inEqualityExpression: boolean, parserItem: Nullable<com.bedalton.creatures.caos.collectors.ParserItem<any /*UnknownType **/>>, containingCommand: Nullable<com.bedalton.creatures.caos.collectors.CommandReference>);
-
-        get textRange(): RangeWithIndex;
-        set textRange(value: RangeWithIndex);
-
-        get parameter(): com.bedalton.creatures.caos.libs.ICaosParameter;
-
-        get type(): number;
-
-        get text(): string;
-        set text(value: string);
-
-        get inEqualityExpression(): boolean;
-        set inEqualityExpression(value: boolean);
-
-        get parserItem(): Nullable<com.bedalton.creatures.caos.collectors.ParserItem<any /*UnknownType **/>>;
-
-        get containingCommand(): Nullable<com.bedalton.creatures.caos.collectors.CommandReference>;
 
         get parserIndexStart(): Nullable<number>;
 
@@ -1369,6 +1347,50 @@ export namespace com.bedalton.creatures.caos.server {
         static get $serializer(): {} & any/* kotlinx.serialization.internal.GeneratedSerializer<RangeWithIndex> */;
     }
 }
+
+
+/**
+ * A cancellation token is passed to an asynchronous or long running
+ * operation to request cancellation, like cancelling a request
+ * for completion items because the user continued to type.
+ *
+ * To get an instance of a `CancellationToken` use a
+ * {@link CancellationTokenSource}.
+ */
+export interface CancellationToken {
+    
+    /**
+     * Is `true` when the token has been cancelled, `false` otherwise.
+     */
+    isCancellationRequested: boolean;
+    
+    /**
+     * An {@link Event} which fires upon cancellation.
+     */
+    onCancellationRequested: Event;
+}
+
+/**
+ * A cancellation source creates and controls a {@link CancellationToken cancellation token}.
+ */
+export class CancellationTokenSource {
+    
+    /**
+     * The cancellation token of this source.
+     */
+    token: CancellationToken;
+    
+    /**
+     * Signal cancellation on the token.
+     */
+    cancel(): void;
+    
+    /**
+     * Dispose object and free resources.
+     */
+    dispose(): void;
+}
+
 
 export as namespace caos_util;
 

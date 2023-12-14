@@ -40,7 +40,7 @@ import {getCommands} from "./commands";
 import {walkParseResult} from "./context-walker";
 import parseCaosWithin = collectors.parseCaosWithin;
 import parseCaos = collectors.parseCaos;
-import {CancellationToken} from "../lib/CaosUtil";
+import {CancellationToken} from "../lib/caos-util";
 
 
 /**

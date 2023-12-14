@@ -74,7 +74,7 @@ export function getCursorPosition(
     let inCommand = true;
     const run = (closestCall: CommandCall) => {
         // Get current command calls arguments
-        const commandArguments: collectors.Argument[] = closestCall?.arguments ?? [];
+        const commandArguments: Argument[] = closestCall?.arguments ?? [];
         let argumentIndex = commandArguments.findIndex((a) => {
             if (inRange(a.textRange, lineNumber, column, false, false)) {
                 if (column <= a.textRange.end.character) {

@@ -69650,7 +69650,3 @@ export const universalLibTemp = {
         }
     }
 };
-
-module.exports = {
-    universalLibTemp
-}
