@@ -3,8 +3,8 @@ import {connection} from "./connection.vscode";
 import {GameVariant, com, Nullable} from "@bedalton/caos-util";
 import hints = com.bedalton.creatures.caos.hints;
 import getInlayOptions = hints.getInlayOptions;
-import {revalidateAll} from "./validator";
 import {HashUtil} from "@bedalton/caos-util/hash-util";
+
 
 
 export const clientCapabilities = {
@@ -126,21 +126,6 @@ let globalSettings: CaosSettings = defaultSettings;
 let documentSettings: Map<string, Thenable<CaosSettings>> = new Map();
 
 
-export function registerSettingsChangeListener() {
-
-/// Called one configuration/settings change
-/// Invalidates cached settings on change
-    connection.onDidChangeConfiguration(change => {
-        if (clientCapabilities.hasConfigurationCapability) {
-            // Reset all cached document settings
-            documentSettings.clear();
-        } else {
-            globalSettings = <CaosSettings>(change.settings.caosScript || defaultSettings);
-        }
-        revalidateAll();
-    });
-}
-
 /**
  * Get the settings for this resource, or the global default if no setting
  * @param resource
@@ -180,13 +165,25 @@ export function getDocumentSettings(resource: string): Thenable<CaosSettings> {
 }
 
 function getDisabledInlayHints(settings: { [id:string]: any }): string[] {
-    return getInlayOptions()
-        .filter((option) => {
+    const disabledHints = getInlayOptions()
+        .filter((option: any) => {
             const value = HashUtil.get(settings, option) ?? HashUtil.get(settings, 'caosScript.' + option);
             return value === false
         });
+    return disabledHints;
 }
 
-export function deleteDocumentSettings(documentUri: string) {
-    documentSettings.delete(documentUri);
+export function deleteDocumentSettings(documentUri: string): boolean {
+    const didDelete = documentSettings.delete(documentUri);
+    return didDelete
 }
+
+
+export function clearDocumentSettings() {
+    documentSettings.clear();
+}
+
+export function setGlobalSettings(newSettings: Nullable<CaosSettings>) {
+    globalSettings = <CaosSettings>(newSettings || defaultSettings || globalSettings);
+}
+

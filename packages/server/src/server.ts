@@ -9,7 +9,7 @@ import {registerSemanticTokenHighlighter} from "./register.semantic-highlighter"
 import {getSemanticTokensLegend} from "@bedalton/caos-util/semantic-highlighter";
 import {registerFormattingProvider} from "./register.formatter";
 import {getDocuments} from "./documents";
-import {CAOS_LANGUAGE_ID, clientCapabilities, deleteDocumentSettings, registerSettingsChangeListener} from "./settings";
+import {CAOS_LANGUAGE_ID, clientCapabilities, deleteDocumentSettings} from "./settings";
 import {updateRecentCommandsInDocument} from "./completions-cache";
 import {validateTextDocument} from "./validator";
 import {registerCompletionProvider} from "./register.completions";
@@ -17,7 +17,6 @@ import {registerHoverDocumentationProvider} from "./register.hover-documentation
 import {registerInlayHintsProvider} from "./register.inlay-hints";
 import {registerGotoDefinitionsProvider} from "./register.goto";
 import {registerDocumentSymbolProvider} from "./register.breadcrumbs";
-
 import {connection} from './connection.vscode';
 
 
@@ -123,9 +122,8 @@ connection.onInitialize((params: InitializeParams) => {
             }
         };
     }
-    
+
     // Register providers
-    registerSettingsChangeListener();
     registerInlayHintsProvider(clientCapabilities.hasInlayHintsCapabilities);
     registerCompletionProvider(!noCompletions).then(() => undefined);
     registerSemanticTokenHighlighter(clientCapabilities.hasSemanticTokensCapabilities);
@@ -133,20 +131,18 @@ connection.onInitialize((params: InitializeParams) => {
     registerFormattingProvider(clientCapabilities.hasFormatting);
     registerHoverDocumentationProvider(clientCapabilities.hasHoverCapabilities);
     registerDocumentSymbolProvider(clientCapabilities.hasSymbolsCapabilities);
-    return result;
-});
-
-connection.onInitialized(() => {
-    if (clientCapabilities.hasConfigurationCapability) {
-        // Register for all configuration changes.
-        // noinspection JSIgnoredPromiseFromCall
-        connection.client.register(DidChangeConfigurationNotification.type, undefined);
-    }
     if (clientCapabilities.hasWorkspaceFolderCapability) {
         connection.workspace.onDidChangeWorkspaceFolders(_event => {
             // connection.console.log('Workspace folder change event received.');
         });
     }
+    if (clientCapabilities.hasConfigurationCapability) {
+        // Register for all configuration changes.
+        // noinspection JSIgnoredPromiseFromCall
+        // connection.client.register(DidChangeConfigurationNotification.type, undefined);
+        // registerSettingsChangeListener();
+    }
+    return result;
 });
 
 const documents = getDocuments();

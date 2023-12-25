@@ -41,6 +41,6 @@ export async function unpack(reference: UriLike): Promise<Nullable<CaosDocument>
         documentUri,
         text,
         settings,
-        variant: settings.variant ?? 'DS'
+        variant: settings?.variant ?? 'DS'
     };
 }
