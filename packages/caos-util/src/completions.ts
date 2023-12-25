@@ -597,14 +597,21 @@ export function getCompletionItemsWithCursorData(
             getDumbCompletionItems(variant, commands) :
             getCompletions(variant, commands, positionData);
     }
-    
+    const edit = (item: CompletionItem, replacement: string): Nullable<TextEdit> => {
+        return item.textEdit != null ? {
+            range: (<TextEdit>item.textEdit).range,
+            newText: replacement,
+        } : undefined
+    }
     raw = raw.filter(item => item.data?.command?.startsWith('_CD_') !== true);
     
     if (settings?.usePlaceholders !== true) {
         raw = raw.map(item => {
+            const replacement = item.data?.command?.toLowerCase() ?? item.insertText
             const out = <CompletionItem>{
                 ...item,
-                insertText: item.data?.command?.toLowerCase() ?? item.insertText
+                insertText: replacement,
+                textEdit: edit(item, replacement)
             }
             delete out['data'];
             return out;
@@ -629,17 +636,17 @@ export function getCompletionItemsWithCursorData(
             const out = <CompletionItem>{
                 ...item,
                 insertText: replacement,
-                textEdit: item.textEdit != null ? {
-                    range: (<TextEdit>item.textEdit).range,
-                    newText: replacement,
-                } : null
+                textEdit: edit(item, replacement)
             }
             delete out['data'];
             return out;
         });
     } else {
         raw = raw.map(item => {
-            const out = {...item};
+            const out = {
+                ...item,
+                textEdit: edit(item, item.insertText ?? item?.data?.command?.toLowerCase()) ?? undefined
+            };
             delete out['data'];
             return out;
         });

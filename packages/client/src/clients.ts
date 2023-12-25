@@ -30,7 +30,7 @@ export function hasClient(uri: string): boolean {
 
 export function registerClientDisposable(client: LanguageClient) {
     // Register notification listener to allow server to show message in VS Code
-    client.onReady().then(() => {
+    client.start().then(() => {
         pushDisposable(client.onNotification('caos/show-message', (params: string[]) => {
             let [type, message] = params;
             type = type.toLowerCase();

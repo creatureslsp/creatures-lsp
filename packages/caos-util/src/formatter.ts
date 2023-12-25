@@ -40,6 +40,7 @@ export function format(
         if (showMessage) {
             showMessage('error', message);
         }
+        console.error(e instanceof Error ? e.stack : '');
     }
     return []
 }

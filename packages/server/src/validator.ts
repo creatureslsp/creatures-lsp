@@ -56,11 +56,23 @@ async function validateWithConstraints(
     maxNumberOfProblems: number = Number.MAX_VALUE
 ): Promise<Diagnostic[]> {
     const parse = (code: string) => {
-        return new Promise<ParseResult>((resolve) => {
-            return resolve(parseCaos(variant, code));
+        return new Promise<ParseResult>((resolve, reject) => {
+            try {
+                const result = parseCaos(variant, code);
+                return resolve(result);
+            } catch (e) {
+                console.error("Failed to parse caos in validateWithConstraints().. " + JSON.stringify(e));
+                return reject(e)
+            }
         });
     };
-    let errors = await validateParserResult(parse, code, strictSpaces ?? variant === 'C1');
+    
+    let errors: Diagnostic[] = [];
+    try {
+        errors = await validateParserResult(parse, code, strictSpaces ?? variant === 'C1');
+    } catch (e) {
+        console.error("Failed to validate parser result; " + JSON.stringify(e));
+    }
     if (errors.length <= maxNumberOfProblems) {
         return errors;
     }
@@ -84,7 +96,7 @@ async function runDiagnostic(settings: CaosSettings, uri: string, text: string) 
         settings.maxNumberOfProblems
     );
     // Send the computed diagnostics to VS Code.
-    return await connection.sendDiagnostics({uri: uri, diagnostics});
+    await connection.sendDiagnostics({uri: uri, diagnostics});
 }
 
 async function validateParserResult(
@@ -186,3 +198,4 @@ function getSpacingError(last: ParserItem<any>, item: ParserItem<any>): Nullable
         severity: DiagnosticSeverity.Error
     };
 }
+

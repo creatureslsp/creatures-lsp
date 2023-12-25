@@ -1,10 +1,9 @@
 // The example settings
 import {connection} from "./connection.vscode";
-import {GameVariant, com, Nullable} from "@bedalton/caos-util";
+import {com, GameVariant, Nullable} from "@bedalton/caos-util";
+import {HashUtil} from "@bedalton/caos-util/hash-util";
 import hints = com.bedalton.creatures.caos.hints;
 import getInlayOptions = hints.getInlayOptions;
-import {HashUtil} from "@bedalton/caos-util/hash-util";
-
 
 
 export const clientCapabilities = {
@@ -165,17 +164,15 @@ export function getDocumentSettings(resource: string): Thenable<CaosSettings> {
 }
 
 function getDisabledInlayHints(settings: { [id:string]: any }): string[] {
-    const disabledHints = getInlayOptions()
+    return getInlayOptions()
         .filter((option: any) => {
             const value = HashUtil.get(settings, option) ?? HashUtil.get(settings, 'caosScript.' + option);
             return value === false
         });
-    return disabledHints;
 }
 
 export function deleteDocumentSettings(documentUri: string): boolean {
-    const didDelete = documentSettings.delete(documentUri);
-    return didDelete
+    return documentSettings.delete(documentUri)
 }
 
 

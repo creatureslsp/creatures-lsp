@@ -7,17 +7,13 @@ import {hasClient, putClient, registerClientDisposable} from "./clients";
 
 let _nextListenerId = 0;
 
-export function spinUpServer(context: ExtensionContext, document: TextDocument, defaultClient: LanguageClient, clientOptions: LanguageClientOptions) {
+export async function spinUpServer(context: ExtensionContext, document: TextDocument, defaultClient: LanguageClient, clientOptions: LanguageClientOptions) {
 
     
     // Do not start client for non-CAOS files
     if (document.languageId !== 'caos') {
         return;
     }
-    
-    // Stash caos lib url
-    (<any>self).caosLibUrl = Uri.joinPath(context.extensionUri, 'packages', 'caos-util', 'lib', 'caos.universal.lib.json')
-        .toString(true);
     
     console.log("Spinning Up NODE CAOS Server; Language: " + document.languageId + "; Document.URI.Scheme: "  + document.uri.scheme);
     // The server is implemented in node
@@ -97,6 +93,6 @@ export function spinUpServer(context: ExtensionContext, document: TextDocument, 
         // Register notification listener to allow server to show message in VS Code
         registerClientDisposable(client);
         putClient(folderURI, client);
-        client.start();
+        await client.start();
     }
 }

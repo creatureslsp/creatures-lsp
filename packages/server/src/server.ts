@@ -22,25 +22,31 @@ import {connection} from './connection.vscode';
 
 connection.onInitialize((params: InitializeParams) => {
     
-    (<any>self).caosLibUrl = (__dirname.endsWith('web') ? '../' : '') + '../../caos-util/lib/caos.universal.lib.json';
+    const caosLibUrl = (__dirname.endsWith('web') ? '../' : '') + '../../caos-util/lib/caos.universal.lib.json';
+    if (typeof self != 'undefined') {
+        (<any>self).caosLibUrl = caosLibUrl
+    } else if (typeof global == 'object') {
+        // noinspection JSConstantReassignment
+        (<any>global).self = global;
+        (<any>global).self.caosLibUrl = caosLibUrl;
+    }
     
-    console.log("Inititializing server");
     
     let capabilities = params.capabilities;
-    
+
     // noinspection JSUnresolvedReference
     const noCompletions = params.initializationOptions?.noCompletions ?? false;
-    
+
     // Does the client support the `workspace/configuration` request?
     // If not, we fall back using global settings.
     clientCapabilities.hasConfigurationCapability = (
         !!capabilities.workspace && !!capabilities.workspace.configuration
     );
-    
+
     clientCapabilities.hasSemanticTokensCapabilities = (
         !!capabilities.workspace && !!capabilities.workspace.semanticTokens
     );
-    
+
     clientCapabilities.hasWorkspaceFolderCapability = (
         !!capabilities.workspace && !!capabilities.workspace.workspaceFolders
     );
@@ -49,7 +55,7 @@ connection.onInitialize((params: InitializeParams) => {
         !!capabilities.textDocument.publishDiagnostics &&
         !!capabilities.textDocument.publishDiagnostics.relatedInformation
     );
-    
+
     clientCapabilities.hasGotoDefinition = (
         !!capabilities.textDocument &&
             !!capabilities.textDocument.documentLink
@@ -58,31 +64,31 @@ connection.onInitialize((params: InitializeParams) => {
         !!capabilities.textDocument &&
             !!capabilities.textDocument.formatting
     )
-    
+
     clientCapabilities.hasInlayHintsCapabilities = (
         !!capabilities.textDocument &&
             !!capabilities.textDocument.inlayHint
     );
-    
+
     clientCapabilities.hasCompletionCapabilities = (
         !!capabilities.textDocument &&
         !!capabilities.textDocument.completion
     );
-    
+
     clientCapabilities.hasHoverCapabilities = (
         !!capabilities.textDocument &&
         !!capabilities.textDocument.hover
     );
-    
+
     clientCapabilities.hasSymbolsCapabilities = (
         !!capabilities.textDocument &&
             !!capabilities.textDocument.documentSymbol
     );
-    
+
     const result: InitializeResult = {
         capabilities: {
             textDocumentSync: TextDocumentSyncKind.Incremental,
-            
+
             // Register completion if client supports it
             completionProvider: !clientCapabilities.hasCompletionCapabilities || noCompletions ? undefined : {
                 // triggerCharacters: triggerCharacters,
@@ -97,23 +103,23 @@ connection.onInitialize((params: InitializeParams) => {
                 legend: getSemanticTokensLegend(),
                 full: {delta: false},
             } : undefined,
-            
+
             // Server and client allows hover documentation
             hoverProvider: clientCapabilities.hasHoverCapabilities,
-            
+
             // Server and client support inlay hints
             inlayHintProvider: clientCapabilities.hasInlayHintsCapabilities ? {
                 documentSelector: [{language: CAOS_LANGUAGE_ID}]
             } : undefined,
-            
+
             // Server and client support code formatting
             documentFormattingProvider: clientCapabilities.hasFormatting,
-            
+
             // Server and client support GOTO definitions
             definitionProvider: clientCapabilities.hasGotoDefinition
         }
     };
-    
+
     // Register workspace capabilities if client has them too
     if (clientCapabilities.hasWorkspaceFolderCapability) {
         result.capabilities.workspace = {
@@ -145,36 +151,58 @@ connection.onInitialize((params: InitializeParams) => {
     return result;
 });
 
+
 const documents = getDocuments();
 
+try {
 // Only keep settings for open documents
-documents.onDidClose(e  => {
-    deleteDocumentSettings(e.document.uri);
-});
+    documents.onDidClose(e => {
+        deleteDocumentSettings(e.document.uri);
+    });
+} catch(e) {
+    console.error("Failed to set documents.onDidClose(); ", JSON.stringify(e));
+}
 
-// The content of a text document has changed. This event is emitted
+try {
+    // The content of a text document has changed. This event is emitted
 // when the text document first opened or when its content has changed.
-documents.onDidChangeContent(change => {
-    if (change.document.languageId !== CAOS_LANGUAGE_ID) {
-        return;
-    }
-    // noinspection JSIgnoredPromiseFromCall
-    updateRecentCommandsInDocument(change.document.uri, change.document.getText(), true);
-    
-    // noinspection JSIgnoredPromiseFromCall
-    validateTextDocument(change.document);
-});
+    documents.onDidChangeContent(change => {
+        if (change.document.languageId !== CAOS_LANGUAGE_ID) {
+            return;
+        }
+        // noinspection JSIgnoredPromiseFromCall
+        updateRecentCommandsInDocument(change.document.uri, change.document.getText(), true);
+
+        // noinspection JSIgnoredPromiseFromCall
+        validateTextDocument(change.document);
+    });
+} catch(e) {
+    console.error("Failed to set documents.onDidChangeContent); ", JSON.stringify(e));
+}
 
 
-
+try {
 // Called when file system changed
-connection.onDidChangeWatchedFiles(_change => {
-    // Monitored files that have changed in VS Code
-});
+    connection.onDidChangeWatchedFiles(_change => {
+        // Monitored files that have changed in VS Code
+    });
+} catch(e) {
+    console.error("Failed to set connection.onDidChangeWatchedFiles(); ", JSON.stringify(e));
+}
 
+try {
 // Make the text document manager listen on the connection
 // for open, change and close text document events
-documents.listen(connection);
+    documents.listen(connection);
+} catch(e) {
+    console.error("Failed on documents.listen(); ", JSON.stringify(e));
+}
 
+
+try {
 // Listen on the connection
-connection.listen();
+    connection.listen();
+} catch(e) {
+    console.error("Failed on connect.listen(); ", JSON.stringify(e));
+}
+
