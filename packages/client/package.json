@@ -8,7 +8,7 @@
   "types": "./dist/extension.d.ts",
   "license": "MIT",
   "engines": {
-    "vscode": "^1.67.0"
+    "vscode": "^1.72.0"
   },
   "categories": [
     "Programming Languages"
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "@bedalton/caos-util": "*",
-    "vscode-languageclient": "^7.0.0"
+    "vscode-languageclient": "^9.0.1"
   },
   "scripts": {
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
@@ -37,7 +37,7 @@
   ],
   "devDependencies": {
     "@types/node": "^17.0.40",
-    "@types/vscode": "^1.63.0",
+    "@types/vscode": "^1.81.0",
     "@vscode/test-electron": "^2.1.2",
     "rimraf": "^3.0.2",
     "@vscode/test-web": "^0.0.48"

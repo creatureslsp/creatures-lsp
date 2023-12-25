@@ -5,7 +5,7 @@
   "license": "MIT",
   "version": "0.0.1",
   "engines": {
-    "vscode": "^1.67.0"
+    "vscode": "^1.72.0"
   },
   "publisher": "bedalton",
   "icon": "icons/extension-icon.png",
@@ -26,7 +26,6 @@
   },
   "repository": "https://github.com/bedalton/vs-caos-editor",
   "main": "./packages/client/dist/node/extension.js",
-  "browser": "./packages/client/dist/web/extension.js",
   "extensionDependencies": [],
   "contributes": {
     "capabilities": {
@@ -342,13 +341,14 @@
   },
   "scripts": {
     "prepare": "node ./configure-references.js",
-    "vscode:prepublish": "lerna run build",
+    "vscode:prepublish": "lerna run build && lerna run webpack",
     "build": "lerna run build --stream",
     "webpack": "lerna run webpack --stream",
     "lint": "lerna run lint --stream --parallel",
     "test": "echo 'no test'",
     "test-compile": "tsc -p ./",
-    "open-in-browser": "vscode-test-web --extensionDevelopmentPath=. test-project"
+    "open-in-browser": "yarn run vscode:prepublish && vscode-test-web --extensionDevelopmentPath=. test-project",
+    "package": "vsce package"
   },
   "devDependencies": {
     "@types/glob": "^7.2.0",
@@ -356,7 +356,6 @@
     "@types/node": "16.x",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
-    "@vscode/test-electron": "^2.1.3",
     "@vscode/test-web": "^0.0.48",
     "eslint": "^8.16.0",
     "glob": "^8.0.3",
