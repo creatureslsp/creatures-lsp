@@ -26,5 +26,8 @@ export function registerDocumentSymbolProvider(use: boolean): Disposable {
             dispose: () => {}
         }
     }
-    return connection.onDocumentSymbol(getDocumentSymbolsFromParams)
+    
+    const disposable = connection.onDocumentSymbol(getDocumentSymbolsFromParams);
+    return disposable
 }
+

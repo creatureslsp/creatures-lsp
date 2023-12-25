@@ -34,7 +34,8 @@ async function onHoverCallback(e: HoverParams): Promise<Nullable<Hover>> {
     if (commandCalls.length < 1) {
         return EMPTY_HOVER;
     }
-    return getHoverItem(settings.variant, e.position, commandCalls);
+    const hoverItem = getHoverItem(settings.variant, e.position, commandCalls);
+    return hoverItem
 }
 
 /**
@@ -44,5 +45,7 @@ export function registerHoverDocumentationProvider(use: boolean) {
     if (!use) {
         return;
     }
-    connection.onHover(onHoverCallback);
+    const disposable = connection.onHover(onHoverCallback);
+    return disposable
 }
+

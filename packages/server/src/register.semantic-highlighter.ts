@@ -3,6 +3,7 @@ import {HandlerResult, SemanticTokens} from "vscode-languageserver";
 import {getDocumentSemanticTokens} from "@bedalton/caos-util/semantic-highlighter";
 import {unpack} from "./server.utils";
 
+
 /**
  * Initialize semantic token highlighter if needed
  * @param use
@@ -12,7 +13,7 @@ export function registerSemanticTokenHighlighter(use: boolean) {
         return;
     }
 // ADD semantic highlighting
-    connection.languages.semanticTokens.on((params, token: any): HandlerResult<SemanticTokens, void> => {
+    const disposable = connection.languages.semanticTokens.on((params, token: any): HandlerResult<SemanticTokens, void> => {
         return new Promise<SemanticTokens>(async (resolve) => {
             const document = await unpack(params);
             if (document == null) {
@@ -22,7 +23,10 @@ export function registerSemanticTokenHighlighter(use: boolean) {
                 return;
             }
             const {variant, text} = document;
-            return resolve(getDocumentSemanticTokens(variant, text, token));
+            const semanticTokens = getDocumentSemanticTokens(variant, text, token);
+            return resolve(semanticTokens);
         });
     });
+    return disposable;
 }
+

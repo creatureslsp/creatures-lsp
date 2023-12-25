@@ -45,5 +45,8 @@ export function registerFormattingProvider(init: boolean) {
     if (!init) {
         return
     }
-    connection.onDocumentFormatting(onFormatCallback);
+    
+    const disposable = connection.onDocumentFormatting(onFormatCallback);
+    return disposable
 }
+

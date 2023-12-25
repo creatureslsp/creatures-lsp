@@ -13,7 +13,7 @@ export function registerInlayHintsProvider(canUse: boolean): Nullable<Disposable
     if (!canUse) {
         return null;
     }
-    return connection.languages.inlayHint.on(async (e) => {
+    const disposable = connection.languages.inlayHint.on(async (e) => {
         const documentUri = e.textDocument.uri;
         const document = getDocument(documentUri);
         if (document == null || document.languageId !== CAOS_LANGUAGE_ID) {
@@ -25,6 +25,8 @@ export function registerInlayHintsProvider(canUse: boolean): Nullable<Disposable
         }
         const settings = await getDocumentSettings(documentUri);
         const variant = settings.variant ?? 'DS';
-        return getInlayHints(variant, text, settings.disabledInlayHints ?? []);
+        const inlayHint = getInlayHints(variant, text, settings.disabledInlayHints ?? []);
+        return inlayHint;
     });
+    return disposable;
 }

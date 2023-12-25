@@ -5,12 +5,12 @@ import {DefinitionParams} from "vscode-languageserver";
 import {Definition, LocationLink} from "vscode-languageserver-types";
 import {connection} from "./connection.vscode";
 
+
 export function registerGotoDefinitionsProvider(init: boolean) {
     if (!init) {
         return;
     }
-    connection.onDefinition(async (params: DefinitionParams): Promise<Definition | LocationLink[] | undefined | null> => {
-        
+    const disposable = connection.onDefinition(async (params: DefinitionParams): Promise<Definition | LocationLink[] | undefined | null> => {
         const uri = params.textDocument.uri;
         const document = getDocument(uri);
         const text = document?.getText();
@@ -20,12 +20,15 @@ export function registerGotoDefinitionsProvider(init: boolean) {
         }
         const variant = (await getDocumentSettings(uri))?.variant ?? 'DS';
         const {line, character} = params.position;
-        return getGotoInformation(
+        const gotoInformation = getGotoInformation(
             uri,
             variant,
             text,
             line,
             character
         );
+        return gotoInformation;
     });
+    return disposable
 }
+

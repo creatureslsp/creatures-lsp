@@ -13,6 +13,7 @@ import {connection} from "./connection.vscode";
 import {com} from "@bedalton/caos-util";
 import ICaosCommand = com.bedalton.creatures.caos.libs.ICaosCommand;
 
+
 // The current attempt id for completion item requests
 const completionAttempts: { [id: string]: number; } = {};
 
@@ -24,6 +25,8 @@ export async function registerCompletionProvider(init: boolean = true) {
     if (!init) {
         return;
     }
+    
+    
     
     
     for (const document of getAllDocuments()) {
@@ -73,17 +76,20 @@ export async function registerCompletionProvider(init: boolean = true) {
                 incomplete: true,
                 getNamedVariableKeys: (prefix: NamedVarPrefix) => getNamedVariableKeys(null, prefix)
             }
-            resolve(getCompletionItems(
+            const completionItems = getCompletionItems(
                 variant,
                 text,
                 params.position,
                 completionSettings,
                 options
-            ));
+            );
+            
+            resolve(completionItems);
         });
     });
-
-
+    
+    
+    
 // This handler resolves additional information for the item selected in
 // the completion list.
     connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
@@ -97,3 +103,5 @@ export async function registerCompletionProvider(init: boolean = true) {
         return item;
     });
 }
+
+
