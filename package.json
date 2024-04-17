@@ -35,7 +35,9 @@
       {
         "command": "caos.setVariant",
         "title": "Set CAOS Variant",
-        "category": "CAOS"
+        "category": "CAOS",
+        "when": "editorLangId == caos",
+        "enablement": "editorLangId == caos"
       }
     ],
     "configurationDefaults": {
