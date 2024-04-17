@@ -8,11 +8,13 @@ import {CaosSymbolProvider} from "./breadcrumbs";
 import {spinUpServer} from "./spinUpServer.vscode";
 import {closeDisposables, pushDisposable} from "./disposables";
 import {deleteClient, getClient, getClients} from "./clients";
+import {registerCommands} from "./commands/register-commands";
 
 let defaultClient: LanguageClient;
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
+// noinspection JSUnusedGlobalSymbols
 export function activate(context: vscode.ExtensionContext) {
     
     const outputChannel: OutputChannel = window.createOutputChannel('caos-language-server');
@@ -56,12 +58,13 @@ export function activate(context: vscode.ExtensionContext) {
             }
         }
     }));
-    pushDisposable(vscode.commands.registerCommand('caos.setVariant', async () => {
-        vscode.commands.executeCommand('workbench.action.openSettings', 'caosScript.variant')
-    }));
+    
+    registerCommands()
+    
     pushDisposable(vscode.languages.registerInlayHintsProvider({language: 'caos'}, new CaosInlayHintsProvider()));
     
     pushDisposable(vscode.languages.registerDocumentSymbolProvider({language: 'caos'}, new CaosSymbolProvider()));
+    
     
 }
 

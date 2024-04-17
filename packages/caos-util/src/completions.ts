@@ -1,9 +1,6 @@
 // noinspection SpellCheckingInspection
 
-import {CursorData, GameVariant, Nullable, com} from "./caos-util";
-import libs = com.bedalton.creatures.caos.libs;
-import collectors = com.bedalton.creatures.caos.collectors;
-import Script = collectors.Script;
+import {com, CursorData, GameVariant, Nullable} from "./caos-util";
 import {
     CompletionItem,
     CompletionItemKind,
@@ -20,6 +17,9 @@ import {getSubroutines} from "./subroutines";
 import {inRange} from "./position-utils";
 import {isSimilarType} from "./is-similar";
 import {getCommands} from "./commands";
+import libs = com.bedalton.creatures.caos.libs;
+import collectors = com.bedalton.creatures.caos.collectors;
+import Script = collectors.Script;
 import ICaosCommand = libs.ICaosCommand;
 import ICaosParameter = libs.ICaosParameter;
 import getValueTypeName = libs.getValueTypeName;
@@ -327,7 +327,7 @@ function getCommandCompletions(
     }
     
     return  (returnType == ANY_TYPE_ID || returnType == UNKNOWN_TYPE_ID) ? out : out.map(item => {
-        const prefix = isSimilarType((<ICaosCommand>item.data)?.returnTypeId, returnType) ? '0_' : '1_';
+        const prefix = isSimilarType((<ICaosCommand>item.data)?.returnTypeId, returnType) ? 'a_' : 'b_';
         return {
             ...item,
             sortText: prefix + item.sortText
@@ -352,7 +352,7 @@ function addVariablesOfType(
             kind: CompletionItemKind.Variable,
             insertText: text,
             documentation: description,
-            sortText: priority + "_" + i + text,
+            sortText: "x_" + priority + "_" + i + text,
             filterText: text,
             data: {
                 ...repack(command),
@@ -529,7 +529,7 @@ function commandToCompletionItem(command: ICaosCommand, sortPrefix: Nullable<str
     let replacementText = commandLower;
     let preselect = false;
     if (sortPrefix == null || sortPrefix.length < 2) {
-        sortPrefix = '' + (1000 << 16) + '_';
+        sortPrefix = (1000 << 16) + '_';
     }
     let type = command.returnTypeName;
     if (!type.startsWith('[')) {
@@ -552,13 +552,14 @@ function commandToCompletionItem(command: ICaosCommand, sortPrefix: Nullable<str
 
 /**
  * Get completions within a CAOS2Pray statement
- * @param allComments
+ * @param _allComments
  * @param item
  * @param line
  * @param character
  */
-export function getCaos2PrayCompletions(allComments: Caos2Comment[], item: Caos2Comment, line: number, character: number): CompletionItem[] {
+export function getCaos2PrayCompletions(_allComments: Caos2Comment[], item: Caos2Comment, line: number, character: number): CompletionItem[] {
     console.log("In caos 2 comment; Text: " + item.text+"; MoreSpecific: ");
+    // noinspection JSUnusedLocalSymbols
     const cursor = getClosestItem(item.values, line, character, true)?.closest;
     // TODO: Actually implement completions for CAOS2Pray comments
     return [];
@@ -871,6 +872,12 @@ export function getCompletionItems(
             items = items.concat(namedVariableCompletions);
         }
         
+        const bitflagsCompletions = getBitflagsOptionsProvider(cursor);
+        
+        if (bitflagsCompletions) {
+            items = bitflagsCompletions;
+        }
+        
         return <CompletionList>{
             isIncomplete: true,
             items: items
@@ -886,11 +893,61 @@ export function getCompletionItems(
 }
 
 
+function getBitflagsOptionsProvider(data: CursorData): Nullable<CompletionItem[]> {
+    const parameter = data.closestParameter
+    const valuesListId = parameter?.valuesListId
+    if (valuesListId == null) {
+        return null;
+    }
+    const valuesList = libs.getValuesList(valuesListId)
+    if (valuesList === null || valuesList?.bitflag !== true) {
+        console.log("Not a bitflags list");
+        return null;
+    } else {
+        console.log("Is a bitflags list; " + valuesList.name);
+    }
+    
+    const closestItemRange = data.closestItem?.textRange;
+    let start = {
+        line: closestItemRange?.start?.line ?? data.line,
+        character: closestItemRange?.start?.character ?? data.character
+    };
+    
+    let end = {
+        line: closestItemRange?.end?.line ?? data.line,
+        character: closestItemRange?.end?.character ?? data.character
+    };
+    const range: Range = {start, end};
+    
+    const command = {
+        command: "caos.generateBitflagValue",
+        title: "Generate Bitflag Value for " + valuesList.name,
+        arguments: [valuesList, range],
+    };
+    const main: CompletionItem = {
+        label: command.title,
+        sortText: "0_ bit flag",
+        insertText: "",
+        textEdit: {
+            range: range,
+            newText: ""
+        },
+        command: command
+    } satisfies CompletionItem;
+    
+    const out = [main];
+    for (const item of valuesList.values) {
+        const completionItem = getValuesListValueCompletionItem(item);
+        completionItem.sortText = "1_" + completionItem.sortText;
+        out.push(completionItem);
+    }
+    return out;
+}
+
 function getOriginalText(text: string | ParseResult | unknown | null | undefined): Nullable<string> {
     if (text == null) {
         return null;
     }
-    let rawText: string;
     if (typeof text === 'string') {
         return text
     } else if (text instanceof ParseResult) {
