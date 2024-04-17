@@ -26,9 +26,6 @@ export async function registerCompletionProvider(init: boolean = true) {
         return;
     }
     
-    
-    
-    
     for (const document of getAllDocuments()) {
         const text = document.getText();
         const uri = document.uri;
