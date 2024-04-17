@@ -421,19 +421,7 @@ function getRvalueCompletions(
         [];
     let valuesListValuesCompletions: CompletionItem[] = [];
     if (valuesListValues.length > 0) {
-        valuesListValuesCompletions = valuesListValues.map(function (value) {
-            return <CompletionItem>{
-                label: value.name.toLowerCase(),
-                filterText: inflect(value.name.toLowerCase()
-                    .trim()),
-                insertTextMode: InsertTextMode.asIs,
-                kind: CompletionItemKind.Value,
-                insertText: value.value,
-                insertTextRules: InsertTextFormat.PlainText,
-                documentation: value.description ?? undefined,
-                sortText: '__' + value.name.toLowerCase()
-            }
-        });
+        valuesListValuesCompletions = valuesListValues.map(getValuesListValueCompletionItem);
     }
     let commandCompletions: CompletionItem[] = getCommandCompletions(
         variant,
@@ -447,6 +435,21 @@ function getRvalueCompletions(
         ? getIndexedVariableCompletions(variant, commands.rvalues)
         : [];
     return [...valuesListValuesCompletions, ...commandCompletions, ...variableCompletions];
+}
+
+
+function getValuesListValueCompletionItem(value: ValuesListValue): CompletionItem {
+   return <CompletionItem>{
+       label: value.name.toLowerCase(),
+       filterText: inflect(value.name.toLowerCase()
+           .trim()),
+       insertTextMode: InsertTextMode.asIs,
+       kind: CompletionItemKind.Value,
+       insertText: value.value,
+       insertTextRules: InsertTextFormat.PlainText,
+       documentation: value.description ?? undefined,
+       sortText: '1__' + value.name.toLowerCase()
+   }
 }
 
 /**
