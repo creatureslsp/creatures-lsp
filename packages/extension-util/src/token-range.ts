@@ -1,14 +1,12 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {com, Nullable, RangeWithIndex} from "./caos-util";
-import collectors = com.bedalton.creatures.caos.collectors;
-import ParserItem = collectors.ParserItem;
+import {ParseTreeItem, Nullable, RangeWithIndex} from "./types";
 
 /**
  * Gets the extents of text ranges from parser items. Returns null if no parser items
  * @param items
  */
-export function getTokenRange(items: ParserItem<any>[]): Nullable<RangeWithIndex> {
+export function getTokenRange(items: ParseTreeItem<any>[]): Nullable<RangeWithIndex> {
     if (items.length === 0) {
         return null;
     }

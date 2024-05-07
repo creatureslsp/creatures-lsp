@@ -2,7 +2,7 @@
 // noinspection JSUnusedGlobalSymbols
 /*eslint eqeqeq: ["error", {"null": "never"}] */
 
-import {Nullable, Range, RangeWithIndex} from "./caos-util";
+import {Nullable, Range, RangeWithIndex} from "./types"
 
 /**
  * Checks that a text range, contains a
@@ -20,23 +20,18 @@ export function inRange(range: Nullable<Range>, lineNumber: number, column: numb
         if (ignoreColumn) {
             return true;
         }
-        if (range.start.line !== range.end.line) {
-            return true;
-        }
+        const endInRange = range.end.line != lineNumber || range.end.character >= column;
         if (soft) {
-            return range.start.character - 2 <= column;
+            return range.start.character - 1 <= column && endInRange
         } else {
-            return range.start.character <= column;
+            return range.start.character <= column && endInRange;
         }
     } else if (range.end.line === lineNumber) {
         if (ignoreColumn) {
             return true;
         }
-        if (range.start.line !== range.end.line) {
-            return true;
-        }
         if (soft) {
-            return range.end.character + 2 >= column;
+            return range.end.character + 1 >= column;
         } else {
             return range.end.character >= column;
         }
@@ -83,7 +78,7 @@ export function sortTextRanges(a: Range, b: Range) {
 export function offsetRange(textRange: RangeWithIndex, lineMod: number = 0, charMod: number = 0, expandEnd: number = 0): RangeWithIndex {
     return <RangeWithIndex>{
         start: {
-            line: textRange.start.line+ lineMod,
+            line: textRange.start.line + lineMod,
             character: textRange.start.character + charMod,
         },
         end: {
@@ -97,7 +92,7 @@ export function offsetRange(textRange: RangeWithIndex, lineMod: number = 0, char
 }
 
 export function toVsRange(textRange: RangeWithIndex, expandEnd?: boolean): Range {
-    return <Range> {
+    return <Range>{
         start: {
             line: textRange.start.line,
             character: textRange.start.character
@@ -106,5 +101,31 @@ export function toVsRange(textRange: RangeWithIndex, expandEnd?: boolean): Range
             line: textRange.end.line,
             character: textRange.end.character + (expandEnd === true ? 1 : 0)
         }
+    }
+}
+
+export function rangesIntersect(range1: Range, range2: Range): boolean {
+    const {line: r1StartLine, character: r1StartChar} = range1.start
+    const {line: r1EndLine, character: r1EndChar} = range1.end
+    
+    const {line: r2StartLine, character: r2StartChar} = range2.start
+    const {line: r2EndLine, character: r2EndChar} = range2.end
+    
+    if (r1StartLine == r2StartLine) {
+        if (r1EndLine == r2EndLine) {
+            return (r1StartChar <= r2StartChar && r1EndChar >= r2StartChar) || (r1StartChar <= r2EndChar && r1EndChar >= r2EndChar);
+        } else {
+            return true;
+        }
+    } else if (r1StartLine < r2StartLine) {
+        if (r1EndLine === r2EndLine) {
+            return (r1EndChar >= r2EndChar);
+        }
+        return r1EndLine > r2EndLine;
+    } else /* if (r2StartLine < r1StartLine) */ {
+        if (r2EndLine == r1EndLine) {
+            return (r2EndChar >= r1EndChar);
+        }
+        return r2EndLine > r1EndLine;
     }
 }

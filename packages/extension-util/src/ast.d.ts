@@ -1,0 +1,1 @@
+/Users/daniel/Projects/Games/Creatures/KotlinLibs/Common/common-ast/src/jsMain/resources/ast.d.ts
