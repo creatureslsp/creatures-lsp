@@ -1,7 +1,6 @@
-import {com} from "@bedalton/caos-util";
+import {CaosValuesList} from "@bedalton/caos-util";
 import * as vscode from "vscode";
 import {Range} from "vscode-languageserver";
-import CaosValuesList = com.bedalton.creatures.caos.libs.CaosValuesList;
 
 export function registerGenerateBitflagsCompletionCommand() {
     vscode.commands.registerCommand("caos.generateBitflagValue", generate);
@@ -54,7 +53,7 @@ async function generate(valuesList: CaosValuesList, range: Range) {
         range.start.line,
         range.start.character,
         range.end.line,
-        range.end.line
+        range.end.character
     );
     
     activeEditor.edit(builder => {
