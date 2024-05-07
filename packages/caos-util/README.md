@@ -120,7 +120,7 @@ declare class ParseResult {
      * This includes things like Int or string value objects
      * Command tokens are returned as individual tokens with no association between them
      */
-    get items(): Array<collectors.ParserItem<any>>;
+    get items(): Array<collectors.IParserItem<any>>;
     
     /**
      * List of Error value objects found while parsing
@@ -141,17 +141,17 @@ declare class ParseResult {
     /**
      * List of comments found inside the parsed CAOS file
      */
-    get comments(): collectors.ParserItem<any>[];
+    get comments(): collectors.IParserItem<any>[];
     
     /**
      * List of CAOS2Pray comments found while parsing
      */
-    get caos2Comments(): collectors.ParserItem<any>[];
+    get caos2Comments(): collectors.IParserItem<any>[];
     
     /**
      * Array of parser items that could not be associated with any commands
      */
-    get looseTokens(): collectors.ParserItem<any>[];
+    get looseTokens(): collectors.IParserItem<any>[];
     
     /**
      * List of equality statements found within the CAOS file.
@@ -219,7 +219,7 @@ declare class CommandCall implements Argument {
     /**
      * Its root parser item
      */
-    get parserItem(): Nullable<collectors.ParserItem<any>>;
+    get parserItem(): Nullable<collectors.IParserItem<any>>;
     
     /**
      * Its actual text in the file
@@ -258,7 +258,7 @@ interface Argument extends TextWithRange {
     /**
      * Its root parser item
      */
-    get parserItem(): Nullable<collectors.ParserItem<any>>;
+    get parserItem(): Nullable<collectors.IParserItem<any>>;
     
     /**
      * Its actual text in the file
@@ -479,7 +479,7 @@ declare class ValuesListValue {
 ```
 
 ---------
-**collectors.ParserItem<any>**
+**collectors.IParserItem<any>**
 The smallest unit in a parsed CAOS file is the ParserItem. 
 These units would represent things like the number `110` or the string `"hello"` of a CAOS file
 
@@ -488,7 +488,7 @@ These units would represent things like the number `110` or the string `"hello"`
  * The smallest unit in a Parsed CAOS file
  * These items **do not** serialize to JSON
  */
-declare abstract class ParserItem<T>{
+declare abstract class IParserItem<T>{
     protected constructor();
     
     /**
@@ -521,26 +521,26 @@ declare abstract class ParserItem<T>{
     abstract equals(other: any): boolean;
 }
 declare namespace ParserItem {
-        class FloatVal extends collectors.ParserItem<number> {}
-        class IntVal extends collectors.ParserItem<number> {}
-        class CharVal extends collectors.ParserItem<number> {}
-        class BinaryVal extends collectors.ParserItem<number> {}
+        class FloatVal extends collectors.IParserItem<number> {}
+        class IntVal extends collectors.IParserItem<number> {}
+        class CharVal extends collectors.IParserItem<number> {}
+        class BinaryVal extends collectors.IParserItem<number> {}
         
-        class ByteString extends collectors.ParserItem<string> {}
+        class ByteString extends collectors.IParserItem<string> {}
         
-        class C2eStringVal extends collectors.ParserItem<string> {}
+        class C2eStringVal extends collectors.IParserItem<string> {}
         
-        class C1eStringVal extends collectors.ParserItem<string> {}
+        class C1eStringVal extends collectors.IParserItem<string> {}
         
-        class TokenVal extends collectors.ParserItem<string> {}        
-        class EqJoin extends collectors.ParserItem<string> {}        
+        class TokenVal extends collectors.IParserItem<string> {}        
+        class EqJoin extends collectors.IParserItem<string> {}        
     
     
-        class EqOp extends collectors.ParserItem<string> {}
+        class EqOp extends collectors.IParserItem<string> {}
         
-        class DdePictVal extends collectors.ParserItem<Pair<number, number>>{}
+        class DdePictVal extends collectors.IParserItem<Pair<number, number>>{}
             
-        class ErrorVal extends collectors.ParserItem<string> {
+        class ErrorVal extends collectors.IParserItem<string> {
             /**
              * The error message for this error
              */
@@ -551,7 +551,7 @@ declare namespace ParserItem {
             readonly type: number
         }
         
-        class IndexedVar extends collectors.ParserItem<string> {
+        class IndexedVar extends collectors.IParserItem<string> {
             /**
              * The type of this var VAxx, OBVx, MVxx, etc
              */
@@ -562,16 +562,16 @@ declare namespace ParserItem {
             readonly index: number;
         }
         
-        class CommandToken extends collectors.ParserItem<string> {
+        class CommandToken extends collectors.IParserItem<string> {
             /**
              * This command word as an integer token
              */
             readonly token: number;
         }
         
-        class Comment extends collectors.ParserItem<string> {}
+        class Comment extends collectors.IParserItem<string> {}
         
-        class Caos2Comment extends collectors.ParserItem<string> {
+        class Caos2Comment extends collectors.IParserItem<string> {
     
             /**
              * Whether this CAOS2Pray comment is a tag
