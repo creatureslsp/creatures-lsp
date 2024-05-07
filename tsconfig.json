@@ -10,19 +10,11 @@
             ],
             "@bedalton/caos-language-server/*": [
                 "./server/src/*"
+            ],
+            "@bedalton/extension-util/*": [
+                "./extension-util/src/*"
             ]
         }
     },
-    "files": [],
-    "references": [
-        {
-            "path": "packages/caos-util"
-        },
-        {
-            "path": "packages/client"
-        },
-        {
-            "path": "packages/server"
-        }
-    ]
+    "references": []
 }

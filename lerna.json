@@ -2,7 +2,8 @@
   "packages": [
     "packages/caos-util",
     "packages/client",
-    "packages/server"
+    "packages/server",
+    "packages/extension-util"
   ],
   "npmClient": "yarn",
   "useWorkspaces": true,

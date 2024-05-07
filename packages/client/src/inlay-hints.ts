@@ -63,7 +63,7 @@ export class CaosInlayHintsProvider implements InlayHintsProvider {
                 keepGoing
             )
         } else {
-            parseResult = parseCaos(
+            parseResult = collectors.parseCaos(
                 variant,
                 text,
                 keepGoing

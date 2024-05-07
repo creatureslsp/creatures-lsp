@@ -19,16 +19,13 @@
     "./cursor-data": "./lib/cursor-data.js",
     "./formatter": "./lib/formatter.js",
     "./goto": "./lib/goto.js",
-    "./hash-util": "./lib/hash-util.js",
     "./hover-documentation": "./lib/hover-documentation.js",
     "./inlay-hints": "./lib/inlay-hints.js",
     "./is-similar": "./lib/is-similar.js",
-    "./position-utils": "./lib/position-utils.js",
-    "./repack": "./lib/repack.js",
     "./semantic-highlighter": "./lib/semantic-highlighter.js",
-    "./server": "./src/server.d.ts",
     "./subroutines": "./lib/subroutines.js",
-    "./token-range": "./lib/token-range.js"
+    "./is": "./lib/is-util.js",
+    "./check-module": "./lib/check-module.js"
   },
   "files": [
     "lib"
@@ -36,7 +33,9 @@
   "scripts": {
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo && mkdir -p lib",
     "prepack": "yarn build",
-    "build": "yarn clean &&  find ./src -type f \\( -iname \\*.js -o -iname \\*.js.map -o -iname \\*.json -o -iname \\*.d.ts \\) -exec cp {} ./lib/ \\; && tsc --build",
+    "prependLibImport": "echo \"const { universalLibTemp } = require(\\\"./caos.universal.lib.js\\\");\" > ./lib/temp.js && cat ./src/caos-util.js >> ./lib/temp.js && rm ./lib/caos-util.js && mv ./lib/temp.js ./lib/caos-util.js",
+    "build": "yarn clean &&  find ./src \\( -iname \\*.js -o -iname \\*.js.map -o -iname \\*.json -o -iname \\*.d.ts \\) -exec cp {} ./lib/ \\; && tsc --build && yarn prependLibImport",
+    "webpack": "yarn run build",
     "test": "echo 'no test'",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
@@ -66,9 +65,6 @@
       "./goto": [
         "./lib/goto.d.ts"
       ],
-      "./hash-util": [
-        "./lib/hash-util.d.ts"
-      ],
       "./hover-documentation": [
         "./lib/hover-documentation.d.ts"
       ],
@@ -78,25 +74,19 @@
       "./is-similar": [
         "./lib/is-similar.d.ts"
       ],
-      "./position-utils": [
-        "./lib/position-utils.d.ts"
-      ],
-      "./repack": [
-        "./lib/repack.d.ts"
+      "./log": [
+        "./libs/logs.d.ts"
       ],
       "./semantic-highlighter": [
         "./lib/semantic-highlighter.d.ts"
       ],
-      "./server": [
-        "./src/server.d.ts"
-      ],
       "./subroutines": [
         "./lib/subroutines.d.ts"
-      ],
-      "./token-range": [
-        "./lib/token-range.d.ts"
       ]
     }
+  },
+  "dependencies": {
+    "@bedalton/extension-util": "*"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",

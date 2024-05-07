@@ -14,12 +14,12 @@
     "Programming Languages"
   ],
   "activationEvents": [
-    "onLanguage:caos",
     "onLanguage:caosdef"
   ],
   "workspaces": {
     "packages": [
       "packages/caos-util",
+      "packages/extension-util",
       "packages/client",
       "packages/server"
     ]
@@ -44,7 +44,7 @@
       "[caos]": {
         "editor.semanticHighlighting.enabled": true,
         "editor.inlayHints.padding": true,
-        "editor.wordBasedSuggestions": "matchingDocuments"
+        "editor.wordBasedSuggestions": "off",
       }
     },
     "configuration": {

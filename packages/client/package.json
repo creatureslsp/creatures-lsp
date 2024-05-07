@@ -18,23 +18,24 @@
     "directory": "packages/client",
     "url": "https://github.com/bedalton/caos-language-server"
   },
-  "dependencies": {
-    "@bedalton/caos-util": "*",
-    "vscode-languageclient": "^9.0.1"
-  },
   "scripts": {
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "prepack": "yarn build",
     "build": "yarn clean && tsc --build && cp \"./package.json\" ./dist/",
     "test": "echo 'no test'",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0",
-    "webpack": "webpack --mode development",
+    "webpack": "yarn run build && webpack --mode development",
     "postversion": "webpack --mode development --watch",
     "package": "webpack --mode production --devtool hidden-source-map"
   },
   "files": [
     "./dist"
   ],
+  "dependencies": {
+    "@bedalton/caos-util": "*",
+    "@bedalton/extension-util": "*",
+    "vscode-languageclient": "^9.0.1"
+  },
   "devDependencies": {
     "@types/node": "^17.0.40",
     "@types/vscode": "^1.81.0",
