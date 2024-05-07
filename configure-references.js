@@ -37,7 +37,16 @@ config.references = [];
     lines.shift()
     lines.pop()
     lines.pop()
-    const workspacesTemp = JSON.parse(lines.join("\n"))
+    let workspacesTemp;
+    try {
+        workspacesTemp = JSON.parse("{" + lines.join("\n") + "}")
+    } catch (e) {
+        console.error("Failed to JSON parse workspace. ",
+            e instanceof Error ? e.message : e,
+            ";\nJSON:\n" + lines.join("\n")
+        );
+        workspacesTemp = [];
+    }
     for (const name of Object.keys(workspacesTemp)) {
         const workspace = workspacesTemp[name];
         const location = path.resolve(process.cwd(), workspace.location);
