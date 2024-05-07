@@ -39,6 +39,10 @@ function inRange(position: Position, range: RangeWithIndex): boolean {
  * @param commandCall
  */
 function drillDown(variant: GameVariant, position: Position, commandCall: CommandCall): Nullable<Hover> {
+    if (commandCall == null) {
+        return null;
+    }
+    
     if (!inRange(position, commandCall.textRange)) {
         // console.log("Position: " + JSON.stringify(position) + "; Is not in Range: " + JSON.stringify(repack(commandCall.textRange)))
         return null;
@@ -57,6 +61,9 @@ function drillDown(variant: GameVariant, position: Position, commandCall: Comman
         // console.log("Not in command token range: " + JSON.stringify(position) + "; Range" + JSON.stringify(repack(commandCall.tokenTextRange)));
     }
     for (const argument of commandCall.arguments) {
+        if (argument == null) {
+            continue;
+        }
         if (argument.hasOwnProperty('arguments')) {
             // console.log("Checking Argument: " + argument.text)
             const drilled = drillDown(variant, position, <CommandCall>argument);
