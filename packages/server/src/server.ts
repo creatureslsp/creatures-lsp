@@ -190,7 +190,6 @@ connection.onInitialize((params: InitializeParams) => {
     
     
     if (clientCapabilities.hasWatchFilesCapabilities) {
-        console.log("Has watch files capabilities");
         registerFilesWatcher(clientCapabilities.hasWatchFilesCapabilities)
             .then()
     }
@@ -202,12 +201,10 @@ connection.onInitialize((params: InitializeParams) => {
         // registerSettingsChangeListener();
     }
     connection.onRequest("caos/vfs-did-init", async () => {
-        console.log("VFS did init")
         await setWorkspaceFolders(params.workspaceFolders ?? []);
         registerWorkspaceChangeHandlers();
     });
     
-    console.log("GLOB: " + glob);
     return result;
 });
 

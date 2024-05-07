@@ -25,7 +25,6 @@ export function getValuesListCompletions(
     let valuesListValuesCompletions: CompletionItem[] = [];
     if (valuesListValues.length > 0) {
         const range = data.closestItem?.textRange ? offsetRange(data.closestItem?.textRange, 1) : {start: position, end: position};
-        console.log("ValuesListRange: ", JSON.stringify(range));
         valuesListValuesCompletions = valuesListValues.map(v => {
             return getValuesListValueCompletionItem(v, inQuotes);
         });

@@ -29,8 +29,6 @@ export function getBitflagsOptionsProvider(data: CursorData): Nullable<Completio
     
     const range: Range = {start: start, end: start};
     
-    console.log("BitflagRange: " + JSON.stringify(range) + "; Closest Item Range: " + JSON.stringify(closestItemRange));
-    
     const command = {
         command: "caos.generateBitflagValue",
         title: "Generate Bitflag Value for " + valuesList.name,

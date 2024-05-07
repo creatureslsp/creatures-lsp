@@ -80,16 +80,13 @@ async function listFiles(parent: DocumentUri, child: Nullable<string>): Promise<
 
 export async function registerFilesWatcher(register: boolean): Promise<Disposable> {
     if (!register) {
-        console.log("registerFilesWatcher(false)");
         return Promise.resolve(Disposable.create(() => null));
     }
-    console.log("Registering file watcher");
     return connection.onDidChangeWatchedFiles(onDidChangeWatchFiles)
 }
 
 
 async function onDidChangeWatchFiles(event: DidChangeWatchedFilesParams) {
-    console.log("OnDidChangeWatchFiles: " + JSON.stringify(event));
     for (const change of event.changes) {
         await handleFileChangeEvent(change);
     }
@@ -108,7 +105,6 @@ async function handleFileChangeEvent(change: FileEvent) {
         case FileChangeType.Deleted:
             return onFileDeleted(workspaceUri, change);
         default:
-            console.log("Workspace: " + workspaceUri + " change not handled. Event: ", JSON.stringify(change));
             return;
     }
 }
@@ -120,8 +116,6 @@ async function onFileCreated(workspaceUri: DocumentUri, event: FileEvent): Promi
     await initFileList(workspaceUri);
     
     const file = trimLeadingSlashOnFileSchema(event.uri);
-    
-    console.log("FileCreated: " + file);
     
     sourceFiles.set(workspaceUri, (files: string[]): string[] => {
         if (files!.indexOf(file) >= 0) {
@@ -138,7 +132,6 @@ async function onFileCreated(workspaceUri: DocumentUri, event: FileEvent): Promi
 function onFileChanged(workspaceUri: DocumentUri, event: FileEvent) {
     workspaceUri = trimLeadingSlashOnFileSchema(workspaceUri);
     const file = trimLeadingSlashOnFileSchema(event.uri);
-    console.log("FileChanged: " + file);
     indexFile(workspaceUri, file)
         .then();
 }

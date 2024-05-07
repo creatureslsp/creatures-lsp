@@ -58,10 +58,8 @@ export namespace Is {
     
     export function c2eStringVal(item: Nullable<any>): item is C2eStringVal & NonNullable<C2eStringVal> {
         if (!parserItem(item)) {
-            console.log("Item is not a parser item", JSON.stringify(item));
             return false;
         }
-        console.log("Item Type Token: " + item.typeToken + "; For Item: " + item.text);
         return item.typeToken == TypeTokens.QUOTE_STRING
     }
 }

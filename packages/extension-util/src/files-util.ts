@@ -4,7 +4,6 @@ import {Nullable} from "./types";
 import {getArrayAccessFileNameIndex} from "./array-access-filename";
 
 export function filterByExtension(filesInProject: string[], extensions: Nullable<string[]>) {
-    console.log("Files in project: ", filesInProject)
     // Filter out blank paths
     extensions = extensions
         ?.filter(ext => ext && ext.length > 0)

@@ -12,15 +12,6 @@ export function indexFilterDoNotDelete(documentUri: DocumentUri, range : Nullabl
             if (location.documentUri.toLowerCase() != documentUri.toLowerCase()) {
                 throw new Error("Should not delete location in another file")
             }
-            console.log("Should delete " + location.text +
-                " in " + location.documentUri +
-                " @ " + location.range.start.line + ":" + location.range.start.character
-            );
-        } else {
-            console.log("Should NOT delete " + location.text +
-                " in " + location.documentUri +
-                " @ " + location.range.start.line + ":" + location.range.start.character
-            );
         }
         return !should;
     }

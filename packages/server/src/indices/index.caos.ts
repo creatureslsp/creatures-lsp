@@ -80,7 +80,6 @@ function index(workspaceUri: Nullable<DocumentUri>, documentUri: DocumentUri, pa
 }
 
 export function clearCaosDocumentIndices(workspaceUri: DocumentUri, documentUri: DocumentUri, range?: Nullable<Range>) {
-    console.trace("Clearing Document Indices in " + getFileName(documentUri));
     clearNamedVariables(workspaceUri, documentUri, range);
 }
 

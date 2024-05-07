@@ -16,7 +16,6 @@ export async function getCaos2TagValueCompletions(
     character: number,
     options: CompletionOptions
 ): Promise<CompletionItem[]> {
-    console.log("Tag/Command: " + (comment.tag ?? comment.command));
     const range = comment
             .values
             .find((v: IParserItem<any>) => inRange(v.textRange, line, character, false, true))

@@ -124,6 +124,5 @@ function getWatcher(): FileSystemWatcher {
         }
         return out;
     }).join(",");
-    console.log()
     return watcher = vscode.workspace.createFileSystemWatcher("**/*.{" + filesWatcherExtensions + "}");
 }

@@ -13,7 +13,6 @@ import {Range} from "vscode-languageserver";
 import {Nullable} from "@bedalton/extension-util";
 import {collectors, hints, GameVariant, ParseResult} from '@bedalton/caos-util';
 import {CheckModule} from '@bedalton/caos-util/check-module';
-import {Log} from "./log";
 const getInlayOptions = hints.getInlayOptions;
 const parseCaosWithin = collectors.parseCaosWithin;
 

@@ -113,7 +113,6 @@ export function removeWorkspaceFolder(workspaceUri: string): void {
     if (workspaceIndex >= 0) {
         _workspaceFolders.splice(workspaceIndex, 1);
     }
-    console.log("========= Removing Workspace folder ==============");
     clearFilesForWorkspace(workspaceUri);
     clearWorkspaceCaosFileIndex(workspaceUri);
     clearTimeout(workspaceRevalidateAllTimeout);

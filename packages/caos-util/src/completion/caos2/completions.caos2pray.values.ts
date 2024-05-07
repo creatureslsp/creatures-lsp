@@ -99,9 +99,11 @@ async function getCommandValueCompletions(
         const caosFiles = (getCommandValues(previousCommands, "LINK"))
             .map((s) => s.toLowerCase());
         caosFiles.push(thisFileName.toLowerCase());
-        const out = [];
-        console.log("Previous Links: " + caosFiles);
+        
         const completionPaths = getFilenameCompletionPaths(directory, await getFiles(["cos", "caos"]));
+        
+        const out = [];
+        
         for (const path of completionPaths) {
             if (caosFiles.indexOf(path.toLowerCase()) < 0) {
                 out.push(path);

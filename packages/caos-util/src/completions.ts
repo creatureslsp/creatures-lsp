@@ -103,7 +103,6 @@ export async function getCompletionItems(
     }
     
     if (cursor == null) {
-        console.log("Cursor data is empty");
         return emptyCompletionList;
     }
     
@@ -112,9 +111,6 @@ export async function getCompletionItems(
     }
     
     const commandString = cursor?.command?.command?.toLowerCase();
-    if (!commandString) {
-        console.log("Cursor: ", JSON.stringify(cursor));
-    }
     
     // Get subroutine names if any near cursor
     if (commandString === 'gsub') {
@@ -155,8 +151,6 @@ export async function getCompletionItems(
             if (isNamedVariableCommand(variant, commandString)) {
                 const namedVariableCompletions = getNamedVariableCompletionItems(opts.getNamedVariableKeys, cursor.closestItem, commandString, false);
                 items = [...namedVariableCompletions, ...items];
-            } else {
-                console.log("Is not named variable command was: " + commandString);
             }
         }
         
