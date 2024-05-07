@@ -165,7 +165,7 @@ export function getDocumentSettings(resource: string): Thenable<CaosSettings> {
     });
 }
 
-function getDisabledInlayHints(settings: { [id:string]: any }): string[] {
+function getDisabledInlayHints(settings: { [id: string]: any }): string[] {
     return getInlayOptions()
         .filter((option: any) => {
             const value = HashUtil.get(settings, option) ?? HashUtil.get(settings, 'caosScript.' + option);
