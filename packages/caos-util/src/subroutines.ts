@@ -6,7 +6,8 @@ import {inRange} from "@bedalton/extension-util";
 import {IParserItem, ParseResult} from "./caos-util";
 
 
-const SUBR = tok("subr");
+const SUBR: number = tok("subr") as number;
+const GSUB: number = tok("gsub") as number;
 
 /**
  * Checks if a subroutine exists inside the script containing this line and cursor
@@ -28,11 +29,15 @@ export function hasSubroutine(parseResult: ParseResult, subroutineName: string, 
     return subroutineNames.indexOf(subroutineName) >= 0;
 }
 
+export function getGsubNames(items: IParserItem<any>[]) {
+    return getSubroutines(items, GSUB);
+}
+
 /**
  * Gets all subroutine name parser elements in a list of parser items
  * @param items
  */
-export function getSubroutines(items: IParserItem<any>[]): IParserItem<any>[] {
+export function getSubroutines(items: IParserItem<any>[], afterToken: number = SUBR): IParserItem<any>[] {
     let subroutineNext = false;
     const out: IParserItem<any>[] = [];
     for (let item of items) {
@@ -46,7 +51,7 @@ export function getSubroutines(items: IParserItem<any>[]): IParserItem<any>[] {
                 console.error("Item length is invalid. Expected: 4; Actual: " + item.value.length);
                 continue;
             }
-            if (tok(item.value) === SUBR) {
+            if (tok(item.value) === afterToken) {
                 subroutineNext = true;
             }
         }
