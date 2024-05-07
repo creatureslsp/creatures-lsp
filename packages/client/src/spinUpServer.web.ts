@@ -27,7 +27,8 @@ export function spinUpServer(context: ExtensionContext, document: TextDocument, 
         ]
     };
     defaultClient = createClient(context, clientOptionsWithoutFolder);
-    defaultClient.start();
+    defaultClient.start()
+        .then();
 }
 
 // export function spinUpServer(context: ExtensionContext, document: TextDocument, clientOptions: LanguageClientOptions) {

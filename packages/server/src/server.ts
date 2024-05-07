@@ -33,20 +33,20 @@ connection.onInitialize((params: InitializeParams) => {
     
     
     let capabilities = params.capabilities;
-
+    
     // noinspection JSUnresolvedReference
     const noCompletions = params.initializationOptions?.noCompletions ?? false;
-
+    
     // Does the client support the `workspace/configuration` request?
     // If not, we fall back using global settings.
     clientCapabilities.hasConfigurationCapability = (
         !!capabilities.workspace && !!capabilities.workspace.configuration
     );
-
+    
     clientCapabilities.hasSemanticTokensCapabilities = (
         !!capabilities.workspace && !!capabilities.workspace.semanticTokens
     );
-
+    
     clientCapabilities.hasWorkspaceFolderCapability = (
         !!capabilities.workspace && !!capabilities.workspace.workspaceFolders
     );
@@ -55,35 +55,41 @@ connection.onInitialize((params: InitializeParams) => {
         !!capabilities.textDocument.publishDiagnostics &&
         !!capabilities.textDocument.publishDiagnostics.relatedInformation
     );
-
+    
     clientCapabilities.hasGotoDefinition = (
         !!capabilities.textDocument &&
-            !!capabilities.textDocument.documentLink
+        !!capabilities.textDocument.documentLink
     );
     clientCapabilities.hasFormatting = (
         !!capabilities.textDocument &&
-            !!capabilities.textDocument.formatting
+        !!capabilities.textDocument.formatting
     )
-
+    
     clientCapabilities.hasInlayHintsCapabilities = (
         !!capabilities.textDocument &&
-            !!capabilities.textDocument.inlayHint
+        !!capabilities.textDocument.inlayHint
     );
-
+    
     clientCapabilities.hasCompletionCapabilities = (
         !!capabilities.textDocument &&
         !!capabilities.textDocument.completion
     );
-
+    
     clientCapabilities.hasHoverCapabilities = (
         !!capabilities.textDocument &&
         !!capabilities.textDocument.hover
     );
-
+    
     clientCapabilities.hasSymbolsCapabilities = (
         !!capabilities.textDocument &&
-            !!capabilities.textDocument.documentSymbol
+        !!capabilities.textDocument.documentSymbol
     );
+    
+    clientCapabilities.hasCompletionCapabilities = (
+        !!capabilities.textDocument &&
+        !!capabilities.workspace?.configuration
+    );
+    
     clientCapabilities.hasWatchFilesCapabilities = (
         !!capabilities.workspace || !!capabilities.workspace!.didChangeWatchedFiles
     )
@@ -132,20 +138,20 @@ connection.onInitialize((params: InitializeParams) => {
                 legend: getSemanticTokensLegend(),
                 full: {delta: false},
             } : undefined,
-
+            
             // Server and client allows hover documentation
             hoverProvider: clientCapabilities.hasHoverCapabilities,
-
+            
             // Server and client support inlay hints
             inlayHintProvider: clientCapabilities.hasInlayHintsCapabilities ? {
                 documentSelector: [{language: CAOS_LANGUAGE_ID}]
             } : undefined,
-
+            
             // Server and client support code formatting
             documentFormattingProvider: clientCapabilities.hasFormatting,
-
+            
             // Server and client support GOTO definitions
-            definitionProvider: clientCapabilities.hasGotoDefinition
+            definitionProvider: clientCapabilities.hasGotoDefinition,
             workspace: {
                 fileOperations: {
                     didDelete: {
@@ -161,7 +167,7 @@ connection.onInitialize((params: InitializeParams) => {
             }
         }
     };
-
+    
     // Register workspace capabilities if client has them too
     if (clientCapabilities.hasWorkspaceFolderCapability) {
         result.capabilities.workspace = {
@@ -170,7 +176,7 @@ connection.onInitialize((params: InitializeParams) => {
             }
         };
     }
-
+    
     // Register providers
     registerInlayHintsProvider(clientCapabilities.hasInlayHintsCapabilities);
     registerCompletionProvider(!noCompletions).then(() => undefined);
@@ -209,7 +215,7 @@ try {
     documents.onDidClose(e => {
         deleteDocumentSettings(e.document.uri);
     });
-} catch(e) {
+} catch (e) {
     console.error("Failed to set documents.onDidClose(); ", JSON.stringify(e));
 }
 
@@ -221,12 +227,15 @@ try {
             return;
         }
         // noinspection JSIgnoredPromiseFromCall
-        updateRecentCommandsInDocument(change.document.uri, change.document.getText(), true);
-
+        updateRecentCommandsInDocument(null, change.document.uri, change.document.getText(), true);
+        
         // noinspection JSIgnoredPromiseFromCall
         validateTextDocument(change.document);
+        
+        indexCaosFile(null, change.document.uri)
+            .then();
     });
-} catch(e) {
+} catch (e) {
     console.error("Failed to set documents.onDidChangeContent); ", JSON.stringify(e));
 }
 

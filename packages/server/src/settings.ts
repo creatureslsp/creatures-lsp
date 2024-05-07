@@ -65,6 +65,7 @@ export interface CaosSettings {
         },
         equalityValueName?: boolean,
     },
+    
     [id: string]: any;
 }
 

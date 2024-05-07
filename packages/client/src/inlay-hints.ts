@@ -72,6 +72,7 @@ export class CaosInlayHintsProvider implements InlayHintsProvider {
         if (parseResult == null) {
             return [];
         }
+
         const raw = hints.getInlayHints(parseResult, disabled, [], minimumParameters);
         return raw.map((hint) => {
             return new InlayHint(
