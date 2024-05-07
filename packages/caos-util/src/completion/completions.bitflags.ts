@@ -8,12 +8,12 @@ export function getBitflagsOptionsProvider(data: CursorData): Nullable<Completio
     const valuesListId = parameter?.valuesListId
     if (valuesListId == null) {
         // console.log("Values list ID is null; Parameter" + (JSON.stringify(parameter)));
-        return null;
+        return undefined;
     }
     const valuesList = libs.getValuesList(valuesListId)
     if (valuesList == null || !isValuesListBitflag(valuesList)) {
         // console.log("Not a bitflags list: ListName[" + (valuesList?.name ?? "NULL") + "];");
-        return null;
+        return undefined;
     }
     
     const closestItemRange = data.closestItem?.textRange;

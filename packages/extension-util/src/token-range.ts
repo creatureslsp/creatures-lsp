@@ -8,7 +8,7 @@ import {ParseTreeItem, Nullable, RangeWithIndex} from "./types";
  */
 export function getTokenRange(items: ParseTreeItem<any>[]): Nullable<RangeWithIndex> {
     if (items.length === 0) {
-        return null;
+        return undefined;
     }
     if (items.length === 1) {
         return items[0].textRange;

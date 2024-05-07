@@ -16,7 +16,7 @@ export function registerCaosGotoDefinitionsProvider(init: boolean) {
         const text = document?.getText() ?? (await getDocumentText(uri));
         if (text == null || text.trim().length === 0) {
             console.log("No definition text");
-            return null;
+            return undefined;
         }
         const variant = (await getDocumentSettings(uri))?.variant ?? 'DS';
         const {line, character} = params.position;
@@ -31,7 +31,7 @@ export function registerCaosGotoDefinitionsProvider(init: boolean) {
         } catch (e) {
             const error = e instanceof Error ? (e.message + "\n" + e.stack) : e;
             console.error("Failed to get GOTO; ", error);
-            return null;
+            return undefined;
         }
     })
 }

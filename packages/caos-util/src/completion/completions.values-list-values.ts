@@ -55,7 +55,7 @@ function replaceIf(text: string, search: string, replace: string): Nullable<stri
     text = text.trim();
     const replaced = text.replace(search, replace);
     if (replaced == text) {
-        return null;
+        return undefined;
     } else {
         return replaced;
     }

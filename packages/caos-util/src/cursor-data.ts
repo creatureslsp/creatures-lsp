@@ -47,15 +47,15 @@ export function getCursorPosition(
     lineNumber: number,
     column: number,
     _incomplete: boolean,
-    _parseNear: Nullable<boolean> = null
+    _parseNear: Nullable<boolean> = undefined
 ): Nullable<CursorData> {
     if (parseResult == null) {
-        return null;
+        return undefined;
     }
 // Find all calls in range
     const commandCalls = parseResult.commandCalls;
     if (commandCalls == null && parseResult.equalityStatements.length == 0) {
-        return null;
+        return undefined;
     }
     // Filter calls to those enclosing position
     const inRangeCalls = commandCalls.filter((call: CommandCall) => inRange(call.textRange, lineNumber, column, false, true));
@@ -147,7 +147,7 @@ export function getCursorPosition(
                     run(parseResult.commandCalls[commandCallIndex]);
                 } else {
                     inCommand = false;
-                    closest = null;
+                    closest = undefined;
                     missingParameters = [];
                 }
                 return;
@@ -170,7 +170,7 @@ export function getCursorPosition(
                 run (parseResult.commandCalls[commandCallIndex]);
                 return;
             } else {
-                closest = null;
+                closest = undefined;
                 missing = [];
             }
         }
@@ -298,7 +298,7 @@ export function getClosestItem<T extends HasRange>(
 ): Nullable<{ closest: T; previous: CommandToken[]; }> {
     
     if (inRangeItems.length < 1) {
-        return null;
+        return undefined;
     }
     
     if (notAfter) {
@@ -306,7 +306,7 @@ export function getClosestItem<T extends HasRange>(
         inRangeItems = inRangeItems.filter(item => item.textRange.start.line === lineNumber && item.textRange.start.character <= fuzzy);
     }
     if (inRangeItems.length < 1) {
-        return null;
+        return undefined;
     }
     // Combine call with distance to lineNumber/Column
     const distanced: Distanced<T>[] = inRangeItems.map(call => {
@@ -321,7 +321,7 @@ export function getClosestItem<T extends HasRange>(
     
     if (sameLine.length > 0) {
         // Sort by column distance, and return nearest
-        let index = null;
+        let index = undefined;
         
         for (let i = 0; i < sameLine.length; i++) {
             const item = sameLine[i];
@@ -331,7 +331,7 @@ export function getClosestItem<T extends HasRange>(
             index = i;
         }
         if (index == null) {
-            return null;
+            return undefined;
         }
         const items = sameLine.slice(0)
             .slice(0, Math.min(5, sameLine.length));
@@ -395,11 +395,11 @@ function getEqualityValuesList(
         .filter(eq => eq.textRange != null && inRange(eq.textRange, lineNumber, column, true, true))
         .sort((a, b) => sortTextRanges(a.textRange, b.textRange));
     if (equalityStatementsInRange.length < 1) {
-        return null;
+        return undefined;
     }
     const equalityStatement = equalityStatementsInRange[0];
     let shouldComplete = true;
-    let other: Nullable<Argument> = null;
+    let other: Nullable<Argument> = undefined;
     if (Is.commandCall(equalityStatement.second)) {
         shouldComplete = equalityStatement.first == null || Is.intVal(equalityStatement.first?.parserItem);
         other = equalityStatement.second;
@@ -408,16 +408,16 @@ function getEqualityValuesList(
         other = equalityStatement.first;
     }
     if (!shouldComplete || !Is.commandCall(other)) {
-        return null;
+        return undefined;
     }
     const variant = parseResult.variant;
     const valuesListIds = other!.command?.returnValuesListIds ?? ({} satisfies VariantData<number>);
     if (!valuesListIds.hasOwnProperty(variant) && valuesListIds[variant] == null) {
-        return null;
+        return undefined;
     }
     const valuesListId = valuesListIds[variant];
     if (valuesListId == null) {
-        return null;
+        return undefined;
     }
     return libs.getValuesList(valuesListId);
 }
@@ -449,7 +449,7 @@ export function getCursorPositionFromRawText(
         parseCaos(variant, text, keepGoing);//parseCaosNear(variant, text, lineNumber + 1, column + 1);
     
     if (result == null) {
-        return null;
+        return undefined;
     }
     return getCursorPosition(result, lineNumber, column, incomplete);
 }

@@ -182,7 +182,7 @@ async function getStats(path: string | Uri, parent: string | Uri): Promise<Nulla
     try {
         return await fs.stat(uri);
     } catch (e) {
-        return null;
+        return undefined;
     }
 }
 

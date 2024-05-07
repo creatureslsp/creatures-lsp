@@ -22,7 +22,7 @@ export function getArrayAccessFileNameIndex(path:string): Nullable<[string,numbe
     const fileName = getFileName(path);
     
     if (!fileName) {
-        return null;
+        return undefined;
     }
     
     if (fileName.indexOf("[") < 0) {
@@ -42,5 +42,5 @@ export function getArrayAccessFileNameIndex(path:string): Nullable<[string,numbe
         return [`${groupValues[1]}.${groupValues[3]}`, parseIntSafe(groupValues[2]) ?? 0]
     }
     console.error(`Failed to parse sprite file frame information from text: '${path}'`);
-    return null;
+    return undefined;
 }

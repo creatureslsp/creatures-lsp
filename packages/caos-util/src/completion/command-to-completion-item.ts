@@ -10,7 +10,7 @@ const getValueTypeName = libs.getValueTypeName;
  * @param command
  * @param sortPrefix
  */
-export function commandToCompletionItem(command: ICaosCommand, sortPrefix: Nullable<string> = null): CompletionItem {
+export function commandToCompletionItem(command: ICaosCommand, sortPrefix: Nullable<string> = undefined): CompletionItem {
     const commandLower = command.command.toLowerCase();
     let args = "";
     const parameters = command.parameters.sort((a, b) => a.index - b.index);

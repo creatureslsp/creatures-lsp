@@ -22,20 +22,20 @@ export async function unpack(reference: UriLike): Promise<Nullable<CaosDocument>
         } else if ((<Object>reference).hasOwnProperty('textDocument')) {
             documentUri = (<any>reference).textDocument.uri;
         } else {
-            return null;
+            return undefined;
         }
     } else {
-        return null;
+        return undefined;
     }
     const document = getDocument(documentUri);
     
     // Ensure that this document is a CAOS document
     if (document?.languageId != CAOS_LANGUAGE_ID) {
-        return null;
+        return undefined;
     }
     let text = document?.getText();
     if (text == null || text.length < 1) {
-        return null;
+        return undefined;
     }
     const settings = await getDocumentSettings(documentUri);
     return {

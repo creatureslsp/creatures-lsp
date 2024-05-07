@@ -9,7 +9,7 @@ import {getFiles, readTextFile} from "../files";
 
 
 export async function indexCaosFile(workspaceUri: Nullable<DocumentUri>, documentURI: DocumentUri, range?: Nullable<Range>): Promise<boolean> {
-    let text: Nullable<string> = null;
+    let text: Nullable<string> = undefined;
     try {
         text = await readTextFile(documentURI);
     } catch (e) {

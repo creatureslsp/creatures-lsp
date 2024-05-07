@@ -13,7 +13,7 @@ export function createSimpleCompletionItem(
     token: string,
     range: Range,
     completionKind: CompletionItemKind,
-    suffix: Nullable<string> = null,
+    suffix: Nullable<string> = undefined,
     sortPrefix: string = "_d",
 ): CompletionItem {
     return <CompletionItem>{
@@ -45,7 +45,7 @@ export function createQuotedCompletionItem(
     token: string,
     range: Range,
     completionKind: Nullable<CompletionItemKind> = CompletionItemKind.Value,
-    suffix: Nullable<string> = null,
+    suffix: Nullable<string> = undefined,
     sortPrefix: string = "_d",
 ): CompletionItem {
     token = quoteString(token);

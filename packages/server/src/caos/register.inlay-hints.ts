@@ -11,7 +11,7 @@ import {getInlayHints} from "@bedalton/caos-util/inlay-hints";
  */
 export function registerCaosInlayHintsProvider(canUse: boolean): Nullable<Disposable> {
     if (!canUse) {
-        return null;
+        return undefined;
     }
     return connection.languages.inlayHint.on(async (e) => {
         const documentUri = e.textDocument.uri;

@@ -5,7 +5,7 @@ import {pushDisposable} from "./disposables";
 let _sortedWorkspaceFolders: Nullable<string[]>;
 
 
-pushDisposable(workspace.onDidChangeWorkspaceFolders(() => _sortedWorkspaceFolders = null));
+pushDisposable(workspace.onDidChangeWorkspaceFolders(() => _sortedWorkspaceFolders = undefined));
 
 export function getOuterMostWorkspaceFolder(folder: WorkspaceFolder): WorkspaceFolder {
     const sorted = getSortedWorkspaceFolders();

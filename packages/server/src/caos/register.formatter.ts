@@ -20,6 +20,7 @@ async function onFormatCallback(params: DocumentFormattingParams): Promise<TextE
         ...(settings.formatting ?? {}),
         ...<any>params.options
     };
+    console.log("FormatOptions:", JSON.stringify(formattingSettings), "settings: Formatting", settings.formatting, "; ParamOptions: ", params.options);
     try {
         return format(
             variant,

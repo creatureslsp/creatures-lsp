@@ -152,7 +152,7 @@ async function validateParserResult(
         }
     }
     if (strictSpaces) {
-        let last: Nullable<IParserItem<any>> = null;
+        let last: Nullable<IParserItem<any>> = undefined;
         for (const item of parseResult.items.sort((a, b) => sortTextRanges(a.textRange, b.textRange))) {
             if (last != null) {
                 const error = getSpacingError(last, item);
@@ -169,11 +169,11 @@ async function validateParserResult(
 
 function getSpacingError(last: IParserItem<any>, item: IParserItem<any>): Nullable<Diagnostic> {
     if (last.textRange.end.line !== item.textRange.start.line) {
-        return null;
+        return undefined;
     }
     const distance = item.textRange.start.character - last.textRange.end.character;
     if (distance == 1) {
-        return null;
+        return undefined;
     }
     const line = item.textRange.start.line;
     if (distance == 0) {

@@ -45,13 +45,14 @@
         "editor.semanticHighlighting.enabled": true,
         "editor.inlayHints.padding": true,
         "editor.wordBasedSuggestions": "off",
-      "editor.semanticTokenColorCustomizations": {
-        "rules": {
-          "caos2pray-tag.official:caos": {
-            "underline": true
-          },
-          "caos2pray-command:caos": {
-            "underline": true
+        "editor.semanticTokenColorCustomizations": {
+          "rules": {
+            "caos2pray-tag.official:caos": {
+              "underline": true
+            },
+            "caos2pray-command:caos": {
+              "underline": true
+            }
           }
         }
       }

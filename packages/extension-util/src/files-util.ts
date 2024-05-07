@@ -31,12 +31,12 @@ export function filterByExtension(filesInProject: string[], extensions: Nullable
 
 export function getFileName(path: string): Nullable<string> {
     if (path.trim().length == 0 || path.trim() === "/" || path.trim() === "\\") {
-        return null;
+        return undefined;
     }
     const components = path.split(/[/\\]/);
     const fileName = components.pop()!;
     if (fileName.trim().length === 0) {
-        return null;
+        return undefined;
     }
     return fileName;
 }
@@ -45,7 +45,7 @@ export function getFileName(path: string): Nullable<string> {
 export function getFileNameWithoutExtensions(path: string): Nullable<string> {
     const fileName = getFileName(path);
     if (!fileName || fileName.trim().length === 0) {
-        return null;
+        return undefined;
     }
     const lastDot = fileName.lastIndexOf(".");
     if (lastDot < 0) {
@@ -62,7 +62,7 @@ export function getExtension(value: string, notLowerCased: boolean = false): Nul
     } else {
         const [fileName] = getArrayAccessFileNameIndex(value) ?? [null];
         if (fileName == null || fileName.trim().length === 0) {
-            return null;
+            return undefined;
         }
         extension = _path.extname(fileName);
     }
@@ -71,7 +71,7 @@ export function getExtension(value: string, notLowerCased: boolean = false): Nul
         extension.substring(1);
     }
     if (!extension || extension.trim().length === 0) {
-        return null;
+        return undefined;
     }
     
     return notLowerCased ? extension : extension.toLowerCase();

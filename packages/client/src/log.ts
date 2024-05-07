@@ -4,7 +4,7 @@ import {LanguageClient} from "vscode-languageclient/node";
 import {Nullable} from "@bedalton/extension-util";
 
 
-let lastClient: Nullable<LanguageClient> = null
+let lastClient: Nullable<LanguageClient> = undefined
 
 export const Log = {
     i(file: Uri| string, message: string, ... args: any[]) {

@@ -8,15 +8,15 @@ export function stripSurroundingQuotes(string: string): string {
 }
 
 
-function stripIfFrontAndBackOrNull(string: string, character: string): string | null {
+function stripIfFrontAndBackOrNull(string: string, character: string): string | undefined {
     if (character.length !== 1) {
         throw new Error("Cannot strip front and back with empty character string or character string length greater than 1");
     }
     if (!string) {
-        return null;
+        return undefined;
     }
     if (string[0] !== character || string[string.length - 1] !== character) {
-        return null;
+        return undefined;
     }
     return string.substring(1, string.length - 2);
 }

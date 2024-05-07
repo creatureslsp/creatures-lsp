@@ -59,7 +59,7 @@ function addVariablesOfType(
     command: ICaosCommand,
     prefix: string,
     max: number,
-    description: Nullable<string> = null,
+    description: Nullable<string> = undefined,
     priority: number
 ) {
     const pad = prefix.length < 3;

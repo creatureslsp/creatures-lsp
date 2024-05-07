@@ -9,6 +9,6 @@ export function parseIntSafe(numberString: string, radix: number = 10): Nullable
     try {
         return PLUS_OR_MINUS_WITH_NUMBER_REGEX.test(numberString) ? parseInt(numberString, radix) : null
     } catch {
-        return null;
+        return undefined;
     }
 }

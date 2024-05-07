@@ -76,7 +76,7 @@ export async function getCompletionItems(
     text: string | ParseResult,
     position: Position,
     opts: CompletionOptions,
-    completionSettings: Nullable<CompletionSettings> = null,
+    completionSettings: Nullable<CompletionSettings> = undefined,
     cursorPointer?: {cursor: Nullable<CursorData>},
 ): Promise<CompletionList> {
     
@@ -193,7 +193,7 @@ export async function getCompletionItemsWithCursorData(
     commands: Commands,
     positionData: CursorData,
     options: CompletionOptions,
-    settings: Nullable<CompletionSettings> = null,
+    settings: Nullable<CompletionSettings> = undefined,
     caos2Comments: Caos2Comment[] = [],
 ): Promise<CompletionItem[]> {
     
@@ -237,14 +237,14 @@ export async function getCompletionItemsWithCursorData(
 
 function getOriginalText(text: string | ParseResult | unknown | null | undefined): Nullable<string> {
     if (text == null) {
-        return null;
+        return undefined;
     }
     if (typeof text === 'string') {
         return text
     } else if (Is.parseResult(text)) {
         return text.originalText;
     } else {
-        return null;
+        return undefined;
     }
 }
 

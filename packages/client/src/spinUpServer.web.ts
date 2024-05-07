@@ -3,7 +3,7 @@ import {LanguageClient, LanguageClientOptions} from "vscode-languageclient/brows
 import {registerClientDisposable} from "./clients";
 import {Nullable} from "@bedalton/extension-util";
 
-let defaultClient: Nullable<LanguageClient> = null;
+let defaultClient: Nullable<LanguageClient> = undefined;
 
 export function spinUpServer(context: ExtensionContext, document: TextDocument, clientOptions: LanguageClientOptions) {
     

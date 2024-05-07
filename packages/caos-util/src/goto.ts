@@ -19,7 +19,7 @@ export function getGotoInformation(
     if (Is.parseResult(text) && text.scripts.length > 0) {
         const script = text.scripts.find(script => script != null && inRange(script.textRange, line, character))
         if (script == null) {
-            return null;
+            return undefined;
         }
         parseResult = parseTokens(
             variant,
@@ -30,7 +30,7 @@ export function getGotoInformation(
         if (Is.parseResult(text)) {
             text = text.originalText
         } else if (typeof text !== 'string') {
-            return null;
+            return undefined;
         }
         const offsets = scriptOffsets(
             text as string
@@ -38,7 +38,7 @@ export function getGotoInformation(
         const scriptRange = offsets.find(offset => inRange(offset, line, character, true, true));
     
         if (scriptRange == null) {
-            return null;
+            return undefined;
         }
         parseResult = parseCaosWithin(
             variant,
@@ -51,13 +51,13 @@ export function getGotoInformation(
     }
     
     if (parseResult == null) {
-        return null;
+        return undefined;
     }
     
     const commandCalls = parseResult.commandCalls
     
     if (commandCalls.length === 0) {
-        return null;
+        return undefined;
     }
     
     const cursor = getCursorPosition(
@@ -69,36 +69,36 @@ export function getGotoInformation(
     );
     
     if (cursor == null) {
-        return null;
+        return undefined;
     }
     
     const command = cursor.command?.command;
     if (command == null) {
-        return null;
+        return undefined;
     }
     
     const closestItemText = cursor.closestItem?.text?.trim() ?? '';
     if (closestItemText.length === 0) {
-        return null;
+        return undefined;
     }
     switch (command) {
         case 'SUBR':
             const subroutine = parseResult.commandCalls.find(c => c.command?.command === 'SUBR' && inRange(c.textRange, line, character, false, true));
             if (subroutine == null) {
-                return null;
+                return undefined;
             }
             return getSubroutineUsage(documentUri, parseResult, subroutine, subroutine?.arguments[0]?.text ?? "");
         case 'GSUB':
             return getSubroutineDefinition(documentUri, parseResult, closestItemText);
         default:
-            return null;
+            return undefined;
     }
 }
 
 
 export function getSubroutineDefinition(documentUri: string, parserResult: ParseResult, name: string): Definition | LocationLink[] | undefined | null {
     if (name.length < 1) {
-        return null;
+        return undefined;
     }
     
     let result = parserResult.commandCalls
@@ -113,7 +113,7 @@ export function getSubroutineDefinition(documentUri: string, parserResult: Parse
     }
     if (result == null) {
         console.log("No result found for case-insensitive match")
-        return null;
+        return undefined;
     }
     const range = <RangeWithIndex>repack(result.arguments[0]?.textRange ?? result.textRange)
     return <Definition>{
@@ -127,7 +127,7 @@ export function getSubroutineDefinition(documentUri: string, parserResult: Parse
 
 export function getSubroutineUsage(documentUri: string, parserResult: ParseResult, commandCall: CommandCall, name: string): Definition | LocationLink[] | undefined | null {
     if (name.length < 1) {
-        return null;
+        return undefined;
     }
     
     let result = parserResult.commandCalls
@@ -140,7 +140,7 @@ export function getSubroutineUsage(documentUri: string, parserResult: ParseResul
             .filter(c => c.command.command == "GSUB" && c.arguments.length > 0 && c.arguments[0].text.toLowerCase() === name);
     }
     if (result.length < 1) {
-        return null;
+        return undefined;
     }
     const originSelectionRange = toVsRange(commandCall.arguments[0]?.textRange ?? commandCall.textRange, true);
     return result.map(gsub => {

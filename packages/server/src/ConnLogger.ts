@@ -14,7 +14,7 @@ const ConnLogger: ILoggerObject = {
         console.error(message)
     },
     getColorPrefix(_color: Nullable<typeof LoggerColor>): Nullable<string> {
-        return null;
+        return undefined;
     },
     info(_replace: boolean, message: string, _color: Nullable<typeof LoggerColor>): void {
         console.info(message)

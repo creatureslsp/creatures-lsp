@@ -23,7 +23,7 @@ async function onHoverCallback(e: HoverParams): Promise<Nullable<Hover>> {
     const uri = e.textDocument.uri;
     const textDocument = getDocument(uri);
     if (textDocument != null && textDocument.languageId !== CAOS_LANGUAGE_ID) {
-        return null;
+        return undefined;
     }
     const text = textDocument?.getText() ?? (await getDocumentText(uri));
     if (text == null || text.length < 4) {
@@ -43,7 +43,7 @@ async function onHoverCallback(e: HoverParams): Promise<Nullable<Hover>> {
     } catch (e) {
         const error = e instanceof Error ? (e.message + "\n" + e.stack) : e;
         console.error("Failed to get hoverDocumentation; ", error);
-        return null;
+        return undefined;
     }
 }
 

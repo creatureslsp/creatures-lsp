@@ -17,7 +17,7 @@ class NamedVariableIndex implements CommandIndex {
     private readonly usedButNotDefined: string[] = [];
     private readonly command: string
     private readonly locations: { [key: string]: IndexedItemLocation[] } = {};
-    private _allKeys: Nullable<string[]> = null;
+    private _allKeys: Nullable<string[]> = undefined;
     
     constructor(command: string) {
         this.command = command.toUpperCase();
@@ -82,7 +82,7 @@ class NamedVariableIndex implements CommandIndex {
     }
     
     clearAllKeysCache() {
-        this._allKeys = null;
+        this._allKeys = undefined;
     }
     
     clearInDocument(documentUri: DocumentUri, range?: Nullable<Range>) {
@@ -357,7 +357,7 @@ class WorkspaceNamedVariables {
                 return this.nameIndex;
             default:
                 console.error("Requested invalid named variable index of type: " + type.toUpperCase());
-                return null;
+                return undefined;
         }
     }
 }

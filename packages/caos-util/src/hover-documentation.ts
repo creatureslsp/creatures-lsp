@@ -40,12 +40,12 @@ function inRange(position: Position, range: RangeWithIndex): boolean {
  */
 function drillDown(variant: GameVariant, position: Position, commandCall: CommandCall): Nullable<Hover> {
     if (commandCall == null) {
-        return null;
+        return undefined;
     }
     
     if (!inRange(position, commandCall.textRange)) {
         // console.log("Position: " + JSON.stringify(position) + "; Is not in Range: " + JSON.stringify(repack(commandCall.textRange)))
-        return null;
+        return undefined;
     }
     // console.log("Command call " + commandCall.command.command + " contains position: " + JSON.stringify(position) + " in Range: " + JSON.stringify(repack(commandCall.textRange)));
     if (inRange(position, commandCall.tokenTextRange)) {
@@ -84,7 +84,7 @@ function drillDown(variant: GameVariant, position: Position, commandCall: Comman
             // };
         }
     }
-    return null;
+    return undefined;
 }
 
 
@@ -102,5 +102,5 @@ export function getHoverItem(variant: GameVariant, position: Position, commandCa
             return hover;
         }
     }
-    return null;
+    return undefined;
 }

@@ -313,7 +313,7 @@ const keywords = [
  */
 function addCommandTokenDecorations(tokens: SemanticToken[], context: ICommandCall) {
     context.tokenTextRange
-    let commandDescription: Nullable<string> = null;
+    let commandDescription: Nullable<string> = undefined;
     const command = context.command;
     if (command == null) {
         return;
@@ -415,7 +415,7 @@ function addTokensFromCall(tokens: SemanticToken[], call: ICommandCall) {
  * @param modifierTokens any semantic modifiers
  * @param description
  */
-function pushToken(allTokens: SemanticToken[], ctx: RangeWithIndex, tag: string, modifierTokens: string[], description: Nullable<string> = null): boolean {
+function pushToken(allTokens: SemanticToken[], ctx: RangeWithIndex, tag: string, modifierTokens: string[], description: Nullable<string> = undefined): boolean {
     if (ctx.start?.line == null || ctx.start?.character == null || ctx.end?.line == null || ctx.end?.character == null) {
         return false;
     }

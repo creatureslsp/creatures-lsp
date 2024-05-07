@@ -84,14 +84,14 @@ function getIfVariant(string: string): Nullable<GameVariant> {
         case 'SM':
             return 'SM';
         default:
-            return null;
+            return undefined;
     }
 }
 
 function getCLIVariant(): Nullable<GameVariant> {
     const args = process.argv ?? [];
     if (args.length < 1) {
-        return null;
+        return undefined;
     }
     let variant = getIfVariant(args[0]);
     for (let i = 0; i < args.length - 1; i++) {
