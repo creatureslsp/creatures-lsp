@@ -10,9 +10,7 @@ import {CAOS_LANGUAGE_ID, CaosSettings, getDocumentSettings} from "./settings";
 import {connection} from "./connection.vscode";
 import {getDocument, getDocuments} from "./documents";
 import {Range} from "vscode-languageserver";
-import ParseResult = collectors.ParseResult;
-import parseCaos = collectors.parseCaos;
-import ParserItem = collectors.ParserItem;
+import {fileExists} from "./workspace-folders";
 
 const typeHintText = /Unexpected value '([a-zA-Z\d_$]+:[a-zA-Z\d_$]+)'/;
 
@@ -56,8 +54,15 @@ async function validateWithConstraints(
 ): Promise<Diagnostic[]> {
     const parse = (code: string) => {
         return new Promise<ParseResult>((resolve, reject) => {
+            if (collectors == null) {
+                reject("collectors is null");
+                return;
+            } else if (collectors?.parseCaos == null) {
+                reject("collectors.parseCaos == null");
+                return;
+            }
             try {
-                const result = parseCaos(variant, code);
+                const result = collectors.parseCaos(variant, code);
                 return resolve(result);
             } catch (e) {
                 console.error("Failed to parse caos in validateWithConstraints().. " + JSON.stringify(e));
@@ -85,7 +90,12 @@ async function validateWithConstraints(
  * @param text
  */
 async function runDiagnostic(settings: CaosSettings, uri: string, text: string) {
-    if (getDocument(uri)?.languageId != CAOS_LANGUAGE_ID) {
+    
+    const document = getDocument(uri);
+    if (document != null && document.languageId != CAOS_LANGUAGE_ID) {
+        return [];
+    }
+    if (!(await fileExists(uri))) {
         return [];
     }
     let diagnostics: Diagnostic[] = await validateWithConstraints(

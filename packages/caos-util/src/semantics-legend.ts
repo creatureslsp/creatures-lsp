@@ -11,7 +11,27 @@ export const SemanticTokensTypes = {
     EQ_OP_TOKEN:'eqOp',
     EQ_JOIN_TOKEN:'eqJoin',
     PLACEHOLDER_TEXT: "placeholder-text",
+    CAOS2PRAY_TAG: "caos2pray-tag",
+    CAOS2PRAY_COMMAND: "caos2pray-command",
 }
+
+const tokenTypes = [
+    SemanticTokensTypes.COMMAND_TOKEN,
+    SemanticTokensTypes.RVALUE_TOKEN,
+    SemanticTokensTypes.LVALUE_TOKEN,
+    SemanticTokensTypes.STRING_TOKEN,
+    SemanticTokensTypes.TOKEN_TOKEN,
+    SemanticTokensTypes.VARIABLE_TOKEN,
+    SemanticTokensTypes.UNKNOWN_TYPE,
+    SemanticTokensTypes.SUBROUTINE_NAME_TOKEN,
+    SemanticTokensTypes.PLACEHOLDER_TEXT,
+    SemanticTokensTypes.DDE_PICT_TOKEN,
+    SemanticTokensTypes.EQ_OP_TOKEN,
+    SemanticTokensTypes.EQ_JOIN_TOKEN,
+    SemanticTokensTypes.PLACEHOLDER_TEXT,
+    SemanticTokensTypes.CAOS2PRAY_TAG,
+    SemanticTokensTypes.CAOS2PRAY_COMMAND,
+];
 
 export const SemanticTokenModifiers = {
     C1_STRING_MODIFIER_TOKEN: "c1-string",
@@ -30,39 +50,29 @@ export const SemanticTokenModifiers = {
     RETURNS_AGENT: 'returns-agent',
     AGENT_CONSTRUCTOR: 'agent-constructor',
     COMMAND_PREFIX: 'command-prefix',
-    COMMAND_SUFFIX: 'command-suffix'
+    COMMAND_SUFFIX: 'command-suffix',
+    CAOS2PRAY_OFFICIAL: 'official',
 }
-const tokenTypes = [
-    SemanticTokensTypes.COMMAND_TOKEN,
-    SemanticTokensTypes.RVALUE_TOKEN,
-    SemanticTokensTypes.LVALUE_TOKEN,
-    SemanticTokensTypes.STRING_TOKEN,
-    SemanticTokensTypes.TOKEN_TOKEN,
-    SemanticTokensTypes.VARIABLE_TOKEN,
-    SemanticTokensTypes.UNKNOWN_TYPE,
-    SemanticTokensTypes.SUBROUTINE_NAME_TOKEN,
-    SemanticTokensTypes.PLACEHOLDER_TEXT
-];
 
 const tokenModifiers = [
     SemanticTokenModifiers.C1_STRING_MODIFIER_TOKEN,
     SemanticTokenModifiers.QUOTE_STRING_MODIFIER_TOKEN,
+    SemanticTokenModifiers.BYTE_STRING_MODIFIER_TOKEN,
     SemanticTokenModifiers.TOKEN_FOUND_MODIFIER_TOKEN,
     SemanticTokenModifiers.TOKEN_NOT_FOUND_MODIFIER_TOKEN,
-    SemanticTokenModifiers.BYTE_STRING_MODIFIER_TOKEN,
     SemanticTokenModifiers.VAXX_MODIFIER_TOKEN,
     SemanticTokenModifiers.OVXX_MODIFIER_TOKEN,
     SemanticTokenModifiers.MVXX_MODIFIER_TOKEN,
-    SemanticTokenModifiers.RETURNS_STRING,
     SemanticTokenModifiers.RETURNS_NUMBER,
+    SemanticTokenModifiers.RETURNS_STRING,
     SemanticTokenModifiers.RETURNS_INT,
     SemanticTokenModifiers.RETURNS_FLOAT,
     SemanticTokenModifiers.RETURNS_VARIABLE,
     SemanticTokenModifiers.RETURNS_AGENT,
     SemanticTokenModifiers.AGENT_CONSTRUCTOR,
     SemanticTokenModifiers.COMMAND_PREFIX,
-    SemanticTokenModifiers.COMMAND_SUFFIX
-    
+    SemanticTokenModifiers.COMMAND_SUFFIX,
+    SemanticTokenModifiers.CAOS2PRAY_OFFICIAL,
     
 ];
 const legendMap:{[id: string]: number} = {};
@@ -72,9 +82,10 @@ export const semanticLegend = {
     tokenTypes,
     tokenModifiers
 }
-tokenTypes.forEach((item, i) => legendMap[item] = i);
-tokenModifiers.forEach((item, i) => modifierMap[item] = i);
 
+tokenTypes.forEach((item, i) => legendMap[item] = i);
+
+tokenModifiers.forEach((item, i) => modifierMap[item] = i);
 
 export const SemanticTokensMap = {
     legendMap,

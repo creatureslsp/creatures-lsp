@@ -67,11 +67,22 @@ function toSemanticRange(range: RangeWithIndex, expandEnd: boolean = false): Ran
 export class SemanticTokensWalker implements ICaosContextListener {
     tokens: SemanticToken[] = [];
     protected readonly caosLib: Commands;
-    private readonly checkCancelled: () => void;
+    private checkCancelled: () => void;
+    private readonly isC2e: boolean;
+    private readonly isC1e: boolean;
+    private readonly variant: GameVariant;
     
-    constructor(caosLib: Commands, cancellationToken?: CancellationToken) {
+    constructor(variant: GameVariant, caosLib: Commands, cancellationToken?: CancellationToken) {
         this.caosLib = caosLib;
-        this.checkCancelled = cancellationToken != null ? (() => {
+        variant = variant.toUpperCase() as GameVariant;
+        this.variant = variant;
+        this.isC1e = variant === "C1" || variant === "C2"
+        this.isC2e = variant !== "C1" && variant !== "C2";
+        this.checkCancelled = this.setCancellationToken(cancellationToken);
+    }
+    
+    setCancellationToken(cancellationToken?: CancellationToken): () => void {
+        return this.checkCancelled = cancellationToken != null ? (() => {
             if (cancellationToken.isCancellationRequested) {
                 throw new RequestCancelledException()
             }
@@ -79,19 +90,19 @@ export class SemanticTokensWalker implements ICaosContextListener {
         });
     }
     
-    onInt(token: ParserItem.IntVal) {
+    onInt(_token: ParserItem.IntVal) {
     }
     
-    onBinary(token: ParserItem.BinaryVal) {
+    onBinary(_token: ParserItem.BinaryVal) {
     }
     
-    onChar(token: ParserItem.CharVal) {
+    onChar(_token: ParserItem.CharVal) {
     }
     
-    onFloat(token: ParserItem.FloatVal) {
+    onFloat(_token: ParserItem.FloatVal) {
     }
     
-    onByteString(token: ParserItem.ByteString) {
+    onByteString(_token: ParserItem.ByteString) {
         // byte string needs context for colorization
         // Will be altered in onCommandCall
     }
@@ -112,7 +123,7 @@ export class SemanticTokensWalker implements ICaosContextListener {
         })
     }
     
-    onAnyString(token: ParserItem.C1eStringVal | ParserItem.C2eStringVal) {
+    onAnyString(_token: ParserItem.C1eStringVal | ParserItem.C2eStringVal) {
     }
     
     onPictDimension(token: ParserItem.DdePictVal) {
@@ -125,15 +136,15 @@ export class SemanticTokensWalker implements ICaosContextListener {
         this.tokens.push(tokenWithDescription)
     }
     
-    onCommandToken(token: ParserItem.CommandToken) {
+    onCommandToken(_token: ParserItem.CommandToken) {
         this.checkCancelled();
     }
     
-    onToken(token: ParserItem.TokenVal) {
+    onToken(_token: ParserItem.TokenVal) {
     
     }
     
-    onEqOp(token: ParserItem.EqOp) {
+    onEqOp(_token: ParserItem.EqOp) {
     
     }
     
@@ -181,9 +192,44 @@ export class SemanticTokensWalker implements ICaosContextListener {
     }
     
     onCaos2Comment(token: Caos2Comment): void {
+        const tag = token.tag;
+        if (tag) {
+            this.onCaos2PrayTag(token, tag);
+            return;
+        }
+        const command = token.command;
+        if (command) {
+            this.onCaos2PrayCommand(token, command);
+            return;
+        }
     }
     
-    onComment(token: collectors.ParserItem<any>): void {
+    /**
+     * Mark CAOS2PRAY tags
+     * @param token
+     * @param tag
+     * @private
+     */
+    private onCaos2PrayTag(token: Caos2Comment, tag: string): void {
+        // C1e tags are always marked official
+        
+        let modifiers: string[] = this.isC1e || isOfficialTag(tag)
+            ? [SemanticTokenModifiers.CAOS2PRAY_OFFICIAL]
+            : [];
+        
+        const range = token.token.textRange;
+        this.tokens.push({
+            range: toSemanticRange(range),
+            tokenType: SemanticTokensTypes.CAOS2PRAY_TAG,
+            modifiers
+        });
+    }
+    
+    private onCaos2PrayCommand(_token: Caos2Comment, _command: string): void {
+    
+    }
+    
+    onComment(_token: IParserItem<any>): void {
     }
 }
 
@@ -428,42 +474,49 @@ function convertContext(tokens: SemanticToken[], blockRange?: Range): uinteger[]
         // translate token and modifiers to number representations
         let type = getType(token.tokenType);
         if (type === -1) {
+            console.error("Type token: " + token.tokenType + " is not defined in tokens map");
             continue;
         }
+        
         const range: RangeWithIndex = token.range;
         
         let modifier = token.modifiers.length > 0 ? getModifier(token.modifiers) : 0;
-        let tokenLength = range.endIndex - range.startIndex + 1;
+        let tokenLength = (range.endIndex - range.startIndex) + 1;
+        
         if (prevLine !== range.start.line) {
             prevChar = 0;
         }
-        if (range.start.character < prevChar) {
-            console.error("Tokens do not line up.");
+        
+        if (prevLine == range.start.line && range.start.character < prevChar) {
+            console.error("Semantic tokens out of order. Character start is before previous character");
+            continue;
+        } else if (prevLine > range.start.line) {
+            console.error("Semantic tokens out of order. Token line is before previous line");
+            continue;
         }
-        // const offset = range.start.character + 1;
+        
         let start = range.start.character;
         if (blockRange != null && range.start.line == blockRange.start.line && start < blockRange.start.character) {
             start = blockRange.start.character;
             tokenLength -= (blockRange.start.character - range.start.character);
         }
+        
         let end = range.end.character;
         if (blockRange != null && range.end.line == blockRange.end.line && end > blockRange.end.character) {
             start = blockRange.start.character;
             tokenLength -= (range.end.character - blockRange.end.character);
         }
         
-        const offset = start - prevChar;
         // Semantic token bytes = [line, startOffsetInLine, tokenLength, typeIndexInLegend, modifiers]
         data.push(
             // translate line to deltaLine
             range.start.line! - prevLine,
             // for the same line, translate start to deltaStart
-            offset,
+            range.start.line! == prevLine ? (start - prevChar) : start,
             tokenLength,
             type,
             modifier
         );
-        
         prevChar = start;
         prevLine = token.range.start.line;
     }
@@ -483,7 +536,8 @@ export function getSemanticTokens(variant: GameVariant, text: string | ParseResu
     if (lib == null) {
         throw new Error("CaosLibs is null with variant: " + variant);
     }
-    const listener = new SemanticTokensWalker(lib, cancellationToken);
+    
+    // Parse CAOS
     let result: Nullable<ParseResult>;
     if (Is.parseResult(text)) {
         result = text;
@@ -495,6 +549,8 @@ export function getSemanticTokens(variant: GameVariant, text: string | ParseResu
     if (result == null) {
         throw new Error('Failed to parse CAOS for result');
     }
+    
+    const listener = new SemanticTokensWalker(variant, lib, cancellationToken);
     try {
         walkParseResult(result, listener);
     } catch (e) {
@@ -504,6 +560,7 @@ export function getSemanticTokens(variant: GameVariant, text: string | ParseResu
             throw e;
         }
     }
+    
     let tokens = listener.tokens;
     if (range != null) {
         tokens = tokens.filter((t) => {
@@ -522,7 +579,7 @@ export function getSemanticTokens(variant: GameVariant, text: string | ParseResu
             return (aRange?.start?.character ?? 0) - (bRange?.start?.character ?? 0);
         }
         return (aRange?.start?.line ?? 0) - (bRange?.start?.line ?? 0);
-    })
+    });
 }
 
 /**
