@@ -178,17 +178,21 @@ connection.onInitialize((params: InitializeParams) => {
     }
     
     // Register providers
-    registerInlayHintsProvider(clientCapabilities.hasInlayHintsCapabilities);
-    registerCompletionProvider(!noCompletions).then(() => undefined);
-    registerSemanticTokenHighlighter(clientCapabilities.hasSemanticTokensCapabilities);
-    registerGotoDefinitionsProvider(clientCapabilities.hasGotoDefinition);
-    registerFormattingProvider(clientCapabilities.hasFormatting);
-    registerHoverDocumentationProvider(clientCapabilities.hasHoverCapabilities);
-    registerDocumentSymbolProvider(clientCapabilities.hasSymbolsCapabilities);
-    if (clientCapabilities.hasWorkspaceFolderCapability) {
-        connection.workspace.onDidChangeWorkspaceFolders(_event => {
-            // connection.console.log('Workspace folder change event received.');
-        });
+    registerCaosInlayHintsProvider(clientCapabilities.hasInlayHintsCapabilities);
+    registerCaosCompletionProvider(!noCompletions)
+        .then(() => undefined);
+    registerCaosSemanticTokenHighlighter(clientCapabilities.hasSemanticTokensCapabilities);
+    registerCaosGotoDefinitionsProvider(clientCapabilities.hasGotoDefinition);
+    registerCaosFormattingProvider(clientCapabilities.hasFormatting);
+    registerCaosHoverDocumentationProvider(clientCapabilities.hasHoverCapabilities);
+    registerCaosDocumentSymbolProvider(clientCapabilities.hasSymbolsCapabilities);
+    registerSettingsChangeListener(clientCapabilities.hasConfigurationCapability);
+    
+    
+    if (clientCapabilities.hasWatchFilesCapabilities) {
+        console.log("Has watch files capabilities");
+        registerFilesWatcher(clientCapabilities.hasWatchFilesCapabilities)
+            .then()
     }
     
     if (clientCapabilities.hasConfigurationCapability) {
