@@ -1,0 +1,17 @@
+import {DocumentUri, Range} from "vscode-languageserver";
+import {Nullable} from "@bedalton/extension-util"
+import {CommandCall} from "@bedalton/caos-util";
+
+
+export type IndexedItemLocation = {
+    documentUri: DocumentUri;
+    range: Range;
+    text?: string;
+}
+
+
+export interface CommandIndex {
+    getUsages(key?: Nullable<string>): IndexedItemLocation[];
+    index(documentUri: DocumentUri, call: CommandCall, recursive: boolean);
+    clearInDocument(documentUri: DocumentUri, range?: Nullable<Range>);
+}
