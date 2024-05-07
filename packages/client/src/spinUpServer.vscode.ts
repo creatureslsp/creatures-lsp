@@ -1,8 +1,10 @@
-import {ExtensionContext, TextDocument, Uri, workspace} from "vscode";
+import {ExtensionContext, TextDocument, workspace} from "vscode";
 import {LanguageClient, LanguageClientOptions, ServerOptions, TransportKind} from "vscode-languageclient/node";
 import path from "path";
 import {getOuterMostWorkspaceFolder} from "./workspace-folders";
 import {hasClient, putClient, registerClientDisposable} from "./clients";
+import {pushDisposable} from "./disposables";
+import {initVfs} from "./vfs";
 
 
 let _nextListenerId = 0;
@@ -49,7 +51,9 @@ export async function spinUpServer(context: ExtensionContext, document: TextDocu
             serverOptions,
             untitledFileClientOptions
         );
-        defaultClient.start();
+        
+        await defaultClient.start();
+        pushDisposable(initVfs(defaultClient));
         return;
     }
     let folder = workspace.getWorkspaceFolder(uri);
@@ -94,5 +98,6 @@ export async function spinUpServer(context: ExtensionContext, document: TextDocu
         registerClientDisposable(client);
         putClient(folderURI, client);
         await client.start();
+        pushDisposable(initVfs(client));
     }
 }

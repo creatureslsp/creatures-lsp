@@ -84,11 +84,40 @@ connection.onInitialize((params: InitializeParams) => {
         !!capabilities.textDocument &&
             !!capabilities.textDocument.documentSymbol
     );
-
+    clientCapabilities.hasWatchFilesCapabilities = (
+        !!capabilities.workspace || !!capabilities.workspace!.didChangeWatchedFiles
+    )
+    
+    const glob = "**/*.{" + [
+        "cos",
+        "catalogue",
+        "att",
+        "spr",
+        "s16",
+        "c16",
+        "blk",
+        "att"
+    ].map((extension) => {
+        let out = "";
+        for (let char of extension) {
+            out += (char >= "0" && char <= "9") ? char : ("[" + char.toUpperCase() + char +"]");
+        }
+        return out;
+    }).join(",") + "}";
+    
+    const filters:FileOperationFilter[] = [
+        {
+            pattern: {
+                glob: glob,
+                matches: "file"
+            },
+        },
+    ]
+    
     const result: InitializeResult = {
         capabilities: {
             textDocumentSync: TextDocumentSyncKind.Incremental,
-
+            
             // Register completion if client supports it
             completionProvider: !clientCapabilities.hasCompletionCapabilities || noCompletions ? undefined : {
                 // triggerCharacters: triggerCharacters,
@@ -117,6 +146,19 @@ connection.onInitialize((params: InitializeParams) => {
 
             // Server and client support GOTO definitions
             definitionProvider: clientCapabilities.hasGotoDefinition
+            workspace: {
+                fileOperations: {
+                    didDelete: {
+                        filters
+                    },
+                    didRename: {
+                        filters
+                    },
+                    didCreate: {
+                        filters
+                    }
+                }
+            }
         }
     };
 
@@ -142,12 +184,20 @@ connection.onInitialize((params: InitializeParams) => {
             // connection.console.log('Workspace folder change event received.');
         });
     }
+    
     if (clientCapabilities.hasConfigurationCapability) {
         // Register for all configuration changes.
         // noinspection JSIgnoredPromiseFromCall
         // connection.client.register(DidChangeConfigurationNotification.type, undefined);
         // registerSettingsChangeListener();
     }
+    connection.onRequest("caos/vfs-did-init", async () => {
+        console.log("VFS did init")
+        await setWorkspaceFolders(params.workspaceFolders ?? []);
+        registerWorkspaceChangeHandlers();
+    });
+    
+    console.log("GLOB: " + glob);
     return result;
 });
 
@@ -182,19 +232,10 @@ try {
 
 
 try {
-// Called when file system changed
-    connection.onDidChangeWatchedFiles(_change => {
-        // Monitored files that have changed in VS Code
-    });
-} catch(e) {
-    console.error("Failed to set connection.onDidChangeWatchedFiles(); ", JSON.stringify(e));
-}
-
-try {
 // Make the text document manager listen on the connection
 // for open, change and close text document events
     documents.listen(connection);
-} catch(e) {
+} catch (e) {
     console.error("Failed on documents.listen(); ", JSON.stringify(e));
 }
 
@@ -202,7 +243,7 @@ try {
 try {
 // Listen on the connection
     connection.listen();
-} catch(e) {
+} catch (e) {
     console.error("Failed on connect.listen(); ", JSON.stringify(e));
 }
 

@@ -16,7 +16,8 @@ export const clientCapabilities = {
     hasInlayHintsCapabilities: false,
     hasCompletionCapabilities: false,
     hasHoverCapabilities: false,
-    hasSymbolsCapabilities: false
+    hasSymbolsCapabilities: false,
+    hasWatchFilesCapabilities: false,
 };
 
 const DEFAULT_INDENT_COMMENTS = true;

@@ -21,6 +21,7 @@ export function activate(context: vscode.ExtensionContext) {
     
     const outputChannel: OutputChannel = window.createOutputChannel('caos-language-server');
     
+    const watcher = getWatcher();
     
     // Options to control the language client
     const clientOptions: LanguageClientOptions = {
@@ -30,8 +31,8 @@ export function activate(context: vscode.ExtensionContext) {
             // noCompletions: true
         },
         synchronize: {
-            // Notify the server about file changes to '.cos files contained in the workspace
-            fileEvents: workspace.createFileSystemWatcher('**/*.cos')
+            // Notify the server about file changes to creatures files contained in the workspace
+            fileEvents: watcher,
         },
         outputChannel: outputChannel
     };
@@ -40,7 +41,7 @@ export function activate(context: vscode.ExtensionContext) {
     function didOpenTextDocument(document: TextDocument) {
         spinUpServer(context, document, defaultClient, clientOptions)
             .then (() => {
-                console.log("Spun up server for CAOS document in node");
+               Log.i(document.uri, "Spun up server for CAOS document in node");
             });
     }
     
@@ -58,6 +59,15 @@ export function activate(context: vscode.ExtensionContext) {
                 deleteClient(folder.uri.toString());
                 await client.stop();
             }
+            client?.sendRequest("vfs:workspace/removed", {workspace: JSON.stringify(folder)});
+        }
+        for (const folder of event.added) {
+            const client = getClient(folder.uri.toString());
+            if (client) {
+                deleteClient(folder.uri.toString());
+                await client.stop();
+            }
+            client?.sendRequest("vfs:workspace/removed", {workspace: JSON.stringify(folder)});
         }
     }));
     
@@ -67,7 +77,7 @@ export function activate(context: vscode.ExtensionContext) {
     
     pushDisposable(vscode.languages.registerDocumentSymbolProvider({language: 'caos'}, new CaosSymbolProvider()));
     
-    
+    pushDisposable(watcher);
 }
 
 
@@ -83,4 +93,37 @@ export async function deactivate(): Promise<void> {
     // After all clients are stopped, close all disposables
     await Promise.all(promises);
     return closeDisposables();
+}
+
+let watcher: Nullable<FileSystemWatcher> = null;
+
+function getWatcher(): FileSystemWatcher {
+    if (watcher) {
+        return watcher;
+    }
+    const filesWatcherExtensions = [
+        "cos",
+        "spr",
+        "s16",
+        "c16",
+        "blk",
+        "att",
+        "catalogue",
+        "wav",
+        "mng",
+        "caoslint.json",
+    ].map (ext => {
+        let out = ""
+        for (let i=0; i < ext.length; i++) {
+            const char = ext[i]
+            if (char >= '0' && char <= '9') {
+                out += char;
+            } else {
+                out += "[" + char.toUpperCase() + char + "]";
+            }
+        }
+        return out;
+    }).join(",");
+    console.log()
+    return watcher = vscode.workspace.createFileSystemWatcher("**/*.{" + filesWatcherExtensions + "}");
 }

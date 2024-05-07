@@ -3,6 +3,7 @@
 import {Nullable} from "@bedalton/extension-util";
 import {TextDocuments} from "vscode-languageserver/node";
 import {TextDocument} from "vscode-languageserver-textdocument";
+import {readTextFile} from "./files";
 
 
 
