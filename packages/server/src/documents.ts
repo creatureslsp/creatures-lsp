@@ -31,6 +31,14 @@ export function getDocument(uri: string): Nullable<TextDocument> {
     }
 }
 
+export async function getDocumentText(uri: string): Promise<Nullable<string>> {
+    try {
+        return await readTextFile(uri);
+    } catch (e) {
+        console.error("Failed to get document " + uri + "; "  + e);
+    }
+}
+
 export function getDocuments(): TextDocuments<TextDocument> {
     return documents;
 }
