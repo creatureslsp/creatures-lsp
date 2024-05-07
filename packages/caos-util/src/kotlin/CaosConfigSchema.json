@@ -1,0 +1,182 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Caos Linter/Formatter Config",
+  "description": "Configuration for bedalton's CAOS linter and formatter",
+  "type": "object",
+  "properties": {
+    "format": {
+      "description": "CAOS formatting options",
+      "type": "object",
+      "properties": {
+        "tabSize": {
+          "description": "Tab size in spaces",
+          "type": "integer",
+          "exclusiveMinimum": 1,
+          "default": 4
+        },
+        "preferTabs": {
+          "description": "Whether to prefer tabs over spaces",
+          "type": "boolean",
+          "required": [true, false],
+          "default": true
+        },
+        "trimTrailingWhitespace": {
+          "description": "Trim trailing whitespace from end of line\nTrue if C1/C2; False otherwise",
+          "type": "boolean",
+          "default": null
+        },
+        "insertFinalNewline": {
+          "description": "Ensure file ends with a newline character",
+          "type": "boolean",
+          "default": false
+        },
+        "trimFinalNewline": {
+          "description": "Ensure file does not end with a newline character; True if C1/C2, false otherwise",
+          "type": "boolean",
+          "default": null
+        },
+        "keepSameLine": {
+          "description": "Whether to allow multiple commands on the same line; False if C1/C2; True otherwise",
+          "type": "boolean",
+          "default": null
+        },
+        "minNewlines": {
+          "description": "Minimum number of newlines to require between commands",
+          "type": "integer",
+          "min": 0,
+          "default": 0
+        },
+        "maxNewlines": {
+          "description": "The maximum of new lines to allow between commands; -1 for near unlimited",
+          "type": "integer",
+          "min": -1,
+          "default": -1
+        },
+        "newlineChar": {
+          "description": "Character(s) to use as newlines when formatting",
+          "type": "string",
+          "default": "\r\n"
+        },
+        "indentComments": {
+          "description": "Use same indent for comments as commands. False does not change indents",
+          "type": "boolean",
+          "default": true
+        },
+        "continuationIndex": {
+          "description": "Spaces to indent parameters on multiple lines; Default Max of (1 or (indent spaces / 2))",
+          "type": "integer",
+          "min": 1,
+          "default": null
+        },
+        "spaceBetweenByteStingBrackets": {
+          "description": "Add spaces between frame numbers and brackets; i.e [ 1 2 3 ] vs [1 2 3]",
+          "type": "boolean",
+          "default": false
+        },
+        "forceMinBlankLinesAfterComments": {
+          "description": "Whether to enforce minimum newline count after comments, as minimum newlines do not normally apply",
+          "type": "boolean",
+          "default": false
+        }
+      }
+    },
+    "lint": {
+      "type": "object",
+      "properties": {
+        "whitespace": {
+          "description": "Whitespace formatting violations will be marked as errors",
+          "type": "object",
+          "properties": {
+            "tabSize": {
+              "description": "Tab size in spaces",
+              "$ref": "#/definitions/severity"
+            },
+            "preferTabs": {
+              "description": "Whether to prefer tabs over spaces",
+              "$ref": "#/definitions/severity"
+            },
+            "trimTrailingWhitespace": {
+              "description": "Trim trailing whitespace from end of line\nTrue if C1/C2; False otherwise",
+              "$ref": "#/definitions/severity"
+            },
+            "insertFinalNewline": {
+              "description": "Ensure file ends with a newline character",
+              "$ref": "#/definitions/severity",
+            },
+            "trimFinalNewline": {
+              "description": "Ensure file does not end with a newline character; True if C1/C2, false otherwise",
+              "$ref": "#/definitions/severity"
+            },
+            "keepSameLine": {
+              "description": "Whether to allow multiple commands on the same line; False if C1/C2; True otherwise",
+              "$ref": "#/definitions/severity"
+            },
+            "minNewlines": {
+              "description": "Minimum number of newlines to require between commands",
+              "$ref": "#/definitions/severity",
+            },
+            "maxNewlines": {
+              "description": "The maximum of new lines to allow between commands; -1 for near unlimited",
+              "$ref": "#/definitions/severity"
+            },
+            "newlineChar": {
+              "description": "Character(s) to use as newlines when formatting",
+              "$ref": "#/definitions/severity"
+            },
+            "indentComments": {
+              "description": "Use same indent for comments as commands. False does not change indents",
+              "$ref": "#/definitions/severity"
+            },
+            "continuationIndex": {
+              "description": "Spaces to indent parameters on multiple lines; Default Max of (1 or (indent spaces / 2))",
+              "$ref": "#/definitions/severity"
+            },
+            "spaceBetweenByteStingBrackets": {
+              "description": "Add spaces between frame numbers and brackets; i.e [ 1 2 3 ] vs [1 2 3]",
+              "$ref": "#/definitions/severity"
+            },
+            "forceMinBlankLinesAfterComments": {
+              "description": "Whether to enforce minimum newline count after comments, as minimum newlines do not normally apply",
+              "$ref": "#/definitions/severity"
+            }
+          }
+        },
+        "blacklist": {
+          "description": "Illegal commands. An error will be thrown when used",
+          "type": "array",
+          "items": [
+            {
+              "description": "CAOS command literal",
+              "type": "string",
+              "pattern": "([^\\s]{4}|[^\\s]{4}\\s+[^\\s]{4}|[^\\s]{4}\\s+[^\\s]{4}\\s+[^\\s]{4})"
+            }, {
+              "description": "Command regex pattern",
+              "type": "string",
+              "pattern": ".*([*^.?]+|(\\{[0-9,]+\\s*[0-9]*\\})|\\(.+\\)|\\[.+\\])+.*"
+            }
+          ]
+        },
+        "warnlist": {
+          "description": "Commands to show warnings on when used",
+          "type": "array",
+          "items": [
+            {
+              "description": "CAOS command literal",
+              "type": "string",
+              "pattern": "([^\\s]{4}|[^\\s]{4}\\s+[^\\s]{4}|[^\\s]{4}\\s+[^\\s]{4}\\s+[^\\s]{4})"
+            }, {
+              "description": "Command regex pattern",
+              "type": "string",
+              "pattern": ".*([*^.?]+|(\\{[0-9,]+\\s*[0-9]*\\})|\\(.+\\)|\\[.+\\])+.*"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "definitions": {
+    "severity": {
+      "enum": ["false", "warning", "error"]
+    }
+  }
+}

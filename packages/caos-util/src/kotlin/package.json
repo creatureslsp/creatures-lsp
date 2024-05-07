@@ -1,0 +1,17 @@
+{
+  "name": "caos-util",
+  "version": "1.0.0",
+  "main": "caos-util.js",
+  "types": "caos-util.d.ts",
+  "devDependencies": {
+    "typescript": "5.0.4"
+  },
+  "dependencies": {
+    "format-util": "^1.0.5"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
+  "description": "A library for validating and working with CAOS files for the creatures games",
+  "author": "bedalton"
+}
