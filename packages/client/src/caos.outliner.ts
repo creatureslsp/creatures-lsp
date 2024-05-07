@@ -11,8 +11,7 @@ import {DocumentSymbol as IDocumentSymbol} from "vscode-languageserver-types";
 import {getVariant} from "./settings";
 import {toVsCodeRange} from "./helpers";
 import {Log} from "./log";
-const getDocumentSymbolsFromText = hints.getDocumentSymbolsFromText;
-
+import {getCaosDocumentSymbols} from "@bedalton/caos-util/document-symbols-provider";
 
 type Symbols = SymbolInformation[] | DocumentSymbol[];
 
@@ -33,7 +32,7 @@ export class CaosSymbolProvider implements DocumentSymbolProvider {
             const text = document.getText();
             let symbolsRaw: IDocumentSymbol[]
             try {
-                symbolsRaw = getDocumentSymbolsFromText(variant, text, false);
+                symbolsRaw = getCaosDocumentSymbols(variant, text);
             } catch (e) {
                 const error = e instanceof Error ? (e.message + "\n" + e.stack) : e;
                 Log.e(document.uri, "Failed to get GOTO; ", error);

@@ -11,7 +11,6 @@ import {registerCaosCompletionProvider} from "./caos/register.completions";
 import {registerCaosHoverDocumentationProvider} from "./caos/register.hover-documentation";
 import {registerCaosInlayHintsProvider} from "./caos/register.inlay-hints";
 import {registerCaosGotoDefinitionsProvider} from "./caos/register.goto";
-import {registerCaosDocumentSymbolProvider} from "./caos/register.breadcrumbs";
 import {connection} from './connection.vscode';
 import {registerSettingsChangeListener} from "./SettingsChangeHandler";
 import {registerFilesWatcher} from "./files";
@@ -185,7 +184,6 @@ connection.onInitialize((params: InitializeParams) => {
     registerCaosGotoDefinitionsProvider(clientCapabilities.hasGotoDefinition);
     registerCaosFormattingProvider(clientCapabilities.hasFormatting);
     registerCaosHoverDocumentationProvider(clientCapabilities.hasHoverCapabilities);
-    registerCaosDocumentSymbolProvider(clientCapabilities.hasSymbolsCapabilities);
     registerSettingsChangeListener(clientCapabilities.hasConfigurationCapability);
     
     
