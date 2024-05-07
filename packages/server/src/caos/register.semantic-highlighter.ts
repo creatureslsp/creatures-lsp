@@ -1,19 +1,19 @@
-import {connection} from './connection.vscode';
+import {connection} from '../connection.vscode';
 import {HandlerResult, SemanticTokens} from "vscode-languageserver";
 import {getDocumentSemanticTokens} from "@bedalton/caos-util/semantic-highlighter";
-import {unpack} from "./server.utils";
+import {unpack} from "../server.utils";
 
 
 /**
  * Initialize semantic token highlighter if needed
  * @param use
  */
-export function registerSemanticTokenHighlighter(use: boolean) {
+export function registerCaosSemanticTokenHighlighter(use: boolean) {
     if (!use) {
         return;
     }
 // ADD semantic highlighting
-    const disposable = connection.languages.semanticTokens.on((params, token: any): HandlerResult<SemanticTokens, void> => {
+    return connection.languages.semanticTokens.on((params, token: any): HandlerResult<SemanticTokens, void> => {
         return new Promise<SemanticTokens>(async (resolve) => {
             const document = await unpack(params);
             if (document == null) {
@@ -27,6 +27,5 @@ export function registerSemanticTokenHighlighter(use: boolean) {
             return resolve(semanticTokens);
         });
     });
-    return disposable;
 }
 

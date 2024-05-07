@@ -1,9 +1,9 @@
 import {DocumentFormattingParams, TextEdit} from "vscode-languageserver";
 import {format} from "@bedalton/caos-util/formatter"
-import { connection } from './connection.vscode';
-import {unpack} from "./server.utils";
+import {connection} from '../connection.vscode';
+import {unpack} from "../server.utils";
 import {CaosFormatterOptions} from "@bedalton/caos-util";
-import {showMessage} from "./showMessage";
+import {showMessage} from "../showMessage";
 
 
 /**
@@ -41,12 +41,11 @@ async function onFormatCallback(params: DocumentFormattingParams): Promise<TextE
  * Registers an LSP formatting function if needed
  * @param init
  */
-export function registerFormattingProvider(init: boolean) {
+export function registerCaosFormattingProvider(init: boolean) {
     if (!init) {
         return
     }
-    
-    const disposable = connection.onDocumentFormatting(onFormatCallback);
-    return disposable
+
+    return connection.onDocumentFormatting(onFormatCallback)
 }
 

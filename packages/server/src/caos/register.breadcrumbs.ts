@@ -1,15 +1,16 @@
 import {Disposable} from "vscode-languageserver";
-import {connection} from "./connection.vscode";
+import {DocumentSymbol as IDocSymbol} from "vscode-languageserver-types";
+import {connection} from "../connection.vscode";
 import {DocumentSymbol, DocumentSymbolParams, SymbolInformation} from "vscode-languageserver-protocol";
-import {Nullable, com, DocumentSymbol as IDocSymbol} from "@bedalton/caos-util";
-import hints = com.bedalton.creatures.caos.hints;
-import {CaosDocument, unpack} from "./server.utils";
-import getDocumentSymbolsFromText = hints.getDocumentSymbolsFromText;
+import {hints} from "@bedalton/caos-util";
+import {Nullable} from "@bedalton/extension-util";
+import {CaosDocument, unpack} from "../server.utils";
+const getDocumentSymbolsFromText = hints.getDocumentSymbolsFromText;
 
 
 type Symbols = SymbolInformation[] | DocumentSymbol[];
 
-async function getDocumentSymbolsFromParams(handler: DocumentSymbolParams): Promise<Nullable<Symbols>> {
+async function getCaosDocumentSymbolsFromParams(handler: DocumentSymbolParams): Promise<Nullable<Symbols>> {
     const result: Nullable<CaosDocument> = await unpack(handler.textDocument.uri);
     if (!result) {
         return undefined;
@@ -20,14 +21,13 @@ async function getDocumentSymbolsFromParams(handler: DocumentSymbolParams): Prom
     console.log("Symbols in Server: " + symbols.map((s: IDocSymbol) => s.name).join())
 }
 
-export function registerDocumentSymbolProvider(use: boolean): Disposable {
+export function registerCaosDocumentSymbolProvider(use: boolean): Disposable {
     if (!use) {
         return {
             dispose: () => {}
         }
     }
-    
-    const disposable = connection.onDocumentSymbol(getDocumentSymbolsFromParams);
-    return disposable
+
+    return connection.onDocumentSymbol(getCaosDocumentSymbolsFromParams)
 }
 
