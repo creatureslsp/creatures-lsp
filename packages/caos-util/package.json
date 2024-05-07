@@ -17,6 +17,7 @@
     "./constants": "./lib/constants.js",
     "./context-walker": "./lib/context-walker.js",
     "./cursor-data": "./lib/cursor-data.js",
+    "./document-symbols-provider": "./lib/document-symbols-provider.js",
     "./formatter": "./lib/formatter.js",
     "./goto": "./lib/goto.js",
     "./hover-documentation": "./lib/hover-documentation.js",
@@ -58,6 +59,9 @@
       ],
       "./cursor-data": [
         "./lib/cursor-data.d.ts"
+      ],
+      "./document-symbols-provider": [
+        "./lib/document-symbols-provider.d.ts"
       ],
       "./formatter": [
         "./lib/formatter.d.ts"

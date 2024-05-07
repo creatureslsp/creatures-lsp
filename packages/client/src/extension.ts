@@ -4,7 +4,7 @@ import * as vscode from 'vscode';
 import {FileSystemWatcher, OutputChannel, TextDocument, window, workspace} from 'vscode';
 import {LanguageClient, LanguageClientOptions} from "vscode-languageclient/node";
 import {CaosInlayHintsProvider} from "./inlay-hints";
-import {CaosSymbolProvider} from "./breadcrumbs";
+import {CaosSymbolProvider} from "./caos.outliner";
 import {spinUpServer} from "./spinUpServer.vscode";
 import {closeDisposables, pushDisposable} from "./disposables";
 import {deleteClient, getClient, getClients} from "./clients";
@@ -95,7 +95,7 @@ export async function deactivate(): Promise<void> {
     return closeDisposables();
 }
 
-let watcher: Nullable<FileSystemWatcher> = null;
+let watcher: Nullable<FileSystemWatcher> = undefined;
 
 function getWatcher(): FileSystemWatcher {
     if (watcher) {
