@@ -95,7 +95,7 @@ async function getCommandValueCompletions(
         return getFilenameCompletionPaths(directory, await getFiles(["cos", "caos"]));
     }
     
-    if (command === "LINK") {
+    if (command === "LINK" || command === "JOIN") {
         const caosFiles = (getCommandValues(previousCommands, "LINK"))
             .map((s) => s.toLowerCase());
         caosFiles.push(thisFileName.toLowerCase());

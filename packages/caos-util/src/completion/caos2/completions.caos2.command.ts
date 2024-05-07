@@ -52,7 +52,7 @@ function getC2CommandCompletions(commandsSoFar: string[], token: string): string
         "Attach",
         "Depends",
         "Inline",
-        "Link"
+        "Link",
     ];
     if (lowercase) {
         fileCommands = fileCommands.map(c => c.toLowerCase());
@@ -77,7 +77,8 @@ function getC3DSCommandCompletions(commandsSoFar: string[], token: string): stri
         "Attach",
         "Depends",
         "Inline",
-        "Link"
+        "Link",
+        "Join"
     ];
     if (lowercase) {
         fileCommands = fileCommands.map(c => c.toLowerCase());
