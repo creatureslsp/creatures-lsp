@@ -1,10 +1,9 @@
 /* eslint-disable eqeqeq */
 import {ERROR_TYPE_TYPE_ERROR} from "@bedalton/caos-util/constants";
-import {com, GameVariant, Nullable} from "@bedalton/caos-util";
-import collectors = com.bedalton.creatures.caos.collectors;
+import {collectors, GameVariant, IParserItem, ParseResult} from "@bedalton/caos-util";
 import {hasSubroutine} from "@bedalton/caos-util/subroutines";
 import {Diagnostic} from "vscode-languageserver/node";
-import {offsetRange, sortTextRanges} from "@bedalton/caos-util/position-utils";
+import {Nullable, offsetRange, sortTextRanges} from "@bedalton/extension-util";
 import {DiagnosticSeverity} from "vscode-languageserver-types";
 import {TextDocument} from "vscode-languageserver-textdocument";
 import {CAOS_LANGUAGE_ID, CaosSettings, getDocumentSettings} from "./settings";
@@ -143,7 +142,7 @@ async function validateParserResult(
         }
     }
     if (strictSpaces) {
-        let last: Nullable<collectors.ParserItem<any>> = null;
+        let last: Nullable<IParserItem<any>> = null;
         for (const item of parseResult.items.sort((a, b) => sortTextRanges(a.textRange, b.textRange))) {
             if (last != null) {
                 const error = getSpacingError(last, item);
@@ -158,7 +157,7 @@ async function validateParserResult(
 }
 
 
-function getSpacingError(last: ParserItem<any>, item: ParserItem<any>): Nullable<Diagnostic> {
+function getSpacingError(last: IParserItem<any>, item: IParserItem<any>): Nullable<Diagnostic> {
     if (last.textRange.end.line !== item.textRange.start.line) {
         return null;
     }

@@ -1,7 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {com, ICaosContextListener} from "./caos-util";
-import collectors = com.bedalton.creatures.caos.collectors;
+import {CommandCall, ICaosContextListener, IParserItem, ParseResult, ParserItem} from "./caos-util";
 import {
     BINARY_PARSER_TYPE,
     BRACKET_STRING_PARSER_TYPE,
@@ -22,8 +21,6 @@ import {
     tok,
     TOKEN_PARSER_TYPE
 } from "./constants";
-import ParseResult = collectors.ParseResult;
-import ParserItem = collectors.ParserItem;
 
 
 /**
@@ -33,7 +30,7 @@ import ParserItem = collectors.ParserItem;
  */
 export function walkParseResult(result: ParseResult, listener: ICaosContextListener) {
     
-    // const items = result.items.sort((a: ParserItem<any>, b: ParserItem<any>) => {
+    // const items = result.items.sort((a: IParserItem<any>, b: IParserItem<any>) => {
     //     const aRange = a.textRange;
     //     const bRange = b.textRange;
     //     if (aRange?.start.line === bRange?.end.line) {
@@ -112,61 +109,61 @@ export class CaosContextListenerBase implements ICaosContextListener {
     
     /**
      * Command call cannot be automatically called
-     * @param call
+     * @param _call
      */
-    onCommandCall(call: collectors.CommandCall) {
+    onCommandCall(_call: CommandCall) {
         throw new Error("Method not implemented.");
     }
     
-    onAnyString(token: collectors.ParserItem.C2eStringVal | collectors.ParserItem.C1eStringVal) {
+    onAnyString(_token: ParserItem.C2eStringVal | ParserItem.C1eStringVal) {
     }
     
-    onBinary(token: collectors.ParserItem.BinaryVal) {
+    onBinary(_token: ParserItem.BinaryVal) {
     }
     
-    onByteString(token: collectors.ParserItem.ByteString) {
+    onByteString(_token: ParserItem.ByteString) {
     }
     
-    onC1eString(token: collectors.ParserItem.C1eStringVal) {
+    onC1eString(_token: ParserItem.C1eStringVal) {
     }
     
-    onC2eString(token: collectors.ParserItem.C2eStringVal) {
+    onC2eString(_token: ParserItem.C2eStringVal) {
     }
     
-    onChar(token: collectors.ParserItem.CharVal) {
+    onChar(_token: ParserItem.CharVal) {
     }
     
-    onCommandToken(token: collectors.ParserItem.CommandToken) {
+    onCommandToken(_token: ParserItem.CommandToken) {
     }
     
-    onEqJoin(token: collectors.ParserItem.EqJoin) {
+    onEqJoin(_token: ParserItem.EqJoin) {
     }
     
-    onEqOp(token: collectors.ParserItem.EqOp) {
+    onEqOp(_token: ParserItem.EqOp) {
     }
     
-    onFloat(token: collectors.ParserItem.FloatVal) {
+    onFloat(_token: ParserItem.FloatVal) {
     }
     
-    onIndexedVar(token: collectors.ParserItem.IndexedVar) {
+    onIndexedVar(_token: ParserItem.IndexedVar) {
     }
     
-    onInt(token: collectors.ParserItem.IntVal) {
+    onInt(_token: ParserItem.IntVal) {
     }
     
-    onPictDimension(token: collectors.ParserItem.DdePictVal) {
+    onPictDimension(_token: ParserItem.DdePictVal) {
     }
     
-    onToken(token: collectors.ParserItem.TokenVal) {
+    onToken(_token: ParserItem.TokenVal) {
     }
     
-    onPlaceholderText(token: collectors.ParserItem.AutocompleteHint) {
+    onPlaceholderText(_token: ParserItem.AutocompleteHint) {
     }
     
-    onComment(token: collectors.ParserItem<any>) {
+    onComment(_token: IParserItem<any>) {
     }
     
-    onCaos2Comment(token: collectors.ParserItem<any>) {
+    onCaos2Comment(_token: IParserItem<any>) {
     }
     
 }

@@ -1,7 +1,7 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import {OutputChannel, TextDocument, window, workspace} from 'vscode';
+import {FileSystemWatcher, OutputChannel, TextDocument, window, workspace} from 'vscode';
 import {LanguageClient, LanguageClientOptions} from "vscode-languageclient/node";
 import {CaosInlayHintsProvider} from "./inlay-hints";
 import {CaosSymbolProvider} from "./breadcrumbs";
@@ -9,6 +9,8 @@ import {spinUpServer} from "./spinUpServer.vscode";
 import {closeDisposables, pushDisposable} from "./disposables";
 import {deleteClient, getClient, getClients} from "./clients";
 import {registerCommands} from "./commands/register-commands";
+import {Nullable} from "@bedalton/extension-util";
+import {Log} from "./log";
 
 let defaultClient: LanguageClient;
 

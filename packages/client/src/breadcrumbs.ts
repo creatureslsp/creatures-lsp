@@ -4,13 +4,14 @@ import {
     DocumentSymbolProvider,
     ProviderResult,
     SymbolInformation,
-    TextDocument
+    TextDocument,
 } from "vscode";
-import {GameVariant, com, DocumentSymbol as IDocumentSymbol} from "@bedalton/caos-util";
-import hints = com.bedalton.creatures.caos.hints;
+import {GameVariant, hints} from "@bedalton/caos-util";
+import {DocumentSymbol as IDocumentSymbol} from "vscode-languageserver-types";
 import {getVariant} from "./settings";
 import {toVsCodeRange} from "./helpers";
-import getDocumentSymbolsFromText = hints.getDocumentSymbolsFromText;
+import {Log} from "./log";
+const getDocumentSymbolsFromText = hints.getDocumentSymbolsFromText;
 
 
 type Symbols = SymbolInformation[] | DocumentSymbol[];

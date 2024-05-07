@@ -1,8 +1,6 @@
-import {GameVariant, com, Nullable} from "./caos-util";
-import libs = com.bedalton.creatures.caos.libs;
-import ICaosParameter = libs.ICaosParameter;
-import getValueTypeName = libs.getValueTypeName;
-import ICaosCommand = libs.ICaosCommand;
+import {libs, GameVariant, ICaosCommand, ICaosParameter} from "./caos-util";
+import {Nullable} from "@bedalton/extension-util";
+const getValueTypeName = libs.getValueTypeName;
 
 function wrapParameter(parameter: string) : string {
     if (parameter == null) {

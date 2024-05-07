@@ -78,7 +78,7 @@ function isAnyType(type: number): boolean {
  * @param other
  */
 export function isSimilarType(aType: number, other: number): boolean {
-    if (aType === null || other === null) {
+    if (aType == null || other == null) {
         return true;
     }
     if (aType === other) {

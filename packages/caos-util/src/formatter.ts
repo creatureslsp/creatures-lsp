@@ -1,8 +1,7 @@
 /* eslint-disable eqeqeq */
 // noinspection JSUnusedLocalSymbols,GrazieInspection
 
-import {GameVariant, com, MessageType, CaosFormatterOptions} from "./caos-util";
-import formatter = com.bedalton.creatures.caos.formatter;
+import {GameVariant, formatter, MessageType, CaosFormatterOptions} from "./caos-util";
 import {TextEdit} from "vscode-languageserver-types";
 
 
@@ -152,7 +151,7 @@ export function format(
 //
 // function formatComment(
 //     changes: TextEdit[],
-//     item: ParserItem<any>,
+//     item: CaosParserItem<any>,
 //     tabChar: string,
 //     state: State,
 //     indentComments: boolean,

@@ -10,12 +10,12 @@ import {
     WorkspaceConfiguration
 } from "vscode"
 import {Range} from "vscode-languageserver";
-import {com, GameVariant, Nullable} from '@bedalton/caos-util';
-import parseCaos = com.bedalton.creatures.caos.collectors.parseCaos;
-import hints = com.bedalton.creatures.caos.hints;
-import getInlayOptions = hints.getInlayOptions;
-import ParseResult = com.bedalton.creatures.caos.collectors.ParseResult;
-import parseCaosWithin = com.bedalton.creatures.caos.collectors.parseCaosWithin;
+import {Nullable} from "@bedalton/extension-util";
+import {collectors, hints, GameVariant, ParseResult} from '@bedalton/caos-util';
+import {CheckModule} from '@bedalton/caos-util/check-module';
+import {Log} from "./log";
+const getInlayOptions = hints.getInlayOptions;
+const parseCaosWithin = collectors.parseCaosWithin;
 
 function getSettings(): WorkspaceConfiguration {
     return workspace.getConfiguration('caosScript');

@@ -1,5 +1,4 @@
-
-import { Range as CaosRange } from "@bedalton/caos-util";
+import {Range as CaosRange} from "vscode-languageserver-types";
 import {Position, Range} from "vscode";
 
 export function toVsCodeRange(range: CaosRange): Range {

@@ -1,17 +1,25 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {formatCaosDocumentation, formatCommandStringAsMarkdown} from "./documentation-formattter";
+import {formatCommandStringAsMarkdown} from "./documentation-formattter";
 import {semanticLegend, SemanticTokenModifiers, SemanticTokensMap, SemanticTokensTypes} from "./semantics-legend";
 import {
-    com,
+    Argument,
+    collectors,
+    CommandCall as ICommandCall,
+    Commands,
     GameVariant,
     ICaosContextListener,
-    Nullable,
-    RangeWithIndex
+    ICaosParameter,
+    IParserItem,
+    ParseResult,
+    ParserItem,
 } from "./caos-util";
-import collectors = com.bedalton.creatures.caos.collectors;
-import libs = com.bedalton.creatures.caos.libs;
-import ICommandCall = collectors.CommandCall;
+import {
+    CancellationToken,
+    Nullable,
+    offsetRange,
+    RangeWithIndex,
+} from "@bedalton/extension-util"
 import {
     AGENT_TYPE_ID,
     ANIMATION_TYPE_ID,
@@ -26,21 +34,15 @@ import {
     TOKEN_TYPE_ID,
     VARIABLE_TYPE_ID
 } from "./constants";
-import {
-    Range,
-    SemanticTokens,
-    SemanticTokensLegend,
-    uinteger
-} from "vscode-languageserver-types";
-import Commands = libs.Commands;
-import ParserItem = collectors.ParserItem;
-import {offsetRange} from "./position-utils";
-import ParseResult = collectors.ParseResult;
+import {Range, SemanticTokens, SemanticTokensLegend, uinteger} from "vscode-languageserver-types";
 import {getCommands} from "./commands";
 import {walkParseResult} from "./context-walker";
-import parseCaosWithin = collectors.parseCaosWithin;
-import parseCaos = collectors.parseCaos;
-import {CancellationToken} from "../lib/caos-util";
+import {isOfficialTag} from "./caos2/caos2pray-definitions";
+import {Is} from "./is-util";
+
+const parseCaosWithin = collectors.parseCaosWithin;
+const parseCaos = collectors.parseCaos;
+import Caos2Comment = ParserItem.Caos2Comment;
 
 
 /**
@@ -140,13 +142,13 @@ export class SemanticTokensWalker implements ICaosContextListener {
             range: toSemanticRange(token.textRange),
             tokenType: SemanticTokensTypes.EQ_JOIN_TOKEN,
             modifiers: []
-        })
+        });
     }
     
     onIndexedVar(token: ParserItem.IndexedVar) {
         let description: string;
         let modifier: string;
-        switch (token.type.toUpperCase()) {
+        switch (token.indexedVarType.toUpperCase()) {
             case "VARX":
             case "VAXX":
                 description = "Event variable";
@@ -162,9 +164,9 @@ export class SemanticTokensWalker implements ICaosContextListener {
                 modifier = SemanticTokenModifiers.MVXX_MODIFIER_TOKEN
                 break;
             default:
-                throw Error("Unexpected variable type: '" + token.type + "' encountered");
+                throw new Error("Unexpected variable type: '" + token.indexedVarType + "' encountered");
         }
-        pushToken(this.tokens, toSemanticRange(token.textRange), SemanticTokensTypes.VARIABLE_TOKEN, [modifier], formatCommandStringAsMarkdown(token.type, description));
+        pushToken(this.tokens, toSemanticRange(token.textRange), SemanticTokensTypes.VARIABLE_TOKEN, [modifier], formatCommandStringAsMarkdown(token.indexedVarType, description));
     }
     
     onCommandCall(call: ICommandCall) {
@@ -178,7 +180,7 @@ export class SemanticTokensWalker implements ICaosContextListener {
         pushToken(this.tokens, toSemanticRange(token.textRange), SemanticTokensTypes.PLACEHOLDER_TEXT, []);
     }
     
-    onCaos2Comment(token: collectors.ParserItem<any>): void {
+    onCaos2Comment(token: Caos2Comment): void {
     }
     
     onComment(token: collectors.ParserItem<any>): void {
@@ -302,7 +304,7 @@ function addCommandTokenDecorations(tokens: SemanticToken[], context: ICommandCa
  * @param call
  */
 function addBracketStringDecorations(tokens: SemanticToken[], call: ICommandCall) {
-    const stringParameters = call.command.parameters.filter((p) => {
+    const stringParameters = call.command.parameters.filter((p:ICaosParameter) => {
         const type = p.typeId
         return type === BYTE_STRING_TYPE_ID || type === ANIMATION_TYPE_ID || type === C1_STRING_TYPE_ID
     });
@@ -339,7 +341,7 @@ function addBracketStringDecorations(tokens: SemanticToken[], call: ICommandCall
  * @param call
  */
 function addTokensFromCall(tokens: SemanticToken[], call: ICommandCall) {
-    const tokenArguments = call.arguments.filter(p => p.type == TOKEN_TYPE_ID)
+    const tokenArguments = call.arguments.filter((p: Argument) => p.type == TOKEN_TYPE_ID)
     if (tokenArguments.length == 0) {
         return;
     }
@@ -384,9 +386,8 @@ function pushToken(allTokens: SemanticToken[], ctx: RangeWithIndex, tag: string,
 
 /**
  * Gets the semantic token for a token type name
- * @type {(type: string)=>number}
  */
-function getType(type: string) {
+function getType(type: string): number {
     return SemanticTokensMap.legendMap[type];
 }
 
@@ -484,7 +485,7 @@ export function getSemanticTokens(variant: GameVariant, text: string | ParseResu
     }
     const listener = new SemanticTokensWalker(lib, cancellationToken);
     let result: Nullable<ParseResult>;
-    if (text instanceof ParseResult) {
+    if (Is.parseResult(text)) {
         result = text;
     } else if (range != null) {
         result = parseCaosWithin(variant, text, range.start.line, range.start.character, range.end.line, range.end.character);

@@ -1,7 +1,8 @@
 import {LanguageClient} from "vscode-languageclient/node";
-import {Nullable} from "@bedalton/caos-util";
 import {pushDisposable} from "./disposables";
 import * as vscode from "vscode";
+import {Uri} from "vscode";
+import {Nullable, trimLeadingSlashOnFileSchema} from "@bedalton/extension-util";
 
 export const clients: Map<string, LanguageClient> = new Map();
 

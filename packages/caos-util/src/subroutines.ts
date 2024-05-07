@@ -2,11 +2,8 @@
 // noinspection JSUnusedGlobalSymbols
 
 import {COMMAND_TOKEN_PARSER_TYPE, tok, TOKEN_PARSER_TYPE} from "./constants";
-import {inRange} from "./position-utils";
-import {com} from "./caos-util";
-import collectors = com.bedalton.creatures.caos.collectors;
-import ParserItem = collectors.ParserItem;
-import ParseResult = collectors.ParseResult;
+import {inRange} from "@bedalton/extension-util";
+import {IParserItem, ParseResult} from "./caos-util";
 
 
 const SUBR = tok("subr");

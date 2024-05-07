@@ -1,6 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {Nullable} from "@bedalton/caos-util";
+import {Nullable} from "@bedalton/extension-util";
 import {TextDocuments} from "vscode-languageserver/node";
 import {TextDocument} from "vscode-languageserver-textdocument";
 

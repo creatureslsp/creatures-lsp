@@ -1,6 +1,7 @@
 import {CAOS_LANGUAGE_ID, CaosSettings, getDocumentSettings} from "./settings";
 import {getDocument} from "./documents";
-import {GameVariant, Nullable} from "@bedalton/caos-util";
+import {GameVariant} from "@bedalton/caos-util";
+import {Nullable} from "@bedalton/extension-util";
 
 export type CaosDocument = {
     readonly documentUri: string;

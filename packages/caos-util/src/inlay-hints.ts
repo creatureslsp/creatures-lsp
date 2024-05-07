@@ -1,10 +1,8 @@
 import {InlayHint} from "vscode-languageserver-types";
-import {GameVariant, com, Nullable} from './caos-util';
-import collectors = com.bedalton.creatures.caos.collectors;
-import hints = com.bedalton.creatures.caos.hints;
-import {repack} from "./repack";
-import parseCaos = collectors.parseCaos;
-import ParseResult = collectors.ParseResult;
+import {GameVariant, collectors, hints, ParseResult} from './caos-util';
+import {Nullable, repack} from "@bedalton/extension-util";
+const parseCaos = collectors.parseCaos;
+import {Is} from "./is-util";
 
 
 /**
@@ -20,7 +18,7 @@ export function getInlayHints(
 ): InlayHint[] {
     const parseResult = typeof text === 'string'
         ? parseCaos(variant, text)
-        : (text instanceof ParseResult ? text : null);
+        : (Is.parseResult(text) ? text : null);
     if (parseResult == null) {
         return [];
     }

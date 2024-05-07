@@ -1,5 +1,7 @@
-import {com, ILoggerObject, Nullable, setLogger} from "@bedalton/caos-util";
+import {log, ILoggerObject, setLogger} from "@bedalton/caos-util";
 import {connection} from "./connection.vscode";
+import {Nullable} from "@bedalton/extension-util";
+import LoggerColor = log.LoggerColor;
 
 if (typeof self != 'undefined') {
     self.console.log("Init ConnLogger");
@@ -8,21 +10,21 @@ if (typeof self != 'undefined') {
 const console = connection.console;
 const ConnLogger: ILoggerObject = {
     prependLogType: undefined,
-    error(message: string, _color: Nullable<com.bedalton.log.LoggerColor>): void {
+    error(message: string, _color: Nullable<typeof LoggerColor>): void {
         console.error(message)
     },
-    getColorPrefix(_color: Nullable<com.bedalton.log.LoggerColor>): Nullable<string> {
+    getColorPrefix(_color: Nullable<typeof LoggerColor>): Nullable<string> {
         return null;
     },
-    info(_replace: boolean, message: string, _color: Nullable<com.bedalton.log.LoggerColor>): void {
+    info(_replace: boolean, message: string, _color: Nullable<typeof LoggerColor>): void {
         console.info(message)
     },
-    log(_replace: boolean, message: string, _color: Nullable<com.bedalton.log.LoggerColor>): void {
+    log(_replace: boolean, message: string, _color: Nullable<typeof LoggerColor>): void {
         console.log(message);
     },
     logMemory(): void {
     },
-    warning(message: string, _color: Nullable<com.bedalton.log.LoggerColor>): void {
+    warning(message: string, _color: Nullable<log.LoggerColor>): void {
         console.warn(message);
     }
 }

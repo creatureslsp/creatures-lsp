@@ -1,7 +1,7 @@
 import {ExtensionContext, TextDocument, Uri} from "vscode";
 import {LanguageClient, LanguageClientOptions} from "vscode-languageclient/browser";
 import {registerClientDisposable} from "./clients";
-import {Nullable} from "@bedalton/caos-util";
+import {Nullable} from "@bedalton/extension-util";
 
 let defaultClient: Nullable<LanguageClient> = null;
 

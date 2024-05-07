@@ -1,14 +1,11 @@
 import {Definition, LocationLink, Range} from "vscode-languageserver-types";
-import {com, GameVariant, RangeWithIndex} from "./caos-util";
-import collectors = com.bedalton.creatures.caos.collectors;
-import {inRange, toVsRange} from "./position-utils";
+import {RangeWithIndex, inRange, toVsRange, repack} from "@bedalton/extension-util"
+import {collectors, CommandCall, GameVariant, ParseResult} from "./caos-util";
 import {getCursorPosition} from "./cursor-data";
-import {repack} from "./repack";
+import {Is} from "./is-util";
 
 const {scriptOffsets, parseCaosWithin} = collectors;
-import ParseResult = collectors.ParseResult;
-import CommandCall = collectors.CommandCall;
-import parseTokens = collectors.parseTokens;
+const parseTokens = collectors.parseTokens;
 
 
 export function getGotoInformation(
@@ -19,8 +16,8 @@ export function getGotoInformation(
     character: number
 ): Definition | LocationLink[] | undefined | null {
     let parseResult: ParseResult
-    if (text instanceof ParseResult && text.scripts.length > 0) {
-        const script = text.scripts.find(script => inRange(script.textRange, line, character))
+    if (Is.parseResult(text) && text.scripts.length > 0) {
+        const script = text.scripts.find(script => script != null && inRange(script.textRange, line, character))
         if (script == null) {
             return null;
         }
@@ -30,7 +27,7 @@ export function getGotoInformation(
             script.items
         )
     } else {
-        if (text instanceof ParseResult) {
+        if (Is.parseResult(text)) {
             text = text.originalText
         } else if (typeof text !== 'string') {
             return null;

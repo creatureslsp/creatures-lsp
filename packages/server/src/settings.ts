@@ -1,9 +1,9 @@
 // The example settings
 import {connection} from "./connection.vscode";
-import {com, GameVariant, Nullable} from "@bedalton/caos-util";
-import {HashUtil} from "@bedalton/caos-util/hash-util";
-import hints = com.bedalton.creatures.caos.hints;
-import getInlayOptions = hints.getInlayOptions;
+import {GameVariant, hints} from "@bedalton/caos-util";
+import {HashUtil, Nullable} from "@bedalton/extension-util";
+
+const getInlayOptions = hints.getInlayOptions;
 
 
 export const clientCapabilities = {

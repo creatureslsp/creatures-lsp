@@ -1,5 +1,5 @@
 import {Uri, workspace, WorkspaceFolder} from "vscode";
-import {Nullable} from "@bedalton/caos-util";
+import {Nullable} from "@bedalton/extension-util";
 import {pushDisposable} from "./disposables";
 
 let _sortedWorkspaceFolders: Nullable<string[]>;

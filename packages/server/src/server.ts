@@ -1,23 +1,23 @@
 #!/usr/bin/env node
-import {
-    DidChangeConfigurationNotification,
-    InitializeParams,
-    InitializeResult,
-    TextDocumentSyncKind
-} from 'vscode-languageserver/node';
-import {registerSemanticTokenHighlighter} from "./register.semantic-highlighter";
+import {InitializeParams, InitializeResult, TextDocumentSyncKind} from 'vscode-languageserver/node';
+import {registerCaosSemanticTokenHighlighter} from "./caos/register.semantic-highlighter";
 import {getSemanticTokensLegend} from "@bedalton/caos-util/semantic-highlighter";
-import {registerFormattingProvider} from "./register.formatter";
+import {registerCaosFormattingProvider} from "./caos/register.formatter";
 import {getDocuments} from "./documents";
 import {CAOS_LANGUAGE_ID, clientCapabilities, deleteDocumentSettings} from "./settings";
 import {updateRecentCommandsInDocument} from "./completions-cache";
 import {validateTextDocument} from "./validator";
-import {registerCompletionProvider} from "./register.completions";
-import {registerHoverDocumentationProvider} from "./register.hover-documentation";
-import {registerInlayHintsProvider} from "./register.inlay-hints";
-import {registerGotoDefinitionsProvider} from "./register.goto";
-import {registerDocumentSymbolProvider} from "./register.breadcrumbs";
+import {registerCaosCompletionProvider} from "./caos/register.completions";
+import {registerCaosHoverDocumentationProvider} from "./caos/register.hover-documentation";
+import {registerCaosInlayHintsProvider} from "./caos/register.inlay-hints";
+import {registerCaosGotoDefinitionsProvider} from "./caos/register.goto";
+import {registerCaosDocumentSymbolProvider} from "./caos/register.breadcrumbs";
 import {connection} from './connection.vscode';
+import {registerSettingsChangeListener} from "./SettingsChangeHandler";
+import {registerFilesWatcher} from "./files";
+import {indexCaosFile} from "./indices/index.caos";
+import {registerWorkspaceChangeHandlers, setWorkspaceFolders} from "./workspace-folders";
+import {FileOperationFilter} from "vscode-languageserver-protocol/lib/common/protocol.fileOperations";
 
 
 connection.onInitialize((params: InitializeParams) => {
