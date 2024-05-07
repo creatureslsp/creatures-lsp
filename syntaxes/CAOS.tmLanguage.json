@@ -68,7 +68,7 @@
     "caos2comment": {
       "patterns": [
         {
-          "match": "(?i)^\\*\\*(caos2pray|caos2cob| *swift| *scriptorium| *dump)( +c[123v]| +ds)?[ \t]*(?=\n|$)",
+          "match": "(?i)^\\*\\*(caos2pray|caos2cob| *swift| *scriptorium| *dump)?[ \t]*([^\n]+)?",
           "name": "markup.bold.caos2",
           "captures": {
             "2": {
