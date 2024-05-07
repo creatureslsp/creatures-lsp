@@ -1,8 +1,21 @@
 /* eslint-disable eqeqeq */
-import {Argument, com, CursorData, GameVariant, HasRange,Nullable, RangeWithIndex} from "./caos-util";
-import libs = com.bedalton.creatures.caos.libs;
-import collectors = com.bedalton.creatures.caos.collectors;
-import {inRange, sortTextRanges} from "./position-utils";
+import {
+    collectors,
+    libs,
+    Argument,
+    CursorData,
+    GameVariant,
+    ParseResult,
+    CommandCall,
+    ParserItem,
+    ICaosParameter,
+    EqualityStatement,
+    CaosValuesList,
+    ICaosCommand,
+    IParserItem,
+    VariantData,
+} from "./caos-util";
+import {Nullable, inRange, sortTextRanges, RangeWithIndex, HasRange} from "@bedalton/extension-util";
 import {
     CAOS2_COMMENT_TYPE_ID,
     COMMAND_TYPE_ID,
@@ -14,17 +27,10 @@ import {
     UNKNOWN_TYPE_ID,
     VARIABLE_TYPE_ID
 } from "./constants";
-import ParseResult = collectors.ParseResult;
-import ParserItem = collectors.ParserItem;
-import CommandToken = collectors.ParserItem.CommandToken;
-import ICaosCommand = libs.ICaosCommand;
-import parseCaosNear = collectors.parseCaosNear;
-import parseCaos = collectors.parseCaos;
-import CommandCall = collectors.CommandCall;
-import CaosValuesList = libs.CaosValuesList;
-import ICaosParameter = libs.ICaosParameter;
-import getValuesList = libs.getValuesList;
-import EqualityStatement = collectors.EqualityStatement;
+const parseCaosNear = collectors.parseCaosNear;
+const parseCaos = collectors.parseCaos;
+import CommandToken = ParserItem.CommandToken;
+import {Is} from "./is-util";
 
 const VAR_REGEX = /^((va|ov|mv)\d)|((obv|var)\d{2})/i;
 
@@ -33,15 +39,15 @@ const VAR_REGEX = /^((va|ov|mv)\d)|((obv|var)\d{2})/i;
  * @param parseResult previously parsed CAOS result
  * @param lineNumber line number of cursor
  * @param column column in line
- * @param incomplete whether to bias results to incomplete commands and values. Less strict to cursor position
- * @param parseNear parse only CAOS near cursor. Faster in long documents, but unstable
+ * @param _incomplete whether to bias results to incomplete commands and values. Less strict to cursor position
+ * @param _parseNear parse only CAOS near cursor. Faster in long documents, but unstable
  */
 export function getCursorPosition(
     parseResult: ParseResult,
     lineNumber: number,
     column: number,
-    incomplete: boolean,
-    parseNear: Nullable<boolean> = null
+    _incomplete: boolean,
+    _parseNear: Nullable<boolean> = null
 ): Nullable<CursorData> {
     if (parseResult == null) {
         return null;
@@ -52,23 +58,23 @@ export function getCursorPosition(
         return null;
     }
     // Filter calls to those enclosing position
-    const inRangeCalls = commandCalls.filter((call: collectors.CommandCall) => inRange(call.textRange, lineNumber, column, false, true));
+    const inRangeCalls = commandCalls.filter((call: CommandCall) => inRange(call.textRange, lineNumber, column, false, true));
     // Find the closest call to cursor
     let closestResult = getClosestItem(inRangeCalls, lineNumber, column, true);
     
     // Get all tokens on row
-    const inRangeItems = parseResult.items.filter((it: ParserItem<any>) => inRange(it.textRange, lineNumber, column, true));
+    const inRangeItems = parseResult.items.filter((it: IParserItem<any>) => inRange(it.textRange, lineNumber, column, true));
     
     // Find the closest parser item
-    const closestItemResult = getClosestItem<ParserItem<any>>(inRangeItems, lineNumber, column, true);
+    const closestItemResult = getClosestItem<IParserItem<any>>(inRangeItems, lineNumber, column, true);
     
-    let closestItem: Nullable<collectors.ParserItem<any>> = closestItemResult?.closest;
+    let closestItem: Nullable<IParserItem<any>> = closestItemResult?.closest;
     
     // Closest Command call
-    let closest: Nullable<collectors.CommandCall> = closestResult?.closest;
+    let closest: Nullable<CommandCall> = closestResult?.closest;
     
     let commandParameters: Nullable<ICaosParameter[]> = [];
-    let missingParameters: libs.ICaosParameter[] = [];
+    let missingParameters: ICaosParameter[] = [];
     let matchingEqualityStatements: EqualityStatement[] = [];
     let index: number = 0;
     let inCommand = true;
@@ -100,7 +106,7 @@ export function getCursorPosition(
             inCommand = false;
         }
         
-        let missing: libs.ICaosParameter[];
+        let missing: ICaosParameter[];
         // Offset the index to find the one currently being edited
         let indexMod = argumentIndex == 0 ? 1 : 0;
         commandParameters = closestCall?.command?.parameters;
@@ -156,7 +162,7 @@ export function getCursorPosition(
         index = (argumentIndex != null && argumentIndex >= 0 ? argumentIndex : 0);
     
         // If cursor is at end of command call
-        inCommand = inCommand && closestItem != null && closestCall.arguments.findIndex(arg => inRange(arg.textRange, closestItem!!.textRange.start.line, closestItem!!.textRange.start.character!! + 1)) >= 0;
+        inCommand = inCommand && closestItem != null && closestCall.arguments.findIndex((arg: Argument) => inRange(arg.textRange, closestItem!!.textRange.start.line, closestItem!!.textRange.start.character!! + 1)) >= 0;
         
         if (!inCommand && !(inEq && isEqLike)) {
             const commandCallIndex = closestCall?.containingCommand?.commandCallIndex;
@@ -332,8 +338,8 @@ export function getClosestItem<T extends HasRange>(
         const tokens: ParserItem.CommandToken[] = [];
         let stillTokens = true;
         for (const {item} of items) {
-            if (!(item instanceof ParserItem.CommandToken)) {
-                stillTokens = (item instanceof ParserItem.TokenVal);
+            if (!Is.commandToken(item)) {
+                stillTokens = Is.tokenVal(item);
             } else if (stillTokens) {
                 tokens.push(item);
             }
@@ -374,13 +380,13 @@ export function getClosestItem<T extends HasRange>(
 /**
  * Get values list for equality statement based on opposing command
  * @param parseResult
- * @param closestParameter
+ * @param _closestParameter
  * @param lineNumber
  * @param column
  */
 function getEqualityValuesList(
     parseResult: ParseResult,
-    closestParameter: Nullable<ICaosParameter>,
+    _closestParameter: Nullable<ICaosParameter>,
     lineNumber: number,
     column: number
 ): Nullable<CaosValuesList> {
@@ -394,26 +400,26 @@ function getEqualityValuesList(
     const equalityStatement = equalityStatementsInRange[0];
     let shouldComplete = true;
     let other: Nullable<Argument> = null;
-    if (equalityStatement.second instanceof CommandCall) {
-        shouldComplete = equalityStatement.first == null || equalityStatement.first?.parserItem instanceof ParserItem.IntVal;
+    if (Is.commandCall(equalityStatement.second)) {
+        shouldComplete = equalityStatement.first == null || Is.intVal(equalityStatement.first?.parserItem);
         other = equalityStatement.second;
-    } else if (equalityStatement.first instanceof CommandCall) {
-        shouldComplete = equalityStatement.second == null || equalityStatement.second?.parserItem instanceof ParserItem.IntVal;
+    } else if (Is.commandCall(equalityStatement.first)) {
+        shouldComplete = equalityStatement.second == null || Is.intVal(equalityStatement.second?.parserItem);
         other = equalityStatement.first;
     }
-    if (!shouldComplete || !(other instanceof CommandCall)) {
+    if (!shouldComplete || !Is.commandCall(other)) {
         return null;
     }
     const variant = parseResult.variant;
-    const valuesListIds = other.command?.returnValuesListIds ?? {get: () => null };
-    if (!valuesListIds.hasOwnProperty(variant) && valuesListIds.get(variant) == null) {
+    const valuesListIds = other!.command?.returnValuesListIds ?? ({} satisfies VariantData<number>);
+    if (!valuesListIds.hasOwnProperty(variant) && valuesListIds[variant] == null) {
         return null;
     }
-    const valuesListId = valuesListIds.get(variant);
+    const valuesListId = valuesListIds[variant];
     if (valuesListId == null) {
         return null;
     }
-    return getValuesList(valuesListId);
+    return libs.getValuesList(valuesListId);
 }
 
 
@@ -448,7 +454,7 @@ export function getCursorPositionFromRawText(
     return getCursorPosition(result, lineNumber, column, incomplete);
 }
 
-export function cancelComplete(closestItem: ParserItem<any>, line: number, character: number): boolean {
+export function cancelComplete(closestItem: IParserItem<any>, line: number, character: number): boolean {
     if (!inRange(closestItem.textRange, line, character, false, false)) {
         return false;
     }
@@ -466,7 +472,7 @@ export function cancelComplete(closestItem: ParserItem<any>, line: number, chara
 }
 
 
-export function inQuotes(closestItem: ParserItem<any>, line: number, character: number): boolean {
+export function inQuotes(closestItem: IParserItem<any>, line: number, character: number): boolean {
     if (!closestItem.text.startsWith('"')) {
         return false;
     }
@@ -493,7 +499,7 @@ export function inQuotes(closestItem: ParserItem<any>, line: number, character: 
 
 
 
-function isComplete(parserItem: ParserItem<any>, line: number, character: number): boolean {
+function isComplete(parserItem: IParserItem<any>, line: number, character: number): boolean {
     if (inQuotes(parserItem, line, character)) {
         return false;
     }

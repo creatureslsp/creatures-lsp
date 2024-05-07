@@ -1,7 +1,5 @@
-import {GameVariant, com, Nullable} from "./caos-util";
-import libs = com.bedalton.creatures.caos.libs;
-import Commands = libs.Commands;
-import getCommandsForLib = libs.getCommandsForLib;
+import {Commands, GameVariant, libs} from "./caos-util";
+import {Nullable} from "@bedalton/extension-util"
 
 const _commands: { [variant: string]: Commands } = {};
 
@@ -16,7 +14,7 @@ export function getCommands(variant: GameVariant): Commands {
         commands = _commands[variant]
     }
     if (commands == null) {
-        commands = getCommandsForLib(variant)
+        commands = libs.getCommandsForLib(variant)
         if (commands == null) {
             throw Error("No commands found for variant '" + variant + "'");
         }
