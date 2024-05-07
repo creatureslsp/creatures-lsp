@@ -32,9 +32,9 @@ export function hasSubroutine(parseResult: ParseResult, subroutineName: string, 
  * Gets all subroutine name parser elements in a list of parser items
  * @param items
  */
-export function getSubroutines(items: ParserItem<any>[]): ParserItem<any>[] {
+export function getSubroutines(items: IParserItem<any>[]): IParserItem<any>[] {
     let subroutineNext = false;
-    const out: ParserItem<any>[] = [];
+    const out: IParserItem<any>[] = [];
     for (let item of items) {
         if (subroutineNext) {
             if (item.typeToken === TOKEN_PARSER_TYPE || item.typeToken === COMMAND_TOKEN_PARSER_TYPE) {
