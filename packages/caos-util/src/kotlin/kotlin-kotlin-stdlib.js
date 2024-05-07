@@ -66,6 +66,15 @@ if (typeof Array.prototype.fill === 'undefined') {
     }});
   }
 });
+if (typeof Math.sign === 'undefined') {
+  Math.sign = function (x) {
+    x = +x; // convert to a number
+    if (x === 0 || isNaN(x)) {
+      return Number(x);
+    }
+    return x > 0 ? 1 : -1;
+  };
+}
 if (typeof Math.clz32 === 'undefined') {
   Math.clz32 = function (log, LN2) {
     return function (x) {
@@ -80,15 +89,6 @@ if (typeof Math.clz32 === 'undefined') {
 if (typeof Math.log10 === 'undefined') {
   Math.log10 = function (x) {
     return Math.log(x) * Math.LOG10E;
-  };
-}
-if (typeof Math.sign === 'undefined') {
-  Math.sign = function (x) {
-    x = +x; // convert to a number
-    if (x === 0 || isNaN(x)) {
-      return Number(x);
-    }
-    return x > 0 ? 1 : -1;
   };
 }
 if (typeof String.prototype.endsWith === 'undefined') {
@@ -920,6 +920,9 @@ if (typeof String.prototype.startsWith === 'undefined') {
   function contains_4(_this__u8e3s4, element) {
     return indexOf_0(_this__u8e3s4, element) >= 0;
   }
+  function singleOrNull(_this__u8e3s4) {
+    return _this__u8e3s4.length === 1 ? _this__u8e3s4[0] : null;
+  }
   function indexOfFirst(_this__u8e3s4, predicate) {
     var inductionVariable = 0;
     var last = _this__u8e3s4.length - 1 | 0;
@@ -971,9 +974,6 @@ if (typeof String.prototype.startsWith === 'undefined') {
       throw IllegalArgumentException_init_$Create$_0(toString_1(message));
     }
     return take_0(_this__u8e3s4, coerceAtLeast(_this__u8e3s4.length - n | 0, 0));
-  }
-  function singleOrNull(_this__u8e3s4) {
-    return _this__u8e3s4.length === 1 ? _this__u8e3s4[0] : null;
   }
   function getOrNull_0(_this__u8e3s4, index) {
     return (index >= 0 ? index <= get_lastIndex_1(_this__u8e3s4) : false) ? _this__u8e3s4[index] : null;
@@ -2195,24 +2195,11 @@ if (typeof String.prototype.startsWith === 'undefined') {
       return _this__u8e3s4.contains_aljjnj_k$(element);
     return indexOf_5(_this__u8e3s4, element) >= 0;
   }
-  function maxByOrNull_0(_this__u8e3s4, selector) {
-    var iterator = _this__u8e3s4.iterator_jk1svi_k$();
-    if (!iterator.hasNext_bitz1p_k$())
-      return null;
-    var maxElem = iterator.next_20eer_k$();
-    if (!iterator.hasNext_bitz1p_k$())
-      return maxElem;
-    var maxValue = selector(maxElem);
-    do {
-      var e = iterator.next_20eer_k$();
-      var v = selector(e);
-      if (compareTo(maxValue, v) < 0) {
-        maxElem = e;
-        maxValue = v;
-      }
-    }
-     while (iterator.hasNext_bitz1p_k$());
-    return maxElem;
+  function sortedByDescending_0(_this__u8e3s4, selector) {
+    // Inline function 'kotlin.comparisons.compareByDescending' call
+    var tmp = sortedByDescending$lambda_0(selector);
+    var tmp$ret$0 = new sam$kotlin_Comparator$0_3(tmp);
+    return sortedWith_0(_this__u8e3s4, tmp$ret$0);
   }
   function minByOrNull(_this__u8e3s4, selector) {
     var iterator = _this__u8e3s4.iterator_jk1svi_k$();
@@ -2236,12 +2223,6 @@ if (typeof String.prototype.startsWith === 'undefined') {
   function withIndex_0(_this__u8e3s4) {
     return new IndexingIterable(withIndex$lambda_0(_this__u8e3s4));
   }
-  function sortedByDescending_0(_this__u8e3s4, selector) {
-    // Inline function 'kotlin.comparisons.compareByDescending' call
-    var tmp = sortedByDescending$lambda_0(selector);
-    var tmp$ret$0 = new sam$kotlin_Comparator$0_3(tmp);
-    return sortedWith_0(_this__u8e3s4, tmp$ret$0);
-  }
   function sortedWith_0(_this__u8e3s4, comparator) {
     if (isInterface(_this__u8e3s4, Collection)) {
       if (_this__u8e3s4.get_size_woubt6_k$() <= 1)
@@ -2261,6 +2242,25 @@ if (typeof String.prototype.startsWith === 'undefined') {
     // Inline function 'kotlin.collections.sortedWith.<anonymous>' call
     sortWith_0(this_1, comparator);
     return this_1;
+  }
+  function maxByOrNull_0(_this__u8e3s4, selector) {
+    var iterator = _this__u8e3s4.iterator_jk1svi_k$();
+    if (!iterator.hasNext_bitz1p_k$())
+      return null;
+    var maxElem = iterator.next_20eer_k$();
+    if (!iterator.hasNext_bitz1p_k$())
+      return maxElem;
+    var maxValue = selector(maxElem);
+    do {
+      var e = iterator.next_20eer_k$();
+      var v = selector(e);
+      if (compareTo(maxValue, v) < 0) {
+        maxElem = e;
+        maxValue = v;
+      }
+    }
+     while (iterator.hasNext_bitz1p_k$());
+    return maxElem;
   }
   function getOrNull_1(_this__u8e3s4, index) {
     return (index >= 0 ? index <= get_lastIndex_6(_this__u8e3s4) : false) ? _this__u8e3s4.get_c1px32_k$(index) : null;
@@ -2621,15 +2621,15 @@ if (typeof String.prototype.startsWith === 'undefined') {
       return compareValues($selector(a), $selector(b));
     };
   }
-  function withIndex$lambda_0($this_withIndex) {
-    return function () {
-      return $this_withIndex.iterator_jk1svi_k$();
-    };
-  }
   function sortedByDescending$lambda_0($selector) {
     return function (a, b) {
       // Inline function 'kotlin.comparisons.compareValuesBy' call
       return compareValues($selector(b), $selector(a));
+    };
+  }
+  function withIndex$lambda_0($this_withIndex) {
+    return function () {
+      return $this_withIndex.iterator_jk1svi_k$();
     };
   }
   function _no_name_provided__qut3iv($this_asSequence) {
@@ -3084,71 +3084,41 @@ if (typeof String.prototype.startsWith === 'undefined') {
     addAll_0(result, elements);
     return result;
   }
-  function count_0(_this__u8e3s4) {
-    return charSequenceLength(_this__u8e3s4);
-  }
-  function indexOfFirst_1(_this__u8e3s4, predicate) {
+  function forEachIndexed_3(_this__u8e3s4, action) {
+    var index = 0;
     var inductionVariable = 0;
-    var last = charSequenceLength(_this__u8e3s4) - 1 | 0;
-    if (inductionVariable <= last)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + 1 | 0;
-        if (predicate(new Char(charSequenceGet(_this__u8e3s4, index)))) {
-          return index;
-        }
-      }
-       while (inductionVariable <= last);
-    return -1;
+    while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
+      var item = charSequenceGet(_this__u8e3s4, inductionVariable);
+      inductionVariable = inductionVariable + 1 | 0;
+      var tmp1 = index;
+      index = tmp1 + 1 | 0;
+      action(tmp1, new Char(item));
+    }
   }
-  function first_3(_this__u8e3s4) {
+  function getOrElse(_this__u8e3s4, index, defaultValue) {
+    return (index >= 0 ? index <= get_lastIndex_7(_this__u8e3s4) : false) ? charSequenceGet(_this__u8e3s4, index) : defaultValue(index).value_1;
+  }
+  function map_3(_this__u8e3s4, transform) {
+    // Inline function 'kotlin.text.mapTo' call
+    var destination = ArrayList_init_$Create$_0(charSequenceLength(_this__u8e3s4));
+    var inductionVariable = 0;
+    while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
+      var item = charSequenceGet(_this__u8e3s4, inductionVariable);
+      inductionVariable = inductionVariable + 1 | 0;
+      destination.add_utx5q5_k$(transform(new Char(item)));
+    }
+    return destination;
+  }
+  function last_3(_this__u8e3s4) {
     // Inline function 'kotlin.text.isEmpty' call
     if (charSequenceLength(_this__u8e3s4) === 0)
       throw NoSuchElementException_init_$Create$_0('Char sequence is empty.');
-    return charSequenceGet(_this__u8e3s4, 0);
+    return charSequenceGet(_this__u8e3s4, get_lastIndex_7(_this__u8e3s4));
   }
-  function indexOfLast_0(_this__u8e3s4, predicate) {
-    var inductionVariable = charSequenceLength(_this__u8e3s4) - 1 | 0;
-    if (0 <= inductionVariable)
-      do {
-        var index = inductionVariable;
-        inductionVariable = inductionVariable + -1 | 0;
-        if (predicate(new Char(charSequenceGet(_this__u8e3s4, index)))) {
-          return index;
-        }
-      }
-       while (0 <= inductionVariable);
-    return -1;
+  function getOrNull_2(_this__u8e3s4, index) {
+    return (index >= 0 ? index <= get_lastIndex_7(_this__u8e3s4) : false) ? charSequenceGet(_this__u8e3s4, index) : null;
   }
-  function lastOrNull_1(_this__u8e3s4) {
-    var tmp;
-    // Inline function 'kotlin.text.isEmpty' call
-    if (charSequenceLength(_this__u8e3s4) === 0) {
-      tmp = null;
-    } else {
-      tmp = charSequenceGet(_this__u8e3s4, charSequenceLength(_this__u8e3s4) - 1 | 0);
-    }
-    return tmp;
-  }
-  function all_0(_this__u8e3s4, predicate) {
-    var inductionVariable = 0;
-    while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
-      var element = charSequenceGet(_this__u8e3s4, inductionVariable);
-      inductionVariable = inductionVariable + 1 | 0;
-      if (!predicate(new Char(element)))
-        return false;
-    }
-    return true;
-  }
-  function forEach_2(_this__u8e3s4, action) {
-    var inductionVariable = 0;
-    while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
-      var element = charSequenceGet(_this__u8e3s4, inductionVariable);
-      inductionVariable = inductionVariable + 1 | 0;
-      action(new Char(element));
-    }
-  }
-  function count_1(_this__u8e3s4, predicate) {
+  function count_0(_this__u8e3s4, predicate) {
     var count = 0;
     var inductionVariable = 0;
     while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
@@ -3160,27 +3130,61 @@ if (typeof String.prototype.startsWith === 'undefined') {
     }
     return count;
   }
-  function single_2(_this__u8e3s4) {
+  function firstOrNull_4(_this__u8e3s4) {
     var tmp;
-    switch (charSequenceLength(_this__u8e3s4)) {
-      case 0:
-        throw NoSuchElementException_init_$Create$_0('Char sequence is empty.');
-      case 1:
-        tmp = charSequenceGet(_this__u8e3s4, 0);
-        break;
-      default:
-        throw IllegalArgumentException_init_$Create$_0('Char sequence has more than one element.');
+    // Inline function 'kotlin.text.isEmpty' call
+    if (charSequenceLength(_this__u8e3s4) === 0) {
+      tmp = null;
+    } else {
+      tmp = charSequenceGet(_this__u8e3s4, 0);
     }
     return tmp;
+  }
+  function lastOrNull_1(_this__u8e3s4) {
+    var tmp;
+    // Inline function 'kotlin.text.isEmpty' call
+    if (charSequenceLength(_this__u8e3s4) === 0) {
+      tmp = null;
+    } else {
+      tmp = charSequenceGet(_this__u8e3s4, charSequenceLength(_this__u8e3s4) - 1 | 0);
+    }
+    return tmp;
+  }
+  function first_3(_this__u8e3s4) {
+    // Inline function 'kotlin.text.isEmpty' call
+    if (charSequenceLength(_this__u8e3s4) === 0)
+      throw NoSuchElementException_init_$Create$_0('Char sequence is empty.');
+    return charSequenceGet(_this__u8e3s4, 0);
+  }
+  function none_1(_this__u8e3s4, predicate) {
+    var inductionVariable = 0;
+    while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
+      var element = charSequenceGet(_this__u8e3s4, inductionVariable);
+      inductionVariable = inductionVariable + 1 | 0;
+      if (predicate(new Char(element)))
+        return false;
+    }
+    return true;
+  }
+  function all_0(_this__u8e3s4, predicate) {
+    var inductionVariable = 0;
+    while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
+      var element = charSequenceGet(_this__u8e3s4, inductionVariable);
+      inductionVariable = inductionVariable + 1 | 0;
+      if (!predicate(new Char(element)))
+        return false;
+    }
+    return true;
+  }
+  function count_1(_this__u8e3s4) {
+    return charSequenceLength(_this__u8e3s4);
   }
   function slice_1(_this__u8e3s4, indices) {
     if (indices.isEmpty_y1axqb_k$())
       return '';
     return substring_1(_this__u8e3s4, indices);
   }
-  function map_3(_this__u8e3s4, transform) {
-    // Inline function 'kotlin.text.mapTo' call
-    var destination = ArrayList_init_$Create$_0(charSequenceLength(_this__u8e3s4));
+  function mapTo_2(_this__u8e3s4, destination, transform) {
     var inductionVariable = 0;
     while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
       var item = charSequenceGet(_this__u8e3s4, inductionVariable);
@@ -3199,48 +3203,18 @@ if (typeof String.prototype.startsWith === 'undefined') {
     }
     return take_3(_this__u8e3s4, coerceAtLeast(_this__u8e3s4.length - n | 0, 0));
   }
-  function getOrElse(_this__u8e3s4, index, defaultValue) {
-    return (index >= 0 ? index <= get_lastIndex_7(_this__u8e3s4) : false) ? charSequenceGet(_this__u8e3s4, index) : defaultValue(index).value_1;
-  }
-  function firstOrNull_4(_this__u8e3s4) {
-    var tmp;
-    // Inline function 'kotlin.text.isEmpty' call
-    if (charSequenceLength(_this__u8e3s4) === 0) {
-      tmp = null;
-    } else {
-      tmp = charSequenceGet(_this__u8e3s4, 0);
-    }
-    return tmp;
-  }
-  function none_1(_this__u8e3s4, predicate) {
-    var inductionVariable = 0;
-    while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
-      var element = charSequenceGet(_this__u8e3s4, inductionVariable);
-      inductionVariable = inductionVariable + 1 | 0;
-      if (predicate(new Char(element)))
-        return false;
-    }
-    return true;
-  }
-  function forEachIndexed_3(_this__u8e3s4, action) {
-    var index = 0;
-    var inductionVariable = 0;
-    while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
-      var item = charSequenceGet(_this__u8e3s4, inductionVariable);
-      inductionVariable = inductionVariable + 1 | 0;
-      var tmp1 = index;
-      index = tmp1 + 1 | 0;
-      action(tmp1, new Char(item));
-    }
-  }
-  function getOrNull_2(_this__u8e3s4, index) {
-    return (index >= 0 ? index <= get_lastIndex_7(_this__u8e3s4) : false) ? charSequenceGet(_this__u8e3s4, index) : null;
-  }
-  function last_3(_this__u8e3s4) {
-    // Inline function 'kotlin.text.isEmpty' call
-    if (charSequenceLength(_this__u8e3s4) === 0)
-      throw NoSuchElementException_init_$Create$_0('Char sequence is empty.');
-    return charSequenceGet(_this__u8e3s4, get_lastIndex_7(_this__u8e3s4));
+  function indexOfLast_0(_this__u8e3s4, predicate) {
+    var inductionVariable = charSequenceLength(_this__u8e3s4) - 1 | 0;
+    if (0 <= inductionVariable)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + -1 | 0;
+        if (predicate(new Char(charSequenceGet(_this__u8e3s4, index)))) {
+          return index;
+        }
+      }
+       while (0 <= inductionVariable);
+    return -1;
   }
   function drop_1(_this__u8e3s4, n) {
     // Inline function 'kotlin.require' call
@@ -3255,18 +3229,6 @@ if (typeof String.prototype.startsWith === 'undefined') {
     // Inline function 'kotlin.js.asDynamic' call
     return _this__u8e3s4.substring(startIndex);
   }
-  function chunked(_this__u8e3s4, size) {
-    return windowed(_this__u8e3s4, size, size, true);
-  }
-  function mapTo_2(_this__u8e3s4, destination, transform) {
-    var inductionVariable = 0;
-    while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
-      var item = charSequenceGet(_this__u8e3s4, inductionVariable);
-      inductionVariable = inductionVariable + 1 | 0;
-      destination.add_utx5q5_k$(transform(new Char(item)));
-    }
-    return destination;
-  }
   function take_3(_this__u8e3s4, n) {
     // Inline function 'kotlin.require' call
     // Inline function 'kotlin.contracts.contract' call
@@ -3279,6 +3241,44 @@ if (typeof String.prototype.startsWith === 'undefined') {
     var endIndex = coerceAtMost(n, _this__u8e3s4.length);
     // Inline function 'kotlin.js.asDynamic' call
     return _this__u8e3s4.substring(0, endIndex);
+  }
+  function chunked(_this__u8e3s4, size) {
+    return windowed(_this__u8e3s4, size, size, true);
+  }
+  function single_2(_this__u8e3s4) {
+    var tmp;
+    switch (charSequenceLength(_this__u8e3s4)) {
+      case 0:
+        throw NoSuchElementException_init_$Create$_0('Char sequence is empty.');
+      case 1:
+        tmp = charSequenceGet(_this__u8e3s4, 0);
+        break;
+      default:
+        throw IllegalArgumentException_init_$Create$_0('Char sequence has more than one element.');
+    }
+    return tmp;
+  }
+  function forEach_2(_this__u8e3s4, action) {
+    var inductionVariable = 0;
+    while (inductionVariable < charSequenceLength(_this__u8e3s4)) {
+      var element = charSequenceGet(_this__u8e3s4, inductionVariable);
+      inductionVariable = inductionVariable + 1 | 0;
+      action(new Char(element));
+    }
+  }
+  function indexOfFirst_1(_this__u8e3s4, predicate) {
+    var inductionVariable = 0;
+    var last = charSequenceLength(_this__u8e3s4) - 1 | 0;
+    if (inductionVariable <= last)
+      do {
+        var index = inductionVariable;
+        inductionVariable = inductionVariable + 1 | 0;
+        if (predicate(new Char(charSequenceGet(_this__u8e3s4, index)))) {
+          return index;
+        }
+      }
+       while (inductionVariable <= last);
+    return -1;
   }
   function windowed(_this__u8e3s4, size, step, partialWindows) {
     step = step === VOID ? 1 : step;

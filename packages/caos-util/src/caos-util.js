@@ -563,9 +563,8 @@
   setMetadataFor(CaosException, 'CaosException', classMeta, Exception);
   setMetadataFor(CaosInvalidTokenLengthException, 'CaosInvalidTokenLengthException', classMeta, Exception);
   setMetadataFor(CaosValidatorIllegalArgumentException, 'CaosValidatorIllegalArgumentException', classMeta, CaosException);
-  setMetadataFor(CaosFormatterOptions, 'CaosFormatterOptions', interfaceMeta);
-  setMetadataFor(CaosFormatterOptionsImpl, 'CaosFormatterOptionsImpl', classMeta, VOID, [CaosFormatterOptions]);
-  setMetadataFor(CaosFormatterOptionsBuilder, 'CaosFormatterOptionsBuilder', classMeta, VOID, [CaosFormatterOptions], CaosFormatterOptionsBuilder);
+  setMetadataFor(CaosFormatterOptionsImpl, 'CaosFormatterOptionsImpl', classMeta);
+  setMetadataFor(CaosFormatterOptionsBuilder, 'CaosFormatterOptionsBuilder', classMeta, VOID, VOID, CaosFormatterOptionsBuilder);
   setMetadataFor(Companion_47, 'Companion', objectMeta);
   setMetadataFor($serializer_31, '$serializer', objectMeta, VOID, [GeneratedSerializer]);
   setMetadataFor(FormatResult, 'FormatResult', classMeta, VOID, VOID, VOID, VOID, {0: $serializer_getInstance_30});
@@ -578,7 +577,7 @@
   setMetadataFor(sam$kotlin_Comparator$0_20, 'sam$kotlin_Comparator$0', classMeta, VOID, [Comparator]);
   setMetadataFor(sam$kotlin_Comparator$0_21, 'sam$kotlin_Comparator$0', classMeta, VOID, [Comparator]);
   setMetadataFor(sam$kotlin_Comparator$0_22, 'sam$kotlin_Comparator$0', classMeta, VOID, [Comparator]);
-  setMetadataFor(FormatterState, 'FormatterState', classMeta, VOID, [CaosFormatterOptions]);
+  setMetadataFor(FormatterState, 'FormatterState', classMeta);
   setMetadataFor(CaosScriptHintsProvider, 'CaosScriptHintsProvider', interfaceMeta);
   setMetadataFor(ArgumentInlayHintsProvider, 'ArgumentInlayHintsProvider', interfaceMeta, VOID, [CaosScriptHintsProvider]);
   setMetadataFor(ArgumentInlayTypeHint, 'ArgumentInlayTypeHint', classMeta, Enum, [Enum, ArgumentInlayHintsProvider]);
@@ -20102,14 +20101,6 @@
   function getCursorPosition(parseResult, lineNumber, column, incomplete) {
     _init_properties_CursorData_kt__82uark();
     var commandCalls = parseResult.commandCalls;
-    var tmp;
-    // Inline function 'kotlin.collections.isEmpty' call
-    if (commandCalls.length === 0) {
-      // Inline function 'kotlin.collections.isEmpty' call
-      tmp = parseResult.equalityStatements.length === 0;
-    } else {
-      tmp = false;
-    }
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
     var destination = ArrayList_init_$Create$_0();
@@ -20144,35 +20135,35 @@
     var inRangeItems = destination_0;
     var closestItemResult = getClosestItem_0(inRangeItems, lineNumber, column, true);
     var closestItem = closestItemResult == null ? null : closestItemResult.closest;
-    var tmp_0;
+    var tmp;
     if (!(closestItem == null) ? closestItem.text.length > 1 : false) {
       var closestText = closestItem.text;
       var closestFirstChar = firstOrNull_1(closestText);
+      var tmp_0;
       var tmp_1;
       var tmp_2;
-      var tmp_3;
-      var tmp_4 = closestFirstChar;
-      if (equals(tmp_4 == null ? null : new Char(tmp_4), new Char(_Char___init__impl__6a9atx(34)))) {
-        tmp_3 = closestItem.textRange.end.line === lineNumber;
-      } else {
-        tmp_3 = false;
-      }
-      if (tmp_3) {
-        tmp_2 = closestItem.textRange.end.character === (column - 1 | 0);
+      var tmp_3 = closestFirstChar;
+      if (equals(tmp_3 == null ? null : new Char(tmp_3), new Char(_Char___init__impl__6a9atx(34)))) {
+        tmp_2 = closestItem.textRange.end.line === lineNumber;
       } else {
         tmp_2 = false;
       }
       if (tmp_2) {
-        var tmp_5 = lastOrNull_1(closestText);
-        tmp_1 = equals(tmp_5 == null ? null : new Char(tmp_5), new Char(_Char___init__impl__6a9atx(34)));
+        tmp_1 = closestItem.textRange.end.character === (column - 1 | 0);
       } else {
         tmp_1 = false;
       }
-      tmp_0 = tmp_1;
+      if (tmp_1) {
+        var tmp_4 = lastOrNull_1(closestText);
+        tmp_0 = equals(tmp_4 == null ? null : new Char(tmp_4), new Char(_Char___init__impl__6a9atx(34)));
+      } else {
+        tmp_0 = false;
+      }
+      tmp = tmp_0;
     } else {
-      tmp_0 = false;
+      tmp = false;
     }
-    var isAfterCloseQuote = tmp_0;
+    var isAfterCloseQuote = tmp;
     // Inline function 'kotlin.emptyArray' call
     var commandParametersTemp = {_v: []};
     var missingParameters = {_v: emptyList()};
@@ -20180,7 +20171,7 @@
     var index = {_v: 0};
     var inCommand = {_v: true};
     var processCommand = {_v: getCursorPosition$lambda};
-    var tmp_6;
+    var tmp_5;
     if (!(closestItem == null)) {
       // Inline function 'kotlin.collections.sortedByDescending' call
       // Inline function 'kotlin.collections.filter' call
@@ -20205,10 +20196,10 @@
         }
       }
       // Inline function 'kotlin.comparisons.compareByDescending' call
-      var tmp_7 = getCursorPosition$lambda_0;
-      var tmp$ret$14 = new sam$kotlin_Comparator$0_4(tmp_7);
-      var tmp$ret$15 = sortedWith(destination_1, tmp$ret$14);
-      tmp_6 = toMutableList(tmp$ret$15);
+      var tmp_6 = getCursorPosition$lambda_0;
+      var tmp$ret$12 = new sam$kotlin_Comparator$0_4(tmp_6);
+      var tmp$ret$13 = sortedWith(destination_1, tmp$ret$12);
+      tmp_5 = toMutableList(tmp$ret$13);
     } else {
       // Inline function 'kotlin.collections.sortedByDescending' call
       // Inline function 'kotlin.collections.filter' call
@@ -20225,12 +20216,12 @@
         }
       }
       // Inline function 'kotlin.comparisons.compareByDescending' call
-      var tmp_8 = getCursorPosition$lambda_1;
-      var tmp$ret$19 = new sam$kotlin_Comparator$0_4(tmp_8);
-      var tmp$ret$20 = sortedWith(destination_2, tmp$ret$19);
-      tmp_6 = toMutableList(tmp$ret$20);
+      var tmp_7 = getCursorPosition$lambda_1;
+      var tmp$ret$17 = new sam$kotlin_Comparator$0_4(tmp_7);
+      var tmp$ret$18 = sortedWith(destination_2, tmp$ret$17);
+      tmp_5 = toMutableList(tmp$ret$18);
     }
-    var container = tmp_6;
+    var container = tmp_5;
     processCommand._v = getCursorPosition$lambda_2(lineNumber, column, isAfterCloseQuote, container, closest, processCommand, closestItem, inCommand, commandParametersTemp, missingParameters, parseResult, matchingEqualityStatements, index, closestResult);
     if (!(closest._v == null)) {
       processCommand._v(closest._v, null);
@@ -20240,51 +20231,51 @@
     var hasMissingParameters = !missingParameters._v.isEmpty_y1axqb_k$();
     var isNotCompleteOrAtColumn = !(closestItem == null) ? closestItem.textRange.end.character === column ? true : !isComplete(closestItem, lineNumber, column) : false;
     var needsParameter = hasMissingParameters ? true : isNotCompleteOrAtColumn;
+    var tmp_8;
     var tmp_9;
-    var tmp_10;
     if (needsParameter ? inCommand._v : false) {
       // Inline function 'kotlin.collections.isNullOrEmpty' call
       // Inline function 'kotlin.contracts.contract' call
-      var tmp_11;
+      var tmp_10;
       if (commandParameters == null) {
-        tmp_11 = true;
+        tmp_10 = true;
       } else {
         // Inline function 'kotlin.collections.isEmpty' call
-        tmp_11 = commandParameters.length === 0;
+        tmp_10 = commandParameters.length === 0;
       }
-      tmp_10 = !tmp_11;
-    } else {
-      tmp_10 = false;
-    }
-    if (tmp_10) {
-      tmp_9 = commandParameters.length > index._v;
+      tmp_9 = !tmp_10;
     } else {
       tmp_9 = false;
     }
-    var hasClosestParameter = tmp_9;
+    if (tmp_9) {
+      tmp_8 = commandParameters.length > index._v;
+    } else {
+      tmp_8 = false;
+    }
+    var hasClosestParameter = tmp_8;
     var closestParameter = hasClosestParameter ? ensureNotNull(commandParameters)[index._v] : null;
     var tmp4_safe_receiver = closestItem == null ? null : closestItem.text;
-    var tmp_12;
+    var tmp_11;
     if (tmp4_safe_receiver == null) {
+      tmp_11 = null;
+    } else {
+      // Inline function 'kotlin.text.lowercase' call
+      // Inline function 'kotlin.js.asDynamic' call
+      tmp_11 = tmp4_safe_receiver.toLowerCase();
+    }
+    var closestItemText = tmp_11;
+    var tmp5_safe_receiver = closest._v;
+    var tmp6_safe_receiver = tmp5_safe_receiver == null ? null : tmp5_safe_receiver.command;
+    var tmp7_safe_receiver = tmp6_safe_receiver == null ? null : tmp6_safe_receiver.command;
+    var tmp_12;
+    if (tmp7_safe_receiver == null) {
       tmp_12 = null;
     } else {
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
-      tmp_12 = tmp4_safe_receiver.toLowerCase();
+      tmp_12 = tmp7_safe_receiver.toLowerCase();
     }
-    var closestItemText = tmp_12;
-    var tmp5_safe_receiver = closest._v;
-    var tmp6_safe_receiver = tmp5_safe_receiver == null ? null : tmp5_safe_receiver.command;
-    var tmp7_safe_receiver = tmp6_safe_receiver == null ? null : tmp6_safe_receiver.command;
-    var tmp_13;
-    if (tmp7_safe_receiver == null) {
-      tmp_13 = null;
-    } else {
-      // Inline function 'kotlin.text.lowercase' call
-      // Inline function 'kotlin.js.asDynamic' call
-      tmp_13 = tmp7_safe_receiver.toLowerCase();
-    }
-    var tmp8_elvis_lhs = tmp_13;
+    var tmp8_elvis_lhs = tmp_12;
     var closestCommandString = tmp8_elvis_lhs == null ? '' : tmp8_elvis_lhs;
     var beforeTextIsMatchingCommand = !(closestItemText == null) ? get_VAR_REGEX().matches_evli6i_k$(closestItemText) ? true : endsWith_0(closestCommandString, closestItemText) : false;
     var equalityValuesList = getEqualityValuesList(parseResult, closestItem, lineNumber, column);
@@ -20293,24 +20284,24 @@
     // Inline function 'kotlin.collections.toTypedArray' call
     var this_1 = missingParameters._v;
     var tmp15_missing = copyToArray(this_1);
-    var tmp_14;
+    var tmp_13;
     if (!beforeTextIsMatchingCommand) {
-      tmp_14 = closestItem == null ? null : closestItem.text;
+      tmp_13 = closestItem == null ? null : closestItem.text;
     } else {
-      tmp_14 = '';
+      tmp_13 = '';
     }
-    var tmp16_beforeText = tmp_14;
+    var tmp16_beforeText = tmp_13;
     var tmp11_safe_receiver = closest._v;
-    var tmp_15 = tmp11_safe_receiver == null ? null : tmp11_safe_receiver.command;
+    var tmp_14 = tmp11_safe_receiver == null ? null : tmp11_safe_receiver.command;
     var tmp13_elvis_lhs = closestItemResult == null ? null : closestItemResult.previous;
-    var tmp_16;
+    var tmp_15;
     if (tmp13_elvis_lhs == null) {
       // Inline function 'kotlin.emptyArray' call
-      tmp_16 = [];
+      tmp_15 = [];
     } else {
-      tmp_16 = tmp13_elvis_lhs;
+      tmp_15 = tmp13_elvis_lhs;
     }
-    var tmp17_previousTokens = dismissTokensIfUsed(tmp_15, tmp_16);
+    var tmp17_previousTokens = dismissTokensIfUsed(tmp_14, tmp_15);
     // Inline function 'kotlin.collections.isNotEmpty' call
     var tmp18_inEqualityStatement = !matchingEqualityStatements._v.isEmpty_y1axqb_k$();
     return new CursorDataImpl(tmp14_command, tmp15_missing, closestParameter, tmp16_beforeText, lineNumber, column, tmp17_previousTokens, closestItem, equalityValuesList, tmp18_inEqualityStatement);
@@ -20810,7 +20801,7 @@
       if (!(end.line === line)) {
         tmp = true;
       } else {
-        tmp = start.character <= character ? character <= end.character : false;
+        tmp = start.character < character ? character <= end.character : false;
       }
       return tmp;
     } else if (start.line < line) {
@@ -20992,7 +20983,6 @@
         $inCommand._v = tmp_6 < orElse(tmp4_safe_receiver == null ? null : tmp4_safe_receiver.endIndex, 0);
         tmp_5 = Unit_getInstance();
       }
-      var indexMod = 0;
       var tmp6_safe_receiver = closestCall == null ? null : closestCall.command;
       $commandParametersTemp._v = tmp6_safe_receiver == null ? null : tmp6_safe_receiver.parameters;
       var tmp7_safe_receiver = $closestItem;
@@ -32240,7 +32230,7 @@
   }
   function format(variant, text, options) {
     options = options === VOID ? null : options;
-    return Companion_getInstance_51().format_1mi4v5_k$(variant, text, options);
+    return Companion_getInstance_51().format_365pk2_k$(variant, text, options);
   }
   function Formatter$Companion$scriptStarts$delegate$lambda() {
     // Inline function 'kotlin.collections.map' call
@@ -32368,7 +32358,7 @@
                         tmp_0 = true;
                       } else {
                         var tmp_1 = get_startLine(item);
-                        var tmp1_safe_receiver = $this.get_state_iypx7s_k$().peak$default_ofh208_k$();
+                        var tmp1_safe_receiver = $this.get_state_iypx7s_k$().peak$default_d5hvo7_k$();
                         tmp_0 = !(tmp_1 === (tmp1_safe_receiver == null ? null : get_startLine(tmp1_safe_receiver)));
                       }
                       if (tmp_0) {
@@ -32428,13 +32418,13 @@
   protoOf(Companion_48).get_ENDM_ARRAY_839zuz_k$ = function () {
     return this.ENDM_ARRAY_1;
   };
-  protoOf(Companion_48).format_1mi4v5_k$ = function (variant, text, options) {
+  protoOf(Companion_48).format_365pk2_k$ = function (variant, text, options) {
     var formatter = new Formatter(variant, options, text);
     return format_0(formatter);
   };
-  protoOf(Companion_48).format$default_68xroz_k$ = function (variant, text, options, $super) {
+  protoOf(Companion_48).format$default_1ta9m6_k$ = function (variant, text, options, $super) {
     options = options === VOID ? null : options;
-    return $super === VOID ? FormatterApi_instance.format_1mi4v5_k$(variant, text, options) : $super.format_1mi4v5_k$.call(this, variant, text, options);
+    return $super === VOID ? FormatterApi_instance.format_365pk2_k$(variant, text, options) : $super.format_365pk2_k$.call(this, variant, text, options);
   };
   var Companion_instance_48;
   function Companion_getInstance_51() {
@@ -32969,7 +32959,7 @@
     }
     return this.get_items_it823b_k$().get_c1px32_k$(this.index_1 + distance | 0);
   };
-  protoOf(FormatterState).peak$default_ofh208_k$ = function (distance, $super) {
+  protoOf(FormatterState).peak$default_d5hvo7_k$ = function (distance, $super) {
     distance = distance === VOID ? 1 : distance;
     return $super === VOID ? this.peak_t5880p_k$(distance) : $super.peak_t5880p_k$.call(this, distance);
   };
@@ -32986,7 +32976,7 @@
     }
     return null;
   };
-  protoOf(FormatterState).lastNotWhitespace$default_twq3fn_k$ = function (distance, $super) {
+  protoOf(FormatterState).lastNotWhitespace$default_7o8u8s_k$ = function (distance, $super) {
     distance = distance === VOID ? -1 : distance;
     return $super === VOID ? this.lastNotWhitespace_u1e4rm_k$(distance) : $super.lastNotWhitespace_u1e4rm_k$.call(this, distance);
   };
@@ -33003,7 +32993,7 @@
     }
     return null;
   };
-  protoOf(FormatterState).last$default_z7ixr2_k$ = function (distance, filter, $super) {
+  protoOf(FormatterState).last$default_2dfzxd_k$ = function (distance, filter, $super) {
     distance = distance === VOID ? -1 : distance;
     return $super === VOID ? this.last_5tr401_k$(distance, filter) : $super.last_5tr401_k$.call(this, distance, filter);
   };
@@ -33020,7 +33010,7 @@
     }
     return null;
   };
-  protoOf(FormatterState).nextNotWhitespace$default_8rw9qe_k$ = function (distance, $super) {
+  protoOf(FormatterState).nextNotWhitespace$default_st2ny1_k$ = function (distance, $super) {
     distance = distance === VOID ? 1 : distance;
     return $super === VOID ? this.nextNotWhitespace_i54xtn_k$(distance) : $super.nextNotWhitespace_i54xtn_k$.call(this, distance);
   };
@@ -33037,7 +33027,7 @@
     }
     return null;
   };
-  protoOf(FormatterState).next$default_dynxi3_k$ = function (distance, filter, $super) {
+  protoOf(FormatterState).next$default_nmb06c_k$ = function (distance, filter, $super) {
     distance = distance === VOID ? 1 : distance;
     return $super === VOID ? this.next_4vjoe4_k$(distance, filter) : $super.next_4vjoe4_k$.call(this, distance, filter);
   };
@@ -33361,7 +33351,7 @@
     var tmp_0 = item.lines;
     var tmp_1;
     if (lastWasComment) {
-      var tmp0_safe_receiver = _this__u8e3s4.get_state_iypx7s_k$().peak$default_ofh208_k$();
+      var tmp0_safe_receiver = _this__u8e3s4.get_state_iypx7s_k$().peak$default_d5hvo7_k$();
       tmp_1 = (tmp0_safe_receiver == null ? null : isComment(tmp0_safe_receiver)) === true;
     } else {
       tmp_1 = false;
@@ -33415,7 +33405,7 @@
   }
   function formatSpace(_this__u8e3s4, item) {
     var lastItem = _this__u8e3s4.get_state_iypx7s_k$().get_lastItem_f337v6_k$();
-    var nextItem = _this__u8e3s4.get_state_iypx7s_k$().peak$default_ofh208_k$();
+    var nextItem = _this__u8e3s4.get_state_iypx7s_k$().peak$default_d5hvo7_k$();
     if (lastItem == null ? true : isWhitespaceOrComment(nextItem)) {
       if (!(nextItem instanceof Comment)) {
         _this__u8e3s4.get_state_iypx7s_k$().get_edits_iqqr28_k$().add_utx5q5_k$(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), ''));
@@ -33591,7 +33581,7 @@
   }
   function newLineSpace(_this__u8e3s4, item) {
     var tmp;
-    var tmp0_safe_receiver = _this__u8e3s4.get_state_iypx7s_k$().peak$default_ofh208_k$();
+    var tmp0_safe_receiver = _this__u8e3s4.get_state_iypx7s_k$().peak$default_d5hvo7_k$();
     if (!((tmp0_safe_receiver == null ? null : isWhitespace(tmp0_safe_receiver)) === false)) {
       tmp = !willNewlineNext(_this__u8e3s4);
     } else {
@@ -47959,8 +47949,6 @@
       new collectors();
     return CollectorsApi_instance;
   }
-  function CaosFormatterOptions() {
-  }
   function get_mRequire() {
     _init_properties_caos_libs_js_kt__j24y2r();
     // Inline function 'kotlin.getValue' call
@@ -48179,34 +48167,31 @@
   function formatter() {
     FormatterApi_instance = this;
   }
-  protoOf(formatter).format_hklbwp_k$ = function (variant, text, options) {
-    var tmp;
-    if (options != null) {
-      // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
-      var this_0 = get_json_0();
-      // Inline function 'kotlinx.serialization.serializer' call
-      var this_1 = this_0.get_serializersModule_piitvg_k$();
-      // Inline function 'kotlinx.serialization.internal.cast' call
-      var this_2 = serializer_1(this_1, createKType(getKClass(CaosFormatterOptions), arrayOf([]), false));
-      var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
-      tmp = decodeFromDynamic(this_0, tmp$ret$1, options);
-    } else {
-      tmp = null;
-    }
-    var optionsKt = tmp;
+  protoOf(formatter).format_365pk2_k$ = function (variant, text, options) {
+    var optionsKt = !(options == null) ? options : null;
     var result = format(variant, text, optionsKt);
     // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
-    var this_3 = get_json_0();
+    var this_0 = get_json_0();
     // Inline function 'kotlinx.serialization.serializer' call
-    var this_4 = this_3.get_serializersModule_piitvg_k$();
+    var this_1 = this_0.get_serializersModule_piitvg_k$();
     // Inline function 'kotlinx.serialization.internal.cast' call
-    var this_5 = serializer_1(this_4, createKType(getKClass(FormatResult), arrayOf([]), false));
-    var tmp$ret$4 = isInterface(this_5, KSerializer) ? this_5 : THROW_CCE();
-    return encodeToDynamic(this_3, tmp$ret$4, result);
+    var this_2 = serializer_1(this_1, createKType(getKClass(FormatResult), arrayOf([]), false));
+    var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
+    var out = encodeToDynamic(this_0, tmp$ret$1, result);
+    if (out.formattedText != result.formattedText) {
+      console.error('Encode to dynamic failed to properly persist formatted text. Expected: ' + result.formattedText + '; Found: ' + out.formattedText);
+      return null;
+    } else if (out.formattedText == null) {
+      console.error('Formatter returned null FormatResult.formattedText; ResultText: ' + result.formattedText);
+      console.error('KtResult: ' + result.formattedText);
+    } else {
+      console.log(out.formattedText);
+    }
+    return out;
   };
   protoOf(formatter).format = function (variant, text, options, $super) {
     options = options === VOID ? null : options;
-    return FormatterApi_instance.format_hklbwp_k$(variant, text, options);
+    return FormatterApi_instance.format_365pk2_k$(variant, text, options);
   };
   var FormatterApi_instance;
   function FormatterApi_getInstance() {
