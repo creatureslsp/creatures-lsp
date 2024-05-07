@@ -45,6 +45,15 @@
         "editor.semanticHighlighting.enabled": true,
         "editor.inlayHints.padding": true,
         "editor.wordBasedSuggestions": "off",
+      "editor.semanticTokenColorCustomizations": {
+        "rules": {
+          "caos2pray-tag.official:caos": {
+            "underline": true
+          },
+          "caos2pray-command:caos": {
+            "underline": true
+          }
+        }
       }
     },
     "configuration": {
@@ -271,6 +280,16 @@
         "id": "lvalue",
         "superType": "property",
         "description": "An lvalue command based variable"
+      },
+      {
+        "id": "caos2pray-tag",
+        "supertype": "macro",
+        "description": "CAOS2Pray tag value"
+      },
+      {
+        "id": "caos2pray-command",
+        "supertype": "macro",
+        "description": "CAOS2Pray command value"
       }
     ],
     "semanticTokenModifiers": [
@@ -338,8 +357,15 @@
       {
         "id": "command-suffix",
         "description": "Final command token in a three-word command"
+      },
+      {
+        "id": "official",
+        "description": "Official agent tags"
       }
-    ]
+    ],
+    "[caos]": {
+    },
+    "themes": []
   },
   "scripts": {
     "prepare": "node ./configure-references.js",
