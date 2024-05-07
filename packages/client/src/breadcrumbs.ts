@@ -31,7 +31,14 @@ export class CaosSymbolProvider implements DocumentSymbolProvider {
         return new Promise(async (resolve) => {
             const variant: GameVariant = getVariant() ?? "DS";
             const text = document.getText();
-            const symbolsRaw: IDocumentSymbol[] = getDocumentSymbolsFromText(variant, text, false);
+            let symbolsRaw: IDocumentSymbol[]
+            try {
+                symbolsRaw = getDocumentSymbolsFromText(variant, text, false);
+            } catch (e) {
+                const error = e instanceof Error ? (e.message + "\n" + e.stack) : e;
+                Log.e(document.uri, "Failed to get GOTO; ", error);
+                symbolsRaw = [];
+            }
             const symbols: DocumentSymbol[] = symbolsRaw
                 .map(toVsCodeSymbol);
             resolve(symbols);
@@ -47,6 +54,6 @@ function toVsCodeSymbol(symbol: IDocumentSymbol): DocumentSymbol {
         toVsCodeRange(symbol.range),
         toVsCodeRange(symbol.selectionRange),
     );
-    vsSymbol.children = symbol.children.map(toVsCodeSymbol);
+    vsSymbol.children = symbol.children?.map(toVsCodeSymbol) ?? [];
     return vsSymbol;
 }
