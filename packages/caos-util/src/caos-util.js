@@ -32022,7 +32022,7 @@
     if (!(15 === (15 & seen1))) {
       throwMissingFieldException(seen1, 15, $serializer_getInstance_30().descriptor_1);
     }
-    $FormatterApi_instance.formattedText = formattedText;
+    $this.formattedText = formattedText;
     $this.oldText = oldText;
     $this.edits = edits;
     $this.editReasons = editReasons;
@@ -32033,13 +32033,13 @@
   }
   function FormatResult(formattedText, oldText, edits, editReasons) {
     Companion_getInstance_50();
-    FormatterApi_instance.formattedText = formattedText;
+    this.formattedText = formattedText;
     this.oldText = oldText;
     this.edits = edits;
     this.editReasons = editReasons;
   }
   protoOf(FormatResult).get_formattedText_tm75eo_k$ = function () {
-    return FormatterApi_instance.formattedText;
+    return this.formattedText;
   };
   protoOf(FormatResult).get_oldText_ljpfxx_k$ = function () {
     return this.oldText;
@@ -32055,7 +32055,7 @@
       return true;
     if (!(other instanceof FormatResult))
       return false;
-    if (!(FormatterApi_instance.formattedText === other.formattedText))
+    if (!(this.formattedText === other.formattedText))
       return false;
     if (!(this.oldText === other.oldText))
       return false;
@@ -32064,13 +32064,13 @@
     return true;
   };
   protoOf(FormatResult).hashCode = function () {
-    var result = getStringHashCode(FormatterApi_instance.formattedText);
+    var result = getStringHashCode(this.formattedText);
     result = imul(31, result) + getStringHashCode(this.oldText) | 0;
     result = imul(31, result) + contentHashCode(this.edits) | 0;
     return result;
   };
   protoOf(FormatResult).component1_7eebsc_k$ = function () {
-    return FormatterApi_instance.formattedText;
+    return this.formattedText;
   };
   protoOf(FormatResult).component2_7eebsb_k$ = function () {
     return this.oldText;
@@ -32085,14 +32085,14 @@
     return new FormatResult(formattedText, oldText, edits, editReasons);
   };
   protoOf(FormatResult).copy = function (formattedText, oldText, edits, editReasons, $super) {
-    formattedText = formattedText === VOID ? FormatterApi_instance.formattedText : formattedText;
+    formattedText = formattedText === VOID ? this.formattedText : formattedText;
     oldText = oldText === VOID ? this.oldText : oldText;
     edits = edits === VOID ? this.edits : edits;
     editReasons = editReasons === VOID ? this.editReasons : editReasons;
     return this.copy_n2jvzp_k$(formattedText, oldText, edits, editReasons);
   };
   protoOf(FormatResult).toString = function () {
-    return 'FormatResult(formattedText=' + FormatterApi_instance.formattedText + ', oldText=' + this.oldText + ', edits=' + toString(this.edits) + ', editReasons=' + toString(this.editReasons) + ')';
+    return 'FormatResult(formattedText=' + this.formattedText + ', oldText=' + this.oldText + ', edits=' + toString(this.edits) + ', editReasons=' + toString(this.editReasons) + ')';
   };
   var EditReason_DANGLING_AUTO_COMPLETE_instance;
   var EditReason_FORMAT_CAOS2_instance;
@@ -47434,7 +47434,7 @@
     if (variants.isEmpty_y1axqb_k$()) {
       return "'" + commandToken + "' is not a valid " + commandType.get_value_j01efc_k$() + ' in variant ' + variant;
     }
-    return "'" + commandToken + "' is only available in [" + FormatterApi_instance.formatVariants_fue1r1_k$(variants) + ']';
+    return "'" + commandToken + "' is only available in [" + this.formatVariants_fue1r1_k$(variants) + ']';
   };
   protoOf(ErrorFormatter).formatVariants_jmeovh_k$ = function (variants) {
     var numVariants = variants.length;
