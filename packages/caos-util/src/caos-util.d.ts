@@ -313,15 +313,9 @@ export type CommandCall = HasRange & Argument & CaosItem & {
     
     readonly command: ICaosCommand;
     
-    readonly arguments: Array<Argument>;
+    readonly commandArguments: Array<Argument>;
     
     readonly tokenTextRange: RangeWithIndex;
-    
-    readonly endIndex: number;
-    
-    readonly lineNumber: number;
-    
-    readonly startIndex: number;
     
     readonly inVariant: boolean;
     
@@ -337,19 +331,29 @@ export type CommandCall = HasRange & Argument & CaosItem & {
     
     readonly callType: any/* com.bedalton.creatures.caos.libs.CommandType */;
     
-    readonly isRvalue: boolean;
+    readonly callTypeId: number;
     
-    readonly isLvalue: boolean;
+    readonly parameterCount: number;
     
-    readonly isCommand: boolean;
-    
-    readonly parserItem: ParserItem.CompoundCommandToken;
-    
-    readonly text: string;
-    
-    readonly commandString: string;
-    
-    readonly parserIndexStart: Nullable<number>;
+    // readonly endIndex: number;
+    //
+    // readonly lineNumber: number;
+    //
+    // readonly startIndex: number;
+    //
+    // readonly isRvalue: boolean;
+    //
+    // readonly isLvalue: boolean;
+    //
+    // readonly isCommand: boolean;
+    //
+    // readonly parserItem: ParserItem.CompoundCommandToken;
+    //
+    // readonly text: string;
+    //
+    // readonly commandString: string;
+    //
+    // readonly parserIndexStart: Nullable<number>;
     
     readonly parserIndexEnd: Nullable<number>;
 }

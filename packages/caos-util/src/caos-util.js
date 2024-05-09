@@ -14197,12 +14197,12 @@
       inductionVariable = inductionVariable + 1 | 0;
       $this.checkCancelled_1();
       var inductionVariable_0 = 0;
-      var last_0 = call.arguments.length;
+      var last_0 = call.commandArguments.length;
       if (inductionVariable_0 < last_0)
         $l$loop_0: do {
           var i = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
-          var argument = call.arguments[i];
+          var argument = call.commandArguments[i];
           var tmp2_elvis_lhs = getOrNull(call.command.parameters, i);
           var tmp;
           if (tmp2_elvis_lhs == null) {
@@ -14233,7 +14233,7 @@
       var call = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       $this.checkCancelled_1();
-      if (call.arguments.length > call.command.parameters.length) {
+      if (call.commandArguments.length > call.command.parameters.length) {
         continue $l$loop_0;
       }
       if (!call.get_done_wokv63_k$()) {
@@ -14242,7 +14242,7 @@
         }
         var tmp;
         // Inline function 'kotlin.collections.isEmpty' call
-        if (call.arguments.length === 0) {
+        if (call.commandArguments.length === 0) {
           // Inline function 'kotlin.let' call
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'com.bedalton.creatures.caos.collectors.CaosWalker.collectIncompleteCommandErrors.<anonymous>' call
@@ -14252,7 +14252,7 @@
           // Inline function 'kotlin.let' call
           // Inline function 'kotlin.contracts.contract' call
           // Inline function 'com.bedalton.creatures.caos.collectors.CaosWalker.collectIncompleteCommandErrors.<anonymous>' call
-          var end = last(call.arguments).textRange;
+          var end = last(call.commandArguments).textRange;
           var tmp0_startIndex = end.endIndex;
           var tmp1_endIndex = end.endIndex;
           var tmp2_start = end.end;
@@ -14519,7 +14519,7 @@
           if ((!(command === 'GSUB') ? !(command === 'SUBR') : false) ? !(command === 'GOTO') : false) {
             break $l$block_0;
           }
-          var tmp0_safe_receiver = getOrNull(element_0.arguments, 0);
+          var tmp0_safe_receiver = getOrNull(element_0.commandArguments, 0);
           var tmp = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.parserItem;
           var tmp1_elvis_lhs = (tmp == null ? true : tmp instanceof TokenVal) ? tmp : null;
           var tmp_0;
@@ -14562,7 +14562,7 @@
     }
   }
   function tokenArguments($this, command, tokenItems) {
-    var indexedObject = command.arguments;
+    var indexedObject = command.commandArguments;
     var inductionVariable = 0;
     var last = indexedObject.length;
     $l$loop: while (inductionVariable < last) {
@@ -14664,7 +14664,7 @@
         // Inline function 'com.bedalton.creatures.caos.collectors.CaosWalker.variantStringErrors.<anonymous>' call
         // Inline function 'kotlin.collections.filter' call
         // Inline function 'kotlin.collections.filterTo' call
-        var this_4 = element_2.arguments;
+        var this_4 = element_2.commandArguments;
         var destination_4 = ArrayList_init_$Create$_0();
         var inductionVariable_0 = 0;
         var last_0 = this_4.length;
@@ -15259,7 +15259,7 @@
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.CommandCall', this, 13);
     tmp0_serialDesc.addElement_5pzumi_k$('typeId', false);
     tmp0_serialDesc.addElement_5pzumi_k$('command', false);
-    tmp0_serialDesc.addElement_5pzumi_k$('arguments', true);
+    tmp0_serialDesc.addElement_5pzumi_k$('commandArguments', true);
     tmp0_serialDesc.addElement_5pzumi_k$('tokenTextRange', false);
     tmp0_serialDesc.addElement_5pzumi_k$('inVariant', false);
     tmp0_serialDesc.addElement_5pzumi_k$('textRange', false);
@@ -15405,13 +15405,13 @@
     if (tmp1_output.shouldEncodeElementDefault_x8eyid_k$(tmp0_desc, 2)) {
       tmp = true;
     } else {
-      var tmp_0 = value.arguments;
+      var tmp_0 = value.commandArguments;
       // Inline function 'kotlin.emptyArray' call
       var tmp$ret$0 = [];
       tmp = !equals(tmp_0, tmp$ret$0);
     }
     if (tmp) {
-      tmp1_output.encodeSerializableElement_isqxcl_k$(tmp0_desc, 2, tmp2_cached[2], value.arguments);
+      tmp1_output.encodeSerializableElement_isqxcl_k$(tmp0_desc, 2, tmp2_cached[2], value.commandArguments);
     }
     tmp1_output.encodeSerializableElement_isqxcl_k$(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), value.tokenTextRange);
     tmp1_output.encodeBooleanElement_ydht7q_k$(tmp0_desc, 4, value.inVariant);
@@ -15447,9 +15447,9 @@
     if (0 === (seen1 & 4)) {
       var tmp = $this;
       // Inline function 'kotlin.emptyArray' call
-      tmp.arguments = [];
+      tmp.commandArguments = [];
     } else
-      $this.arguments = arguments_0;
+      $this.commandArguments = arguments_0;
     $this.tokenTextRange = tokenTextRange;
     $this.inVariant = inVariant;
     $this.textRange_1 = textRange;
@@ -15495,7 +15495,7 @@
     arguments_0 = tmp;
     this.type_1 = type;
     this.command = command;
-    this.arguments = arguments_0;
+    this.commandArguments = arguments_0;
     this.tokenTextRange = tokenTextRange;
     this.inVariant = inVariant;
     this.textRange_1 = textRange;
@@ -15515,11 +15515,11 @@
   protoOf(CommandCall).get_command_gze7aa_k$ = function () {
     return this.command;
   };
-  protoOf(CommandCall).set_arguments_5ngs8p_k$ = function (_set____db54di) {
-    this.arguments = _set____db54di;
+  protoOf(CommandCall).set_commandArguments_2ojjli_k$ = function (_set____db54di) {
+    this.commandArguments = _set____db54di;
   };
-  protoOf(CommandCall).get_arguments_p5ddub_k$ = function () {
-    return this.arguments;
+  protoOf(CommandCall).get_commandArguments_umg7ho_k$ = function () {
+    return this.commandArguments;
   };
   protoOf(CommandCall).get_tokenTextRange_r17k0w_k$ = function () {
     return this.tokenTextRange;
@@ -15564,7 +15564,7 @@
     return this.callTypeId;
   };
   protoOf(CommandCall).get_done_wokv63_k$ = function () {
-    return this.arguments.length >= this.parameterCount_1;
+    return this.commandArguments.length >= this.parameterCount_1;
   };
   protoOf(CommandCall).get_parserItem_ywpdgb_k$ = function () {
     // Inline function 'kotlin.getValue' call
@@ -15573,18 +15573,18 @@
     return this_0.get_value_j01efc_k$();
   };
   protoOf(CommandCall).get_text_wouvsm_k$ = function () {
-    return stitch(arrayConcat([[this.parserItem], this.arguments]));
+    return stitch(arrayConcat([[this.parserItem], this.commandArguments]));
   };
   protoOf(CommandCall).get_commandString_1m0vmb_k$ = function () {
     return this.command.command;
   };
   protoOf(CommandCall).get_missingParameters_7ecq0p_k$ = function () {
     var tmp;
-    if (this.arguments.length >= this.parameterCount_1) {
+    if (this.commandArguments.length >= this.parameterCount_1) {
       // Inline function 'kotlin.emptyArray' call
       tmp = [];
     } else {
-      tmp = sliceArray(this.command.parameters, until(this.arguments.length, this.parameterCount_1));
+      tmp = sliceArray(this.command.parameters, until(this.commandArguments.length, this.parameterCount_1));
     }
     return tmp;
   };
@@ -15594,7 +15594,7 @@
     return tmp1_elvis_lhs == null ? this.textRange_1.parserIndex : tmp1_elvis_lhs;
   };
   protoOf(CommandCall).get_parserIndexEnd_tmetpt_k$ = function () {
-    var tmp0_safe_receiver = lastOrNull(this.arguments);
+    var tmp0_safe_receiver = lastOrNull(this.commandArguments);
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -15634,7 +15634,7 @@
       return false;
     if (!this.command.equals(other.command))
       return false;
-    if (!contentEquals(this.arguments, other.arguments))
+    if (!contentEquals(this.commandArguments, other.commandArguments))
       return false;
     if (!equals(this.tokenTextRange, other.tokenTextRange))
       return false;
@@ -15649,7 +15649,7 @@
   protoOf(CommandCall).hashCode = function () {
     var result = this.type_1;
     result = imul(31, result) + this.command.hashCode() | 0;
-    result = imul(31, result) + contentHashCode(this.arguments) | 0;
+    result = imul(31, result) + contentHashCode(this.commandArguments) | 0;
     result = imul(31, result) + hashCode(this.tokenTextRange) | 0;
     result = imul(31, result) + getBooleanHashCode(this.inVariant) | 0;
     result = imul(31, result) + hashCode(this.textRange_1) | 0;
@@ -15663,7 +15663,7 @@
     return this.command;
   };
   protoOf(CommandCall).component3_7eebsa_k$ = function () {
-    return this.arguments;
+    return this.commandArguments;
   };
   protoOf(CommandCall).component4_7eebs9_k$ = function () {
     return this.tokenTextRange;
@@ -15695,7 +15695,7 @@
   protoOf(CommandCall).copy = function (type, command, arguments_0, tokenTextRange, inVariant, textRange, parameter, inEqualityExpression, containingCommand, tokens, callType, $super) {
     type = type === VOID ? this.type_1 : type;
     command = command === VOID ? this.command : command;
-    arguments_0 = arguments_0 === VOID ? this.arguments : arguments_0;
+    arguments_0 = arguments_0 === VOID ? this.commandArguments : arguments_0;
     tokenTextRange = tokenTextRange === VOID ? this.tokenTextRange : tokenTextRange;
     inVariant = inVariant === VOID ? this.inVariant : inVariant;
     textRange = textRange === VOID ? this.textRange_1 : textRange;
@@ -15707,7 +15707,7 @@
     return this.copy_4fgy27_k$(type, command, arguments_0, tokenTextRange, inVariant, textRange, parameter, inEqualityExpression, containingCommand, tokens, callType);
   };
   protoOf(CommandCall).toString = function () {
-    return 'CommandCall(type=' + this.type_1 + ', command=' + this.command + ', arguments=' + toString(this.arguments) + ', tokenTextRange=' + this.tokenTextRange + ', inVariant=' + this.inVariant + ', textRange=' + this.textRange_1 + ', parameter=' + this.parameter_1 + ', inEqualityExpression=' + this.inEqualityExpression_1 + ', containingCommand=' + this.containingCommand_1 + ', tokens=' + toString(this.tokens) + ', callType=' + this.callType + ')';
+    return 'CommandCall(type=' + this.type_1 + ', command=' + this.command + ', arguments=' + toString(this.commandArguments) + ', tokenTextRange=' + this.tokenTextRange + ', inVariant=' + this.inVariant + ', textRange=' + this.textRange_1 + ', parameter=' + this.parameter_1 + ', inEqualityExpression=' + this.inEqualityExpression_1 + ', containingCommand=' + this.containingCommand_1 + ', tokens=' + toString(this.tokens) + ', callType=' + this.callType + ')';
   };
   function _get_$childSerializers__r2zwns_0($this) {
     return $this.$childSerializers_1;
@@ -17554,12 +17554,12 @@
         var tmp = tmp0_safe_receiver;
         // Inline function 'kotlin.collections.plus' call
         // Inline function 'kotlin.js.asDynamic' call
-        var tmp$ret$0 = tmp0_safe_receiver.arguments;
+        var tmp$ret$0 = tmp0_safe_receiver.commandArguments;
         // Inline function 'kotlin.arrayOf' call
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
         var tmp$ret$3 = [commandCall];
-        tmp.arguments = tmp$ret$0.concat(tmp$ret$3);
+        tmp.commandArguments = tmp$ret$0.concat(tmp$ret$3);
         done($this);
       }
     } else if (!commandCall.command.isCommand) {
@@ -17583,7 +17583,7 @@
     var command = tmp;
     var tmp_0 = command;
     // Inline function 'kotlin.collections.plus' call
-    var this_0 = command.arguments;
+    var this_0 = command.commandArguments;
     var tmp_1 = item.textRange;
     var tmp_2 = item.actualType;
     var tmp_3 = item.text;
@@ -17629,7 +17629,7 @@
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$5 = [isInterface(tmp_10, IArgument) ? tmp_10 : THROW_CCE()];
-    tmp_0.arguments = this_0.concat(tmp$ret$5);
+    tmp_0.commandArguments = this_0.concat(tmp$ret$5);
     if (equals(firstOrNull_0($this.waiting_1), get_EQ_JOIN())) {
       var tmp_11 = getOrNull($this.tokens_1, $this.tokenIndex_1 + 1 | 0);
       if (!(tmp_11 instanceof EqJoinVal)) {
@@ -17732,7 +17732,7 @@
        while (inductionVariable <= last);
   }
   function endEnd($this, commandCall) {
-    var tmp0_safe_receiver = nullIfEmpty_1(commandCall.arguments);
+    var tmp0_safe_receiver = nullIfEmpty_1(commandCall.commandArguments);
     var tmp;
     if (tmp0_safe_receiver == null) {
       tmp = null;
@@ -17988,10 +17988,10 @@
     while (tmp0_iterator_0.hasNext_bitz1p_k$()) {
       var item = tmp0_iterator_0.next_20eer_k$();
       // Inline function 'com.bedalton.creatures.caos.collectors.CommandWalker.<get-equalityStatements>.<anonymous>' call
-      var tmp0_safe_receiver = getOrNull(item.arguments, 0);
+      var tmp0_safe_receiver = getOrNull(item.commandArguments, 0);
       var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.textRange;
       var start = tmp1_elvis_lhs == null ? item.textRange_1 : tmp1_elvis_lhs;
-      var tmp2_safe_receiver = lastOrNull(item.arguments);
+      var tmp2_safe_receiver = lastOrNull(item.commandArguments);
       var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.textRange;
       var last = tmp3_elvis_lhs == null ? item.textRange_1 : tmp3_elvis_lhs;
       var tmp4_startIndex = start.startIndex;
@@ -17999,9 +17999,9 @@
       var tmp6_start = start.start;
       var tmp7_end = last.end;
       var range = new RangeWithIndexImpl(tmp6_start, tmp7_end, tmp4_startIndex, tmp5_endIndex);
-      var tmp = getOrNull(item.arguments, 0);
-      var tmp_0 = getOrNull(item.arguments, 2);
-      var tmp8_safe_receiver = getOrNull(item.arguments, 1);
+      var tmp = getOrNull(item.commandArguments, 0);
+      var tmp_0 = getOrNull(item.commandArguments, 2);
+      var tmp8_safe_receiver = getOrNull(item.commandArguments, 1);
       var tmp_1 = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.parserItem;
       var tmp_2 = tmp_1 instanceof EqOpVal ? tmp_1 : null;
       var tmp9_elvis_lhs = item.parameter_1;
@@ -18088,7 +18088,7 @@
     return $this.$childSerializers_1;
   }
   function CommandCallJs_init_$Init$(commandCall, $this) {
-    CommandCallJs.call($this, commandCall.type_1, commandCall.command, commandCall.arguments, commandCall.tokenTextRange, commandCall.inVariant, commandCall.textRange_1, commandCall.parameter_1, commandCall.inEqualityExpression_1, commandCall.containingCommand_1, commandCall.tokens, commandCall.callType, commandCall.isRvalue, commandCall.isLvalue, commandCall.isCommand, commandCall.parserItem, commandCall.text, commandCall.commandString, commandCall.parserIndexStart, commandCall.parserIndexEnd);
+    CommandCallJs.call($this, commandCall.type_1, commandCall.command, commandCall.commandArguments, commandCall.tokenTextRange, commandCall.inVariant, commandCall.textRange_1, commandCall.parameter_1, commandCall.inEqualityExpression_1, commandCall.containingCommand_1, commandCall.tokens, commandCall.callType, commandCall.isRvalue, commandCall.isLvalue, commandCall.isCommand, commandCall.parserItem, commandCall.text, commandCall.commandString, commandCall.parserIndexStart, commandCall.parserIndexEnd);
     return $this;
   }
   function CommandCallJs_init_$Create$(commandCall) {
@@ -18122,7 +18122,7 @@
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.CommandCallJs', this, 19);
     tmp0_serialDesc.addElement_5pzumi_k$('typeId', false);
     tmp0_serialDesc.addElement_5pzumi_k$('command', false);
-    tmp0_serialDesc.addElement_5pzumi_k$('arguments', false);
+    tmp0_serialDesc.addElement_5pzumi_k$('commandArguments', false);
     tmp0_serialDesc.addElement_5pzumi_k$('tokenTextRange', false);
     tmp0_serialDesc.addElement_5pzumi_k$('inVariant', false);
     tmp0_serialDesc.addElement_5pzumi_k$('textRange', false);
@@ -20877,7 +20877,7 @@
   }
   function getCursorPosition$lambda_2($lineNumber, $column, $isAfterCloseQuote, $container, $closest, $processCommand, $closestItem, $inCommand, $commandParametersTemp, $missingParameters, $parseResult, $matchingEqualityStatements, $index, $closestResult) {
     return function (closestCall, parentCall) {
-      var tmp1_elvis_lhs = closestCall == null ? null : closestCall.arguments;
+      var tmp1_elvis_lhs = closestCall == null ? null : closestCall.commandArguments;
       var tmp;
       if (tmp1_elvis_lhs == null) {
         // Inline function 'kotlin.emptyArray' call
@@ -21115,7 +21115,7 @@
       }
       $matchingEqualityStatements._v = destination;
       $index._v = argumentIndex >= 0 ? argumentIndex : 0;
-      var tmp23_safe_receiver = closestCall == null ? null : closestCall.arguments;
+      var tmp23_safe_receiver = closestCall == null ? null : closestCall.commandArguments;
       var closestCallArguments = tmp23_safe_receiver == null ? null : nullIfEmpty_1(tmp23_safe_receiver);
       var tmp_17;
       if (!(closestCallArguments == null)) {
@@ -21229,7 +21229,7 @@
             var closestFallback = $closestResult.closest;
             var tmp_21;
             // Inline function 'kotlin.collections.isEmpty' call
-            if (closestFallback.arguments.length === 0) {
+            if (closestFallback.commandArguments.length === 0) {
               // Inline function 'kotlin.collections.isNotEmpty' call
               // Inline function 'kotlin.collections.isEmpty' call
               tmp_21 = !(closestFallback.get_missingParameters_7ecq0p_k$().length === 0);
@@ -28781,7 +28781,7 @@
       tmp_0 = tmp1_elvis_lhs;
     }
     var classifier = tmp_0;
-    var tmp_1 = firstOrNull(command.arguments);
+    var tmp_1 = firstOrNull(command.commandArguments);
     var tmp2_elvis_lhs = tmp_1 instanceof CommandCall ? tmp_1 : null;
     var tmp_2;
     if (tmp2_elvis_lhs == null) {
@@ -28794,7 +28794,7 @@
       tmp_2 = tmp2_elvis_lhs;
     }
     var firstCondition = tmp_2;
-    var tmp3_safe_receiver = firstOrNull(firstCondition.arguments);
+    var tmp3_safe_receiver = firstOrNull(firstCondition.commandArguments);
     var tmp4_safe_receiver = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.textRange;
     var tmp5_elvis_lhs = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.startIndex;
     var tmp_3;
@@ -29325,7 +29325,7 @@
     var token = get_firstToken(command);
     var tmp;
     if (token === get_TARG()) {
-      var argument = firstOrNull(command.arguments);
+      var argument = firstOrNull(command.commandArguments);
       var tmp1_safe_receiver = argument instanceof CommandCall ? argument : null;
       var tmp_0;
       if (tmp1_safe_receiver == null) {
@@ -29363,20 +29363,20 @@
       }
       tmp = tmp_2;
     } else if (contains(get_enumerators(), token)) {
-      tmp = getClassifierFromArgs($this, command.arguments);
+      tmp = getClassifierFromArgs($this, command.commandArguments);
     } else if (contains(get_terminators(), token)) {
       var tmp4_elvis_lhs = $this.creatureOwnr_1;
       tmp = tmp4_elvis_lhs == null ? $this.ownr_1 : tmp4_elvis_lhs;
     } else if (token === get_RTAR()) {
-      tmp = getClassifierFromArgs($this, command.arguments);
+      tmp = getClassifierFromArgs($this, command.commandArguments);
     } else if (token === get_CLAS()) {
       tmp = getClassifierFromC1Class($this, command);
     } else if (token === get_CLS2()) {
-      tmp = getClassifierFromArgs($this, command.arguments);
+      tmp = getClassifierFromArgs($this, command.commandArguments);
     } else if (token === get_NEW_()) {
       var tmp_3;
       if ($this.variant_1.isNotOld) {
-        tmp_3 = getClassifierFromArgs($this, command.arguments);
+        tmp_3 = getClassifierFromArgs($this, command.commandArguments);
       } else {
         return Unit_getInstance();
       }
@@ -29388,7 +29388,7 @@
     $this.setTarg_3ucehd_k$(command.textRange, newClassifier);
   }
   function getClassifierFromC1Class($this, command) {
-    var tmp0_safe_receiver = firstOrNull(command.arguments);
+    var tmp0_safe_receiver = firstOrNull(command.commandArguments);
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.parserItem;
     var tmp;
     if (tmp1_elvis_lhs == null) {
@@ -29501,7 +29501,7 @@
     return get_singleToken(call) === targetToken;
   }
   function setAgent($this, command) {
-    var tmp0_safe_receiver = getOrNull(command.arguments, 0);
+    var tmp0_safe_receiver = getOrNull(command.commandArguments, 0);
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.text;
     var tmp;
     if (tmp1_elvis_lhs == null) {
@@ -29515,7 +29515,7 @@
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$1 = variable.toUpperCase();
     if (startsWith_0(tmp$ret$1, 'CLS2 ')) {
-      var tmp_1 = command.arguments[0];
+      var tmp_1 = command.commandArguments[0];
       var tmp2_elvis_lhs = tmp_1 instanceof CommandCall ? tmp_1 : null;
       var tmp_2;
       if (tmp2_elvis_lhs == null) {
@@ -29524,9 +29524,9 @@
         tmp_2 = tmp2_elvis_lhs;
       }
       var cls2 = tmp_2;
-      tmp_0 = getClassifierFromArgs($this, cls2.arguments);
+      tmp_0 = getClassifierFromArgs($this, cls2.commandArguments);
     } else {
-      var tmp3_safe_receiver = getOrNull(command.arguments, 1);
+      var tmp3_safe_receiver = getOrNull(command.commandArguments, 1);
       var tmp4_elvis_lhs = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.text;
       var tmp_3;
       if (tmp4_elvis_lhs == null) {
@@ -29573,7 +29573,7 @@
           var tmp8_elvis_lhs = $this.classifierAssignments_1.get_wei43m_k$(value);
           var tmp_6;
           if (tmp8_elvis_lhs == null) {
-            var tmp_7 = $this.getVariableValue_i0qyj3_k$(command.arguments[1]);
+            var tmp_7 = $this.getVariableValue_i0qyj3_k$(command.commandArguments[1]);
             tmp_6 = (tmp_7 == null ? true : isIntArray(tmp_7)) ? tmp_7 : null;
           } else {
             tmp_6 = tmp8_elvis_lhs;
@@ -29594,7 +29594,7 @@
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp_0 = variable.commandString.toLowerCase() + ' ';
-      var tmp_1 = variable.arguments;
+      var tmp_1 = variable.commandArguments;
       tmp = tmp_0 + joinToString(tmp_1, ' ', VOID, VOID, VOID, VOID, TargScriptWalker$getNormalizedVariableName$lambda);
     } else {
       // Inline function 'kotlin.text.lowercase' call
@@ -33918,7 +33918,7 @@
     var index = get_index(element.get_second_jf7fjx_k$());
     if (index == null ? true : index < 1)
       return false;
-    var tmp0_safe_receiver = getOrNull(element.get_first_irdx8n_k$().arguments, index - 1 | 0);
+    var tmp0_safe_receiver = getOrNull(element.get_first_irdx8n_k$().commandArguments, index - 1 | 0);
     var tmp_0 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.parserItem;
     if (!(tmp_0 instanceof IntVal)) {
       return false;
@@ -33977,7 +33977,7 @@
       tmp_1 = tmp3_elvis_lhs;
     }
     var familyIndex = tmp_1;
-    var tmp4_safe_receiver = getOrNull(element.get_first_irdx8n_k$().arguments, familyIndex);
+    var tmp4_safe_receiver = getOrNull(element.get_first_irdx8n_k$().commandArguments, familyIndex);
     var tmp5_safe_receiver = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.text;
     var tmp6_elvis_lhs = tmp5_safe_receiver == null ? null : toIntOrNull(tmp5_safe_receiver);
     var tmp_2;
@@ -34134,7 +34134,7 @@
     if (notLike(element.get_first_irdx8n_k$().commandString, 'SETV')) {
       return false;
     }
-    var tmp0_elvis_lhs = firstOrNull(element.get_first_irdx8n_k$().arguments);
+    var tmp0_elvis_lhs = firstOrNull(element.get_first_irdx8n_k$().commandArguments);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return false;
@@ -34400,7 +34400,7 @@
       if (leftValueIndex < 0) {
         return null;
       }
-      var leftArg = getOrNull(parent.arguments, leftValueIndex);
+      var leftArg = getOrNull(parent.commandArguments, leftValueIndex);
       var tmp1_safe_receiver = leftArg instanceof CommandCall ? leftArg : null;
       var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.command;
       var tmp5_elvis_lhs = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.returnValuesList(variant.code);
@@ -34855,7 +34855,7 @@
       var commandHints = tmp;
       // Inline function 'kotlin.collections.flatMap' call
       // Inline function 'kotlin.collections.flatMapTo' call
-      var this_0 = element.arguments;
+      var this_0 = element.commandArguments;
       var destination_0 = ArrayList_init_$Create$_0();
       var inductionVariable_0 = 0;
       var last_0 = this_0.length;
@@ -35526,7 +35526,7 @@
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$1 = element.command.command.toUpperCase();
     if (tmp_0.contains_aljjnj_k$(tmp$ret$1)) {
-      var firstArg = firstOrNull(element.arguments);
+      var firstArg = firstOrNull(element.commandArguments);
       var tmp0_safe_receiver = firstArg instanceof CommandCall ? firstArg : null;
       var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.command;
       var commandString = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.command;
@@ -35586,7 +35586,7 @@
     var skipLast_0 = skipLast(Companion_getInstance_57(), element);
     var parameterStructs = referencedCommand.parameters;
     var parameters = getParametersAsStrings(Companion_getInstance_57(), parameterStructs, skipLast_0);
-    var arguments_0 = element.arguments;
+    var arguments_0 = element.commandArguments;
     // Inline function 'kotlin.collections.mapIndexedNotNull' call
     // Inline function 'kotlin.collections.mapIndexedNotNullTo' call
     var destination = ArrayList_init_$Create$_0();
@@ -35646,7 +35646,7 @@
     return this.isApplicable_ho0bdv_k$(variant, element instanceof CommandCall ? element : THROW_CCE());
   };
   protoOf(ParameterHintsProvider$SETV_PARAMETER_NAME_HINT).provideHints_l5tvbz_k$ = function (variant, element) {
-    var arguments_0 = element.arguments;
+    var arguments_0 = element.commandArguments;
     var tmp0_elvis_lhs = firstOrNull(arguments_0);
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -35701,14 +35701,14 @@
     if (!(lastArgument == null)) {
       // Inline function 'kotlin.collections.plus' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp$ret$6 = lvalueElement.arguments;
+      var tmp$ret$6 = lvalueElement.commandArguments;
       // Inline function 'kotlin.arrayOf' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp$ret$9 = [lastArgument];
       tmp_2 = tmp$ret$6.concat(tmp$ret$9);
     } else {
-      tmp_2 = lvalueElement.arguments;
+      tmp_2 = lvalueElement.commandArguments;
     }
     var out = tmp_2;
     // Inline function 'kotlin.collections.mapIndexedNotNull' call
@@ -35774,7 +35774,7 @@
     // Inline function 'com.bedalton.creatures.caos.hints.SETV_PARAMETER_NAME_HINT.provideHints.<anonymous>' call
     // Inline function 'kotlin.collections.mapIndexedNotNull' call
     // Inline function 'kotlin.collections.mapIndexedNotNullTo' call
-    var this_1 = dropLast(element.arguments, 1);
+    var this_1 = dropLast(element.commandArguments, 1);
     var destination_3 = ArrayList_init_$Create$_0();
     // Inline function 'kotlin.collections.forEachIndexed' call
     var index_0 = 0;
