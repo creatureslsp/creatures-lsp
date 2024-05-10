@@ -1,11 +1,11 @@
 // noinspection JSUnusedGlobalSymbols
 
 import CommandToken = ParserItem.CommandToken;
-import {
-    DocumentSymbol,
-    InlayHint
-} from "vscode-languageserver-types";
-export type * from "./bedalton.log";
+// Export logging commands
+
+import {DocumentSymbol, InlayHint} from "vscode-languageserver-types";
+import {Nullable} from "@bedalton/extension-util";
+export * from "./bedalton.log";
 export {
     HasRange,
     ITuple,
@@ -13,18 +13,12 @@ export {
 
 export type GameVariant = 'C1' | 'C2' | 'CV' | 'C3' | 'DS' | 'SM';
 
-import {Nullable} from "@bedalton/extension-util";
-
 declare const __doNotImplementIt: unique symbol
 export type __doNotImplementIt = typeof __doNotImplementIt
 
 
 export type MessageType = 'error' | 'warning' | 'info';
 
-import {com as _log_com} from "./bedalton.log";
-
-import log = _com_log.bedalton.log;
-export {log};
 
 // export namespace com.bedalton.creatures.caos.collectors {
 export type CollectorsApi = {
@@ -102,11 +96,11 @@ export type HintsApi = {
     
     getInlayOptions(): Array<string>;
     
-     getInlayHints(parseResult: ParseResult, disabled: Array<string>, folds: Array<Range>, minimumParameterCount?: Nullable<number>): Array<InlayHint>;
+    getInlayHints(parseResult: ParseResult, disabled: Array<string>, folds: Array<Range>, minimumParameterCount?: Nullable<number>): Array<InlayHint>;
     
-     getDocumentSymbolsFromText(variant: GameVariant, text: string, addDoifLikeStatements?: boolean): Array<DocumentSymbol>;
+    getDocumentSymbolsFromText(variant: GameVariant, text: string, addDoifLikeStatements?: boolean): Array<DocumentSymbol>;
     
-     getDocumentSymbols(parserResult: ParseResult, addDoifLikeStatements?: boolean): Array<DocumentSymbol>;
+    getDocumentSymbols(parserResult: ParseResult, addDoifLikeStatements?: boolean): Array<DocumentSymbol>;
     
 }
 
@@ -125,7 +119,7 @@ export type ServerApi = {
 export const server: ServerApi;
 
 
-export type Argument = TextWithRange & CaosItem & {
+export interface Argument implements TextWithRange, CaosItem {
     
     readonly textRange: RangeWithIndex;
     
@@ -147,11 +141,11 @@ export type Argument = TextWithRange & CaosItem & {
     
 }
 
-export type CaosItem = TextWithRange & {
+export interface CaosItem extends TextWithRange {
     readonly textRange: RangeWithIndex;
 }
 
-export type CursorData = Position & {
+export interface CursorData extends Position {
     
     readonly command: Nullable<ICaosCommand>;
     
@@ -175,7 +169,7 @@ export type CursorData = Position & {
     
 }
 
-export type CaosFormatterOptions = {
+export interface CaosFormatterOptions {
     
     readonly tabSize: number;
     
@@ -268,7 +262,7 @@ export interface ICaosContextListener {
     onCaos2Comment(token: ParserItem.Caos2Comment): void;
 }
 
-export type DateComponents = {
+export interface DateComponents {
     readonly year: number;
     
     readonly  monthZeroIndexed: number;
@@ -284,7 +278,7 @@ export type DateComponents = {
     readonly unix: Nullable<number>;
 }
 
-export type BlockRange = RangeWithIndex & {
+export interface BlockRange extends RangeWithIndex {
     
     readonly startToken: Nullable<string>;
     
@@ -308,7 +302,7 @@ export type BlockRange = RangeWithIndex & {
     
 }
 
-export type CommandCall = HasRange & Argument & CaosItem & {
+export interface CommandCall extends HasRange, Argument, CaosItem {
     readonly type: number;
     
     readonly command: ICaosCommand;
@@ -329,7 +323,8 @@ export type CommandCall = HasRange & Argument & CaosItem & {
     
     readonly tokens: Array<ParserItem.CommandToken>;
     
-    readonly callType: any/* com.bedalton.creatures.caos.libs.CommandType */;
+    readonly callType: any/* com.bedalton.creatures.caos.libs.CommandType */
+    ;
     
     readonly callTypeId: number;
     
@@ -358,7 +353,7 @@ export type CommandCall = HasRange & Argument & CaosItem & {
     readonly parserIndexEnd: Nullable<number>;
 }
 
-export type CommandReference = {
+export interface CommandReference {
     
     readonly command: ICaosCommand;
     
@@ -372,7 +367,7 @@ export type CommandReference = {
     
 }
 
-export type EqualityStatement = Argument & {
+export interface EqualityStatement extends Argument {
     
     readonly lineNumber: number;
     
@@ -406,7 +401,7 @@ export type EqualityStatement = Argument & {
     
 }
 
-export type Script = {
+export interface Script {
     
     readonly commandString: Nullable<string>;
     
@@ -426,7 +421,7 @@ export type Script = {
     
 }
 
-export type IParserItem<T> = ParseTreeItem<T> & CaosItem & {
+export interface IParserItem<T> extends ParseTreeItem<T>, CaosItem {
     
     readonly textRange: RangeWithIndex;
     
@@ -450,7 +445,7 @@ export type IParserItem<T> = ParseTreeItem<T> & CaosItem & {
 }
 
 export namespace ParserItem {
-    type FloatVal = IParserItem<number> & {
+    interface FloatVal extends IParserItem<number> {
         
         readonly textRange: RangeWithIndex;
         
@@ -462,7 +457,7 @@ export namespace ParserItem {
         
     }
     
-    type IntVal = IParserItem<number> & {
+    interface IntVal extends IParserItem<number> {
         
         readonly textRange: RangeWithIndex;
         
@@ -474,7 +469,7 @@ export namespace ParserItem {
         
     }
     
-    type CharVal = IParserItem<number> & {
+    interface CharVal extends IParserItem<number> {
         
         readonly textRange: RangeWithIndex;
         
@@ -486,7 +481,7 @@ export namespace ParserItem {
         
     }
     
-    type BinaryVal = IParserItem<any/* kotlin.Long */> & {
+    interface BinaryVal extends IParserItem<any/* kotlin.Long */> {
         
         readonly textRange: RangeWithIndex;
         
@@ -498,7 +493,7 @@ export namespace ParserItem {
         
     }
     
-    type ByteString = IParserItem<string> & {
+    interface ByteString extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -510,7 +505,7 @@ export namespace ParserItem {
         
     }
     
-    type C2eStringVal = IParserItem<string> & {
+    interface C2eStringVal extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -522,7 +517,7 @@ export namespace ParserItem {
         
     }
     
-    type C1eStringVal = IParserItem<string> & {
+    interface C1eStringVal extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -534,7 +529,7 @@ export namespace ParserItem {
         
     }
     
-    type TokenVal = IParserItem<string> & {
+    interface TokenVal extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -546,7 +541,7 @@ export namespace ParserItem {
         
     }
     
-    type EqJoin = IParserItem<string> & {
+    interface EqJoin extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -558,7 +553,7 @@ export namespace ParserItem {
         
     }
     
-    type EqOp = IParserItem<string> & Argument & {
+    interface EqOp extends IParserItem<string>, Argument {
         
         readonly textRange: RangeWithIndex;
         
@@ -582,7 +577,7 @@ export namespace ParserItem {
         
     }
     
-    type DdePictVal = IParserItem<ITuple<number, number>> & {
+    interface DdePictVal extends IParserItem<ITuple<number, number>> {
         
         readonly textRange: RangeWithIndex;
         
@@ -594,7 +589,7 @@ export namespace ParserItem {
         
     }
     
-    type ErrorVal = IParserItem<string> & {
+    interface ErrorVal extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -610,7 +605,7 @@ export namespace ParserItem {
         
     }
     
-    type IndexedVar = IParserItem<string> & {
+    interface IndexedVar extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -626,7 +621,7 @@ export namespace ParserItem {
         
     }
     
-    type AutocompleteHint = IParserItem<string> & {
+    interface AutocompleteHint extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -638,7 +633,7 @@ export namespace ParserItem {
         
     }
     
-    type Comment = IParserItem<string> & {
+    interface Comment extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -650,7 +645,7 @@ export namespace ParserItem {
         
     }
     
-    type Caos2Comment = IParserItem<string> & {
+    interface Caos2Comment extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -682,7 +677,7 @@ export namespace ParserItem {
         
     }
     
-    type CommandToken = IParserItem<string> & {
+    interface CommandToken extends IParserItem<string> {
         
         readonly textRange: RangeWithIndex;
         
@@ -696,7 +691,7 @@ export namespace ParserItem {
         
     }
     
-    type CompoundCommandToken = IParserItem<string> & {
+    interface CompoundCommandToken extends IParserItem<string> {
         
         readonly actualType: number;
         
@@ -712,9 +707,10 @@ export namespace ParserItem {
         
     }
     
-    type WhitespaceItem = IParserItem<string> & {}
+    interface WhitespaceItem extends IParserItem<string> {
+    }
     
-    type NewLine = WhitespaceItem & {
+    interface NewLine extends WhitespaceItem {
         
         readonly textRange: RangeWithIndex;
         
@@ -728,7 +724,7 @@ export namespace ParserItem {
         
     }
     
-    type Spaces = WhitespaceItem & {
+    interface Spaces extends WhitespaceItem {
         
         readonly textRange: RangeWithIndex;
         
@@ -834,7 +830,7 @@ export namespace com.bedalton.creatures.caos.libs {
     }
 }
 
-export type ICaosParameter = {
+export interface ICaosParameter {
     
     index: number;
     
@@ -852,7 +848,7 @@ export type ICaosParameter = {
     
 }
 
-export type ICaosCommand = {
+export interface ICaosCommand {
     command: string;
     
     parameters: Array<ICaosParameter>;
@@ -884,6 +880,7 @@ export type ICaosCommand = {
     requiresCreatureOwnr: boolean;
     
 }
+
 export namespace com.bedalton.creatures.caos.libs {
     
     
@@ -936,7 +933,8 @@ export type VariantData<T> = {
     [variant: GameVariant]: Nullable<T>
     
 }
-export type CaosValuesList = {
+
+export interface CaosValuesList {
     
     id: number;
     
@@ -952,7 +950,7 @@ export type CaosValuesList = {
     
 }
 
-export type ValuesListValue = {
+export interface ValuesListValue {
     
     value: string;
     
@@ -970,7 +968,7 @@ export type ValuesListValue = {
     
 }
 
-export type Commands = {
+export interface Commands {
     
     commands: Array<ICaosCommand>;
     
@@ -1035,7 +1033,6 @@ export namespace com.bedalton.common.structs {
         constructor(message?: string);
     }
 }
-
 
 
 export as namespace caos_util;

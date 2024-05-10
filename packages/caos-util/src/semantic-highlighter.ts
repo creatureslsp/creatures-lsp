@@ -354,7 +354,7 @@ function addBracketStringDecorations(tokens: SemanticToken[], call: ICommandCall
         const type = p.typeId
         return type === BYTE_STRING_TYPE_ID || type === ANIMATION_TYPE_ID || type === C1_STRING_TYPE_ID
     });
-    const args = call.arguments;
+    const args = call.commandArguments;
     for (let parameter of stringParameters) {
         if (args.length <= parameter.index) {
             continue;
@@ -387,7 +387,7 @@ function addBracketStringDecorations(tokens: SemanticToken[], call: ICommandCall
  * @param call
  */
 function addTokensFromCall(tokens: SemanticToken[], call: ICommandCall) {
-    const tokenArguments = call.arguments.filter((p: Argument) => p.type == TOKEN_TYPE_ID)
+    const tokenArguments = call.commandArguments.filter((p: Argument) => p.type == TOKEN_TYPE_ID)
     if (tokenArguments.length == 0) {
         return;
     }

@@ -60,3 +60,6 @@ export interface ILoggerObject {
     
     readonly prependLogType: Nullable<boolean>;
 }
+
+import log = com.bedalton.log;
+export {log};

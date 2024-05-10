@@ -139,8 +139,8 @@ async function validateParserResult(
         return c.command.command === 'GSUB' || c.command.command === 'GOTO';
     });
     for (let gsub of gsubs) {
-        if (gsub.arguments.length == 1) {
-            const arg = gsub.arguments[0];
+        if (gsub.commandArguments.length == 1) {
+            const arg = gsub.commandArguments[0];
             const textRange = arg.textRange;
             if (!hasSubroutine(parseResult, arg.text.trim(), textRange.start.line, textRange.start.character)) {
                 errorMarkers.push({
