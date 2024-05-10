@@ -61,54 +61,12 @@ function replaceIf(text: string, search: string, replace: string): Nullable<stri
     }
 }
 
-function inflect(text: string): string {
+export function inflect(text: string): string {
     text = text.trim();
     const replaced = replace.map(([search, replacement]) => replaceIf(text, search, replacement))
         .filter(t => t != null && t.trim().length > 0);
     return (text + ' ' + replaced.join(' ')).trim();
 }
-
-export function getNamedVariableCompletionItems(
-    getNamedVariableKeys: (prefix: NamedVarPrefix, definedOnly: boolean) => string[],
-    closestItem: Nullable<IParserItem<any>>,
-    namedVariablePrefix: NamedVarPrefix,
-    definedOnly: boolean
-): CompletionItem[] {
-    const keys = getNamedVariableKeys(namedVariablePrefix, definedOnly);
-    let range: Nullable<Range>;
-    const text = closestItem?.text;
-    let openQuote = text != null && text.startsWith('"') ? '' : '"';
-    let closeQuote = text != null && text.endsWith('"') ? '' : '"';
-    if (closestItem) {
-        range = {
-            start: {
-                line: closestItem.textRange.start.line!!,
-                character: closestItem.textRange.start.character + (1 - openQuote.length)
-            },
-            end: {
-                line: closestItem.textRange.end.line,
-                character: closestItem.textRange.end.character - (1 - closeQuote.length)
-            }
-        }
-    }
-    const stringValue = closestItem?.value?.toString();
-    return keys.map(key => {
-        const completion = openQuote + key + closeQuote;
-        const edit = range != null ? {range, newText: completion} : null;
-        return <CompletionItem>{
-            label: key,
-            kind: CompletionItemKind.Variable,
-            filterText: '\"' + inflect(key) + " " + (multiCase(key)) + "\"",
-            insertText: completion,
-            insertTextFormat: InsertTextFormat.PlainText,
-            insertTextMode: InsertTextMode.asIs,
-            preselect: false,
-            sortText: '0__0' + key,
-            textEdit: edit
-        };
-    }); //.filter(i => i.label !== stringValue);
-}
-
 
 const replace = [
     ['mouseable', 'mousable'],
@@ -143,7 +101,7 @@ const replace = [
 ];
 
 
-function multiCase(key: string): string {
+export function multiCase(key: string): string {
     if (key.length <= 1) {
         return key;
     }

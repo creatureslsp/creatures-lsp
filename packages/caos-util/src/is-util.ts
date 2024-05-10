@@ -63,3 +63,5 @@ export namespace Is {
         return item.typeToken == TypeTokens.QUOTE_STRING
     }
 }
+
+export * from "./is-similar-variant";

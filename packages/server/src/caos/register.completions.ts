@@ -1,22 +1,23 @@
-import {CompletionItem, CompletionList, TextDocumentPositionParams} from "vscode-languageserver";
+import {CompletionItem, CompletionList, DocumentUri, TextDocumentPositionParams} from "vscode-languageserver";
 import {EMPTY_DOCUMENT_URI, getAllDocuments, getDocuments} from "../documents";
 import {CAOS_LANGUAGE_ID, getDocumentSettings} from "../settings";
 import {
     CompletionOptions,
     CompletionSettings,
     createEmptyCompletionList,
-    getCompletionItems,
-    NamedVarPrefix
+    getCompletionItems
 } from "@bedalton/caos-util/completions";
 import {updateRecent, updateRecentCommandsInDocument} from "../completions-cache";
 import {connection} from "../connection.vscode";
-import {CursorData, ICaosCommand} from "@bedalton/caos-util";
-import {getNamedVariableKeysForType} from "../indices/index.caos.named-variables";
+import {CommandCall, CursorData, GameVariant, ICaosCommand} from "@bedalton/caos-util";
 import * as path from "path";
 import {getFiles, readTextFile} from "../files";
 import {initIndices} from "../indices/index.utils";
 import {getWorkspaceUriForFile} from "../workspace-folders";
 import {defaultWorkspaceUri, Nullable, trimLeadingSlashOnFileSchema} from "@bedalton/extension-util";
+import {getNamedVariableCompletionItems, getJournalNameCompletions} from "@bedalton/caos-util/completions";
+import {getNamedVariableKeysForType} from "../indices/index.caos.named-variables";
+import {getJournalFileNames} from "../indices/index.caos.journal-files";
 
 
 // The current attempt id for completion item requests
@@ -40,7 +41,8 @@ export async function registerCaosCompletionProvider(init: boolean = true) {
     connection.onCompletion((params: TextDocumentPositionParams): Promise<CompletionList> => {
         return new Promise<CompletionList>(async (resolve) => {
             const uri = params.textDocument.uri;
-            const thisFileName = uri.split(/[/\\]+/).pop()!;
+            const thisFileName = uri.split(/[/\\]+/)
+                .pop()!;
             const textDocument = getDocuments()
                 .get(params.textDocument.uri);
             
@@ -79,8 +81,22 @@ export async function registerCaosCompletionProvider(init: boolean = true) {
             
             await initIndices(workspaceUri);
             
-            const getNamedVariables = (prefix: NamedVarPrefix, definedOnly: boolean) => {
-                return getNamedVariableKeysForType(workspaceUri, prefix, definedOnly)
+            const getStringCompletionsInWorkspace = (
+                cursorData: Nullable<CursorData>,
+                commandCall: CommandCall,
+            ): CompletionItem[] => {
+                
+                if (cursorData == null) {
+                    console.log("Cannot get string completions in workspace. Cursor data is null");
+                    return [];
+                }
+                console.log("Getting string completions in workspace");
+                const commandStringUpper = cursorData.command?.command?.toUpperCase();
+                if (commandStringUpper == null) {
+                    return [];
+                }
+                const parameterIndex = cursorData.closestParameter?.index ?? 0;
+                return _getStringCompletions(workspaceUri, variant, commandCall, parameterIndex, false);
             };
             
             
@@ -88,12 +104,12 @@ export async function registerCaosCompletionProvider(init: boolean = true) {
                 parseNear: true,
                 keepGoing: keepGoing,
                 incomplete: true,
-                getNamedVariableKeys: getNamedVariables,
+                getStringCompletions: getStringCompletionsInWorkspace,
                 directory: path.dirname(trimLeadingSlashOnFileSchema(uri)),
                 getFiles: (extensions?: Nullable<string[]>) => getFiles(workspaceUri, extensions),
             }
             
-            const cursorPointer: {cursor: Nullable<CursorData>} = {
+            const cursorPointer: { cursor: Nullable<CursorData> } = {
                 cursor: null
             }
             
@@ -110,9 +126,8 @@ export async function registerCaosCompletionProvider(init: boolean = true) {
             resolve(completionItems);
         });
     });
-    
-    
-    
+
+
 // This handler resolves additional information for the item selected in
 // the completion list.
     connection.onCompletionResolve((item: CompletionItem): CompletionItem => {
@@ -128,3 +143,34 @@ export async function registerCaosCompletionProvider(init: boolean = true) {
 }
 
 
+function _getStringCompletions(
+    workspaceUri: DocumentUri,
+    variant: GameVariant,
+    commandCall: CommandCall,
+    parameterIndex: number,
+    definedOnly: boolean = false,
+): CompletionItem[] {
+    
+    console.log("Getting string completions");
+    let items = getNamedVariableCompletionItems(
+        variant,
+        commandCall,
+        parameterIndex,
+        (prefix) => getNamedVariableKeysForType(workspaceUri, prefix, definedOnly)
+    );
+    
+    if (items) {
+        return items;
+    }
+    
+    items = getJournalNameCompletions(
+        variant,
+        commandCall,
+        parameterIndex,
+        (directoryType: number) => getJournalFileNames(workspaceUri, directoryType)
+    );
+    if (items) {
+        return items;
+    }
+    return [];
+}

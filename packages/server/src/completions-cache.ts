@@ -51,7 +51,7 @@ async function _updateRecentCommandsInDocument(workspaceUri: DocumentUri, docume
     }
     
     for (const call of result.commandCalls) {
-        updateRecent(workspaceUri, documentUri, call.command, call.arguments);
+        updateRecent(workspaceUri, documentUri, call.command, call.commandArguments);
     }
 }
 

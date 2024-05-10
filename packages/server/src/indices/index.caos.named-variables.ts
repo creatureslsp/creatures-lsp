@@ -30,6 +30,7 @@ class NamedVariableIndex implements CommandIndex {
         }
         
         if (typeof this.locations[key] == "undefined") {
+            console.log("No locations found for \"" +key+"\"; Locations:\n\t- "+Object.keys(this.locations).map((key)=> "\"" + key +"\"").join("\n\t- "))
             return [];
         }
         
@@ -126,7 +127,7 @@ class NamedVariableIndex implements CommandIndex {
         }
         
         let changed = false;
-        const args = argument.arguments;
+        const args = [...argument.commandArguments];
         if (this.command === argument.command.command) {
             if (args.length == 1) {
                 const rawKey = args[0].parserItem;
@@ -167,25 +168,23 @@ class NamedVariableIndex implements CommandIndex {
         const keys = Object.keys(this.locations);
         for (const key of keys) {
             const locations = this.locations[key];
-            const locationsCount = locations.length;
-            if (locationsCount === 0) {
-                delete this.locations[key];
-                return;
+            
+            for (const location of locations){
+                const start = location.range.start;
+                if (start.line === position.line && start.character === position.character) {
+                    const index = this.locations[key].indexOf(location);
+                    if (index >= 0) {
+                        this.locations[key].splice(index, 1);
+                    }
+                }
             }
-            if (locationsCount > 1) {
+            
+            const locationsCount = this.locations[key].length;
+            if (locationsCount > 0) {
                 continue;
             }
-            const location = locations[0];
-            if (location.documentUri.toLowerCase() !== documentUri.toLowerCase()) {
-                continue;
-            }
-            const locationPosition = location.range.start
-            if (locationPosition.line !== position.line) {
-                continue
-            }
-            if (locationPosition.character !== position.character) {
-                continue;
-            }
+            
+            delete this.locations[key];
             this.prune(key);
         }
     }

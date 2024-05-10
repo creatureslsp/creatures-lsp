@@ -1,11 +1,15 @@
 import {DocumentUri, Range} from "vscode-languageserver";
-import {getDocuments} from "../documents";
 import {collectors, ParseResult} from "@bedalton/caos-util";
 import {getDocumentSettings} from "../settings";
-import {clearNamedVariables, deleteWorkspaceNamedVariableIndex, indexNamedVariables} from "./index.caos.named-variables";
-import {getFileName, Nullable, rangesIntersect} from "@bedalton/extension-util";
+import {
+    clearNamedVariables,
+    deleteWorkspaceNamedVariableIndex,
+    indexNamedVariables
+} from "./index.caos.named-variables";
+import {Nullable, rangesIntersect} from "@bedalton/extension-util";
 import {getWorkspaceUriForFile} from "../workspace-folders";
-import {getFiles, readTextFile} from "../files";
+import {readTextFile} from "../files";
+import {indexJournalNames} from "./index.caos.journal-files";
 
 
 export async function indexCaosFile(workspaceUri: Nullable<DocumentUri>, documentURI: DocumentUri, range?: Nullable<Range>): Promise<boolean> {
@@ -74,6 +78,7 @@ function index(workspaceUri: Nullable<DocumentUri>, documentUri: DocumentUri, pa
     
     for (const commandCall of commandCalls) {
         if (isC2e) {
+            indexJournalNames(workspaceUriString, documentUri, commandCall);
             indexNamedVariables(workspaceUriString, documentUri, commandCall, true);
         }
     }

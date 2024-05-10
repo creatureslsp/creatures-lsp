@@ -1,19 +1,23 @@
 // noinspection SpellCheckingInspection
-import {Nullable} from "@bedalton/extension-util"
-import {collectors, Commands, CursorData, GameVariant, ParseResult, ParserItem} from "./caos-util";
+import {inRange, Nullable} from "@bedalton/extension-util"
+import {collectors, CommandCall, Commands, CursorData, GameVariant, ParseResult, ParserItem} from "./caos-util";
 import {CompletionItem, CompletionList, Position} from "vscode-languageserver-types";
 import {CAOS2_COMMENT_TYPE_ID} from "./constants";
 import {getCommands} from "./commands";
 import {Is} from "./is-util";
 import {getCaos2PrayCompletions} from "./completion/caos2/completions.caos2";
 import {getBitflagsOptionsProvider} from "./completion/completions.bitflags";
-import {getNamedVariableCompletionItems, getValuesListCompletions} from "./completion/completions.values-list-values";
+import {getValuesListCompletions} from "./completion/completions.values-list-values";
 import {getCommandCompletions, getDumbCompletionItems} from "./completion/completion.command";
 import {getSubroutineCompletions} from "./completion/completions.subroutines";
 import Caos2Comment = ParserItem.Caos2Comment;
+import {drillDown} from "./drillDown";
 
 const getCaos2PrayComments = collectors.getCaos2PrayComments;
-const {cancelComplete, getCursorPositionFromRawText, inQuotes} = collectors;
+const {cancelComplete, inQuotes} = collectors;
+
+export * from "./completion/completion.namedVariables";
+export * from "./completion/completion.journal";
 
 export type NamedVarPrefix = 'game' | 'eame' | 'name' | 'mame';
 
@@ -43,7 +47,7 @@ export type CompletionSettings = {
  */
 export type CompletionOptions = {
     readonly cursorPointer?: { cursorData?: Nullable<CursorData>; commandString?: Nullable<string>; };
-    readonly getNamedVariableKeys?: (prefix: NamedVarPrefix, definedOnly: boolean) => string[];
+    readonly getStringCompletions?: (cursorData: CursorData, commandCall: CommandCall) => CompletionItem[];
     readonly parseNear?: boolean;
     readonly keepGoing?: () => boolean;
     readonly incomplete: boolean;
@@ -83,24 +87,20 @@ export async function getCompletionItems(
     const emptyCompletionList = createEmptyCompletionList()
     
     let cursor: Nullable<CursorData>;
-    if (typeof text === 'string') {
-        cursor = getCursorPositionFromRawText(
-            variant,
-            text,
-            position.line,
-            Math.max(position.character - 1, 0),
-            opts?.parseNear ?? true,
-            opts?.incomplete ?? true,
-            opts?.keepGoing
-        );
-    } else {
-        cursor = collectors.getCursorPosition(
-            text,
-            position.line,
-            Math.max(position.character - 1, 0),
-            opts?.incomplete ?? true
-        )
-    }
+    const parseResult = typeof text === "string" ? collectors.parseCaosNear(
+        variant,
+        text,
+        position.line,
+        Math.max(position.character - 1, 0),
+        opts?.incomplete ?? true,
+    ) : text as ParseResult;
+    
+    cursor = collectors.getCursorPosition(
+        parseResult,
+        position.line,
+        Math.max(position.character - 1, 0),
+        opts?.incomplete ?? true
+    )
     
     if (cursor == null) {
         return emptyCompletionList;
@@ -147,11 +147,15 @@ export async function getCompletionItems(
         );
         
         // If C2e, get named variable completions if any or needed
-        if (opts?.getNamedVariableKeys != null) {
-            if (isNamedVariableCommand(variant, commandString)) {
-                const namedVariableCompletions = getNamedVariableCompletionItems(opts.getNamedVariableKeys, cursor.closestItem, commandString, false);
-                items = [...namedVariableCompletions, ...items];
+        if (opts?.getStringCompletions != null && cursor != null && cursor.command != null && cursor.closestItem != null) {
+            const parentCommandCall = parseResult.commandCalls
+                .find(call => inRange(call.textRange, position.line, Math.max(position.character - 1, 0)));
+            if (parentCommandCall != null) {
+                const commandCall = drillDown(variant, position, parentCommandCall) ?? parentCommandCall;
+                items = items.concat(opts.getStringCompletions(cursor, commandCall));
             }
+        } else {
+            console.log("Not enough data for string completion", JSON.stringify(cursor, null, 2));
         }
         
         const bitflagsCompletions = getBitflagsOptionsProvider(cursor);
@@ -248,15 +252,5 @@ function getOriginalText(text: string | ParseResult | unknown | null | undefined
     }
 }
 
-function isNamedVariableCommand(variant: GameVariant, commandString: Nullable<string>): commandString is NamedVarPrefix {
-    if (variant == 'C1' || variant == 'C2') {
-        return false;
-    }
-    if (!commandString) {
-        return false;
-    }
-    commandString = commandString.toUpperCase();
-    return commandString === "GAME" || commandString === "EAME" || commandString === "NAME" || commandString === "MAME";
-}
 
 
