@@ -18,6 +18,7 @@ export const clientCapabilities = {
     hasHoverCapabilities: false,
     hasSymbolsCapabilities: false,
     hasWatchFilesCapabilities: false,
+    hasReferencesCapability: false,
 };
 
 const DEFAULT_INDENT_COMMENTS = true;
@@ -179,6 +180,7 @@ export function deleteDocumentSettings(documentUri: string): boolean {
 
 
 export function clearDocumentSettings() {
+    console.log("Clearing document settings");
     documentSettings.clear();
 }
 
@@ -186,3 +188,6 @@ export function setGlobalSettings(newSettings: Nullable<CaosSettings>) {
     globalSettings = <CaosSettings>(newSettings || defaultSettings || globalSettings);
 }
 
+export function getGlobalSettings(): CaosSettings {
+    return globalSettings;
+}

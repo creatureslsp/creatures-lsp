@@ -39,7 +39,6 @@ export function getDocumentSymbolsFromParseResult(parseResult: ParseResult): Doc
 function getSubroutineSymbols(script: Script, commands: CommandCall[]): DocumentSymbol[] {
     const subroutines = getSubroutines(script.items)
         .map((s: IParserItem<any>) => {
-            console.log("SubroutineParserItem: ", JSON.stringify(s));
             return {
                 /**
                  * The name of this symbol. Will be displayed in the user interface and therefore must not be
@@ -87,7 +86,6 @@ function getScriptName(script: Script): [string, Range] {
         case "RSCR":
             return ["Remover", firstItemRange];
         default:
-            console.log("KEY: ", script.key, "CommandString: ", script.commandString?.toUpperCase())
             return ["Macro", firstItemRange];
     }
 }

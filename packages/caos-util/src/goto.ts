@@ -1,8 +1,9 @@
 import {Definition, LocationLink, Range} from "vscode-languageserver-types";
-import {RangeWithIndex, inRange, toVsRange, repack} from "@bedalton/extension-util"
-import {collectors, CommandCall, GameVariant, ParseResult} from "./caos-util";
+import {inRange, RangeWithIndex, repack, toVsRange} from "@bedalton/extension-util"
+import {collectors, CommandCall, CursorData, GameVariant, ParseResult} from "./caos-util";
 import {getCursorPosition} from "./cursor-data";
 import {Is} from "./is-util";
+import {Nullable} from "@bedalton/extension-util/src/types";
 
 const {scriptOffsets, parseCaosWithin} = collectors;
 const parseTokens = collectors.parseTokens;
@@ -36,7 +37,7 @@ export function getGotoInformation(
             text as string
         );
         const scriptRange = offsets.find(offset => inRange(offset, line, character, true, true));
-    
+        
         if (scriptRange == null) {
             return undefined;
         }
@@ -60,7 +61,7 @@ export function getGotoInformation(
         return undefined;
     }
     
-    const cursor = getCursorPosition(
+    const cursor: Nullable<CursorData> = getCursorPosition(
         parseResult,
         line,
         character,
@@ -82,13 +83,13 @@ export function getGotoInformation(
         return undefined;
     }
     switch (command) {
-        case 'SUBR':
+        case "SUBR":
             const subroutine = parseResult.commandCalls.find(c => c.command?.command === 'SUBR' && inRange(c.textRange, line, character, false, true));
             if (subroutine == null) {
                 return undefined;
             }
-            return getSubroutineUsage(documentUri, parseResult, subroutine, subroutine?.arguments[0]?.text ?? "");
-        case 'GSUB':
+            return getSubroutineUsage(documentUri, parseResult, subroutine, subroutine?.commandArguments[0]?.text ?? "");
+        case "GSUB":
             return getSubroutineDefinition(documentUri, parseResult, closestItemText);
         default:
             return undefined;
@@ -102,20 +103,20 @@ export function getSubroutineDefinition(documentUri: string, parserResult: Parse
     }
     
     let result = parserResult.commandCalls
-        .find(c => c.command.command == "SUBR" && c.arguments.length > 0 && c.arguments[0].text === name);
+        .find(c => c.command.command == "SUBR" && c.commandArguments.length > 0 && c.commandArguments[0].text === name);
     
     // Fallback to lowercase names if none were found with exact case
     if (result == null) {
         console.log("No result found for case sensitive match")
         name = name.toLowerCase();
         result = parserResult.commandCalls
-            .find(c => c.command.command == "SUBR" && c.arguments.length > 0 && c.arguments[0].text.toLowerCase() === name);
+            .find(c => c.command.command == "SUBR" && c.commandArguments.length > 0 && c.commandArguments[0].text.toLowerCase() === name);
     }
     if (result == null) {
         console.log("No result found for case-insensitive match")
         return undefined;
     }
-    const range = <RangeWithIndex>repack(result.arguments[0]?.textRange ?? result.textRange)
+    const range = <RangeWithIndex>repack(result.commandArguments[0]?.textRange ?? result.textRange)
     return <Definition>{
         uri: documentUri,
         range: <Range>{
@@ -131,23 +132,23 @@ export function getSubroutineUsage(documentUri: string, parserResult: ParseResul
     }
     
     let result = parserResult.commandCalls
-        .filter(c => c.command.command == "GSUB" && c.arguments.length > 0 && c.arguments[0].text === name);
+        .filter(c => c.command.command == "GSUB" && c.commandArguments.length > 0 && c.commandArguments[0].text === name);
     
     // Fallback to lowercase names if none were found with exact case
     if (result.length < 1) {
         name = name.toLowerCase();
         result = parserResult.commandCalls
-            .filter(c => c.command.command == "GSUB" && c.arguments.length > 0 && c.arguments[0].text.toLowerCase() === name);
+            .filter(c => c.command.command == "GSUB" && c.commandArguments.length > 0 && c.commandArguments[0].text.toLowerCase() === name);
     }
     if (result.length < 1) {
         return undefined;
     }
-    const originSelectionRange = toVsRange(commandCall.arguments[0]?.textRange ?? commandCall.textRange, true);
+    const originSelectionRange = toVsRange(commandCall.commandArguments[0]?.textRange ?? commandCall.textRange, true);
     return result.map(gsub => {
         return <LocationLink>{
             targetUri: documentUri,
             targetSelectionRange: toVsRange(gsub.textRange),
-            targetRange: toVsRange(gsub.arguments[0]?.textRange ?? gsub.textRange),
+            targetRange: toVsRange(gsub.commandArguments[0]?.textRange ?? gsub.textRange),
             originSelectionRange
         };
     });

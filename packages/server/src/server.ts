@@ -17,6 +17,7 @@ import {registerFilesWatcher} from "./files";
 import {indexCaosFile} from "./indices/index.caos";
 import {registerWorkspaceChangeHandlers, setWorkspaceFolders} from "./workspace-folders";
 import {FileOperationFilter} from "vscode-languageserver-protocol/lib/common/protocol.fileOperations";
+import {registerCaosReferencesProvider} from "./caos/register.references-provider";
 
 
 connection.onInitialize((params: InitializeParams) => {
@@ -93,6 +94,10 @@ connection.onInitialize((params: InitializeParams) => {
         !!capabilities.workspace || !!capabilities.workspace!.didChangeWatchedFiles
     )
     
+    clientCapabilities.hasReferencesCapability = (
+        !!capabilities.textDocument && !!capabilities.textDocument.references
+    );
+    
     const glob = "**/*.{" + [
         "cos",
         "catalogue",
@@ -149,6 +154,10 @@ connection.onInitialize((params: InitializeParams) => {
             // Server and client support code formatting
             documentFormattingProvider: clientCapabilities.hasFormatting,
             
+            referencesProvider: {
+                workDoneProgress: true
+            },
+            
             // Server and client support GOTO definitions
             definitionProvider: clientCapabilities.hasGotoDefinition,
             workspace: {
@@ -184,7 +193,7 @@ connection.onInitialize((params: InitializeParams) => {
     registerCaosGotoDefinitionsProvider(clientCapabilities.hasGotoDefinition);
     registerCaosFormattingProvider(clientCapabilities.hasFormatting);
     registerCaosHoverDocumentationProvider(clientCapabilities.hasHoverCapabilities);
-    registerSettingsChangeListener(clientCapabilities.hasConfigurationCapability);
+    registerCaosReferencesProvider(clientCapabilities.hasReferencesCapability);
     
     
     if (clientCapabilities.hasWatchFilesCapabilities) {
@@ -192,12 +201,6 @@ connection.onInitialize((params: InitializeParams) => {
             .then()
     }
     
-    if (clientCapabilities.hasConfigurationCapability) {
-        // Register for all configuration changes.
-        // noinspection JSIgnoredPromiseFromCall
-        // connection.client.register(DidChangeConfigurationNotification.type, undefined);
-        // registerSettingsChangeListener();
-    }
     connection.onRequest("caos/vfs-did-init", async () => {
         await setWorkspaceFolders(params.workspaceFolders ?? []);
         registerWorkspaceChangeHandlers();
@@ -206,6 +209,10 @@ connection.onInitialize((params: InitializeParams) => {
     return result;
 });
 
+
+connection.onInitialized(() => {
+    registerSettingsChangeListener(clientCapabilities.hasConfigurationCapability);
+});
 
 const documents = getDocuments();
 

@@ -80,7 +80,7 @@ export function getCursorPosition(
     let inCommand = true;
     const run = (closestCall: CommandCall) => {
         // Get current command calls arguments
-        const commandArguments: Argument[] = closestCall?.arguments ?? [];
+        const commandArguments: Argument[] = closestCall?.commandArguments ?? [];
         let argumentIndex = commandArguments.findIndex((a) => {
             if (inRange(a.textRange, lineNumber, column, false, false)) {
                 if (column <= a.textRange.end.character) {
@@ -162,7 +162,7 @@ export function getCursorPosition(
         index = (argumentIndex != null && argumentIndex >= 0 ? argumentIndex : 0);
     
         // If cursor is at end of command call
-        inCommand = inCommand && closestItem != null && closestCall.arguments.findIndex((arg: Argument) => inRange(arg.textRange, closestItem!!.textRange.start.line, closestItem!!.textRange.start.character!! + 1)) >= 0;
+        inCommand = inCommand && closestItem != null && closestCall.commandArguments.findIndex((arg: Argument) => inRange(arg.textRange, closestItem!!.textRange.start.line, closestItem!!.textRange.start.character!! + 1)) >= 0;
         
         if (!inCommand && !(inEq && isEqLike)) {
             const commandCallIndex = closestCall?.containingCommand?.commandCallIndex;

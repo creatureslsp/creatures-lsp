@@ -11,6 +11,7 @@ import {
     VFS_IS_DIRECTORY_REQUEST,
     VfsFileRequest
 } from "@bedalton/extension-util";
+import {initIndices} from "./indices/index.utils";
 
 const _workspaceFolderPaths: string[] = [];
 
@@ -72,6 +73,7 @@ async function pushWorkspace(workspace: WorkspaceFolder|DocumentUri) {
     if (index < 0) {
         await pushWorkspaceFolder(workspaceUri);
     }
+    
 }
 
 async function pushWorkspaceFolder(workspaceUri: DocumentUri): Promise<void> {
@@ -95,6 +97,8 @@ async function pushWorkspaceFolder(workspaceUri: DocumentUri): Promise<void> {
     _workspaceFolderPaths.push(workspaceUri);
     
     await initFileList(workspaceUri);
+    
+    await initIndices(workspaceUri);
 }
 
 // export function getWorkspaceFolders(): string[] {
