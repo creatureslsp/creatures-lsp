@@ -27,7 +27,7 @@
 			"runtimeExecutable": "${execPath}",
 			"args": [
 				"--extensionDevelopmentPath=${workspaceFolder}",
-                "/Users/dbadal/cc/caos/demo"
+                "${workspaceFolder}/test-project"
 			],
 			"stopOnEntry": false,
 			"sourceMaps": true,
