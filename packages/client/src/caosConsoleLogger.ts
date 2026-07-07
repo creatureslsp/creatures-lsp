@@ -39,6 +39,9 @@ const createLogger = (): CaosConsoleLogger => {
                 case "conn_failed":
                     channel.error(response);
                     break;
+                default:
+                    channel.info(`(${result.status}) ${response}`);
+                    break;
             }
         }
     }
