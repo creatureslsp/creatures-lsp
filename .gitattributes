@@ -1,0 +1,15 @@
+# Define the line ending behavior of the different file extensions
+# Set default behavior, in case users don't have core.autocrlf set.
+* text=auto
+* text eol=lf
+
+# Explicitly declare text files we want to always be normalized and converted
+# to native line endings on checkout.
+# Creature Text Files
+*.[Cc][Oo][Ss] eol=crlf
+*.[Aa][Tt][Tt] eol=crlf
+*.[Cc][Aa][Tt][Aa][Ll][Oo][Gg][Uu][Ee] eol=crlf
+*.[Pp][Ss] eol=crlf
+*.[Rr][Ee][Gg] eol=crlf
+
+*.png binary

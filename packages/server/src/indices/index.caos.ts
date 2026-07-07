@@ -1,64 +1,62 @@
-import {DocumentUri, Range} from "vscode-languageserver";
-import {collectors, ParseResult} from "@bedalton/caos-util";
-import {getDocumentSettings} from "../settings";
-import {
-    clearNamedVariables,
-    deleteWorkspaceNamedVariableIndex,
-    indexNamedVariables
-} from "./index.caos.named-variables";
-import {Nullable, rangesIntersect} from "@bedalton/extension-util";
-import {getWorkspaceUriForFile} from "../workspace-folders";
-import {readTextFile} from "../files";
-import {indexJournalNames} from "./index.caos.journal-files";
+import type {DocumentUri, Range} from "vscode-languageserver";
+import type {CaosParseResult} from "@creatures-lsp/caos-kt/caos-parser";
+import {clearNamedVariables, indexNamedVariablesInDocument} from "./index.caos.named-variables.js";
+import {type Nullable, rangesIntersect} from "@creatures-lsp/extension-util";
+import {getWorkspaceUriForFile} from "../workspace-folders.js";
+import {clearJournalFileNames, indexJournalNamesInDocument} from "./index.caos.journal-files.js";
+import {clearCaosCatalogueUsages, indexCaosCatalogueUsagesInDocument} from "./index.caos.catalogue-usages.js";
+import {type CreaturesDocument, isCaosDocument, unpackDocument} from "../document.js";
+import {isIndexingPaused} from "./index.file.js";
+import {Log} from "../ConnLogger.js";
+import {parseCaos} from "../caos/caos.parse.js";
+import {caosInitLib} from "@creatures-lsp/caos-kt/caos-init-lib";
 
 
-export async function indexCaosFile(workspaceUri: Nullable<DocumentUri>, documentURI: DocumentUri, range?: Nullable<Range>): Promise<boolean> {
-    let text: Nullable<string> = undefined;
-    try {
-        text = await readTextFile(documentURI);
-    } catch (e) {
-        const error = e instanceof Error ? e.message + "\n" + e.stack : e;
-        console.error("Failed to read text for CAOS file: " + documentURI + ";", error);
+export async function indexCaosFile(workspaceUri: Nullable<DocumentUri>, documentOrURI: CreaturesDocument<unknown> | DocumentUri, range?: Nullable<Range>): Promise<boolean> {
+    
+    if (isIndexingPaused()) {
         return false;
     }
+    
+    const document = await unpackDocument(documentOrURI);
+    
+    if (document == null) {
+        Log.e(`Failed to index null CAOS document for: ${documentOrURI}`);
+        return false;
+    }
+    
+    if (!isCaosDocument(document)) {
+        Log.e(`Document is not a CAOS document in indexCaosFile; LanguageId: ${document?.languageId}, Document: ${document.documentUri}`);
+        return false;
+    }
+    caosInitLib();
+    let {variant, text} = document;
     
     if (text == null) {
-        console.error("Failed to read text for CAOS file: " + documentURI + "; Text returned NULL");
+        Log.e("Failed to read text for CAOS file: " + document.documentUri + "; Text returned NULL");
         return false;
     }
     
-    const settings = await getDocumentSettings(documentURI);
+    const parseResult = parseCaos(variant, text, range);
     
-    const variant = settings.variant ?? "DS";
-    
-    const parseResult = range == null
-        ? collectors.parseCaos(variant, text)
-        : collectors.parseCaosWithin(
-            variant,
-            text,
-            range.start.line,
-            range.start.character,
-            range.end.line,
-            range.end.character,
-            false,
-            null
-        );
-  
     try {
-        index(workspaceUri, documentURI, parseResult, range);
+        index(workspaceUri, document.documentUri, parseResult, range);
     } catch (e) {
         const error = e instanceof Error ? e.message + "\n" + e.stack : e;
-        console.error("Failed to index CAOS document: " + documentURI + ";", error);
+        Log.e("Failed to index CAOS document: " + document.documentUri + "; " + error);
     }
-    
     return true;
 }
 
-function index(workspaceUri: Nullable<DocumentUri>, documentUri: DocumentUri, parseResult: ParseResult, range: Nullable<Range>) {
+function index(workspaceUri: Nullable<DocumentUri>, documentUri: DocumentUri, parseResult: CaosParseResult, range: Nullable<Range>) {
+    
+    if (isIndexingPaused()) {
+        return;
+    }
     
     const variant = parseResult.variant;
     
-    const isC2e = !(variant === "C1" || variant === "C2");
+    const isC2e = variant !== "C1" && variant !== "C2";
     
     let commandCalls = parseResult.commandCalls;
     
@@ -76,19 +74,18 @@ function index(workspaceUri: Nullable<DocumentUri>, documentUri: DocumentUri, pa
     
     clearCaosDocumentIndices(workspaceUriString, documentUri, range);
     
-    for (const commandCall of commandCalls) {
-        if (isC2e) {
-            indexJournalNames(workspaceUriString, documentUri, commandCall);
-            indexNamedVariables(workspaceUriString, documentUri, commandCall, true);
-        }
+    if (isC2e) {
+        indexNamedVariablesInDocument(workspaceUriString, documentUri, commandCalls, true);
+        indexJournalNamesInDocument(workspaceUriString, documentUri, commandCalls);
+        indexCaosCatalogueUsagesInDocument(workspaceUriString, documentUri, commandCalls, true);
     }
 }
 
 export function clearCaosDocumentIndices(workspaceUri: DocumentUri, documentUri: DocumentUri, range?: Nullable<Range>) {
+    if (isIndexingPaused()) {
+        return;
+    }
     clearNamedVariables(workspaceUri, documentUri, range);
-}
-
-
-export function clearWorkspaceCaosFileIndex(workspaceUri: DocumentUri) {
-    deleteWorkspaceNamedVariableIndex(workspaceUri);
+    clearJournalFileNames(workspaceUri, documentUri, range);
+    clearCaosCatalogueUsages(workspaceUri, documentUri, range);
 }

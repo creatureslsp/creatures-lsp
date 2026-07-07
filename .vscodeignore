@@ -34,7 +34,7 @@ server.json
 yarn.lock
 **/yarn.lock
 **/tsconfig.tsbuildinfo
-!language-configuration.json
+!*.language-configuration.json
 !syntaxes
 !packages/**/dist/web
 !packages/**/dist/node

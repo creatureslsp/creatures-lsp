@@ -1,0 +1,782 @@
+import {
+  initMetadataForObject1cxne3s9w65el as initMetadataForObject,
+  VOID3gxj6tk5isa35 as VOID,
+  THROW_CCE2g6jy02ryeudk as THROW_CCE,
+  isCharSequence1ju9jr1w86plq as isCharSequence,
+  trim11nh7r46at6sx as trim,
+  toString1pkumu07cwy4m as toString,
+  Regexxgw0gjiagf4z as Regex,
+  noWhenBranchMatchedException2a6r7ubxgky5j as noWhenBranchMatchedException,
+  equals2au1ep9vhcato as equals,
+  initMetadataForClassbxx6q50dy2s7 as initMetadataForClass,
+  Unit_instancev9v8hjid95df as Unit_instance,
+  Enum3alwj03lh1n41 as Enum,
+  defineProp3ur6h3slcvq4x as defineProp,
+  toString30pk9tzaqopn as toString_0,
+  hashCodeq5arwsb9dgti as hashCode,
+  getBooleanHashCode1bbj3u6b3v0a7 as getBooleanHashCode,
+  ArrayList3it5z8td81qkl as ArrayList,
+  LinkedHashMap1zhqxkxv3xnkl as LinkedHashMap,
+  isBlank1dvkhjjvox3p0 as isBlank,
+  repeat2w4c6j8zoq09o as repeat,
+  isNumberiramasdbon0i as isNumber,
+  numberToInt1ygmcfwhs2fkq as numberToInt,
+  substringiqarkczpya5m as substring,
+  emptyList1g2z5xcrvp2zy as emptyList,
+  toList383f556t1dixk as toList,
+  Exceptiondt2hlxn7j7vw as Exception,
+} from './kotlin-kotlin-stdlib.mjs';
+//region block: imports
+var imul = Math.imul;
+//endregion
+//region block: pre-declaration
+class DefaultConsoleColors {
+  constructor() {
+    DefaultConsoleColors_instance = this;
+    this.h1g_1 = get_consoleColorEscapeSequence() + '[0m';
+    this.i1g_1 = get_consoleColorEscapeSequence() + '[1m';
+    this.j1g_1 = get_consoleColorEscapeSequence() + '[1m';
+    this.k1g_1 = get_consoleColorEscapeSequence() + '[2m';
+    this.l1g_1 = get_consoleColorEscapeSequence() + '[4m';
+    this.m1g_1 = get_consoleColorEscapeSequence() + '[5m';
+    this.n1g_1 = get_consoleColorEscapeSequence() + '[7m';
+    this.o1g_1 = get_consoleColorEscapeSequence() + '[8m';
+    this.p1g_1 = get_consoleColorEscapeSequence() + '[30m';
+    this.q1g_1 = get_consoleColorEscapeSequence() + '[31m';
+    this.r1g_1 = get_consoleColorEscapeSequence() + '[32m';
+    this.s1g_1 = get_consoleColorEscapeSequence() + '[33m';
+    this.t1g_1 = get_consoleColorEscapeSequence() + '[34m';
+    this.u1g_1 = get_consoleColorEscapeSequence() + '[35m';
+    this.v1g_1 = get_consoleColorEscapeSequence() + '[36m';
+    this.w1g_1 = get_consoleColorEscapeSequence() + '[38;5;15m';
+    this.x1g_1 = get_consoleColorEscapeSequence() + '[40m';
+    this.y1g_1 = get_consoleColorEscapeSequence() + '[41m';
+    this.z1g_1 = get_consoleColorEscapeSequence() + '[42m';
+    this.a1h_1 = get_consoleColorEscapeSequence() + '[43m';
+    this.b1h_1 = get_consoleColorEscapeSequence() + '[44m';
+    this.c1h_1 = get_consoleColorEscapeSequence() + '[45m';
+    this.d1h_1 = get_consoleColorEscapeSequence() + '[46m';
+    this.e1h_1 = get_consoleColorEscapeSequence() + '[48;5;15m';
+    this.f1h_1 = get_consoleColorEscapeSequence() + '[4;30m';
+    this.g1h_1 = get_consoleColorEscapeSequence() + '[4;31m';
+    this.h1h_1 = get_consoleColorEscapeSequence() + '[4;32m';
+    this.i1h_1 = get_consoleColorEscapeSequence() + '[4;33m';
+    this.j1h_1 = get_consoleColorEscapeSequence() + '[4;34m';
+    this.k1h_1 = get_consoleColorEscapeSequence() + '[4;35m';
+    this.l1h_1 = get_consoleColorEscapeSequence() + '[4;36m';
+    this.m1h_1 = get_consoleColorEscapeSequence() + '[4;37m';
+  }
+}
+class LoggerColor {}
+class BLACK extends LoggerColor {
+  constructor() {
+    BLACK_instance = null;
+    super();
+    BLACK_instance = this;
+  }
+}
+class RED extends LoggerColor {
+  constructor() {
+    RED_instance = null;
+    super();
+    RED_instance = this;
+  }
+}
+class GREEN extends LoggerColor {
+  constructor() {
+    GREEN_instance = null;
+    super();
+    GREEN_instance = this;
+  }
+}
+class YELLOW extends LoggerColor {
+  constructor() {
+    YELLOW_instance = null;
+    super();
+    YELLOW_instance = this;
+  }
+}
+class BLUE extends LoggerColor {
+  constructor() {
+    BLUE_instance = null;
+    super();
+    BLUE_instance = this;
+  }
+}
+class MAGENTA extends LoggerColor {
+  constructor() {
+    MAGENTA_instance = null;
+    super();
+    MAGENTA_instance = this;
+  }
+}
+class CYAN extends LoggerColor {
+  constructor() {
+    CYAN_instance = null;
+    super();
+    CYAN_instance = this;
+  }
+}
+class WHITE extends LoggerColor {
+  constructor() {
+    WHITE_instance = null;
+    super();
+    WHITE_instance = this;
+  }
+}
+class LogLevel extends Enum {
+  constructor(name, ordinal, value) {
+    super(name, ordinal);
+    this.p1h_1 = value;
+  }
+}
+class LoggerBuilder {
+  constructor() {
+    this.q1h_1 = null;
+    this.r1h_1 = null;
+    this.s1h_1 = null;
+    this.t1h_1 = null;
+    this.u1h_1 = null;
+    this.v1h_1 = null;
+  }
+  withLog(log) {
+    this.q1h_1 = log;
+  }
+  info(log) {
+    this.r1h_1 = log;
+    return this;
+  }
+  warning(log) {
+    this.s1h_1 = log;
+    return this;
+  }
+  error(log) {
+    this.t1h_1 = log;
+    return this;
+  }
+  logMemory(log) {
+    this.u1h_1 = log;
+    return this;
+  }
+  getColor(callback) {
+    this.v1h_1 = callback;
+    return this;
+  }
+  build() {
+    return new CallbackLogger(this.q1h_1, this.r1h_1, this.s1h_1, this.t1h_1, this.u1h_1, this.v1h_1);
+  }
+}
+class CallbackLogger {
+  constructor(mLog, mInfo, mWarning, mError, mLogMemory, mGetColor, prependLogType) {
+    prependLogType = prependLogType === VOID ? null : prependLogType;
+    this.w1h_1 = mLog;
+    this.x1h_1 = mInfo;
+    this.y1h_1 = mWarning;
+    this.z1h_1 = mError;
+    this.a1i_1 = mLogMemory;
+    this.b1i_1 = mGetColor;
+    this.c1i_1 = prependLogType;
+    delete this.prependLogType;
+  }
+  d1i(_set____db54di) {
+    this.c1i_1 = _set____db54di;
+  }
+  e1i() {
+    return this.c1i_1;
+  }
+  log(replace, message, color) {
+    var tmp0_safe_receiver = this.w1h_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver(replace, message, color);
+  }
+  info(replace, message, color) {
+    var tmp0_safe_receiver = this.x1h_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver(replace, message, color);
+  }
+  warning(message, color) {
+    var tmp0_safe_receiver = this.y1h_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver(message, color);
+  }
+  error(message, color) {
+    var tmp0_safe_receiver = this.z1h_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver(message, color);
+  }
+  logMemory() {
+    var tmp0_safe_receiver = this.a1i_1;
+    if (tmp0_safe_receiver == null)
+      null;
+    else
+      tmp0_safe_receiver();
+  }
+  getColorPrefix(color) {
+    var tmp0_elvis_lhs = this.b1i_1;
+    var tmp;
+    if (tmp0_elvis_lhs == null) {
+      tmp = getLogColorPrefix$ref();
+    } else {
+      tmp = tmp0_elvis_lhs;
+    }
+    return tmp(color);
+  }
+  toString() {
+    return 'CallbackLogger(mLog=' + toString_0(this.w1h_1) + ', mInfo=' + toString_0(this.x1h_1) + ', mWarning=' + toString_0(this.y1h_1) + ', mError=' + toString_0(this.z1h_1) + ', mLogMemory=' + toString_0(this.a1i_1) + ', mGetColor=' + toString_0(this.b1i_1) + ', prependLogType=' + this.c1i_1 + ')';
+  }
+  hashCode() {
+    var result = this.w1h_1 == null ? 0 : hashCode(this.w1h_1);
+    result = imul(result, 31) + (this.x1h_1 == null ? 0 : hashCode(this.x1h_1)) | 0;
+    result = imul(result, 31) + (this.y1h_1 == null ? 0 : hashCode(this.y1h_1)) | 0;
+    result = imul(result, 31) + (this.z1h_1 == null ? 0 : hashCode(this.z1h_1)) | 0;
+    result = imul(result, 31) + (this.a1i_1 == null ? 0 : hashCode(this.a1i_1)) | 0;
+    result = imul(result, 31) + (this.b1i_1 == null ? 0 : hashCode(this.b1i_1)) | 0;
+    result = imul(result, 31) + (this.c1i_1 == null ? 0 : getBooleanHashCode(this.c1i_1)) | 0;
+    return result;
+  }
+  equals(other) {
+    if (this === other)
+      return true;
+    if (!(other instanceof CallbackLogger))
+      return false;
+    var tmp0_other_with_cast = other instanceof CallbackLogger ? other : THROW_CCE();
+    if (!equals(this.w1h_1, tmp0_other_with_cast.w1h_1))
+      return false;
+    if (!equals(this.x1h_1, tmp0_other_with_cast.x1h_1))
+      return false;
+    if (!equals(this.y1h_1, tmp0_other_with_cast.y1h_1))
+      return false;
+    if (!equals(this.z1h_1, tmp0_other_with_cast.z1h_1))
+      return false;
+    if (!equals(this.a1i_1, tmp0_other_with_cast.a1i_1))
+      return false;
+    if (!equals(this.b1i_1, tmp0_other_with_cast.b1i_1))
+      return false;
+    if (!(this.c1i_1 == tmp0_other_with_cast.c1i_1))
+      return false;
+    return true;
+  }
+  get prependLogType() {
+    return this.e1i();
+  }
+  set prependLogType(value) {
+    this.d1i(value);
+  }
+}
+class Log {
+  constructor() {
+    Log_instance = this;
+    this.f1i_1 = 'log.LOG_NO_PRINT_PREFIX';
+    this.g1i_1 = DefaultLoggerObject_getInstance();
+    this.h1i_1 = false;
+    this.i1i_1 = LogLevel_LOG_2_getInstance();
+    var tmp = this;
+    // Inline function 'kotlin.collections.mutableListOf' call
+    tmp.j1i_1 = ArrayList.u1();
+    this.k1i_1 = false;
+    var tmp_0 = this;
+    // Inline function 'kotlin.collections.mutableListOf' call
+    tmp_0.l1i_1 = ArrayList.u1();
+    var tmp_1 = this;
+    // Inline function 'kotlin.collections.mutableMapOf' call
+    tmp_1.m1i_1 = LinkedHashMap.mb();
+  }
+  n1i() {
+    return this.g1i_1;
+  }
+  o1i() {
+    return this.i1i_1;
+  }
+  p1i() {
+    return this.h1i_1;
+  }
+  q1i(className, message) {
+    this.q1i(className, message);
+  }
+  r1i(message) {
+    this.s1i(null, message);
+  }
+  s1i(color, message) {
+    this.t1i(null, color, message);
+  }
+  u1i(className, message) {
+    this.t1i(className, null, message);
+  }
+  t1i(className, color, message) {
+    if (!this.p1i() && this.o1i().p1h_1 >= LogLevel_ERROR_getInstance().p1h_1) {
+      this.n1i().error(this.v1i('ERROR', className, message), color);
+    }
+  }
+  v1i(kind, className, message) {
+    var tmp0_elvis_lhs = this.n1i().prependLogType;
+    var prependLog = tmp0_elvis_lhs == null ? DefaultLoggerObject_getInstance().w1i_1 : tmp0_elvis_lhs;
+    var tmp;
+    if (prependLog && !this.x1i('log.LOG_NO_PRINT_PREFIX')) {
+      tmp = '**' + kind + '** ';
+    } else {
+      tmp = '';
+    }
+    var prefix = tmp;
+    var tmp_0;
+    // Inline function 'kotlin.text.isNullOrBlank' call
+    if (!(className == null || isBlank(className))) {
+      tmp_0 = '' + className + '::';
+    } else {
+      tmp_0 = '';
+    }
+    return prefix + tmp_0 + message;
+  }
+  x1i(mode) {
+    return this.j1i_1.g2(mode);
+  }
+  y1i(logger) {
+    this.g1i_1 = logger;
+  }
+}
+class DefaultLoggerObject {
+  constructor() {
+    DefaultLoggerObject_instance = this;
+    this.w1i_1 = false;
+    delete this.prependLogType;
+  }
+  e1i() {
+    return this.w1i_1;
+  }
+  log(replace, message, color) {
+    var finalMessage = wrap(this, color, message);
+    if (replace) {
+      logReplace(finalMessage, Console$log$ref(console));
+    } else {
+      console.log(finalMessage);
+    }
+    lastLineLength = finalMessage.length;
+  }
+  info(replace, message, color) {
+    var finalMessage = wrap(this, color, message);
+    if (replace) {
+      logReplace(finalMessage, Console$info$ref(console));
+    } else {
+      console.info(finalMessage);
+    }
+    lastLineLength = finalMessage.length;
+  }
+  warning(message, color) {
+    var finalMessage = wrap(this, color, message);
+    lastLineLength = finalMessage.length;
+    console.warn(finalMessage);
+  }
+  logMemory() {
+    console.log('Cannot log memory');
+    lastLineLength = 17;
+    var process = nodeRequireSafe('process', []);
+    var tmp;
+    if (process != null) {
+      var tmp_0 = process.hasOwnProperty('memoryUsage');
+      tmp = (!(tmp_0 == null) ? typeof tmp_0 === 'boolean' : false) ? tmp_0 : THROW_CCE();
+    } else {
+      tmp = false;
+    }
+    if (tmp) {
+      console.log(process.memoryUsage());
+    }
+  }
+  error(message, color) {
+    var finalMessage = wrap(this, color, message);
+    lastLineLength = finalMessage.length;
+    console.error(finalMessage);
+  }
+  getColorPrefix(color) {
+    return getLogColorPrefix(color);
+  }
+  get prependLogType() {
+    return this.e1i();
+  }
+}
+class createSingleFunctionLogger$1 {
+  constructor($logger) {
+    this.z1i_1 = $logger;
+    delete this.prependLogType;
+  }
+  log(replace, message, color) {
+    this.z1i_1('log', message);
+  }
+  info(replace, message, color) {
+    this.z1i_1('info', message);
+  }
+  warning(message, color) {
+    this.z1i_1('warning', message);
+  }
+  error(message, color) {
+    this.z1i_1('error', message);
+  }
+  getColorPrefix(color) {
+    return null;
+  }
+  logMemory() {
+  }
+  e1i() {
+    return null;
+  }
+  get prependLogType() {
+    return this.e1i();
+  }
+}
+//endregion
+var DefaultConsoleColors_instance;
+function DefaultConsoleColors_getInstance() {
+  if (DefaultConsoleColors_instance === VOID)
+    new DefaultConsoleColors();
+  return DefaultConsoleColors_instance;
+}
+function get_namespacePrefixRegex() {
+  _init_properties_DefaultLoggerObject_kt__11m6n2();
+  return namespacePrefixRegex;
+}
+var namespacePrefixRegex;
+function getNamespacePrefix(_this__u8e3s4) {
+  _init_properties_DefaultLoggerObject_kt__11m6n2();
+  // Inline function 'kotlin.text.replace' call
+  // Inline function 'kotlin.text.trim' call
+  var this_0 = get_namespacePrefixRegex().bg(_this__u8e3s4, '$1');
+  return toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
+}
+function stripNamespacePrefix(_this__u8e3s4) {
+  _init_properties_DefaultLoggerObject_kt__11m6n2();
+  // Inline function 'kotlin.text.replace' call
+  return get_namespacePrefixRegex().bg(_this__u8e3s4, '$2');
+}
+var properties_initialized_DefaultLoggerObject_kt_gbdsjk;
+function _init_properties_DefaultLoggerObject_kt__11m6n2() {
+  if (!properties_initialized_DefaultLoggerObject_kt_gbdsjk) {
+    properties_initialized_DefaultLoggerObject_kt_gbdsjk = true;
+    // Inline function 'kotlin.text.toRegex' call
+    var this_0 = '^%([^%]+)%(.*)$';
+    namespacePrefixRegex = Regex.uf(this_0);
+  }
+}
+function getLogColorPrefix(color) {
+  if (color == null) {
+    return null;
+  }
+  var tmp;
+  if (equals(color, BLACK_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().p1g_1;
+  } else if (equals(color, RED_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().q1g_1;
+  } else if (equals(color, GREEN_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().r1g_1;
+  } else if (equals(color, YELLOW_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().s1g_1;
+  } else if (equals(color, BLUE_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().t1g_1;
+  } else if (equals(color, MAGENTA_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().u1g_1;
+  } else if (equals(color, CYAN_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().v1g_1;
+  } else if (equals(color, WHITE_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().w1g_1;
+  } else {
+    noWhenBranchMatchedException();
+  }
+  return tmp;
+}
+var BLACK_instance;
+function BLACK_getInstance() {
+  if (BLACK_instance === VOID)
+    new BLACK();
+  return BLACK_instance;
+}
+var RED_instance;
+function RED_getInstance() {
+  if (RED_instance === VOID)
+    new RED();
+  return RED_instance;
+}
+var GREEN_instance;
+function GREEN_getInstance() {
+  if (GREEN_instance === VOID)
+    new GREEN();
+  return GREEN_instance;
+}
+var YELLOW_instance;
+function YELLOW_getInstance() {
+  if (YELLOW_instance === VOID)
+    new YELLOW();
+  return YELLOW_instance;
+}
+var BLUE_instance;
+function BLUE_getInstance() {
+  if (BLUE_instance === VOID)
+    new BLUE();
+  return BLUE_instance;
+}
+var MAGENTA_instance;
+function MAGENTA_getInstance() {
+  if (MAGENTA_instance === VOID)
+    new MAGENTA();
+  return MAGENTA_instance;
+}
+var CYAN_instance;
+function CYAN_getInstance() {
+  if (CYAN_instance === VOID)
+    new CYAN();
+  return CYAN_instance;
+}
+var WHITE_instance;
+function WHITE_getInstance() {
+  if (WHITE_instance === VOID)
+    new WHITE();
+  return WHITE_instance;
+}
+var LogLevel_LOG_2_instance;
+var LogLevel_LOG_1_instance;
+var LogLevel_INFO_instance;
+var LogLevel_TRACE_instance;
+var LogLevel_WARN_instance;
+var LogLevel_ERROR_instance;
+var LogLevel_entriesInitialized;
+function LogLevel_initEntries() {
+  if (LogLevel_entriesInitialized)
+    return Unit_instance;
+  LogLevel_entriesInitialized = true;
+  LogLevel_LOG_2_instance = new LogLevel('LOG_2', 0, 5);
+  LogLevel_LOG_1_instance = new LogLevel('LOG_1', 1, 4);
+  LogLevel_INFO_instance = new LogLevel('INFO', 2, 3);
+  LogLevel_TRACE_instance = new LogLevel('TRACE', 3, 3);
+  LogLevel_WARN_instance = new LogLevel('WARN', 4, 2);
+  LogLevel_ERROR_instance = new LogLevel('ERROR', 5, 1);
+}
+function LogLevel_LOG_2_getInstance() {
+  LogLevel_initEntries();
+  return LogLevel_LOG_2_instance;
+}
+function LogLevel_ERROR_getInstance() {
+  LogLevel_initEntries();
+  return LogLevel_ERROR_instance;
+}
+function getLogColorPrefix$ref() {
+  var l = (p0) => getLogColorPrefix(p0);
+  l.callableName = 'getLogColorPrefix';
+  return l;
+}
+var Log_instance;
+function Log_getInstance() {
+  if (Log_instance === VOID)
+    new Log();
+  return Log_instance;
+}
+function get_consoleColorEscapeSequence() {
+  return consoleColorEscapeSequence;
+}
+var consoleColorEscapeSequence;
+var lastLineLength;
+function wrap($this, color, message) {
+  var colorPrefix = $this.getColorPrefix(color);
+  var tmp;
+  if (!(colorPrefix == null)) {
+    tmp = getNamespacePrefix(message) + colorPrefix + stripNamespacePrefix(message) + DefaultConsoleColors_getInstance().h1g_1;
+  } else {
+    tmp = message;
+  }
+  return tmp;
+}
+function Console$log$ref(p0) {
+  return (receiver) => {
+    p0.log(receiver);
+    return Unit_instance;
+  };
+}
+function Console$info$ref(p0) {
+  return (receiver) => {
+    p0.info(receiver);
+    return Unit_instance;
+  };
+}
+var DefaultLoggerObject_instance;
+function DefaultLoggerObject_getInstance() {
+  if (DefaultLoggerObject_instance === VOID)
+    new DefaultLoggerObject();
+  return DefaultLoggerObject_instance;
+}
+function logReplace(message, fallback) {
+  var tmp = typeof window !== 'undefined';
+  if ((!(tmp == null) ? typeof tmp === 'boolean' : false) ? tmp : THROW_CCE()) {
+    fallback(message);
+    return Unit_instance;
+  }
+  var tmp0_safe_receiver = nodeRequireSafe('process', ['stdout']);
+  var stdout = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.stdout;
+  var tmp_0;
+  if (stdout == null) {
+    tmp_0 = true;
+  } else {
+    var tmp1_safe_receiver = stdout.constructor;
+    tmp_0 = (tmp1_safe_receiver == null ? null : tmp1_safe_receiver.name) != 'WriteStream';
+  }
+  if (tmp_0) {
+    fallback(message);
+    return Unit_instance;
+  }
+  var readline = nodeRequireSafe('readline', ['clearLine', 'cursorTo']);
+  if (readline == null) {
+    fallback(message);
+    return Unit_instance;
+  }
+  readline.clearLine(stdout);
+  readline.cursorTo(stdout, 0);
+  var underflow = message.length - lastLineLength | 0;
+  var tmp_1;
+  if (underflow > 0) {
+    tmp_1 = repeat(' ', underflow);
+  } else {
+    tmp_1 = '';
+  }
+  var tail = tmp_1;
+  var messagePadded = message + tail;
+  var tmp_2 = stdout.columns;
+  var tmp0 = numberToInt(isNumber(tmp_2) ? tmp_2 : THROW_CCE());
+  // Inline function 'kotlin.math.min' call
+  var b = messagePadded.length;
+  var tmp$ret$0 = Math.min(tmp0, b);
+  stdout.write(substring(messagePadded, 0, tmp$ret$0), 'utf8');
+}
+function nodeRequireSafe(moduleName, requiredProperties) {
+  var tmp = typeof window === 'undefined';
+  var inBrowser = !((!(tmp == null) ? typeof tmp === 'boolean' : false) ? tmp : THROW_CCE());
+  if (inBrowser) {
+    return null;
+  }
+  var tmp_0 = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
+  var worker = (!(tmp_0 == null) ? typeof tmp_0 === 'boolean' : false) ? tmp_0 : THROW_CCE();
+  if (worker) {
+    return null;
+  }
+  var mod = function () {
+    if (require == null) {
+      return null;
+    }
+    try {
+      return require(moduleName);
+    } catch (e) {
+      return null;
+    }
+  }();
+  // Inline function 'kotlin.collections.isNotEmpty' call
+  if (!missingProperties(moduleName, requiredProperties).u()) {
+    return null;
+  }
+  return mod;
+}
+function missingProperties(obj, requiredProperties) {
+  // Inline function 'kotlin.collections.isEmpty' call
+  if (requiredProperties.length === 0) {
+    return emptyList();
+  }
+  var tmp;
+  if (obj.hasOwnProperty != null) {
+    // Inline function 'kotlin.js.unsafeCast' call
+    var jsObject = obj;
+    // Inline function 'kotlin.collections.filter' call
+    // Inline function 'kotlin.collections.filterTo' call
+    var destination = ArrayList.u1();
+    var inductionVariable = 0;
+    var last = requiredProperties.length;
+    while (inductionVariable < last) {
+      var element = requiredProperties[inductionVariable];
+      inductionVariable = inductionVariable + 1 | 0;
+      if (!jsObject.hasOwnProperty(element)) {
+        destination.z1(element);
+      }
+    }
+    tmp = destination;
+  } else {
+    var tmp_0;
+    try {
+      // Inline function 'kotlin.collections.filter' call
+      // Inline function 'kotlin.collections.filterTo' call
+      var destination_0 = ArrayList.u1();
+      var inductionVariable_0 = 0;
+      var last_0 = requiredProperties.length;
+      while (inductionVariable_0 < last_0) {
+        var element_0 = requiredProperties[inductionVariable_0];
+        inductionVariable_0 = inductionVariable_0 + 1 | 0;
+        if (obj[element_0] == null) {
+          destination_0.z1(element_0);
+        }
+      }
+      tmp_0 = destination_0;
+    } catch ($p) {
+      var tmp_1;
+      if ($p instanceof Exception) {
+        var e = $p;
+        tmp_1 = toList(requiredProperties);
+      } else {
+        throw $p;
+      }
+      tmp_0 = tmp_1;
+    }
+    tmp = tmp_0;
+  }
+  return tmp;
+}
+function setLogger(logger) {
+  Log_getInstance().y1i(logger);
+}
+function setSingleFunctionLogger(logger) {
+  setLogger(createSingleFunctionLogger(logger));
+}
+function createSingleFunctionLogger(logger) {
+  return new createSingleFunctionLogger$1(logger);
+}
+//region block: post-declaration
+initMetadataForObject(DefaultConsoleColors, 'DefaultConsoleColors');
+initMetadataForClass(LoggerColor, 'LoggerColor');
+initMetadataForObject(BLACK, 'BLACK');
+initMetadataForObject(RED, 'RED');
+initMetadataForObject(GREEN, 'GREEN');
+initMetadataForObject(YELLOW, 'YELLOW');
+initMetadataForObject(BLUE, 'BLUE');
+initMetadataForObject(MAGENTA, 'MAGENTA');
+initMetadataForObject(CYAN, 'CYAN');
+initMetadataForObject(WHITE, 'WHITE');
+initMetadataForClass(LogLevel, 'LogLevel');
+initMetadataForClass(LoggerBuilder, 'LoggerBuilder', LoggerBuilder);
+initMetadataForClass(CallbackLogger, 'CallbackLogger');
+initMetadataForObject(Log, 'Log');
+initMetadataForObject(DefaultLoggerObject, 'DefaultLoggerObject');
+initMetadataForClass(createSingleFunctionLogger$1);
+//endregion
+//region block: init
+consoleColorEscapeSequence = '\x1B';
+lastLineLength = 0;
+//endregion
+//region block: exports
+defineProp(LoggerColor, 'BLACK', BLACK_getInstance, VOID, true);
+defineProp(LoggerColor, 'RED', RED_getInstance, VOID, true);
+defineProp(LoggerColor, 'GREEN', GREEN_getInstance, VOID, true);
+defineProp(LoggerColor, 'YELLOW', YELLOW_getInstance, VOID, true);
+defineProp(LoggerColor, 'BLUE', BLUE_getInstance, VOID, true);
+defineProp(LoggerColor, 'MAGENTA', MAGENTA_getInstance, VOID, true);
+defineProp(LoggerColor, 'CYAN', CYAN_getInstance, VOID, true);
+defineProp(LoggerColor, 'WHITE', WHITE_getInstance, VOID, true);
+export {
+  LoggerColor as LoggerColor,
+  LoggerBuilder as LoggerBuilder,
+  setLogger as setLogger,
+  setSingleFunctionLogger as setSingleFunctionLogger,
+};
+export {
+  createSingleFunctionLogger as createSingleFunctionLogger3kyaf7giz9xxr,
+  Log_getInstance as Log_getInstance1ciirpgt53ci1,
+};
+//endregion
+
+//# sourceMappingURL=bedalton-common-log.mjs.map

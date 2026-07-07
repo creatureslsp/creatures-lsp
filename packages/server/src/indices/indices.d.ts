@@ -1,6 +1,6 @@
-import {DocumentUri, Range} from "vscode-languageserver";
-import {Nullable} from "@bedalton/extension-util"
-import {CommandCall} from "@bedalton/caos-util";
+import type {DocumentUri, Range} from "vscode-languageserver";
+import type {Nullable} from "@creatures-lsp/extension-util"
+import type {CommandCall} from "@creatures-lsp/caos-util";
 
 
 export type IndexedItemLocation = {

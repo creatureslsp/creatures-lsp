@@ -1,8 +1,6 @@
-import {DocumentUri, Range} from "vscode-languageserver";
-import {IndexedItemLocation} from "./indices";
-import {Nullable, rangesIntersect} from "@bedalton/extension-util";
-import {getFiles} from "../files";
-import {indexCaosFile} from "./index.caos";
+import type {DocumentUri, Range} from "vscode-languageserver";
+import type {IndexedItemLocation} from "./indices.js";
+import {type Nullable, rangesIntersect} from "@creatures-lsp/extension-util";
 
 
 export function indexFilterDoNotDelete(documentUri: DocumentUri, range : Nullable<Range>): (location: IndexedItemLocation) => boolean {
@@ -34,17 +32,4 @@ export function shouldDelete(documentUri: DocumentUri, range: Nullable<Range>, l
     }
    
     return rangesIntersect(range, location.range);
-}
-
-const didInitIndex:string[] = [];
-
-export async function initIndices(workspaceUri: DocumentUri) {
-    if (didInitIndex.indexOf(workspaceUri) >= 0) {
-        return;
-    }
-    didInitIndex.push(workspaceUri);
-    const files = await getFiles(workspaceUri, ["cos"]);
-    for (const file of files) {
-        await indexCaosFile(workspaceUri, file);
-    }
 }

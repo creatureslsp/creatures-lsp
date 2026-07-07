@@ -1,5 +1,5 @@
-import {connection} from "./connection.vscode";
-import {MessageType} from "@bedalton/caos-util";
+import {connection} from "./connection.vscode.js";
+import type {MessageType} from "@creatures-lsp/caos-util";
 
 
 export function showMessage(type: MessageType, message: string): void {

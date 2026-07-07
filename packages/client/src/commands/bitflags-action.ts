@@ -1,9 +1,10 @@
-import {CaosValuesList} from "@bedalton/caos-util";
+import type {CaosValuesList} from "@creatures-lsp/caos-kt/caos-libs";
 import * as vscode from "vscode";
 import {Range} from "vscode-languageserver";
+import {pushDisposable} from "../disposables.js";
 
 export function registerGenerateBitflagsCompletionCommand() {
-    vscode.commands.registerCommand("caos.generateBitflagValue", generate);
+    pushDisposable(vscode.commands.registerCommand("caos.generateBitflagValue", generate));
 }
 
 

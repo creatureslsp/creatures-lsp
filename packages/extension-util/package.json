@@ -1,20 +1,23 @@
 {
-  "name": "@bedalton/extension-util",
+  "name": "@creatures-lsp/extension-util",
   "author": "bedalton",
   "displayName": "AST-Util",
   "license": "MIT",
   "description": "Helper functions for dealing with language extensions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "node": "*"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p ./dist",
     "prepack": "yarn build",
-    "build": "yarn clean && tsc --build && cp \"./package.json\" ./dist/ && find \"./src\" -name \"*.d.ts\" -exec cp -LR {} ./dist \\; && rm ./dist/index.d.ts && cp ./src/_index.d.ts ./dist/index.d.ts",
-    "webpack": "yarn run build",
+    "copy-files": "mkdir -p ./dist && cp \"./package.json\" ./dist/ && find \"./src\" -name \"*.d.ts\" -exec cp -LR {} ./dist \\;",
+    "build-first": "echo \"export * from \\\"./types\\\"\" > ./dist/index.d.ts && cat ./src/_index.ts >> ./dist/index.d.ts",
+    "rename-index-js-file": "( [ ! -f ./dist/_index.js ] || mv ./dist/_index.js ./dist/index.js) && ([ ! -f ./dist/_index.d.ts.map ] || rm ./dist/_index.d.ts.map)  && ([ ! -f ./dist/_index.js ] || rm ./dist/_index.d.ts)",
+    "run-after": "yarn copy-files && yarn rename-index-js-file",
+    "build": "yarn build-first && tsc --build && sleep 4 && yarn run-after",
     "test": "echo 'no test'",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
@@ -27,8 +30,10 @@
     "url": "https://github.com/bedalton/caos-language-server"
   },
   "dependencies": {
-    "rimraf": "^3.0.2",
     "vscode-languageserver": "^9.0.1",
     "vscode-languageserver-textdocument": "^1.0.5"
+  },
+  "devDependencies": {
+    "rimraf": "^6.1.3"
   }
 }

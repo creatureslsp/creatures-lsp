@@ -1,13 +1,13 @@
 // noinspection JSUnusedGlobalSymbols,JSUnusedLocalSymbols
 
-import {tok} from "@bedalton/caos-util/constants";
-import {DocumentUri, Position, Range} from "vscode-languageserver";
-import {CommandIndex, IndexedItemLocation} from "./indices";
-import {Argument, CommandCall, ParserItem} from "@bedalton/caos-util";
-import {Is} from "@bedalton/caos-util/is";
-import {getFileName, Nullable} from "@bedalton/extension-util";
-import {indexFilterDoNotDelete} from "./index.utils";
-import {NamedVarPrefix} from "@bedalton/caos-util/completions";
+import type {DocumentUri, Position, Range} from "vscode-languageserver";
+import type {CommandIndex, IndexedItemLocation} from "./indices.js";
+import {Is, type NamedVarPrefix, tok} from "@creatures-lsp/caos-util";
+import type {C2eStringVal} from "@creatures-lsp/caos-kt/caos-core";
+import type {Argument, CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import {getFileName, type Nullable} from "@creatures-lsp/extension-util";
+import {indexFilterDoNotDelete} from "./index.utils.js";
+import {Log} from "../ConnLogger.js";
 
 
 class NamedVariableIndex implements CommandIndex {
@@ -17,7 +17,7 @@ class NamedVariableIndex implements CommandIndex {
     private readonly usedButNotDefined: string[] = [];
     private readonly command: string
     private readonly locations: { [key: string]: IndexedItemLocation[] } = {};
-    private _allKeys: Nullable<string[]> = undefined;
+    private _allKeys: Nullable<string[]> = null;
     
     constructor(command: string) {
         this.command = command.toUpperCase();
@@ -29,18 +29,25 @@ class NamedVariableIndex implements CommandIndex {
             return this.allLocations();
         }
         
-        if (typeof this.locations[key] == "undefined") {
-            console.log("No locations found for \"" +key+"\"; Locations:\n\t- "+Object.keys(this.locations).map((key)=> "\"" + key +"\"").join("\n\t- "))
+        if (typeof this.locations[key] === "undefined") {
             return [];
         }
         
-        return this.locations[key]!
+        return this.locations[key]!;
     }
     
     
     index(documentUri: DocumentUri, commandCall: CommandCall, recursive: boolean) {
         // Command as token for "faster" compare
-        const command = commandCall.command.command.toLowerCase();
+        if (commandCall == null) {
+            console.error("Command call is null");
+            return;
+        }
+        if (commandCall.commandString == null) {
+            console.error("Command call command string is null; Data: " + JSON.stringify(commandCall));
+            return;
+        }
+        const command = commandCall.commandString.toLowerCase();
         const token: Nullable<number> = command.length === 4 ? tok(command) as number : null;
         
         // Is this call to variable the first in SETV, etc
@@ -83,7 +90,7 @@ class NamedVariableIndex implements CommandIndex {
     }
     
     clearAllKeysCache() {
-        this._allKeys = undefined;
+        this._allKeys = null;
     }
     
     clearInDocument(documentUri: DocumentUri, range?: Nullable<Range>) {
@@ -127,9 +134,9 @@ class NamedVariableIndex implements CommandIndex {
         }
         
         let changed = false;
-        const args = [...argument.commandArguments];
-        if (this.command === argument.command.command) {
-            if (args.length == 1) {
+        const args = [...argument.arguments];
+        if (this.command === argument.commandString) {
+            if (args.length >= 1) {
                 const rawKey = args[0].parserItem;
                 const start = args[0].textRange.start;
                 this.clearAt(documentUri, start);
@@ -140,9 +147,9 @@ class NamedVariableIndex implements CommandIndex {
                     this.pushUsage(documentUri, rawKey);
                 }
             }
+            return changed;
         }
         
-        args.splice(0, 1);
         
         // Index the original call or if recursive
         if (isOriginalCall || recursive) {
@@ -208,7 +215,7 @@ class NamedVariableIndex implements CommandIndex {
         delete this.locations[key];
     }
     
-    private pushUsage(documentUri: DocumentUri, keyItem: ParserItem.C2eStringVal) {
+    private pushUsage(documentUri: DocumentUri, keyItem: C2eStringVal) {
         let key = keyItem.value;
         if (key.startsWith('"') && key.endsWith('"')) {
             key = key.substring(1, key.length - 1);
@@ -288,7 +295,7 @@ class WorkspaceNamedVariables {
     private readonly eameIndex = new NamedVariableIndex("EAME");
     private readonly nameIndex = new NamedVariableIndex("NAME");
     
-    indexNamedVariables(documentUri: DocumentUri, commandCall: CommandCall, recursive: boolean) {
+    indexNamedVariable(documentUri: DocumentUri, commandCall: CommandCall, recursive: boolean) {
         this.gameIndex.index(documentUri, commandCall, recursive);
         this.eameIndex.index(documentUri, commandCall, recursive);
         this.nameIndex.index(documentUri, commandCall, recursive);
@@ -355,22 +362,25 @@ class WorkspaceNamedVariables {
             case "MAME":
                 return this.nameIndex;
             default:
-                console.error("Requested invalid named variable index of type: " + type.toUpperCase());
-                return undefined;
+                Log.e("Requested invalid named variable index of type: " + type.toUpperCase());
+                return null;
         }
     }
 }
 
 const indices: { [workspace: string]: WorkspaceNamedVariables } = {};
 
-export function indexNamedVariables(
+export function indexNamedVariablesInDocument(
     workspaceUri: DocumentUri,
     documentUri: DocumentUri,
-    commandCall: CommandCall,
+    commandCalls: CommandCall[],
     recursive: boolean
 ) {
-    getWorkspaceNamedVariableIndex(workspaceUri)
-        .indexNamedVariables(documentUri, commandCall, recursive);
+    const index = getWorkspaceNamedVariableIndex(workspaceUri);
+    
+    for (const commandCall of commandCalls) {
+        index.indexNamedVariable(documentUri, commandCall, recursive);
+    }
 }
 
 export function getNamedVariableKeysForType(workspaceUri: DocumentUri, type: NamedVarPrefix, definedOnly: boolean): string[] {

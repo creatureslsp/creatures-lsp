@@ -1,0 +1,23 @@
+
+export const clientCapabilities = {
+    hasConfigurationCapability: false,
+    hasWorkspaceFolderCapability: false,
+    hasDiagnosticRelatedInformationCapability: false,
+    hasSemanticTokensCapabilities: false,
+    hasGotoDefinitionCapabilities: false,
+    hasFormattingCapabilities: false,
+    hasInlayHintsCapabilities: false,
+    hasCompletionCapabilities: false,
+    hasHoverCapabilities: false,
+    hasSymbolsCapabilities: false,
+    hasWatchFilesCapabilities: false,
+    hasReferencesCapability: false,
+    hasSymbolRenameCapabilities: false,
+    hasFileRenameCapabilities: false,
+    hasCodeActionCapabilities: false,
+    useInsertReplace: false,
+    node: false,
+    web: false,
+    vscode: false,
+    sublime: false,
+};

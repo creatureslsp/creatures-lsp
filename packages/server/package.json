@@ -1,28 +1,34 @@
 {
-  "name": "@bedalton/caos-language-server",
+  "name": "caos-language-server",
   "author": "bedalton",
   "displayName": "CAOSEditor",
+  "type":  "module",
   "license": "MIT",
   "description": "A language server for Creature's CAOS language",
-  "version": "0.0.1",
+  "version": "0.1.3",
   "engines": {
     "node": "*"
   },
-  "main": "./dist/server.js",
-  "browser": "./dist/web/server.js",
-  "bin": "./dist/server.js",
+  "main": "./dist/node/server.cjs",
+  "browser": "./dist/web/server.cjs",
+  "bin": {
+    "caos-language-server": "./dist/node/server.cjs"
+  },
   "scripts": {
-    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
-    "prepack": "yarn build",
-    "build": "yarn clean && tsc --build && cp \"./package.json\" ./dist/",
-    "test": "echo 'no test'",
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p ./dist",
+    "prepack": "yarn clean && yarn copy-files && yarn webpack",
+    "copy-files": "cp \"./package.json\" ./dist/",
+    "build": "tsc --build",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0",
-    "webpack": "yarn clean && tsc --build && webpack --mode development",
+    "prependHashBang": "echo \"#! /usr/bin/env node\" > ./dist/node/temp.cjs && cat ./dist/node/server.cjs >> ./dist/node/temp.cjs && rm ./dist/node/server.cjs && mv ./dist/node/temp.cjs ./dist/node/server.cjs && chmod +x ./dist/node/server.cjs",
+    "webpack": "webpack --mode development && yarn prependHashBang",
     "postversion": "webpack --mode development --watch",
-    "package": "webpack --mode production --devtool hidden-source-map"
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "test": "echo 'no test'"
   },
   "files": [
-    "./dist"
+    "dist/node/server.cjs",
+    "dist/web/server.cjs"
   ],
   "repository": {
     "type": "git",
@@ -30,10 +36,14 @@
     "url": "https://github.com/bedalton/caos-language-server"
   },
   "dependencies": {
-    "@bedalton/caos-util": "*",
-    "@bedalton/extension-util": "*",
-    "rimraf": "^3.0.2",
     "vscode-languageserver": "^9.0.1",
     "vscode-languageserver-textdocument": "^1.0.11"
+  },
+  "devDependencies": {
+    "rimraf": "^6.1.3",
+    "@creatures-lsp/caos-kt": "*",
+    "@creatures-lsp/caos-util": "*",
+    "@creatures-lsp/catalogue": "*",
+    "@creatures-lsp/extension-util": "*"
   }
 }

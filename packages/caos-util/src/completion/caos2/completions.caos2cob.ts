@@ -1,7 +1,7 @@
-import {Nullable} from "@bedalton/extension-util";
-import {Caos2CobTag, findCobTag} from "../../caos2/caos2cob";
-import {Caos2ValueType} from "../../caos2/caos2-util";
-import {getFilenameCompletionPaths} from "../completions.file";
+import {Nullable} from "@creatures-lsp/extension-util";
+import {Caos2CobTag, findCobTag} from "../../caos2/caos2cob.js";
+import {Caos2ValueType} from "../../caos2/caos2-util.js";
+import {getFilenameCompletionPaths} from "../completions.file.js";
 
 export async function getC1TagValueCompletions(
     thisFileName: string,

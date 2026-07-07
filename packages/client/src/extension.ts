@@ -1,24 +1,41 @@
 // The module 'vscode' contains the VS Code extensibility API
 // Import the module and reference it with the alias vscode in your code below
 import * as vscode from 'vscode';
-import {FileSystemWatcher, OutputChannel, TextDocument, window, workspace} from 'vscode';
-import {LanguageClient, LanguageClientOptions} from "vscode-languageclient/node";
-import {CaosInlayHintsProvider} from "./inlay-hints";
-import {CaosSymbolProvider} from "./caos.outliner";
-import {spinUpServer} from "./spinUpServer.vscode";
-import {closeDisposables, pushDisposable} from "./disposables";
-import {deleteClient, getClient, getClients} from "./clients";
-import {registerCommands} from "./commands/register-commands";
-import {Nullable} from "@bedalton/extension-util";
-import {Log} from "./log";
+import {type FileSystemWatcher, type OutputChannel, type TextDocument, window, workspace} from 'vscode';
+import {LanguageClient, type LanguageClientOptions} from "vscode-languageclient/node.js";
+import {CaosInlayHintsProvider} from "./inlay-hints.js";
+import {CaosSymbolProvider} from "./caos.outliner.js";
+import {spinUpServer} from "./spinUpServer.vscode.js";
+import {closeDisposables, pushDisposable} from "./disposables.js";
+import {deleteClient, getClient, getClients} from "./clients.js";
+import {registerCommands} from "./commands/register-commands.js";
+import type {Nullable} from "@creatures-lsp/extension-util";
+import {CatalogueSymbolProvider} from "./catalogue.outliner.js";
+import {catalogueSemanticLegend} from "@creatures-lsp/catalogue";
+import {catalogueSemanticTokensProvider} from "./catalogue.semantic-tokens.js";
+import {Log} from "./log.js";
+import {caosInitLib} from "@creatures-lsp/caos-kt/caos-init-lib";
+import {initVfs} from "./vfs.js";
 
 let defaultClient: LanguageClient;
+
+caosInitLib();
+
+export function setDefaultClient(client: LanguageClient) {
+    defaultClient = client;
+}
+
+export function getDefaultClient() {
+    return defaultClient;
+}
+
+const caosSelector = { language: "caos" };
+const catalogueSelector = { language: "creatures-catalogue" };
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 // noinspection JSUnusedGlobalSymbols
-export function activate(context: vscode.ExtensionContext) {
-    
+export async function activate(context: vscode.ExtensionContext) {
     const outputChannel: OutputChannel = window.createOutputChannel('caos-language-server');
     
     const watcher = getWatcher();
@@ -26,7 +43,7 @@ export function activate(context: vscode.ExtensionContext) {
     // Options to control the language client
     const clientOptions: LanguageClientOptions = {
         // Register the server for plain text documents
-        documentSelector: [{language: 'caos'}],
+        documentSelector: [caosSelector, catalogueSelector],
         initializationOptions: {
             // noCompletions: true
         },
@@ -36,20 +53,6 @@ export function activate(context: vscode.ExtensionContext) {
         },
         outputChannel: outputChannel
     };
-    
-    
-    function didOpenTextDocument(document: TextDocument) {
-        spinUpServer(context, document, defaultClient, clientOptions)
-            .then (() => {
-               Log.i(document.uri, "Spun up server for CAOS document in node");
-            });
-    }
-    
-    // Init client/server when documents are opened
-    pushDisposable(workspace.onDidOpenTextDocument(didOpenTextDocument));
-    
-    // Init server/client for files already open
-    workspace.textDocuments.forEach(didOpenTextDocument);
     
     // Close associated server/client when workspace is closed
     pushDisposable(workspace.onDidChangeWorkspaceFolders(async (event) => {
@@ -62,22 +65,56 @@ export function activate(context: vscode.ExtensionContext) {
             client?.sendRequest("vfs:workspace/removed", {workspace: JSON.stringify(folder)});
         }
         for (const folder of event.added) {
-            const client = getClient(folder.uri.toString());
+            let client = getClient(folder.uri.toString());
             if (client) {
                 deleteClient(folder.uri.toString());
                 await client.stop();
+                await spinUpServer(context, folder.uri.toString(), defaultClient, clientOptions);
+                client = getClient(folder.uri.toString());
             }
-            client?.sendRequest("vfs:workspace/removed", {workspace: JSON.stringify(folder)});
+            pushDisposable(initVfs(folder.uri.toString(), client!));
+            client?.sendRequest("vfs:workspace/added", {workspace: JSON.stringify(folder)});
         }
     }));
     
+    
     registerCommands()
+
+    // CAOS
+    pushDisposable(vscode.languages.registerInlayHintsProvider(caosSelector, new CaosInlayHintsProvider()));
+    pushDisposable(vscode.languages.registerDocumentSymbolProvider(caosSelector, new CaosSymbolProvider()));
+
+
+    // Catalogue
+    pushDisposable(vscode.languages.registerDocumentSymbolProvider(catalogueSelector, new CatalogueSymbolProvider()));
+    pushDisposable(vscode.languages.registerDocumentSemanticTokensProvider(catalogueSelector, catalogueSemanticTokensProvider, catalogueSemanticLegend));
     
-    pushDisposable(vscode.languages.registerInlayHintsProvider({language: 'caos'}, new CaosInlayHintsProvider()));
-    
-    pushDisposable(vscode.languages.registerDocumentSymbolProvider({language: 'caos'}, new CaosSymbolProvider()));
-    
+    // Misc
     pushDisposable(watcher);
+    
+    async function didOpenTextDocument(document: TextDocument) {
+        try {
+            await spinUpServer(context, document, defaultClient, clientOptions);
+        } catch (error) {
+            console.error("Error inside spinUpServer:", error);
+            outputChannel.appendLine(`Critical spin-up failure: ${error}`);
+        }
+    }
+    
+    // Init client/server when documents are opened
+    pushDisposable(workspace.onDidOpenTextDocument(didOpenTextDocument));
+    
+    
+    // Init server/client for files already open
+    const activationPromises = workspace.textDocuments.map(async (doc) => {
+        try {
+            await didOpenTextDocument(doc);
+        } catch (err) {
+            console.error(`Failed to spin up server for ${doc.fileName}:`, err);
+            outputChannel.appendLine(`Server spin-up error: ${err}`);
+        }
+    });
+    await Promise.all(activationPromises);
 }
 
 
@@ -95,7 +132,7 @@ export async function deactivate(): Promise<void> {
     return closeDisposables();
 }
 
-let watcher: Nullable<FileSystemWatcher> = undefined;
+let watcher: Nullable<FileSystemWatcher> = null;
 
 function getWatcher(): FileSystemWatcher {
     if (watcher) {
@@ -106,6 +143,7 @@ function getWatcher(): FileSystemWatcher {
         "spr",
         "s16",
         "c16",
+        "s32",
         "blk",
         "att",
         "catalogue",

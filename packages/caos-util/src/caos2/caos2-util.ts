@@ -1,4 +1,4 @@
-import {Caos2Validators} from "./caos2.validators";
+import {Caos2Validators} from "./caos2.validators.js";
 import path from "path";
 
 export enum Caos2ValueType {

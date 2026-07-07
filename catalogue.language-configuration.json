@@ -1,0 +1,41 @@
+{
+  "comments": {
+    "lineComment": "#"
+  },
+  "autoClosingPairs": [
+    {
+      "open": "'",
+      "close": "'",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "\"",
+      "close": "\"",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    }
+  ],
+  "surroundingPairs": [
+    [
+      "TAG",
+      "ARRAY"
+    ],
+    [
+      "ARRAY",
+      "TAG"
+    ],
+    [
+      "\"",
+      "\""
+    ],
+    [
+      "'",
+      "'"
+    ]
+  ]
+}

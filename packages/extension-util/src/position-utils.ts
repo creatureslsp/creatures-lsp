@@ -2,7 +2,9 @@
 // noinspection JSUnusedGlobalSymbols
 /*eslint eqeqeq: ["error", {"null": "never"}] */
 
-import {Nullable, Range, RangeWithIndex} from "./types"
+import type {Nullable, Range, RangeWithIndex} from "./types"
+import type {Position} from "vscode-languageserver";
+import {getRangeStartOffset} from "./lsp-runner.js";
 
 /**
  * Checks that a text range, contains a
@@ -14,7 +16,7 @@ import {Nullable, Range, RangeWithIndex} from "./types"
  */
 export function inRange(range: Nullable<Range>, lineNumber: number, column: number, ignoreColumn: boolean = false, soft: boolean = true): boolean {
     if (range == null) {
-        throw new Error("TextRange is invalid in getRange");
+        throw new Error("TextRange is invalid in getRange; Position-Utils");
     }
     if (range.start.line === lineNumber) {
         if (ignoreColumn) {
@@ -68,6 +70,24 @@ export function sortTextRanges(a: Range, b: Range) {
 }
 
 /**
+ * Sorts text ranges in descending order
+ * @param a
+ * @param b
+ */
+export function sortTextRangesReversed(a: Range, b: Range) {
+    const aSort = positionToInt(a.start.line, a.start.character);
+    const bSort = positionToInt(b.start.line, b.start.character);
+    const difference = bSort - aSort;
+    if (difference === 0) {
+        return 0;
+    } else if (difference < 0) {
+        return -1;
+    } else {
+        return 1;
+    }
+}
+
+/**
  * Converts a CaosUtil.js text range object to language server range object
  * Can optionally offset and expand range
  * @param textRange
@@ -91,15 +111,43 @@ export function offsetRange(textRange: RangeWithIndex, lineMod: number = 0, char
     }
 }
 
-export function toVsRange(textRange: RangeWithIndex, expandEnd?: boolean): Range {
+/**
+ * Converts a CaosUtil.js text range object to language server range object
+ * Can optionally offset and expand range
+ * @param textRange
+ * @param lineStartMod
+ * @param charStartMod
+ * @param lineEndMod
+ * @param charEndMod
+ */
+export function offsetVsRange(textRange: Range, lineStartMod: number = 0, charStartMod: number = 0, lineEndMod: number = 0, charEndMod: number = 0): Range {
+    return {
+        start: {
+            line: textRange.start.line + lineStartMod,
+            character: Math.max(textRange.start.character + charStartMod, 0),
+        },
+        end: {
+            line: textRange.end.line + lineEndMod,
+            character: Math.max(textRange.end.character + charEndMod, 0),
+            
+        }
+    } satisfies Range
+}
+
+let offsetStart: Nullable<number> = null
+
+export function toVsRange(textRange: Range, expandEnd?: boolean, startMod: number = 1, endMod: number = 0): Range {
+    if (offsetStart == null) {
+        offsetStart = getRangeStartOffset()
+    }
     return <Range>{
         start: {
             line: textRange.start.line,
-            character: textRange.start.character
+            character: textRange.start.character + offsetStart + startMod
         },
         end: {
             line: textRange.end.line,
-            character: textRange.end.character + (expandEnd === true ? 1 : 0)
+            character: textRange.end.character + (expandEnd === true ? 1 : 0) + endMod
         }
     }
 }
@@ -111,21 +159,31 @@ export function rangesIntersect(range1: Range, range2: Range): boolean {
     const {line: r2StartLine, character: r2StartChar} = range2.start
     const {line: r2EndLine, character: r2EndChar} = range2.end
     
-    if (r1StartLine == r2StartLine) {
-        if (r1EndLine == r2EndLine) {
-            return (r1StartChar <= r2StartChar && r1EndChar >= r2StartChar) || (r1StartChar <= r2EndChar && r1EndChar >= r2EndChar);
-        } else {
-            return true;
-        }
-    } else if (r1StartLine < r2StartLine) {
-        if (r1EndLine === r2EndLine) {
-            return (r1EndChar >= r2EndChar);
-        }
-        return r1EndLine > r2EndLine;
-    } else /* if (r2StartLine < r1StartLine) */ {
-        if (r2EndLine == r1EndLine) {
-            return (r2EndChar >= r1EndChar);
-        }
-        return r2EndLine > r1EndLine;
+    if (r1EndChar < r2StartChar) {
+        return false;
     }
+    
+    if (r1StartChar > r2EndChar) {
+        return false;
+    }
+    
+    
+    if (r1EndLine < r2StartLine) {
+        return false;
+    }
+    
+    if (r1StartLine > r2EndLine) {
+        return false;
+    }
+    
+    return true;
+}
+
+
+export function rangesEqual(a: Range, b: Range): boolean {
+    return positionsEqual(a.start, b.start) && positionsEqual(a.end, b.end);
+}
+
+export function positionsEqual(a: Position, b: Position): boolean {
+    return a.line === b.line && a.character === b.character;
 }

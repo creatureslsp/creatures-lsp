@@ -1,5 +1,4 @@
-import {ParserItem} from "../../caos-util";
-import {getFilenameCompletionPaths} from "../completions.file";
+import {getFilenameCompletionPaths} from "../completions.file.js";
 import {
     arrayUnique,
     filterNotNull,
@@ -8,18 +7,17 @@ import {
     getFileNameWithoutExtensions,
     Nullable,
     stripSurroundingQuotes
-} from "@bedalton/extension-util";
+} from "@creatures-lsp/extension-util";
+import type {Caos2Comment} from "@creatures-lsp/caos-kt/caos-core";
 
-import Caos2Comment = ParserItem.Caos2Comment;
-
-const requiresFileWithoutExtensionRegex = RegExp("^" + [
+export const requiresFileWithoutExtensionRegex = RegExp("^" + [
     "Egg\\s+Gallery\\s+male",
     "Egg\\s+Gallery\\s+female",
     "Agent\\s+Animation\\s+Gallery",
     "Web\\s+Icon",
 ].join("|") + "$", "i");
 
-const requiresFilesWithExtensionRegex = RegExp("^" + [
+export const requiresFilesWithExtensionRegex = RegExp("^" + [
     "Dependency\\s+\\d+",
     "Agent\\s+Animation\\s+File",
     "Egg\\s+Glyph\\s+File",
@@ -27,7 +25,7 @@ const requiresFilesWithExtensionRegex = RegExp("^" + [
 ].join("|") + "$", "i");
 
 
-const requiresSpriteRegex = RegExp("^" + [
+export const requiresSpriteRegex = RegExp("^" + [
     "Egg\\s+Glyph\\s+File",
     "Egg\\s+Glyph\\s+File\\s+2",
     "Agent\\s+Animation\\s+File",
@@ -38,7 +36,7 @@ const requiresSpriteRegex = RegExp("^" + [
 ].join("|") + "$", "i");
 
 
-const requiresGenetics = RegExp("^" + [
+export const requiresGenetics = RegExp("^" + [
     "Genetics\\s+File",
     "Mother\\s+Genetic\\s+File",
     "Father\\s+Genetic\\s+File",
@@ -116,9 +114,15 @@ async function getCommandValueCompletions(
         return [];
     }
     
-    const files = (await getFiles(nonCaosFiles))
-        .map(file => getFileName(file)?.toLowerCase())
-        .filter(file => file) as string[];
+    let files = (await getFiles(nonCaosFiles));
+    
+    if (command === "DEPEND") {
+        files = files
+            .map(file => getFileName(file)?.toLowerCase())
+            .filter(file => file) as string[];
+    } else {
+        files = getFilenameCompletionPaths(directory, files);
+    }
     
     let previous: string[] = getCommandValues(previousCommands, command)
         .map((s) => s.toLowerCase());
@@ -253,10 +257,10 @@ function getCommandValues(commands: Caos2Comment[], ...commandKinds: string[]): 
             if (!command.values || command.values.length === 0) {
                 continue;
             }
-            const parserItem = command.values.length > 1 ? command.values[1] : command.values[0];
-            out.push(stripSurroundingQuotes(parserItem.text));
+            const CaosParserItem = command.values.length > 1 ? command.values[1] : command.values[0];
+            out.push(stripSurroundingQuotes(CaosParserItem.text));
         } else {
-            out = out.concat(command.valuesAsStrings);
+            out = out.concat(command.valueAsStrings);
         }
     }
     return out;

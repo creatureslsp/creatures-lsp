@@ -3,7 +3,7 @@
   "displayName": "Creatures CAOS and Agenteering",
   "description": "An editor for the Creature's CAOS language",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "0.3.2",
   "engines": {
     "vscode": "^1.72.0"
   },
@@ -14,10 +14,15 @@
     "Programming Languages"
   ],
   "activationEvents": [
+    "onLanguage:caos",
+    "onLanguage:creatures-catalogue",
+    "onLanguage:creatures-pray",
     "onLanguage:caosdef"
   ],
   "workspaces": {
     "packages": [
+      "packages/catalogue",
+      "packages/caos-kt",
       "packages/caos-util",
       "packages/extension-util",
       "packages/client",
@@ -25,7 +30,7 @@
     ]
   },
   "repository": "https://github.com/bedalton/vs-caos-editor",
-  "main": "./packages/client/dist/node/extension.js",
+  "main": "./packages/client/dist/node/extension.cjs",
   "extensionDependencies": [],
   "contributes": {
     "capabilities": {
@@ -33,11 +38,25 @@
     },
     "commands": [
       {
-        "command": "caos.setVariant",
+        "command": "caos.setVariantTo",
         "title": "Set CAOS Variant",
         "category": "CAOS",
         "when": "editorLangId == caos",
         "enablement": "editorLangId == caos"
+      },
+      {
+        "command": "caos.enableCommunityEditionCommands",
+        "title": "Enable DS Community Edition commands",
+        "category": "CAOS",
+        "when": "editorLangId == caos",
+        "enablement": "editorLangId == caos"
+      },
+      {
+        "command": "caos.injectCAOS",
+        "title": "Inject CAOS to running game",
+        "category": "CAOS",
+        "when": "editorLangId == caos",
+        "enablement": "caos.canInjectCAOS"
       }
     ],
     "configurationDefaults": {
@@ -55,162 +74,239 @@
             }
           }
         }
-      }
-    },
-    "configuration": {
-      "type": "object",
-      "title": "CAOSScript",
-      "properties": {
-        "caosScript.maxNumberOfProblems": {
-          "type": "number",
-          "default": 100,
-          "description": "The maximum number of errors to report"
-        },
-        "caosScript.variant": {
-          "type": "string",
-          "scope": "workspace",
-          "default": "DS",
-          "enum": [
-            "C1",
-            "C2",
-            "CV",
-            "C3",
-            "DS"
-          ],
-          "enumDescriptions": [
-            "Creatures 1",
-            "Creatures 2",
-            "Creatures Village",
-            "Creatures 3",
-            "Docking Station"
-          ],
-          "description": "The CAOS language variant to use"
-        },
-        "caosScript.inlayHints.parameterBitFlagValues": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": true,
-          "description": "Show inlay hints for bitflag values"
-        },
-        "caosScript.inlayHints.parameterHints.showParameterHints": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": false,
-          "description": "Show parameter names before arguments"
-        },
-        "caosScript.inlayHints.parameterHints.minimumParameterCountForParameterInlayHints": {
-          "type": "integer",
-          "scope": "workspace",
-          "default": 2,
-          "description": "Hide inlay hints for commands pwith less than this number of parameters"
-        },
-        "caosScript.inlayHints.setvParameterHints": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": false,
-          "description": "Show parameter names before arguments"
-        },
-        "caosScript.inlayHints.assumedGenusName": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": false,
-          "description": "Shows name of genus in Family Genus Species argument list"
-        },
-        "caosScript.inlayHints.assumedValueName": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": true,
-          "description": "Show value name for known integer and string values"
-        },
-        "caosScript.inlayHints.eventScriptName": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": true,
-          "description": "Show event script name for known event numbers"
-        },
-        "caosScript.inlayHints.ddePictDimensions": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": true,
-          "description": "Show `DDE: PICT` command dimensions from dimension characters"
-        },
-        "caosScript.inlayHints.c1ClasValue": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": true,
-          "description": "Show parsed family genus species from C1 CLAS value"
-        },
-        "caosScript.inlayHints.rvalueReturnValue": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": false,
-          "description": "Show return type for rvalue commands"
-        },
-        "caosScript.inlayHints.equality.bitFlagValues": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": true,
-          "description": "Show Bitflag value on opposing side of equality operator"
-        },
-        "caosScript.inlayHints.equality.equalityValueName": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": true,
-          "description": "Show value name for know integer and string values on opposing side of EQ"
-        },
-        "caosScript.formatting.indentComments": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": true,
-          "description": "Indent comments inline with commands except when comment is at start of line"
-        },
-        "caosScript.formatting.keepSameLine": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": true,
-          "description": "Allow multiple commands on the same line"
-        },
-        "caosScript.formatting.minBlankLines": {
-          "type": [
-            "integer",
-            "null"
-          ],
-          "scope": "workspace",
-          "default": null,
-          "description": "Minimum number of blank lines between commands"
-        },
-        "caosScript.formatting.forceMinBlankLinesAfterComments": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": false,
-          "description": "Whether to enforce the min blank line settings after a comment. If true, it may add a space between comments and the command that comes after it"
-        },
-        "caosScript.formatting.maxBlankLines": {
-          "type": [
-            "integer",
-            "null"
-          ],
-          "scope": "workspace",
-          "default": -1,
-          "description": "The maximum number of blank lines to keep between commands. Use a negative value for unlimited spaces"
-        },
-        "caosScript.formatting.continuationIndent": {
-          "type": [
-            "integer",
-            "null"
-          ],
-          "scope": "workspace",
-          "default": null,
-          "description": "The number of spaces to use for continuation indents. i.e. When a newline exists between arguements in a command"
-        },
-        "caosScript.formatting.spaceBetweenByteStingBrackets": {
-          "type": "boolean",
-          "scope": "workspace",
-          "default": false,
-          "description": "Place a space between the numbers and the brackets in a byte-string. i.e. `[ 1 2 3 ]` vs `[1 2 3]`"
+      },
+      "[creatures-catalogue]": {
+        "editor.semanticHighlighting.enabled": true,
+        "editor.inlayHints.padding": true,
+        "editor.wordBasedSuggestions": "off",
+        "editor.semanticTokenColorCustomizations": {
+          "rules": {
+            "tag-name.agent-help:catalogue": {
+              "underline": true
+            }
+          }
         }
       }
     },
+    "configuration": [
+      {
+        "type": "object",
+        "title": "CAOSScript",
+        "properties": {
+          "caosScript.maxNumberOfProblems": {
+            "type": "number",
+            "default": 100,
+            "description": "The maximum number of errors to report"
+          },
+          "caosScript.variant": {
+            "type": "string",
+            "scope": "workspace",
+            "default": "DS",
+            "enum": [
+              "C1",
+              "C2",
+              "CV",
+              "C3",
+              "DS",
+              "DS:CE"
+            ],
+            "enumDescriptions": [
+              "Creatures 1",
+              "Creatures 2",
+              "Creatures Village",
+              "Creatures 3",
+              "Docking Station",
+              "DS: Community Edition"
+            ],
+            "description": "The CAOS language variant to use"
+          },
+          "caosScript.inlayHints.parameterBitFlagValues": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": true,
+            "description": "Show inlay hints for bitflag values"
+          },
+          "caosScript.inlayHints.parameterHints.showParameterHints": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": false,
+            "description": "Show parameter names before arguments"
+          },
+          "caosScript.inlayHints.parameterHints.minimumParameterCountForParameterInlayHints": {
+            "type": "integer",
+            "scope": "workspace",
+            "default": 2,
+            "description": "Hide inlay hints for commands pwith less than this number of parameters"
+          },
+          "caosScript.inlayHints.setvParameterHints": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": false,
+            "description": "Show parameter names before arguments"
+          },
+          "caosScript.inlayHints.assumedGenusName": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": false,
+            "description": "Shows name of genus in Family Genus Species argument list"
+          },
+          "caosScript.inlayHints.assumedValueName": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": true,
+            "description": "Show value name for known integer and string values"
+          },
+          "caosScript.inlayHints.eventScriptName": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": true,
+            "description": "Show event script name for known event numbers"
+          },
+          "caosScript.inlayHints.ddePictDimensions": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": true,
+            "description": "Show `DDE: PICT` command dimensions from dimension characters"
+          },
+          "caosScript.inlayHints.c1ClasValue": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": true,
+            "description": "Show parsed family genus species from C1 CLAS value"
+          },
+          "caosScript.inlayHints.rvalueReturnValue": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": false,
+            "description": "Show return type for rvalue commands"
+          },
+          "caosScript.inlayHints.equality.bitFlagValues": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": true,
+            "description": "Show Bitflag value on opposing side of equality operator"
+          },
+          "caosScript.inlayHints.equality.equalityValueName": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": true,
+            "description": "Show value name for know integer and string values on opposing side of EQ"
+          },
+          "caosScript.formatting.indentComments": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": true,
+            "description": "Indent comments inline with commands except when comment is at start of line"
+          },
+          "caosScript.formatting.keepSameLine": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": true,
+            "description": "Allow multiple commands on the same line"
+          },
+          "caosScript.formatting.minBlankLines": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "scope": "workspace",
+            "default": null,
+            "description": "Minimum number of blank lines between commands"
+          },
+          "caosScript.formatting.forceMinBlankLinesAfterComments": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": false,
+            "description": "Whether to enforce the min blank line settings after a comment. If true, it may add a space between comments and the command that comes after it"
+          },
+          "caosScript.formatting.maxBlankLines": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "scope": "workspace",
+            "default": -1,
+            "description": "The maximum number of blank lines to keep between commands. Use a negative value for unlimited spaces"
+          },
+          "caosScript.formatting.continuationIndent": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "scope": "workspace",
+            "default": null,
+            "description": "The number of spaces to use for continuation indents. i.e. When a newline exists between arguements in a command"
+          },
+          "caosScript.formatting.spaceBetweenByteStingBrackets": {
+            "type": "boolean",
+            "scope": "workspace",
+            "default": false,
+            "description": "Place a space between the numbers and the brackets in a byte-string. i.e. `[ 1 2 3 ]` vs `[1 2 3]`"
+          }
+        }
+      },
+      {
+        "type": "object",
+        "title": "Creatures Catalogue",
+        "properties": {
+          "creaturesCatalogue.maxNumberOfProblems": {
+            "type": "number",
+            "default": 100,
+            "description": "The maximum number of errors to report"
+          },
+          "creaturesCatalogue.formatting.blankLinesBetweenValues": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "scope": "workspace",
+            "default": null,
+            "description": "Number of blank lines between values"
+          },
+          "creaturesCatalogue.formatting.blankLinesBetweenEntries": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "scope": "workspace",
+            "default": -1,
+            "description": "The maximum number of blank lines to keep between commands. Use a negative value for unlimited spaces"
+          },
+          "creaturesCatalogue.formatting.insertFinalNewline": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "scope": "workspace",
+            "default": null,
+            "description": "Ensure file ends with newline"
+          },
+          "creaturesCatalogue.formatting.trimFinalNewline": {
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "scope": "workspace",
+            "default": null,
+            "description": "Trim all newline characters from end"
+          },
+          "creaturesCatalogue.formatting.newlineChar": {
+            "type": "string",
+            "scope": "workspace",
+            "default": "\n",
+            "enum": [
+              "\n",
+              "\r\n"
+            ],
+            "enumDescriptions": [
+              "LF",
+              "CRLF"
+            ],
+            "description": "Newline Character"
+          }
+        }
+      }
+    ],
     "languages": [
       {
         "id": "caos",
@@ -222,10 +318,10 @@
           "Caos"
         ],
         "icon": {
-          "light": "./icons/caos-light.png",
-          "dark": "./icons/caos-dark.png"
+          "light": "icons/caos-light.png",
+          "dark": "icons/caos-dark.png"
         },
-        "configuration": "./language-configuration.json"
+        "configuration": "./caos.language-configuration.json"
       },
       {
         "id": "creatures-pray",
@@ -238,10 +334,25 @@
           "Pray"
         ],
         "icon": {
-          "light": "./icons/pray-light.png",
-          "dark": "./icons/pray-dark.png"
+          "light": "icons/pray-light.png",
+          "dark": "icons/pray-dark.png"
         },
-        "configuration": "./language-configuration.json"
+        "configuration": "./pray.language-configuration.json"
+      },
+      {
+        "id": "creatures-catalogue",
+        "extensions": [
+          ".catalogue"
+        ],
+        "aliases": [
+          "Catalogue",
+          "Creatures Catalogue"
+        ],
+        "icon": {
+          "light": "icons/catalogue-light.png",
+          "dark": "icons/catalogue-dark.png"
+        },
+        "configuration": "./catalogue.language-configuration.json"
       },
       {
         "id": "caosdef",
@@ -249,8 +360,8 @@
           ".caosdef"
         ],
         "icon": {
-          "light": "./icons/caosdef-light.png",
-          "dark": "./icons/caosdef-dark.png"
+          "light": "icons/caosdef-light.png",
+          "dark": "icons/caosdef-dark.png"
         }
       }
     ],
@@ -264,12 +375,22 @@
         "language": "caos",
         "scopeName": "source.caos",
         "path": "./syntaxes/CAOS.tmLanguage.json"
+      },
+      {
+        "language": "creatures-pray",
+        "scopeName": "source.pray",
+        "path": "./syntaxes/PRAY.tmLanguage.json"
+      },
+      {
+        "language": "creatures-catalogue",
+        "scopeName": "source.catalogue",
+        "path": "./syntaxes/Catalogue.tmLanguage.json"
       }
     ],
     "semanticTokenTypes": [
       {
         "id": "command",
-        "superType": "namespace",
+        "superType": "macro",
         "description": "A general command call keyword"
       },
       {
@@ -279,7 +400,7 @@
       },
       {
         "id": "lvalue",
-        "superType": "property",
+        "superType": "variable",
         "description": "An lvalue command based variable"
       },
       {
@@ -291,6 +412,21 @@
         "id": "caos2pray-command",
         "supertype": "macro",
         "description": "CAOS2Pray command value"
+      },
+      {
+        "id": "c1e-string",
+        "superType": "string",
+        "description": "A C1 Bracket String"
+      },
+      {
+        "id": "c2e-string",
+        "supertType": "string",
+        "description": "A C2e double quoted string"
+      },
+      {
+        "id": "string-escape-character",
+        "supertType": "string",
+        "description": "An escaped string character"
       }
     ],
     "semanticTokenModifiers": [
@@ -364,37 +500,50 @@
         "description": "Official agent tags"
       }
     ],
-    "[caos]": {
-    },
+    "semanticTokenScopes": [
+      {
+        "language": "caos",
+        "scopes": {
+          "string-escape-character": [
+            "constant.character.escape.caos"
+          ]
+        }
+      }
+    ],
+    "[caos]": {},
     "themes": []
   },
   "scripts": {
     "prepare": "node ./configure-references.js",
-    "vscode:prepublish": "lerna run build && lerna run webpack",
-    "build": "lerna run build --stream",
-    "webpack": "lerna run webpack --stream",
+    "vscode:prepublish": "lerna run webpack --stream",
+    "clean": "lerna run clean --stream",
+    "build-first": "lerna run build-first --stream",
+    "lerna-build": "yarn build-first && lerna run build --stream",
+    "build": "yarn clean && yarn lerna-build && yarn post-build",
+    "post-build": "lerna run post-build --stream",
+    "webpack": "yarn run build --stream && lerna run webpack --stream",
     "lint": "lerna run lint --stream --parallel",
     "test": "echo 'no test'",
     "test-compile": "tsc -p ./",
     "open-in-browser": "yarn run vscode:prepublish && vscode-test-web --extensionDevelopmentPath=. test-project",
-    "package": "vsce package"
+    "package": "yarn run webpack && vsce package"
   },
   "devDependencies": {
-    "@types/glob": "^7.2.0",
+    "@types/glob": "^9.0.0",
     "@types/mocha": "^9.1.1",
     "@types/node": "16.x",
     "@typescript-eslint/eslint-plugin": "^5.27.0",
     "@typescript-eslint/parser": "^5.27.0",
     "@vscode/test-web": "^0.0.48",
-    "eslint": "^8.16.0",
-    "glob": "^8.0.3",
+    "eslint": "9.26.0",
+    "glob": "^13.0.6",
     "is-ci": "^3.0.1",
     "lerna": "^5.1.6",
     "mocha": "^10.0.0",
-    "rimraf": "^3.0.2",
+    "rimraf": "^5.0.7",
     "ts-loader": "9.3.1",
     "typescript": "^4.7.2",
-    "webpack": "5.76.0",
+    "webpack": "5.104.1",
     "webpack-cli": "4.10.0"
   },
   "dependencies": {

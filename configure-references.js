@@ -18,7 +18,12 @@ const loadConfig = (path) => {
         (m, g) => (g ? '' : m),
     );
 
-    return JSON.parse(data);
+    try {
+        return JSON.parse(data);
+    } catch (e) {
+        console.log("Failed to load config with JSON: " + data);
+        throw e;
+    }
 };
 
 const config = loadConfig('tsconfig.json');
@@ -39,11 +44,15 @@ config.references = [];
     lines.pop()
     let workspacesTemp;
     try {
-        workspacesTemp = JSON.parse("{" + lines.join("\n") + "}")
+        var text = lines.join("\n");
+        if (text.length && text[0] !== "{") {
+            text = "{" + text + "}";
+        }
+        workspacesTemp = JSON.parse(text);
     } catch (e) {
         console.error("Failed to JSON parse workspace. ",
             e instanceof Error ? e.message : e,
-            ";\nJSON:\n" + lines.join("\n")
+            ";\nJSON:\n<" + lines.join("\n") + ">"
         );
         workspacesTemp = [];
     }

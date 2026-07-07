@@ -8,15 +8,15 @@ export function stripSurroundingQuotes(string: string): string {
 }
 
 
-function stripIfFrontAndBackOrNull(string: string, character: string): string | undefined {
+function stripIfFrontAndBackOrNull(string: string, character: string): string | null {
     if (character.length !== 1) {
         throw new Error("Cannot strip front and back with empty character string or character string length greater than 1");
     }
     if (!string) {
-        return undefined;
+        return null;
     }
     if (string[0] !== character || string[string.length - 1] !== character) {
-        return undefined;
+        return null;
     }
     return string.substring(1, string.length - 2);
 }
@@ -72,3 +72,5 @@ export function quoteString(string: string, quote: string = "\"", closeQuote: st
     
     return quote + string + closeQuote;
 }
+
+

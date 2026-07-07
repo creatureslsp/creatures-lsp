@@ -1,21 +1,45 @@
 {
     "compilerOptions": {
-        "baseUrl": "./packages",
         "paths": {
-            "@bedalton/caos-util/*": [
+            "@creatures-lsp/catalogue": [
+                "./catalogue/src/*"
+            ],
+            "@creatures-lsp/caos-kt": [
+                "./caos-kt/src/*"
+            ],
+            "@creatures-lsp/caos-util/*": [
                 "./caos-util/src/*"
             ],
-            "@bedalton/caos-vscode-client/*": [
+            "@creatures-lsp/caos-vscode-client/*": [
                 "./client/src/*"
             ],
-            "@bedalton/caos-language-server/*": [
+            "@creatures-lsp/caos-language-server/*": [
                 "./server/src/*"
             ],
-            "@bedalton/extension-util/*": [
+            "@creatures-lsp/extension-util/*": [
                 "./extension-util/src/*"
             ]
         }
     },
-    "references": [],
+    "references": [
+        {
+            "path": "packages/catalogue"
+        },
+        {
+            "path": "packages/caos-kt"
+        },
+        {
+            "path": "packages/caos-util"
+        },
+        {
+            "path": "packages/extension-util"
+        },
+        {
+            "path": "packages/client"
+        },
+        {
+            "path": "packages/server"
+        }
+    ],
     "files": []
 }

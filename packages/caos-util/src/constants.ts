@@ -1,5 +1,7 @@
 // noinspection JSUnusedGlobalSymbols,SpellCheckingInspection
 
+import {tok} from "./token-utils.js";
+
 export const INT_TYPE_ID = 1;
 export const FLOAT_TYPE_ID = 2;
 export const TOKEN_TYPE_ID = 3;
@@ -33,24 +35,6 @@ export const ERROR_TYPE_INCOMPLETE_COMMAND_ERROR = 2;
 export const ERROR_TYPE_OUT_OF_VARIANT = 3;
 export const ERROR_TYPE_UNTERMINATED_CONTROL_STATEMENT = 4;
 export const ERROR_TYPE_UNEXPECTED_CONTROL_TERMINATOR = 5;
-
-/**
- * Converts 4-letter CAOS words to int and CAOS word ints back into strings
- * @param token
- */
-export function tok(token: string | number): string|number {
-    if (typeof token === 'number') {
-        return String.fromCharCode((token >> 24) & 0xFF) + String.fromCharCode((token >> 16) & 0xFF) + String.fromCharCode((token >> 8) & 0xFF) + String.fromCharCode(token & 0xFF);
-    } else { // noinspection SuspiciousTypeOfGuard
-        if (typeof token === 'string') {
-            token = token.toLowerCase();
-            return (token.charCodeAt(0) << 24) | (token.charCodeAt(1) << 16) | (token.charCodeAt(2) << 8) | token.charCodeAt(3);
-        } else {
-            throw Error("Could not tok(" + (typeof token) + "); Value of: " + JSON.stringify(token));
-        }
-    }
-}
-
 
 export const FLOAT_PARSER_TYPE = tok('flot');
 export const INT_PARSER_TYPE = tok('int_');

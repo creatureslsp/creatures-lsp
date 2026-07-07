@@ -1,6 +1,6 @@
-import {parseIntSafe} from "./number-util";
-import {getFileName} from "./files-util";
-import {Nullable} from "./types";
+import {parseIntSafe} from "./number-util.js";
+import {getFileName} from "./files-util.js";
+import type {Nullable} from "./types.js";
 
 /**
  * Regex to parse out sprite file information, including sprite frame number
@@ -22,7 +22,7 @@ export function getArrayAccessFileNameIndex(path:string): Nullable<[string,numbe
     const fileName = getFileName(path);
     
     if (!fileName) {
-        return undefined;
+        return null;
     }
     
     if (fileName.indexOf("[") < 0) {
@@ -42,5 +42,5 @@ export function getArrayAccessFileNameIndex(path:string): Nullable<[string,numbe
         return [`${groupValues[1]}.${groupValues[3]}`, parseIntSafe(groupValues[2]) ?? 0]
     }
     console.error(`Failed to parse sprite file frame information from text: '${path}'`);
-    return undefined;
+    return null;
 }

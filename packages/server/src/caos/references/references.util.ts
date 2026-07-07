@@ -1,13 +1,26 @@
 // noinspection ES6MissingAwait
 
-import {DocumentUri, Location, WorkDoneProgress} from "vscode-languageserver";
-import {Argument, collectors, CommandCall, GameVariant, ParseResult} from "@bedalton/caos-util";
-import {unpack} from "../../server.utils";
-import {Nullable} from "@bedalton/extension-util/src/types";
-import {Is, isSimilarVariant} from "@bedalton/caos-util/is";
+import {type DocumentUri, type Location, WorkDoneProgress} from "vscode-languageserver";
+import {
+    Is,
+    isSimilarVariant,
+} from "@creatures-lsp/caos-util";
+import {
+    parseCaos
+} from "@creatures-lsp/caos-kt/caos-parser";
+import {type GameVariant} from "@creatures-lsp/caos-kt";
+import type {
+    Argument,
+    CaosParseResult,
+    CommandCall,
+} from "@creatures-lsp/caos-kt/caos-parser";
+import {caosInitLib} from "@creatures-lsp/caos-kt/caos-init-lib";
+import {Nullable} from "@creatures-lsp/extension-util";
 import {ReferenceParams} from "vscode-languageserver-protocol";
-import {getFiles} from "../../files";
-import {connection} from "../../connection.vscode";
+import {getFiles} from "../../files.js";
+import {connection} from "../../connection.vscode.js";
+import {isCaosDocument, unpackDocument} from "../../document.js";
+import {offsetRenameRange} from "@creatures-lsp/extension-util/dist/get-workspace-edits.js";
 
 
 
@@ -22,6 +35,8 @@ export async function getAllCommandUsages(
     commandString = commandString.toUpperCase();
     
     let files: DocumentUri[] = (await getFiles(workspaceUri, ["cos"])) as DocumentUri[];
+    
+    console.log(files);
     const fileCount = files.length;
     
     const token = params.partialResultToken;
@@ -32,7 +47,7 @@ export async function getAllCommandUsages(
             token,
             {
                 kind: "begin",
-                title: "Find usages <" + commandString + ">",
+                title: "Find usages of <" + commandString + ">",
                 cancellable: false,
                 message: "Searched 0 of " + fileCount,
                 percentage: 0,
@@ -46,8 +61,7 @@ export async function getAllCommandUsages(
                 WorkDoneProgress.type,
                 token,
                 {
-                    kind: "begin",
-                    title: "Find usages <" + commandString + ">",
+                    kind: "report",
                     cancellable: false,
                     message: "Searched " + currentI + " of " + fileCount,
                     percentage: Math.floor((currentI / fileCount) * 100),
@@ -57,8 +71,8 @@ export async function getAllCommandUsages(
     };
     
     const out: { [documentUri: string]: CommandCall[] } = {};
-    
-    for (let i = 0; i < fileCount;) {
+    let count = 0
+    for (let i = 0; i < fileCount; i++) {
         const file = files[i];
         const commandCalls: CommandCall[] = await collectCommandUsagesForFile(
             file as DocumentUri,
@@ -66,15 +80,20 @@ export async function getAllCommandUsages(
             commandString,
             isCommand,
         );
+        count += commandCalls.length;
         onProgress(i + 1);
-        out[file] = commandCalls;
+        if (commandCalls.length > 0) {
+            out[file] = commandCalls;
+        }
     }
+    
     if (token) {
         connection.sendProgress(
             WorkDoneProgress.type,
             token,
             {
                 kind: "end",
+                message: "Found " + count + " usages of " + commandString
             }
         );
     }
@@ -88,20 +107,25 @@ export async function collectCommandUsagesForFile(
     isCommand: boolean,
 ): Promise<CommandCall[]> {
     
-    const documentData = await unpack(documentUri);
+    const documentData = await unpackDocument(documentUri);
     if (!documentData) {
         return [];
     }
     
+    if (!isCaosDocument(documentData)) {
+        return [];
+    }
+    
+    caosInitLib();
     const {variant, text} = documentData;
     
     if (!isSimilarVariant(targetVariant, variant)) {
         return [];
     }
     
-    let parseResult: ParseResult;
+    let parseResult: CaosParseResult;
     try {
-        parseResult = collectors.parseCaos(variant, text);
+        parseResult = parseCaos(variant, text);
     } catch {
         return [];
     }
@@ -109,7 +133,7 @@ export async function collectCommandUsagesForFile(
     let commands: CommandCall[];
     if (isCommand) {
         commands = parseResult.commandCalls.filter(c => {
-            return c.command.command === commandUppercase
+            return c.commandString === commandUppercase
         });
     } else {
         commands = [] as CommandCall[];
@@ -133,11 +157,11 @@ function collectCommandLRUsages(
     addSelf: boolean
 ) {
     
-    if (addSelf && command.command.command === commandStringUpper) {
+    if (addSelf && command.commandString === commandStringUpper) {
         out.push(command);
     }
     
-    const args: CommandCall[] = command.commandArguments
+    const args: CommandCall[] = command.arguments
         .filter((arg: Argument) => Is.commandCall(arg)) as CommandCall[];
     
     for (const commandCall of args) {
@@ -154,11 +178,11 @@ export function formatCommandToLocation(
     const out: Location[] = [];
     /** @var {CommandCall} command */
     for (const command of commands) {
-        const args: Argument[] = command.commandArguments;
+        const args: Argument[] = command.arguments;
         const targetRange = argumentIndex != null && args.length > argumentIndex ? args[argumentIndex].textRange : command.tokenTextRange;
         out.push({
             uri: documentUri,
-            range: targetRange
+            range: offsetRenameRange(targetRange),
         } satisfies Location)
     }
     return out;

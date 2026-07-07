@@ -14,7 +14,7 @@ import {
     STRING_TYPE_ID,
     UNKNOWN_TYPE_ID,
     VARIABLE_TYPE_ID
-} from "./constants";
+} from "./constants.js";
 
 const anyTypes = [
     ANY_TYPE_ID,

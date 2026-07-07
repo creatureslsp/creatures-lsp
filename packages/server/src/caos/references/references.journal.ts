@@ -1,28 +1,29 @@
-import {CommandCall, GameVariant, IParserItem} from "@bedalton/caos-util";
+import type {GameVariant} from "@creatures-lsp/caos-util";
+import type {CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
+import type {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
 import {DocumentUri, Location} from "vscode-languageserver";
-import {Is} from "@bedalton/caos-util/is";
-import {getJournalFileNameLocations} from "../../indices/index.caos.journal-files";
-import {Nullable, rangesIntersect} from "@bedalton/extension-util";
-import {collectCommandUsagesForFile, formatCommandToLocation} from "./references.util";
+import {Is} from "@creatures-lsp/caos-util";
+import {getJournalFileNameLocations} from "../../indices/index.caos.journal-files.js";
+import {Nullable, rangesIntersect} from "@creatures-lsp/extension-util";
+import {collectCommandUsagesForFile, formatCommandToLocation} from "./references.util.js";
 
 export async function getJournalFileNameReferences(
     workspaceUri: string,
     targetVariant: GameVariant,
     commandCall: CommandCall,
-    closestItem: Nullable<IParserItem<any>>
+    closestItem: Nullable<CaosParserItem>
 ): Promise<Location[]> {
-    if (commandCall.commandArguments.length < 2) {
+    if (commandCall.arguments.length < 2) {
         return [];
     }
-    console.log("CommandCall_Keys: ", Object.keys(commandCall));
-    const commandStringUpper = commandCall.command.command.toUpperCase();
-    const directoryTypeParserItem = commandCall.commandArguments[0].parserItem;
-    if (directoryTypeParserItem == null || !Is.intVal(directoryTypeParserItem)) {
+    const commandStringUpper = commandCall.commandString.toUpperCase();
+    const directoryTypeCaosParserItem = commandCall.arguments[0].parserItem;
+    if (directoryTypeCaosParserItem == null || !Is.intVal(directoryTypeCaosParserItem)) {
         return [];
     }
-    const directoryType = directoryTypeParserItem!.value;
+    const directoryType = directoryTypeCaosParserItem!.value;
     let entries = getJournalFileNameLocations(workspaceUri, directoryType);
-    if (closestItem != null && !rangesIntersect(directoryTypeParserItem.textRange, closestItem.textRange)) {
+    if (closestItem != null && !rangesIntersect(directoryTypeCaosParserItem.textRange, closestItem.textRange)) {
         return entries.map(link => {
             return {
                 range: link.range,
@@ -50,7 +51,7 @@ export async function getJournalFileNameReferences(
         );
         
         const journalEntriesForType = journalCommandCallsForAnyType.filter(commandCall => {
-            const type = commandCall.commandArguments.length > 0 ? commandCall.commandArguments[0].parserItem : null;
+            const type = commandCall.arguments.length > 0 ? commandCall.arguments[0].parserItem : null;
             return type != null && Is.intVal(type) && type.value === directoryType;
         });
         out.concat(formatCommandToLocation(file, journalEntriesForType, 0));

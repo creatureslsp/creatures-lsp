@@ -1,31 +1,47 @@
-import {log, ILoggerObject, setLogger} from "@bedalton/caos-util";
-import {connection} from "./connection.vscode";
-import {Nullable} from "@bedalton/extension-util";
-import LoggerColor = log.LoggerColor;
+import {type ILoggerObject, setLogger, LoggerColor} from "@creatures-lsp/caos-kt/bedalton-common-log";
+import {connection} from "./connection.vscode.js";
+import type {Nullable} from "@creatures-lsp/extension-util";
+
 
 if (typeof self != 'undefined') {
-    self.console.log("Init ConnLogger");
+    globalThis.console.log("Init ConnLogger");
 }
 
 const console = connection.console;
 const ConnLogger: ILoggerObject = {
     prependLogType: undefined,
     error(message: string, _color: Nullable<typeof LoggerColor>): void {
-        console.error(message)
+        console.error(message);
+        globalThis.console.error(message);
     },
     getColorPrefix(_color: Nullable<typeof LoggerColor>): Nullable<string> {
-        return undefined;
+        return null;
     },
     info(_replace: boolean, message: string, _color: Nullable<typeof LoggerColor>): void {
         console.info(message)
+        globalThis.console.info(message);
     },
     log(_replace: boolean, message: string, _color: Nullable<typeof LoggerColor>): void {
         console.log(message);
+        globalThis.console.log(message);
     },
     logMemory(): void {
     },
-    warning(message: string, _color: Nullable<log.LoggerColor>): void {
+    warning(message: string, _color: Nullable<LoggerColor>): void {
         console.warn(message);
+        globalThis.console.warn(message);
+    }
+}
+
+export const Log = {
+    i(message: string): void {
+        ConnLogger.info(false, message, null);
+    },
+    w(message: string): void {
+        ConnLogger.info(false, message, null);
+    },
+    e(message: string): void {
+        ConnLogger.info(false, message, null);
     }
 }
 
@@ -34,5 +50,5 @@ export function initLSPLogger() {
 }
 
 if (typeof self != 'undefined') {
-    self.console.log("Did init ConnLogger");
+    globalThis.console.log("Did init ConnLogger");
 }

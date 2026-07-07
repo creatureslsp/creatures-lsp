@@ -1,10 +1,11 @@
 /* eslint-disable eqeqeq */
 // noinspection JSUnusedGlobalSymbols
 
-import {COMMAND_TOKEN_PARSER_TYPE, tok, TOKEN_PARSER_TYPE} from "./constants";
-import {inRange} from "@bedalton/extension-util";
-import {IParserItem, ParseResult} from "./caos-util";
-
+import {COMMAND_TOKEN_PARSER_TYPE, TOKEN_PARSER_TYPE} from "./constants.js";
+import {inRange} from "@creatures-lsp/extension-util";
+import type { CaosParseResult} from "@creatures-lsp/caos-kt/caos-parser";
+import type {CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
+import {tok} from "./token-utils.js";
 
 const SUBR: number = tok("subr") as number;
 const GSUB: number = tok("gsub") as number;
@@ -16,7 +17,7 @@ const GSUB: number = tok("gsub") as number;
  * @param line
  * @param column
  */
-export function hasSubroutine(parseResult: ParseResult, subroutineName: string, line: number, column: number): boolean {
+export function hasSubroutine(parseResult: CaosParseResult, subroutineName: string, line: number, column: number): boolean {
     const script = parseResult.scripts.find((script) => {
         return inRange(script.textRange, line, column);
     });
@@ -29,17 +30,18 @@ export function hasSubroutine(parseResult: ParseResult, subroutineName: string, 
     return subroutineNames.indexOf(subroutineName) >= 0;
 }
 
-export function getGsubNames(items: IParserItem<any>[]) {
+export function getGsubNames(items: CaosParserItem[]) {
     return getSubroutines(items, GSUB);
 }
 
 /**
  * Gets all subroutine name parser elements in a list of parser items
  * @param items
+ * @param afterToken token that precedes the subroutine name. Should be [SUBR, GSUB]
  */
-export function getSubroutines(items: IParserItem<any>[], afterToken: number = SUBR): IParserItem<any>[] {
+export function getSubroutines(items: CaosParserItem[], afterToken: number = SUBR): CaosParserItem[] {
     let subroutineNext = false;
-    const out: IParserItem<any>[] = [];
+    const out: CaosParserItem[] = [];
     for (let item of items) {
         if (subroutineNext) {
             if (item.typeToken === TOKEN_PARSER_TYPE || item.typeToken === COMMAND_TOKEN_PARSER_TYPE) {

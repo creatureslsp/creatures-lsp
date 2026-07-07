@@ -1,18 +1,20 @@
-import {Nullable} from "@bedalton/extension-util";
-import {Commands, CursorData, GameVariant} from "../caos-util";
+import {Nullable} from "@creatures-lsp/extension-util";
+import type {GameVariant} from "@creatures-lsp/caos-kt";
+import type {Commands} from "@creatures-lsp/caos-kt/caos-libs";
+import type {CaosCursorData} from "@creatures-lsp/caos-kt/caos-cursor-data";
 import {CompletionItem, Position} from "vscode-languageserver-types";
-import {ANY_TYPE_ID} from "../constants";
-import {getValuesListCompletions} from "./completions.values-list-values";
-import {COMMAND_TYPE__RVALUE, CompletionSettings} from "../completions";
-import {getIndexedVariableCompletions} from "./completions.indexedVariables";
-import {getCommandCompletionsForCommandType} from "./completion.command";
+import {ANY_TYPE_ID} from "../constants.js";
+import {getValuesListCompletions} from "./completions.values-list-values.js";
+import {COMMAND_TYPE__RVALUE, type CaosCompletionSettings} from "../completions.js";
+import {getIndexedVariableCompletions} from "./completions.indexedVariables.js";
+import {getCommandCompletionsForCommandType} from "./completion.command.js";
 
 export function getRvalueCompletions(
     variant: GameVariant,
     commands: Commands,
     position: Position,
-    data: CursorData,
-    settings: Nullable<CompletionSettings>,
+    data: CaosCursorData,
+    settings: Nullable<CaosCompletionSettings>,
 ): CompletionItem[] {
     if (data == null) {
         return [];

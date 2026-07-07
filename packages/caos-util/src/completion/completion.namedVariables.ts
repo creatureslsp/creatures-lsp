@@ -1,8 +1,10 @@
-import {Nullable} from "@bedalton/extension-util/src/types";
-import {CommandCall, GameVariant, IParserItem} from "../caos-util";
-import {NamedVarPrefix} from "../completions";
-import {CompletionItem, CompletionItemKind, InsertTextFormat, InsertTextMode, Range} from "vscode-languageserver-types";
-import {inflect, multiCase} from "./completions.values-list-values";
+import {Nullable, offsetRenameRange} from "@creatures-lsp/extension-util";
+import {GameVariant} from "@creatures-lsp/caos-kt";
+import {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import {CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
+import {NamedVarPrefix} from "../completions.js";
+import {CompletionItem, Range} from "vscode-languageserver-types";
+import {getNameCompletionItems} from "./completion.createNameCompletionItem.js";
 
 
 function isNamedVariableCommand(variant: GameVariant, commandString: Nullable<string>): commandString is NamedVarPrefix {
@@ -23,44 +25,21 @@ export function getNamedVariableCompletionItems(
     getNamedVariableKeys: (prefix: NamedVarPrefix) => string[],
 ): Nullable<CompletionItem[]> {
     
-    const namedVariablePrefix = commandCall.command.command.toUpperCase();
+    const namedVariablePrefix = commandCall.commandString.toUpperCase();
     if (!isNamedVariableCommand(variant, namedVariablePrefix)) {
-        console.log("Is not named variable completion");
         return null;
     }
     const keys = getNamedVariableKeys(namedVariablePrefix);
     let range: Nullable<Range>;
-    const closestItem = commandCall.commandArguments.length > parameterIndex ? commandCall.commandArguments[parameterIndex].parserItem : null;
+    const closestItem: Nullable<CaosParserItem> = commandCall.arguments.length > parameterIndex ? commandCall.arguments[parameterIndex].parserItem : null;
     const text = closestItem?.text;
     
     let openQuote = text != null && text.startsWith('"') ? '' : '"';
     let closeQuote = text != null && text.endsWith('"') ? '' : '"';
     
     if (closestItem) {
-        range = {
-            start: {
-                line: closestItem.textRange.start.line!!,
-                character: closestItem.textRange.start.character + (1 - openQuote.length)
-            },
-            end: {
-                line: closestItem.textRange.end.line,
-                character: closestItem.textRange.end.character - (1 - closeQuote.length)
-            }
-        }
+        range = offsetRenameRange(closestItem.textRange);
     }
-    return keys.map(key => {
-        const completion = openQuote + key + closeQuote;
-        const edit = range != null ? {range, newText: completion} : null;
-        return <CompletionItem>{
-            label: key,
-            kind: CompletionItemKind.Variable,
-            filterText: '\"' + inflect(key) + " " + (multiCase(key)) + "\"",
-            insertText: completion,
-            insertTextFormat: InsertTextFormat.PlainText,
-            insertTextMode: InsertTextMode.asIs,
-            preselect: false,
-            sortText: '0__0' + key,
-            textEdit: edit
-        };
-    }); //.filter(i => i.label !== stringValue);
+    
+    return getNameCompletionItems(keys, closestItem, null, range);
 }

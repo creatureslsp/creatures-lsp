@@ -1,4 +1,4 @@
-import {DocumentUri} from "vscode-languageserver";
+import type {DocumentUri} from "vscode-languageserver";
 
 export const VFS_READDIR_REQUEST = "vfs/directory:list";
 export const VFS_IS_DIRECTORY_REQUEST = "vfs/file:is-directory"
@@ -6,6 +6,8 @@ export const VFS_IS_FILE_REQUEST = "vfs/file:is-file"
 export const VFS_FILE_EXISTS_REQUEST = "vfs/file:exists"
 export const VFS_READ_FILE_REQUEST = "vfs/file:read-text";
 export const VFS_READ_BINARY_FILE_REQUEST = "vfs/file:read-binary";
+export const VFS_WRITE_FILE_REQUEST = "vfs/file:write-text";
+export const VFS_WRITE_BINARY_FILE_REQUEST = "vfs/file:write-binary";
 
 type VFS_READDIR_REQUEST = typeof VFS_READDIR_REQUEST;
 
@@ -19,8 +21,11 @@ type VFS_IS_FILE_REQUEST = typeof VFS_IS_FILE_REQUEST;
 
 type VFS_FILE_EXISTS_REQUEST = typeof VFS_FILE_EXISTS_REQUEST;
 
-export type VfsRequestType = VFS_READDIR_REQUEST | VFS_READ_FILE_REQUEST | VFS_READ_BINARY_FILE_REQUEST | VFS_IS_DIRECTORY_REQUEST | VFS_IS_FILE_REQUEST | VFS_FILE_EXISTS_REQUEST;
+type VFS_WRITE_BINARY_FILE_REQUEST = typeof VFS_WRITE_BINARY_FILE_REQUEST;
 
+type VFS_WRITE_FILE_REQUEST = typeof VFS_WRITE_FILE_REQUEST;
+
+export type VfsRequestType = VFS_READDIR_REQUEST | VFS_READ_FILE_REQUEST | VFS_READ_BINARY_FILE_REQUEST | VFS_IS_DIRECTORY_REQUEST | VFS_IS_FILE_REQUEST | VFS_FILE_EXISTS_REQUEST | VFS_WRITE_FILE_REQUEST | VFS_WRITE_BINARY_FILE_REQUEST;
 
 export const defaultWorkspaceUri: DocumentUri = "memoryvfs:/";
 
@@ -54,6 +59,18 @@ export type VfsIsDirectoryRequest = VfsFileRequest & {
     readonly type: VFS_IS_DIRECTORY_REQUEST;
 }
 
+export type VfsWriteFileRequest = VfsFileRequest & {
+    readonly type: VFS_WRITE_FILE_REQUEST;
+    readonly data: string,
+    readonly encoding: "latin1" | "utf-8" | "utf8"
+}
+
+
+export type VfsWriteBinaryFileRequest = VfsFileRequest & {
+    readonly type: VFS_WRITE_BINARY_FILE_REQUEST;
+    readonly data: Uint8Array,
+}
+
 export function isDirectoryRequest(event: any, eventType: string): event is VfsDirectoryEvent {
     return isVfsEventOfType(event, eventType)
         && typeof (<any>event)["directory"] !== "undefined";
@@ -75,6 +92,17 @@ export function isReadFileEvent(event: any): event is VfsReadFileRequest {
 export function isReadBinaryFileEvent(event: any): event is VfsReadBinaryFileRequest {
     return isFileEvent(event, VFS_READ_BINARY_FILE_REQUEST);
 }
+
+
+export function isWriteFileEvent(event: any): event is VfsWriteFileRequest {
+    return isFileEvent(event, VFS_WRITE_FILE_REQUEST);
+}
+
+
+export function isWriteBinaryFileEvent(event: any): event is VfsWriteBinaryFileRequest {
+    return isFileEvent(event, VFS_WRITE_BINARY_FILE_REQUEST);
+}
+
 
 export function isIsDirectoryEvent(event: any): event is VfsIsDirectoryRequest {
     return isFileEvent(event, VFS_IS_DIRECTORY_REQUEST);

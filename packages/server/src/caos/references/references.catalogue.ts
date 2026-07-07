@@ -1,27 +1,55 @@
-import {CommandCall, GameVariant, IParserItem} from "@bedalton/caos-util";
-import {Nullable} from "@bedalton/extension-util/src/types";
+import {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import {Nullable, toVsRange} from "@creatures-lsp/extension-util";
 import {Location} from "vscode-languageserver";
-import {Is} from "@bedalton/caos-util/is";
+import {isInCaosCatalogueKey} from "@creatures-lsp/caos-util";
+import type {CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
+import {getCaosCatalogueLocations} from "../../indices/index.caos.catalogue-usages.js";
+import {getCatalogueLocations} from "../../indices/index.catalogue.entries.js";
+import {IndexedItemLocation} from "../../indices/indices.js";
 
-
-export async function getCatalogueReferences(
+export async function getCaosCatalogueNameReferences(
     workspaceUri: string,
-    targetVariant: GameVariant,
     commandCall: CommandCall,
-    closestItem: Nullable<IParserItem<any>>
+    closestItem: Nullable<CaosParserItem>
 ): Promise<Location[]> {
-    if (!Is.c2eStringVal(closestItem)) {
+    
+    if (closestItem == null) {
         return [];
     }
-    const args = commandCall.commandArguments;
-    if (args.length === 0) {
+    
+    if (!isInCaosCatalogueKey(commandCall, closestItem)) {
         return [];
     }
-    if (args[0].textRange.start.line !== closestItem.textRange.start.line) {
-        return [];
-    }
-    if (args[0].textRange.start.character !== closestItem.textRange.start.character) {
-        return [];
-    }
-    catalogueI
+    
+    const key = closestItem.value ?? closestItem.text;
+    const rawLocations = getCatalogueLocations(workspaceUri, key)
+        .concat(getCaosCatalogueLocations(
+            workspaceUri,
+            key
+        ));
+    return rawLocations.map((location: IndexedItemLocation) => {
+        return {
+            uri: location.documentUri,
+            range: toVsRange(location.range),
+        } satisfies Location
+    });
+}
+
+
+export async function getCatalogueNameReferences(
+    workspaceUri: string,
+    key: string
+): Promise<Location[]> {
+    
+    const rawLocations = getCaosCatalogueLocations(
+        workspaceUri,
+        key
+    );
+    
+    return rawLocations.map((location: IndexedItemLocation) => {
+        return {
+            uri: location.documentUri,
+            range: toVsRange(location.range),
+        } satisfies Location
+    });
 }

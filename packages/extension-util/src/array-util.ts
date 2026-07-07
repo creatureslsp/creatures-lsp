@@ -1,4 +1,4 @@
-import {Nullable} from "./types";
+import type {Nullable} from "./types.js";
 
 
 export function arrayDifference<T>(array1: T[], ...array2: T[][]) {
@@ -44,4 +44,27 @@ export function arrayUnique<T>(array: T[]): T[] {
         }
     }
     return out;
+}
+
+
+/**
+ * Push item into an object[key][] array
+ * @param data object with array values
+ * @param key key into object for array
+ * @param item item to insert
+ * @param matchesExisting Do not insert item if a match is found
+ */
+export function pushInto<K extends number|string ,V>(data: {[key: number|string]: V[]}, key: K, item: V, matchesExisting: Nullable<(value: V)=>boolean> = null) {
+    if (typeof data[key] === "undefined") {
+        data[key] = [item];
+        return;
+    }
+    
+    if (typeof matchesExisting === "function") {
+        if (data[key].findIndex(matchesExisting) < 0) {
+            data[key].push(item);
+        }
+    } else {
+        data[key].push(item);
+    }
 }

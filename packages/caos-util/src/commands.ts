@@ -1,5 +1,6 @@
-import {Commands, GameVariant, libs} from "./caos-util";
-import {Nullable} from "@bedalton/extension-util"
+import type { GameVariant} from "@creatures-lsp/caos-kt";
+import {type Commands, getCommandsForVariant} from "@creatures-lsp/caos-kt/caos-libs";
+import {Nullable} from "@creatures-lsp/extension-util"
 
 const _commands: { [variant: string]: Commands } = {};
 
@@ -14,7 +15,7 @@ export function getCommands(variant: GameVariant): Commands {
         commands = _commands[variant]
     }
     if (commands == null) {
-        commands = libs.getCommandsForLib(variant)
+        commands = getCommandsForVariant(variant)
         if (commands == null) {
             throw Error("No commands found for variant '" + variant + "'");
         }

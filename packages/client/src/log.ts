@@ -1,34 +1,19 @@
-import {getClient} from "./clients";
+import {getClient, getFallbackClient} from "./clients.js";
 import {Uri} from "vscode";
-import {LanguageClient} from "vscode-languageclient/node";
-import {Nullable} from "@bedalton/extension-util";
-
-
-let lastClient: Nullable<LanguageClient> = undefined
 
 export const Log = {
     i(file: Uri| string, message: string, ... args: any[]) {
-        let client = getClient(file) ?? lastClient;
-        if (!client) {
-            client = lastClient;
+        let client = getClient(file) ?? getFallbackClient();
+        if (client != null) {
+            client.info(message, args, false);
         } else {
-            lastClient = client;
-        }
-        if (client) {
-            client.info(message, args);
-        } else {
-            console.info(message, args);
+            console.info(message, ...args);
         }
     },
     
     e(file: Uri| string, message: string, ... args: any[]) {
-        let client = getClient(file) ?? lastClient;
-        if (!client) {
-            client = lastClient;
-        } else {
-            lastClient = client;
-        }
-        if (client) {
+        let client = getClient(file) ?? getFallbackClient();
+        if (client != null) {
             client.error(message, args, false);
         } else {
             console.error(message, ...args);
@@ -36,16 +21,11 @@ export const Log = {
     },
     
     w(file: Uri| string, message: string, ... args: any[]) {
-        let client = getClient(file) ?? lastClient;
-        if (!client) {
-            client = lastClient;
+        let client = getClient(file) ?? getFallbackClient();
+        if (client != null) {
+            client.warn(message, args, false);
         } else {
-            lastClient = client;
-        }
-        if (client) {
-            client.warn(message, args);
-        } else {
-            console.warn(message, args);
+            console.warn(message, ...args);
         }
     },
 }

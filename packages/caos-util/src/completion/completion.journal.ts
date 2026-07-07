@@ -1,10 +1,10 @@
-import {CommandCall, GameVariant, IParserItem} from "../caos-util";
-import {Nullable} from "@bedalton/extension-util/src/types";
+import {GameVariant} from "@creatures-lsp/caos-kt";
+import {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import {Nullable} from "@creatures-lsp/extension-util";
 import {CompletionItem} from "vscode-languageserver";
-import {isC1eVariant} from "../is-similar-variant";
-import {Is} from "../is-util";
-import {CompletionItemKind, InsertTextFormat, InsertTextMode, Range} from "vscode-languageserver-types";
-import {inflect, multiCase} from "./completions.values-list-values";
+import {isC1eVariant} from "../is-similar-variant.js";
+import {Is} from "../is-util.js";
+import {getNameCompletionItems} from "./completion.createNameCompletionItem.js";
 
 
 function isJournalNameCommand(variant: GameVariant, commandString: Nullable<string>): boolean {
@@ -26,72 +26,31 @@ export function getJournalNameCompletions(
     getJournalNames:(directoryType: number) => string[]
 ): Nullable<CompletionItem[]> {
     
-    if (!isJournalNameCommand(variant, commandCall.command.command)) {
-        console.log("Is not journal name completion");
+    if (!isJournalNameCommand(variant, commandCall.commandString)) {
         return null;
     }
     
-    if (commandCall.commandArguments.length < 2) {
-        console.log("Cannot complete journal without enough arguments");
+    if (commandCall.arguments.length < 2) {
         return [];
     }
     
     if (parameterIndex != 1) {
-        console.log("Not in journal name parameter");
         return [];
     }
     
-    const directoryCount = Is.intVal(commandCall.commandArguments[0].parserItem)
-        ? commandCall.commandArguments[0].parserItem.value
+    const directoryInt = Is.intVal(commandCall.arguments[0].parserItem)
+        ? commandCall.arguments[0].parserItem?.value
         : null;
     
-    if (directoryCount == null) {
+    if (directoryInt == null) {
         return [];
     }
     
-    const names = getJournalNames(directoryCount);
-    const closestItem = commandCall.commandArguments[parameterIndex]?.parserItem;
+    const names = getJournalNames(directoryInt);
+    const closestItem = commandCall.arguments[parameterIndex]?.parserItem;
     if (closestItem == null) {
         return [];
     }
-    return getJournalNameCompletionItems(names, closestItem);
+    return getNameCompletionItems(names, closestItem);
 }
 
-
-function getJournalNameCompletionItems(
-    journalNames: string[],
-    closestItem: IParserItem<any>,
-): CompletionItem[] {
-    const keys = journalNames;
-    let range: Nullable<Range>;
-    const text = closestItem?.text;
-    let openQuote = text != null && text.startsWith('"') ? '' : '"';
-    let closeQuote = text != null && text.endsWith('"') ? '' : '"';
-    if (closestItem) {
-        range = {
-            start: {
-                line: closestItem.textRange.start.line!!,
-                character: closestItem.textRange.start.character + (1 - openQuote.length)
-            },
-            end: {
-                line: closestItem.textRange.end.line,
-                character: closestItem.textRange.end.character - (1 - closeQuote.length)
-            }
-        }
-    }
-    return keys.map(key => {
-        const completion = openQuote + key + closeQuote;
-        const edit = range != null ? {range, newText: completion} : null;
-        return <CompletionItem>{
-            label: key,
-            kind: CompletionItemKind.Variable,
-            filterText: '\"' + inflect(key) + " " + (multiCase(key)) + "\"",
-            insertText: completion,
-            insertTextFormat: InsertTextFormat.PlainText,
-            insertTextMode: InsertTextMode.asIs,
-            preselect: false,
-            sortText: '0__0' + key,
-            textEdit: edit
-        };
-    });
-}

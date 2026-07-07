@@ -10,8 +10,15 @@
 // noinspection NodeCoreCodingAssistance
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
 
-const path = require('path');
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+import * as path from "node:path";
+import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
+import { createRequire } from 'node:module';
+import {fileURLToPath} from "url";
+
+// Reconstruct __dirname and require for ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const require = createRequire(import.meta.url);
 
 /** @type WebpackConfig */
 const shared = {
@@ -27,7 +34,14 @@ const shared = {
     },
     resolve: {
         mainFields: ['browser', 'module', 'main'], // look for `browser` entry point in imported node modules
-        extensions: ['.ts', '.js'], // support ts-files and js-files
+        extensions: ['.ts', '.mts', '.js', '.mjs'], // support ts-files and js-files
+        extensionAlias: {
+            '.js': ['.ts', '.js'],
+            '.mjs': ['.mts', '.mjs']
+        },
+        alias: {
+            '@': path.resolve(__dirname, 'src/'),
+        },
         fallback: {
             // Webpack 5 no longer polyfills Node.js core modules automatically.
             // see https://webpack.js.org/configuration/resolve/#resolvefallback
@@ -62,43 +76,41 @@ const webExtensionConfig = {
     ...shared,
     target: 'webworker', // extensions run in a webworker context
     output: {
-        filename: '[name].js',
+        filename: '[name].cjs',
         path: path.join(__dirname, './dist/web'),
         libraryTarget: 'commonjs',
-    },
-    resolve: {
-        mainFields: ['browser', 'module', 'main'], // look for `browser` entry point in imported node modules
-        extensions: ['.ts', '.js'], // support ts-files and js-files
-
-        fallback: {
-            // Webpack 5 no longer polyfills Node.js core modules automatically.
-            // see https://webpack.js.org/configuration/resolve/#resolvefallback
-            // for the list of Node.js core module polyfills.
-            assert: require.resolve('assert'),
-        },
     },
     plugins: [
         new NodePolyfillPlugin({
             excludeAliases: ['console']
         })
     ],
+    resolve: {
+        ...shared.resolve,
+        alias: {
+            ...shared.resolve.alias,
+            'vscode-languageclient/node': 'vscode-languageclient/browser',
+            [path.resolve(__dirname, "./src/connection.vscode.ts")]: path.resolve(__dirname, "./src/connection.web.ts"),
+            [path.resolve(__dirname, "./src/connection.vscode.js")]: path.resolve(__dirname, "./src/connection.web.js"),
+            [path.resolve(__dirname, "./src/files.node.ts")]: path.resolve(__dirname, "./src/files.node.web.ts"),
+            [path.resolve(__dirname, "./src/files.node.js")]: path.resolve(__dirname, "./src/files.node.web.js"),
+            [path.resolve(__dirname, "./src/caos/commands/inject/caos.inject-c2e.ts ")]: path.resolve(__dirname, "src/caos/commands/inject/caos.inject-c2e.web.ts"),
+            [path.resolve(__dirname, "src/caos/commands/inject/caos.inject-c2e.js")]: path.resolve(__dirname, "src/caos/commands/inject/caos.inject-c2e.web.js"),
+            [path.resolve(__dirname, "./src/caos/commands/inject/caos.inject-command.ts")]: path.resolve(__dirname, "src/caos/commands/inject/caos.inject-command.web.ts"),
+            [path.resolve(__dirname, "src/caos/commands/inject/caos.inject-command.js")]: path.resolve(__dirname, "src/caos/commands/inject/caos.inject-command.web.js"),
+        }
+    }
 };
-
-webExtensionConfig.resolve.alias = {
-    'vscode-languageclient/node': 'vscode-languageclient/browser',
-    [path.resolve(__dirname, "./src/connection.vscode.ts")]: path.resolve(__dirname, "./src/connection.web.ts"),
-};
-
 
 /** @type WebpackConfig */
 const nodeExtensionConfig = {
     ...shared,
     target: 'node', // extensions run in a webworker context
     output: {
-        filename: '[name].js',
+        filename: '[name].cjs',
         path: path.join(__dirname, './dist/node'),
         libraryTarget: 'commonjs',
     },
 };
 
-module.exports = [webExtensionConfig, nodeExtensionConfig];
+export default [webExtensionConfig, nodeExtensionConfig];

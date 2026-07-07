@@ -1,6 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {ParseTreeItem, Nullable, RangeWithIndex} from "./types";
+import type {ParseTreeItem, Nullable, RangeWithIndex} from "./types";
 
 /**
  * Gets the extents of text ranges from parser items. Returns null if no parser items
@@ -8,7 +8,7 @@ import {ParseTreeItem, Nullable, RangeWithIndex} from "./types";
  */
 export function getTokenRange(items: ParseTreeItem<any>[]): Nullable<RangeWithIndex> {
     if (items.length === 0) {
-        return undefined;
+        return null;
     }
     if (items.length === 1) {
         return items[0].textRange;

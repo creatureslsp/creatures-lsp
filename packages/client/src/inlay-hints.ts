@@ -1,19 +1,30 @@
 import {
-    CancellationToken,
+    type CancellationToken,
     InlayHint,
     InlayHintKind,
-    InlayHintsProvider,
+    type InlayHintsProvider,
     Position,
-    ProviderResult,
-    TextDocument,
+    type ProviderResult,
+    type TextDocument,
     workspace,
-    WorkspaceConfiguration
+    type WorkspaceConfiguration
 } from "vscode"
 import {Range} from "vscode-languageserver";
-import {Nullable} from "@bedalton/extension-util";
-import {collectors, hints, GameVariant, ParseResult} from '@bedalton/caos-util';
-const getInlayOptions = hints.getInlayOptions;
-const parseCaosWithin = collectors.parseCaosWithin;
+import type {Nullable} from "@creatures-lsp/extension-util";
+import {
+    GameVariant,
+} from '@creatures-lsp/caos-util';
+
+import {
+    parseCaosWithin,
+    parseCaos,
+    type CaosParseResult,
+} from '@creatures-lsp/caos-kt/caos-parser';
+
+import {
+    getCaosInlayHints,
+    getCaosInlayOptions,
+} from "@creatures-lsp/caos-kt/caos-inlay-hints";
 
 function getSettings(): WorkspaceConfiguration {
     return workspace.getConfiguration('caosScript');
@@ -33,21 +44,21 @@ export class CaosInlayHintsProvider implements InlayHintsProvider {
         const hintSettings: {
             get(key: string): (boolean | undefined);
             has(key: string): boolean
-        } | undefined = settings;
+        } | null = settings;
         let disabled: string[];
         if (settings) {
-            const inlayOptions = getInlayOptions();
+            const inlayOptions: string[] = getCaosInlayOptions();
             // Get disabled type hints
             disabled = inlayOptions
-                .filter((option) => {
-                    return hintSettings?.has(option) == true && hintSettings?.get(option) === false;
+                .filter((option: string) => {
+                    return option != null && hintSettings?.has(option) == true && hintSettings?.get(option) === false;
                 });
         } else {
             disabled = [];
         }
         const minimumParameters: Nullable<number> = settings.get('inlayHints.parameterHints.minimumParameterCountForParameterInlayHints');
         const keepGoing = () => token?.isCancellationRequested != true
-        let parseResult: ParseResult;
+        let parseResult: CaosParseResult;
         if (range != null) {
             parseResult = parseCaosWithin(
                 variant,
@@ -61,7 +72,7 @@ export class CaosInlayHintsProvider implements InlayHintsProvider {
                 keepGoing
             )
         } else {
-            parseResult = collectors.parseCaos(
+            parseResult = parseCaos(
                 variant,
                 text,
                 keepGoing
@@ -71,18 +82,29 @@ export class CaosInlayHintsProvider implements InlayHintsProvider {
             return [];
         }
 
-        const raw = hints.getInlayHints(parseResult, disabled, [], minimumParameters);
+        const raw = getCaosInlayHints(parseResult, disabled, [], minimumParameters)
+            .filter(it => it != null);
+        
         return raw.map((hint) => {
-            return new InlayHint(
-                new Position(hint.position.line, hint.position.character),
-                <string>hint.label,
-                hint.kind ?? InlayHintKind.Parameter
-            )
-        });
+            if (hint == null) {
+                return null;
+            }
+            try {
+                return new InlayHint(
+                    new Position(hint.position.line, hint.position.character),
+                    <string>hint.label,
+                    hint.kind ?? InlayHintKind.Parameter
+                )
+            } catch (e) {
+                const error = e instanceof Error ? e.message + "\n" + e.stack : e;
+                console.error("Failed to get inlay hint for <" + hint.label + ">;\n", error);
+                return null;
+            }
+        }).filter(it => it != null) as InlayHint[];
     }
     
     resolveInlayHint(_hint: InlayHint, _token: CancellationToken): ProviderResult<InlayHint> {
-        return undefined;
+        return null;
     }
     
 }

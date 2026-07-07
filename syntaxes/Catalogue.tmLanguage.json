@@ -1,0 +1,138 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "source.catalogue",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#string"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#literals"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "match": "^\\s*\\#[^\n]*",
+      "name": "comment.line.catalogue"
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "include": "#tag"
+        },
+        {
+          "include": "#array"
+        },
+        {
+          "include": "#override"
+        }
+      ]
+    },
+
+    "tag": {
+      "patterns": [
+        {
+          "name": "keyword.tag.catalogue",
+          "match": "\\b(TAG)\\b"
+        }
+      ]
+    },
+    "array": {
+      "patterns": [
+        {
+          "name": "keyword.array.catalogue",
+          "match": "\\b(ARRAY)\\b"
+        }
+      ]
+    },
+    "override": {
+      "patterns": [
+        {
+          "name": "keyword.override.catalogue",
+          "match": "\\b(OVERRIDE)\\b"
+        }
+      ]
+    },
+    "string": {
+      "name": "string",
+      "patterns": [
+        {
+          "include": "#quote_string"
+        },
+
+        {
+          "include": "#single_quote_string"
+        }
+      ]
+    },
+    "quote_string": {
+      "name": "string.quoted.double.catalogue",
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.catalogue"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.catalogue"
+        }
+      },
+      "patterns": [
+        {
+          "match": "[^\"]"
+        },
+        {
+          "match": "\\\\.",
+          "name": "constant.character.escape.catalogue"
+        }
+      ]
+    },
+    "single_quote_string": {
+      "name": "string.quoted.single.catalogue",
+      "begin": "'",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.catalogue"
+        }
+      },
+      "end": "'",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.catalogue"
+        }
+      },
+      "patterns": [
+        {
+          "match": "[^']"
+        },
+        {
+          "match": "\\\\.",
+          "name": "constant.character.escape.catalogue"
+        }
+      ]
+    },
+    "literals": {
+      "patterns": [
+        {
+          "match": "'([^']|\\\\.)'",
+          "name": "string.unquoted.catalogue"
+        },
+        {
+          "match": "[-+]?[0-9]*\\.[0-9]+",
+          "name": "constant.numeric.float.catalogue"
+        },
+        {
+          "match": "[+-]?[0-9]+",
+          "name": "constant.numeric.catalogue"
+        }
+      ]
+    }
+  }
+}

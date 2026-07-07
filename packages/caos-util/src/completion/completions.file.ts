@@ -1,7 +1,7 @@
 import {CompletionItem, CompletionItemKind, Range} from "vscode-languageserver-types";
 import * as path from "path";
-import {filterByExtension, Nullable} from "@bedalton/extension-util";
-import {createQuotedCompletionItem} from "./completions.create";
+import {filterByExtension, Nullable, trimFileSchemePrefix} from "@creatures-lsp/extension-util";
+import {createQuotedCompletionItem} from "./completions.create.js";
 
 /**
  * Get CAOS2Pray filename completions
@@ -16,9 +16,10 @@ export function getFilenameCompletions(
     extensions: Nullable<string[]>,
     range: Range,
 ): CompletionItem[] {
+    directory = trimFileSchemePrefix(directory);
     const completionPaths = getFilenameCompletionPaths(directory, filesInProject, extensions);
     return completionPaths
-        .map(p => createQuotedCompletionItem(p, range, CompletionItemKind.Value));
+        .map(file => createQuotedCompletionItem(file, range, CompletionItemKind.Value));
 }
 
 export function getFilenameCompletionPaths(
@@ -26,9 +27,16 @@ export function getFilenameCompletionPaths(
     filesInProject: string[],
     extensions?: Nullable<string[]>
 ): string[] {
+    directory = trimFileSchemePrefix(directory);
     const filesFilteredByExtension = filterByExtension(filesInProject, extensions);
     // Compute relative paths
     return filesFilteredByExtension
-        .map(p => path.relative(directory, p))
-        .filter(p => p && p.length > 0);
+        .map(file => {
+            try {
+                return path.relative(directory, file);
+            } catch {
+                return null;
+            }
+        })
+        .filter(p => p != null && p.length > 0) as string[];
 }

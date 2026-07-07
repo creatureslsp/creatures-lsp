@@ -1,7 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {DocumentUri} from "vscode-languageserver";
-import {Nullable} from "@bedalton/extension-util";
+import type {DocumentUri} from "vscode-languageserver";
+import type {Nullable} from "@creatures-lsp/extension-util";
 
 export class WorkspaceScopedArray<T> {
     
@@ -78,7 +78,7 @@ export class WorkspaceScopedArray<T> {
      * @param values
      */
     unshift(workspaceUri: DocumentUri, ...values: T[]) {
-        return this.getNotUndefinedCreatingIfUndefined(workspaceUri,)
+        return this.getNotUndefinedCreatingIfUndefined(workspaceUri)
             .unshift(...values)
     }
     

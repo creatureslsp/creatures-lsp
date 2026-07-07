@@ -1,21 +1,48 @@
-import {collectors, com, CommandCall, GameVariant, IParserItem, ParseResult, Script} from "./caos-util";
+// noinspection JSUnusedGlobalSymbols
+
+import {
+    TypeTokens,
+    CaosParserItem,
+    CaosScript,
+} from "@creatures-lsp/caos-kt/caos-core";
+import {
+    parseCaos,
+} from "@creatures-lsp/caos-kt/caos-parser";
+import type {
+    GameVariant,
+} from "@creatures-lsp/caos-kt";
+import type {
+    CaosParseResult,
+    CommandCall,
+} from "@creatures-lsp/caos-kt/caos-parser";
+
 import {DocumentSymbol, Range, SymbolKind} from "vscode-languageserver-types";
-import {getSubroutines} from "./subroutines";
-import {rangesIntersect} from "@bedalton/extension-util";
-import TypeTokens = com.bedalton.creatures.caos.libs.TypeTokens;
+import {getSubroutines} from "./subroutines.js";
+import {Nullable, rangesIntersect} from "@creatures-lsp/extension-util";
 
 
-export function getCaosDocumentSymbols(variant: GameVariant, text: string): DocumentSymbol[] {
-    const parseResult = collectors.parseCaos(variant, text);
-    return getDocumentSymbolsFromParseResult(parseResult);
+export function getCaosScriptDocumentSymbols(variant: GameVariant, text: string): DocumentSymbol[] {
+    const parseResult = parseCaos(variant, text);
+    return getCaosScriptDocumentSymbolsFromCaosParseResult(parseResult);
 }
 
 
-export function getDocumentSymbolsFromParseResult(parseResult: ParseResult): DocumentSymbol[] {
+export function getCaosScriptDocumentSymbolsFromCaosParseResult(parseResult: CaosParseResult): DocumentSymbol[] {
     const scripts = parseResult.scripts;
     const commands = parseResult.commandCalls;
     const out = [];
     for (const script of scripts) {
+        
+        const skip = script.items.filter(item => {
+            return item.typeToken !== TypeTokens.getInstance().COMMENT &&
+                item.typeToken !== TypeTokens.getInstance().CAOS2_COMMENT &&
+                item.typeToken !== TypeTokens.getInstance().SPACES &&
+                item.typeToken !== TypeTokens.getInstance().NEWLINE
+        }).length === 0;
+        
+        if (skip) {
+            continue
+        }
         
         const [name, range] = getScriptName(script);
         
@@ -30,15 +57,16 @@ export function getDocumentSymbolsFromParseResult(parseResult: ParseResult): Doc
             selectionRange: range,
             children: getSubroutineSymbols(script, commands),
         } satisfies DocumentSymbol
+        
         out.push(symbol);
     }
     return out;
 }
 
 
-function getSubroutineSymbols(script: Script, commands: CommandCall[]): DocumentSymbol[] {
+function getSubroutineSymbols(script: CaosScript, commands: CommandCall[]): DocumentSymbol[] {
     const subroutines = getSubroutines(script.items)
-        .map((s: IParserItem<any>) => {
+        .map((s: CaosParserItem) => {
             return {
                 /**
                  * The name of this symbol. Will be displayed in the user interface and therefore must not be
@@ -56,22 +84,22 @@ function getSubroutineSymbols(script: Script, commands: CommandCall[]): Document
                  */
                 range: commands.find(c => rangesIntersect(c.textRange, s.textRange))?.textRange ?? s.textRange,
                 /**
-                 * The range that should be selected and revealed when this symbol is being picked, e.g the name of a function.
+                 * The range that should be selected and revealed when this symbol is being picked, e.g. the name of a function.
                  * Must be contained by the `range`.
                  */
                 selectionRange: s.textRange
             } satisfies DocumentSymbol
         })
     subroutines.sort((a, b) => {
-      const aLower = a.name.toLowerCase();
-      const bLower = b.name.toLowerCase();
-      return aLower.localeCompare(bLower)
+        const aLower = a.name.toLowerCase();
+        const bLower = b.name.toLowerCase();
+        return aLower.localeCompare(bLower)
     });
     return subroutines;
 }
 
-function getScriptName(script: Script): [string, Range] {
-    let firstItemRange = script.items.length ? script.items[0].textRange : null;
+function getScriptName(script: CaosScript): [string, Range] {
+    let firstItemRange: Nullable<Range> = script.items.length ? script.items[0].textRange : null;
     if (firstItemRange == null) {
         firstItemRange = {
             start: script.textRange.start,
@@ -90,7 +118,7 @@ function getScriptName(script: Script): [string, Range] {
     }
 }
 
-function getEventScriptName(script: Script): [string, Range] {
+function getEventScriptName(script: CaosScript): [string, Range] {
     const items = script.items;
     if (items.length == 1) {
         return ["scrp", items[0].textRange];
@@ -101,12 +129,11 @@ function getEventScriptName(script: Script): [string, Range] {
     let end = items[0].textRange.end;
     for (let i = 1; i < max; i++) {
         const item = script.items[i];
-        if (item.typeToken !== TypeTokens.INT) {
+        if (item.typeToken !== TypeTokens.getInstance().INT) {
             break;
         }
         out += " " + item.value;
-        let end = item.textRange.end;
-        
+        end = item.textRange.end;
     }
     const range = {
         start,

@@ -1,9 +1,10 @@
-import {DocumentUri, Position, Range} from "vscode-languageserver";
-import {CommandIndex, IndexedItemLocation} from "./indices";
-import {getFileName, Nullable} from "@bedalton/extension-util";
-import {CommandCall, ParserItem} from "@bedalton/caos-util";
-import {Is} from "@bedalton/caos-util/is";
-import {indexFilterDoNotDelete} from "./index.utils";
+import type {DocumentUri, Position, Range} from "vscode-languageserver";
+import type {CommandIndex, IndexedItemLocation} from "./indices.js";
+import type {Nullable} from "@creatures-lsp/extension-util";
+import type {C2eStringVal} from "@creatures-lsp/caos-kt/caos-core";
+import type {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import {Is} from "@creatures-lsp/caos-util";
+import {indexFilterDoNotDelete} from "./index.utils.js";
 
 
 const _workspaceIndices: { [workspace: string]: WorkspaceJournalNames } = {};
@@ -20,7 +21,7 @@ class WorkspaceJournalNames {
      * @param commandCall
      */
     indexCommand(documentUri: DocumentUri, commandCall: CommandCall) {
-        switch (commandCall.command.command?.toUpperCase()) {
+        switch (commandCall.commandString.toUpperCase()) {
             case "FILE OOPE":
             case "FILE IOPE":
             case "FILE JDEL":
@@ -77,33 +78,26 @@ class WorkspaceJournalNames {
      * @private
      */
     private _index(documentUri: string, call: CommandCall,) {
-        const args = call.commandArguments ?? [];
+        const args = call.arguments ?? [];
         
         if (args.length < 2) {
-            const argNames = args.map((a) => a.text).join(", ");
-            if (argNames.length > 0) {
-                console.log("Not enough arguments for command; Args: [" + argNames + "]");
-            } else {
-                console.log("Not enough arguments for command; ", JSON.stringify(call, null, 2));
-            }
             return;
         }
         
-        const directoryParserItem = args[0].parserItem;
-        if (directoryParserItem == null || !Is.intVal(directoryParserItem)) {
-            console.log("Directory type int is not an int literal. Found: " + args[0].text);
+        const directoryCaosParserItem = args[0].parserItem;
+        if (directoryCaosParserItem == null || !Is.intVal(directoryCaosParserItem)) {
             return;
         }
         
-        const directoryInt = directoryParserItem.value;
+        const directoryInt = directoryCaosParserItem.value;
         const index = this.getJournalForDirectory(directoryInt);
         
-        const journalNameParserItem = args[1].parserItem;
-        if (!Is.c2eStringVal(journalNameParserItem)) {
+        const journalNameCaosParserItem = args[1].parserItem;
+        if (!Is.c2eStringVal(journalNameCaosParserItem)) {
             return;
         }
-        index.pushUsage(documentUri, journalNameParserItem);
-        index.pushJournalName(journalNameParserItem.value);
+        index.pushUsage(documentUri, journalNameCaosParserItem);
+        index.pushJournalName(journalNameCaosParserItem.value);
     }
     
     /**
@@ -189,32 +183,32 @@ class JournalFileNamesIndex implements CommandIndex {
     
     /**
      * Attempts to index this journal command
-     * @param documentUri
-     * @param call
      * @private
+     * @param _documentUri
+     * @param _call
      */
-    private _index(documentUri: string, call: CommandCall,) {
+    private _index(_documentUri: string, _call: CommandCall,) {
         
         throw new Error("JournalFileNamesIndex._index should not be called as index");
-        // const args = call.commandArguments ?? [];
+        // const args = call.arguments ?? [];
         // if (args.length < 2) {
         //     return;
         // }
-        // const directoryParserItem = args[0];
-        // if (directoryParserItem == null || !Is.intVal(directoryParserItem)) {
+        // const directoryCaosParserItem = args[0];
+        // if (directoryCaosParserItem == null || !Is.intVal(directoryCaosParserItem)) {
         //     return;
         // }
-        // const directoryInt = directoryParserItem.value;
+        // const directoryInt = directoryCaosParserItem.value;
         // if (directoryInt !== this.directoryInt) {
         //     return;
         // }
         //
-        // const journalNameParserItem = args[1];
-        // if (!Is.c2eStringVal(journalNameParserItem)) {
+        // const journalNameCaosParserItem = args[1];
+        // if (!Is.c2eStringVal(journalNameCaosParserItem)) {
         //     return;
         // }
-        // this.pushUsage(documentUri, journalNameParserItem);
-        // this.pushJournalName(journalNameParserItem.value);
+        // this.pushUsage(documentUri, journalNameCaosParserItem);
+        // this.pushJournalName(journalNameCaosParserItem.value);
     }
     
     /**
@@ -280,20 +274,20 @@ class JournalFileNamesIndex implements CommandIndex {
     /**
      * Add command usage to index, including location reference
      * @param documentUri parent document
-     * @param journalNameParserItem the journal name AST c2e string node
+     * @param journalNameCaosParserItem the journal name AST c2e string node
      * @private
      */
-    pushUsage(documentUri: DocumentUri, journalNameParserItem: ParserItem.C2eStringVal) {
-        let journalName = journalNameParserItem.value;
+    pushUsage(documentUri: DocumentUri, journalNameCaosParserItem: C2eStringVal) {
+        let journalName = journalNameCaosParserItem.value;
         if (journalName.startsWith('"') && journalName.endsWith('"')) {
             journalName = journalName.substring(1, journalName.length - 1);
         }
         
-        this.clearAt(documentUri, journalNameParserItem.textRange.start);
+        this.clearAt(documentUri, journalNameCaosParserItem.textRange.start);
         
         const location = {
             documentUri: documentUri,
-            range: journalNameParserItem.textRange,
+            range: journalNameCaosParserItem.textRange,
             text: journalName,
         } satisfies IndexedItemLocation;
         
@@ -342,13 +336,15 @@ class JournalFileNamesIndex implements CommandIndex {
     
 }
 
-export function indexJournalNames(
+export function indexJournalNamesInDocument(
     workspaceUri: DocumentUri,
     documentUri: DocumentUri,
-    commandCall: CommandCall,
+    commandCalls: CommandCall[],
 ) {
-    getWorkspaceJournalFileNamesIndex(workspaceUri)
-        .indexCommand(documentUri, commandCall);
+    const index = getWorkspaceJournalFileNamesIndex(workspaceUri)
+    for (const commandCall of commandCalls) {
+        index.indexCommand(documentUri, commandCall);
+    }
 }
 
 export function getJournalFileNames(workspaceUri: DocumentUri, directoryTypeInt: number): string[] {
@@ -376,6 +372,6 @@ function getWorkspaceJournalFileNamesIndex(workspaceUri: string): WorkspaceJourn
     return index;
 }
 
-export function deleteWorkspaceNamedVariableIndex(workspaceUri: string): void {
+export function deleteWorkspaceJournalNameIndex(workspaceUri: string): void {
     delete _workspaceIndices[workspaceUri.toLowerCase()];
 }

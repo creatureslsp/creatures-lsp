@@ -1,48 +1,80 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {formatCommandStringAsMarkdown} from "./documentation-formattter";
-import {semanticLegend, SemanticTokenModifiers, SemanticTokensMap, SemanticTokensTypes} from "./semantics-legend";
+import {formatCommandStringAsMarkdown} from "./documentation-formattter.js";
+import {semanticLegend, SemanticTokenModifiers, SemanticTokensMap, SemanticTokensTypes} from "./semantics-legend.js";
+import type {GameVariant} from "@creatures-lsp/caos-kt";
+import {type Commands,} from "@creatures-lsp/caos-kt/caos-libs";
 import {
-    Argument,
-    collectors,
-    CommandCall as ICommandCall,
-    Commands,
-    GameVariant,
-    ICaosContextListener,
-    ICaosParameter,
-    IParserItem,
-    ParseResult,
-    ParserItem,
-} from "./caos-util";
+    type Argument,
+    type CaosParseResult,
+    type CommandCall,
+    parseCaosWithin,
+    parseCaos,
+} from "@creatures-lsp/caos-kt/caos-parser";
+
 import {
-    CancellationToken,
-    Nullable,
-    offsetRange,
-    RangeWithIndex,
-} from "@bedalton/extension-util"
+    type CancellationToken,
+    type Nullable,
+    type RangeWithIndex,
+    offsetVsRange,
+} from "@creatures-lsp/extension-util";
+
 import {
     AGENT_TYPE_ID,
     ANIMATION_TYPE_ID,
+    BRACKET_STRING_PARSER_TYPE,
+    BYTE_STRING_PARSER_TYPE,
     BYTE_STRING_TYPE_ID,
-    C1_STRING_TYPE_ID,
-    COMMAND_TYPE_ID,
+    COMMAND_TYPE_COMMAND_ID,
+    COMMAND_TYPE_LVALUE_ID,
+    COMMAND_TYPE_RVALUE_ID,
     FLOAT_TYPE_ID,
     HEXADECIMAL_TYPE_ID,
     INT_TYPE_ID,
+    QUOTE_STRING_PARSER_TYPE,
     STRING_TYPE_ID,
-    tok,
     TOKEN_TYPE_ID,
     VARIABLE_TYPE_ID
-} from "./constants";
-import {Range, SemanticTokens, SemanticTokensLegend, uinteger} from "vscode-languageserver-types";
-import {getCommands} from "./commands";
-import {walkParseResult} from "./context-walker";
-import {isOfficialTag} from "./caos2/caos2pray-definitions";
-import {Is} from "./is-util";
+} from "./constants.js";
 
-const parseCaosWithin = collectors.parseCaosWithin;
-const parseCaos = collectors.parseCaos;
-import Caos2Comment = ParserItem.Caos2Comment;
+import {tok} from "./token-utils.js";
+
+import type {
+    Position,
+    Range,
+    SemanticTokens,
+    SemanticTokensLegend,
+    uinteger
+} from "vscode-languageserver-types";
+
+import {getCommands} from "./commands.js";
+import type {
+    AutocompleteHint,
+    BinaryVal,
+    ByteString,
+    C1eStringVal,
+    C2eStringVal,
+    Caos2Comment,
+    CharVal,
+    CommandToken,
+    DdePictVal,
+    EqJoinVal,
+    EqOpVal,
+    FloatVal,
+    IndexedVarVal,
+    IntVal,
+    TokenVal,
+    Comment,
+    CaosParserItem
+} from "@creatures-lsp/caos-kt/caos-core";
+import {
+    type ICaosContextListener,
+    walkCaosParseResult
+} from "./context-walker.js";
+
+import {isOfficialTag} from "./caos2/caos2pray-definitions.js";
+
+import {Is} from "./is-util.js";
 
 
 /**
@@ -55,10 +87,10 @@ export class RequestCancelledException extends Error {
 /**
  * Converts a Kotlin range into a valid semantic token range
  * @param range
- * @param expandEnd
+ * @param offsetStart
  */
-function toSemanticRange(range: RangeWithIndex, expandEnd: boolean = false): RangeWithIndex {
-    return offsetRange(range, 0, 0, expandEnd ? 1 : 0);
+function toSemanticRange(range: Range, offsetStart: boolean = true): Range {
+    return offsetVsRange(range, 0, offsetStart && range.start.character !== 0 ? 1 : 0, 0, 1);
 }
 
 /**
@@ -76,7 +108,7 @@ export class SemanticTokensWalker implements ICaosContextListener {
         this.caosLib = caosLib;
         variant = variant.toUpperCase() as GameVariant;
         this.variant = variant;
-        this.isC1e = variant === "C1" || variant === "C2"
+        this.isC1e = variant === "C1" || variant === "C2";
         this.isC2e = variant !== "C1" && variant !== "C2";
         this.checkCancelled = this.setCancellationToken(cancellationToken);
     }
@@ -84,111 +116,131 @@ export class SemanticTokensWalker implements ICaosContextListener {
     setCancellationToken(cancellationToken?: CancellationToken): () => void {
         return this.checkCancelled = cancellationToken != null ? (() => {
             if (cancellationToken.isCancellationRequested) {
-                throw new RequestCancelledException()
+                throw new RequestCancelledException();
             }
         }) : (() => {
         });
     }
     
-    onInt(_token: ParserItem.IntVal) {
+    onInt(_token: IntVal) {
     }
     
-    onBinary(_token: ParserItem.BinaryVal) {
+    onBinary(_token: BinaryVal) {
     }
     
-    onChar(_token: ParserItem.CharVal) {
+    onChar(_token: CharVal) {
     }
     
-    onFloat(_token: ParserItem.FloatVal) {
+    onFloat(_token: FloatVal) {
     }
     
-    onByteString(_token: ParserItem.ByteString) {
+    onByteString(_token: ByteString) {
         // byte string needs context for colorization
         // Will be altered in onCommandCall
     }
     
-    onC1eString(token: ParserItem.C1eStringVal) {
-        this.tokens.push({
-            range: toSemanticRange(token.textRange),
-            tokenType: SemanticTokensTypes.STRING_TOKEN,
-            modifiers: [SemanticTokenModifiers.C1_STRING_MODIFIER_TOKEN]
-        })
+    onC1eString(token: C1eStringVal) {
+        // this.tokens.push({
+        //     range: toSemanticRange(token.textRange),
+        //     tokenType: SemanticTokensTypes.STRING_TOKEN,
+        //     modifiers: [SemanticTokenModifiers.C1_STRING_MODIFIER_TOKEN]
+        // })
     }
     
-    onC2eString(token: ParserItem.C2eStringVal) {
-        this.tokens.push({
-            range: toSemanticRange(token.textRange),
-            tokenType: SemanticTokensTypes.STRING_TOKEN,
-            modifiers: [SemanticTokenModifiers.QUOTE_STRING_MODIFIER_TOKEN]
-        })
+    onC2eString(token: C2eStringVal) {
+        // this.tokens.push({
+        //     range: toSemanticRange(token.textRange, true),
+        //     tokenType: SemanticTokensTypes.STRING_TOKEN,
+        //     modifiers: [SemanticTokenModifiers.QUOTE_STRING_MODIFIER_TOKEN]
+        // })
     }
     
-    onAnyString(_token: ParserItem.C1eStringVal | ParserItem.C2eStringVal) {
+    onAnyString(_token: C1eStringVal | C2eStringVal) {
     }
     
-    onPictDimension(token: ParserItem.DdePictVal) {
+    onPictDimension(token: DdePictVal) {
         const tokenWithDescription: SemanticToken = {
             range: toSemanticRange(token.textRange),
             tokenType: SemanticTokensTypes.DDE_PICT_TOKEN,
             modifiers: [],
-            description: "Pict Dimension" + token.value.first + "x" + token.value.second
-        }
-        this.tokens.push(tokenWithDescription)
+            description: "Pict Dimension" + token.value.first + "x" + token.value.second,
+            tokenLength: token.textRange.endIndex - token.textRange.startIndex + 1,
+        };
+        this.tokens.push(tokenWithDescription);
     }
     
-    onCommandToken(_token: ParserItem.CommandToken) {
+    onCommandToken(_token: CommandToken) {
         this.checkCancelled();
     }
     
-    onToken(_token: ParserItem.TokenVal) {
+    onToken(_token: TokenVal) {
     
     }
     
-    onEqOp(_token: ParserItem.EqOp) {
+    onEqOp(_token: EqOpVal) {
     
     }
     
-    onEqJoin(token: ParserItem.EqJoin) {
+    onEqJoin(token: EqJoinVal) {
         this.tokens.push({
             range: toSemanticRange(token.textRange),
             tokenType: SemanticTokensTypes.EQ_JOIN_TOKEN,
-            modifiers: []
+            modifiers: [],
+            tokenLength: token.textRange.endIndex - token.textRange.startIndex + 1,
         });
     }
     
-    onIndexedVar(token: ParserItem.IndexedVar) {
+    onIndexedVar(token: IndexedVarVal) {
         let description: string;
         let modifier: string;
         switch (token.indexedVarType.toUpperCase()) {
             case "VARX":
             case "VAXX":
                 description = "Event variable";
-                modifier = SemanticTokenModifiers.VAXX_MODIFIER_TOKEN
+                modifier = SemanticTokenModifiers.VAXX_MODIFIER_TOKEN;
                 break;
             case "OBVX":
             case "OVXX":
                 description = "TARG object variable";
-                modifier = SemanticTokenModifiers.OVXX_MODIFIER_TOKEN
+                modifier = SemanticTokenModifiers.OVXX_MODIFIER_TOKEN;
                 break;
             case "MVXX":
                 description = "OWNR object variable";
-                modifier = SemanticTokenModifiers.MVXX_MODIFIER_TOKEN
+                modifier = SemanticTokenModifiers.MVXX_MODIFIER_TOKEN;
                 break;
             default:
                 throw new Error("Unexpected variable type: '" + token.indexedVarType + "' encountered");
         }
-        pushToken(this.tokens, toSemanticRange(token.textRange), SemanticTokensTypes.VARIABLE_TOKEN, [modifier], formatCommandStringAsMarkdown(token.indexedVarType, description));
+        pushToken(
+            this.tokens,
+            toSemanticRange(token.textRange),
+            SemanticTokensTypes.VARIABLE_TOKEN,
+            [modifier],
+            token.textRange.endIndex - token.textRange.startIndex + 1,
+            formatCommandStringAsMarkdown(token.indexedVarType, description)
+        );
     }
     
-    onCommandCall(call: ICommandCall) {
+    onCommandCall(call: CommandCall) {
         this.checkCancelled();
         addCommandTokenDecorations(this.tokens, call);
         addTokensFromCall(this.tokens, call);
-        addBracketStringDecorations(this.tokens, call);
+        try {
+            addStringDecorations(this.tokens, call);
+        } catch (e) {
+            const error = e instanceof Error ? e.message + "\n" + e.stack : e;
+            console.error("Failed to get string decorations; " + error);
+        }
     }
     
-    onPlaceholderText(token: ParserItem.AutocompleteHint) {
-        pushToken(this.tokens, toSemanticRange(token.textRange), SemanticTokensTypes.PLACEHOLDER_TEXT, []);
+    onPlaceholderText(token: AutocompleteHint) {
+        pushToken(
+            this.tokens,
+            toSemanticRange(token.textRange),
+            SemanticTokensTypes.PLACEHOLDER_TEXT,
+            [],
+            token.textRange.endIndex - token.textRange.startIndex + 1
+        );
     }
     
     onCaos2Comment(token: Caos2Comment): void {
@@ -221,7 +273,8 @@ export class SemanticTokensWalker implements ICaosContextListener {
         this.tokens.push({
             range: toSemanticRange(range),
             tokenType: SemanticTokensTypes.CAOS2PRAY_TAG,
-            modifiers
+            modifiers,
+            tokenLength: token.textRange.endIndex - token.textRange.startIndex + 1
         });
     }
     
@@ -229,7 +282,7 @@ export class SemanticTokensWalker implements ICaosContextListener {
     
     }
     
-    onComment(_token: IParserItem<any>): void {
+    onComment(_token: CaosParserItem): void {
     }
 }
 
@@ -244,13 +297,13 @@ function getTypeModifierTokens(type: number): string[] {
             return [
                 // SemanticTokenModifiers.RETURNS_INT,
                 SemanticTokenModifiers.RETURNS_NUMBER
-            ]
+            ];
         
         case FLOAT_TYPE_ID:
             return [
                 // SemanticTokenModifiers.RETURNS_FLOAT,
                 SemanticTokenModifiers.RETURNS_NUMBER
-            ]
+            ];
         case STRING_TYPE_ID:
             return [
                 SemanticTokenModifiers.RETURNS_STRING
@@ -266,7 +319,7 @@ function getTypeModifierTokens(type: number): string[] {
         case HEXADECIMAL_TYPE_ID:
             return [
                 SemanticTokenModifiers.RETURNS_STRING
-            ]
+            ];
         default:
             return [];
     }
@@ -275,34 +328,35 @@ function getTypeModifierTokens(type: number): string[] {
 /**
  * Cached int token value for `new:`
  */
-const NEW_TOK = tok('new:');
+const NEW_TOK = tok("new:");
 
 /**
  * List of control keywords
  */
 const keywords = [
-    tok('scrp'),
-    tok('iscr'),
-    tok('rscr'),
-    tok('doif'),
-    tok('elif'),
-    tok('endi'),
-    tok('reps'),
-    tok('repe'),
-    tok('loop'),
-    tok('untl'),
-    tok('ever'),
-    tok('enum'),
-    tok('etch'),
-    tok('esee'),
-    tok('epas'),
-    tok('econ'),
-    tok('next'),
-    tok('escn'),
-    tok('nscn'),
-    tok('subr'),
-    tok('retn'),
-    tok('{eq}')
+    tok("scrp"),
+    tok("iscr"),
+    tok("rscr"),
+    tok("doif"),
+    tok("elif"),
+    tok("endi"),
+    tok("reps"),
+    tok("repe"),
+    tok("loop"),
+    tok("untl"),
+    tok("ever"),
+    tok("enum"),
+    tok("etch"),
+    tok("esee"),
+    tok("epas"),
+    tok("econ"),
+    tok("elst"),
+    tok("next"),
+    tok("escn"),
+    tok("nscn"),
+    tok("subr"),
+    tok("retn"),
+    tok("{eq}")
 ];
 
 
@@ -311,34 +365,45 @@ const keywords = [
  * @param tokens
  * @param context
  */
-function addCommandTokenDecorations(tokens: SemanticToken[], context: ICommandCall) {
-    context.tokenTextRange
-    let commandDescription: Nullable<string> = undefined;
-    const command = context.command;
+function addCommandTokenDecorations(tokens: SemanticToken[], context: CommandCall) {
+    let commandDescription: Nullable<string> = null;
+    const command = context.commandString;
+    const commandReturnType = context.expectType;
     if (command == null) {
         return;
     }
     
-    const token = command.command.length === 4 ? tok(command.command.toLowerCase()) : null;
+    const token = command.length === 4 ? tok(command.toLowerCase()) : null;
     if (token != null && keywords.indexOf(token) >= 0) {
         return;
     }
     
     // commandDescription = formatCaosDocumentation(variant, command);
-    const modifierTokens = (tok(command.command.substring(0, 4)) === NEW_TOK) ? [SemanticTokenModifiers.AGENT_CONSTRUCTOR] : getTypeModifierTokens(command.returnTypeId);
-    const commandTypeDecoration = context.type === COMMAND_TYPE_ID ? SemanticTokensTypes.COMMAND_TOKEN : (context.type != VARIABLE_TYPE_ID ? SemanticTokensTypes.RVALUE_TOKEN : SemanticTokensTypes.LVALUE_TOKEN);
+    const modifierTokens = (tok(command.substring(0, 4)) === NEW_TOK) ? [SemanticTokenModifiers.AGENT_CONSTRUCTOR] : getTypeModifierTokens(commandReturnType);
+    let commandTypeDecoration = null;
+    if (context.callTypeId === COMMAND_TYPE_COMMAND_ID) {
+        commandTypeDecoration = SemanticTokensTypes.COMMAND_TOKEN;
+    } else if (context.callTypeId === COMMAND_TYPE_LVALUE_ID) {
+        commandTypeDecoration = SemanticTokensTypes.LVALUE_TOKEN;
+    } else if (context.callTypeId === COMMAND_TYPE_RVALUE_ID) {
+        commandTypeDecoration = SemanticTokensTypes.RVALUE_TOKEN;
+    } else {
+        console.log("Unknown command call type: " + context.callTypeId);
+        return;
+    }
+    
     switch (context.tokens.length) {
         case 3:
-            pushToken(tokens, toSemanticRange(context.tokens[0].textRange!!), commandTypeDecoration, [SemanticTokenModifiers.COMMAND_PREFIX, ...modifierTokens], commandDescription);
-            pushToken(tokens, toSemanticRange(context.tokens[1].textRange!!), commandTypeDecoration, modifierTokens, commandDescription);
-            pushToken(tokens, toSemanticRange(context.tokens[2].textRange!!), commandTypeDecoration, [SemanticTokenModifiers.COMMAND_SUFFIX, ...modifierTokens], commandDescription);
+            pushToken(tokens, toSemanticRange(context.tokens[0].textRange!!), commandTypeDecoration, [SemanticTokenModifiers.COMMAND_PREFIX, ...modifierTokens], context.tokens[0].textRange.endIndex - context.tokens[0].textRange.startIndex + 1, commandDescription);
+            pushToken(tokens, toSemanticRange(context.tokens[1].textRange!!), commandTypeDecoration, modifierTokens, context.tokens[1].textRange.endIndex - context.tokens[1].textRange.startIndex + 1, commandDescription);
+            pushToken(tokens, toSemanticRange(context.tokens[2].textRange!!), commandTypeDecoration, [SemanticTokenModifiers.COMMAND_SUFFIX, ...modifierTokens], context.tokens[2].textRange.endIndex - context.tokens[2].textRange.startIndex + 1, commandDescription);
             break;
         case 2:
-            pushToken(tokens, toSemanticRange(context.tokens[0].textRange!!), commandTypeDecoration, [SemanticTokenModifiers.COMMAND_PREFIX, ...modifierTokens], commandDescription);
-            pushToken(tokens, toSemanticRange(context.tokens[1].textRange!!), commandTypeDecoration, modifierTokens, commandDescription);
+            pushToken(tokens, toSemanticRange(context.tokens[0].textRange!!), commandTypeDecoration, [SemanticTokenModifiers.COMMAND_PREFIX, ...modifierTokens], context.tokens[0].textRange.endIndex - context.tokens[0].textRange.startIndex + 1, commandDescription);
+            pushToken(tokens, toSemanticRange(context.tokens[1].textRange!!), commandTypeDecoration, modifierTokens, context.tokens[1].textRange.endIndex - context.tokens[1].textRange.startIndex + 1, commandDescription);
             break;
         case 1:
-            pushToken(tokens, toSemanticRange(context.tokens[0].textRange!!), commandTypeDecoration, modifierTokens, commandDescription);
+            pushToken(tokens, toSemanticRange(context.tokens[0].textRange!!), commandTypeDecoration, modifierTokens, context.tokens[0].textRange.endIndex - context.tokens[0].textRange.startIndex + 1, commandDescription);
             break;
     }
 }
@@ -349,36 +414,171 @@ function addCommandTokenDecorations(tokens: SemanticToken[], context: ICommandCa
  * @param tokens
  * @param call
  */
-function addBracketStringDecorations(tokens: SemanticToken[], call: ICommandCall) {
-    const stringParameters = call.command.parameters.filter((p:ICaosParameter) => {
-        const type = p.typeId
-        return type === BYTE_STRING_TYPE_ID || type === ANIMATION_TYPE_ID || type === C1_STRING_TYPE_ID
+function addStringDecorations(tokens: SemanticToken[], call: CommandCall) {
+    const stringArguments = call.arguments.filter((a: Argument) => {
+        const typeToken = a.parserItem?.typeToken;
+        return typeToken === QUOTE_STRING_PARSER_TYPE || typeToken === BYTE_STRING_PARSER_TYPE || typeToken === BRACKET_STRING_PARSER_TYPE;
     });
-    const args = call.commandArguments;
-    for (let parameter of stringParameters) {
-        if (args.length <= parameter.index) {
+    const args = call.arguments;
+    for (let argument of stringArguments) {
+        const isAnimation = argument.type === ANIMATION_TYPE_ID || argument.type === BYTE_STRING_TYPE_ID;
+        const typeId = isAnimation ? BYTE_STRING_TYPE_ID : argument.parserItem?.typeToken;
+        const text = argument.text;
+        if (text == null) {
+            console.log(
+                "Argument is missing text parameter; Keys: ",
+                Object.keys(argument)
+            );
             continue;
         }
-        const range = toSemanticRange(args[parameter.index]?.textRange);
-        if (range == null) {
-            continue;
-        }
-        if (parameter.typeId == C1_STRING_TYPE_ID) {
+        if (typeId == BRACKET_STRING_PARSER_TYPE || (typeId == QUOTE_STRING_PARSER_TYPE && text.length && text[0] === "[")) {
             tokens.push({
-                range: range,
+                range: toSemanticRange(argument.textRange),
                 tokenType: SemanticTokensTypes.STRING_TOKEN,
-                modifiers: [SemanticTokenModifiers.C1_STRING_MODIFIER_TOKEN]
-            })
-        } else {
-            tokens.push({
-                range: range,
-                tokenType: SemanticTokensTypes.STRING_TOKEN,
-                modifiers: [SemanticTokenModifiers.BYTE_STRING_MODIFIER_TOKEN]
-            })
+                modifiers: [],
+                tokenLength: argument.textRange.endIndex - argument.textRange.startIndex + 1
+            });
+        } else if (typeId == QUOTE_STRING_PARSER_TYPE) {
+            expandStringComponents(
+                tokens,
+                argument.text,
+                argument?.textRange,
+                SemanticTokenModifiers.QUOTE_STRING_MODIFIER_TOKEN,
+                /(\\.)/,
+                null,
+                SemanticTokensTypes.STRING_ESCAPE_CHARACTER
+            );
+        } else if (typeId === ANIMATION_TYPE_ID || typeId === BYTE_STRING_TYPE_ID) {
+            expandStringComponents(
+                tokens,
+                argument.text,
+                argument?.textRange,
+                SemanticTokenModifiers.BYTE_STRING_MODIFIER_TOKEN,
+                /(\d+)|([Rr])$/,
+                null,
+                [SemanticTokensTypes.NUMBER, SemanticTokensTypes.STRING_ESCAPE_CHARACTER],
+            );
         }
+    }
+    
+    function expandStringComponents(tokens: SemanticToken[], text: string, range: RangeWithIndex, baseModifier: string, regex: RegExp, capturedModifier: Nullable<string | string[]>, capturedType: Nullable<string | string[]> = null) {
+        let start: Position = {
+            line: range.start.line,
+            character: range.start.character
+        } satisfies Position;
+        let match = text.match(regex);
+        if (match == null) {
+            tokens.push({
+                range: toSemanticRange(range),
+                tokenType: SemanticTokensTypes.STRING_TOKEN,
+                modifiers: [baseModifier],
+                tokenLength: range.endIndex - range.startIndex + 1
+            });
+        }
+        
+        let lastIndex = 0;
+        
+        while (match != null) {
+            
+            if (match.index == null) {
+                continue;
+            }
+            
+            let index = 0;
+            
+            for (let i = 0; i < match.length; i++) {
+                if (typeof match[i] === "string") {
+                    index = i;
+                    break;
+                }
+            }
+            
+            const modifier = Array.isArray(capturedModifier)
+                ? typeof capturedModifier[index] !== "undefined" ? capturedModifier[index] : capturedModifier[0]
+                : capturedModifier;
+            
+            const type = Array.isArray(capturedType)
+                ? typeof capturedType[index] !== "undefined" ? capturedType[index] : capturedType[0]
+                : capturedType;
+            
+            
+            if (match.index !== 0) {
+                let newRange = getTextSliceRange(
+                    text,
+                    start,
+                    lastIndex,
+                    lastIndex + match.index
+                );
+                start = newRange.end;
+                
+                tokens.push({
+                    range: toSemanticRange(newRange),
+                    tokenType: SemanticTokensTypes.STRING_TOKEN,
+                    modifiers: [baseModifier],
+                    tokenLength: match.index
+                } satisfies SemanticToken);
+            }
+            
+            const startIndex = lastIndex + match.index;
+            const endIndex = startIndex + match[1].length;
+            const newRange = getTextSliceRange(
+                text,
+                start,
+                startIndex,
+                endIndex
+            );
+            
+            tokens.push({
+                range: toSemanticRange(newRange),
+                tokenType: type ?? SemanticTokensTypes.STRING_TOKEN,
+                modifiers: modifier != null ? [modifier] : [],
+                tokenLength: endIndex - startIndex
+            } satisfies SemanticToken);
+            
+            start = newRange.end;
+            lastIndex = endIndex;
+            
+            match = text.substring(lastIndex)
+                .match(regex);
+        }
+        
+        const startIndex = lastIndex;
+        const endIndex = text.length;
+        const length = endIndex - startIndex;
+        if (length) {
+            const newRange = getTextSliceRange(
+                text,
+                start,
+                startIndex,
+                endIndex
+            );
+            
+            tokens.push({
+                range: toSemanticRange(newRange),
+                tokenType: SemanticTokensTypes.STRING_TOKEN,
+                modifiers: [baseModifier],
+                tokenLength: text.length - lastIndex
+            } satisfies SemanticToken);
+        }
+        
     }
 }
 
+
+function getTextSliceRange(text: string, start: Position, startInString: number, endInString: number): Range {
+    const slicedText = text.substring(startInString, endInString);
+    const textLines = slicedText.split("\n");
+    const line = start.line + (textLines.length - 1);
+    const character = textLines.length === 1 ? start.character + slicedText.length : (textLines.pop()?.length ?? 0);
+    let end = {
+        line: line,
+        character: character
+    } satisfies Position;
+    return {
+        start,
+        end
+    };
+}
 
 /**
  * Adds semantic tokens to array for a command call
@@ -386,24 +586,21 @@ function addBracketStringDecorations(tokens: SemanticToken[], call: ICommandCall
  * @param tokens
  * @param call
  */
-function addTokensFromCall(tokens: SemanticToken[], call: ICommandCall) {
-    const tokenArguments = call.commandArguments.filter((p: Argument) => p.type == TOKEN_TYPE_ID)
+function addTokensFromCall(tokens: SemanticToken[], call: CommandCall) {
+    const tokenArguments = call.arguments.filter((p: Argument) => p.type == TOKEN_TYPE_ID);
     if (tokenArguments.length == 0) {
         return;
     }
     for (let token of tokenArguments) {
-        if (token?.parameter == null) {
-            continue;
-        }
         tokens.push({
             range: toSemanticRange(token.textRange),
             // Tokens in C1e can also be file names. These are represented as a string
-            tokenType: token.parameter.name.toLowerCase()
-                .startsWith('file') || token.parameter.name.startsWith('sprite') ?
-                SemanticTokensTypes.STRING_TOKEN :
-                SemanticTokensTypes.SUBROUTINE_NAME_TOKEN,
-            modifiers: []
-        })
+            tokenType: call.commandString !== "GSUB" && call.commandString !== "SUBR" && call.commandString !== "GOTO"
+                ? SemanticTokensTypes.STRING_TOKEN
+                : SemanticTokensTypes.SUBROUTINE_NAME_TOKEN,
+            modifiers: [],
+            tokenLength: token.textRange.endIndex - token.textRange.startIndex
+        });
     }
 }
 
@@ -413,9 +610,10 @@ function addTokensFromCall(tokens: SemanticToken[], call: ICommandCall) {
  * @param ctx the range of this semantic item
  * @param tag main token type
  * @param modifierTokens any semantic modifiers
+ * @param tokenLength
  * @param description
  */
-function pushToken(allTokens: SemanticToken[], ctx: RangeWithIndex, tag: string, modifierTokens: string[], description: Nullable<string> = undefined): boolean {
+function pushToken(allTokens: SemanticToken[], ctx: Range, tag: string, modifierTokens: string[], tokenLength: number, description: Nullable<string> = null): boolean {
     if (ctx.start?.line == null || ctx.start?.character == null || ctx.end?.line == null || ctx.end?.character == null) {
         return false;
     }
@@ -423,8 +621,9 @@ function pushToken(allTokens: SemanticToken[], ctx: RangeWithIndex, tag: string,
         range: ctx,
         tokenType: tag,
         modifiers: modifierTokens,
-        description: description
-    }
+        description: description,
+        tokenLength
+    };
     allTokens.push(token);
     return true;
 }
@@ -442,7 +641,7 @@ function getType(type: string): number {
  */
 /** @type {(modifier: string[]|string|null)=>number} */
 function getModifier(modifiers: string[] | string | null): number {
-    if (typeof modifiers === 'string') {
+    if (typeof modifiers === "string") {
         modifiers = [modifiers];
     }
     if (Array.isArray(modifiers)) {
@@ -478,10 +677,10 @@ function convertContext(tokens: SemanticToken[], blockRange?: Range): uinteger[]
             continue;
         }
         
-        const range: RangeWithIndex = token.range;
+        const range: Range = token.range;
         
         let modifier = token.modifiers.length > 0 ? getModifier(token.modifiers) : 0;
-        let tokenLength = (range.endIndex - range.startIndex) + 1;
+        let tokenLength = token.tokenLength;
         
         if (prevLine !== range.start.line) {
             prevChar = 0;
@@ -531,28 +730,28 @@ function convertContext(tokens: SemanticToken[], blockRange?: Range): uinteger[]
  * @param cancellationToken
  * @param range
  */
-export function getSemanticTokens(variant: GameVariant, text: string | ParseResult, cancellationToken?: CancellationToken, range?: Range): SemanticToken[] {
+export function getCaosSemanticTokens(variant: GameVariant, text: string | CaosParseResult, cancellationToken?: CancellationToken, range?: Range): SemanticToken[] {
     const lib = getCommands(variant);
     if (lib == null) {
         throw new Error("CaosLibs is null with variant: " + variant);
     }
     
     // Parse CAOS
-    let result: Nullable<ParseResult>;
+    let result: Nullable<CaosParseResult>;
     if (Is.parseResult(text)) {
         result = text;
     } else if (range != null) {
         result = parseCaosWithin(variant, text, range.start.line, range.start.character, range.end.line, range.end.character);
     } else {
-        result = parseCaos(variant, text)
+        result = parseCaos(variant, text);
     }
     if (result == null) {
-        throw new Error('Failed to parse CAOS for result');
+        throw new Error("Failed to parse CAOS for result");
     }
     
     const listener = new SemanticTokensWalker(variant, lib, cancellationToken);
     try {
-        walkParseResult(result, listener);
+        walkCaosParseResult(result, listener);
     } catch (e) {
         if (e instanceof RequestCancelledException) {
             return listener.tokens;
@@ -569,8 +768,8 @@ export function getSemanticTokens(variant: GameVariant, text: string | ParseResu
                 t.range.end.line > range.start.line ||
                 (t.range.start.line == range.start.line && t.range.start.character < t.range.start.character) ||
                 (t.range.end.line == range.end.line && t.range.start.character > t.range.end.character)
-            )
-        })
+            );
+        });
     }
     return tokens.sort((a: SemanticToken, b: SemanticToken) => {
         const aRange = a.range;
@@ -589,15 +788,15 @@ export function getSemanticTokens(variant: GameVariant, text: string | ParseResu
  * @param cancellationToken
  * @param range
  */
-export function getDocumentSemanticTokens(variant: GameVariant, text: string | ParseResult, cancellationToken?: CancellationToken, range?: Range): SemanticTokens {
-    const tokens = getSemanticTokens(variant, text, cancellationToken, range);
+export function getCaosDocumentSemanticTokens(variant: GameVariant, text: string | CaosParseResult, cancellationToken?: CancellationToken, range?: Range): SemanticTokens {
+    const tokens = getCaosSemanticTokens(variant, text, cancellationToken, range);
     return <SemanticTokens>{
         data: convertContext(tokens!, range)
     };
 }
 
 export function getSemanticTokensLegend(): SemanticTokensLegend {
-    return semanticLegend
+    return semanticLegend;
 }
 
 
@@ -608,7 +807,7 @@ export interface SemanticToken {
     /**
      * The range for this semantic token
      */
-    range: RangeWithIndex;
+    range: Range;
     
     /**
      * The semantic token type
@@ -624,4 +823,6 @@ export interface SemanticToken {
      * A description ( only used my Monaco )
      */
     description?: Nullable<string>;
+    
+    tokenLength: number;
 }

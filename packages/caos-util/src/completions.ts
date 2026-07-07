@@ -1,25 +1,58 @@
 // noinspection SpellCheckingInspection
-import {inRange, Nullable} from "@bedalton/extension-util"
-import {collectors, CommandCall, Commands, CursorData, GameVariant, ParseResult, ParserItem} from "./caos-util";
-import {CompletionItem, CompletionList, Position} from "vscode-languageserver-types";
-import {CAOS2_COMMENT_TYPE_ID} from "./constants";
-import {getCommands} from "./commands";
-import {Is} from "./is-util";
-import {getCaos2PrayCompletions} from "./completion/caos2/completions.caos2";
-import {getBitflagsOptionsProvider} from "./completion/completions.bitflags";
-import {getValuesListCompletions} from "./completion/completions.values-list-values";
-import {getCommandCompletions, getDumbCompletionItems} from "./completion/completion.command";
-import {getSubroutineCompletions} from "./completion/completions.subroutines";
-import Caos2Comment = ParserItem.Caos2Comment;
-import {drillDown} from "./drillDown";
+import {inRange, type Nullable, sortTextRanges, sortTextRangesReversed} from "@creatures-lsp/extension-util";
 
-const getCaos2PrayComments = collectors.getCaos2PrayComments;
-const {cancelComplete, inQuotes} = collectors;
+import type {
+    GameVariant,
+} from "@creatures-lsp/caos-kt";
 
-export * from "./completion/completion.namedVariables";
-export * from "./completion/completion.journal";
+import type {
+    Commands,
+} from "@creatures-lsp/caos-kt/caos-libs";
 
-export type NamedVarPrefix = 'game' | 'eame' | 'name' | 'mame';
+import {
+    type CaosParseResult,
+    parseCaosNear,
+    getCaos2PrayComments,
+    type CommandCall,
+} from "@creatures-lsp/caos-kt/caos-parser";
+
+import type {
+    Caos2Comment, CaosParserItem
+} from "@creatures-lsp/caos-kt/caos-core";
+
+import type {
+    CaosCompletionOptions,
+    CaosCompletionSettings
+} from "@creatures-lsp/caos-kt/caos-completion";
+
+import {
+    type CaosCursorData,
+    getCaosCursorPosition,
+    cancelComplete,
+    inQuotes
+} from "@creatures-lsp/caos-kt/caos-cursor-data";
+
+export type {
+    CaosCompletionSettings,
+    CaosCompletionOptions,
+} from "@creatures-lsp/caos-kt/caos-completion"
+
+import type {CompletionItem, CompletionList, Position} from "vscode-languageserver-types";
+import {CAOS2_COMMENT_TYPE_ID} from "./constants.js";
+import {getCommands} from "./commands.js";
+import {Is} from "./is-util.js";
+import {getCaos2PrayCompletions} from "./completion/caos2/completions.caos2.js";
+import {getBitflagsOptionsProvider} from "./completion/completions.bitflags.js";
+import {getValuesListCompletions} from "./completion/completions.values-list-values.js";
+import {getCommandCompletions, getDumbCompletionItems} from "./completion/completion.command.js";
+import {getSubroutineCompletions} from "./completion/completions.subroutines.js";
+import {getCommandBeneathCursor} from "./cursor-data.js";
+
+export * from "./completion/completion.namedVariables.js";
+export * from "./completion/completion.journal.js";
+export * from "./completion/completion.catalogue.js";
+
+export type NamedVarPrefix = "game" | "eame" | "name" | "mame";
 
 export const COMMAND_TYPE__COMMAND = 0;
 export const COMMAND_TYPE__RVALUE = 1;
@@ -32,35 +65,11 @@ export type VariantIndexed<T> = {
 
 export type VariantArray<T> = VariantIndexed<T[]>;
 
-
-export type CompletionSettings = {
-    readonly parameterInlayHints?: boolean;
-    readonly usePlaceholders?: boolean;
-    readonly dumbMode?: boolean,
-    readonly minimumParameterCount?: number
-}
-
-
-/**
- * Optional parameters for getCompletionItems
- * @see getCompletionItems
- */
-export type CompletionOptions = {
-    readonly cursorPointer?: { cursorData?: Nullable<CursorData>; commandString?: Nullable<string>; };
-    readonly getStringCompletions?: (cursorData: CursorData, commandCall: CommandCall) => CompletionItem[];
-    readonly parseNear?: boolean;
-    readonly keepGoing?: () => boolean;
-    readonly incomplete: boolean;
-    readonly directory: string;
-    readonly getFiles: (extensions?: Nullable<string[]>) => Promise<string[]>
-}
-
-
 export function createEmptyCompletionList(): CompletionList {
     return {
         isIncomplete: true,
         items: []
-    }
+    };
 }
 
 
@@ -77,43 +86,76 @@ export function createEmptyCompletionList(): CompletionList {
 export async function getCompletionItems(
     thisFileName: string,
     variant: GameVariant,
-    text: string | ParseResult,
+    text: string | CaosParseResult,
     position: Position,
-    opts: CompletionOptions,
-    completionSettings: Nullable<CompletionSettings> = undefined,
-    cursorPointer?: {cursor: Nullable<CursorData>},
+    opts: CaosCompletionOptions,
+    completionSettings: Nullable<CaosCompletionSettings> = null,
+    cursorPointer?: { cursor: Nullable<CaosCursorData> },
 ): Promise<CompletionList> {
     
-    const emptyCompletionList = createEmptyCompletionList()
+    let cursor: Nullable<CaosCursorData>;
     
-    let cursor: Nullable<CursorData>;
-    const parseResult = typeof text === "string" ? collectors.parseCaosNear(
+    const parseResult = typeof text === "string" ? parseCaosNear(
         variant,
         text,
         position.line,
         Math.max(position.character - 1, 0),
         opts?.incomplete ?? true,
-    ) : text as ParseResult;
+    ) : text as CaosParseResult;
     
-    cursor = collectors.getCursorPosition(
+    cursor = getCaosCursorPosition(
         parseResult,
         position.line,
         Math.max(position.character - 1, 0),
-        opts?.incomplete ?? true
+        opts?.incomplete ?? true,
+        true,
+    );
+    
+    if (cursorPointer) {
+        cursorPointer.cursor = cursor;
+    }
+    
+    return await getCompletionItemsWithParseResult(
+        thisFileName,
+        parseResult,
+        cursor,
+        position,
+        opts,
+        completionSettings,
     )
+}
+
+/**
+ * Get list of completion items for a given position in a CAOS document
+ * @param thisFileName
+ * @param parseResult
+ * @param cursor
+ * @param position
+ * @param completionSettings
+ * @param opts
+ */
+export async function getCompletionItemsWithParseResult(
+    thisFileName: string,
+    parseResult: CaosParseResult,
+    cursor: Nullable<CaosCursorData>,
+    position: Position,
+    opts: CaosCompletionOptions,
+    completionSettings: Nullable<CaosCompletionSettings> = null,
+): Promise<CompletionList> {
+    
+    const emptyCompletionList = createEmptyCompletionList();
     
     if (cursor == null) {
         return emptyCompletionList;
     }
     
-    if (cursorPointer) {
-        cursorPointer.cursor = cursor
-    }
+    const variant = parseResult.variant;
+    const text = parseResult.originalText;
+    const commandString = cursor.command?.command?.toLowerCase();
     
-    const commandString = cursor?.command?.command?.toLowerCase();
     
     // Get subroutine names if any near cursor
-    if (commandString === 'gsub') {
+    if (commandString === "gsub") {
         const subroutines = getSubroutineCompletions(variant, text, cursor);
         return {
             isIncomplete: false,
@@ -121,64 +163,39 @@ export async function getCompletionItems(
         };
     }
     
-    let caos2Comments: Caos2Comment[] = []
-    try {
-        if (Is.caos2Comment(cursor.closestItem)) {
-            const originalText = getOriginalText(text);
-            // Minumum length = 4 = <*#aa b|*#a=b
-            if (originalText != null && originalText.length >= 5) {
-                caos2Comments = getCaos2PrayComments(originalText);
-            }
-        }
-    } catch (e) {
-        console.error("Failed to get CAOS2 comments; ", e instanceof Error ? e.message : e);
-    }
-
-// Get all normal completions for cursor position
-    try {
-        let items = await getCompletionItemsWithCursorData(
-            thisFileName,
-            variant,
-            getCommands(variant),
-            cursor!!,
-            opts,
-            completionSettings,
-            caos2Comments
-        );
-        
-        // If C2e, get named variable completions if any or needed
-        if (opts?.getStringCompletions != null && cursor != null && cursor.command != null && cursor.closestItem != null) {
-            const parentCommandCall = parseResult.commandCalls
-                .find(call => inRange(call.textRange, position.line, Math.max(position.character - 1, 0)));
-            if (parentCommandCall != null) {
-                const commandCall = drillDown(variant, position, parentCommandCall) ?? parentCommandCall;
-                items = items.concat(opts.getStringCompletions(cursor, commandCall));
-            }
-        } else {
-            console.log("Not enough data for string completion", JSON.stringify(cursor, null, 2));
-        }
-        
-        const bitflagsCompletions = getBitflagsOptionsProvider(cursor);
-        
-        if (bitflagsCompletions) {
-            items = bitflagsCompletions;
-        }
-        
-        return <CompletionList>{
-            isIncomplete: true,
-            items: items
-        };
-    } catch (e) {
-        if (e instanceof Error) {
-            console.error("CompletionItems failed: " + e.message + "\n" + e.stack);
-        } else {
-            console.error("GetCompletionItems failed: " + e);
-        }
+    let caos2Comments: Caos2Comment[] = getCaos2PrayCommentsSafe(text, cursor);
+    
+    let items: Nullable<CompletionItem[]> = await getInitialCompletionItemsSafe(
+        thisFileName,
+        variant,
+        cursor,
+        caos2Comments,
+        completionSettings,
+        opts
+    )
+    
+    if (items == null) {
         return emptyCompletionList;
     }
+    
+    const hasClosestItemAndCommand = cursor.command != null && cursor.closestItem != null;
+    
+    // String completion
+    const canDoStringCompletions = hasClosestItemAndCommand && opts?.getStringCompletions != null;
+    if (canDoStringCompletions && !addStringCompletionsSafe(parseResult, cursor, position, opts, items)) {
+        return emptyCompletionList;
+    }
+    
+    // Bitflag Completion
+    if (!addBitflagCompletionsSafe(cursor, items)) {
+        return emptyCompletionList;
+    }
+    
+    return <CompletionList>{
+        isIncomplete: true,
+        items: items
+    };
 }
-
-
 
 
 /**
@@ -191,36 +208,35 @@ export async function getCompletionItems(
  * @param settings
  * @param caos2Comments
  */
-export async function getCompletionItemsWithCursorData(
+async function getInitialCompletionItems(
     thisFileName: string,
     variant: GameVariant,
     commands: Commands,
-    positionData: CursorData,
-    options: CompletionOptions,
-    settings: Nullable<CompletionSettings> = undefined,
+    positionData: CaosCursorData,
+    options: CaosCompletionOptions,
+    settings: Nullable<CaosCompletionSettings> = null,
     caos2Comments: Caos2Comment[] = [],
 ): Promise<CompletionItem[]> {
     
-    if (positionData.previousTokens.length === 0 && (positionData.beforeText ?? '').trim().length === 0) {
+    if (positionData.previousTokens.length === 0 && (positionData.beforeText ?? "").trim().length === 0) {
         return [];
     }
     
-    const closestItem = positionData.closestItem
+    const closestItem = positionData.closestItem;
     
     let raw: CompletionItem[];
     if (closestItem && cancelComplete(positionData.closestItem!!, positionData.line, positionData.character)) {
         return [];
     }
     if (closestItem && closestItem.actualType === CAOS2_COMMENT_TYPE_ID) {
-        raw = await getCaos2PrayCompletions(
+        raw = await getCaos2PrayCompletionsSafe(
             thisFileName,
             variant,
+            positionData,
             caos2Comments,
             closestItem as Caos2Comment,
-            positionData.line,
-            positionData.character,
             options,
-        );
+        )
     } else if (closestItem && inQuotes(closestItem, positionData.line, positionData.character + 1)) {
         raw = getValuesListCompletions(
             positionData,
@@ -231,26 +247,152 @@ export async function getCompletionItemsWithCursorData(
         raw = (settings?.dumbMode === true) ?
             getDumbCompletionItems(variant, commands, settings) :
             getCommandCompletions(settings, variant, commands, positionData);
-  
-        raw = raw.filter(item => item.data?.command?.startsWith('_CD_') !== true);
+        raw = raw.filter(item => item.data?.command?.startsWith("_CD_") !== true);
         
     }
     return raw;
 }
 
 
-function getOriginalText(text: string | ParseResult | unknown | null | undefined): Nullable<string> {
+function getOriginalText(text: string | CaosParseResult | unknown | null | undefined): Nullable<string> {
     if (text == null) {
-        return undefined;
+        return null;
     }
-    if (typeof text === 'string') {
-        return text
+    if (typeof text === "string") {
+        return text;
     } else if (Is.parseResult(text)) {
-        return text.originalText;
+        return (<CaosParseResult>text).originalText;
+    } else if (typeof (<any>text)["text"] !== "undefined") {
+        return (<any>text).text;
     } else {
-        return undefined;
+        return null;
+    }
+}
+
+function addStringCompletionsSafe(
+    parseResult: CaosParseResult,
+    cursor: CaosCursorData,
+    position: Position,
+    opts: CaosCompletionOptions,
+    items: CompletionItem[],
+): boolean {
+    try {
+        
+        if (opts.getStringCompletions == null) {
+            console.log("Get string completions is null");
+            return true;
+        }
+    
+        const commandCall = getCommandBeneathCursor(
+            parseResult.variant,
+            parseResult.commandCalls,
+            position,
+            false
+        );
+        
+        if (!commandCall) {
+            return true;
+        }
+        
+        if (commandCall.commandString.toUpperCase() !== cursor.command!.command.toUpperCase()) {
+            console.error("Drill down command returned command different from cursor; Expected: " + cursor.command!.command + "; Found: " + commandCall.commandString.toUpperCase());
+        }
+        
+        const stringCompletions = opts.getStringCompletions(cursor, commandCall) ?? [];
+        items.push(...stringCompletions);
+        return true;
+    } catch (e) {
+        const error = e instanceof Error ? e.message + "\n" + e.stack : e;
+        console.error("Failed to CAOS string completions; " + error);
+        return false;
+    }
+}
+
+function addBitflagCompletionsSafe(
+    cursor: CaosCursorData,
+    items: CompletionItem[],
+): boolean {
+    try {
+        const bitflagsCompletions = getBitflagsOptionsProvider(cursor);
+        if (bitflagsCompletions) {
+            items.splice(0, items.length);
+            items.push(...bitflagsCompletions);
+        }
+        return true;
+    } catch (e) {
+        const error = e instanceof Error ? e.message + "\n" + e.stack : e;
+        console.error("Failed to get bitflag completions: " + error);
+        return false
     }
 }
 
 
+async function getCaos2PrayCompletionsSafe(
+    thisFileName: string,
+    variant: GameVariant,
+    position: Position,
+    caos2Comments: Caos2Comment[],
+    closestItem: Caos2Comment,
+    options: CaosCompletionOptions,
+): Promise<CompletionItem[]> {
+    try {
+        return await getCaos2PrayCompletions(
+            thisFileName,
+            variant,
+            caos2Comments,
+            closestItem,
+            position.line,
+            position.character,
+            options,
+        );
+    } catch (e) {
+        const error = e instanceof Error ? e.message + "\n" + e.stack : e;
+        console.error("Failed to get CAOS2Pray completions; " + error);
+        return [];
+    }
+}
 
+
+function getCaos2PrayCommentsSafe(
+    text: string,
+    cursor: CaosCursorData,
+): Caos2Comment[] {
+    try {
+        if (Is.caos2Comment(cursor.closestItem)) {
+            const originalText = getOriginalText(text);
+            // Minimum length = 4 = <*#aa b|*#a=b
+            if (originalText != null && originalText.length >= 5) {
+                return getCaos2PrayComments(originalText);
+            }
+        }
+    } catch (e) {
+        console.error("Failed to get CAOS2 comments; ", e instanceof Error ? e.message : e);
+    }
+    return [];
+}
+
+async function getInitialCompletionItemsSafe(
+    thisFileName: string,
+    variant: GameVariant,
+    cursor: CaosCursorData,
+    caos2Comments: Caos2Comment[],
+    completionSettings: Nullable<CaosCompletionSettings>,
+    opts: CaosCompletionOptions,
+): Promise<Nullable<CompletionItem[]>> {
+    try {
+        // Get all normal completions for cursor position
+        return await getInitialCompletionItems(
+            thisFileName,
+            variant,
+            getCommands(variant),
+            cursor!!,
+            opts,
+            completionSettings,
+            caos2Comments
+        );
+    } catch (e) {
+        const error = e instanceof Error ? e.message + "\n" + e.stack : e;
+        console.error("Failed to general CAOS completions; " + error);
+        return null
+    }
+}

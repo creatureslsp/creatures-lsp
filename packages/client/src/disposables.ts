@@ -1,9 +1,13 @@
 import {Disposable} from "vscode";
+import type {Nullable} from "@creatures-lsp/extension-util";
 
 
 const _disposables: Disposable[] = [];
 
-export function pushDisposable(disposable: Disposable) {
+export function pushDisposable(disposable: Nullable<Disposable>) {
+    if (!disposable) {
+        return;
+    }
     _disposables.push(disposable)
 }
 

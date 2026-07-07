@@ -1,6 +1,7 @@
 import {Location} from "vscode-languageserver";
-import {getNamedVariableLocationsForType} from "../../indices/index.caos.named-variables";
-import {NamedVarPrefix} from "@bedalton/caos-util/completions";
+import {getNamedVariableLocationsForType} from "../../indices/index.caos.named-variables.js";
+import {NamedVarPrefix} from "@creatures-lsp/caos-util";
+import {offsetRenameRange} from "@creatures-lsp/extension-util/dist/get-workspace-edits.js";
 
 
 export function getNamedVariableReferences(
@@ -15,13 +16,11 @@ export function getNamedVariableReferences(
     );
     
     if (locations.length === 0) {
-        console.log("No locations for " + commandString +" \"" + key + "\"");
         return [];
     }
-    console.log(JSON.stringify(locations));
     return locations.map(l => {
         return {
-            range: l.range,
+            range: offsetRenameRange(l.range),
             uri: l.documentUri
         } satisfies Location
     });

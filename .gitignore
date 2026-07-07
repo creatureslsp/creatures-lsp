@@ -4,6 +4,10 @@
 /packages/caos-util/lib
 node_modules
 .vscode-test/
+packages/client/test/**/*.js
+packages/client/test/**/*.js.map
+packages/client/test/**/*.d.ts
+packages/client/test/**/*.d.ts.map
 *.vsix
 .idea
 # Yarn
@@ -44,3 +48,7 @@ typings/
 test-project
 .vscode/extensions.json
 .vscode/settings.json
+/.yarnrc.yml
+/.npmrc
+
+CaosConfigSchema.json

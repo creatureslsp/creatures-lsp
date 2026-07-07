@@ -1,19 +1,23 @@
-import {com, CommandCall, IParserItem, ParseResult, ParserItem} from "./caos-util";
-import {Nullable} from "@bedalton/extension-util"
-import C2eStringVal = ParserItem.C2eStringVal;
+import type {CaosParseResult, CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import {
+    type C2eStringVal,
+    type Caos2Comment,
+    type CommandToken,
+    type CaosParserItem,
+    type IntVal,
+    type TokenVal,
+    TypeTokens
+} from "@creatures-lsp/caos-kt/caos-core";
+
+import {Nullable} from "@creatures-lsp/extension-util";
 
 
 /**
  * Checks if variable is of a given type
  */
 export namespace Is {
-    import Caos2Comment = ParserItem.Caos2Comment;
-    import CommandToken = ParserItem.CommandToken;
-    import TokenVal = ParserItem.TokenVal;
-    import TypeTokens = com.bedalton.creatures.caos.libs.TypeTokens;
-    import IntVal = ParserItem.IntVal;
     
-    export function parseResult(result: Nullable<any>): result is ParseResult & NonNullable<ParseResult> {
+    export function parseResult(result: Nullable<any>): result is CaosParseResult & NonNullable<CaosParseResult> {
         if (result == null) {
             return false;
         }
@@ -27,10 +31,10 @@ export namespace Is {
         if (call == null) {
             return false;
         }
-        return call.textRange != null && call.command?.command?.length && call.tokens;
+        return call.textRange != null && call.commandString?.length && call.tokens;
     }
     
-    export function parserItem(item: Nullable<any>): item is IParserItem<any> & NonNullable<CommandCall> {
+    export function caosParserItem(item: Nullable<any>): item is CaosParserItem & NonNullable<CommandCall> {
         if (item == null) {
             return false;
         }
@@ -38,30 +42,30 @@ export namespace Is {
     }
     
     export function commandToken(item: Nullable<any>): item is CommandToken & NonNullable<CommandToken> {
-        return parserItem(item) && item.typeToken === TypeTokens.COMMAND_TOKEN;
+        return caosParserItem(item) && item.typeToken === TypeTokens.getInstance().COMMAND_TOKEN;
     }
     
-    export function caos2Comment(item: Nullable<any>): item is Caos2Comment & NonNullable<CommandCall>  {
+    export function caos2Comment(item: Nullable<any>): item is Caos2Comment & NonNullable<CommandCall> {
         if (item == null) {
             return false;
         }
-        return parserItem(item) && item.typeToken === TypeTokens.CAOS2_COMMENT;
+        return caosParserItem(item) && item.typeToken === TypeTokens.getInstance().CAOS2_COMMENT;
     }
     
     export function tokenVal(item: Nullable<any>): item is TokenVal & NonNullable<TokenVal> {
-        return parserItem(item) && item.typeToken === TypeTokens.TOKEN
+        return caosParserItem(item) && item.typeToken === TypeTokens.getInstance().TOKEN;
     }
     
     export function intVal(item: Nullable<any>): item is IntVal & NonNullable<IntVal> {
-        return parserItem(item) && item.typeToken === TypeTokens.INT
+        return caosParserItem(item) && item.typeToken === TypeTokens.getInstance().INT;
     }
     
     export function c2eStringVal(item: Nullable<any>): item is C2eStringVal & NonNullable<C2eStringVal> {
-        if (!parserItem(item)) {
+        if (!caosParserItem(item)) {
             return false;
         }
-        return item.typeToken == TypeTokens.QUOTE_STRING
+        return item.typeToken == TypeTokens.getInstance().QUOTE_STRING;
     }
 }
 
-export * from "./is-similar-variant";
+export * from "./is-similar-variant.js";

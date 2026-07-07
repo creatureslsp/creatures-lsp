@@ -13,6 +13,8 @@ export const SemanticTokensTypes = {
     PLACEHOLDER_TEXT: "placeholder-text",
     CAOS2PRAY_TAG: "caos2pray-tag",
     CAOS2PRAY_COMMAND: "caos2pray-command",
+    STRING_ESCAPE_CHARACTER: "string-escape-character",
+    NUMBER: "number",
 }
 
 const tokenTypes = [
@@ -31,6 +33,8 @@ const tokenTypes = [
     SemanticTokensTypes.PLACEHOLDER_TEXT,
     SemanticTokensTypes.CAOS2PRAY_TAG,
     SemanticTokensTypes.CAOS2PRAY_COMMAND,
+    SemanticTokensTypes.STRING_ESCAPE_CHARACTER,
+    SemanticTokensTypes.NUMBER,
 ];
 
 export const SemanticTokenModifiers = {
@@ -73,7 +77,6 @@ const tokenModifiers = [
     SemanticTokenModifiers.COMMAND_PREFIX,
     SemanticTokenModifiers.COMMAND_SUFFIX,
     SemanticTokenModifiers.CAOS2PRAY_OFFICIAL,
-    
 ];
 const legendMap:{[id: string]: number} = {};
 const modifierMap:{[id: string]: number} = {};

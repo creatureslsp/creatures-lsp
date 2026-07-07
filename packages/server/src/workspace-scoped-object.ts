@@ -1,7 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {DocumentUri} from "vscode-languageserver";
-import {Nullable} from "@bedalton/extension-util";
+import type {DocumentUri} from "vscode-languageserver";
+import type {Nullable} from "@creatures-lsp/extension-util";
 
 export class WorkspaceScopedObject<K extends number | string, V> {
     
@@ -92,7 +92,7 @@ export class WorkspaceScopedProperty<T> {
         if (typeof this.values[workspaceUri] !== "undefined") {
             return this.values[workspaceUri];
         }
-        return undefined;
+        return null;
     }
     
     set(workspaceUri: DocumentUri, setter: Nullable<T> | ((value: T) => T)) {

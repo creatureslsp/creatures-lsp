@@ -1,25 +1,25 @@
-import {Nullable} from "@bedalton/extension-util";
-import {CaosValuesList, CursorData, libs} from "../caos-util";
-import {CompletionItem, Range} from "vscode-languageserver-types";
-import {getValuesListValueCompletionItem} from "./completions.values-list-values";
+import {Nullable} from "@creatures-lsp/extension-util";
+import type {CaosValuesList} from "@creatures-lsp/caos-kt/caos-libs";
+import {getValuesList} from "@creatures-lsp/caos-kt/caos-libs";
+import type {CaosCursorData} from "@creatures-lsp/caos-kt/caos-cursor-data";
+import type {CompletionItem, Range} from "vscode-languageserver-types";
+import {getValuesListValueCompletionItem} from "./completions.values-list-values.js";
 
-export function getBitflagsOptionsProvider(data: CursorData): Nullable<CompletionItem[]> {
+export function getBitflagsOptionsProvider(data: CaosCursorData): Nullable<CompletionItem[]> {
     const parameter = data.closestParameter
     const valuesListId = parameter?.valuesListId
     if (valuesListId == null) {
-        // console.log("Values list ID is null; Parameter" + (JSON.stringify(parameter)));
-        return undefined;
+        return null;
     }
-    const valuesList = libs.getValuesList(valuesListId)
+    const valuesList = getValuesList(valuesListId)
     if (valuesList == null || !isValuesListBitflag(valuesList)) {
-        // console.log("Not a bitflags list: ListName[" + (valuesList?.name ?? "NULL") + "];");
-        return undefined;
+        return null;
     }
     
     const closestItemRange = data.closestItem?.textRange;
     let start = {
         line: closestItemRange?.start?.line ?? data.line,
-        character: closestItemRange?.start?.character ?? data.character
+        character: (closestItemRange?.start?.character ?? data.character) + 1
     };
     
     // let end = {

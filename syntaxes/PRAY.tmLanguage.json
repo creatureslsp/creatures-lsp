@@ -1,0 +1,161 @@
+{
+  "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+  "scopeName": "source.pray",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#string"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#literals"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "match": "^#[^\n]*",
+          "name": "comment.line.pray"
+        },
+        {
+          "name": "comment.block.pray",
+          "begin": "(-",
+          "beginCaptures": {
+            "0": {
+              "name": "comment.block.punctuation.pray"
+            }
+          },
+          "end": "-)",
+          "endCaptures": {
+            "0": {
+              "name": "comment.block.punctuation.pray"
+            }
+          },
+          "patterns": [
+            {
+              "match": "[^-]"
+            },
+            {
+              "match": "-[^)]",
+              "name": "comment.block.pray"
+            }
+          ]
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "include": "#group"
+        },
+        {
+          "include": "#inline"
+        },
+        {
+          "name": "keyword.control.pray",
+          "match": "\\b(@)\\b"
+        }
+      ]
+    },
+    "tag": {
+      "patterns": [
+        {
+          "name": "keyword.group.pray",
+          "match": "\\b(GROUP)\\b"
+        }
+      ]
+    },
+    "array": {
+      "patterns": [
+        {
+          "name": "keyword.inline.pray",
+          "match": "\\b(INLINE)\\b"
+        }
+      ]
+    },
+    "string": {
+      "name": "string",
+      "patterns": [
+        {
+          "include": "#quote_string"
+        },
+        {
+          "include": "#single_quote_string"
+        }
+      ]
+    },
+    "quote_string": {
+      "name": "string.quoted.double.pray",
+      "begin": "\"",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.pray"
+        }
+      },
+      "end": "\"",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.pray"
+        }
+      },
+      "patterns": [
+        {
+          "match": "[^\"]"
+        },
+        {
+          "match": "\\\\.",
+          "name": "constant.character.escape.pray"
+        }
+      ]
+    },
+    "single_quote_string": {
+      "name": "string.quoted.single.pray",
+      "begin": "'",
+      "beginCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.begin.pray"
+        }
+      },
+      "end": "'",
+      "endCaptures": {
+        "0": {
+          "name": "punctuation.definition.string.end.pray"
+        }
+      },
+      "patterns": [
+        {
+          "match": "[^']"
+        },
+        {
+          "match": "\\\\.",
+          "name": "constant.character.escape.pray"
+        }
+      ]
+    },
+    "literals": {
+      "patterns": [
+        {
+          "match": "'([^']|\\\\.)'",
+          "name": "string.unquoted.pray"
+        },
+        {
+          "match": "\"([^\"]|\\\\.)\"",
+          "name": "string.unquoted.pray"
+        },
+        {
+          "match": "[+-]?[0-9]+",
+          "name": "constant.numeric.pray"
+        },
+        {
+          "match": "\\b([A-Za-z][A-Za-z0-9\\-_]{3})\\b",
+          "name": "entity.name.class.pray"
+        }
+      ]
+    }
+  }
+}

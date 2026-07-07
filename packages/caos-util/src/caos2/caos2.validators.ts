@@ -5,7 +5,7 @@ import {
     getExtension,
     hasExtension,
     stripSurroundingQuotes
-} from "@bedalton/extension-util";
+} from "@creatures-lsp/extension-util";
 import _path from "path";
 
 export const Caos2Validators = {

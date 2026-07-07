@@ -1,4 +1,4 @@
-import {GameVariant} from "./caos-util";
+import {GameVariant} from "@creatures-lsp/caos-kt";
 
 
 export function isSimilarVariant(variant: GameVariant, other: GameVariant): boolean {
@@ -17,10 +17,10 @@ export function isC1eVariant(variant: GameVariant): boolean {
 
 export function isC2eVariant(variant: GameVariant): boolean {
     variant = variant.toUpperCase() as GameVariant;
-    return variant === "CV" || variant === "C3" || variant === "DS";
+    return variant === "CV" || variant === "C3" || variant === "DS" || variant === "DS:CE";
 }
 
 export function isC3DSVariant(variant: GameVariant): boolean {
     variant = variant.toUpperCase() as GameVariant;
-    return variant === "C3" || variant === "DS";
+    return variant === "C3" || variant === "DS" || variant === "DS:CE";
 }

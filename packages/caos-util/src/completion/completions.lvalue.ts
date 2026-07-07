@@ -1,10 +1,11 @@
-import {Nullable} from "@bedalton/extension-util";
-import {Commands, GameVariant} from "../caos-util";
-import {CompletionItem, Position} from "vscode-languageserver-types";
-import {VARIABLE_TYPE_ID} from "../constants";
-import {COMMAND_TYPE__LVALUE, CompletionSettings} from "../completions";
-import {getIndexedVariableCompletions} from "./completions.indexedVariables";
-import {getCommandCompletionsForCommandType} from "./completion.command";
+import type {Nullable} from "@creatures-lsp/extension-util";
+import type {GameVariant} from "@creatures-lsp/caos-kt";
+import type {Commands} from "@creatures-lsp/caos-kt/caos-libs";
+import type {CompletionItem, Position} from "vscode-languageserver-types";
+import {VARIABLE_TYPE_ID} from "../constants.js";
+import {COMMAND_TYPE__LVALUE, type CaosCompletionSettings} from "../completions.js";
+import {getIndexedVariableCompletions} from "./completions.indexedVariables.js";
+import {getCommandCompletionsForCommandType} from "./completion.command.js";
 
 
 /**
@@ -18,7 +19,7 @@ export function getLvalueCompletions(
     variant: GameVariant,
     commands: Commands,
     position: Position,
-    completionSettings: Nullable<CompletionSettings>,
+    completionSettings: Nullable<CaosCompletionSettings>,
 ): CompletionItem[] {
     let commandCompletions: CompletionItem[] = getCommandCompletionsForCommandType(
         variant,

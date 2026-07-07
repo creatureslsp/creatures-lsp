@@ -6,12 +6,12 @@ import {
     SymbolInformation,
     TextDocument,
 } from "vscode";
-import {GameVariant, hints} from "@bedalton/caos-util";
+import {type GameVariant,} from "@creatures-lsp/caos-util";
+import { getCaosScriptDocumentSymbols } from "@creatures-lsp/caos-util";
 import {DocumentSymbol as IDocumentSymbol} from "vscode-languageserver-types";
-import {getVariant} from "./settings";
-import {toVsCodeRange} from "./helpers";
-import {Log} from "./log";
-import {getCaosDocumentSymbols} from "@bedalton/caos-util/document-symbols-provider";
+import {getVariant} from "./settings.js";
+import {toVsCodeRange} from "./helpers.js";
+import {Log} from "./log.js";
 
 type Symbols = SymbolInformation[] | DocumentSymbol[];
 
@@ -32,10 +32,11 @@ export class CaosSymbolProvider implements DocumentSymbolProvider {
             const text = document.getText();
             let symbolsRaw: IDocumentSymbol[]
             try {
-                symbolsRaw = getCaosDocumentSymbols(variant, text);
+                symbolsRaw = getCaosScriptDocumentSymbols(variant, text);
             } catch (e) {
                 const error = e instanceof Error ? (e.message + "\n" + e.stack) : e;
-                Log.e(document.uri, "Failed to get GOTO; ", error);
+                Log.e(document.uri, "Failed to get document symbols; " + error);
+                // console.error("Failed to get GOTO; ", error);
                 symbolsRaw = [];
             }
             const symbols: DocumentSymbol[] = symbolsRaw

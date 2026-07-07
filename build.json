@@ -19,8 +19,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
-    "lib": ["es2017"],
-    "baseUrl": "."
+    "lib": ["es2017"]
   },
   "exclude": [
     "node_modules",

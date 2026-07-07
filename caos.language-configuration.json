@@ -1,0 +1,269 @@
+{
+  "comments": {
+    "lineComment": "*"
+  },
+  "brackets": [
+    [
+      "[",
+      "]"
+    ]
+  ],
+  "autoClosingPairs": [
+    {
+      "open": "[",
+      "close": "]",
+      "notIn": [
+        "string"
+      ]
+    },
+    {
+      "open": "'",
+      "close": "'",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "\"",
+      "close": "\"",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "doif",
+      "close": "endi",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "reps",
+      "close": "repe",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "subr",
+      "close": "retn",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "enum",
+      "close": "ext",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "etch",
+      "close": "next",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "esee",
+      "close": "next",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "epas",
+      "close": "next",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "econ",
+      "close": "next",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "elst",
+      "close": "next",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "escn",
+      "close": "nsnc",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "scrp",
+      "close": "endm",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "iscr",
+      "close": "endm",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    },
+    {
+      "open": "rscr",
+      "close": "endm",
+      "notIn": [
+        "string",
+        "comment"
+      ]
+    }
+  ],
+  "surroundingPairs": [
+    [
+      "doif",
+      "endi"
+    ],
+    [
+      "doif",
+      "elif"
+    ],
+    [
+      "elif",
+      "else"
+    ],
+    [
+      "elif",
+      "endi"
+    ],
+    [
+      "else",
+      "endi"
+    ],
+    [
+      "scrp",
+      "endm"
+    ],
+    [
+      "scrp",
+      "scrp"
+    ],
+    [
+      "scrp",
+      "iscr"      
+    ],
+    [
+      "scrp",
+      "rscr"
+    ],
+    [
+      "iscr",
+      "endm"
+    ],
+    [
+      "iscr",
+      "scrp"
+    ],
+    [
+      "iscr",
+      "iscr"      
+    ],
+    [
+      "iscr",
+      "rscr"
+    ],
+    [
+      "rscr",
+      "endm"
+    ],
+    [
+      "rscr",
+      "scrp"
+    ],
+    [
+      "rscr",
+      "iscr"      
+    ],
+    [
+      "rscr",
+      "rscr"
+    ],
+    [
+      "enum",
+      "next"
+    ],
+    [
+      "escn",
+      "nscn"
+    ],
+    [
+      "esee",
+      "next"
+    ],
+    [
+      "etch",
+      "next"
+    ],
+    [
+      "econ",
+      "next"
+    ],
+    [
+      "epas",
+      "next"
+    ],
+    [
+      "elst",
+      "next"
+    ],
+    [
+      "subr",
+      "retn"
+    ],
+    [
+      "reps",
+      "repe"
+    ],
+    [
+      "loop",
+      "untl"
+    ],
+    [
+      "loop",
+      "ever"
+    ],
+    [
+      "\"",
+      "\""
+    ],
+    [
+      "'",
+      "'"
+    ],
+    [
+      "[","]"
+    ]
+  ],
+  "indentationRules": {
+    "increaseIndentPattern": "^\\s*\\b([Dd][Oo][Ii][Ff]|[Ee][Ll][Ii][Ff]|[Ee][Ll][Ss][Ee]|[Ee][Nn][Uu][Mm]|[Ee][Tt][Cc][Hh]|[Ee][Ss][Ee][Ee]|[Ee][Pp][Aa][Ss]|[Ee][Cc][Oo][Nn]|[Ee][Ll][Ss][Tt]|[Ee][Ss][Cc][Nn]|[Ss][Cc][Rr][Pp]|[Ii][Ss][Cc][Rr]|[Rr][Ss][Cc][Rr]|[Rr][Ee][Pp][Ss]|[Ll][Oo][Oo][Pp]|[Ss][Uu][Bb][Rr])\\b",
+    "decreaseIndentPattern": "^\\s*\\b([Ee][Ll][Ii][Ff]|[Ee][Ll][Ss][Ee]|[Nn][Ee][Xx][Tt]|[Nn][Ss][Cc][Nn]|[Rr][Ee][Tt][Nn]|[Ee][Nn][Dd][Mm]|[Ee][Nn][Dd][Ii]|[Rr][Ee][Pp][Ee]|[Uu][Nn][Tt][Ll]|[Ee][Vv][Ee][Rr])\\b"
+  }
+}

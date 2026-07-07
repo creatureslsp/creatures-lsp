@@ -1,8 +1,9 @@
-import {GameVariant, ParserItem} from "../../caos-util";
-import {CompletionItem, CompletionItemKind, Range} from "vscode-languageserver-types";
-import {createSimpleCompletionItem} from "../completions.create";
+import type {GameVariant} from "@creatures-lsp/caos-kt";
+import type {Caos2Comment} from "@creatures-lsp/caos-kt/caos-core";
+import type {CompletionItem, Range} from "vscode-languageserver-types";
+import {CompletionItemKind} from "vscode-languageserver-types";
+import {createSimpleCompletionItem} from "../completions.create.js";
 // noinspection DuplicatedCode
-import Caos2Comment = ParserItem.Caos2Comment;
 
 export function getCaos2CommandCompletions(variant: GameVariant, allComments: Caos2Comment[], token: string, range: Range): CompletionItem[] {
     const commandsSoFar = allComments

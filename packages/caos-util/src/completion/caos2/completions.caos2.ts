@@ -1,11 +1,11 @@
-import {GameVariant, IParserItem, ParserItem} from "../../caos-util";
-import {CompletionItem, Range} from "vscode-languageserver-types";
-import {inRange} from "@bedalton/extension-util";
-import {CompletionOptions} from "../../completions";
-import {getCaos2TagCompletions} from "./completions.caos2.tag";
-import {getCaos2TagValueCompletions} from "./completions.caos2.values";
-import Caos2Comment = ParserItem.Caos2Comment;
-import {getCaos2CommandCompletions} from "./completions.caos2.command";
+import { GameVariant } from "@creatures-lsp/caos-kt";
+import type {CaosParserItem, Caos2Comment} from "@creatures-lsp/caos-kt/caos-core";
+import type {CompletionItem, Range} from "vscode-languageserver-types";
+import {inRange} from "@creatures-lsp/extension-util";
+import type {CaosCompletionOptions} from "../../completions.js";
+import {getCaos2TagCompletions} from "./completions.caos2.tag.js";
+import {getCaos2TagValueCompletions} from "./completions.caos2.values.js";
+import {getCaos2CommandCompletions} from "./completions.caos2.command.js";
 
 /**
  * Get completions within a CAOS2Pray statement
@@ -24,7 +24,7 @@ export async function getCaos2PrayCompletions(
     item: Caos2Comment,
     line: number,
     character: number,
-    options: CompletionOptions,
+    options: CaosCompletionOptions,
 ): Promise<CompletionItem[]> {
     let out: CompletionItem[] = [];
     
@@ -37,7 +37,7 @@ export async function getCaos2PrayCompletions(
     
     const inCommandOrTag = inRange(item.token.textRange, line, character, false, true);
     
-    const ranges = [item.token.textRange, ...(item.values ?? []).map((c: IParserItem<any>) => c.textRange)];
+    const ranges = [item.token.textRange, ...(item.values ?? []).map((c: CaosParserItem) => c.textRange)];
     let range: Range = ranges
             .find(range => inRange(range, line, character, false, true))
         ?? (ranges ? ranges[0] : null)
@@ -46,7 +46,7 @@ export async function getCaos2PrayCompletions(
     range = {
         start: {
             line: range.start.line,
-            character: range.start.character
+            character: range.start.character + 2
         },
         end: {
             line: range.end.line,

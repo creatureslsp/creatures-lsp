@@ -1,38 +1,46 @@
 /*---------------------------------------------------------------------------------------------
- *  Copyright (c) Microsoft Corporation. All rights reserved.
- *  Licensed under the MIT License. See License.txt in the project root for license information.
+ * Copyright (c) Microsoft Corporation. All rights reserved.
+ * Licensed under the MIT License. See License.txt in the project root for license information.
  *--------------------------------------------------------------------------------------------*/
-
-//@ts-check
-'use strict';
 
 //@ts-check
 // noinspection NodeCoreCodingAssistance
 /** @typedef {import('webpack').Configuration} WebpackConfig **/
 
-const path = require('path');
-const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+import path from 'node:path';
+import { fileURLToPath } from 'url';
+import NodePolyfillPlugin from 'node-polyfill-webpack-plugin';
+import { createRequire } from 'node:module';
+
+// Reconstruct __dirname and require for ESM
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const require = createRequire(import.meta.url);
 
 /** @type WebpackConfig */
 const shared = {
     mode: 'none', // this leaves the source code as close as possible to the original (when packaging we set this to 'production')
     entry: {
         extension: './src/extension.ts', // source of the web extension main file
-        // 'test/suite/index': './src/web/test/suite/index.ts', // source of the web extension test runner
     },
     output: {
-        filename: '[name].js',
+        filename: '[name].cjs',
         path: path.join(__dirname, './dist/web'),
+        // Note: If you are entirely moving the output bundle to ESM, 
+        // you would use library: { type: 'module' }, but VS Code web extensions 
+        // often still require 'commonjs'. Keeping 'commonjs' for safety here.
         libraryTarget: 'commonjs',
         devtoolModuleFilenameTemplate: '../../[resource-path]'
     },
     resolve: {
         mainFields: ['browser', 'module', 'main'], // look for `browser` entry point in imported node modules
-        extensions: ['.ts', '.js'], // support ts-files and js-files
+        extensions: ['.ts', '.js', '.mts', '.mjs'], // support ts-files and js-files
+        extensionAlias: {
+            '.js': ['.ts', '.js'],
+            '.mjs': ['.mts', '.mjs']
+        },
         fallback: {
             // Webpack 5 no longer polyfills Node.js core modules automatically.
-            // see https://webpack.js.org/configuration/resolve/#resolvefallback
-            // for the list of Node.js core module polyfills.
             assert: require.resolve('assert'),
         },
     },
@@ -63,20 +71,9 @@ const webExtensionConfig = {
     ...shared,
     target: 'webworker', // extensions run in a webworker context
     output: {
-        filename: '[name].js',
+        filename: '[name].cjs',
         path: path.join(__dirname, './dist/web'),
         libraryTarget: 'commonjs',
-    },
-    resolve: {
-        mainFields: ['browser', 'module', 'main'], // look for `browser` entry point in imported node modules
-        extensions: ['.ts', '.js'], // support ts-files and js-files
-
-        fallback: {
-            // Webpack 5 no longer polyfills Node.js core modules automatically.
-            // see https://webpack.js.org/configuration/resolve/#resolvefallback
-            // for the list of Node.js core module polyfills.
-            assert: require.resolve('assert'),
-        },
     },
     plugins: [
         new NodePolyfillPlugin({
@@ -85,21 +82,25 @@ const webExtensionConfig = {
     ],
 };
 
-webExtensionConfig.resolve.alias = {
-    'vscode-languageclient/node': 'vscode-languageclient/browser',
-    [path.resolve(__dirname, "./src/spinUpServer.vscode.ts")]: path.resolve(__dirname, "./src/spinUpServer.web.ts"),
+// Fixed assignment syntax for standard object extension
+webExtensionConfig.resolve = {
+    ...webExtensionConfig.resolve,
+    alias: {
+        'vscode-languageclient/node': 'vscode-languageclient/browser',
+        [path.resolve(__dirname, "./src/spinUpServer.vscode.ts")]: path.resolve(__dirname, "./src/spinUpServer.web.ts"),
+        [path.resolve(__dirname, "./src/spinUpServer.vscode.js")]: path.resolve(__dirname, "./src/spinUpServer.web.js"),
+    }
 };
-
 
 /** @type WebpackConfig */
 const nodeExtensionConfig = {
     ...shared,
-    target: 'node', // extensions run in a webworker context
+    target: 'node', // extensions run in a node context
     output: {
-        filename: '[name].js',
+        filename: '[name].cjs',
         path: path.join(__dirname, './dist/node'),
         libraryTarget: 'commonjs',
     },
 };
 
-module.exports = [webExtensionConfig, nodeExtensionConfig];
+export default [webExtensionConfig, nodeExtensionConfig];

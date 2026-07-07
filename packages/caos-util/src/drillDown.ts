@@ -1,9 +1,8 @@
-import {CommandCall, GameVariant} from "./caos-util";
-import {Hover, Position} from "vscode-languageserver-types";
-import {Nullable, RangeWithIndex} from "@bedalton/extension-util/src/types";
-import {toVsRange} from "@bedalton/extension-util";
-import {formatCaosDocumentation} from "./documentation-formattter";
-import {Is} from "./is-util";
+import {GameVariant} from "@creatures-lsp/caos-kt";
+import type {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import {Position} from "vscode-languageserver-types";
+import {isVsCode, Nullable, RangeWithIndex} from "@creatures-lsp/extension-util";
+import {Is} from "./is-util.js";
 
 /**
  * Drill down into the command call to find its closest command and get its hover information
@@ -13,18 +12,18 @@ import {Is} from "./is-util";
  */
 export function drillDown(variant: GameVariant, position: Position, commandCall: CommandCall): Nullable<CommandCall> {
     if (commandCall == null) {
-        return undefined;
+        return null;
     }
     
     if (!inRange(commandCall.textRange, position)) {
-        return undefined;
+        return null;
     }
     
     if (inRange(commandCall.tokenTextRange, position)) {
         return commandCall;
     }
     
-    for (const argument of commandCall.commandArguments) {
+    for (const argument of commandCall.arguments) {
         if (argument == null) {
             continue;
         }
@@ -37,10 +36,9 @@ export function drillDown(variant: GameVariant, position: Position, commandCall:
             return commandCall;
         }
         
-        // console.log("Checking Argument: " + argument.text)
         return drillDown(variant, position, <CommandCall>argument) ?? commandCall;
     }
-    return undefined;
+    return null;
 }
 
 
@@ -58,7 +56,8 @@ function inRange(range: RangeWithIndex, position: Position): boolean {
     }
     
     if (position.line == range.start.line) {
-        if (position.character < (range.start.character! - 1)) {
+        const offsetStart = isVsCode() ? -1 : 0;
+        if (position.character < (range.start.character! + offsetStart)) {
             return false;
         }
     }

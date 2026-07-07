@@ -1,6 +1,69 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {CommandCall, ICaosContextListener, IParserItem, ParseResult, ParserItem} from "./caos-util";
+import type {
+    CommandCall,
+    CaosParseResult,
+} from "@creatures-lsp/caos-kt/caos-parser";
+
+import type {
+    AutocompleteHint,
+    BinaryVal,
+    ByteString,
+    C1eStringVal,
+    C2eStringVal,
+    Caos2Comment,
+    CharVal,
+    CommandToken,
+    DdePictVal,
+    EqJoinVal,
+    EqOpVal,
+    FloatVal,
+    IndexedVarVal,
+    IntVal,
+    TokenVal,
+    Comment,
+    CaosParserItem
+} from "@creatures-lsp/caos-kt/caos-core";
+
+export declare interface ICaosContextListener {
+    onIndexedVar(token: IndexedVarVal): void;
+    
+    onInt(token: IntVal): void;
+    
+    onBinary(token: BinaryVal): void;
+    
+    onChar(token: CharVal): void;
+    
+    onFloat(token: FloatVal): void;
+    
+    onByteString(token: ByteString): void;
+    
+    onC1eString(token: C1eStringVal): void;
+    
+    onC2eString(token: C2eStringVal): void;
+    
+    onAnyString(token: C2eStringVal | C1eStringVal): void;
+    
+    onPictDimension(token: DdePictVal): void;
+    
+    onCommandToken(token: CommandToken): void;
+    
+    onToken(token: TokenVal): void;
+    
+    onEqOp(token: EqOpVal): void;
+    
+    onEqJoin(token: EqJoinVal): void;
+    
+    onCommandCall(call: CommandCall): void;
+    
+    onPlaceholderText(token: AutocompleteHint): void;
+    
+    onComment(token: Comment): void
+    
+    onCaos2Comment(token: Caos2Comment): void;
+}
+
+
 import {
     BINARY_PARSER_TYPE,
     BRACKET_STRING_PARSER_TYPE,
@@ -18,9 +81,10 @@ import {
     PICT_DIMENSION_PARSER_TYPE,
     PLACEHOLDER_TYPE,
     QUOTE_STRING_PARSER_TYPE,
-    tok,
     TOKEN_PARSER_TYPE
-} from "./constants";
+} from "./constants.js";
+
+import {tok} from "./token-utils.js";
 
 
 /**
@@ -28,9 +92,9 @@ import {
  * @param result
  * @param listener
  */
-export function walkParseResult(result: ParseResult, listener: ICaosContextListener) {
+export function walkCaosParseResult(result: CaosParseResult, listener: ICaosContextListener) {
     
-    // const items = result.items.sort((a: IParserItem<any>, b: IParserItem<any>) => {
+    // const items = result.items.sort((a: ICaosParserItem<any>, b: ICaosParserItem<any>) => {
     //     const aRange = a.textRange;
     //     const bRange = b.textRange;
     //     if (aRange?.start.line === bRange?.end.line) {
@@ -48,13 +112,13 @@ export function walkParseResult(result: ParseResult, listener: ICaosContextListe
                 listener.onFloat(item);
                 continue;
             case COMMAND_TOKEN_PARSER_TYPE:
-                listener.onCommandToken(<ParserItem.CommandToken>item);
+                listener.onCommandToken(<CommandToken>item);
                 continue;
             case INDEXED_VAR_PARSER_TYPE:
                 listener.onIndexedVar(<any>item);
                 continue;
             case EQ_OP_PARSER_TYPE:
-                listener.onEqOp(<ParserItem.EqOp>item);
+                listener.onEqOp(<EqOpVal>item);
                 continue;
             case QUOTE_STRING_PARSER_TYPE:
                 listener.onC2eString(item);
@@ -87,10 +151,10 @@ export function walkParseResult(result: ParseResult, listener: ICaosContextListe
                 listener.onPlaceholderText(item);
                 continue;
             case COMMENT_TYPE:
-                listener.onComment(item);
+                listener.onComment(<Comment>item);
                 continue;
             case CAOS2_COMMENT_TYPE:
-                listener.onCaos2Comment(<ParserItem.Caos2Comment>item);
+                listener.onCaos2Comment(<Caos2Comment>item);
                 continue;
             default:
                 throw Error("Failed to route item " + tok(item.typeToken) + '(' + item.value + ')');
@@ -115,55 +179,55 @@ export class CaosContextListenerBase implements ICaosContextListener {
         throw new Error("Method not implemented.");
     }
     
-    onAnyString(_token: ParserItem.C2eStringVal | ParserItem.C1eStringVal) {
+    onAnyString(_token: C2eStringVal | C1eStringVal) {
     }
     
-    onBinary(_token: ParserItem.BinaryVal) {
+    onBinary(_token: BinaryVal) {
     }
     
-    onByteString(_token: ParserItem.ByteString) {
+    onByteString(_token: ByteString) {
     }
     
-    onC1eString(_token: ParserItem.C1eStringVal) {
+    onC1eString(_token: C1eStringVal) {
     }
     
-    onC2eString(_token: ParserItem.C2eStringVal) {
+    onC2eString(_token: C2eStringVal) {
     }
     
-    onChar(_token: ParserItem.CharVal) {
+    onChar(_token: CharVal) {
     }
     
-    onCommandToken(_token: ParserItem.CommandToken) {
+    onCommandToken(_token: CommandToken) {
     }
     
-    onEqJoin(_token: ParserItem.EqJoin) {
+    onEqJoin(_token: EqJoinVal) {
     }
     
-    onEqOp(_token: ParserItem.EqOp) {
+    onEqOp(_token: EqOpVal) {
     }
     
-    onFloat(_token: ParserItem.FloatVal) {
+    onFloat(_token: FloatVal) {
     }
     
-    onIndexedVar(_token: ParserItem.IndexedVar) {
+    onIndexedVar(_token: IndexedVarVal) {
     }
     
-    onInt(_token: ParserItem.IntVal) {
+    onInt(_token: IntVal) {
     }
     
-    onPictDimension(_token: ParserItem.DdePictVal) {
+    onPictDimension(_token: DdePictVal) {
     }
     
-    onToken(_token: ParserItem.TokenVal) {
+    onToken(_token: TokenVal) {
     }
     
-    onPlaceholderText(_token: ParserItem.AutocompleteHint) {
+    onPlaceholderText(_token: AutocompleteHint) {
     }
     
-    onComment(_token: IParserItem<any>) {
+    onComment(_token: CaosParserItem) {
     }
     
-    onCaos2Comment(_token: IParserItem<any>) {
+    onCaos2Comment(_token: CaosParserItem) {
     }
     
 }

@@ -1,9 +1,9 @@
 // noinspection JSUnusedGlobalSymbols
 
-import {Nullable} from "@bedalton/extension-util";
-import {TextDocuments} from "vscode-languageserver/node";
+import type {Nullable} from "@creatures-lsp/extension-util";
+import {TextDocuments} from "vscode-languageserver/node.js";
 import {TextDocument} from "vscode-languageserver-textdocument";
-import {readTextFile} from "./files";
+import {readTextFile} from "./files.js";
 
 
 
@@ -27,7 +27,7 @@ export function getDocument(uri: string): Nullable<TextDocument> {
     try {
         return documents.get(uri);
     } catch (e) {
-        console.error("Failed to get document " + uri + "; "  + e);
+        console.error("Failed to get document " + uri + "; ",  e);
     }
 }
 
@@ -35,7 +35,7 @@ export async function getDocumentText(uri: string): Promise<Nullable<string>> {
     try {
         return await readTextFile(uri);
     } catch (e) {
-        console.error("Failed to get document " + uri + "; "  + e);
+        console.error("Failed to get document " + uri + "; ", e);
     }
 }
 

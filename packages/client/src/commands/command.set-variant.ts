@@ -1,5 +1,5 @@
 import vscode from "vscode";
-import {pushDisposable} from "../disposables";
+import {pushDisposable} from "../disposables.js";
 
 
 export function registerSetVariantCommand() {
@@ -7,5 +7,5 @@ export function registerSetVariantCommand() {
 }
 
 async function _setVariant() {
-    vscode.commands.executeCommand('workbench.action.openSettings', 'caosScript.variant')
+    vscode.commands.executeCommand('workbench.action.openSettings', 'caosScript.variant', vscode.ConfigurationTarget.Workspace)
 }

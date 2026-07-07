@@ -1,7 +1,8 @@
 import {CompletionItem, CompletionItemKind} from "vscode-languageserver-types";
-import {GameVariant, ICaosCommand} from "../caos-util";
-import {VariantArray} from "../completions";
-import {repack, Nullable} from "@bedalton/extension-util";
+import type {GameVariant} from "@creatures-lsp/caos-kt";
+import type {CaosCommand} from "@creatures-lsp/caos-kt/caos-libs";
+import {VariantArray} from "../completions.js";
+import {repack, Nullable} from "@creatures-lsp/extension-util";
 
 const variables: VariantArray<CompletionItem> = <any>{};
 
@@ -15,7 +16,7 @@ const DEFAULT_VAR_PRIORITY = 1001 << 16;
  * @param variant the game variant to add completions for
  * @param commands a list of all commands in the variant lib
  */
-export function getIndexedVariableCompletions(variant: GameVariant, commands: ICaosCommand[]): CompletionItem[] {
+export function getIndexedVariableCompletions(variant: GameVariant, commands: CaosCommand[]): CompletionItem[] {
     if (variables.hasOwnProperty(variant)) {
         return variables[variant];
     }
@@ -24,7 +25,7 @@ export function getIndexedVariableCompletions(variant: GameVariant, commands: IC
     const obvX = commands.find(c => c.command.toLowerCase() === 'obvx');
     const ovXX = commands.find(c => c.command.toLowerCase() === 'ovxx');
     const mvXX = commands.find(c => c.command.toLowerCase() === 'mvxx');
-    let vars: [string, number, string, number, ICaosCommand?][] = [];
+    let vars: [string, number, string, number, CaosCommand?][] = [];
     switch (variant) {
         case "C1":
             vars.push(["var", 9, "Event variable", DEFAULT_VAR_PRIORITY, varX]);
@@ -56,13 +57,15 @@ export function getIndexedVariableCompletions(variant: GameVariant, commands: IC
 
 function addVariablesOfType(
     completions: CompletionItem[],
-    command: ICaosCommand,
+    command: CaosCommand,
     prefix: string,
     max: number,
     description: Nullable<string> = undefined,
     priority: number
 ) {
     const pad = prefix.length < 3;
+    const repackedCommand = repack<CaosCommand>(command);
+    
     for (let i = 0; i <= max; i++) {
         let number = pad ? (i + "").padStart(2, '0') : i + "";
         const text = prefix + number;
@@ -74,7 +77,7 @@ function addVariablesOfType(
             sortText: "x_" + priority + "_" + i + text,
             filterText: text,
             data: {
-                ...repack(command),
+                ...repackedCommand,
                 prefix,
                 index: i
             }

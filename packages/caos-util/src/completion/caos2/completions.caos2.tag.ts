@@ -1,9 +1,9 @@
 import {CompletionItem, CompletionItemKind, Range} from "vscode-languageserver-types";
-import {GameVariant, ParserItem} from "../../caos-util";
-import {getC1TagCompletions, getC2TagCompletions} from "./completions.caos2cob.tags";
-import {getC3DSTagCompletions} from "../../caos2/caos2pray-definitions";
-import {createSimpleCompletionItem} from "../completions.create";
-import Caos2Comment = ParserItem.Caos2Comment;
+import type {GameVariant} from "@creatures-lsp/caos-kt";
+import type {Caos2Comment} from "@creatures-lsp/caos-kt/caos-core";
+import {getC1TagCompletions, getC2TagCompletions} from "./completions.caos2cob.tags.js";
+import {getC3DSTagCompletions} from "../../caos2/caos2pray-definitions.js";
+import {createSimpleCompletionItem} from "../completions.create.js";
 
 
 export function getCaos2TagCompletions(variant: GameVariant, allComments: Caos2Comment[], hasEQ: boolean, range: Range): CompletionItem[] {

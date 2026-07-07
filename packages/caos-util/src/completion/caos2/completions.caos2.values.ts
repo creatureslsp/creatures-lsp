@@ -1,11 +1,11 @@
-import {GameVariant, IParserItem, ParserItem} from "../../caos-util";
-import {CompletionOptions} from "../../completions";
+import type {GameVariant} from "@creatures-lsp/caos-kt";
+import {CaosParserItem, Caos2Comment} from "@creatures-lsp/caos-kt/caos-core";
+import {CaosCompletionOptions} from "../../completions.js";
 import {CompletionItem, CompletionItemKind} from "vscode-languageserver-types";
-import {inRange} from "@bedalton/extension-util";
-import {getC1TagValueCompletions, getC2TagValueCompletions} from "./completions.caos2cob";
-import {getC3DSTagValueCompletions} from "./completions.caos2pray.values";
-import {createQuotedCompletionItem} from "../completions.create";
-import Caos2Comment = ParserItem.Caos2Comment;
+import {inRange} from "@creatures-lsp/extension-util";
+import {getC1TagValueCompletions, getC2TagValueCompletions} from "./completions.caos2cob.js";
+import {getC3DSTagValueCompletions} from "./completions.caos2pray.values.js";
+import {createQuotedCompletionItem} from "../completions.create.js";
 
 export async function getCaos2TagValueCompletions(
     thisFileName: string,
@@ -14,17 +14,27 @@ export async function getCaos2TagValueCompletions(
     allComments: Caos2Comment[],
     line: number,
     character: number,
-    options: CompletionOptions
+    options: CaosCompletionOptions
 ): Promise<CompletionItem[]> {
-    const range = comment
+    let range = comment
             .values
-            .find((v: IParserItem<any>) => inRange(v.textRange, line, character, false, true))
+            .find((v: CaosParserItem) => inRange(v.textRange, line, character, false, true))
             ?.textRange
         ?? {
-            start: {line, character},
+            start: {line, character: character},
             end: {line, character}
         };
     
+    range = {
+        start: {
+            line: range.start.line,
+            character: range.start.character + 1
+        },
+        end: {
+            line: range.end.line,
+            character: range.end.character
+        },
+    };
     let completions: string[];
     const tag = comment.eq == null || comment.values.length == 0 ? (comment.tag ?? comment.command) : comment.tag;
     const command = comment.eq == null || comment.values.length == 0 ? (comment.command ?? comment.tag) : comment.command;

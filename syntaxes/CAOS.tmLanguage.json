@@ -9,6 +9,9 @@
       "include": "#comments"
     },
     {
+      "include": "#unterminated_string"
+    },
+    {
       "include": "#string"
     },
     {
@@ -68,7 +71,7 @@
     "caos2comment": {
       "patterns": [
         {
-          "match": "(?i)^\\*\\*(caos2pray|caos2cob| *swift| *scriptorium| *dump)?[ \t]*([^\n]+)?",
+          "match": "(?i)^\\*\\*(caos2pray|caos2cob)[ ]+(swift|scriptorium|dump)?[ \t]*([^\n]+)?",
           "name": "markup.bold.caos2",
           "captures": {
             "2": {
@@ -106,7 +109,8 @@
               "include": "#caos2value"
             }
           ]
-        },{
+        },
+        {
           "begin": "([a-zA-Z_](\\\\.|[^ \\\\])*)",
           "end": "(?=$)",
           "beginCaptures": {
@@ -156,7 +160,7 @@
       "patterns": [
         {
           "name": "keyword.control.enum.caos",
-          "match": "(?i)\\b(enum|epas|escn|esee|etch|next|nscn|econ)\\b"
+          "match": "(?i)\\b(enum|epas|escn|esee|etch|next|nscn|econ|elst)\\b"
         }
       ]
     },
@@ -285,44 +289,81 @@
         }
       ]
     },
+    "unterminated_string": {
+      "patterns": [
+        {
+          "name": "string.quoted.double.caos",
+          "match": "(\")(?:(?:(\\\\.)|([^\"\n\r]))*)(\n|$)",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.string.begin.caos"
+            },
+            "2": {
+              "name": "constant.character.escape"
+            }
+          }
+        },
+        {
+          "name": "string.quoted.single.caos",
+          "match": "(')(?:(?:(\\\\.)|([^'\n\r]))*)(\n|$)",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.string.begin.caos"
+            },
+            "2": {
+              "name": "constant.character.escape"
+            }
+          }
+        },
+        {
+          "match": "(\\[)([^\\]\n\r]*)(\r?\n|$)",
+          "name": "string.quoted.bracket.caos",
+          "captures": {
+            "1": {
+              "name": "punctuation.definition.string.begin.caos"
+            }
+          }
+        }
+      ]
+    },
     "quote_string": {
       "name": "string.quoted.double.caos",
-      "begin": "\"",
+      "begin": "(\")",
       "beginCaptures": {
-        "0": {
+        "1": {
           "name": "punctuation.definition.string.begin.caos"
         }
       },
-      "end": "\"",
+      "end": "(\")",
       "endCaptures": {
-        "0": {
+        "1": {
           "name": "punctuation.definition.string.end.caos"
         }
       },
       "patterns": [
         {
-          "match": "[^\"]"
-        },
-        {
           "match": "\\\\.",
           "name": "constant.character.escape.caos"
+        },
+        {
+          "match": "[^\"\n\r]"
         }
       ]
     },
     "c1_string": {
-      "begin": "\\[",
+      "begin": "(\\[)",
       "beginCaptures": {
-        "0": {
+        "1": {
           "name": "punctuation.definition.string.begin.caos"
         }
       },
-      "end": "\\]",
+      "end": "(\\])",
       "endCaptures": {
-        "0": {
+        "1": {
           "name": "punctuation.definition.string.begin.caos"
         }
       },
-      "match": "[^\\\\]]+"
+      "match": "[^\\\\\r\n]]+"
     },
     "literals": {
       "patterns": [
@@ -344,15 +385,15 @@
       ]
     },
     "byte_string": {
-      "begin": "\\[",
+      "begin": "(\\[)",
       "beginCaptures": {
-        "0": {
+        "1": {
           "name": "punctuation.definition.string.begin.caos"
         }
       },
-      "end": "\\]",
+      "end": "(\\])",
       "endCaptures": {
-        "0": {
+        "1": {
           "name": "punctuation.definition.string.begin.caos"
         }
       },

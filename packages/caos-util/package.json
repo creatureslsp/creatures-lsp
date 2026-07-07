@@ -1,6 +1,7 @@
 {
-  "name": "@bedalton/caos-util",
-  "version": "0.0.1",
+  "name": "@creatures-lsp/caos-util",
+  "version": "0.0.2",
+  "type": "module",
   "description": "Utility methods for parsing and validating CAOS scripts for the Creatures games",
   "types": "./lib/caos-util.d.ts",
   "main": "lib/caos-util.js",
@@ -11,89 +12,33 @@
     "url": "https://github.com/bedalton/caos-language-server"
   },
   "exports": {
-    ".": "./lib/caos-util.js",
-    "./commands": "./lib/commands.js",
-    "./completions": "./lib/completions.js",
-    "./constants": "./lib/constants.js",
-    "./context-walker": "./lib/context-walker.js",
-    "./cursor-data": "./lib/cursor-data.js",
-    "./document-symbols-provider": "./lib/document-symbols-provider.js",
-    "./formatter": "./lib/formatter.js",
-    "./goto": "./lib/goto.js",
-    "./hover-documentation": "./lib/hover-documentation.js",
-    "./inlay-hints": "./lib/inlay-hints.js",
-    "./is-similar": "./lib/is-similar.js",
-    "./semantic-highlighter": "./lib/semantic-highlighter.js",
-    "./subroutines": "./lib/subroutines.js",
-    "./is": "./lib/is-util.js",
-    "./check-module": "./lib/check-module.js"
+    ".": "./lib/index.js"
   },
   "files": [
-    "lib"
+    "./lib/index.js"
   ],
   "scripts": {
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo && mkdir -p lib",
     "prepack": "yarn build",
-    "prependLibImport": "echo \"const { universalLibTemp } = require(\\\"./caos.universal.lib.js\\\");\" > ./lib/temp.js && cat ./src/caos-util.js >> ./lib/temp.js && rm ./lib/caos-util.js && mv ./lib/temp.js ./lib/caos-util.js",
-    "build": "yarn clean &&  find ./src \\( -iname \\*.js -o -iname \\*.js.map -o -iname \\*.json -o -iname \\*.d.ts \\) -exec cp {} ./lib/ \\; && tsc --build && yarn prependLibImport",
-    "webpack": "yarn run build",
+    "copy-files": "find ./src \\( -iname \\*.js -o -iname \\*.js.map -o -iname \\*.json -o -iname \\*.d.ts \\) -exec cp {} ./lib/ \\;",
+    "build-first": "yarn copy-files",
+    "build": "tsc --build",
     "test": "echo 'no test'",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
   "typesVersions": {
     "*": {
       ".": [
-        "./lib/CaosUtil.d.ts"
-      ],
-      "./commands": [
-        "./lib/commands.d.ts"
-      ],
-      "./completions": [
-        "./lib/completions.d.ts"
-      ],
-      "./constants": [
-        "./lib/constants.d.ts"
-      ],
-      "./context-walker": [
-        "./lib/context-walker.d.ts"
-      ],
-      "./cursor-data": [
-        "./lib/cursor-data.d.ts"
-      ],
-      "./document-symbols-provider": [
-        "./lib/document-symbols-provider.d.ts"
-      ],
-      "./formatter": [
-        "./lib/formatter.d.ts"
-      ],
-      "./goto": [
-        "./lib/goto.d.ts"
-      ],
-      "./hover-documentation": [
-        "./lib/hover-documentation.d.ts"
-      ],
-      "./inlay-hints": [
-        "./lib/inlay-hints.d.ts"
-      ],
-      "./is-similar": [
-        "./lib/is-similar.d.ts"
-      ],
-      "./log": [
-        "./libs/logs.d.ts"
-      ],
-      "./semantic-highlighter": [
-        "./lib/semantic-highlighter.d.ts"
-      ],
-      "./subroutines": [
-        "./lib/subroutines.d.ts"
+        "./lib/index.d.ts"
       ]
     }
   },
   "dependencies": {
-    "@bedalton/extension-util": "*"
+    "@creatures-lsp/extension-util": "*",
+    "@creatures-lsp/caos-kt": "*"
   },
   "devDependencies": {
-    "rimraf": "^3.0.2",
+    "rimraf": "^6.1.3",
     "vscode-languageserver-types": "^3.17.1"
   }
 }

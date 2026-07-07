@@ -1,5 +1,5 @@
 import {CompletionItem, CompletionItemKind, InsertTextFormat, InsertTextMode, Range} from "vscode-languageserver-types";
-import {Nullable, quoteString} from "@bedalton/extension-util";
+import {Nullable, quoteString, INFLECT_SPLITTER} from "@creatures-lsp/extension-util";
 
 /**
  * Creates a completion item based solely on a plain text string
@@ -13,7 +13,7 @@ export function createSimpleCompletionItem(
     token: string,
     range: Range,
     completionKind: CompletionItemKind,
-    suffix: Nullable<string> = undefined,
+    suffix: Nullable<string> = null,
     sortPrefix: string = "_d",
 ): CompletionItem {
     return <CompletionItem>{
@@ -22,7 +22,7 @@ export function createSimpleCompletionItem(
         insertText: token + (suffix ?? ""),
         insertTextFormat: suffix ? InsertTextFormat.Snippet : InsertTextFormat.PlainText,
         insertTextMode: InsertTextMode.asIs,
-        filterText: token + " " + token.toLowerCase() + " " + token.toUpperCase(),
+        filterText: token + INFLECT_SPLITTER + token.toLowerCase() + " " + token.toUpperCase(),
         preselect: false,
         sortText: sortPrefix + token.toLowerCase(),
         textEdit: {
@@ -45,7 +45,7 @@ export function createQuotedCompletionItem(
     token: string,
     range: Range,
     completionKind: Nullable<CompletionItemKind> = CompletionItemKind.Value,
-    suffix: Nullable<string> = undefined,
+    suffix: Nullable<string> = null,
     sortPrefix: string = "_d",
 ): CompletionItem {
     token = quoteString(token);

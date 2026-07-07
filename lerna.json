@@ -1,11 +1,13 @@
 {
   "packages": [
+    "packages/catalogue",
+    "packages/caos-kt",
     "packages/caos-util",
     "packages/client",
     "packages/server",
     "packages/extension-util"
   ],
   "npmClient": "yarn",
-  "useWorkspaces": true,
-  "version": "independent"
+  "version": "independent",
+  "useWorkspaces": true
 }

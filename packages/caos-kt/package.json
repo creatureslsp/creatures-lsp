@@ -1,0 +1,150 @@
+{
+  "name": "@creatures-lsp/caos-kt",
+  "author": "bedalton",
+  "displayName": "CAOS KT",
+  "license": "MIT",
+  "description": "Combined export of CAOS and Catalogue Kotlin JS libs",
+  "version": "0.0.2",
+  "engines": {
+    "node": "*"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
+    "prepack": "yarn build",
+    "copy-files": "tsc -p . && mkdir -p ./dist  && find ./src \\( -iname \\*.js -o -iname \\*.js.map -o -iname \\*.mjs.map -o -iname \\*.mjs -o -iname \\*.json -o -iname \\*.d.ts  -o -iname \\*.d.mts \\) -exec cp {} ./dist/ \\; ",
+    "build": " yarn copy-files && tsc --build",
+    "test": "echo 'no test'",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
+  },
+  "files": [
+    "./dist"
+  ],
+  "exports": {
+    ".": {
+      "default": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    },
+    "./bedalton-common-log": {
+      "default": "./dist/bedalton-common-log.mjs",
+      "types": "./dist/bedalton-common-log.d.mts"
+    },
+    "./caos-completion": {
+      "default": "./dist/caos-completion.mjs",
+      "types": "./dist/caos-completion.d.mts"
+    },
+    "./caos-core": {
+      "default": "./dist/caos-core.mjs",
+      "types": "./dist/caos-core.d.mts"
+    },
+    "./caos-cursor-data": {
+      "default": "./dist/caos-cursor-data.mjs",
+      "types": "./dist/caos-cursor-data.d.mts"
+    },
+    "./caos-formatter": {
+      "default": "./dist/caos-formatter.mjs",
+      "types": "./dist/caos-formatter.d.mts"
+    },
+    "./caos-infer-targ": {
+      "default": "./dist/caos-infer-targ.mjs",
+      "types": "./dist/caos-infer-targ.d.mts"
+    },
+    "./caos-init-lib": {
+      "default": "./dist/caos-init-lib.mjs",
+      "types": "./dist/caos-init-lib.d.mts"
+    },
+    "./caos-inlay-hints": {
+      "default": "./dist/caos-inlay-hints.mjs",
+      "types": "./dist/caos-inlay-hints.d.mts"
+    },
+    "./caos-libs": {
+      "default": "./dist/caos-libs.mjs",
+      "types": "./dist/caos-libs.d.mts"
+    },
+    "./caos-libsfile-full": {
+      "default": "./dist/caos-libsfile-full.mjs",
+      "types": "./dist/caos-libsfile-full.d.mts"
+    },
+    "./caos-parser": {
+      "default": "./dist/caos-parser.mjs",
+      "types": "./dist/caos-parser.d.mts"
+    },
+    "./caos-tokenizer": {
+      "default": "./dist/caos-tokenizer.mjs",
+      "types": "./dist/caos-tokenizer.d.mts"
+    },
+    "./caos-validation": {
+      "default": "./dist/caos-validation.mjs",
+      "types": "./dist/caos-validation.d.mts"
+    },
+    "./caos-validation-report": {
+      "default": "./dist/caos-validation-report.mjs",
+      "types": "./dist/caos-validation-report.d.mts"
+    },
+
+    "./catalogue-core": {
+      "default": "./dist/catalogue-core.mjs",
+      "types": "./dist/catalogue-core.d.mts"
+    },
+    "./catalogue-cursor": {
+      "default": "./dist/catalogue-cursor.mjs",
+      "types": "./dist/catalogue-cursor.d.mts"
+    },
+    "./catalogue-formatter": {
+      "default": "./dist/catalogue-formatter.mjs",
+      "types": "./dist/catalogue-formatter.d.mts"
+    },
+    "./catalogue-validation": {
+      "default": "./dist/catalogue-validation.mjs",
+      "types": "./dist/catalogue-validation.d.mts"
+    },
+    "./common-ast-structs": {
+      "types": "./dist/common-ast-structs.d.mts",
+      "default": "./dist/common-ast-structs.mjs"
+    },
+    "./common-ast-format": {
+      "default": "./dist/common-ast-format.mjs",
+      "types": "./dist/common-ast-format.d.mts"
+    },
+    "./commaon-ast-parseritems": {
+      "default": "./dist/commaon-ast-parseritems.mjs",
+      "types": "./dist/commaon-ast-parseritems.d.mts"
+    },
+    "./common-lsp": {
+      "default": "./dist/common-lsp.mjs",
+      "types": "./dist/common-lsp.d.mts"
+    },
+    "./common-lsp-cursor": {
+      "default": "./dist/common-lsp-cursor.mjs",
+      "types": "./dist/common-lsp-cursor.d.mts"
+    },
+    "./common-lsp-edit": {
+      "default": "./dist/common-lsp-edit.mjs",
+      "types": "./dist/common-lsp-edit.d.mts"
+    },
+    "./common-lsp-formatter": {
+      "default": "./dist/common-lsp-formatter.mjs",
+      "types": "./dist/common-lsp-formatter.d.mts"
+    },
+    "./common-lsp-hints": {
+      "default": "./dist/common-lsp-hints.mjs",
+      "types": "./dist/common-lsp-hints.d.mts"
+    },
+    "./common-lsp-symbols": {
+      "default": "./dist/common-lsp-symbols.mjs",
+      "types": "./dist/common-lsp-symbols.d.mts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "directory": "packages/caos-kt",
+    "url": "https://github.com/bedalton/caos-language-server"
+  },
+  "dependencies": {
+    "vscode-languageserver": "^9.0.1"
+  },
+  "devDependencies": {
+    "rimraf": "^6.1.3"
+  }
+}

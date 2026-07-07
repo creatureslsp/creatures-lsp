@@ -26,12 +26,13 @@
 			"request": "launch",
 			"runtimeExecutable": "${execPath}",
 			"args": [
-				"--extensionDevelopmentPath=${workspaceFolder}"
+				"--extensionDevelopmentPath=${workspaceFolder}",
+                "/Users/dbadal/cc/caos/demo"
 			],
 			"stopOnEntry": false,
 			"sourceMaps": true,
 			"outFiles": [
-				"${workspaceFolder}/out/node/*.js"
+				"${workspaceFolder}/dist/node/*.js"
 			]
     }
   ]

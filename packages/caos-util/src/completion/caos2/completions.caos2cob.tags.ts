@@ -1,5 +1,5 @@
-import {CAOS2COB_TAGS} from "../../caos2/caos2cob";
-import {arrayDifference} from "@bedalton/extension-util";
+import {CAOS2COB_TAGS} from "../../caos2/caos2cob.js";
+import {arrayDifference} from "@creatures-lsp/extension-util";
 
 const C1_TAGS = CAOS2COB_TAGS.filter((t) => t.variant == null || t.variant === "C1")
     .map(tag => tag.tags[0]);

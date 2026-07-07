@@ -1,8 +1,8 @@
-import {ICaosCommand, ICaosParameter, libs} from "../caos-util";
+import type {CaosCommand, CaosParameter} from "@creatures-lsp/caos-kt/caos-libs";
+import {getValueTypeName} from "@creatures-lsp/caos-kt/caos-libs";
 import {CompletionItem, CompletionItemKind, InsertTextFormat, InsertTextMode} from "vscode-languageserver-types";
-import {Nullable, repack} from "@bedalton/extension-util";
-import {tok} from "../constants";
-const getValueTypeName = libs.getValueTypeName;
+import {Nullable, repack} from "@creatures-lsp/extension-util";
+import {tok} from "../token-utils.js";
 
 /**
  * Takes a command, and creates a completion item for it
@@ -10,7 +10,7 @@ const getValueTypeName = libs.getValueTypeName;
  * @param command
  * @param sortPrefix
  */
-export function commandToCompletionItem(command: ICaosCommand, sortPrefix: Nullable<string> = undefined): CompletionItem {
+export function commandToCompletionItem(command: CaosCommand, sortPrefix: Nullable<string> = undefined): CompletionItem {
     const commandLower = command.command.toLowerCase();
     let args = "";
     const parameters = command.parameters.sort((a, b) => a.index - b.index);
@@ -50,7 +50,7 @@ export function commandToCompletionItem(command: ICaosCommand, sortPrefix: Nulla
  * TODO: Parameter name is duplicated when parameter name inline hints are visible
  * @param parameter
  */
-function formatParameterSnippet(parameter: ICaosParameter): string {
+function formatParameterSnippet(parameter: CaosParameter): string {
     const name = parameter.name.toLowerCase();
     const type = getValueTypeName(parameter.typeId);
     if (type == null || type.length < 1) {

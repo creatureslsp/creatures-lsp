@@ -1,12 +1,12 @@
-import _path from "path";
-import {DocumentUri} from "vscode-languageserver-types";
-import {Nullable} from "./types";
+import {extname} from "./path";
+import type {DocumentUri} from "vscode-languageserver-types";
+import type {Nullable} from "./types";
 import {getArrayAccessFileNameIndex} from "./array-access-filename";
 
 export function filterByExtension(filesInProject: string[], extensions: Nullable<string[]>) {
     // Filter out blank paths
     extensions = extensions
-        ?.filter(ext => ext && ext.length > 0)
+        ?.filter(ext => ext && ext.length > 0);
     
     // If null or no extensions
     if (extensions == null || extensions.length == 0) {
@@ -23,20 +23,21 @@ export function filterByExtension(filesInProject: string[], extensions: Nullable
         });
     
     return filesInProject
-        .filter (file => {
-            const ext = _path.extname(file).toLowerCase();
-            return extensions!.indexOf(ext) >= 0;
+        .filter(file => {
+            const ext = extname(file)
+                ?.toLowerCase();
+            return ext != null && extensions!.indexOf(ext) >= 0;
         });
 }
 
 export function getFileName(path: string): Nullable<string> {
     if (path.trim().length == 0 || path.trim() === "/" || path.trim() === "\\") {
-        return undefined;
+        return null;
     }
     const components = path.split(/[/\\]/);
     const fileName = components.pop()!;
     if (fileName.trim().length === 0) {
-        return undefined;
+        return null;
     }
     return fileName;
 }
@@ -45,7 +46,7 @@ export function getFileName(path: string): Nullable<string> {
 export function getFileNameWithoutExtensions(path: string): Nullable<string> {
     const fileName = getFileName(path);
     if (!fileName || fileName.trim().length === 0) {
-        return undefined;
+        return null;
     }
     const lastDot = fileName.lastIndexOf(".");
     if (lastDot < 0) {
@@ -58,20 +59,27 @@ export function getFileNameWithoutExtensions(path: string): Nullable<string> {
 export function getExtension(value: string, notLowerCased: boolean = false): Nullable<string> {
     let extension: Nullable<string>;
     if (value.indexOf('[') < 0) {
-        extension = _path.extname(value);
+        extension = extname(value);
     } else {
         const [fileName] = getArrayAccessFileNameIndex(value) ?? [null];
         if (fileName == null || fileName.trim().length === 0) {
-            return undefined;
+            return null;
         }
-        extension = _path.extname(fileName);
+        extension = extname(fileName);
+    }
+    
+    if (extension == null) {
+        return null;
     }
     
     if (extension.length > 0 && extension[0] === '.') {
-        extension.substring(1);
+        extension = extension.substring(1);
     }
-    if (!extension || extension.trim().length === 0) {
-        return undefined;
+    
+    extension = extension.trim();
+    
+    if (extension.length === 0) {
+        return null;
     }
     
     return notLowerCased ? extension : extension.toLowerCase();
@@ -87,7 +95,7 @@ export function hasExtension(value: string, ...extensions: string[]): boolean {
     }
     for (const ext of extensions) {
         if (ext && ext[0] === "." && ("." + extension) === ext.toLowerCase()) {
-            return true ;
+            return true;
         } else if (extension === ext.toLowerCase()) {
             return true;
         }
@@ -95,7 +103,7 @@ export function hasExtension(value: string, ...extensions: string[]): boolean {
     return false;
 }
 
-export function trimLeadingSlashOnFileSchema(workspaceUri: DocumentUri): DocumentUri {
+export function trimLeadingSlashOnFileScheme(workspaceUri: DocumentUri): DocumentUri {
     if (!workspaceUri || workspaceUri[0] !== "/") {
         return workspaceUri;
     }
@@ -109,6 +117,20 @@ export function trimLeadingSlashOnFileSchema(workspaceUri: DocumentUri): Documen
     return out;
 }
 
-export function trimFileSchemaPrefix(workspaceUri: DocumentUri): DocumentUri {
+export function trimFileSchemePrefix(workspaceUri: DocumentUri): DocumentUri {
     return workspaceUri.replace(/^\/?file:\/{1,2}/i, "");
+}
+
+export function formatUriForRead(file: DocumentUri): string {
+    if (!file.match(/%[a-fA-F0-9]{2}/ig)?.length) {
+        return file;
+    }
+    return decodeURIComponent(file);
+}
+
+export function toFileUri(uri: string): string {
+    if (uri.toLowerCase().indexOf("file://") === 0) {
+        return uri;
+    }
+    return "file://" + uri.split(/[\/\\]/).map(encodeURIComponent).join("/");
 }

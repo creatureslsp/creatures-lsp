@@ -5,12 +5,26 @@
         "rootDir": "./src",
         "composite": true
     },
+    "paths": {
+        "@/*": [
+            "src/*"
+        ]
+    },
     "include": [
         "src/**/*"
     ],
     "references": [
         {
+            "path": "../caos-kt"
+        },
+        {
             "path": "../caos-util"
+        },
+        {
+            "path": "../catalogue"
+        },
+        {
+            "path": "../extension-util"
         }
     ]
 }

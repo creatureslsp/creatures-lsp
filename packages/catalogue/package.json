@@ -1,7 +1,8 @@
 {
-  "name": "@bedalton/caos-editor-interop",
-  "version": "0.0.1",
-  "description": "Shared definitions for LSP server and client",
+  "name": "@creatures-lsp/catalogue",
+  "version": "0.0.2",
+  "type": "module",
+  "description": "Catalogue",
   "main": "./dist/index.js",
   "browser": "./dist/index.js",
   "license": "MIT",
@@ -11,25 +12,28 @@
     "url": "https://github.com/bedalton/caos-language-server"
   },
   "exports": {
-    ".": "./dist/index.js",
-    "./vfs": "./dist/vfs.js"
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "./dist/index.js"
+  ],
+  "typeVersions": {
+    ".": "./dist/index.d.ts"
   },
   "scripts": {
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p dist",
-    "prepack": "yarn build",
-    "build": "yarn clean && tsc --build && cp \"./package.json\" ./dist/",
+    "copy-files": "cp \"./package.json\" ./dist/",
+    "build": "yarn copy-files && tsc --build",
     "test": "echo 'no test'",
-    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0",
-    "webpack": "yarn clean && tsc --build",
-    "postversion": "webpack --mode development --watch",
-    "package": "webpack --mode production --devtool hidden-source-map"
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
   "dependencies": {
-    "@bedalton/extension-util": "*",
+    "@creatures-lsp/extension-util": "*",
+    "@creatures-lsp/caos-kt": "*",
     "vscode-languageserver": "^9.0.1",
     "vscode-languageserver-textdocument": "^1.0.5"
   },
   "devDependencies": {
-    "rimraf": "^3.0.2"
+    "rimraf": "^6.1.3"
   }
 }

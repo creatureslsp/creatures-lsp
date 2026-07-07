@@ -1,4 +1,4 @@
-import {DocumentUri} from "vscode-languageserver";
+import type {DocumentUri} from "vscode-languageserver";
 
 type SetterInit<T> = T[] | Set<T> | ((value: T[]) => (T[] | Set<T>))
 

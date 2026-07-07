@@ -1,7 +1,7 @@
-import {Nullable} from "@bedalton/extension-util";
+import {Nullable} from "@creatures-lsp/extension-util";
 import {DocumentUri} from "vscode-languageserver";
 import {Uri, workspace} from "vscode";
-import {createFileUri} from "./vfs";
+import {createFileUri} from "./vfs.js";
 
 export function workspaceUriToString(
     workspaceUri: Nullable<DocumentUri | Uri>,
@@ -19,22 +19,22 @@ export function workspaceUriToString(
     return defaultValue ? defaultValue : undefined;
 }
 
-function uriOrStringToString(uri: Nullable<DocumentUri | Uri>): string | undefined {
+function uriOrStringToString(uri: Nullable<DocumentUri | Uri>): Nullable<string> {
     if (typeof uri === "string") {
         return uri;
     }
     if (uri instanceof Uri) {
         return uri.fsPath
     }
-    return undefined;
+    return null;
 }
 
-function uriOrStringToUri(uri: Nullable<DocumentUri | Uri>): Uri|undefined {
+function uriOrStringToUri(uri: Nullable<DocumentUri | Uri>): Nullable<Uri> {
     if (uri instanceof Uri) {
         return uri
     }
     if (typeof uri === "string") {
         return createFileUri(uri);
     }
-    return undefined
+    return null;
 }

@@ -1,19 +1,23 @@
-import {Nullable} from "@bedalton/extension-util";
-import {Commands, CursorData, GameVariant, ICaosCommand, ParserItem} from "../caos-util";
-import {CompletionItem, Position, Range, TextEdit} from "vscode-languageserver-types";
-import {ANY_TYPE_ID, COMMAND_TYPE_ID, tok, UNKNOWN_TYPE_ID, VARIABLE_TYPE_ID} from "../constants";
-import {isSimilarType} from "../is-similar";
-import CommandToken = ParserItem.CommandToken;
+import {isVsCode, Nullable} from "@creatures-lsp/extension-util";
+import type {GameVariant} from "@creatures-lsp/caos-kt";
+import type {CaosParserItem, CommandToken} from "@creatures-lsp/caos-kt/caos-core";
+import type {Commands, CaosCommand} from "@creatures-lsp/caos-kt/caos-libs";
+import type {CaosCursorData} from "@creatures-lsp/caos-kt/caos-cursor-data";
+import type {CompletionItem, Position, Range, TextEdit} from "vscode-languageserver-types";
+import {ANY_TYPE_ID, COMMAND_TYPE_ID, UNKNOWN_TYPE_ID, VARIABLE_TYPE_ID} from "../constants.js";
+import {isSimilarType} from "../is-similar.js";
 import {
     COMMAND_TYPE__COMMAND,
     COMMAND_TYPE__LVALUE,
-    COMMAND_TYPE__RVALUE, CompletionSettings,
+    COMMAND_TYPE__RVALUE,
+    CaosCompletionSettings,
     VariantArray,
     VariantIndexed
-} from "../completions";
-import {commandToCompletionItem} from "./command-to-completion-item";
-import {getLvalueCompletions} from "./completions.lvalue";
-import {getRvalueCompletions} from "./completions.rvalue";
+} from "../completions.js";
+import {commandToCompletionItem} from "./command-to-completion-item.js";
+import {getLvalueCompletions} from "./completions.lvalue.js";
+import {getRvalueCompletions} from "./completions.rvalue.js";
+import {tok} from "../token-utils.js";
 
 
 const dumbModeCompletionItems: VariantArray<CompletionItem> = <any>{};
@@ -30,8 +34,6 @@ const multiTokenLvalues: VariantArray<CompletionItem> = <any>{};
 
 const prefixTokens: VariantIndexed<{ [commandType: number]: number[] }> = <any>{};
 
-
-
 /**
  * Gets completions for a parameter which allows prioritizing by type.
  * Falls back to command, if parameter is null
@@ -41,10 +43,10 @@ const prefixTokens: VariantIndexed<{ [commandType: number]: number[] }> = <any>{
  * @param data
  */
 export function getCommandCompletions(
-    completionSettings: Nullable<CompletionSettings>,
+    completionSettings: Nullable<CaosCompletionSettings>,
     variant: GameVariant,
     commands: Commands,
-    data: Nullable<CursorData>
+    data: Nullable<CaosCursorData>
 ): CompletionItem[] {
     if (data == null) {
         return [];
@@ -54,7 +56,7 @@ export function getCommandCompletions(
         character: data.character
     };
     const firstParameter = data.closestParameter
-    // If paramaeter is null, then this is possibly a command, so complete with command and not r/l values
+    // If parameter is null, then this is possibly a command, so complete with command and not r/l values
     
     if (firstParameter == null && !data.inEqualityStatement) {
         return getCommandCompletionsForCommandType(
@@ -75,6 +77,7 @@ export function getCommandCompletions(
     // If parameter is not null, and it is not a variable, then it's an rvalue
     return getRvalueCompletions(variant, commands, position, data, completionSettings)
 }
+
 /**
  * Gets command completions based on
  * @param variant
@@ -92,7 +95,7 @@ export function getCommandCompletionsForCommandType(
     position: Position,
     previousTokens: CommandToken[],
     returnType: number,
-    settings: Nullable<CompletionSettings>,
+    settings: Nullable<CaosCompletionSettings>,
 ): CompletionItem[] {
     let out = getMultiTokenCommands(variant, commands, commandType, position, previousTokens);
     if (previousTokens.length === 0 || out.length === 0) {
@@ -100,7 +103,7 @@ export function getCommandCompletionsForCommandType(
     }
     
     out = (returnType == ANY_TYPE_ID || returnType == UNKNOWN_TYPE_ID) ? out : out.map(item => {
-        const prefix = isSimilarType((<ICaosCommand>item.data)?.returnTypeId, returnType) ? 'a_' : 'b_';
+        const prefix = isSimilarType((<CaosCommand>item.data)?.returnTypeId, returnType) ? 'a_' : 'b_';
         return {
             ...item,
             sortText: prefix + item.sortText
@@ -114,7 +117,7 @@ export function getCommandCompletionsForCommandType(
 export function getDumbCompletionItems(
     variant: GameVariant,
     commands: Commands,
-    completionSettings: Nullable<CompletionSettings>,
+    completionSettings: Nullable<CaosCompletionSettings>,
 ): CompletionItem[] {
     if (dumbModeCompletionItems.hasOwnProperty(variant)) {
         return dumbModeCompletionItems[variant];
@@ -219,13 +222,18 @@ function getMultiTokenCommands(
         }
     }
     
+    const startOffset = isVsCode() ? 1 : 0;
+    const endOffset = isVsCode() ? 0 : 1;
     // Create the range that will actually be used
     const range: Range = {
         start: {
             line: startTokenRange.start.line,
-            character: startTokenRange.start.character
+            character: startTokenRange.start.character + startOffset
         },
-        end: position
+        end: {
+            line: position.line,
+            character: position.character + endOffset
+        }
     }
     
     const token = (<string>tok(lastToken)).toUpperCase();
@@ -234,13 +242,14 @@ function getMultiTokenCommands(
     return commandsContainer[variant]
         .filter((c) => c.label.indexOf(token) >= 0)
         .map(c => {
-            const filterText = c.label.toLowerCase();//c.label.toLowerCase().split(/\s+/).filter((c, i) => i > lastIndex).join(' ')).trim();
-            const textEdit = <TextEdit>{
+            const filterText = c.label.toLowerCase()
+            let textEdit = {
                 range: range,
                 newText: c.insertText ?? c.label
-            };
+            } satisfies TextEdit;
             return <CompletionItem>{
                 ...c,
+                insertText: undefined,
                 filterText: filterText,
                 textEdit
             }
@@ -321,7 +330,7 @@ function getFromCommandType<T>(commandType: number, command: T, rvalue: T, lvalu
 
 function postProcessCommandCompletions(
     raw: CompletionItem[],
-    settings: Nullable<CompletionSettings>,
+    settings: Nullable<CaosCompletionSettings>,
 ): CompletionItem[] {
     
     const edit = (item: CompletionItem, replacement: string): Nullable<TextEdit> => {
@@ -350,7 +359,7 @@ function postProcessCommandCompletions(
 function postProcessParameterHintCompletions(
     raw: CompletionItem[],
     edit: (item: CompletionItem, replacement: string) => Nullable<TextEdit>,
-    settings: Nullable<CompletionSettings>,
+    settings: Nullable<CaosCompletionSettings>,
 ) {
     const replaceRegex = /\$\{(\d+)\s*:[^:]+?:([{\[]?[^}]+[\])]?)}/;
     const minimumParameterCount = (settings?.minimumParameterCount ?? 2);
