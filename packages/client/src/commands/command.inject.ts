@@ -99,50 +99,51 @@ export const caosUpdateCanInject = async (canInject: boolean) => {
 
 const progressBars: Record<string, EventEmitter> = {};
 
-const update = (props: CaosOnInjectNotificationProps) => {
+const update = (initialData: CaosOnInjectNotificationProps) => {
     
-    console.log(JSON.stringify(props, null, 2));
-    if (typeof progressBars[props.serial] !== "undefined") {
-        typeof progressBars[props.serial].emit("update", props);
+    console.log(JSON.stringify(initialData, null, 2));
+    if (typeof progressBars[initialData.serial] !== "undefined") {
+        typeof progressBars[initialData.serial].emit("update", initialData);
         return;
     }
     const task = new EventEmitter();
-    progressBars[props.serial] = task;
+    progressBars[initialData.serial] = task;
     let last = 0;
-    let progressBar: Nullable<Thenable<void>> = vscode.window.withProgress({
+    let progressBar: Nullable<Thenable<void>> = null;
+    progressBar = vscode.window.withProgress({
         location: vscode.ProgressLocation.Notification, // Spawns pop-up loader
         title: `Injecting `,
-        cancellable: false
-    }, (progress, token) => {
+        cancellable: false,
+    }, (progress) => {
         return new Promise<void>( (resolve) => {
             task.on("update", (data: CaosOnInjectNotificationProps) => {
-                if (props.name == null && props.percent === 0) {
+                if (data.name == null && data.percent != null && data.percent === 0) {
                     last = 0;
                     progress.report({
                         increment: 0,
-                        message: `Injecting ${props.totalScripts} scripts`
+                        message: `Injecting ${data.totalScripts} scripts`
                     });
                     return;
                 }
-                if (props.done) {
+                if (data.done) {
                     last = 100;
                     progress.report({
                         increment: 101 - last,
                         message: `CAOS injection finished`
                     });
-                    resolve();
-                    delete progressBars[props.serial];
+                    delete progressBars[data.serial];
                     progressBar = undefined;
+                    resolve();
                     return;
                 }
                 progress.report({
-                    increment: Math.max(props.percent - last, 0),
-                    message: `${props.percent}% Complete. ${props.name ? `Injected: ${props.name}`: ''}`.trim()
+                    increment: Math.max(data.percent - last, 0),
+                    message: `${data.percent}% Complete. ${data.name ? `Injected: ${data.name}`: ''}`.trim()
                 })
-                last = Math.max(props.percent, last);
+                last = Math.max(data.percent, last);
             });
-            task.emit("update", props);
-        })
+            task.emit("update", initialData);
+        });
     });
 }
 
