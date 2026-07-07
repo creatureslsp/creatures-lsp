@@ -35,6 +35,10 @@ const createLogger = (): CaosConsoleLogger => {
                     break;
                 case "skipped":
                     channel.warn(response);
+                    break;
+                case "conn_failed":
+                    channel.error(response);
+                    break;
             }
         }
     }
