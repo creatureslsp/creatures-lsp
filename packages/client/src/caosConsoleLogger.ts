@@ -25,7 +25,7 @@ const createLogger = (): CaosConsoleLogger => {
         warn: channel.warn,
         result: (result: ScriptJectResult) => {
             const responseRaw = !result.response ? ("<<" + result.status.toUpperCase() + ">>") : result.response;
-            const response = `[${result.name}]: ${/\n/.test(responseRaw) ? "\n" + responseRaw : responseRaw}`;
+            const response = `${result.name}: ${/\n/.test(responseRaw) ? "\n" + responseRaw : responseRaw}`;
             switch (result.status) {
                 case "failed":
                     channel.error(response);
