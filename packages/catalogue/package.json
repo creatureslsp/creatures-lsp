@@ -5,6 +5,8 @@
   "description": "Catalogue",
   "main": "./dist/index.js",
   "browser": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,14 +14,34 @@
     "url": "https://github.com/bedalton/caos-language-server"
   },
   "exports": {
-    ".": "./dist/index.js"
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./catalogue.range": {
+      "default": "./dist/catalogue.range.js",
+      "types": "./dist/catalogue.range.d.ts"
+    },
+    "./completions": {
+      "default": "./dist/completions.js",
+      "types": "./dist/completions.d.ts"
+    },
+    "./is": {
+      "default": "./dist/is.js",
+      "types": "./dist/is.d.ts"
+    },
+    "./semantic-highlighter": {
+      "default": "./dist/semantic-highlighter.js",
+      "types": "./dist/semantic-highlighter.d.ts"
+    },
+    "./semantics-legend": {
+      "default": "./dist/semantics-legend.js",
+      "types": "./dist/semantics-legend.d.ts"
+    }
   },
   "files": [
-    "./dist/index.js"
+    "dist"
   ],
-  "typeVersions": {
-    ".": "./dist/index.d.ts"
-  },
   "scripts": {
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p dist",
     "copy-files": "cp \"./package.json\" ./dist/",

@@ -21,7 +21,7 @@ import {
 import {Range} from "vscode-languageserver";
 import {appendAgentHelpCompletion} from "./completion/completions.agent-help.js";
 import {appendKeywordCompletions} from "./completion/completions.keywords.js";
-import {isSublime} from "@creatures-lsp/extension-util/dist/lsp-runner.js";
+import {isSublime} from "@creatures-lsp/extension-util/lsp-runner";
 
 export function createEmptyCompletionList(): CompletionList {
     return {
