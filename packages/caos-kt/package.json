@@ -8,8 +8,9 @@
   "engines": {
     "node": "*"
   },
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "sideEffects": false,
   "scripts": {
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "prepack": "yarn build",
@@ -24,7 +25,7 @@
   "exports": {
     ".": {
       "default": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "types": "./dist/index.d.mts"
     },
     "./bedalton-common-log": {
       "default": "./dist/bedalton-common-log.mjs",
@@ -83,6 +84,10 @@
       "types": "./dist/caos-validation-report.d.mts"
     },
 
+    "./catalogue-index": {
+      "default": "./dist/catalogue-index.mjs",
+      "types": "./dist/catalogue-index.d.mts"
+    },
     "./catalogue-core": {
       "default": "./dist/catalogue-core.mjs",
       "types": "./dist/catalogue-core.d.mts"
@@ -104,15 +109,13 @@
       "default": "./dist/common-ast-structs.mjs"
     },
     "./common-ast-format": {
-      "default": "./dist/common-ast-format.mjs",
       "types": "./dist/common-ast-format.d.mts"
     },
-    "./commaon-ast-parseritems": {
-      "default": "./dist/commaon-ast-parseritems.mjs",
-      "types": "./dist/commaon-ast-parseritems.d.mts"
+    "./common-ast-parseritems": {
+      "default": "./dist/common-ast-parseritems.mjs",
+      "types": "./dist/common-ast-parseritems.d.mts"
     },
     "./common-lsp": {
-      "default": "./dist/common-lsp.mjs",
       "types": "./dist/common-lsp.d.mts"
     },
     "./common-lsp-cursor": {
