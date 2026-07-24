@@ -96,6 +96,26 @@
     "./command-call-positional-data": {
       "default": "./lib/command-call-positional-data.js",
       "types": "./lib/command-call-positional-data.d.ts"
+    },
+    "./caos-libsfile-full": {
+      "default": "./lib/caos-libsfile-full.js",
+      "types": "./lib/caos-libsfile-full.d.ts"
+    },
+    "./caos-tokenizer": {
+      "default": "./lib/caos-tokenizer.js",
+      "types": "./lib/caos-tokenizer.d.ts"
+    },
+    "./caos-validation": {
+      "default": "./lib/caos-validation.js",
+      "types": "./lib/caos-validation.d.ts"
+    },
+    "./caos-validation-report": {
+      "default": "./lib/caos-validation-report.js",
+      "types": "./lib/caos-validation-report.d.ts"
+    },
+    "./caos-infer-targ": {
+      "default": "./lib/caos-infer-targ.js",
+      "types": "./lib/caos-infer-targ.d.ts"
     }
   },
   "files": [
