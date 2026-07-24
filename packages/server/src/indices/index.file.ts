@@ -7,6 +7,7 @@ import {clearCatalogueEntries} from "./index.catalogue.entries.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
 import {isFileURINaive} from "../files.js";
 import type {Nullable} from "../types.js";
+import {Log} from "../ConnLogger.js";
 
 let _indexingPaused = false;
 const _pending: string[] = [];
@@ -30,7 +31,6 @@ export async function resumeIndex() {
     
     if (_pending.length) {
         for (const file of _pending) {
-            
             const workspaceUri = getWorkspaceUriForFile(file);
             await indexFile(workspaceUri, file);
         }
@@ -41,6 +41,7 @@ export async function resumeIndex() {
 export async function indexFile(workspaceUri: DocumentUri, documentUri: DocumentUri, range?: Nullable<Range>) {
     if (isIndexingPaused()) {
         if (_pending.indexOf(documentUri) < 0) {
+            Log.i(`Indexing pauses, queuing file: <${workspaceUri}>`);
             _pending.push(documentUri);
         }
         return;
@@ -49,6 +50,7 @@ export async function indexFile(workspaceUri: DocumentUri, documentUri: Document
     documentUri = trimFileSchemePrefix(formatUriForRead(documentUri));
     
     if (!isFileURINaive(documentUri)) {
+        Log.i(`File is not URI-like: <${documentUri}>`);
         return
     }
     
@@ -66,6 +68,7 @@ export async function indexFile(workspaceUri: DocumentUri, documentUri: Document
             await indexCatalogue(workspaceUri, documentUri, range);
             break;
         default:
+            Log.i(`Not indexing file: <${documentUri}>`);
             // NO_OP
             break
     }

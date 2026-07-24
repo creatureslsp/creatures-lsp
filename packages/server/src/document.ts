@@ -66,7 +66,6 @@ export async function unpackDocument(reference: UriLike | CreaturesDocument<any>
             languageId = getLanguageIdFromFileName(documentUri);
         }
     } else {
-        console.error(`Checking if file exists<${documentUri}>`);
         if (!(await fileExists(documentUri))) {
             console.error("File does not exist; URI:" + documentUri)
             return null;

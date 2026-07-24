@@ -5,6 +5,7 @@ import {deleteCaosCatalogueWorkspaceIndex} from "./index.caos.catalogue-usages.j
 import {deleteCatalogueEntryWorkspaceIndex} from "./index.catalogue.entries.js";
 import {getFiles} from "../files.js";
 import {indexFile} from "./index.file.js";
+import {Log} from "../ConnLogger.js";
 
 
 const didInitIndex:string[] = [];

@@ -6,6 +6,7 @@ import type {CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
 import {getCaosCatalogueLocations} from "../../indices/index.caos.catalogue-usages.js";
 import {getCatalogueLocations} from "../../indices/index.catalogue.entries.js";
 import {IndexedItemLocation} from "../../indices/indices.js";
+import {Log} from "../../ConnLogger.js";
 
 export async function getCaosCatalogueNameReferences(
     workspaceUri: string,
@@ -22,6 +23,7 @@ export async function getCaosCatalogueNameReferences(
     }
     
     const key = closestItem.value ?? closestItem.text;
+    Log.i(`Getting raw catalogue locations for ${key} in ${workspaceUri}`);
     const rawLocations = getCatalogueLocations(workspaceUri, key)
         .concat(getCaosCatalogueLocations(
             workspaceUri,
