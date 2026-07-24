@@ -7,6 +7,7 @@ import type {Nullable} from "@creatures-lsp/caos-kt";
 import {isLinux, isMacOS, isUnix, isWin} from "../../../os.js";
 import {caosJectTcpC2e} from "./caos.inject-c2e.js";
 import {ExecuteCommandParams} from "vscode-languageserver-protocol";
+import {extname} from "@creatures-lsp/extension-util";
 
 export function isCaosInjectSupportedForVariant(variant: GameVariant): boolean {
     if (isC3DSVariant(variant)) {
@@ -84,16 +85,30 @@ function getArgs(params: ExecuteCommandParams): Nullable<Record<string, unknown>
 }
 
 export async function caosInjectCommand(params: ExecuteCommandParams): Promise<JectResult | false> {
+    
     const args = getArgs(params);
     if (!args) {
         connection.window.showErrorMessage("CAOS inject args invalid. Expected JSON string");
         return false;
     }
+    
+    const filename = args.filename as string;
+    if (!filename || extname(filename) !== ".cos") {
+        connection.window.showErrorMessage("Cannot inject non-CAOS file");
+        return false;
+    }
+    
     const variant = args.variant as GameVariant;
     if (!variant) {
         connection.window.showErrorMessage("Cannot inject CAOS without game variant");
         return false;
     }
+    
+    if (!isCaosInjectSupportedForVariant(variant)) {
+        connection.window.showErrorMessage("Caos injection not supported for this variant and/or this OS");
+        return false;
+    }
+    
     const serial = args.serial as string;
     if (!serial) {
         connection.window.showErrorMessage("Cannot inject CAOS without injection serial id");

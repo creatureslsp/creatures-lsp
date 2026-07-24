@@ -45,7 +45,10 @@ const injectRaw = (caos: string, aPort?: Nullable<number>, host?: Nullable<strin
         client.on("error", (e) => {
             reject(e || new Error("TCP call failed without error"));
         });
-        
+        caos = caos.trim();
+        if (caos.length > 4 && caos.substring(0, 4).toLowerCase() === "rscr") {
+            caos = caos.substring(4);
+        }
         const terminator = "\nrscr";
         
         const sendMessage = (client: Socket, message: string) => {
@@ -150,7 +153,6 @@ export const caosJectTcpC2e = async (
             
             let name: string = type[0].toUpperCase() + type.slice(1) + " Script";
             if (endIndex - startIndex <= 1) {
-                Log.i(`Empty: ${JSON.stringify(range, null, 2)}`);
                  onResult({
                     name: `${name} [${i}]`,
                     type,
@@ -162,7 +164,11 @@ export const caosJectTcpC2e = async (
                 continue;
             }
             
-            const script = caos.substring(startIndex, endIndex);
+            let script = caos.substring(startIndex, endIndex);
+            if (range.startToken?.toLowerCase() === "scrp" && script.substring(0,4).toLowerCase() !== "scrp") {
+                script = "scrp " + script;
+            }
+            
             
             if (type === "event") {
                 const matches = /^scrp\s+(\d+)\s+(\d+)\s+(\d+)\s+(\d+)/gim.exec(script);
@@ -227,9 +233,15 @@ export const caosJectTcpC2e = async (
         }
     }
     
-    await injectScripts("remove", removalScripts);
-    await injectScripts("event", eventScripts);
-    await injectScripts("install", installScripts);
+    if (bitmask & 1) {
+        await injectScripts("remove", removalScripts);
+    }
+    if (bitmask & 2) {
+        await injectScripts("event", eventScripts);
+    }
+    if (bitmask & 4) {
+        await injectScripts("install", installScripts);
+    }
     await Promise.allSettled(allNotifications);
     await connection.sendNotification("caos/onInjection", {
         index: totalScripts,

@@ -52,13 +52,44 @@
         "enablement": "editorLangId == caos"
       },
       {
-        "command": "caos.injectCAOS",
-        "title": "Inject CAOS to running game",
+        "command": "caos.injectCaos",
+        "title": "Inject CAOS into running game",
         "category": "CAOS",
-        "when": "editorLangId == caos",
+        "when": "editorLangId == caos && caos.canInjectCAOS",
         "enablement": "caos.canInjectCAOS"
+      },
+      {
+        "command": "caos.injectCaosSnippet",
+        "title": "Inject Selected CAOS into game",
+        "category": "CAOS",
+        "when": "editorHasSelection && editorLangId == caos && caos.canInjectCAOS"
+      },
+      {
+        "command": "caos.injectCaosEventScript",
+        "title": "Inject containing event script into game",
+        "category": "CAOS",
+        "when": "editorLangId == caos && caos.canInjectCAOS"
       }
     ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "caos.injectCaos",
+          "when": "editorLangId == caos"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "caos.injectCaosSnippet",
+          "when": "editorLangId == caos && editorHasSelection && caos.canInjectCAOS"
+        },
+        {
+          "command": "caos.injectCaosEventScript",
+          "when": "editorLangId == caos",
+          "enablement": "caos.canInjectCAOS"
+        }
+      ]
+    },
     "configurationDefaults": {
       "[caos]": {
         "editor.semanticHighlighting.enabled": true,
