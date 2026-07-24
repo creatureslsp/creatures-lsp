@@ -7,7 +7,7 @@ import {getCaosDocumentValidationErrors} from "./caos/caos.validate.js";
 import {getDocuments} from "./documents.js";
 import type {Range} from "vscode-languageserver";
 import {LanguageDocumentData, rangesIntersect, sortTextRanges} from "@creatures-lsp/extension-util";
-import {VersionedDocumentData} from "@creatures-lsp/extension-util/dist/VersionedDocumentData.js";
+import {VersionedDocumentData} from "@creatures-lsp/extension-util/VersionedDocumentData";
 import {caosInitLib} from "@creatures-lsp/caos-kt/caos-init-lib";
 import {Log} from "./ConnLogger.js";
 

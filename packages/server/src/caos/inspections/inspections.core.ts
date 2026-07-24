@@ -9,7 +9,7 @@ import {toVsRange} from "@creatures-lsp/extension-util";
 import {initializeCaosInspections} from "./inspections.register.js";
 import {Log} from "../../ConnLogger.js";
 import type {Range} from "vscode-languageserver";
-import {VersionedDocumentData} from "@creatures-lsp/extension-util/dist/VersionedDocumentData.js";
+import {VersionedDocumentData} from "@creatures-lsp/extension-util/VersionedDocumentData";
 import {CAOS_LANGUAGE_ID} from "../settings.js";
 
 let oldDiagnostics: VersionedDocumentData<Diagnostic[]> = new VersionedDocumentData();

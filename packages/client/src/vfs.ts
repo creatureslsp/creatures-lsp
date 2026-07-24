@@ -32,7 +32,7 @@ import {
     isWriteBinaryFileEvent,
     VFS_WRITE_BINARY_FILE_REQUEST,
     VfsWriteBinaryFileRequest
-} from "@creatures-lsp/extension-util/dist/vfs.js";
+} from "@creatures-lsp/extension-util/vfs";
 
 const {fs} = workspace;
 

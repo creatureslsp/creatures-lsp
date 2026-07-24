@@ -10,7 +10,7 @@ import type {Range} from "vscode-languageserver-protocol";
 import type {ParseTreeItem} from "@creatures-lsp/extension-util";
 import {getCatalogueNameUnderCursor} from "./catalogue/catalogue.util.js";
 import {resumeIndex} from "./indices/index.file.js";
-import {offsetRenameRange} from "@creatures-lsp/extension-util/dist/get-workspace-edits.js";
+import {offsetRenameRange} from "@creatures-lsp/extension-util/get-workspace-edits";
 
 /**
  * Registers an LSP formatting function if needed

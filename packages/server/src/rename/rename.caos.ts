@@ -7,8 +7,8 @@ import {getNamedVariableLocationsForType} from "../indices/index.caos.named-vari
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
 import {isVsCode, getWorkspaceEdits, rangesIntersect} from "@creatures-lsp/extension-util";
 import {renameCatalogueInCatalogueAndCaosFiles} from "./rename.catalogue.js";
-import {offsetRenameRange} from "@creatures-lsp/extension-util/dist/get-workspace-edits.js";
-import {pushInto} from "@creatures-lsp/extension-util/dist/array-util.js";
+import {offsetRenameRange} from "@creatures-lsp/extension-util/get-workspace-edits";
+import {pushInto} from "@creatures-lsp/extension-util/array-util";
 
 export function renameInCaosDocument(
     document: CaosDocument,

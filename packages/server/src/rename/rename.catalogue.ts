@@ -7,7 +7,7 @@ import {getCaosCatalogueLocations} from "../indices/index.caos.catalogue-usages.
 import type {CatalogueDocument} from "../catalogue/catalogue.document.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
 import {offsetRenameRange} from "@creatures-lsp/extension-util";
-import {pushInto} from "@creatures-lsp/extension-util/dist/array-util.js";
+import {pushInto} from "@creatures-lsp/extension-util/array-util";
 
 
 export function renameInCatalogueDocument(

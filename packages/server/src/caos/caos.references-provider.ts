@@ -11,11 +11,12 @@ import {getNamedVariableReferences} from "./references/references.named-variable
 import {formatCommandToLocation, getAllCommandUsages} from "./references/references.util.js";
 import {getCaosCatalogueNameReferences} from "./references/references.catalogue.js";
 import {CreaturesDocument, isCaosDocument} from "../document.js";
-import {sortTextRangesReversed} from "@creatures-lsp/extension-util/dist/position-utils.js";
+import {sortTextRangesReversed} from "@creatures-lsp/extension-util/position-utils";
 import {caosInitLib} from "@creatures-lsp/caos-kt/caos-init-lib";
 import type {Nullable} from "@creatures-lsp/extension-util";
 import {getCaosCursorPosition, getCaosCursorPositionFromRawText} from "@creatures-lsp/caos-kt/caos-cursor-data";
 import type {C2eStringVal, CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
+import {Log} from "../ConnLogger.js";
 
 // export async function getRawCaosLocations(
 //     params: ReferenceParams,
@@ -231,16 +232,18 @@ export async function getRawCaosLocations(
         case "REAN":
         case "REAQ":
             if (!Is.c2eStringVal(closestItem)) {
+                Log.i(`${command.command} parameter is not C2e string. Was: ${JSON.stringify(closestItem, null, 2)}`);
                 return [];
             }
+            Log.i(`${command.command} parameter is a C2e string. Was: ${(closestItem as C2eStringVal).value}`);
             return (await getCaosCatalogueNameReferences(
                 workspaceUri,
                 commandCall,
-                closestItem
-            )).concat(closestItem ? {
+                closestItem as C2eStringVal,
+            ))/*.concat(closestItem ? {
                 range: (closestItem as C2eStringVal).textRange,
                 uri: document.documentUri,
-            } satisfies Location : []);
+            } satisfies Location : [])*/;
         case "GSUB":
         default:
             return [];

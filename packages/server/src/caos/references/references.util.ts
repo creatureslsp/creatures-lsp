@@ -20,7 +20,7 @@ import {ReferenceParams} from "vscode-languageserver-protocol";
 import {getFiles} from "../../files.js";
 import {connection} from "../../connection.vscode.js";
 import {isCaosDocument, unpackDocument} from "../../document.js";
-import {offsetRenameRange} from "@creatures-lsp/extension-util/dist/get-workspace-edits.js";
+import {offsetRenameRange} from "@creatures-lsp/extension-util/get-workspace-edits";
 
 
 
