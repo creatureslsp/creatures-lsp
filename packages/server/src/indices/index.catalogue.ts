@@ -29,7 +29,9 @@ export async function indexCatalogue(workspaceUri: DocumentUri, documentOrUri: C
     
     const workspaceUriString: DocumentUri = workspaceUri ?? getWorkspaceUriForFile(document.documentUri);
     
-    clearCatalogueIndicesForDocument(workspaceUri, document.documentUri, range);
+    if (range == null) {
+        clearCatalogueIndicesForDocument(workspaceUri, document.documentUri, range);
+    }
     
     const result = parseCatalogue(text);
     
