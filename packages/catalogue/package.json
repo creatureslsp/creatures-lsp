@@ -37,6 +37,14 @@
     "./semantics-legend": {
       "default": "./dist/semantics-legend.js",
       "types": "./dist/semantics-legend.d.ts"
+    },
+    "./catalogue-formatter": {
+      "default": "./dist/catalogue-formatter.js",
+      "types": "./dist/catalogue-formatter.d.ts"
+    },
+    "./catalogue-validation": {
+      "default": "./dist/catalogue-validation.js",
+      "types": "./dist/catalogue-validation.d.ts"
     }
   },
   "files": [
