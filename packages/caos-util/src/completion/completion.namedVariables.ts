@@ -1,5 +1,5 @@
 import {Nullable, offsetRenameRange} from "@creatures-lsp/extension-util";
-import {GameVariant} from "@creatures-lsp/caos-kt";
+import type {GameVariant} from "@creatures-lsp/caos-kt";
 import {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
 import {CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
 import {NamedVarPrefix} from "../completions.js";

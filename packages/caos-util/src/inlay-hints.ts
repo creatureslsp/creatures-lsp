@@ -1,5 +1,5 @@
 import {InlayHint} from "vscode-languageserver-types";
-import {GameVariant} from '@creatures-lsp/caos-kt';
+import type {GameVariant} from '@creatures-lsp/caos-kt';
 import {type CaosParseResult, parseCaos} from '@creatures-lsp/caos-kt/caos-parser';
 import {getCaosInlayHints} from '@creatures-lsp/caos-kt/caos-inlay-hints';
 import {isVsCode, Nullable} from "@creatures-lsp/extension-util";

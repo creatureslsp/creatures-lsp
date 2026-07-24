@@ -4,9 +4,9 @@ import {
     PLUS_OR_MINUS_WITH_NUMBER_REGEX,
     getExtension,
     hasExtension,
-    stripSurroundingQuotes
+    stripSurroundingQuotes,
+    extname
 } from "@creatures-lsp/extension-util";
-import _path from "path";
 
 export const Caos2Validators = {
     isNumber: isNumber,
@@ -65,8 +65,8 @@ function isSingleImage(value: string): boolean {
         return false;
     }
     
-    const extension = _path.extname(fileName);
-    
+    const extension = extname(fileName) ?? "";
+
     // Check is sprite extension is valid
     return fileOrSpriteExtensions.indexOf(extension) >= 0;
 }
@@ -106,5 +106,5 @@ function isURL(value: string) {
 
 export function isFile(value: string) {
     const fileName = getFilenameWithoutArrayAccess(value)
-    return !!fileName && !!_path.extname(fileName);
+    return !!fileName && !!extname(fileName);
 }

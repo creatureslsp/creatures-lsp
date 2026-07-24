@@ -1,4 +1,4 @@
-import {GameVariant} from "@creatures-lsp/caos-kt";
+import type {GameVariant} from "@creatures-lsp/caos-kt";
 import type {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
 import {Position} from "vscode-languageserver-types";
 import {isVsCode, Nullable, RangeWithIndex} from "@creatures-lsp/extension-util";

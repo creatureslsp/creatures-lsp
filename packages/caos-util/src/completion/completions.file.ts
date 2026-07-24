@@ -1,6 +1,5 @@
 import {CompletionItem, CompletionItemKind, Range} from "vscode-languageserver-types";
-import * as path from "path";
-import {filterByExtension, Nullable, trimFileSchemePrefix} from "@creatures-lsp/extension-util";
+import {filterByExtension, Nullable, relative, trimFileSchemePrefix} from "@creatures-lsp/extension-util";
 import {createQuotedCompletionItem} from "./completions.create.js";
 
 /**
@@ -33,7 +32,7 @@ export function getFilenameCompletionPaths(
     return filesFilteredByExtension
         .map(file => {
             try {
-                return path.relative(directory, file);
+                return relative(directory, file);
             } catch {
                 return null;
             }

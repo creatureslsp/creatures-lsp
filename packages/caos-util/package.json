@@ -3,8 +3,9 @@
   "version": "0.0.2",
   "type": "module",
   "description": "Utility methods for parsing and validating CAOS scripts for the Creatures games",
-  "types": "./lib/caos-util.d.ts",
-  "main": "lib/caos-util.js",
+  "types": "./lib/index.d.ts",
+  "main": "lib/index.js",
+  "sideEffects": false,
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -12,10 +13,93 @@
     "url": "https://github.com/bedalton/caos-language-server"
   },
   "exports": {
-    ".": "./lib/index.js"
+    ".": {
+      "default": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./commands": {
+      "default": "./lib/commands.js",
+      "types": "./lib/commands.d.ts"
+    },
+    "./completions": {
+      "default": "./lib/completions.js",
+      "types": "./lib/completions.d.ts"
+    },
+    "./constants": {
+      "default": "./lib/constants.js",
+      "types": "./lib/constants.d.ts"
+    },
+    "./context-walker": {
+      "default": "./lib/context-walker.js",
+      "types": "./lib/context-walker.d.ts"
+    },
+    "./cursor-data": {
+      "default": "./lib/cursor-data.js",
+      "types": "./lib/cursor-data.d.ts"
+    },
+    "./document-symbols-provider": {
+      "default": "./lib/document-symbols-provider.js",
+      "types": "./lib/document-symbols-provider.d.ts"
+    },
+    "./documentation-formattter": {
+      "default": "./lib/documentation-formattter.js",
+      "types": "./lib/documentation-formattter.d.ts"
+    },
+    "./drillDown": {
+      "default": "./lib/drillDown.js",
+      "types": "./lib/drillDown.d.ts"
+    },
+    "./formatter": {
+      "default": "./lib/formatter.js",
+      "types": "./lib/formatter.d.ts"
+    },
+    "./goto": {
+      "default": "./lib/goto.js",
+      "types": "./lib/goto.d.ts"
+    },
+    "./hover-documentation": {
+      "default": "./lib/hover-documentation.js",
+      "types": "./lib/hover-documentation.d.ts"
+    },
+    "./inlay-hints": {
+      "default": "./lib/inlay-hints.js",
+      "types": "./lib/inlay-hints.d.ts"
+    },
+    "./is-similar-variant": {
+      "default": "./lib/is-similar-variant.js",
+      "types": "./lib/is-similar-variant.d.ts"
+    },
+    "./is-similar": {
+      "default": "./lib/is-similar.js",
+      "types": "./lib/is-similar.d.ts"
+    },
+    "./is-util": {
+      "default": "./lib/is-util.js",
+      "types": "./lib/is-util.d.ts"
+    },
+    "./semantic-highlighter": {
+      "default": "./lib/semantic-highlighter.js",
+      "types": "./lib/semantic-highlighter.d.ts"
+    },
+    "./semantics-legend": {
+      "default": "./lib/semantics-legend.js",
+      "types": "./lib/semantics-legend.d.ts"
+    },
+    "./subroutines": {
+      "default": "./lib/subroutines.js",
+      "types": "./lib/subroutines.d.ts"
+    },
+    "./token-utils": {
+      "default": "./lib/token-utils.js",
+      "types": "./lib/token-utils.d.ts"
+    },
+    "./command-call-positional-data": {
+      "default": "./lib/command-call-positional-data.js",
+      "types": "./lib/command-call-positional-data.d.ts"
+    }
   },
   "files": [
-    "./lib/index.js"
+    "lib"
   ],
   "scripts": {
     "clean": "rimraf lib && rimraf tsconfig.tsbuildinfo && mkdir -p lib",
@@ -25,13 +109,6 @@
     "build": "tsc --build",
     "test": "echo 'no test'",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
-  },
-  "typesVersions": {
-    "*": {
-      ".": [
-        "./lib/index.d.ts"
-      ]
-    }
   },
   "dependencies": {
     "@creatures-lsp/extension-util": "*",

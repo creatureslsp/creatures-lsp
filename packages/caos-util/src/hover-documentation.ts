@@ -2,7 +2,7 @@
 // noinspection JSUnusedGlobalSymbols
 
 import {Hover, Position} from "vscode-languageserver-types";
-import {GameVariant} from "@creatures-lsp/caos-kt";
+import type {GameVariant} from "@creatures-lsp/caos-kt";
 import {
     caosCommandDefinitionFromCommandCall,
     type CaosParseResult,

@@ -1,4 +1,4 @@
-import { GameVariant } from "@creatures-lsp/caos-kt";
+import type { GameVariant } from "@creatures-lsp/caos-kt";
 import type {CaosParserItem, Caos2Comment} from "@creatures-lsp/caos-kt/caos-core";
 import type {CompletionItem, Range} from "vscode-languageserver-types";
 import {inRange} from "@creatures-lsp/extension-util";

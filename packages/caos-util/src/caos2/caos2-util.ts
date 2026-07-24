@@ -1,5 +1,5 @@
 import {Caos2Validators} from "./caos2.validators.js";
-import path from "path";
+import {extname} from "@creatures-lsp/extension-util";
 
 export enum Caos2ValueType {
     NUMBER,
@@ -28,14 +28,14 @@ export function validateCaos2Value(type: Caos2ValueType, value: string) {
         case Caos2ValueType.NON_CAOS_FILE:
             return !Caos2Validators.hasExtension(value, "cos", "caos");
         case Caos2ValueType.OUTPUT_COB_FILE:
-            value = path.extname(value)
+            value = extname(value)
                 ?.toLowerCase()
-                ?.trim();
+                ?.trim() ?? "";
             return !value || value === ".cob"
         case Caos2ValueType.OUTPUT_PRAY_FILE:
-            value = path.extname(value)
+            value = extname(value)
                 ?.toLowerCase()
-                ?.trim();
+                ?.trim() ?? "";
             return !value || value === ".agent" || value === ".agents";
         case Caos2ValueType.DATE:
             return Caos2Validators.isDate(value);
