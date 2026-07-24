@@ -10,7 +10,7 @@ import type { CaosParseResult } from "./caos-parser.mjs";
  * @param caos raw CAOS text
  * @param checkCancelled throw an exception when validation should be cancelled
  */
-export function validateCaos(variant: GameVariant, caos: string, checkCancelled: () => void): ErrorVal[]
+export function validateCaos(variant: GameVariant, caos: string, checkCancelled?: () => void): ErrorVal[]
 
 /**
  * Validates a CAOS parse result for errors
@@ -18,4 +18,4 @@ export function validateCaos(variant: GameVariant, caos: string, checkCancelled:
  * @param parseResult result of earlier CAOS parse
  * @param checkCancelled throw an exception when validation should be cancelled
  */
-export function validateCaos(variant: GameVariant, parseResult: CaosParseResult, checkCancelled: () => void): ErrorVal[]
+export function validateCaos(variant: GameVariant, parseResult: CaosParseResult, checkCancelled?: () => void): ErrorVal[]
