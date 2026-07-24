@@ -1,4 +1,4 @@
-import type {Nullable} from "./types";
+import type {Nullable} from "./types.js";
 
 
 export const UNSIGNED_NUMBER_REGEX = /^(\\d+)$/

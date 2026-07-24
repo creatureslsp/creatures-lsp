@@ -1,5 +1,5 @@
 import type {RangeWithIndex} from "./ast.js";
-import type {Nullable} from "./index";
+import type {Nullable} from "./types.js";
 
 /**
  * Information object for a semantic token

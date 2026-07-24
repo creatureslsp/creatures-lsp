@@ -1,4 +1,4 @@
-import type {Nullable} from "./types";
+import type {Nullable} from "./types.js";
 
 let _lspRunner: Nullable<string>= null;
 let _isVsCode: boolean = false;

@@ -1,4 +1,4 @@
-import type {LanguageDocumentIndexedData, Nullable} from "./types";
+import type {LanguageDocumentIndexedData, Nullable} from "./types.js";
 
 declare type LanguageData<T> = LanguageDocumentIndexedData<T>;
 

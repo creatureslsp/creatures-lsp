@@ -1,6 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
-import type {ParseTreeItem, Nullable, RangeWithIndex} from "./types";
+import type {ParseTreeItem, Nullable, RangeWithIndex} from "./types.js";
 
 /**
  * Gets the extents of text ranges from parser items. Returns null if no parser items

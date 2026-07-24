@@ -1,4 +1,4 @@
-import type {Nullable} from "./types";
+import type {Nullable} from "./types.js";
 
 
 export function getBool(value: string | number | boolean, defaultValue?: Nullable<boolean>): Nullable<boolean> {

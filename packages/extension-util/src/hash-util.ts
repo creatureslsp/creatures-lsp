@@ -1,4 +1,4 @@
-import type {Nullable} from "./types";
+import type {Nullable} from "./types.js";
 
 
 function tempGet(temp: any, key: string): Nullable<any> {

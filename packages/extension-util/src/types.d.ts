@@ -3,9 +3,9 @@ import type {TextEdit} from "vscode-languageserver-types";
 
 export type Nullable<T> = T | undefined | null;
 
-export * from "./ast";
+export * from "./ast.js";
 
-export * from "./SemanticToken"
+export * from "./SemanticToken.js"
 
 export interface IndexedItemLocation {
     readonly documentUri: DocumentUri;

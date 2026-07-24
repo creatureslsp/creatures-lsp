@@ -1,4 +1,4 @@
-import type {LanguageDocumentIndexedData, Nullable} from "./types";
+import type {LanguageDocumentIndexedData, Nullable} from "./types.js";
 
 declare type VersionedData<T> = {
     version: number;
@@ -37,7 +37,7 @@ export class VersionedDocumentData<T> {
             return null;
         }
         const rawData = this.getRaw(languageId, documentURI);
-        if (rawData == null || rawData.version > newVersion) {
+        if (rawData == null || rawData.version < newVersion) {
             return null;
         }
         return rawData.data;

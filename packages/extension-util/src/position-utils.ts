@@ -2,7 +2,7 @@
 // noinspection JSUnusedGlobalSymbols
 /*eslint eqeqeq: ["error", {"null": "never"}] */
 
-import type {Nullable, Range, RangeWithIndex} from "./types"
+import type {Nullable, Range, RangeWithIndex} from "./types.js"
 import type {Position} from "vscode-languageserver";
 import {getRangeStartOffset} from "./lsp-runner.js";
 

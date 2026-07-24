@@ -1,7 +1,7 @@
-import {extname} from "./path";
+import {extname} from "./path.js";
 import type {DocumentUri} from "vscode-languageserver-types";
-import type {Nullable} from "./types";
-import {getArrayAccessFileNameIndex} from "./array-access-filename";
+import type {Nullable} from "./types.js";
+import {getArrayAccessFileNameIndex} from "./array-access-filename.js";
 
 export function filterByExtension(filesInProject: string[], extensions: Nullable<string[]>) {
     // Filter out blank paths
@@ -16,7 +16,7 @@ export function filterByExtension(filesInProject: string[], extensions: Nullable
     extensions = extensions
         .map(ext => {
             ext = ext.toLowerCase();
-            if (ext[0] != '.') {
+            if (ext[0] !== '.') {
                 ext = '.' + ext;
             }
             return ext;

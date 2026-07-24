@@ -5,16 +5,96 @@
   "license": "MIT",
   "description": "Helper functions for dealing with language extensions",
   "version": "0.0.2",
+  "type": "module",
   "engines": {
     "node": "*"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./array-access-filename": {
+      "default": "./dist/array-access-filename.js",
+      "types": "./dist/array-access-filename.d.ts"
+    },
+    "./array-util": {
+      "default": "./dist/array-util.js",
+      "types": "./dist/array-util.d.ts"
+    },
+    "./files-util": {
+      "default": "./dist/files-util.js",
+      "types": "./dist/files-util.d.ts"
+    },
+    "./hash-util": {
+      "default": "./dist/hash-util.js",
+      "types": "./dist/hash-util.d.ts"
+    },
+    "./number-util": {
+      "default": "./dist/number-util.js",
+      "types": "./dist/number-util.d.ts"
+    },
+    "./position-utils": {
+      "default": "./dist/position-utils.js",
+      "types": "./dist/position-utils.d.ts"
+    },
+    "./repack": {
+      "default": "./dist/repack.js",
+      "types": "./dist/repack.d.ts"
+    },
+    "./string-util": {
+      "default": "./dist/string-util.js",
+      "types": "./dist/string-util.d.ts"
+    },
+    "./token-range": {
+      "default": "./dist/token-range.js",
+      "types": "./dist/token-range.d.ts"
+    },
+    "./vfs": {
+      "default": "./dist/vfs.js",
+      "types": "./dist/vfs.d.ts"
+    },
+    "./inflect": {
+      "default": "./dist/inflect.js",
+      "types": "./dist/inflect.d.ts"
+    },
+    "./lsp-runner": {
+      "default": "./dist/lsp-runner.js",
+      "types": "./dist/lsp-runner.d.ts"
+    },
+    "./get-workspace-edits": {
+      "default": "./dist/get-workspace-edits.js",
+      "types": "./dist/get-workspace-edits.d.ts"
+    },
+    "./path": {
+      "default": "./dist/path.js",
+      "types": "./dist/path.d.ts"
+    },
+    "./bool-util": {
+      "default": "./dist/bool-util.js",
+      "types": "./dist/bool-util.d.ts"
+    },
+    "./VersionedDocumentData": {
+      "default": "./dist/VersionedDocumentData.js",
+      "types": "./dist/VersionedDocumentData.d.ts"
+    },
+    "./LanguageDocumentData": {
+      "default": "./dist/LanguageDocumentData.js",
+      "types": "./dist/LanguageDocumentData.d.ts"
+    },
+    "./MappedArray": {
+      "default": "./dist/MappedArray.js",
+      "types": "./dist/MappedArray.d.ts"
+    }
+  },
   "scripts": {
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p ./dist",
     "prepack": "yarn build",
     "copy-files": "mkdir -p ./dist && cp \"./package.json\" ./dist/ && find \"./src\" -name \"*.d.ts\" -exec cp -LR {} ./dist \\;",
-    "build-first": "echo \"export * from \\\"./types\\\"\" > ./dist/index.d.ts && cat ./src/_index.ts >> ./dist/index.d.ts",
+    "build-first": "echo \"export * from \\\"./types.js\\\"\" > ./dist/index.d.ts && cat ./src/_index.ts >> ./dist/index.d.ts",
     "rename-index-js-file": "( [ ! -f ./dist/_index.js ] || mv ./dist/_index.js ./dist/index.js) && ([ ! -f ./dist/_index.d.ts.map ] || rm ./dist/_index.d.ts.map)  && ([ ! -f ./dist/_index.js ] || rm ./dist/_index.d.ts)",
     "run-after": "yarn copy-files && yarn rename-index-js-file",
     "build": "yarn build-first && tsc --build && sleep 4 && yarn run-after",
