@@ -1,8 +1,7 @@
 // This barrel is intentionally side-effect-free: importing it never
 // initializes caos-kt or loads any command-library data. Call
-// caosInitLib() (from "@creatures-lsp/caos-kt/caos-init-lib") once, then
 // one of useFullCaosLibDefinitions(), useSlimCaosLibDefinitions(), or your
-// own libjson loader, before calling anything exported here.
+// own CAOS lib loader, before calling anything exported here.
 //
 // Type-only re-export (never a value/bare import — see caos-kt's own
 // index.mts for why the bare specifier must stay side-effect-free).

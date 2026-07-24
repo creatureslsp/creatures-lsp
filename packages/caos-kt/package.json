@@ -51,10 +51,6 @@
       "default": "./dist/caos-infer-targ.mjs",
       "types": "./dist/caos-infer-targ.d.mts"
     },
-    "./caos-init-lib": {
-      "default": "./dist/caos-init-lib.mjs",
-      "types": "./dist/caos-init-lib.d.mts"
-    },
     "./caos-inlay-hints": {
       "default": "./dist/caos-inlay-hints.mjs",
       "types": "./dist/caos-inlay-hints.d.mts"

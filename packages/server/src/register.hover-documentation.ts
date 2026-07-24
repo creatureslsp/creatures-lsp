@@ -3,7 +3,7 @@ import {getCaosHoverDocumentation} from "./caos/caos.hover-documentation.js";
 import {isCaosDocument, unpackDocument} from "./document.js";
 import type {Hover, HoverParams} from "vscode-languageserver";
 import type {Nullable} from "@creatures-lsp/caos-kt";
-import {caosInitLib} from "@creatures-lsp/caos-kt/caos-init-lib";
+import {caosInitLib} from "./caos/caos-init-lib.mjs";
 import {Log} from "./ConnLogger.js";
 
 

@@ -17,7 +17,7 @@ import {
     isInCaosCatalogueKey
 } from "@creatures-lsp/caos-util";
 
-import {caosInitLib} from "@creatures-lsp/caos-kt/caos-init-lib";
+import {caosInitLib} from "./caos/caos-init-lib.mjs";
 
 import type {DefinitionParams, DocumentUri, Position} from "vscode-languageserver";
 import type {Definition, LocationLink} from "vscode-languageserver-types";

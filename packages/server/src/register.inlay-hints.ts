@@ -2,7 +2,7 @@ import {getCaosDocumentInlayHints} from "@creatures-lsp/caos-util";
 import type {InlayHint, InlayHintParams} from "vscode-languageserver";
 import {isCaosDocument, unpackDocument} from "./document.js";
 import {connection} from "./connection.vscode.js";
-import {caosInitLib} from "@creatures-lsp/caos-kt/caos-init-lib";
+import {caosInitLib} from "./caos/caos-init-lib.mjs";
 import {Log} from "./ConnLogger.js";
 
 

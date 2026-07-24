@@ -13,13 +13,12 @@ import type {Nullable} from "@creatures-lsp/extension-util";
 import {CatalogueSymbolProvider} from "./catalogue.outliner.js";
 import {catalogueSemanticLegend} from "@creatures-lsp/catalogue";
 import {catalogueSemanticTokensProvider} from "./catalogue.semantic-tokens.js";
-import {Log} from "./log.js";
-import {caosInitLib} from "@creatures-lsp/caos-kt/caos-init-lib";
 import {initVfs} from "./vfs.js";
+import {useFullCaosLibDefinitions} from "@creatures-lsp/caos-kt/caos-libsfile-full";
 
 let defaultClient: LanguageClient;
 
-caosInitLib();
+useFullCaosLibDefinitions()
 
 export function setDefaultClient(client: LanguageClient) {
     defaultClient = client;

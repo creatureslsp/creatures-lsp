@@ -9,7 +9,7 @@ import {type CreaturesDocument, isCaosDocument, unpackDocument} from "../documen
 import {isIndexingPaused} from "./index.file.js";
 import {Log} from "../ConnLogger.js";
 import {parseCaos} from "../caos/caos.parse.js";
-import {caosInitLib} from "@creatures-lsp/caos-kt/caos-init-lib";
+import {caosInitLib} from "./../caos/caos-init-lib.mjs";
 
 
 export async function indexCaosFile(workspaceUri: Nullable<DocumentUri>, documentOrURI: CreaturesDocument<unknown> | DocumentUri, range?: Nullable<Range>): Promise<boolean> {
