@@ -25,7 +25,6 @@
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0",
     "prependHashBang": "echo \"#! /usr/bin/env node\" > ./dist/node/temp.cjs && cat ./dist/node/server.cjs >> ./dist/node/temp.cjs && rm ./dist/node/server.cjs && mv ./dist/node/temp.cjs ./dist/node/server.cjs && chmod +x ./dist/node/server.cjs",
     "webpack": "webpack --mode development && yarn prependHashBang",
-    "postversion": "webpack --mode development --watch",
     "package": "webpack --mode production --devtool hidden-source-map",
     "test": "echo 'no test'"
   },
