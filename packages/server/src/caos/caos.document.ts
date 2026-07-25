@@ -1,5 +1,5 @@
 import {CAOS_LANGUAGE_ID, CaosSettings, getCaosDocumentSettings, getGlobalCaosSettings} from "./settings.js";
-import {GameVariant} from "@creatures-lsp/caos-util";
+import {GameVariant} from "@creatures-lsp/caos";
 import {Nullable} from "@creatures-lsp/extension-util";
 import {CreaturesDocument} from "../document.js";
 import {DocumentUri} from "vscode-languageserver";

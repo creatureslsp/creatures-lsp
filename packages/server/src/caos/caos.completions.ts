@@ -1,33 +1,32 @@
 import {CompletionItem, CompletionList, DocumentUri, Position} from "vscode-languageserver";
-import {type CaosSettings, getCaosDocumentSettings, getGlobalCaosSettings} from "./settings.js";
+import {getCaosDocumentSettings, getGlobalCaosSettings} from "./settings.js";
 import {
     type GameVariant,
-} from "@creatures-lsp/caos-kt";
+} from "@creatures-lsp/caos";
 
 import {
-    // getCaosCompletionItems,
     type CaosCompletionOptions,
     type CaosCompletionSettings,
-} from "@creatures-lsp/caos-kt/caos-completion";
+} from "@creatures-lsp/caos/completions";
 
 import {
     getCompletionItems as getCaosCompletionItems,
-} from "@creatures-lsp/caos-util";
+} from "@creatures-lsp/caos";
 
 import {
     createEmptyCompletionList,
     getCatalogueNameCompletions,
     getJournalNameCompletions,
     getNamedVariableCompletionItems
-} from "@creatures-lsp/caos-util";
+} from "@creatures-lsp/caos";
 
 import type {
     CommandCall,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatures-lsp/caos/parser";
 
 import {
     type CaosCursorData
-} from "@creatures-lsp/caos-kt/caos-cursor-data";
+} from "@creatures-lsp/caos/cursor-data";
 
 import * as path from "path";
 import {getFiles} from "../files.js";

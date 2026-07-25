@@ -1,4 +1,4 @@
-import {parseCatalogue, type CatalogueEntry} from "@creatures-lsp/caos-kt/catalogue-core";
+import {parseCatalogue, type CatalogueEntry} from "@creatures-lsp/catalogue/core";
 import {getCatalogueRange} from "@creatures-lsp/catalogue";
 import type {CatalogueDocument} from "./catalogue.document.js";
 import type {DocumentSymbol} from "vscode-languageserver-types";

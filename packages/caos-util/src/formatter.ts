@@ -2,6 +2,7 @@
 // noinspection JSUnusedLocalSymbols,GrazieInspection
 
 import {formatCaos} from "@creatures-lsp/caos-kt/caos-formatter";
+export type {CaosFormatterOptions} from "@creatures-lsp/caos-kt/caos-formatter";
 import type {GameVariant, MessageType} from "@creatures-lsp/caos-kt";
 import type {CaosFormatterOptions} from "@creatures-lsp/caos-kt/caos-formatter";
 import {TextEdit} from "vscode-languageserver-types";

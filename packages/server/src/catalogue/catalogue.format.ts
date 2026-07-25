@@ -1,7 +1,7 @@
 import type {DocumentFormattingParams, TextEdit} from "vscode-languageserver";
 import {showMessage} from "../showMessage.js";
-import type {MessageType} from "@creatures-lsp/caos-util";
-import {type CatalogueFormatterOptions, formatCatalogue} from "@creatures-lsp/caos-kt/catalogue-formatter";
+import type {MessageType} from "@creatures-lsp/caos";
+import {type CatalogueFormatterOptions, formatCatalogue} from "@creatures-lsp/catalogue/formatter";
 import type {CatalogueDocument} from "./catalogue.document.js";
 import type {CatalogueServerFormatSettings} from "./settings.js";
 

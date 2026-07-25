@@ -13,18 +13,18 @@ import {Range} from "vscode-languageserver";
 import type {Nullable} from "@creatures-lsp/extension-util";
 import {
     GameVariant,
-} from '@creatures-lsp/caos-util';
+} from '@creatures-lsp/caos';
 
 import {
     parseCaosWithin,
     parseCaos,
     type CaosParseResult,
-} from '@creatures-lsp/caos-kt/caos-parser';
+} from '@creatures-lsp/caos/parser';
 
 import {
     getCaosInlayHints,
     getCaosInlayOptions,
-} from "@creatures-lsp/caos-kt/caos-inlay-hints";
+} from "@creatures-lsp/caos/inlay-hints";
 
 function getSettings(): WorkspaceConfiguration {
     return workspace.getConfiguration('caosScript');

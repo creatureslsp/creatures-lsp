@@ -1,4 +1,4 @@
-import {getCaosDocumentInlayHints} from "@creatures-lsp/caos-util";
+import {getCaosInlayHintsWithOffset} from "@creatures-lsp/caos/inlay-hints";
 import type {InlayHint, InlayHintParams} from "vscode-languageserver";
 import {isCaosDocument, unpackDocument} from "./document.js";
 import {connection} from "./connection.vscode.js";
@@ -34,7 +34,7 @@ async function _onInlayHints(params: InlayHintParams): Promise<InlayHint[]> {
     if (isCaosDocument(document)) {
         caosInitLib();
         const minimumParameterHints = document.settings.inlayHints?.parameterHints?.minimumParameterCountForParameterInlayHints
-        return getCaosDocumentInlayHints(
+        return getCaosInlayHintsWithOffset(
             document.variant,
             document.text,
             document.settings.disabledInlayHints ?? [],

@@ -2,9 +2,11 @@
 
 import type {DocumentUri, Position, Range} from "vscode-languageserver";
 import type {CommandIndex, IndexedItemLocation} from "./indices.js";
-import {Is, type NamedVarPrefix, tok} from "@creatures-lsp/caos-util";
-import type {C2eStringVal} from "@creatures-lsp/caos-kt/caos-core";
-import type {Argument, CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import {Is} from "@creatures-lsp/caos/is-util";
+import {type NamedVarPrefix} from "@creatures-lsp/caos/completions";
+import {tok} from "@creatures-lsp/caos/token-utils";
+import type {C2eStringVal} from "@creatures-lsp/caos/core";
+import type {Argument, CommandCall} from "@creatures-lsp/caos/parser";
 import {getFileName, type Nullable} from "@creatures-lsp/extension-util";
 import {indexFilterDoNotDelete} from "./index.utils.js";
 import {Log} from "../ConnLogger.js";

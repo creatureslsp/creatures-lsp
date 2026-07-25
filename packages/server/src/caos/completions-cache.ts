@@ -2,13 +2,13 @@ import {type CaosSettings, getCaosDocumentSettings, getGlobalCaosSettings} from 
 import {
     type Argument,
     parseCaos,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatures-lsp/caos/parser";
 import {
     type CaosCommand
-} from "@creatures-lsp/caos-kt/caos-libs";
+} from "@creatures-lsp/caos/libs";
 import {Nullable} from "@creatures-lsp/extension-util"
-import {tok} from "@creatures-lsp/caos-util";
-import {NamedVarPrefix} from "@creatures-lsp/caos-util";
+import {tok} from "@creatures-lsp/caos";
+import {NamedVarPrefix} from "@creatures-lsp/caos";
 import {WorkspaceScopedObject} from "../workspace-scoped-object.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
 import {DocumentUri} from "vscode-languageserver";

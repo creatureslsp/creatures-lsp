@@ -1,8 +1,8 @@
 import type {CaosDocument} from "../caos/caos.document.js";
 import type {DocumentUri, Position, TextEdit, WorkspaceEdit} from "vscode-languageserver";
 import {getCommandCallPositionalDataFromDocument} from "../caos/caos.command-call-positional-data.js";
-import {type CommandCallPositionalData, Is, type NamedVarPrefix} from "@creatures-lsp/caos-util";
-import type {Nullable} from "@creatures-lsp/caos-kt";
+import {type CommandCallPositionalData, Is, type NamedVarPrefix} from "@creatures-lsp/caos";
+import type {Nullable} from "@creatures-lsp/caos";
 import {getNamedVariableLocationsForType} from "../indices/index.caos.named-variables.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
 import {isVsCode, getWorkspaceEdits, rangesIntersect} from "@creatures-lsp/extension-util";

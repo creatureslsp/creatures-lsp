@@ -21,9 +21,9 @@
       "default": "./dist/index.js",
       "types": "./dist/index.d.ts"
     },
-    "./catalogue.range": {
-      "default": "./dist/catalogue.range.js",
-      "types": "./dist/catalogue.range.d.ts"
+    "./range": {
+      "default": "./dist/range.js",
+      "types": "./dist/range.d.ts"
     },
     "./completions": {
       "default": "./dist/completions.js",
@@ -41,13 +41,17 @@
       "default": "./dist/semantics-legend.js",
       "types": "./dist/semantics-legend.d.ts"
     },
-    "./catalogue-formatter": {
-      "default": "./dist/catalogue-formatter.js",
-      "types": "./dist/catalogue-formatter.d.ts"
+    "./formatter": {
+      "default": "./dist/formatter.js",
+      "types": "./dist/formatter.d.ts"
     },
-    "./catalogue-validation": {
-      "default": "./dist/catalogue-validation.js",
-      "types": "./dist/catalogue-validation.d.ts"
+    "./validation": {
+      "default": "./dist/validation.js",
+      "types": "./dist/validation.d.ts"
+    },
+    "./core": {
+      "default": "./dist/core.js",
+      "types": "./dist/core.d.ts"
     }
   },
   "files": [

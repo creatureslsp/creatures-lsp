@@ -1,5 +1,5 @@
-import type {ScriptJectResult} from "@creatures-lsp/caos-util";
-import type {Nullable} from "@creatures-lsp/caos-kt";
+import type {ScriptJectResult} from "@creatures-lsp/caos";
+import type {Nullable} from "@creatures-lsp/caos";
 
 export const caosJectTcpC2e = async (
     bitmask: number,

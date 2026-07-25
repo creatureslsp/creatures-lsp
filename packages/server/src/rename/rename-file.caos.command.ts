@@ -2,9 +2,9 @@ import {
     type Argument,
     caosCommandDefinitionFromCommandCall,
     type CommandCall
-} from "@creatures-lsp/caos-kt/caos-parser";
-import type {CaosParameter} from "@creatures-lsp/caos-kt/caos-libs";
-import {type GameVariant, Is} from "@creatures-lsp/caos-util";
+} from "@creatures-lsp/caos/parser";
+import type {CaosParameter} from "@creatures-lsp/caos/libs";
+import {type GameVariant, Is} from "@creatures-lsp/caos";
 import type {FileNameData, WorkspaceChanges} from "@creatures-lsp/extension-util";
 import {isFileParameterWithExtension} from "./rename-file.caos.util.js";
 import type {DocumentUri} from "vscode-languageserver";

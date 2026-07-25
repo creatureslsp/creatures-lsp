@@ -1,8 +1,8 @@
-import type {GameVariant} from "@creatures-lsp/caos-util";
-import type {CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
-import type {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import type {GameVariant} from "@creatures-lsp/caos";
+import type {CaosParserItem} from "@creatures-lsp/caos/core";
+import type {CommandCall} from "@creatures-lsp/caos/parser";
 import {DocumentUri, Location} from "vscode-languageserver";
-import {Is} from "@creatures-lsp/caos-util";
+import {Is} from "@creatures-lsp/caos";
 import {getJournalFileNameLocations} from "../../indices/index.caos.journal-files.js";
 import {Nullable, rangesIntersect} from "@creatures-lsp/extension-util";
 import {collectCommandUsagesForFile, formatCommandToLocation} from "./references.util.js";

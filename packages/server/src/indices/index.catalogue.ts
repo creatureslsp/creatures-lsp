@@ -2,7 +2,7 @@
 
 import type {DocumentUri, Range} from "vscode-languageserver";
 import {type Nullable, rangesIntersect, toVsRange} from "@creatures-lsp/extension-util";
-import {parseCatalogue} from "@creatures-lsp/caos-kt/catalogue-core";
+import {parseCatalogue} from "@creatures-lsp/catalogue/core";
 import {clearCatalogueEntries, indexCatalogueEntry} from "./index.catalogue.entries.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
 import {type CreaturesDocument, isCatalogueDocument, unpackDocument, type UriLike} from "../document.js";

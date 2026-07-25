@@ -1,18 +1,18 @@
-import {Is, tok} from "@creatures-lsp/caos-util";
+import {Is, tok} from "@creatures-lsp/caos";
 import type {
     CommandCall,
     Argument,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatures-lsp/caos/parser";
 
 import type {
     CaosParserItem,
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatures-lsp/caos/core";
 
 import type {Diagnostic} from "vscode-languageserver/node.js";
 import type {CommandInspection} from "../../types.js";
 import {registerInspection} from "./inspections.core.js";
 import {InspectionData} from "./InspectionData.js";
-import type {Nullable} from "@creatures-lsp/caos-kt";
+import type {Nullable} from "@creatures-lsp/caos";
 
 
 

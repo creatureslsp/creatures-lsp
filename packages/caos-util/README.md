@@ -34,7 +34,7 @@ For direct parser access, import from `@creatures-lsp/caos-kt/caos-parser`.
 - `format(variant, text, settings)`: Produce LSP `TextEdit` values for formatted CAOS.
 - `getCompletionItems(...)`: Produce CAOS completion items at a document position.
 - `getHoverItem(...)`: Produce hover documentation at a document position.
-- `getCaosDocumentInlayHints(...)`: Produce inlay hints.
+- `getCaosInlayHintsWithOffset(...)`: Produce inlay hints with a given char offset.
 - `getCaosDocumentSemanticTokens(...)`: Produce semantic tokens.
 
 The package uses ESM and LSP types from `vscode-languageserver-types`.

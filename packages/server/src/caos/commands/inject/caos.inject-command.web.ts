@@ -1,6 +1,6 @@
 import {connection} from "../../../connection.vscode.js";
-import type {JectResult} from "@creatures-lsp/caos-util";
-import {type GameVariant} from "@creatures-lsp/caos-util";
+import type {JectResult} from "@creatures-lsp/caos";
+import {type GameVariant} from "@creatures-lsp/caos";
 import {ExecuteCommandParams} from "vscode-languageserver-protocol";
 
 export function isCaosInjectSupportedForVariant(variant: GameVariant): boolean {

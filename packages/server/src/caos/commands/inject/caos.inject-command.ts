@@ -1,9 +1,9 @@
 import {connection} from "../../../connection.vscode.js";
 import {readTextFile} from "../../../files.js";
 import {Log} from "../../../ConnLogger.js";
-import type {JectResult, JectStatus, ScriptJectResult} from "@creatures-lsp/caos-util";
-import {type GameVariant, isC3DSVariant} from "@creatures-lsp/caos-util";
-import type {Nullable} from "@creatures-lsp/caos-kt";
+import type {JectResult, JectStatus, ScriptJectResult} from "@creatures-lsp/caos";
+import {type GameVariant, isC3DSVariant} from "@creatures-lsp/caos";
+import type {Nullable} from "@creatures-lsp/caos";
 import {isLinux, isMacOS, isUnix, isWin} from "../../../os.js";
 import {caosJectTcpC2e} from "./caos.inject-c2e.js";
 import {ExecuteCommandParams} from "vscode-languageserver-protocol";

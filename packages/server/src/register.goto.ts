@@ -1,21 +1,21 @@
 import {
     type CaosCursorData,
     getCaosCursorPosition,
-} from "@creatures-lsp/caos-kt/caos-cursor-data";
+} from "@creatures-lsp/caos/cursor-data";
 
 import type {
     CaosParserItem
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatures-lsp/caos/core";
 
 import {
     type CaosParseResult,
     parseCaosNear,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatures-lsp/caos/parser";
 
 import {
     getGotoInformation,
     isInCaosCatalogueKey
-} from "@creatures-lsp/caos-util";
+} from "@creatures-lsp/caos";
 
 import {caosInitLib} from "./caos/caos-init-lib.js";
 

@@ -12,7 +12,7 @@ export * from "./completions.js";
 export * from "./constants.js";
 export * from "./context-walker.js";
 export * from "./cursor-data.js";
-export * from "./document-symbols-provider.js";
+export * from "./document-symbols.js";
 export * from "./formatter.js";
 export * from "./goto.js";
 export * from "./hover-documentation.js";
@@ -25,4 +25,4 @@ export * from "./command-call-positional-data.js";
 export * from "./completion/caos2/completions.caos2pray.values.js"
 export * from "./drillDown.js";
 export * from "./token-utils.js";
-export type { JectResult, JectStatus, ScriptJectResult, ScriptType } from "./caos-ject-types.js";
+export type { JectResult, JectStatus, ScriptJectResult, ScriptType } from "./ject-types.js";

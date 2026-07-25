@@ -4,16 +4,16 @@ import {type DocumentUri, type Location, WorkDoneProgress} from "vscode-language
 import {
     Is,
     isSimilarVariant,
-} from "@creatures-lsp/caos-util";
+} from "@creatures-lsp/caos";
 import {
     parseCaos
-} from "@creatures-lsp/caos-kt/caos-parser";
-import {type GameVariant} from "@creatures-lsp/caos-kt";
+} from "@creatures-lsp/caos/parser";
+import {type GameVariant} from "@creatures-lsp/caos";
 import type {
     Argument,
     CaosParseResult,
     CommandCall,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatures-lsp/caos/parser";
 import {caosInitLib} from "./../caos-init-lib.js";
 import {Nullable} from "@creatures-lsp/extension-util";
 import {ReferenceParams} from "vscode-languageserver-protocol";

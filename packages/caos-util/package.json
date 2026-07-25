@@ -40,9 +40,9 @@
       "default": "./lib/cursor-data.js",
       "types": "./lib/cursor-data.d.ts"
     },
-    "./document-symbols-provider": {
-      "default": "./lib/document-symbols-provider.js",
-      "types": "./lib/document-symbols-provider.d.ts"
+    "./document-symbols": {
+      "default": "./lib/document-symbols.js",
+      "types": "./lib/document-symbols.d.ts"
     },
     "./documentation-formattter": {
       "default": "./lib/documentation-formattter.js",
@@ -67,6 +67,18 @@
     "./inlay-hints": {
       "default": "./lib/inlay-hints.js",
       "types": "./lib/inlay-hints.d.ts"
+    },
+    "./core": {
+      "default": "./lib/core.js",
+      "types": "./lib/core.d.ts"
+    },
+    "./libs": {
+      "default": "./lib/libs.js",
+      "types": "./lib/libs.d.ts"
+    },
+    "./parser": {
+      "default": "./lib/parser.js",
+      "types": "./lib/parser.d.ts"
     },
     "./is-similar-variant": {
       "default": "./lib/is-similar-variant.js",
@@ -100,25 +112,25 @@
       "default": "./lib/command-call-positional-data.js",
       "types": "./lib/command-call-positional-data.d.ts"
     },
-    "./caos-libsfile-full": {
-      "default": "./lib/caos-libsfile-full.js",
-      "types": "./lib/caos-libsfile-full.d.ts"
+    "./libsfile-full": {
+      "default": "./lib/libsfile-full.js",
+      "types": "./lib/libsfile-full.d.ts"
     },
-    "./caos-tokenizer": {
-      "default": "./lib/caos-tokenizer.js",
-      "types": "./lib/caos-tokenizer.d.ts"
+    "./tokenizer": {
+      "default": "./lib/tokenizer.js",
+      "types": "./lib/tokenizer.d.ts"
     },
-    "./caos-validation": {
-      "default": "./lib/caos-validation.js",
-      "types": "./lib/caos-validation.d.ts"
+    "./validation": {
+      "default": "./lib/validation.js",
+      "types": "./lib/validation.d.ts"
     },
-    "./caos-validation-report": {
-      "default": "./lib/caos-validation-report.js",
-      "types": "./lib/caos-validation-report.d.ts"
+    "./validation-report": {
+      "default": "./lib/validation-report.js",
+      "types": "./lib/validation-report.d.ts"
     },
-    "./caos-infer-targ": {
-      "default": "./lib/caos-infer-targ.js",
-      "types": "./lib/caos-infer-targ.d.ts"
+    "./infer-targ": {
+      "default": "./lib/infer-targ.js",
+      "types": "./lib/infer-targ.d.ts"
     }
   },
   "files": [

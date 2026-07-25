@@ -1,8 +1,7 @@
-import {getHoverItem} from "@creatures-lsp/caos-util";
+import {getHoverItem} from "@creatures-lsp/caos/hover-documentation";
 import {Nullable} from "@creatures-lsp/extension-util";
 import {Hover, Position} from "vscode-languageserver";
 import {CaosSettings} from "./settings.js";
-import {parseCaosNear} from "@creatures-lsp/caos-kt/caos-parser";
 
 
 // Empty placeholder hover value

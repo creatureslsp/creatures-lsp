@@ -2,7 +2,7 @@ import type {IndexedItemLocation} from "./indices.js";
 import {type Nullable, rangesIntersect} from "@creatures-lsp/extension-util";
 import type {DocumentUri, Position, Range} from "vscode-languageserver";
 import {indexFilterDoNotDelete} from "./index.utils.js";
-import type {CatalogueEntry, CatalogueParserItem} from "@creatures-lsp/caos-kt/catalogue-core";
+import type {CatalogueEntry, CatalogueParserItem} from "@creatures-lsp/catalogue/core";
 import {getCatalogueRange} from "@creatures-lsp/catalogue";
 
 

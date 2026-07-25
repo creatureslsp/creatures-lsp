@@ -4,6 +4,7 @@ import {type CaosParseResult, parseCaos} from '@creatures-lsp/caos-kt/caos-parse
 import {getCaosInlayHints} from '@creatures-lsp/caos-kt/caos-inlay-hints';
 import {isVsCode, Nullable} from "@creatures-lsp/extension-util";
 import {Is} from "./is-util.js";
+export {getCaosInlayHints, getCaosInlayOptions} from "@creatures-lsp/caos-kt/caos-inlay-hints";
 
 /**
  * Create inlay handler if needed or requested
@@ -11,20 +12,24 @@ import {Is} from "./is-util.js";
  * @param text text or parse result of CAOS document
  * @param disabledInlayHints list of ids for inlay hint providers that should be disabled
  * @param minimumParametersForInlayHints
+ * @param offset
  */
-export function getCaosDocumentInlayHints(
+export function getCaosInlayHintsWithOffset(
     variant: GameVariant,
     text: string | CaosParseResult | unknown,
     disabledInlayHints?: Nullable<string[]>,
     minimumParametersForInlayHints: Nullable<number> = null,
+    offset: number = isVsCode() ? 1 : 0,
 ): InlayHint[] {
+    
     const parseResult = typeof text === 'string'
         ? parseCaos(variant, text)
         : (Is.parseResult(text) ? text : null);
+    
     if (parseResult == null) {
         return [];
     }
-    const offset = isVsCode() ? 1 : 0;
+    
     const hints = getCaosInlayHints(
         parseResult,
         disabledInlayHints ?? [],

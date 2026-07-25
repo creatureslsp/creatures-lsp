@@ -1,23 +1,23 @@
 import {
     type GameVariant,
     Is,
-} from "@creatures-lsp/caos-util";
+} from "@creatures-lsp/caos";
 
 import type {
     Argument,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatures-lsp/caos/parser";
 
 import {
     TypeTokens,
     type C2eStringVal,
     type CaosParserItem,
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatures-lsp/caos/core";
 
 import type {
     CaosParameter
-} from "@creatures-lsp/caos-kt/caos-libs";
+} from "@creatures-lsp/caos/libs";
 import {type FileNameData, toVsRange} from "@creatures-lsp/extension-util";
-import type {Nullable} from "@creatures-lsp/caos-kt";
+import type {Nullable} from "@creatures-lsp/caos";
 import type {TextEdit} from "vscode-languageserver";
 
 export function getRenameFileParameterEdit(

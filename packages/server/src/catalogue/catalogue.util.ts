@@ -1,5 +1,5 @@
-import {type CatalogueParseResult, type CatalogueParserItem, parseCatalogue} from "@creatures-lsp/caos-kt/catalogue-core";
-import {type Nullable} from "@creatures-lsp/caos-kt";
+import {type CatalogueParseResult, type CatalogueParserItem, parseCatalogue} from "@creatures-lsp/catalogue/core";
+import {type Nullable} from "@creatures-lsp/catalogue";
 import {inRange} from "@creatures-lsp/extension-util";
 
 

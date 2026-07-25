@@ -14,7 +14,7 @@ import {CatalogueSymbolProvider} from "./catalogue.outliner.js";
 import {catalogueSemanticLegend} from "@creatures-lsp/catalogue";
 import {catalogueSemanticTokensProvider} from "./catalogue.semantic-tokens.js";
 import {initVfs} from "./vfs.js";
-import {useFullCaosLibDefinitions} from "@creatures-lsp/caos-kt/caos-libsfile-full";
+import {useFullCaosLibDefinitions} from "@creatures-lsp/caos/libsfile-full";
 
 let defaultClient: LanguageClient;
 

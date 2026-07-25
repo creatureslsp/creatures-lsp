@@ -3,13 +3,13 @@ import {Position} from "vscode-languageserver";
 import {Nullable} from "@creatures-lsp/extension-util";
 import {
     getCommandCallPositionalDataFromParseResult
-} from "@creatures-lsp/caos-util";
+} from "@creatures-lsp/caos";
 import {
     parseCaosNear,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatures-lsp/caos/parser";
 import type {
     CommandCallPositionalData,
-} from "@creatures-lsp/caos-util";
+} from "@creatures-lsp/caos";
 
 export function getCommandCallPositionalDataFromDocument(
     document: CaosDocument,

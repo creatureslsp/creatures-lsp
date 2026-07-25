@@ -1,5 +1,5 @@
-import type {Nullable} from "@creatures-lsp/caos-kt";
-import {parseCatalogue} from "@creatures-lsp/caos-kt/catalogue-core";
+import type {Nullable} from "@creatures-lsp/catalogue";
+import {parseCatalogue} from "@creatures-lsp/catalogue/core";
 import type {DocumentUri, Position, TextEdit, WorkspaceEdit} from "vscode-languageserver";
 import {getCatalogueLocations} from "../indices/index.catalogue.entries.js";
 import {isVsCode, getWorkspaceEdits, inRange} from "@creatures-lsp/extension-util";

@@ -1,6 +1,6 @@
 import type {CompletionItem, CompletionList, TextDocumentPositionParams} from "vscode-languageserver";
 import {CATALOGUE_LANGUAGE_ID} from "./catalogue/settings.js";
-import {createEmptyCompletionList} from "@creatures-lsp/caos-util";
+import {createEmptyCompletionList} from "@creatures-lsp/caos";
 import {getCaosCompletionItemsForDocument} from "./caos/caos.completions.js";
 import {connection} from "./connection.vscode.js";
 import {unpackDocument} from "./document.js";

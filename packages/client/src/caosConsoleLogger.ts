@@ -1,5 +1,5 @@
 import {LogOutputChannel, Uri, window} from "vscode";
-import type {ScriptJectResult} from "@creatures-lsp/caos-util";
+import type {ScriptJectResult} from "@creatures-lsp/caos";
 import {pushDisposable} from "./disposables.js";
 import {workspaceUriToString} from "./workspace-uri.js";
 import type {Nullable} from "@creatures-lsp/extension-util";

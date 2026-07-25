@@ -1,7 +1,7 @@
 // noinspection JSIgnoredPromiseFromCall
 
 import {type InitializeParams, type InitializeResult, TextDocumentSyncKind} from "vscode-languageserver/node.js";
-import {getSemanticTokensLegend} from "@creatures-lsp/caos-util";
+import {getSemanticTokensLegend} from "@creatures-lsp/caos";
 import {getDocuments} from "./documents.js";
 import {clientCapabilities} from "./client-capabilities.js";
 import {CAOS_LANGUAGE_ID, deleteCaosDocumentSettings} from "./caos/settings.js";

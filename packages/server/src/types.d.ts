@@ -1,7 +1,7 @@
-import type {CommandCall} from "@creatures-lsp/caos-util";
+import type {CommandCall} from "@creatures-lsp/caos";
 import type {Diagnostic} from "vscode-languageserver/node";
 import type {InspectionData} from "./inspections/InspectionData";
-import type {Nullable} from "@creatures-lsp/caos-kt";
+import type {Nullable} from "@creatures-lsp/caos";
 import type {Range} from "vscode-languageserver";
 
 declare type Nullable<T> = T | undefined | null;

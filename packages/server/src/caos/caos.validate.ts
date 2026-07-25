@@ -1,29 +1,29 @@
 /* eslint-disable eqeqeq */
 import type {
     GameVariant,
-} from "@creatures-lsp/caos-kt";
+} from "@creatures-lsp/caos";
 import type {
     CaosParserItem,
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatures-lsp/caos/core";
 import {
     ERROR_TYPE_TYPE_ERROR,
     hasSubroutine,
     RequestCancelledException,
-} from "@creatures-lsp/caos-util"
+} from "@creatures-lsp/caos"
 import {
     type CaosParseResult,
     parseCaos,
     parseCaosWithin,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatures-lsp/caos/parser";
 import {
     validateCaos
-} from "@creatures-lsp/caos-kt/caos-validation";
+} from "@creatures-lsp/caos/validation";
 
 import type {Diagnostic} from "vscode-languageserver/node.js";
 import {type Nullable, offsetRange, sortTextRanges, toVsRange} from "@creatures-lsp/extension-util";
 import {DiagnosticSeverity} from "vscode-languageserver-types";
 import type {Range} from "vscode-languageserver";
-import type {ErrorVal} from "@creatures-lsp/caos-kt/caos-core";
+import type {ErrorVal} from "@creatures-lsp/caos/core";
 import {CaosDocument} from "./caos.document.js";
 import {collectCaosInspectionErrors} from "./inspections/inspections.core.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";

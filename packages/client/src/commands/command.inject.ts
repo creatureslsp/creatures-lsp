@@ -1,17 +1,17 @@
 import vscode, {type QuickPickItem, TextEditor, TextEditorEdit, window} from "vscode";
 import {getVariant} from "../settings.js";
 import {Log} from "../log.js";
-import type {GameVariant, JectResult} from "@creatures-lsp/caos-util";
+import {type JectResult, ScriptJectResult} from "@creatures-lsp/caos";
 import {getCaosLogger} from "../caosConsoleLogger.js";
 import {pushDisposable} from "../disposables.js";
 import {type Nullable, toVsRange, inRange} from "@creatures-lsp/extension-util";
 import {generateUuid} from "vscode-languageclient/lib/common/utils/uuid.js";
 import { EventEmitter } from "events";
 import type {Range} from "vscode-languageserver";
-import type {BlockRange} from "@creatures-lsp/caos-kt/caos-core";
-import {caosScriptOffsets} from "@creatures-lsp/caos-kt/caos-parser";
+import type {BlockRange} from "@creatures-lsp/caos/core";
+import {caosScriptOffsets} from "@creatures-lsp/caos/parser";
 import {toVsCodeRange} from "../helpers.js";
-import {validateCaos} from "@creatures-lsp/caos-kt/caos-validation";
+import {validateCaos} from "@creatures-lsp/caos/validation";
 
 declare type CaosOnInjectNotificationProps = {
     serial: string;
@@ -159,7 +159,7 @@ const _injectCaos = async (textEditor: TextEditor, range: vscode.Range|undefined
     const result = resultOrBoolean as JectResult;
     Log.i(documentURI, `InjectionResult: ${result.status}; ` + JSON.stringify(result, null, 2));
     if (result.status === "failed") {
-        window.showErrorMessage(`Failed to inject all scripts successfully. ${result.results.map (r => "\n\t" + r.response.split(/\r?\n/).join("\n\t")).join("\t> ")}`)
+        window.showErrorMessage(`Failed to inject all scripts successfully. ${result.results.map ((r: ScriptJectResult) => "\n\t" + r.response.split(/\r?\n/).join("\n\t")).join("\t> ")}`)
     }
     const logger = getCaosLogger(documentURI);
     let connFailed = false;

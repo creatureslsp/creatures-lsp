@@ -41,7 +41,7 @@ export async function spinUpServer(context: ExtensionContext, document: TextDocu
 function createClient(context: ExtensionContext, clientOptions: LanguageClientOptions): LanguageClient {
     
     // Stash caos lib url
-    (<any>self).caosLibUrl = Uri.joinPath(context.extensionUri, 'packages', 'caos-util', 'lib', 'caos.universal.lib.json')
+    (<any>self).caosLibUrl = Uri.joinPath(context.extensionUri, 'packages', 'caos', 'lib', 'caos.universal.lib.json')
         .toString(true);
     
     // Create a worker. The worker main file implements the language server.

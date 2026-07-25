@@ -1,12 +1,10 @@
 /* eslint-disable eqeqeq */
 import type {GameVariant,} from "@creatures-lsp/caos-kt";
-import type {CaosParseResult, CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import type {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
 import {inRange, type Nullable, sortTextRanges} from "@creatures-lsp/extension-util";
-import {drillDown} from "./drillDown.js";
 import {Position} from "vscode-languageserver-types";
-import type {CaosCursorData} from "@creatures-lsp/caos-kt/caos-cursor-data";
 import {Is} from "./is-util.js";
-
+export * from "@creatures-lsp/caos-kt/caos-cursor-data";
 
 
 function flattenCommands(call: CommandCall): CommandCall[] {

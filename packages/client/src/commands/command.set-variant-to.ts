@@ -1,9 +1,6 @@
-import vscode, {window} from "vscode";
+import vscode from "vscode";
 import {pushDisposable} from "../disposables.js";
-import type {GameVariant, JectResult} from "@creatures-lsp/caos-util";
-import {getVariant} from "../settings.js";
-import {Log} from "../log.js";
-import {getCaosLogger} from "../caosConsoleLogger.js";
+import type {GameVariant} from "@creatures-lsp/caos";
 
 
 export function registerSetVariantToCommand() {

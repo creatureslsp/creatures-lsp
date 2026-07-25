@@ -6,8 +6,7 @@ import {
     SymbolKind,
     TextDocument,
 } from "vscode";
-import {parseCatalogue} from "@creatures-lsp/caos-kt/catalogue-core";
-import type {CatalogueEntry, CatalogueParserItem} from "@creatures-lsp/caos-kt/catalogue-core";
+import {parseCatalogue, type CatalogueEntry, type CatalogueParserItem} from "@creatures-lsp/catalogue/core";
 import {toVsCodeRange} from "./helpers.js";
 import {getCatalogueRange} from "@creatures-lsp/catalogue";
 import {Log} from "./log.js";

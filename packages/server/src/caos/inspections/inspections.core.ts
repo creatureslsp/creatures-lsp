@@ -1,8 +1,8 @@
 import type {CommandInspection, Nullable} from "../../types.js";
-import {tok} from "@creatures-lsp/caos-util";
-import type {GameVariant} from "@creatures-lsp/caos-util";
-import type {CommandToken} from "@creatures-lsp/caos-kt/caos-core";
-import type {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import {tok} from "@creatures-lsp/caos";
+import type {GameVariant} from "@creatures-lsp/caos";
+import type {CommandToken} from "@creatures-lsp/caos/core";
+import type {CommandCall} from "@creatures-lsp/caos/parser";
 import type {Diagnostic} from "vscode-languageserver/node.js";
 import {InspectionData} from "./InspectionData.js";
 import {toVsRange} from "@creatures-lsp/extension-util";

@@ -3,7 +3,7 @@
 import type {Location} from "vscode-languageserver";
 import type {ReferenceParams} from "vscode-languageserver-protocol";
 import {inRange} from "@creatures-lsp/extension-util";
-import {parseCatalogue} from "@creatures-lsp/caos-kt/catalogue-core";
+import {parseCatalogue} from "@creatures-lsp/catalogue/core";
 import {type CreaturesDocument, isCatalogueDocument} from "../document.js";
 import {getCatalogueNameReferences} from "../caos/references/references.catalogue.js";
 

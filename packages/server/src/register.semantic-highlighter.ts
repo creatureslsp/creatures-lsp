@@ -4,7 +4,7 @@ import {unpackDocument} from "./document.js";
 import {CAOS_LANGUAGE_ID} from "./caos/settings.js";
 import {CATALOGUE_LANGUAGE_ID} from "./catalogue/settings.js";
 import type {CaosDocument} from "./caos/caos.document.js";
-import {getCaosDocumentSemanticTokens} from "@creatures-lsp/caos-util";
+import {getCaosDocumentSemanticTokens} from "@creatures-lsp/caos";
 import {caosInitLib} from "./caos/caos-init-lib.js";
 import {Log} from "./ConnLogger.js";
 
