@@ -58,7 +58,7 @@ export declare type Location = {
  * Details about an error in CAOS code
  */
 export declare type Diagnostic = {
-    readonly severity: string;
+    readonly severity: "info" | "warning" | "error";
     readonly code: string;
     readonly message: string;
     readonly location: Location;
