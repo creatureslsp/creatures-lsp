@@ -23,7 +23,7 @@ export namespace Is {
         }
         return !(
             result.items == null || !Array.isArray(result.items) ||
-            result.commandCalls == null || !Array.isArray(result.command)
+            result.commandCalls == null || !Array.isArray(result.commandCalls)
         );
     }
     
