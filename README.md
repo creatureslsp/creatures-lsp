@@ -1,104 +1,60 @@
-# CAOS Language Extension
+# CAOS and Agenteering for Visual Studio Code
 
-This extension adds CAOS language support to Visual Studio Code for the Creatures series of games.
-
-Allows editing of CAOS in any variant (i.e. C1, C2, CV, C3, DS). Variant can be set in settings.   
-To quickly navigate to CAOS variant settings, use `cmd+shift+p` or `ctrl+shift+p` to
-launch actions, then select "Set CAOS Variant"  
-**Variant is set per workspace*
+Language support for the Creatures series' CAOS scripting language and catalogue files. This repository contains the Visual Studio Code extension, its language server, and reusable npm packages for CAOS and catalogue tooling.
 
 ## Features
-- CAOS syntax error highlighting
-    - Invalid command
-    - Unclosed control blocks (i.e. `DOIF`, `ENUM`)
-    - Out of variant commands and variables
-    - Missing parameters
-    - Very basic type checking
-- Code completion
-    - Commands scoped to type (i.e. Command, R/L value)
-    - Subroutine Name
-    - Simple game/name variable name completions (does not scope or restrict `NAME` variables to agent class)
-    - Named value completion (i.e. type `hung`, select 'Hunger for Protein' and completion inserts corresponding numeric value)
-- Hover documentation
-- Inlay Hints (can be disabled)
-    - Known value names (i.e. Show drive name for corresponding numeric value)
-    - Bitflag breakdown (i.e. Append inlay hint `(activatable, mousable)` after `attr 3`)
-    - Parameter names (minimum number of parameters before showing hint is configurable)
-    - Command return values
-- Basic code formatting
-- Semantic tokens for use in custom highlighting
 
-## Extension Settings
+- Syntax highlighting, diagnostics, formatting, and semantic tokens for CAOS and catalogue files
+- Completions, hover documentation, document symbols, definitions, references, and inlay hints
+- Support for Creatures 1, Creatures 2, Creatures Village, Creatures 3, Docking Station, and Docking Station: Community Edition
+- Commands for selecting a CAOS variant and, where supported, injecting CAOS into a running game
 
-This extension contributes the following settings:
-### General
-* `caosScript.maxNumberOfProblems`: Set maximum number of errors to report
-* `caosScript.variant`: Workspace CAOS variant. Can be **[C1,C2,CV,C3,DS]**. Default **DS**
-* `caosScript.formatting.indentComments`: Indent comments inline with commands except when comment is at start of line
-* ### Inlay Hints
-* `caosScript.inlayHints.bitFlagValues`: Show inlay hints for bitflag value
-* `caosScript.inlayHints.parameterHints.showParameterHints`: Show parameter names before arguments
-* `caosScript.inlayHints.parameterHints.minimumParameterCount`: Hide inlay hints for commands with less than this number of parameters
-* `caosScript.inlayHints.setvParameterHints`: Show parameter names before SETV like command arguments
-* `caosScript.inlayHints.genusName`: Show genus name for known family/genus combinations
-* `caosScript.inlayHints.valueName`: Show value name for known integer and string values
-* `caosScript.inlayHints.eventScriptName`: Show event script name for known event numbers
-* `caosScript.inlayHints.ddePictDimensions`: Show `DDE: PICT` command dimensions from dimension characters
-* `caosScript.inlayHints.c1ClasValue`: Show parsed family, genus, and specie from C1 CLAS value
-* `caosScript.inlayHints.rvalueReturnValue`: Show return type for rvalue commands
-* `caosScript.inlayHints.equality.bitFlagValues`: Show Bitflag value on opposing side of equality operator
-* `caosScript.inlayHints.equalityValueName`: Show value name for know integer and string values on opposing side of EQ
+## Install the extension
 
-## Semantic Tokens
-Some CAOS file elements have additional semantic token selectors on them which allows
-for more specific styling
-### Main Tokens
-* `command`: root level command name tokens
-* `rvalue`: rvalue command name tokens
-* `lvalue`: command tokens when command is used as lvalue
-### Token Modifiers
-* `command-prefix`: First token in a multi-word command
-* `command-suffix`: Last token in a three word command
-* `c1-string`: A C1 style bracket string
-* `quote-string`: A C2e style quoted string
-* `byte-string`: A byte string for things like ANIM
-* `not-found`: For a command that cannot be found in context
-* `vaxx`: for VAxx and VARx variables
-* `ovxx`: for OVxx and OBVx variables
-* `mvxx`: For MVxx variables
-* `returns-number`: Decorates command words for commands that return a number
-* `returns-string`: Decorates command words for commands returning a string
-* `returns-variable`: Decorates command word for commands returning a variable
-* `returns-agent`: Decorates command word for commands returning an agent
-* `agent-constructor`: Decorates agent constructor commands like those starting with `new:`
+Install **Creatures CAOS and Agenteering** from the Visual Studio Code Marketplace, then open a workspace containing CAOS or catalogue files. Choose **CAOS: Set CAOS Variant** from the Command Palette to set the workspace variant.
 
-### How to theme semantic tokens
-You can these tokens in settings by using
-```JSON
-{
-  "editor.semanticTokenColorCustomizations": {
-    "[Default Dark+]": {
-      "*.returns-string:caos": "#ff0011"
-    }
-  }
-}
+## Configuration
+
+The extension contributes settings under `caosScript`, including:
+
+- `caosScript.variant`: Workspace CAOS variant. Defaults to `DS`.
+- `caosScript.maxNumberOfProblems`: Maximum number of diagnostics to report.
+- `caosScript.formatting.indentComments` and `caosScript.formatting.keepSameLine`: Formatting behavior.
+- `caosScript.inlayHints.*`: Controls for parameter, value, event, bit-flag, and return-value hints.
+
+Use the Settings editor and search for `CAOSScript` for the complete, current list.
+
+## npm packages
+
+Packages are published independently for integrations that need CAOS or catalogue language tooling:
+
+- [`@creatures-lsp/caos-kt`](./packages/caos-kt): CAOS and catalogue parser, formatter, validation, and command-library bindings.
+- [`@creatures-lsp/caos-util`](./packages/caos-util): CAOS editor features built on `caos-kt`, such as completions, formatting, hovers, and semantic tokens.
+- [`@creatures-lsp/catalogue`](./packages/catalogue): Catalogue editor features, including completions and semantic tokens.
+- [`@creatures-lsp/extension-util`](./packages/extension-util): Shared utilities used by this project; published for dependency resolution, not intended as a broadly stable API.
+- [`caos-language-server`](./packages/server): The CAOS Language Server Protocol implementation.
+- [`caos-vscode-client`](./packages/client): The VS Code client used by the extension.
+
+Each package directory has its own npm-focused README with installation and usage notes.
+
+## Development
+
+This is a Yarn workspace. Install dependencies and build all packages with:
+
+```sh
+yarn install
+yarn build
 ```
 
-## Known Issues
-- Occasionally completion becomes confused.
-    - Suggests commands instead of R/L values unexpectedly
-    - Suggests known values for values already completed previously
-    - Fails to show suggestions for named values
-- Navigation fails from `SUBR` names to their usages
+Useful commands:
 
-## Release Notes
+```sh
+yarn lint
+yarn package
+```
 
-### 0.1.0
+`yarn package` builds the extension and creates a VSIX package.
 
-Initial release
+## License
 
-## Upcoming
-
-* **Rename support:**
-    * subroutine (`SUBR`) names
-    * `GAME`/`EAME`/`NAME` variable names
+[MIT](./LICENSE)
