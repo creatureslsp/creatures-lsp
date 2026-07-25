@@ -6,7 +6,7 @@ import {getDocument} from "./documents.js";
 import {getExtension, type Nullable, toFileUri} from "@creatures-lsp/extension-util";
 import type {TextDocument} from "vscode-languageserver-textdocument";
 import {fileExists, isFileURINaive, readTextFile} from "./files.js";
-import {caosInitLib} from "./caos/caos-init-lib.mjs";
+import {caosInitLib} from "./caos/caos-init-lib.js";
 import type {DocumentUri} from "vscode-languageserver";
 import {Log} from "./ConnLogger.js";
 

@@ -6,7 +6,7 @@ import {validateDocument, nextDocumentVersionId} from "../validate.js";
 import {formatUriForRead, trimFileSchemePrefix} from "@creatures-lsp/extension-util";
 import {getDocuments} from "../documents.js";
 import {DocumentContentChange} from "../types.js";
-import {caosInitLib} from "./caos-init-lib.mjs";
+import {caosInitLib} from "./caos-init-lib.js";
 import {Log} from "../ConnLogger.js";
 
 export async function onCaosFileChange(change: TextDocumentChangeEvent<TextDocument>) {

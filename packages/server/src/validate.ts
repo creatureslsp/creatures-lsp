@@ -8,7 +8,7 @@ import {getDocuments} from "./documents.js";
 import type {Range} from "vscode-languageserver";
 import {LanguageDocumentData, rangesIntersect, sortTextRanges} from "@creatures-lsp/extension-util";
 import {VersionedDocumentData} from "@creatures-lsp/extension-util/VersionedDocumentData";
-import {caosInitLib} from "./caos/caos-init-lib.mjs";
+import {caosInitLib} from "./caos/caos-init-lib.js";
 import {Log} from "./ConnLogger.js";
 
 const TICKS_BEFORE_REFRESH = 12;

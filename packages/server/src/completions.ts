@@ -6,7 +6,7 @@ import {connection} from "./connection.vscode.js";
 import {unpackDocument} from "./document.js";
 import {CAOS_LANGUAGE_ID} from "./caos/settings.js";
 import {getCatalogueCompletionItems} from "@creatures-lsp/catalogue";
-import {caosInitLib} from "./caos/caos-init-lib.mjs";
+import {caosInitLib} from "./caos/caos-init-lib.js";
 import {Log} from "./ConnLogger.js";
 
 

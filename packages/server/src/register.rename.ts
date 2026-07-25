@@ -1,7 +1,7 @@
 import {connection} from "./connection.vscode.js";
 import type {PrepareRenameParams, RenameParams, WorkspaceEdit} from "vscode-languageserver";
 import {type Nullable} from "@creatures-lsp/caos-kt";
-import {caosInitLib} from "./caos/caos-init-lib.mjs";
+import {caosInitLib} from "./caos/caos-init-lib.js";
 import {getCaosCursorPositionFromRawText} from "@creatures-lsp/caos-kt/caos-cursor-data";
 import {isCaosDocument, isCatalogueDocument, unpackDocument} from "./document.js";
 import {renameInCaosDocument} from "./rename/rename.caos.js";

@@ -14,7 +14,7 @@ import type {
     CaosParseResult,
     CommandCall,
 } from "@creatures-lsp/caos-kt/caos-parser";
-import {caosInitLib} from "./../caos-init-lib.mjs";
+import {caosInitLib} from "./../caos-init-lib.js";
 import {Nullable} from "@creatures-lsp/extension-util";
 import {ReferenceParams} from "vscode-languageserver-protocol";
 import {getFiles} from "../../files.js";

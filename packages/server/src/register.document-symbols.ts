@@ -8,7 +8,7 @@ import type {DocumentSymbol} from "vscode-languageserver-types";
 import {getCatalogueDocumentSymbolsInDocument} from "./catalogue/catalogue.document-symbols.js";
 import {CatalogueDocument} from "./catalogue/catalogue.document.js";
 import {getCaosDocumentSymbolsInDocument} from "./caos/caos.document-symbols.js";
-import {caosInitLib} from "./caos/caos-init-lib.mjs";
+import {caosInitLib} from "./caos/caos-init-lib.js";
 import {Log} from "./ConnLogger.js";
 
 
