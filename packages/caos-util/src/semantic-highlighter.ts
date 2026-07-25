@@ -740,6 +740,8 @@ export function getCaosSemanticTokens(variant: GameVariant, text: string | CaosP
     let result: Nullable<CaosParseResult>;
     if (Is.parseResult(text)) {
         result = text;
+    } else if (typeof text !== "string") {
+        throw new Error(`getCaosSemanticTokens expects string or CaosParseResult; Found: ${JSON.stringify(text, null, 2)}`);
     } else if (range != null) {
         result = parseCaosWithin(variant, text, range.start.line, range.start.character, range.end.line, range.end.character);
     } else {
