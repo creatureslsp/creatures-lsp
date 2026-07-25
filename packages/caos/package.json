@@ -1,0 +1,156 @@
+{
+  "name": "@creatures-lsp/caos",
+  "version": "0.0.4",
+  "type": "module",
+  "description": "Utility methods for parsing and validating CAOS scripts for the Creatures games",
+  "types": "./dist/index.d.ts",
+  "main": "dist/index.js",
+  "sideEffects": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "directory": "packages/caos",
+    "url": "https://github.com/bedalton/caos-language-server"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./commands": {
+      "default": "./dist/commands.js",
+      "types": "./dist/commands.d.ts"
+    },
+    "./completions": {
+      "default": "./dist/completions.js",
+      "types": "./dist/completions.d.ts"
+    },
+    "./constants": {
+      "default": "./dist/constants.js",
+      "types": "./dist/constants.d.ts"
+    },
+    "./context-walker": {
+      "default": "./dist/context-walker.js",
+      "types": "./dist/context-walker.d.ts"
+    },
+    "./cursor-data": {
+      "default": "./dist/cursor-data.js",
+      "types": "./dist/cursor-data.d.ts"
+    },
+    "./document-symbols": {
+      "default": "./dist/document-symbols.js",
+      "types": "./dist/document-symbols.d.ts"
+    },
+    "./documentation-formattter": {
+      "default": "./dist/documentation-formattter.js",
+      "types": "./dist/documentation-formattter.d.ts"
+    },
+    "./drillDown": {
+      "default": "./dist/drillDown.js",
+      "types": "./dist/drillDown.d.ts"
+    },
+    "./formatter": {
+      "default": "./dist/formatter.js",
+      "types": "./dist/formatter.d.ts"
+    },
+    "./goto": {
+      "default": "./dist/goto.js",
+      "types": "./dist/goto.d.ts"
+    },
+    "./hover-documentation": {
+      "default": "./dist/hover-documentation.js",
+      "types": "./dist/hover-documentation.d.ts"
+    },
+    "./inlay-hints": {
+      "default": "./dist/inlay-hints.js",
+      "types": "./dist/inlay-hints.d.ts"
+    },
+    "./core": {
+      "default": "./dist/core.js",
+      "types": "./dist/core.d.ts"
+    },
+    "./libs": {
+      "default": "./dist/libs.js",
+      "types": "./dist/libs.d.ts"
+    },
+    "./parser": {
+      "default": "./dist/parser.js",
+      "types": "./dist/parser.d.ts"
+    },
+    "./is-similar-variant": {
+      "default": "./dist/is-similar-variant.js",
+      "types": "./dist/is-similar-variant.d.ts"
+    },
+    "./is-similar": {
+      "default": "./dist/is-similar.js",
+      "types": "./dist/is-similar.d.ts"
+    },
+    "./is-util": {
+      "default": "./dist/is-util.js",
+      "types": "./dist/is-util.d.ts"
+    },
+    "./semantic-highlighter": {
+      "default": "./dist/semantic-highlighter.js",
+      "types": "./dist/semantic-highlighter.d.ts"
+    },
+    "./semantics-legend": {
+      "default": "./dist/semantics-legend.js",
+      "types": "./dist/semantics-legend.d.ts"
+    },
+    "./subroutines": {
+      "default": "./dist/subroutines.js",
+      "types": "./dist/subroutines.d.ts"
+    },
+    "./token-utils": {
+      "default": "./dist/token-utils.js",
+      "types": "./dist/token-utils.d.ts"
+    },
+    "./command-call-positional-data": {
+      "default": "./dist/command-call-positional-data.js",
+      "types": "./dist/command-call-positional-data.d.ts"
+    },
+    "./libsfile-full": {
+      "default": "./dist/libsfile-full.js",
+      "types": "./dist/libsfile-full.d.ts"
+    },
+    "./tokenizer": {
+      "default": "./dist/tokenizer.js",
+      "types": "./dist/tokenizer.d.ts"
+    },
+    "./validation": {
+      "default": "./dist/validation.js",
+      "types": "./dist/validation.d.ts"
+    },
+    "./validation-report": {
+      "default": "./dist/validation-report.js",
+      "types": "./dist/validation-report.d.ts"
+    },
+    "./infer-targ": {
+      "default": "./dist/infer-targ.js",
+      "types": "./dist/infer-targ.d.ts"
+    }
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p dist",
+    "prepack": "yarn build",
+    "copy-files": "find ./src \\( -iname \\*.js -o -iname \\*.js.map -o -iname \\*.json -o -iname \\*.d.ts \\) -exec cp {} ./dist/ \\;",
+    "build-first": "yarn copy-files",
+    "build": "tsc --build",
+    "test": "echo 'no test'",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
+  },
+  "dependencies": {
+    "@creatures-lsp/caos-kt": "*",
+    "@creatures-lsp/extension-util": "*"
+  },
+  "devDependencies": {
+    "rimraf": "^6.1.3",
+    "vscode-languageserver-types": "^3.17.1"
+  }
+}

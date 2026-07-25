@@ -10,7 +10,7 @@
     ],
     "references": [
         {
-            "path": "../caos-util"
+            "path": "../caos"
         },
         {
             "path": "../catalogue"

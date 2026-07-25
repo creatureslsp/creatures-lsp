@@ -2,7 +2,7 @@
   "packages": [
     "packages/catalogue",
     "packages/caos-kt",
-    "packages/caos-util",
+    "packages/caos",
     "packages/client",
     "packages/server",
     "packages/extension-util"

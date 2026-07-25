@@ -7,8 +7,8 @@
             "@creatures-lsp/caos-kt": [
                 "./caos-kt/src/*"
             ],
-            "@creatures-lsp/caos-util/*": [
-                "./caos-util/src/*"
+            "@creatures-lsp/caos/*": [
+                "./caos/src/*"
             ],
             "@creatures-lsp/caos-vscode-client/*": [
                 "./client/src/*"
@@ -29,7 +29,7 @@
             "path": "packages/caos-kt"
         },
         {
-            "path": "packages/caos-util"
+            "path": "packages/caos"
         },
         {
             "path": "packages/extension-util"

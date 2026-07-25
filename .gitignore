@@ -1,7 +1,6 @@
 **/.DS_Store
 **/out
 **/dist
-/packages/caos-util/lib
 node_modules
 .vscode-test/
 packages/client/test/**/*.js

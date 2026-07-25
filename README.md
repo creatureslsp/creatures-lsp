@@ -29,7 +29,7 @@ Use the Settings editor and search for `CAOSScript` for the complete, current li
 Packages are published independently for integrations that need CAOS or catalogue language tooling:
 
 - [`@creatures-lsp/caos-kt`](./packages/caos-kt): CAOS and catalogue parser, formatter, validation, and command-library bindings.
-- [`@creatures-lsp/caos-util`](./packages/caos-util): CAOS editor features built on `caos-kt`, such as completions, formatting, hovers, and semantic tokens.
+- [`@creatures-lsp/caos`](./packages/caos): CAOS editor features built on `caos-kt`, such as completions, formatting, hovers, and semantic tokens.
 - [`@creatures-lsp/catalogue`](./packages/catalogue): Catalogue editor features, including completions and semantic tokens.
 - [`@creatures-lsp/extension-util`](./packages/extension-util): Shared utilities used by this project; published for dependency resolution, not intended as a broadly stable API.
 - [`caos-language-server`](./packages/server): The CAOS Language Server Protocol implementation.

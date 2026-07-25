@@ -24,7 +24,7 @@
     "packages": [
       "packages/catalogue",
       "packages/caos-kt",
-      "packages/caos-util",
+      "packages/caos",
       "packages/extension-util",
       "packages/client",
       "packages/server"

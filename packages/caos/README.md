@@ -1,11 +1,11 @@
-# @creatures-lsp/caos-util
+# @creatures-lsp/caos
 
 Editor-oriented utilities for the Creatures CAOS language. It builds on `@creatures-lsp/caos-kt` to provide completions, formatting, hover documentation, inlay hints, document symbols, navigation, and semantic tokens.
 
 ## Install
 
 ```sh
-npm install @creatures-lsp/caos-util
+npm install @creatures-lsp/caos
 ```
 
 ## Usage
@@ -14,7 +14,7 @@ Load CAOS definitions before calling APIs that inspect commands or values. The f
 
 ```ts
 import { useFullCaosLibDefinitions } from "@creatures-lsp/caos-kt/caos-libsfile-full";
-import { format } from "@creatures-lsp/caos-util";
+import { format } from "@creatures-lsp/caos";
 
 useFullCaosLibDefinitions();
 
