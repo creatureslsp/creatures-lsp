@@ -1,5 +1,5 @@
 {
-  "name": "@creatures-lsp/caos-vscode-client",
+  "name": "caos-vscode-client",
   "type": "module",
   "displayName": "CAOSEditor",
   "description": "An editor for the Creature's CAOS language",
@@ -14,6 +14,9 @@
   "categories": [
     "Programming Languages"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "directory": "packages/client",

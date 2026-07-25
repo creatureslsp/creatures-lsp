@@ -12,6 +12,9 @@
     "directory": "packages/caos-util",
     "url": "https://github.com/bedalton/caos-language-server"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "default": "./lib/index.js",

@@ -13,6 +13,9 @@
     "directory": "packages/interop",
     "url": "https://github.com/bedalton/caos-language-server"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "exports": {
     ".": {
       "default": "./dist/index.js",

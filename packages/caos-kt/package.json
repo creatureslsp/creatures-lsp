@@ -8,6 +8,9 @@
   "engines": {
     "node": "*"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "./dist/index.mjs",
   "types": "./dist/index.d.mts",
   "sideEffects": false,
