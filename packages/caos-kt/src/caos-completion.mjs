@@ -169,22 +169,22 @@ class $serializer {
     tmp0_serialDesc.w13('returnTypeId', false);
     tmp0_serialDesc.w13('firstToken', false);
     tmp0_serialDesc.w13('ceOnly', false);
-    this.e55_1 = tmp0_serialDesc;
+    this.u55_1 = tmp0_serialDesc;
   }
-  f55(encoder, value) {
-    var tmp0_desc = this.e55_1;
+  v55(encoder, value) {
+    var tmp0_desc = this.u55_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.rx(tmp0_desc, 0, value.g55_1);
-    tmp1_output.mx(tmp0_desc, 1, value.h55_1);
-    tmp1_output.mx(tmp0_desc, 2, value.i55_1);
-    tmp1_output.jx(tmp0_desc, 3, value.j55_1);
+    tmp1_output.rx(tmp0_desc, 0, value.w55_1);
+    tmp1_output.mx(tmp0_desc, 1, value.x55_1);
+    tmp1_output.mx(tmp0_desc, 2, value.y55_1);
+    tmp1_output.jx(tmp0_desc, 3, value.z55_1);
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.f55(encoder, value instanceof CommandData ? value : THROW_CCE());
+    return this.v55(encoder, value instanceof CommandData ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.e55_1;
+    var tmp0_desc = this.u55_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -230,10 +230,10 @@ class $serializer {
         }
       }
     tmp8_input.cw(tmp0_desc);
-    return CommandData.k55(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
+    return CommandData.a56(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
   }
   lr() {
-    return this.e55_1;
+    return this.u55_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -254,21 +254,21 @@ class $serializer_0 {
     tmp0_serialDesc.w13('command', false);
     tmp0_serialDesc.w13('prefix', false);
     tmp0_serialDesc.w13('index', false);
-    this.l55_1 = tmp0_serialDesc;
+    this.b56_1 = tmp0_serialDesc;
   }
-  m55(encoder, value) {
-    var tmp0_desc = this.l55_1;
+  c56(encoder, value) {
+    var tmp0_desc = this.b56_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.rx(tmp0_desc, 0, value.n55_1);
-    tmp1_output.rx(tmp0_desc, 1, value.o55_1);
-    tmp1_output.mx(tmp0_desc, 2, value.p55_1);
+    tmp1_output.rx(tmp0_desc, 0, value.d56_1);
+    tmp1_output.rx(tmp0_desc, 1, value.e56_1);
+    tmp1_output.mx(tmp0_desc, 2, value.f56_1);
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.m55(encoder, value instanceof VariableData ? value : THROW_CCE());
+    return this.c56(encoder, value instanceof VariableData ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.l55_1;
+    var tmp0_desc = this.b56_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -307,10 +307,10 @@ class $serializer_0 {
         }
       }
     tmp7_input.cw(tmp0_desc);
-    return VariableData.q55(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, null);
+    return VariableData.g56(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, null);
   }
   lr() {
-    return this.l55_1;
+    return this.b56_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -324,27 +324,27 @@ class CaosCompletionData extends CompletionItemData {
     Companion_getInstance_2();
     super();
   }
-  static s55(seen0, serializationConstructorMarker) {
+  static i56(seen0, serializationConstructorMarker) {
     Companion_getInstance_2();
-    return this.z52(seen0, serializationConstructorMarker);
+    return this.p53(seen0, serializationConstructorMarker);
   }
 }
 class CommandData extends CaosCompletionData {
   constructor(command, returnTypeId, firstToken, ceOnly) {
     super();
-    this.g55_1 = command;
-    this.h55_1 = returnTypeId;
-    this.i55_1 = firstToken;
-    this.j55_1 = ceOnly;
+    this.w55_1 = command;
+    this.x55_1 = returnTypeId;
+    this.y55_1 = firstToken;
+    this.z55_1 = ceOnly;
   }
   toString() {
-    return 'CommandData(command=' + this.g55_1 + ', returnTypeId=' + this.h55_1 + ', firstToken=' + this.i55_1 + ', ceOnly=' + this.j55_1 + ')';
+    return 'CommandData(command=' + this.w55_1 + ', returnTypeId=' + this.x55_1 + ', firstToken=' + this.y55_1 + ', ceOnly=' + this.z55_1 + ')';
   }
   hashCode() {
-    var result = getStringHashCode(this.g55_1);
-    result = imul(result, 31) + this.h55_1 | 0;
-    result = imul(result, 31) + this.i55_1 | 0;
-    result = imul(result, 31) + getBooleanHashCode(this.j55_1) | 0;
+    var result = getStringHashCode(this.w55_1);
+    result = imul(result, 31) + this.x55_1 | 0;
+    result = imul(result, 31) + this.y55_1 | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.z55_1) | 0;
     return result;
   }
   equals(other) {
@@ -352,42 +352,42 @@ class CommandData extends CaosCompletionData {
       return true;
     if (!(other instanceof CommandData))
       return false;
-    if (!(this.g55_1 === other.g55_1))
+    if (!(this.w55_1 === other.w55_1))
       return false;
-    if (!(this.h55_1 === other.h55_1))
+    if (!(this.x55_1 === other.x55_1))
       return false;
-    if (!(this.i55_1 === other.i55_1))
+    if (!(this.y55_1 === other.y55_1))
       return false;
-    if (!(this.j55_1 === other.j55_1))
+    if (!(this.z55_1 === other.z55_1))
       return false;
     return true;
   }
-  static k55(seen0, command, returnTypeId, firstToken, ceOnly, serializationConstructorMarker) {
+  static a56(seen0, command, returnTypeId, firstToken, ceOnly, serializationConstructorMarker) {
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance().e55_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance().u55_1);
     }
-    var $this = this.s55(seen0, serializationConstructorMarker);
-    $this.g55_1 = command;
-    $this.h55_1 = returnTypeId;
-    $this.i55_1 = firstToken;
-    $this.j55_1 = ceOnly;
+    var $this = this.i56(seen0, serializationConstructorMarker);
+    $this.w55_1 = command;
+    $this.x55_1 = returnTypeId;
+    $this.y55_1 = firstToken;
+    $this.z55_1 = ceOnly;
     return $this;
   }
 }
 class VariableData extends CaosCompletionData {
   constructor(command, prefix, index) {
     super();
-    this.n55_1 = command;
-    this.o55_1 = prefix;
-    this.p55_1 = index;
+    this.d56_1 = command;
+    this.e56_1 = prefix;
+    this.f56_1 = index;
   }
   toString() {
-    return 'VariableData(command=' + this.n55_1 + ', prefix=' + this.o55_1 + ', index=' + this.p55_1 + ')';
+    return 'VariableData(command=' + this.d56_1 + ', prefix=' + this.e56_1 + ', index=' + this.f56_1 + ')';
   }
   hashCode() {
-    var result = getStringHashCode(this.n55_1);
-    result = imul(result, 31) + getStringHashCode(this.o55_1) | 0;
-    result = imul(result, 31) + this.p55_1 | 0;
+    var result = getStringHashCode(this.d56_1);
+    result = imul(result, 31) + getStringHashCode(this.e56_1) | 0;
+    result = imul(result, 31) + this.f56_1 | 0;
     return result;
   }
   equals(other) {
@@ -395,22 +395,22 @@ class VariableData extends CaosCompletionData {
       return true;
     if (!(other instanceof VariableData))
       return false;
-    if (!(this.n55_1 === other.n55_1))
+    if (!(this.d56_1 === other.d56_1))
       return false;
-    if (!(this.o55_1 === other.o55_1))
+    if (!(this.e56_1 === other.e56_1))
       return false;
-    if (!(this.p55_1 === other.p55_1))
+    if (!(this.f56_1 === other.f56_1))
       return false;
     return true;
   }
-  static q55(seen0, command, prefix, index, serializationConstructorMarker) {
+  static g56(seen0, command, prefix, index, serializationConstructorMarker) {
     if (!(7 === (7 & seen0))) {
-      throwMissingFieldException(seen0, 7, $serializer_getInstance_0().l55_1);
+      throwMissingFieldException(seen0, 7, $serializer_getInstance_0().b56_1);
     }
-    var $this = this.s55(seen0, serializationConstructorMarker);
-    $this.n55_1 = command;
-    $this.o55_1 = prefix;
-    $this.p55_1 = index;
+    var $this = this.i56(seen0, serializationConstructorMarker);
+    $this.d56_1 = command;
+    $this.e56_1 = prefix;
+    $this.f56_1 = index;
     return $this;
   }
 }
@@ -419,7 +419,7 @@ class Companion_1 {
     Companion_instance_1 = this;
     var tmp = this;
     var tmp_0 = LazyThreadSafetyMode_PUBLICATION_getInstance();
-    tmp.r55_1 = lazy(tmp_0, CaosCompletionData$Companion$_anonymous__e5jxjb);
+    tmp.h56_1 = lazy(tmp_0, CaosCompletionData$Companion$_anonymous__e5jxjb);
   }
   k1e() {
     return _get_$cachedSerializer__te6jhj(this);
@@ -435,41 +435,41 @@ class CompletionOptionsImpl {
     directory = directory === VOID ? null : directory;
     getFiles = getFiles === VOID ? null : getFiles;
     getStringCompletions = getStringCompletions === VOID ? null : getStringCompletions;
-    this.t55_1 = thisFileName;
-    this.u55_1 = incomplete;
-    this.v55_1 = directory;
-    this.w55_1 = getFiles;
-    this.x55_1 = getStringCompletions;
+    this.j56_1 = thisFileName;
+    this.k56_1 = incomplete;
+    this.l56_1 = directory;
+    this.m56_1 = getFiles;
+    this.n56_1 = getStringCompletions;
     delete this.thisFileName;
     delete this.incomplete;
     delete this.directory;
     delete this.getFiles;
     delete this.getStringCompletions;
   }
-  y55() {
-    return this.t55_1;
+  o56() {
+    return this.j56_1;
   }
-  z55() {
-    return this.u55_1;
+  p56() {
+    return this.k56_1;
   }
-  a56() {
-    return this.v55_1;
+  q56() {
+    return this.l56_1;
   }
-  b56() {
-    return this.w55_1;
+  r56() {
+    return this.m56_1;
   }
-  c56() {
-    return this.x55_1;
+  s56() {
+    return this.n56_1;
   }
   toString() {
-    return 'CompletionOptionsImpl(thisFileName=' + this.t55_1 + ', incomplete=' + this.u55_1 + ', directory=' + this.v55_1 + ', getFiles=' + toString(this.w55_1) + ', getStringCompletions=' + toString(this.x55_1) + ')';
+    return 'CompletionOptionsImpl(thisFileName=' + this.j56_1 + ', incomplete=' + this.k56_1 + ', directory=' + this.l56_1 + ', getFiles=' + toString(this.m56_1) + ', getStringCompletions=' + toString(this.n56_1) + ')';
   }
   hashCode() {
-    var result = this.t55_1 == null ? 0 : getStringHashCode(this.t55_1);
-    result = imul(result, 31) + getBooleanHashCode(this.u55_1) | 0;
-    result = imul(result, 31) + (this.v55_1 == null ? 0 : getStringHashCode(this.v55_1)) | 0;
-    result = imul(result, 31) + (this.w55_1 == null ? 0 : hashCode(this.w55_1)) | 0;
-    result = imul(result, 31) + (this.x55_1 == null ? 0 : hashCode(this.x55_1)) | 0;
+    var result = this.j56_1 == null ? 0 : getStringHashCode(this.j56_1);
+    result = imul(result, 31) + getBooleanHashCode(this.k56_1) | 0;
+    result = imul(result, 31) + (this.l56_1 == null ? 0 : getStringHashCode(this.l56_1)) | 0;
+    result = imul(result, 31) + (this.m56_1 == null ? 0 : hashCode(this.m56_1)) | 0;
+    result = imul(result, 31) + (this.n56_1 == null ? 0 : hashCode(this.n56_1)) | 0;
     return result;
   }
   equals(other) {
@@ -477,51 +477,51 @@ class CompletionOptionsImpl {
       return true;
     if (!(other instanceof CompletionOptionsImpl))
       return false;
-    if (!(this.t55_1 == other.t55_1))
+    if (!(this.j56_1 == other.j56_1))
       return false;
-    if (!(this.u55_1 === other.u55_1))
+    if (!(this.k56_1 === other.k56_1))
       return false;
-    if (!(this.v55_1 == other.v55_1))
+    if (!(this.l56_1 == other.l56_1))
       return false;
-    if (!equals(this.w55_1, other.w55_1))
+    if (!equals(this.m56_1, other.m56_1))
       return false;
-    if (!equals(this.x55_1, other.x55_1))
+    if (!equals(this.n56_1, other.n56_1))
       return false;
     return true;
   }
   get thisFileName() {
-    return this.y55();
+    return this.o56();
   }
   get incomplete() {
-    return this.z55();
+    return this.p56();
   }
   get directory() {
-    return this.a56();
+    return this.q56();
   }
   get getFiles() {
-    return this.b56();
+    return this.r56();
   }
   get getStringCompletions() {
-    return this.c56();
+    return this.s56();
   }
 }
 class Caos2CobTag {
   constructor(tags, required, variant, type) {
     required = required === VOID ? false : required;
     variant = variant === VOID ? null : variant;
-    this.d56_1 = tags;
-    this.e56_1 = required;
-    this.f56_1 = variant;
-    this.g56_1 = type;
+    this.t56_1 = tags;
+    this.u56_1 = required;
+    this.v56_1 = variant;
+    this.w56_1 = type;
   }
   toString() {
-    return 'Caos2CobTag(tags=' + toString_0(this.d56_1) + ', required=' + this.e56_1 + ', variant=' + this.f56_1 + ', type=' + this.g56_1.toString() + ')';
+    return 'Caos2CobTag(tags=' + toString_0(this.t56_1) + ', required=' + this.u56_1 + ', variant=' + this.v56_1 + ', type=' + this.w56_1.toString() + ')';
   }
   hashCode() {
-    var result = hashCode(this.d56_1);
-    result = imul(result, 31) + getBooleanHashCode(this.e56_1) | 0;
-    result = imul(result, 31) + (this.f56_1 == null ? 0 : getStringHashCode(this.f56_1)) | 0;
-    result = imul(result, 31) + this.g56_1.hashCode() | 0;
+    var result = hashCode(this.t56_1);
+    result = imul(result, 31) + getBooleanHashCode(this.u56_1) | 0;
+    result = imul(result, 31) + (this.v56_1 == null ? 0 : getStringHashCode(this.v56_1)) | 0;
+    result = imul(result, 31) + this.w56_1.hashCode() | 0;
     return result;
   }
   equals(other) {
@@ -529,13 +529,13 @@ class Caos2CobTag {
       return true;
     if (!(other instanceof Caos2CobTag))
       return false;
-    if (!equals(this.d56_1, other.d56_1))
+    if (!equals(this.t56_1, other.t56_1))
       return false;
-    if (!(this.e56_1 === other.e56_1))
+    if (!(this.u56_1 === other.u56_1))
       return false;
-    if (!(this.f56_1 == other.f56_1))
+    if (!(this.v56_1 == other.v56_1))
       return false;
-    if (!this.g56_1.equals(other.g56_1))
+    if (!this.w56_1.equals(other.w56_1))
       return false;
     return true;
   }
@@ -543,16 +543,16 @@ class Caos2CobTag {
 class Caos2ValueType extends Enum {}
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.h56_1 = function_0;
+    this.x56_1 = function_0;
   }
   wg(a, b) {
-    return this.h56_1(a, b);
+    return this.x56_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.h56_1;
+    return this.x56_1;
   }
   equals(other) {
     var tmp;
@@ -595,7 +595,7 @@ function $serializer_getInstance_0() {
   return $serializer_instance_0;
 }
 function _get_$cachedSerializer__te6jhj($this) {
-  return $this.r55_1.k3();
+  return $this.h56_1.k3();
 }
 function CaosCompletionData$Companion$_anonymous__e5jxjb() {
   var tmp = getKClass(CaosCompletionData);
@@ -1007,26 +1007,26 @@ function postProcessCommandCompletions(raw, settings) {
         var item = _iterator__ex2g4s.y();
         var tmp$ret$2;
         $l$block: {
-          var tmp0_elvis_lhs = item.o52_1;
+          var tmp0_elvis_lhs = item.e53_1;
           var tmp_0;
           if (tmp0_elvis_lhs == null) {
-            var tmp_1 = item.t52_1;
+            var tmp_1 = item.j53_1;
             var tmp1_safe_receiver = tmp_1 instanceof CommandData ? tmp_1 : null;
-            tmp_0 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.g55_1;
+            tmp_0 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.w55_1;
           } else {
             tmp_0 = tmp0_elvis_lhs;
           }
           var tmp2_elvis_lhs = tmp_0;
           var tmp_2;
           if (tmp2_elvis_lhs == null) {
-            tmp$ret$2 = item.w52(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, null);
+            tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, null);
             break $l$block;
           } else {
             tmp_2 = tmp2_elvis_lhs;
           }
           var replacement = tmp_2;
-          var tmp3_safe_receiver = item.r52_1;
-          tmp$ret$2 = item.w52(VOID, VOID, VOID, VOID, VOID, VOID, VOID, replacement, VOID, VOID, tmp3_safe_receiver == null ? null : tmp3_safe_receiver.a52(VOID, replacement), VOID, null);
+          var tmp3_safe_receiver = item.h53_1;
+          tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, VOID, VOID, replacement, VOID, VOID, tmp3_safe_receiver == null ? null : tmp3_safe_receiver.q52(VOID, replacement), VOID, null);
         }
         destination.z1(tmp$ret$2);
       }
@@ -1057,12 +1057,12 @@ function getCommandCompletionsForCommandType(variant, commands, commandType, pre
       var _iterator__ex2g4s = this_0.w();
       while (_iterator__ex2g4s.x()) {
         var item = _iterator__ex2g4s.y();
-        var tmp_0 = item.t52_1;
+        var tmp_0 = item.j53_1;
         var tmp0_safe_receiver = tmp_0 instanceof CommandData ? tmp_0 : null;
-        var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.h55_1;
+        var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.x55_1;
         var returnTypeId = tmp1_elvis_lhs == null ? -1 : tmp1_elvis_lhs;
         var prefix = isSimilarType(returnTypeId, returnType) ? 'a_' : 'b_';
-        var tmp$ret$2 = item.w52(VOID, VOID, VOID, VOID, VOID, prefix + item.m52_1);
+        var tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, prefix + item.c53_1);
         destination.z1(tmp$ret$2);
       }
 
@@ -1082,20 +1082,20 @@ function postProcessPlaceholderCompletions(raw) {
     var item = _iterator__ex2g4s.y();
     var tmp$ret$2;
     $l$block: {
-      var tmp = item.t52_1;
+      var tmp = item.j53_1;
       var tmp0_safe_receiver = tmp instanceof CommandData ? tmp : null;
-      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.g55_1;
-      var tmp2_elvis_lhs = tmp1_elvis_lhs == null ? item.o52_1 : tmp1_elvis_lhs;
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.w55_1;
+      var tmp2_elvis_lhs = tmp1_elvis_lhs == null ? item.e53_1 : tmp1_elvis_lhs;
       var tmp_0;
       if (tmp2_elvis_lhs == null) {
-        tmp$ret$2 = item.w52(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, null);
+        tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, null);
         break $l$block;
       } else {
         tmp_0 = tmp2_elvis_lhs;
       }
       var replacement = tmp_0;
-      var tmp3_safe_receiver = item.r52_1;
-      tmp$ret$2 = item.w52(VOID, VOID, VOID, VOID, VOID, VOID, VOID, replacement, VOID, VOID, tmp3_safe_receiver == null ? null : tmp3_safe_receiver.a52(VOID, replacement), VOID, null);
+      var tmp3_safe_receiver = item.h53_1;
+      tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, VOID, VOID, replacement, VOID, VOID, tmp3_safe_receiver == null ? null : tmp3_safe_receiver.q52(VOID, replacement), VOID, null);
     }
     destination.z1(tmp$ret$2);
   }
@@ -1113,7 +1113,7 @@ function postProcessParameterHintCompletions(raw, settings) {
     var item = _iterator__ex2g4s.y();
     var tmp$ret$2;
     $l$block: {
-      var replacement = item.o52_1;
+      var replacement = item.e53_1;
       if (!(replacement == null) && split(replacement, charArrayOf([_Char___init__impl__6a9atx(36)])).b2() > minParams) {
         var tokens = split(replacement, charArrayOf([_Char___init__impl__6a9atx(32)]));
         replacement = joinToString(tokens, ' ', VOID, VOID, VOID, VOID, postProcessParameterHintCompletions$lambda);
@@ -1123,8 +1123,8 @@ function postProcessParameterHintCompletions(raw, settings) {
         break $l$block;
       }
       var tmp = replacement;
-      var tmp0_safe_receiver = item.r52_1;
-      tmp$ret$2 = item.w52(VOID, VOID, VOID, VOID, VOID, VOID, VOID, tmp, VOID, VOID, tmp0_safe_receiver == null ? null : tmp0_safe_receiver.a52(VOID, replacement), VOID, null);
+      var tmp0_safe_receiver = item.h53_1;
+      tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, VOID, VOID, tmp, VOID, VOID, tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q52(VOID, replacement), VOID, null);
     }
     destination.z1(tmp$ret$2);
   }
@@ -1184,7 +1184,7 @@ function getMultiTokenCommands(variant, commands, commandType, previousTokens) {
   if (!prefixTokens.g2(lastToken))
     return emptyList();
   var lastIndex = get_lastIndex(previousTokens);
-  var startTokenRange = previousTokens.d2(lastIndex).z1p_1;
+  var startTokenRange = previousTokens.d2(lastIndex).b1q_1;
   var tmp_0;
   // Inline function 'kotlin.text.uppercase' call
   // Inline function 'kotlin.js.asDynamic' call
@@ -1199,7 +1199,7 @@ function getMultiTokenCommands(variant, commands, commandType, previousTokens) {
     var ddeToken = token('dde:');
     var ddeIndex = prevIntTokens.k2(ddeToken);
     if (ddeIndex >= 0 && (!(ddeIndex === lastIndex) || (ddeIndex + 1 | 0) === lastIndex)) {
-      startTokenRange = previousTokens.d2(ddeIndex).z1p_1;
+      startTokenRange = previousTokens.d2(ddeIndex).b1q_1;
     }
   }
   // Inline function 'kotlin.text.uppercase' call
@@ -1212,7 +1212,7 @@ function getMultiTokenCommands(variant, commands, commandType, previousTokens) {
   var _iterator__ex2g4s_1 = tmp0.w();
   while (_iterator__ex2g4s_1.x()) {
     var element_0 = _iterator__ex2g4s_1.y();
-    if (contains_0(element_0.h52_1, tokenStr)) {
+    if (contains_0(element_0.x52_1, tokenStr)) {
       destination_2.z1(element_0);
     }
   }
@@ -1224,11 +1224,11 @@ function getMultiTokenCommands(variant, commands, commandType, previousTokens) {
     var item_1 = _iterator__ex2g4s_2.y();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
-    var filterText = item_1.h52_1.toLowerCase();
-    var tmp_1 = new RangeImpl(startTokenRange.h1(), last(previousTokens).z1p_1.f1e());
-    var tmp0_elvis_lhs_0 = item_1.o52_1;
-    var tmp1_textEdit = new TextEditImpl(tmp_1, tmp0_elvis_lhs_0 == null ? item_1.h52_1 : tmp0_elvis_lhs_0);
-    var tmp$ret$21 = item_1.w52(VOID, VOID, VOID, VOID, VOID, VOID, filterText, null, VOID, VOID, tmp1_textEdit);
+    var filterText = item_1.x52_1.toLowerCase();
+    var tmp_1 = new RangeImpl(startTokenRange.h1(), last(previousTokens).b1q_1.f1e());
+    var tmp0_elvis_lhs_0 = item_1.e53_1;
+    var tmp1_textEdit = new TextEditImpl(tmp_1, tmp0_elvis_lhs_0 == null ? item_1.x52_1 : tmp0_elvis_lhs_0);
+    var tmp$ret$21 = item_1.m53(VOID, VOID, VOID, VOID, VOID, VOID, filterText, null, VOID, VOID, tmp1_textEdit);
     destination_3.z1(tmp$ret$21);
   }
   return destination_3;
@@ -1468,7 +1468,7 @@ function _init_properties_Caos2CobTag_kt__x4reqq() {
     var _iterator__ex2g4s = this_0.w();
     while (_iterator__ex2g4s.x()) {
       var item = _iterator__ex2g4s.y();
-      var pattern = joinToString(item.d56_1, '|', VOID, VOID, VOID, VOID, tagFinders$lambda);
+      var pattern = joinToString(item.t56_1, '|', VOID, VOID, VOID, VOID, tagFinders$lambda);
       var tmp$ret$2 = to(Regex.tf(pattern, RegexOption_IGNORE_CASE_getInstance()), item);
       destination.z1(tmp$ret$2);
     }
@@ -1631,8 +1631,8 @@ function getCaos2PrayCompletions(variant, allComments, item, line, character, op
     tmp = false;
   }
   var isUndetermined = tmp;
-  var inCommandOrTag = inRange(item.token.a1n_1, line, character, VOID, true);
-  var tmp_1 = listOf_0(item.token.a1n_1);
+  var inCommandOrTag = inRange(item.token.c1n_1, line, character, VOID, true);
+  var tmp_1 = listOf_0(item.token.c1n_1);
   // Inline function 'kotlin.collections.map' call
   var this_0 = item.values;
   // Inline function 'kotlin.collections.mapTo' call
@@ -1728,7 +1728,7 @@ function getC1TagValueCompletions(thisFileName, tag, command, directory, getFile
     tmp_0 = tmp1_elvis_lhs;
   }
   var tagData = tmp_0;
-  var type = tagData.g56_1;
+  var type = tagData.w56_1;
   var tmp_1;
   if (type.equals(Caos2ValueType_CAOS_getInstance())) {
     tmp_1 = true;
@@ -1792,7 +1792,7 @@ function getC2TagValueCompletions(thisFileName, tag, command, directory, getFile
     tmp = findCobTag(tag);
   }
   var tagData = tmp;
-  var type = tagData == null ? null : tagData.g56_1;
+  var type = tagData == null ? null : tagData.w56_1;
   var tmp_0;
   if (command == null) {
     tmp_0 = null;
@@ -1884,7 +1884,7 @@ function _init_properties_CompletionsCaos2CobTags_kt__jkcknw() {
     var _iterator__ex2g4s = tmp0.w();
     while (_iterator__ex2g4s.x()) {
       var element = _iterator__ex2g4s.y();
-      if (element.f56_1 == null || element.f56_1 === 'C1') {
+      if (element.v56_1 == null || element.v56_1 === 'C1') {
         destination.z1(element);
       }
     }
@@ -1894,7 +1894,7 @@ function _init_properties_CompletionsCaos2CobTags_kt__jkcknw() {
     var _iterator__ex2g4s_0 = destination.w();
     while (_iterator__ex2g4s_0.x()) {
       var item = _iterator__ex2g4s_0.y();
-      var tmp$ret$5 = item.d56_1.d2(0);
+      var tmp$ret$5 = item.t56_1.d2(0);
       destination_0.z1(tmp$ret$5);
     }
     C1_TAGS = destination_0;
@@ -1905,7 +1905,7 @@ function _init_properties_CompletionsCaos2CobTags_kt__jkcknw() {
     var _iterator__ex2g4s_1 = tmp0_0.w();
     while (_iterator__ex2g4s_1.x()) {
       var element_0 = _iterator__ex2g4s_1.y();
-      if (element_0.f56_1 == null || element_0.f56_1 === 'C2') {
+      if (element_0.v56_1 == null || element_0.v56_1 === 'C2') {
         destination_1.z1(element_0);
       }
     }
@@ -1915,7 +1915,7 @@ function _init_properties_CompletionsCaos2CobTags_kt__jkcknw() {
     var _iterator__ex2g4s_2 = destination_1.w();
     while (_iterator__ex2g4s_2.x()) {
       var item_0 = _iterator__ex2g4s_2.y();
-      var tmp$ret$5_0 = item_0.d56_1.d2(0);
+      var tmp$ret$5_0 = item_0.t56_1.d2(0);
       destination_2.z1(tmp$ret$5_0);
     }
     C2_TAGS = destination_2;
@@ -2701,14 +2701,14 @@ function getCompletionItems(parseResult, line, character, options, settings, cur
   else
     cursorOut(cursor);
   var tmp2_safe_receiver = cursor.command;
-  var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.s4t();
+  var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.i4u();
   if (tmp3_safe_receiver == null)
     null;
   else {
     // Inline function 'kotlin.let' call
     if (tmp3_safe_receiver === get_GSUB() || tmp3_safe_receiver === get_SUBR()) {
       var subroutines = getSubroutineCompletions(parseResult, cursor, tmp3_safe_receiver === get_GSUB());
-      return CompletionList.g53(false, subroutines);
+      return CompletionList.w53(false, subroutines);
     }
   }
   var tmp;
@@ -2751,7 +2751,7 @@ function getCompletionItems(parseResult, line, character, options, settings, cur
         while (inductionVariable < last) {
           var element = tmp0[inductionVariable];
           inductionVariable = inductionVariable + 1 | 0;
-          if (inRange(element.g4x_1, line, adjustedCharacter)) {
+          if (inRange(element.w4x_1, line, adjustedCharacter)) {
             tmp$ret$4 = element;
             break $l$block;
           }
@@ -2784,7 +2784,7 @@ function getCompletionItems(parseResult, line, character, options, settings, cur
   try {
     var bitflagsCompletions = getBitflagsOptionsProvider(cursor);
     if (!(bitflagsCompletions == null)) {
-      return CompletionList.g53(true, bitflagsCompletions);
+      return CompletionList.w53(true, bitflagsCompletions);
     }
   } catch ($p) {
     if ($p instanceof Error) {
@@ -2794,7 +2794,7 @@ function getCompletionItems(parseResult, line, character, options, settings, cur
       throw $p;
     }
   }
-  return CompletionList.g53(true, items);
+  return CompletionList.w53(true, items);
 }
 function getCompletionItemsWithCaosCursorData(variant, commands, positionData, options, settings, caos2Comments) {
   settings = settings === VOID ? null : settings;
@@ -2863,9 +2863,9 @@ function getCompletionItemsWithCaosCursorData(variant, commands, positionData, o
   var _iterator__ex2g4s = tmp0.w();
   while (_iterator__ex2g4s.x()) {
     var element = _iterator__ex2g4s.y();
-    var tmp_5 = element.t52_1;
+    var tmp_5 = element.j53_1;
     var tmp0_safe_receiver_0 = tmp_5 instanceof CommandData ? tmp_5 : null;
-    var cmd = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.g55_1;
+    var cmd = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.w55_1;
     if (cmd == null || !startsWith(cmd, '_CD_')) {
       destination.z1(element);
     }
@@ -2875,7 +2875,7 @@ function getCompletionItemsWithCaosCursorData(variant, commands, positionData, o
 }
 function emptyCompletionList$delegate$lambda() {
   _init_properties_getCompletionItems_kt__hvciby();
-  return CompletionList.g53(true, emptyList());
+  return CompletionList.w53(true, emptyList());
 }
 function _get_emptyCompletionList_$ref_pmhul5() {
   return () => get_emptyCompletionList();
@@ -3284,7 +3284,7 @@ function getBitflagsOptionsProvider(data) {
     inductionVariable = inductionVariable + 1 | 0;
     var completionItem = getValuesListValueCompletionItem(item);
     // Inline function 'kotlin.collections.plusAssign' call
-    var element = completionItem.w52(VOID, VOID, VOID, VOID, VOID, '1_' + completionItem.m52_1);
+    var element = completionItem.m53(VOID, VOID, VOID, VOID, VOID, '1_' + completionItem.c53_1);
     out.z1(element);
   }
   return out;
@@ -3548,7 +3548,7 @@ function getSubroutineCompletions(parseResult, cursor, forGSUB) {
   var tmp;
   // Inline function 'kotlin.collections.isEmpty' call
   if (parseResult.scripts.length === 0) {
-    tmp = CaosParser_instance.z4w(parseResult);
+    tmp = CaosParser_instance.p4x(parseResult);
   } else {
     tmp = parseResult.scripts;
   }
@@ -3612,7 +3612,7 @@ function getSubroutineItems(items, afterToken) {
       subroutineNext = false;
     } else {
       if (item instanceof CommandToken) {
-        if (item.a1q_1.length === 4 && item.token === afterToken) {
+        if (item.c1q_1.length === 4 && item.token === afterToken) {
           subroutineNext = true;
         }
       }
@@ -3734,7 +3734,7 @@ function getCaosCompletionItems(variant, parseResult, line, character, options, 
     tmp_0 = parseResult;
   } else {
     if (!(parseResult == null) ? typeof parseResult === 'string' : false) {
-      tmp_0 = CaosParser_instance.n4w(variant, parseResult, line, character);
+      tmp_0 = CaosParser_instance.d4x(variant, parseResult, line, character);
     } else {
       var tmp_1;
       if (Array.isArray(parseResult) == true) {
@@ -3747,7 +3747,7 @@ function getCaosCompletionItems(variant, parseResult, line, character, options, 
         var tmp$ret$3 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
         var parserItems = decodeFromDynamic(this_0, tmp$ret$3, parseResult);
         var tmp_2 = CaosParser_instance;
-        tmp_1 = tmp_2.y4w(variant, joinToString_0(parserItems, '', VOID, VOID, VOID, VOID, completeCaos_JsApi$lambda_0), parserItems);
+        tmp_1 = tmp_2.o4x(variant, joinToString_0(parserItems, '', VOID, VOID, VOID, VOID, completeCaos_JsApi$lambda_0), parserItems);
       } else {
         // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
         var this_3 = get_json();
@@ -3778,14 +3778,14 @@ function json$delegate$lambda() {
 }
 function json$delegate$lambda$lambda($this$Json) {
   _init_properties_completion_kt__ujxjz8();
-  $this$Json.g45_1 = true;
+  $this$Json.w45_1 = true;
   var tmp = $this$Json;
   // Inline function 'kotlinx.serialization.modules.SerializersModule' call
   var builder = new SerializersModuleBuilder();
   initCaosCompletionSerializersModule(builder);
   caosCursorPolymorphic(builder);
   caosCursorDataDefaultSerializer(builder);
-  tmp.v45_1 = builder.v11();
+  tmp.l46_1 = builder.v11();
   return Unit_instance;
 }
 function _get_json_$ref_62276a() {

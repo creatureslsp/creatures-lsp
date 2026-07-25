@@ -147,16 +147,16 @@ import {
 //region block: pre-declaration
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.u5i_1 = function_0;
+    this.n5j_1 = function_0;
   }
   wg(a, b) {
-    return this.u5i_1(a, b);
+    return this.n5j_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.u5i_1;
+    return this.n5j_1;
   }
   equals(other) {
     var tmp;
@@ -179,16 +179,16 @@ class sam$kotlin_Comparator$0 {
 }
 class sam$kotlin_Comparator$0_0 {
   constructor(function_0) {
-    this.v5i_1 = function_0;
+    this.o5j_1 = function_0;
   }
   wg(a, b) {
-    return this.v5i_1(a, b);
+    return this.o5j_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.v5i_1;
+    return this.o5j_1;
   }
   equals(other) {
     var tmp;
@@ -212,11 +212,11 @@ class sam$kotlin_Comparator$0_0 {
 class Companion {
   constructor() {
     Companion_instance = this;
-    this.m5i_1 = 'inlayHints.';
+    this.f5j_1 = 'inlayHints.';
     var tmp = this;
-    tmp.n5i_1 = lazy(ArgumentInlayHintsProvider$Companion$values$delegate$lambda);
+    tmp.g5j_1 = lazy(ArgumentInlayHintsProvider$Companion$values$delegate$lambda);
   }
-  s5i(variant, disabled, folds, element) {
+  l5j(variant, disabled, folds, element) {
     var tmp;
     if (!inRange(element.second.d1e(), folds)) {
       var tmp0 = _get_values__tel787(this);
@@ -226,7 +226,7 @@ class Companion {
         var _iterator__ex2g4s = tmp0.w();
         while (_iterator__ex2g4s.x()) {
           var element_0 = _iterator__ex2g4s.y();
-          if (!contains_0(disabled, 'inlayHints.' + element_0.c5j()) && element_0.d5j(variant, element)) {
+          if (!contains_0(disabled, 'inlayHints.' + element_0.v5j()) && element_0.w5j(variant, element)) {
             tmp$ret$0 = element_0;
             break $l$block;
           }
@@ -239,7 +239,7 @@ class Companion {
     }
     return tmp;
   }
-  l5i() {
+  e5j() {
     // Inline function 'kotlin.collections.map' call
     var this_0 = _get_values__tel787(this);
     // Inline function 'kotlin.collections.mapTo' call
@@ -247,7 +247,7 @@ class Companion {
     var _iterator__ex2g4s = this_0.w();
     while (_iterator__ex2g4s.x()) {
       var item = _iterator__ex2g4s.y();
-      var tmp$ret$2 = 'inlayHints.' + item.c5j();
+      var tmp$ret$2 = 'inlayHints.' + item.v5j();
       destination.z1(tmp$ret$2);
     }
     // Inline function 'kotlin.collections.toTypedArray' call
@@ -258,15 +258,15 @@ class ArgumentInlayTypeHint extends Enum {
   constructor(name, ordinal, option, description, priority) {
     priority = priority === VOID ? 5 : priority;
     super(name, ordinal);
-    this.y5i_1 = option;
-    this.z5i_1 = description;
-    this.a5j_1 = priority;
+    this.r5j_1 = option;
+    this.s5j_1 = description;
+    this.t5j_1 = priority;
   }
-  c5j() {
-    return this.y5i_1;
+  v5j() {
+    return this.r5j_1;
   }
-  b5j() {
-    return this.a5j_1;
+  u5j() {
+    return this.t5j_1;
   }
 }
 class ArgumentInlayTypeHint$ATTRIBUTE_BITFLAGS_ARGUMENT_HINT extends ArgumentInlayTypeHint {
@@ -274,21 +274,21 @@ class ArgumentInlayTypeHint$ATTRIBUTE_BITFLAGS_ARGUMENT_HINT extends ArgumentInl
     super('ATTRIBUTE_BITFLAGS_ARGUMENT_HINT', 0, 'parameterBitFlagValues', 'Show bit flag for argument value', 100);
     ArgumentInlayTypeHint_ATTRIBUTE_BITFLAGS_ARGUMENT_HINT_instance = this;
   }
-  j5j(variant, element) {
-    var tmp = element.second.a4w();
+  c5k(variant, element) {
+    var tmp = element.second.q4w();
     var tmp0_safe_receiver = tmp instanceof IntVal ? tmp : null;
-    if (orElse(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.f1l_1, 0) < 1) {
+    if (orElse(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.h1l_1, 0) < 1) {
       return false;
     }
     return usesBitFlags(this, variant, element);
   }
-  d5j(variant, element) {
-    return this.j5j(variant, element instanceof Pair ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.c5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
-  k5j(variant, element) {
-    var tmp = element.second.a4w();
+  d5k(variant, element) {
+    var tmp = element.second.q4w();
     var tmp0_safe_receiver = tmp instanceof IntVal ? tmp : null;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.f1l_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.h1l_1;
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       return get_EMPTY_INLAY_LIST();
@@ -309,8 +309,8 @@ class ArgumentInlayTypeHint$ATTRIBUTE_BITFLAGS_ARGUMENT_HINT extends ArgumentInl
     var position = end(element.second);
     return getBitFlagHintValues(valuesList, bitFlagValue, position);
   }
-  r5i(variant, element) {
-    return this.k5j(variant, element instanceof Pair ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.d5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
 }
 class ArgumentInlayTypeHint$ASSUMED_GENUS_NAME_HINT extends ArgumentInlayTypeHint {
@@ -318,16 +318,16 @@ class ArgumentInlayTypeHint$ASSUMED_GENUS_NAME_HINT extends ArgumentInlayTypeHin
     super('ASSUMED_GENUS_NAME_HINT', 1, 'assumedGenusName', 'Show genus simple name', 102);
     ArgumentInlayTypeHint_ASSUMED_GENUS_NAME_HINT_instance = this;
   }
-  j5j(variant, element) {
-    var tmp = element.second.a4w();
+  c5k(variant, element) {
+    var tmp = element.second.q4w();
     if (!(tmp instanceof IntVal)) {
       return false;
     }
-    var index = element.second.y4v();
+    var index = element.second.o4w();
     if (index < 1)
       return false;
     var tmp0_safe_receiver = getOrNull(element.first.arguments, index - 1 | 0);
-    var tmp_0 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.a4w();
+    var tmp_0 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q4w();
     if (!(tmp_0 instanceof IntVal)) {
       return false;
     }
@@ -360,10 +360,10 @@ class ArgumentInlayTypeHint$ASSUMED_GENUS_NAME_HINT extends ArgumentInlayTypeHin
     var previousParameter = tmp_3;
     return like(previousParameter.name, 'family');
   }
-  d5j(variant, element) {
-    return this.j5j(variant, element instanceof Pair ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.c5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
-  k5j(variant, element) {
+  d5k(variant, element) {
     var tmp0_elvis_lhs = toIntOrNull(element.second.j1f());
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -401,8 +401,8 @@ class ArgumentInlayTypeHint$ASSUMED_GENUS_NAME_HINT extends ArgumentInlayTypeHin
     var family = tmp_2;
     return getGenusInlayHint(this, variant, element, family, genus);
   }
-  r5i(variant, element) {
-    return this.k5j(variant, element instanceof Pair ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.d5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
 }
 class ArgumentInlayTypeHint$ASSUMED_VALUE_NAME_HINT extends ArgumentInlayTypeHint {
@@ -410,9 +410,9 @@ class ArgumentInlayTypeHint$ASSUMED_VALUE_NAME_HINT extends ArgumentInlayTypeHin
     super('ASSUMED_VALUE_NAME_HINT', 2, 'assumedValueName', 'Show assumed value name');
     ArgumentInlayTypeHint_ASSUMED_VALUE_NAME_HINT_instance = this;
   }
-  j5j(variant, element) {
+  c5k(variant, element) {
     var tmp;
-    var tmp_0 = element.second.a4w();
+    var tmp_0 = element.second.q4w();
     if (tmp_0 instanceof IntVal) {
       var tmp0_safe_receiver = parameter(element.second, variant);
       tmp = !((tmp0_safe_receiver == null ? null : tmp0_safe_receiver.valuesListId) == null);
@@ -421,11 +421,11 @@ class ArgumentInlayTypeHint$ASSUMED_VALUE_NAME_HINT extends ArgumentInlayTypeHin
     }
     return tmp;
   }
-  d5j(variant, element) {
-    return this.j5j(variant, element instanceof Pair ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.c5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
-  k5j(variant, element) {
-    var tmp = element.second.a4w();
+  d5k(variant, element) {
+    var tmp = element.second.q4w();
     if (!(tmp instanceof IntVal)) {
       return get_EMPTY_INLAY_LIST();
     }
@@ -453,8 +453,8 @@ class ArgumentInlayTypeHint$ASSUMED_VALUE_NAME_HINT extends ArgumentInlayTypeHin
     var valuesListValue = tmp_1;
     return listOf(new InlayHintImpl(position, '(' + valuesListValue.name + ')'));
   }
-  r5i(variant, element) {
-    return this.k5j(variant, element instanceof Pair ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.d5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
 }
 class ArgumentInlayTypeHint$ASSUMED_EVENT_SCRIPT_NAME_HINT extends ArgumentInlayTypeHint {
@@ -462,13 +462,13 @@ class ArgumentInlayTypeHint$ASSUMED_EVENT_SCRIPT_NAME_HINT extends ArgumentInlay
     super('ASSUMED_EVENT_SCRIPT_NAME_HINT', 3, 'eventScriptName', 'Show assumed event script name');
     ArgumentInlayTypeHint_ASSUMED_EVENT_SCRIPT_NAME_HINT_instance = this;
   }
-  j5j(variant, element) {
-    return like(element.first.f4x_1, 'SCRP') && element.second.y4v() === 3;
+  c5k(variant, element) {
+    return like(element.first.v4x_1, 'SCRP') && element.second.o4w() === 3;
   }
-  d5j(variant, element) {
-    return this.j5j(variant, element instanceof Pair ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.c5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
-  k5j(variant, element) {
+  d5k(variant, element) {
     var tmp0_elvis_lhs = toIntOrNull(element.second.j1f());
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -498,8 +498,8 @@ class ArgumentInlayTypeHint$ASSUMED_EVENT_SCRIPT_NAME_HINT extends ArgumentInlay
     var value = tmp_1;
     return plus_0(items, new InlayHintImpl(end_0, '(' + value.name + ')'));
   }
-  r5i(variant, element) {
-    return this.k5j(variant, element instanceof Pair ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.d5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
 }
 class ArgumentInlayTypeHint$DDE_PIC_DIMENSIONS extends ArgumentInlayTypeHint {
@@ -507,23 +507,23 @@ class ArgumentInlayTypeHint$DDE_PIC_DIMENSIONS extends ArgumentInlayTypeHint {
     super('DDE_PIC_DIMENSIONS', 4, 'ddePictDimension', 'Show DDE: PICT dimensions', 0);
     ArgumentInlayTypeHint_DDE_PIC_DIMENSIONS_instance = this;
   }
-  j5j(variant, element) {
+  c5k(variant, element) {
     var tmp;
-    if (like(element.first.f4x_1, 'DDE: PICT')) {
-      var tmp_0 = element.second.a4w();
+    if (like(element.first.v4x_1, 'DDE: PICT')) {
+      var tmp_0 = element.second.q4w();
       tmp = tmp_0 instanceof DdePictVal;
     } else {
       tmp = false;
     }
     return tmp;
   }
-  d5j(variant, element) {
-    return this.j5j(variant, element instanceof Pair ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.c5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
-  k5j(variant, element) {
-    var tmp = element.second.a4w();
+  d5k(variant, element) {
+    var tmp = element.second.q4w();
     var tmp0_safe_receiver = tmp instanceof DdePictVal ? tmp : null;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.a1o_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.c1o_1;
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       return get_EMPTY_INLAY_LIST();
@@ -534,8 +534,8 @@ class ArgumentInlayTypeHint$DDE_PIC_DIMENSIONS extends ArgumentInlayTypeHint {
     var position = end(element.second);
     return listOf(new InlayHintImpl(position, '' + dimensions.first + 'x' + dimensions.second));
   }
-  r5i(variant, element) {
-    return this.k5j(variant, element instanceof Pair ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.d5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
 }
 class ArgumentInlayTypeHint$C1_CLAS_VALUE extends ArgumentInlayTypeHint {
@@ -543,11 +543,11 @@ class ArgumentInlayTypeHint$C1_CLAS_VALUE extends ArgumentInlayTypeHint {
     super('C1_CLAS_VALUE', 5, 'c1ClasValue', 'Show family+genus+species for CLAS assignment value');
     ArgumentInlayTypeHint_C1_CLAS_VALUE_instance = this;
   }
-  j5j(variant, element) {
-    if (!(variant === C1_getInstance().w4r())) {
+  c5k(variant, element) {
+    if (!(variant === C1_getInstance().m4s())) {
       return false;
     }
-    if (notLike(element.first.f4x_1, 'SETV')) {
+    if (notLike(element.first.v4x_1, 'SETV')) {
       return false;
     }
     var tmp0_elvis_lhs = firstOrNull(element.first.arguments);
@@ -560,10 +560,10 @@ class ArgumentInlayTypeHint$C1_CLAS_VALUE extends ArgumentInlayTypeHint {
     var previous = tmp;
     return like(previous.j1f(), 'CLAS');
   }
-  d5j(variant, element) {
-    return this.j5j(variant, element instanceof Pair ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.c5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
-  k5j(variant, element) {
+  d5k(variant, element) {
     var position = end(element.second);
     var tmp0_elvis_lhs = getC1ClasText(variant, element.second);
     var tmp;
@@ -575,8 +575,8 @@ class ArgumentInlayTypeHint$C1_CLAS_VALUE extends ArgumentInlayTypeHint {
     var formattedClas = tmp;
     return listOf(new InlayHintImpl(position, formattedClas));
   }
-  r5i(variant, element) {
-    return this.k5j(variant, element instanceof Pair ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.d5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
 }
 class ArgumentInlayTypeHint$COMMAND_RETURN_TYPE extends ArgumentInlayTypeHint {
@@ -584,38 +584,38 @@ class ArgumentInlayTypeHint$COMMAND_RETURN_TYPE extends ArgumentInlayTypeHint {
     super('COMMAND_RETURN_TYPE', 6, 'rvalueReturnValue', 'Show rvalue return type', 0);
     ArgumentInlayTypeHint_COMMAND_RETURN_TYPE_instance = this;
   }
-  j5j(variant, element) {
+  c5k(variant, element) {
     var tmp;
     var tmp_0;
     var tmp_1;
     var tmp_2;
     var tmp_3 = element.second;
     if (tmp_3 instanceof CommandCall) {
-      tmp_2 = !(element.first.e4x_1 === ValueType_CONDITION_getInstance().value);
+      tmp_2 = !(element.first.u4x_1 === ValueType_CONDITION_getInstance().value);
     } else {
       tmp_2 = false;
     }
     if (tmp_2) {
-      tmp_1 = !element.first.i4x_1;
+      tmp_1 = !element.first.y4x_1;
     } else {
       tmp_1 = false;
     }
     if (tmp_1) {
-      tmp_0 = !element.second.z4v();
+      tmp_0 = !element.second.p4w();
     } else {
       tmp_0 = false;
     }
     if (tmp_0) {
-      tmp = !(element.second.g4q() === ValueType_CONDITION_getInstance().value);
+      tmp = !(element.second.w4q() === ValueType_CONDITION_getInstance().value);
     } else {
       tmp = false;
     }
     return tmp;
   }
-  d5j(variant, element) {
-    return this.j5j(variant, element instanceof Pair ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.c5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
-  k5j(variant, element) {
+  d5k(variant, element) {
     var tmp = element.second;
     var tmp0_elvis_lhs = tmp instanceof CommandCall ? tmp : null;
     var tmp_0;
@@ -634,7 +634,7 @@ class ArgumentInlayTypeHint$COMMAND_RETURN_TYPE extends ArgumentInlayTypeHint {
     }
     var command_0 = tmp_1;
     var thisReturnTypeName = command_0.returnTypeName;
-    var tmp2_elvis_lhs = getOrNull(command_0.parameters, commandElement.h4x_1);
+    var tmp2_elvis_lhs = getOrNull(command_0.parameters, commandElement.x4x_1);
     var tmp_2;
     if (tmp2_elvis_lhs == null) {
       return get_EMPTY_INLAY_LIST();
@@ -670,22 +670,22 @@ class ArgumentInlayTypeHint$COMMAND_RETURN_TYPE extends ArgumentInlayTypeHint {
     }
     return listOf(new InlayHintImpl(position, '(' + thisReturnTypeName + ')'));
   }
-  r5i(variant, element) {
-    return this.k5j(variant, element instanceof Pair ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.d5k(variant, element instanceof Pair ? element : THROW_CCE());
   }
 }
 class sam$kotlin_Comparator$0_1 {
   constructor(function_0) {
-    this.p5k_1 = function_0;
+    this.i5l_1 = function_0;
   }
   wg(a, b) {
-    return this.p5k_1(a, b);
+    return this.i5l_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.p5k_1;
+    return this.i5l_1;
   }
   equals(other) {
     var tmp;
@@ -709,13 +709,13 @@ class sam$kotlin_Comparator$0_1 {
 class Companion_0 {
   constructor() {
     Companion_instance_0 = this;
-    this.o5i_1 = 'inlayHints.equality.';
+    this.h5j_1 = 'inlayHints.equality.';
     var tmp = this;
-    tmp.p5i_1 = lazy(EqualityInlayHintsProvider$Companion$values$delegate$lambda);
+    tmp.i5j_1 = lazy(EqualityInlayHintsProvider$Companion$values$delegate$lambda);
   }
-  t5i(variant, disabled, folds, element) {
+  m5j(variant, disabled, folds, element) {
     var tmp;
-    if (!inRange(element.z4z_1, folds)) {
+    if (!inRange(element.p50_1, folds)) {
       var tmp0 = _get_values__tel787_0(this);
       var tmp$ret$0;
       $l$block: {
@@ -723,7 +723,7 @@ class Companion_0 {
         var _iterator__ex2g4s = tmp0.w();
         while (_iterator__ex2g4s.x()) {
           var element_0 = _iterator__ex2g4s.y();
-          if (!contains_0(disabled, 'inlayHints.equality.' + element_0.c5j()) && element_0.d5j(variant, element)) {
+          if (!contains_0(disabled, 'inlayHints.equality.' + element_0.v5j()) && element_0.w5j(variant, element)) {
             tmp$ret$0 = element_0;
             break $l$block;
           }
@@ -736,7 +736,7 @@ class Companion_0 {
     }
     return tmp;
   }
-  l5i() {
+  e5j() {
     // Inline function 'kotlin.collections.map' call
     var this_0 = _get_values__tel787_0(this);
     // Inline function 'kotlin.collections.mapTo' call
@@ -744,7 +744,7 @@ class Companion_0 {
     var _iterator__ex2g4s = this_0.w();
     while (_iterator__ex2g4s.x()) {
       var item = _iterator__ex2g4s.y();
-      var tmp$ret$2 = 'inlayHints.equality.' + item.c5j();
+      var tmp$ret$2 = 'inlayHints.equality.' + item.v5j();
       destination.z1(tmp$ret$2);
     }
     // Inline function 'kotlin.collections.toTypedArray' call
@@ -755,15 +755,15 @@ class EqualityInlayHints extends Enum {
   constructor(name, ordinal, option, description, priority) {
     priority = priority === VOID ? 5 : priority;
     super(name, ordinal);
-    this.s5k_1 = option;
-    this.t5k_1 = description;
-    this.u5k_1 = priority;
+    this.l5l_1 = option;
+    this.m5l_1 = description;
+    this.n5l_1 = priority;
   }
-  c5j() {
-    return this.s5k_1;
+  v5j() {
+    return this.l5l_1;
   }
-  b5j() {
-    return this.u5k_1;
+  u5j() {
+    return this.n5l_1;
   }
 }
 class EqualityInlayHints$ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS extends EqualityInlayHints {
@@ -771,7 +771,7 @@ class EqualityInlayHints$ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS extends Equa
     super('ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS', 0, 'bitflagValues', 'Show bit flag for equality expressions', 100);
     EqualityInlayHints_ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS_instance = this;
   }
-  a5l(variant, element) {
+  t5l(variant, element) {
     var tmp;
     if (isInteger(this, element.first)) {
       tmp = element.second;
@@ -790,13 +790,13 @@ class EqualityInlayHints$ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS extends Equa
     var other = tmp_0;
     return usesBitFlags_0(this, variant, other);
   }
-  d5j(variant, element) {
-    return this.a5l(variant, element instanceof EqualityStatement ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.t5l(variant, element instanceof EqualityStatement ? element : THROW_CCE());
   }
-  b5l(variant, element) {
+  u5l(variant, element) {
     var tmp;
     var tmp0_safe_receiver = element.first;
-    var tmp_0 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.a4w();
+    var tmp_0 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q4w();
     if (tmp_0 instanceof IntVal) {
       tmp = element.first;
     } else {
@@ -832,8 +832,8 @@ class EqualityInlayHints$ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS extends Equa
     var position = end(expression);
     return getBitFlagHintValues(typeList, bitFlagValue, position);
   }
-  r5i(variant, element) {
-    return this.b5l(variant, element instanceof EqualityStatement ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.u5l(variant, element instanceof EqualityStatement ? element : THROW_CCE());
   }
 }
 class EqualityInlayHints$ASSUMED_EQ_VALUE_NAME_HINT extends EqualityInlayHints {
@@ -841,17 +841,17 @@ class EqualityInlayHints$ASSUMED_EQ_VALUE_NAME_HINT extends EqualityInlayHints {
     super('ASSUMED_EQ_VALUE_NAME_HINT', 1, 'equalityValueName', 'Show assumed value name in Equality expression', 90);
     EqualityInlayHints_ASSUMED_EQ_VALUE_NAME_HINT_instance = this;
   }
-  a5l(variant, element) {
+  t5l(variant, element) {
     var tmp;
     var tmp_0;
     var tmp_1;
     var tmp0_safe_receiver = element.first;
-    var tmp_2 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.a4w();
+    var tmp_2 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q4w();
     if (tmp_2 instanceof IntVal) {
       tmp_1 = true;
     } else {
       var tmp1_safe_receiver = element.first;
-      var tmp_3 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.a4w();
+      var tmp_3 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.q4w();
       tmp_1 = tmp_3 instanceof C2eStringVal;
     }
     if (tmp_1) {
@@ -866,12 +866,12 @@ class EqualityInlayHints$ASSUMED_EQ_VALUE_NAME_HINT extends EqualityInlayHints {
       var tmp_5;
       var tmp_6;
       var tmp2_safe_receiver = element.second;
-      var tmp_7 = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.a4w();
+      var tmp_7 = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.q4w();
       if (tmp_7 instanceof IntVal) {
         tmp_6 = true;
       } else {
         var tmp3_safe_receiver = element.second;
-        var tmp_8 = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.a4w();
+        var tmp_8 = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.q4w();
         tmp_6 = tmp_8 instanceof C2eStringVal;
       }
       if (tmp_6) {
@@ -884,18 +884,18 @@ class EqualityInlayHints$ASSUMED_EQ_VALUE_NAME_HINT extends EqualityInlayHints {
     }
     return tmp;
   }
-  d5j(variant, element) {
-    return this.a5l(variant, element instanceof EqualityStatement ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.t5l(variant, element instanceof EqualityStatement ? element : THROW_CCE());
   }
-  b5l(variant, element) {
+  u5l(variant, element) {
     var tmp;
     var tmp0_safe_receiver = element.first;
-    var tmp_0 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.a4w();
+    var tmp_0 = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q4w();
     if (tmp_0 instanceof IntVal) {
       tmp = true;
     } else {
       var tmp1_safe_receiver = element.first;
-      var tmp_1 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.a4w();
+      var tmp_1 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.q4w();
       tmp = tmp_1 instanceof C2eStringVal;
     }
     var firstIsInt = tmp;
@@ -960,22 +960,22 @@ class EqualityInlayHints$ASSUMED_EQ_VALUE_NAME_HINT extends EqualityInlayHints {
     var position = tmp_10;
     return listOf(new InlayHintImpl(position, '(' + valuesListValue.name + ')'));
   }
-  r5i(variant, element) {
-    return this.b5l(variant, element instanceof EqualityStatement ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.u5l(variant, element instanceof EqualityStatement ? element : THROW_CCE());
   }
 }
 class sam$kotlin_Comparator$0_2 {
   constructor(function_0) {
-    this.h5l_1 = function_0;
+    this.a5m_1 = function_0;
   }
   wg(a, b) {
-    return this.h5l_1(a, b);
+    return this.a5m_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.h5l_1;
+    return this.a5m_1;
   }
   equals(other) {
     var tmp;
@@ -999,13 +999,13 @@ class sam$kotlin_Comparator$0_2 {
 class Companion_1 {
   constructor() {
     Companion_instance_1 = this;
-    this.j5i_1 = 'inlayHints.';
+    this.c5j_1 = 'inlayHints.';
     var tmp = this;
-    tmp.k5i_1 = lazy(CommandInlayHintsProvider$Companion$values$delegate$lambda);
+    tmp.d5j_1 = lazy(CommandInlayHintsProvider$Companion$values$delegate$lambda);
   }
-  q5i(variant, disabled, folds, element) {
+  j5j(variant, disabled, folds, element) {
     var tmp;
-    if (!inRange(element.g4x_1, folds)) {
+    if (!inRange(element.w4x_1, folds)) {
       var tmp0 = _get_values__tel787_1(this);
       var tmp$ret$0;
       $l$block: {
@@ -1013,7 +1013,7 @@ class Companion_1 {
         var _iterator__ex2g4s = tmp0.w();
         while (_iterator__ex2g4s.x()) {
           var element_0 = _iterator__ex2g4s.y();
-          if (!contains_0(disabled, 'inlayHints.' + element_0.c5j()) && element_0.d5j(variant, element)) {
+          if (!contains_0(disabled, 'inlayHints.' + element_0.v5j()) && element_0.w5j(variant, element)) {
             tmp$ret$0 = element_0;
             break $l$block;
           }
@@ -1026,7 +1026,7 @@ class Companion_1 {
     }
     return tmp;
   }
-  l5i() {
+  e5j() {
     // Inline function 'kotlin.collections.map' call
     var this_0 = _get_values__tel787_1(this);
     // Inline function 'kotlin.collections.mapTo' call
@@ -1034,7 +1034,7 @@ class Companion_1 {
     var _iterator__ex2g4s = this_0.w();
     while (_iterator__ex2g4s.x()) {
       var item = _iterator__ex2g4s.y();
-      var tmp$ret$2 = 'inlayHints.' + item.c5j();
+      var tmp$ret$2 = 'inlayHints.' + item.v5j();
       destination.z1(tmp$ret$2);
     }
     // Inline function 'kotlin.collections.toTypedArray' call
@@ -1045,15 +1045,15 @@ class ParameterHintsProvider extends Enum {
   constructor(name, ordinal, option, description, priority) {
     priority = priority === VOID ? 0 : priority;
     super(name, ordinal);
-    this.k5l_1 = option;
-    this.l5l_1 = description;
-    this.m5l_1 = priority;
+    this.d5m_1 = option;
+    this.e5m_1 = description;
+    this.f5m_1 = priority;
   }
-  c5j() {
-    return this.k5l_1;
+  v5j() {
+    return this.d5m_1;
   }
-  b5j() {
-    return this.m5l_1;
+  u5j() {
+    return this.f5m_1;
   }
 }
 class ParameterHintsProvider$PARAMETER_NAME_HINT extends ParameterHintsProvider {
@@ -1061,13 +1061,13 @@ class ParameterHintsProvider$PARAMETER_NAME_HINT extends ParameterHintsProvider 
     super('PARAMETER_NAME_HINT', 0, 'parameterHints.showParameterHints', 'Show parameter names before expression');
     ParameterHintsProvider_PARAMETER_NAME_HINT_instance = this;
   }
-  s5l(variant, element) {
-    return !element.i4x_1 && !(element.e4x_1 === ValueType_CONDITION_getInstance().value) && !(element.f4x_1 === get_ConditionCommand().command) && notLikeAny(element.f4x_1, get_setLike());
+  l5m(variant, element) {
+    return !element.y4x_1 && !(element.u4x_1 === ValueType_CONDITION_getInstance().value) && !(element.v4x_1 === get_ConditionCommand().command) && notLikeAny(element.v4x_1, get_setLike());
   }
-  d5j(variant, element) {
-    return this.s5l(variant, element instanceof CommandCall ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.l5m(variant, element instanceof CommandCall ? element : THROW_CCE());
   }
-  t5l(variant, element) {
+  m5m(variant, element) {
     var tmp0_elvis_lhs = command(element, variant);
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -1124,8 +1124,8 @@ class ParameterHintsProvider$PARAMETER_NAME_HINT extends ParameterHintsProvider 
     }
     return toList_0(destination);
   }
-  r5i(variant, element) {
-    return this.t5l(variant, element instanceof CommandCall ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.m5m(variant, element instanceof CommandCall ? element : THROW_CCE());
   }
 }
 class ParameterHintsProvider$SETV_PARAMETER_NAME_HINT extends ParameterHintsProvider {
@@ -1133,13 +1133,13 @@ class ParameterHintsProvider$SETV_PARAMETER_NAME_HINT extends ParameterHintsProv
     super('SETV_PARAMETER_NAME_HINT', 1, 'setvParameterHints', 'Show parameter names before expression');
     ParameterHintsProvider_SETV_PARAMETER_NAME_HINT_instance = this;
   }
-  s5l(variant, element) {
-    return !element.i4x_1 && !(element.e4x_1 === ValueType_CONDITION_getInstance().value) && likeAny(element.f4x_1, get_setLike());
+  l5m(variant, element) {
+    return !element.y4x_1 && !(element.u4x_1 === ValueType_CONDITION_getInstance().value) && likeAny(element.v4x_1, get_setLike());
   }
-  d5j(variant, element) {
-    return this.s5l(variant, element instanceof CommandCall ? element : THROW_CCE());
+  w5j(variant, element) {
+    return this.l5m(variant, element instanceof CommandCall ? element : THROW_CCE());
   }
-  t5l(variant, element) {
+  m5m(variant, element) {
     var arguments_0 = element.arguments;
     var tmp0_elvis_lhs = firstOrNull(arguments_0);
     var tmp;
@@ -1308,20 +1308,20 @@ class ParameterHintsProvider$SETV_PARAMETER_NAME_HINT extends ParameterHintsProv
     var hints = plus(tmp_4, destination_3);
     return distinct(hints);
   }
-  r5i(variant, element) {
-    return this.t5l(variant, element instanceof CommandCall ? element : THROW_CCE());
+  k5j(variant, element) {
+    return this.m5m(variant, element instanceof CommandCall ? element : THROW_CCE());
   }
 }
 class Companion_2 {}
 //endregion
 function getCaosInlayOptions() {
-  var tmp0 = Companion_getInstance_2().l5i();
+  var tmp0 = Companion_getInstance_2().e5j();
   // Inline function 'kotlin.collections.plus' call
-  var elements = Companion_getInstance_0().l5i();
+  var elements = Companion_getInstance_0().e5j();
   // Inline function 'kotlin.js.asDynamic' call
   var tmp0_0 = tmp0.concat(elements);
   // Inline function 'kotlin.collections.plus' call
-  var elements_0 = Companion_getInstance_1().l5i();
+  var elements_0 = Companion_getInstance_1().e5j();
   // Inline function 'kotlin.js.asDynamic' call
   return tmp0_0.concat(elements_0);
 }
@@ -1352,9 +1352,9 @@ function getCaosInlayHints(parseResult, disabled, folds, minimumParameterCount) 
       var parameterCount = tmp;
       var tmp_0;
       if (parameterCount > (minimumParameterCount == null ? 2 : minimumParameterCount)) {
-        var tmp3_safe_receiver = Companion_getInstance_2().q5i(variant, disabled, folds, element);
+        var tmp3_safe_receiver = Companion_getInstance_2().j5j(variant, disabled, folds, element);
         // Inline function 'kotlin.collections.orEmpty' call
-        var tmp0_elvis_lhs = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.r5i(variant, element);
+        var tmp0_elvis_lhs = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.k5j(variant, element);
         tmp_0 = tmp0_elvis_lhs == null ? emptyList() : tmp0_elvis_lhs;
       } else {
         tmp_0 = emptyList();
@@ -1370,9 +1370,9 @@ function getCaosInlayHints(parseResult, disabled, folds, minimumParameterCount) 
         var element_0 = tmp0[inductionVariable_0];
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
         var element_1 = new Pair(element, element_0);
-        var tmp0_safe_receiver_0 = Companion_getInstance_0().s5i(variant, disabled, folds, element_1);
+        var tmp0_safe_receiver_0 = Companion_getInstance_0().l5j(variant, disabled, folds, element_1);
         // Inline function 'kotlin.collections.orEmpty' call
-        var tmp0_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.r5i(variant, element_1);
+        var tmp0_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.k5j(variant, element_1);
         var list = tmp0_elvis_lhs_0 == null ? emptyList() : tmp0_elvis_lhs_0;
         addAll(destination_0, list);
       }
@@ -1391,9 +1391,9 @@ function getCaosInlayHints(parseResult, disabled, folds, minimumParameterCount) 
   while (inductionVariable_1 < last_1) {
     var element_2 = tmp0_0[inductionVariable_1];
     inductionVariable_1 = inductionVariable_1 + 1 | 0;
-    var tmp0_safe_receiver_1 = Companion_getInstance_1().t5i(variant, disabled, folds, element_2);
+    var tmp0_safe_receiver_1 = Companion_getInstance_1().m5j(variant, disabled, folds, element_2);
     // Inline function 'kotlin.collections.orEmpty' call
-    var tmp0_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : tmp0_safe_receiver_1.r5i(variant, element_2);
+    var tmp0_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : tmp0_safe_receiver_1.k5j(variant, element_2);
     var list_1 = tmp0_elvis_lhs_1 == null ? emptyList() : tmp0_elvis_lhs_1;
     addAll(destination_1, list_1);
   }
@@ -1466,20 +1466,20 @@ var method;
 function getCaosDocumentSymbolsFromText(variant, text, addDoifLikeStatements) {
   addDoifLikeStatements = addDoifLikeStatements === VOID ? null : addDoifLikeStatements;
   _init_properties_Symbols_kt__qplq95();
-  var parseResult = CaosParser_instance.q4w(variant, text);
+  var parseResult = CaosParser_instance.g4x(variant, text);
   return getCaosDocumentSymbols(parseResult, addDoifLikeStatements);
 }
 function getCaosDocumentSymbols(parserResult, addDoifLikeStatements) {
   addDoifLikeStatements = addDoifLikeStatements === VOID ? null : addDoifLikeStatements;
   _init_properties_Symbols_kt__qplq95();
-  var scripts = toList(CaosParser_instance.z4w(parserResult));
+  var scripts = toList(CaosParser_instance.p4x(parserResult));
   // Inline function 'kotlin.collections.sortedBy' call
   var this_0 = parserResult.items;
   // Inline function 'kotlin.comparisons.compareBy' call
   var tmp = getCaosDocumentSymbols$lambda;
   var tmp$ret$1 = new sam$kotlin_Comparator$0(tmp);
   var items = sortedWith(this_0, tmp$ret$1);
-  var offsets = CaosTokenizerUtil_instance.k4g(parserResult.originalText, false);
+  var offsets = CaosTokenizerUtil_instance.a4h(parserResult.originalText, false);
   // Inline function 'kotlin.collections.mapNotNull' call
   // Inline function 'kotlin.collections.mapNotNullTo' call
   var destination = ArrayList.u1();
@@ -1532,7 +1532,7 @@ function getCaosDocumentSymbol(items, offsets, range, name, addDoifLikeStatement
   var _iterator__ex2g4s = offsets.w();
   while (_iterator__ex2g4s.x()) {
     var element = _iterator__ex2g4s.y();
-    if (!(range.a1k_1 === element.a1k_1) && contains_2(range, element)) {
+    if (!(range.c1k_1 === element.c1k_1) && contains_2(range, element)) {
       destination.z1(element);
     }
   }
@@ -1662,7 +1662,7 @@ function getCaosDocumentSymbol_0(items, range, name, children, addDoifLikeStatem
   var tmp5_range = toRange(range);
   var tmp1_safe_receiver = lastOrNull(tailItems);
   var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : get_end(tmp1_safe_receiver);
-  var tmp6_selectionRange = new RangeImpl(range.c1k_1, tmp2_elvis_lhs == null ? range.d1k_1 : tmp2_elvis_lhs);
+  var tmp6_selectionRange = new RangeImpl(range.e1k_1, tmp2_elvis_lhs == null ? range.f1k_1 : tmp2_elvis_lhs);
   return new DocumentSymbolImpl(tmp3_name, kind, tmp5_range, tmp6_selectionRange, tmp4_children);
 }
 function getTailItems(items, range) {
@@ -1801,7 +1801,7 @@ function _init_properties_Symbols_kt__qplq95() {
   }
 }
 function _get_values__tel787($this) {
-  var tmp0 = $this.n5i_1;
+  var tmp0 = $this.g5j_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('values', 1, tmp, ArgumentInlayHintsProvider$Companion$_get_values_$ref_h7rcbd(), null);
@@ -1817,8 +1817,8 @@ function ArgumentInlayHintsProvider$Companion$values$delegate$lambda() {
 }
 function ArgumentInlayHintsProvider$Companion$values$delegate$lambda$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = b.b5j();
-  var tmp$ret$2 = a.b5j();
+  var tmp = b.u5j();
+  var tmp$ret$2 = a.u5j();
   return compareValues(tmp, tmp$ret$2);
 }
 function ArgumentInlayHintsProvider$Companion$_get_values_$ref_h7rcbd() {
@@ -1832,7 +1832,7 @@ function Companion_getInstance_0() {
 }
 function usesBitFlags($this, variant, element) {
   var tmp0_safe_receiver = getValuesList_0(variant, element);
-  var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.b4r();
+  var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.r4r();
   return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
 }
 function getGenusInlayHint($this, variant, element, family, genus) {
@@ -1880,7 +1880,7 @@ function getValuesList_0(variant, element) {
   var parent = element.ki();
   var argument = element.li();
   var tmp;
-  if (likeAny(parent.f4x_1, get_setLike())) {
+  if (likeAny(parent.v4x_1, get_setLike())) {
     var tmp0_safe_receiver = command(parent, variant);
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.parameters;
     var tmp_0;
@@ -1989,7 +1989,7 @@ function getC1ClasText(variant, element) {
   // Inline function 'com.bedalton.common.util.trySilent' call
   var tmp_0;
   try {
-    tmp_0 = AgentClassUtils_instance.p51(clasValue);
+    tmp_0 = AgentClassUtils_instance.f52(clasValue);
   } catch ($p) {
     var tmp_1;
     if ($p instanceof Exception) {
@@ -2022,7 +2022,7 @@ function getC1ClasText(variant, element) {
   return 'family:' + agentClass[0] + ' genus:' + agentClass[1] + genusString + ' species:' + agentClass[2];
 }
 function getBitFlagText(typeList, bitFlagValue, delimiter) {
-  if (!typeList.b4r()) {
+  if (!typeList.r4r()) {
     return null;
   }
   // Inline function 'kotlin.collections.mutableListOf' call
@@ -2048,7 +2048,7 @@ function getBitFlagText(typeList, bitFlagValue, delimiter) {
     var typeListValue = indexedObject[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
     try {
-      var tmp0_elvis_lhs = typeListValue.f1s();
+      var tmp0_elvis_lhs = typeListValue.h1s();
       var tmp_0;
       if (tmp0_elvis_lhs == null) {
         continue $l$loop;
@@ -2129,7 +2129,7 @@ function _init_properties_EMPTY_INLAY_LIST_kt__ahy6fk() {
   }
 }
 function _get_values__tel787_0($this) {
-  var tmp0 = $this.p5i_1;
+  var tmp0 = $this.i5j_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('values', 1, tmp, EqualityInlayHintsProvider$Companion$_get_values_$ref_pvx88s(), null);
@@ -2145,8 +2145,8 @@ function EqualityInlayHintsProvider$Companion$values$delegate$lambda() {
 }
 function EqualityInlayHintsProvider$Companion$values$delegate$lambda$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = b.b5j();
-  var tmp$ret$2 = a.b5j();
+  var tmp = b.u5j();
+  var tmp$ret$2 = a.u5j();
   return compareValues(tmp, tmp$ret$2);
 }
 function EqualityInlayHintsProvider$Companion$_get_values_$ref_pvx88s() {
@@ -2161,9 +2161,9 @@ function Companion_getInstance_1() {
 function isInteger($this, element) {
   var tmp;
   if (!(element == null)) {
-    var tmp_0 = element.a4w();
+    var tmp_0 = element.q4w();
     var tmp0_safe_receiver = tmp_0 instanceof IntVal ? tmp_0 : null;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.f1l_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.h1l_1;
     tmp = (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) > 0;
   } else {
     tmp = false;
@@ -2172,7 +2172,7 @@ function isInteger($this, element) {
 }
 function usesBitFlags_0($this, variant, element) {
   var tmp0_safe_receiver = element instanceof CommandCall ? element : null;
-  var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.f4x_1;
+  var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.v4x_1;
   var tmp;
   if (tmp1_elvis_lhs == null) {
     return false;
@@ -2180,7 +2180,7 @@ function usesBitFlags_0($this, variant, element) {
     tmp = tmp1_elvis_lhs;
   }
   var commandString = tmp;
-  var tmp2_elvis_lhs = CaosLibs_getInstance().kg(variant).getCommandFromString(Companion_getInstance().z1s_1, commandString);
+  var tmp2_elvis_lhs = CaosLibs_getInstance().kg(variant).getCommandFromString(Companion_getInstance().b1t_1, commandString);
   var tmp_0;
   if (tmp2_elvis_lhs == null) {
     return false;
@@ -2196,7 +2196,7 @@ function usesBitFlags_0($this, variant, element) {
     tmp_1 = tmp3_elvis_lhs;
   }
   var valuesList = tmp_1;
-  return valuesList.b4r();
+  return valuesList.r4r();
 }
 var EqualityInlayHints_ATTRIBUTE_BITFLAGS_IN_EQUALITY_EXPRESSIONS_instance;
 var EqualityInlayHints_ASSUMED_EQ_VALUE_NAME_HINT_instance;
@@ -2218,7 +2218,7 @@ function EqualityInlayHints_initEntries() {
 }
 var $ENTRIES_0;
 function getReturnValuesList(_this__u8e3s4, variant) {
-  var tmp0_safe_receiver = _this__u8e3s4.x4o_1;
+  var tmp0_safe_receiver = _this__u8e3s4.n4p_1;
   var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.r3(variant);
   var tmp;
   if (tmp1_elvis_lhs == null) {
@@ -2227,7 +2227,7 @@ function getReturnValuesList(_this__u8e3s4, variant) {
     tmp = tmp1_elvis_lhs;
   }
   var valuesListId = tmp;
-  return CaosLibs_getInstance().i4v_1.get(valuesListId);
+  return CaosLibs_getInstance().y4v_1.get(valuesListId);
 }
 function getOpposingValuesList(variant, parent, expression) {
   var other = equals(parent.first, expression) ? parent.second : parent.first;
@@ -2254,7 +2254,7 @@ function get_SKIP_LAST() {
 }
 var SKIP_LAST;
 function _get_values__tel787_1($this) {
-  var tmp0 = $this.k5i_1;
+  var tmp0 = $this.d5j_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('values', 1, tmp, CommandInlayHintsProvider$Companion$_get_values_$ref_25r2x7(), null);
@@ -2270,8 +2270,8 @@ function CommandInlayHintsProvider$Companion$values$delegate$lambda() {
 }
 function CommandInlayHintsProvider$Companion$values$delegate$lambda$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = b.b5j();
-  var tmp$ret$2 = a.b5j();
+  var tmp = b.u5j();
+  var tmp$ret$2 = a.u5j();
   return compareValues(tmp, tmp$ret$2);
 }
 function CommandInlayHintsProvider$Companion$_get_values_$ref_25r2x7() {
@@ -2288,11 +2288,11 @@ function skipLast($this, element) {
   var tmp_0 = get_setLike();
   // Inline function 'kotlin.text.uppercase' call
   // Inline function 'kotlin.js.asDynamic' call
-  var tmp$ret$0 = element.f4x_1.toUpperCase();
+  var tmp$ret$0 = element.v4x_1.toUpperCase();
   if (tmp_0.g2(tmp$ret$0)) {
     var firstArg = firstOrNull(element.arguments);
     var tmp0_safe_receiver = firstArg instanceof CommandCall ? firstArg : null;
-    var commandString = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.f4x_1;
+    var commandString = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.v4x_1;
     tmp = contains(get_SKIP_LAST(), commandString);
   } else {
     tmp = false;
@@ -2382,7 +2382,7 @@ function returnValuesList(_this__u8e3s4, variant) {
     tmp = tmp1_elvis_lhs;
   }
   var listId = tmp;
-  return CaosLibs_getInstance().i4v_1.get(listId);
+  return CaosLibs_getInstance().y4v_1.get(listId);
 }
 function get_json() {
   _init_properties_hints_kt__ovp7y2();
@@ -2488,16 +2488,16 @@ function json$delegate$lambda() {
 }
 function json$delegate$lambda$lambda($this$Json) {
   _init_properties_hints_kt__ovp7y2();
-  $this$Json.g45_1 = true;
+  $this$Json.w45_1 = true;
   var tmp = $this$Json;
   // Inline function 'kotlinx.serialization.modules.SerializersModule' call
   var builder = new SerializersModuleBuilder();
   builder.r1d(get_caosParserSerializersModule());
-  tmp.v45_1 = builder.v11();
-  $this$Json.e45_1 = true;
-  $this$Json.f45_1 = true;
-  $this$Json.l45_1 = 'json_type';
-  $this$Json.h45_1 = true;
+  tmp.l46_1 = builder.v11();
+  $this$Json.u45_1 = true;
+  $this$Json.v45_1 = true;
+  $this$Json.b46_1 = 'json_type';
+  $this$Json.x45_1 = true;
   return Unit_instance;
 }
 function _get_json_$ref_62276a() {

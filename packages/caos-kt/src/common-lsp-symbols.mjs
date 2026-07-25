@@ -64,7 +64,7 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.q5h_1 = [null, null, null, null, lazy(tmp_0, DocumentSymbolImpl$Companion$$childSerializers$_anonymous__ebl0p), null, null];
+    tmp.j5i_1 = [null, null, null, null, lazy(tmp_0, DocumentSymbolImpl$Companion$$childSerializers$_anonymous__ebl0p), null, null];
   }
 }
 class $serializer {
@@ -78,19 +78,19 @@ class $serializer {
     tmp0_serialDesc.w13('children', false);
     tmp0_serialDesc.w13('detail', true);
     tmp0_serialDesc.w13('tags', true);
-    this.r5h_1 = tmp0_serialDesc;
+    this.k5i_1 = tmp0_serialDesc;
   }
-  s5h(encoder, value) {
-    var tmp0_desc = this.r5h_1;
+  l5i(encoder, value) {
+    var tmp0_desc = this.k5i_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance().q5h_1;
-    tmp1_output.rx(tmp0_desc, 0, value.t5h_1);
-    tmp1_output.mx(tmp0_desc, 1, value.u5h_1);
-    tmp1_output.tx(tmp0_desc, 2, RangeSerializer_getInstance(), value.v5h_1);
-    tmp1_output.tx(tmp0_desc, 3, RangeSerializer_getInstance(), value.w5h_1);
-    tmp1_output.tx(tmp0_desc, 4, tmp2_cached[4].k3(), value.x5h_1);
-    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.y5h_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 5, StringSerializer_getInstance(), value.y5h_1);
+    var tmp2_cached = Companion_getInstance().j5i_1;
+    tmp1_output.rx(tmp0_desc, 0, value.m5i_1);
+    tmp1_output.mx(tmp0_desc, 1, value.n5i_1);
+    tmp1_output.tx(tmp0_desc, 2, RangeSerializer_getInstance(), value.o5i_1);
+    tmp1_output.tx(tmp0_desc, 3, RangeSerializer_getInstance(), value.p5i_1);
+    tmp1_output.tx(tmp0_desc, 4, tmp2_cached[4].k3(), value.q5i_1);
+    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.r5i_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 5, StringSerializer_getInstance(), value.r5i_1);
     }
     var tmp;
     if (tmp1_output.zx(tmp0_desc, 6)) {
@@ -98,18 +98,18 @@ class $serializer {
     } else {
       // Inline function 'kotlin.intArrayOf' call
       var tmp$ret$0 = new Int32Array([]);
-      tmp = !equals(value.z5h_1, tmp$ret$0);
+      tmp = !equals(value.s5i_1, tmp$ret$0);
     }
     if (tmp) {
-      tmp1_output.tx(tmp0_desc, 6, IntArraySerializer_getInstance(), value.z5h_1);
+      tmp1_output.tx(tmp0_desc, 6, IntArraySerializer_getInstance(), value.s5i_1);
     }
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.s5h(encoder, value instanceof DocumentSymbolImpl ? value : THROW_CCE());
+    return this.l5i(encoder, value instanceof DocumentSymbolImpl ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.r5h_1;
+    var tmp0_desc = this.k5i_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -121,7 +121,7 @@ class $serializer {
     var tmp9_local5 = null;
     var tmp10_local6 = null;
     var tmp11_input = decoder.bw(tmp0_desc);
-    var tmp12_cached = Companion_getInstance().q5h_1;
+    var tmp12_cached = Companion_getInstance().j5i_1;
     if (tmp11_input.sw()) {
       tmp4_local0 = tmp11_input.lw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -177,13 +177,13 @@ class $serializer {
         }
       }
     tmp11_input.cw(tmp0_desc);
-    return DocumentSymbolImpl.a5i(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
+    return DocumentSymbolImpl.t5i(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
   }
   lr() {
-    return this.r5h_1;
+    return this.k5i_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance().q5h_1;
+    var tmp0_cached = Companion_getInstance().j5i_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -203,93 +203,93 @@ class DocumentSymbolImpl {
       tmp = tags;
     }
     tags = tmp;
-    this.t5h_1 = name;
-    this.u5h_1 = kind;
-    this.v5h_1 = range;
-    this.w5h_1 = selectionRange;
-    this.x5h_1 = children;
-    this.y5h_1 = detail;
-    this.z5h_1 = tags;
+    this.m5i_1 = name;
+    this.n5i_1 = kind;
+    this.o5i_1 = range;
+    this.p5i_1 = selectionRange;
+    this.q5i_1 = children;
+    this.r5i_1 = detail;
+    this.s5i_1 = tags;
   }
   o() {
-    return this.t5h_1;
+    return this.m5i_1;
   }
   iu() {
-    return this.u5h_1;
+    return this.n5i_1;
   }
   dg() {
-    return this.v5h_1;
+    return this.o5i_1;
   }
-  b5i() {
-    return this.w5h_1;
+  u5i() {
+    return this.p5i_1;
   }
-  c5i() {
-    return this.x5h_1;
+  v5i() {
+    return this.q5i_1;
   }
-  d5i() {
-    return this.y5h_1;
+  w5i() {
+    return this.r5i_1;
   }
-  e5i() {
-    return this.z5h_1;
+  x5i() {
+    return this.s5i_1;
   }
   equals(other) {
     if (this === other)
       return true;
     if (!(other instanceof DocumentSymbolImpl))
       return false;
-    if (!(this.t5h_1 === other.t5h_1))
+    if (!(this.m5i_1 === other.m5i_1))
       return false;
-    if (!(this.u5h_1 === other.u5h_1))
+    if (!(this.n5i_1 === other.n5i_1))
       return false;
-    if (!equals(this.v5h_1, other.v5h_1))
+    if (!equals(this.o5i_1, other.o5i_1))
       return false;
-    if (!equals(this.w5h_1, other.w5h_1))
+    if (!equals(this.p5i_1, other.p5i_1))
       return false;
-    if (!contentEquals(this.x5h_1, other.x5h_1))
+    if (!contentEquals(this.q5i_1, other.q5i_1))
       return false;
-    if (!(this.y5h_1 == other.y5h_1))
+    if (!(this.r5i_1 == other.r5i_1))
       return false;
-    if (!contentEquals_0(this.z5h_1, other.z5h_1))
+    if (!contentEquals_0(this.s5i_1, other.s5i_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = getStringHashCode(this.t5h_1);
-    result = imul(31, result) + this.u5h_1 | 0;
-    result = imul(31, result) + hashCode(this.v5h_1) | 0;
-    result = imul(31, result) + hashCode(this.w5h_1) | 0;
-    result = imul(31, result) + contentHashCode(this.x5h_1) | 0;
+    var result = getStringHashCode(this.m5i_1);
+    result = imul(31, result) + this.n5i_1 | 0;
+    result = imul(31, result) + hashCode(this.o5i_1) | 0;
+    result = imul(31, result) + hashCode(this.p5i_1) | 0;
+    result = imul(31, result) + contentHashCode(this.q5i_1) | 0;
     var tmp = imul(31, result);
-    var tmp0_safe_receiver = this.y5h_1;
+    var tmp0_safe_receiver = this.r5i_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : getStringHashCode(tmp0_safe_receiver);
     result = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
-    result = imul(31, result) + contentHashCode_0(this.z5h_1) | 0;
+    result = imul(31, result) + contentHashCode_0(this.s5i_1) | 0;
     return result;
   }
   toString() {
-    return 'DocumentSymbolImpl(name=' + this.t5h_1 + ', kind=' + this.u5h_1 + ', range=' + toString(this.v5h_1) + ', selectionRange=' + toString(this.w5h_1) + ', children=' + toString(this.x5h_1) + ', detail=' + this.y5h_1 + ', tags=' + toString(this.z5h_1) + ')';
+    return 'DocumentSymbolImpl(name=' + this.m5i_1 + ', kind=' + this.n5i_1 + ', range=' + toString(this.o5i_1) + ', selectionRange=' + toString(this.p5i_1) + ', children=' + toString(this.q5i_1) + ', detail=' + this.r5i_1 + ', tags=' + toString(this.s5i_1) + ')';
   }
-  static a5i(seen0, name, kind, range, selectionRange, children, detail, tags, serializationConstructorMarker) {
+  static t5i(seen0, name, kind, range, selectionRange, children, detail, tags, serializationConstructorMarker) {
     Companion_getInstance();
     if (!(31 === (31 & seen0))) {
-      throwMissingFieldException(seen0, 31, $serializer_getInstance().r5h_1);
+      throwMissingFieldException(seen0, 31, $serializer_getInstance().k5i_1);
     }
     var $this = createThis(this);
-    $this.t5h_1 = name;
-    $this.u5h_1 = kind;
-    $this.v5h_1 = range;
-    $this.w5h_1 = selectionRange;
-    $this.x5h_1 = children;
+    $this.m5i_1 = name;
+    $this.n5i_1 = kind;
+    $this.o5i_1 = range;
+    $this.p5i_1 = selectionRange;
+    $this.q5i_1 = children;
     if (0 === (seen0 & 32))
-      $this.y5h_1 = null;
+      $this.r5i_1 = null;
     else
-      $this.y5h_1 = detail;
+      $this.r5i_1 = detail;
     if (0 === (seen0 & 64)) {
       var tmp = $this;
       // Inline function 'kotlin.intArrayOf' call
-      tmp.z5h_1 = new Int32Array([]);
+      tmp.s5i_1 = new Int32Array([]);
     } else
-      $this.z5h_1 = tags;
+      $this.s5i_1 = tags;
     return $this;
   }
 }
@@ -297,14 +297,14 @@ class DocumentSymbolSerializer {
   constructor() {
     DocumentSymbolSerializer_instance = this;
     var tmp = this;
-    tmp.f5i_1 = lazy_0(DocumentSymbolSerializer$childrenSerializer$delegate$lambda);
+    tmp.y5i_1 = lazy_0(DocumentSymbolSerializer$childrenSerializer$delegate$lambda);
     var tmp_0 = this;
-    tmp_0.g5i_1 = lazy_0(DocumentSymbolSerializer$intArraySerializer$delegate$lambda);
+    tmp_0.z5i_1 = lazy_0(DocumentSymbolSerializer$intArraySerializer$delegate$lambda);
     var tmp_1 = this;
-    tmp_1.h5i_1 = lazy_0(DocumentSymbolSerializer$descriptor$delegate$lambda);
+    tmp_1.a5j_1 = lazy_0(DocumentSymbolSerializer$descriptor$delegate$lambda);
   }
   lr() {
-    var tmp0 = this.h5i_1;
+    var tmp0 = this.a5j_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, DocumentSymbolSerializer$_get_descriptor_$ref_817kp6(), null);
@@ -373,19 +373,19 @@ class DocumentSymbolSerializer {
     var tmp_1 = new DocumentSymbolImpl(tmp3_name, tmp5_kind, tmp7_range, tmp8_selectionRange, tmp9_children, tmp4_detail, tmp6_tags);
     return isInterface(tmp_1, DocumentSymbol) ? tmp_1 : THROW_CCE();
   }
-  i5i(encoder, value) {
+  b5j(encoder, value) {
     var structure = encoder.bw(this.lr());
     structure.rx(this.lr(), 0, value.o());
-    structure.vx(this.lr(), 1, get_nullable(serializer_0(StringCompanionObject_instance)), value.d5i());
+    structure.vx(this.lr(), 1, get_nullable(serializer_0(StringCompanionObject_instance)), value.w5i());
     structure.mx(this.lr(), 2, value.iu());
-    structure.tx(this.lr(), 3, _get_intArraySerializer__ivdakx(this), value.e5i());
+    structure.tx(this.lr(), 3, _get_intArraySerializer__ivdakx(this), value.x5i());
     structure.tx(this.lr(), 4, RangeSerializer_getInstance(), value.dg());
-    structure.vx(this.lr(), 5, RangeSerializer_getInstance(), value.b5i());
-    structure.vx(this.lr(), 5, _get_childrenSerializer__f1any2(this), value.c5i());
+    structure.vx(this.lr(), 5, RangeSerializer_getInstance(), value.u5i());
+    structure.vx(this.lr(), 5, _get_childrenSerializer__f1any2(this), value.v5i());
     structure.cw(this.lr());
   }
   mr(encoder, value) {
-    return this.i5i(encoder, (!(value == null) ? isInterface(value, DocumentSymbol) : false) ? value : THROW_CCE());
+    return this.b5j(encoder, (!(value == null) ? isInterface(value, DocumentSymbol) : false) ? value : THROW_CCE());
   }
 }
 //endregion
@@ -405,14 +405,14 @@ function $serializer_getInstance() {
   return $serializer_instance;
 }
 function _get_childrenSerializer__f1any2($this) {
-  var tmp0 = $this.f5i_1;
+  var tmp0 = $this.y5i_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('childrenSerializer', 1, tmp, DocumentSymbolSerializer$_get_childrenSerializer_$ref_xvhaa0(), null);
   return tmp0.k3();
 }
 function _get_intArraySerializer__ivdakx($this) {
-  var tmp0 = $this.g5i_1;
+  var tmp0 = $this.z5i_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('intArraySerializer', 1, tmp, DocumentSymbolSerializer$_get_intArraySerializer_$ref_mk2283(), null);

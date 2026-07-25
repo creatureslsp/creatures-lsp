@@ -56,52 +56,52 @@ class $serializer {
     tmp0_serialDesc.w13('insertTextMode', true);
     tmp0_serialDesc.w13('textEdit', true);
     tmp0_serialDesc.w13('command', true);
-    this.f52_1 = tmp0_serialDesc;
+    this.v52_1 = tmp0_serialDesc;
   }
-  g52(encoder, value) {
-    var tmp0_desc = this.f52_1;
+  w52(encoder, value) {
+    var tmp0_desc = this.v52_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.rx(tmp0_desc, 0, value.h52_1);
-    if (tmp1_output.zx(tmp0_desc, 1) ? true : !(value.i52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 1, IntSerializer_getInstance(), value.i52_1);
+    tmp1_output.rx(tmp0_desc, 0, value.x52_1);
+    if (tmp1_output.zx(tmp0_desc, 1) ? true : !(value.y52_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 1, IntSerializer_getInstance(), value.y52_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 2) ? true : !(value.j52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 2, StringSerializer_getInstance(), value.j52_1);
+    if (tmp1_output.zx(tmp0_desc, 2) ? true : !(value.z52_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 2, StringSerializer_getInstance(), value.z52_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 3) ? true : !(value.k52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 3, StringSerializer_getInstance(), value.k52_1);
+    if (tmp1_output.zx(tmp0_desc, 3) ? true : !(value.a53_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 3, StringSerializer_getInstance(), value.a53_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.l52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 4, BooleanSerializer_getInstance(), value.l52_1);
+    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.b53_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 4, BooleanSerializer_getInstance(), value.b53_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.m52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 5, StringSerializer_getInstance(), value.m52_1);
+    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.c53_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 5, StringSerializer_getInstance(), value.c53_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 6) ? true : !(value.n52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 6, StringSerializer_getInstance(), value.n52_1);
+    if (tmp1_output.zx(tmp0_desc, 6) ? true : !(value.d53_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 6, StringSerializer_getInstance(), value.d53_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 7) ? true : !(value.o52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 7, StringSerializer_getInstance(), value.o52_1);
+    if (tmp1_output.zx(tmp0_desc, 7) ? true : !(value.e53_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 7, StringSerializer_getInstance(), value.e53_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 8) ? true : !(value.p52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 8, IntSerializer_getInstance(), value.p52_1);
+    if (tmp1_output.zx(tmp0_desc, 8) ? true : !(value.f53_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 8, IntSerializer_getInstance(), value.f53_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 9) ? true : !(value.q52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 9, IntSerializer_getInstance(), value.q52_1);
+    if (tmp1_output.zx(tmp0_desc, 9) ? true : !(value.g53_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 9, IntSerializer_getInstance(), value.g53_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 10) ? true : !(value.r52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 10, $serializer_getInstance(), value.r52_1);
+    if (tmp1_output.zx(tmp0_desc, 10) ? true : !(value.h53_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 10, $serializer_getInstance(), value.h53_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 11) ? true : !(value.s52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 11, $serializer_getInstance_3(), value.s52_1);
+    if (tmp1_output.zx(tmp0_desc, 11) ? true : !(value.i53_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 11, $serializer_getInstance_3(), value.i53_1);
     }
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.g52(encoder, value instanceof CompletionItem ? value : THROW_CCE());
+    return this.w52(encoder, value instanceof CompletionItem ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.f52_1;
+    var tmp0_desc = this.v52_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -203,10 +203,10 @@ class $serializer {
         }
       }
     tmp17_input.cw(tmp0_desc);
-    return CompletionItem.u52(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, null);
+    return CompletionItem.k53(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, null);
   }
   lr() {
-    return this.f52_1;
+    return this.v52_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -229,56 +229,56 @@ class CompletionItem {
     textEdit = textEdit === VOID ? null : textEdit;
     command = command === VOID ? null : command;
     data = data === VOID ? null : data;
-    this.h52_1 = label;
-    this.i52_1 = kind;
-    this.j52_1 = detail;
-    this.k52_1 = documentation;
-    this.l52_1 = preselect;
-    this.m52_1 = sortText;
-    this.n52_1 = filterText;
-    this.o52_1 = insertText;
-    this.p52_1 = insertTextFormat;
-    this.q52_1 = insertTextMode;
-    this.r52_1 = textEdit;
-    this.s52_1 = command;
-    this.t52_1 = data;
+    this.x52_1 = label;
+    this.y52_1 = kind;
+    this.z52_1 = detail;
+    this.a53_1 = documentation;
+    this.b53_1 = preselect;
+    this.c53_1 = sortText;
+    this.d53_1 = filterText;
+    this.e53_1 = insertText;
+    this.f53_1 = insertTextFormat;
+    this.g53_1 = insertTextMode;
+    this.h53_1 = textEdit;
+    this.i53_1 = command;
+    this.j53_1 = data;
   }
-  v52(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data) {
+  l53(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data) {
     return new CompletionItem(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data);
   }
-  w52(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data, $super) {
-    label = label === VOID ? this.h52_1 : label;
-    kind = kind === VOID ? this.i52_1 : kind;
-    detail = detail === VOID ? this.j52_1 : detail;
-    documentation = documentation === VOID ? this.k52_1 : documentation;
-    preselect = preselect === VOID ? this.l52_1 : preselect;
-    sortText = sortText === VOID ? this.m52_1 : sortText;
-    filterText = filterText === VOID ? this.n52_1 : filterText;
-    insertText = insertText === VOID ? this.o52_1 : insertText;
-    insertTextFormat = insertTextFormat === VOID ? this.p52_1 : insertTextFormat;
-    insertTextMode = insertTextMode === VOID ? this.q52_1 : insertTextMode;
-    textEdit = textEdit === VOID ? this.r52_1 : textEdit;
-    command = command === VOID ? this.s52_1 : command;
-    data = data === VOID ? this.t52_1 : data;
-    return $super === VOID ? this.v52(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data) : $super.v52.call(this, label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data);
+  m53(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data, $super) {
+    label = label === VOID ? this.x52_1 : label;
+    kind = kind === VOID ? this.y52_1 : kind;
+    detail = detail === VOID ? this.z52_1 : detail;
+    documentation = documentation === VOID ? this.a53_1 : documentation;
+    preselect = preselect === VOID ? this.b53_1 : preselect;
+    sortText = sortText === VOID ? this.c53_1 : sortText;
+    filterText = filterText === VOID ? this.d53_1 : filterText;
+    insertText = insertText === VOID ? this.e53_1 : insertText;
+    insertTextFormat = insertTextFormat === VOID ? this.f53_1 : insertTextFormat;
+    insertTextMode = insertTextMode === VOID ? this.g53_1 : insertTextMode;
+    textEdit = textEdit === VOID ? this.h53_1 : textEdit;
+    command = command === VOID ? this.i53_1 : command;
+    data = data === VOID ? this.j53_1 : data;
+    return $super === VOID ? this.l53(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data) : $super.l53.call(this, label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data);
   }
   toString() {
-    return 'CompletionItem(label=' + this.h52_1 + ', kind=' + this.i52_1 + ', detail=' + this.j52_1 + ', documentation=' + this.k52_1 + ', preselect=' + this.l52_1 + ', sortText=' + this.m52_1 + ', filterText=' + this.n52_1 + ', insertText=' + this.o52_1 + ', insertTextFormat=' + this.p52_1 + ', insertTextMode=' + this.q52_1 + ', textEdit=' + toString(this.r52_1) + ', command=' + toString(this.s52_1) + ', data=' + toString(this.t52_1) + ')';
+    return 'CompletionItem(label=' + this.x52_1 + ', kind=' + this.y52_1 + ', detail=' + this.z52_1 + ', documentation=' + this.a53_1 + ', preselect=' + this.b53_1 + ', sortText=' + this.c53_1 + ', filterText=' + this.d53_1 + ', insertText=' + this.e53_1 + ', insertTextFormat=' + this.f53_1 + ', insertTextMode=' + this.g53_1 + ', textEdit=' + toString(this.h53_1) + ', command=' + toString(this.i53_1) + ', data=' + toString(this.j53_1) + ')';
   }
   hashCode() {
-    var result = getStringHashCode(this.h52_1);
-    result = imul(result, 31) + (this.i52_1 == null ? 0 : this.i52_1) | 0;
-    result = imul(result, 31) + (this.j52_1 == null ? 0 : getStringHashCode(this.j52_1)) | 0;
-    result = imul(result, 31) + (this.k52_1 == null ? 0 : getStringHashCode(this.k52_1)) | 0;
-    result = imul(result, 31) + (this.l52_1 == null ? 0 : getBooleanHashCode(this.l52_1)) | 0;
-    result = imul(result, 31) + (this.m52_1 == null ? 0 : getStringHashCode(this.m52_1)) | 0;
-    result = imul(result, 31) + (this.n52_1 == null ? 0 : getStringHashCode(this.n52_1)) | 0;
-    result = imul(result, 31) + (this.o52_1 == null ? 0 : getStringHashCode(this.o52_1)) | 0;
-    result = imul(result, 31) + (this.p52_1 == null ? 0 : this.p52_1) | 0;
-    result = imul(result, 31) + (this.q52_1 == null ? 0 : this.q52_1) | 0;
-    result = imul(result, 31) + (this.r52_1 == null ? 0 : this.r52_1.hashCode()) | 0;
-    result = imul(result, 31) + (this.s52_1 == null ? 0 : this.s52_1.hashCode()) | 0;
-    result = imul(result, 31) + (this.t52_1 == null ? 0 : hashCode(this.t52_1)) | 0;
+    var result = getStringHashCode(this.x52_1);
+    result = imul(result, 31) + (this.y52_1 == null ? 0 : this.y52_1) | 0;
+    result = imul(result, 31) + (this.z52_1 == null ? 0 : getStringHashCode(this.z52_1)) | 0;
+    result = imul(result, 31) + (this.a53_1 == null ? 0 : getStringHashCode(this.a53_1)) | 0;
+    result = imul(result, 31) + (this.b53_1 == null ? 0 : getBooleanHashCode(this.b53_1)) | 0;
+    result = imul(result, 31) + (this.c53_1 == null ? 0 : getStringHashCode(this.c53_1)) | 0;
+    result = imul(result, 31) + (this.d53_1 == null ? 0 : getStringHashCode(this.d53_1)) | 0;
+    result = imul(result, 31) + (this.e53_1 == null ? 0 : getStringHashCode(this.e53_1)) | 0;
+    result = imul(result, 31) + (this.f53_1 == null ? 0 : this.f53_1) | 0;
+    result = imul(result, 31) + (this.g53_1 == null ? 0 : this.g53_1) | 0;
+    result = imul(result, 31) + (this.h53_1 == null ? 0 : this.h53_1.hashCode()) | 0;
+    result = imul(result, 31) + (this.i53_1 == null ? 0 : this.i53_1.hashCode()) | 0;
+    result = imul(result, 31) + (this.j53_1 == null ? 0 : hashCode(this.j53_1)) | 0;
     return result;
   }
   equals(other) {
@@ -286,85 +286,85 @@ class CompletionItem {
       return true;
     if (!(other instanceof CompletionItem))
       return false;
-    if (!(this.h52_1 === other.h52_1))
+    if (!(this.x52_1 === other.x52_1))
       return false;
-    if (!(this.i52_1 == other.i52_1))
+    if (!(this.y52_1 == other.y52_1))
       return false;
-    if (!(this.j52_1 == other.j52_1))
+    if (!(this.z52_1 == other.z52_1))
       return false;
-    if (!(this.k52_1 == other.k52_1))
+    if (!(this.a53_1 == other.a53_1))
       return false;
-    if (!(this.l52_1 == other.l52_1))
+    if (!(this.b53_1 == other.b53_1))
       return false;
-    if (!(this.m52_1 == other.m52_1))
+    if (!(this.c53_1 == other.c53_1))
       return false;
-    if (!(this.n52_1 == other.n52_1))
+    if (!(this.d53_1 == other.d53_1))
       return false;
-    if (!(this.o52_1 == other.o52_1))
+    if (!(this.e53_1 == other.e53_1))
       return false;
-    if (!(this.p52_1 == other.p52_1))
+    if (!(this.f53_1 == other.f53_1))
       return false;
-    if (!(this.q52_1 == other.q52_1))
+    if (!(this.g53_1 == other.g53_1))
       return false;
-    if (!equals(this.r52_1, other.r52_1))
+    if (!equals(this.h53_1, other.h53_1))
       return false;
-    if (!equals(this.s52_1, other.s52_1))
+    if (!equals(this.i53_1, other.i53_1))
       return false;
-    if (!equals(this.t52_1, other.t52_1))
+    if (!equals(this.j53_1, other.j53_1))
       return false;
     return true;
   }
-  static u52(seen0, label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, serializationConstructorMarker) {
+  static k53(seen0, label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, serializationConstructorMarker) {
     if (!(1 === (1 & seen0))) {
-      throwMissingFieldException(seen0, 1, $serializer_getInstance_0().f52_1);
+      throwMissingFieldException(seen0, 1, $serializer_getInstance_0().v52_1);
     }
     var $this = createThis(this);
-    $this.h52_1 = label;
+    $this.x52_1 = label;
     if (0 === (seen0 & 2))
-      $this.i52_1 = null;
+      $this.y52_1 = null;
     else
-      $this.i52_1 = kind;
+      $this.y52_1 = kind;
     if (0 === (seen0 & 4))
-      $this.j52_1 = null;
+      $this.z52_1 = null;
     else
-      $this.j52_1 = detail;
+      $this.z52_1 = detail;
     if (0 === (seen0 & 8))
-      $this.k52_1 = null;
+      $this.a53_1 = null;
     else
-      $this.k52_1 = documentation;
+      $this.a53_1 = documentation;
     if (0 === (seen0 & 16))
-      $this.l52_1 = null;
+      $this.b53_1 = null;
     else
-      $this.l52_1 = preselect;
+      $this.b53_1 = preselect;
     if (0 === (seen0 & 32))
-      $this.m52_1 = null;
+      $this.c53_1 = null;
     else
-      $this.m52_1 = sortText;
+      $this.c53_1 = sortText;
     if (0 === (seen0 & 64))
-      $this.n52_1 = null;
+      $this.d53_1 = null;
     else
-      $this.n52_1 = filterText;
+      $this.d53_1 = filterText;
     if (0 === (seen0 & 128))
-      $this.o52_1 = null;
+      $this.e53_1 = null;
     else
-      $this.o52_1 = insertText;
+      $this.e53_1 = insertText;
     if (0 === (seen0 & 256))
-      $this.p52_1 = null;
+      $this.f53_1 = null;
     else
-      $this.p52_1 = insertTextFormat;
+      $this.f53_1 = insertTextFormat;
     if (0 === (seen0 & 512))
-      $this.q52_1 = null;
+      $this.g53_1 = null;
     else
-      $this.q52_1 = insertTextMode;
+      $this.g53_1 = insertTextMode;
     if (0 === (seen0 & 1024))
-      $this.r52_1 = null;
+      $this.h53_1 = null;
     else
-      $this.r52_1 = textEdit;
+      $this.h53_1 = textEdit;
     if (0 === (seen0 & 2048))
-      $this.s52_1 = null;
+      $this.i53_1 = null;
     else
-      $this.s52_1 = command;
-    $this.t52_1 = null;
+      $this.i53_1 = command;
+    $this.j53_1 = null;
     return $this;
   }
 }
@@ -372,17 +372,17 @@ class Companion_0 {}
 class $serializer_0 {
   constructor() {
     $serializer_instance_0 = this;
-    this.x52_1 = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.completion.CompletionItemData', this, 0);
+    this.n53_1 = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.completion.CompletionItemData', this, 0);
   }
-  y52(encoder, value) {
-    var tmp0_desc = this.x52_1;
+  o53(encoder, value) {
+    var tmp0_desc = this.n53_1;
     encoder.bw(tmp0_desc).cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.y52(encoder, value instanceof CompletionItemData ? value : THROW_CCE());
+    return this.o53(encoder, value instanceof CompletionItemData ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.x52_1;
+    var tmp0_desc = this.n53_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp4_input = decoder.bw(tmp0_desc);
@@ -395,10 +395,10 @@ class $serializer_0 {
           throw UnknownFieldException.et(tmp2_index);
       }
     tmp4_input.cw(tmp0_desc);
-    return CompletionItemData.z52(0, null);
+    return CompletionItemData.p53(0, null);
   }
   lr() {
-    return this.x52_1;
+    return this.n53_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -408,9 +408,9 @@ class $serializer_0 {
   }
 }
 class CompletionItemData {
-  static z52(seen0, serializationConstructorMarker) {
+  static p53(seen0, serializationConstructorMarker) {
     if (!(0 === (0 & seen0))) {
-      throwMissingFieldException(seen0, 0, $serializer_getInstance_1().x52_1);
+      throwMissingFieldException(seen0, 0, $serializer_getInstance_1().n53_1);
     }
     return createThis(this);
   }
@@ -423,7 +423,7 @@ class Companion_1 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.a53_1 = [null, lazy(tmp_0, CompletionList$Companion$$childSerializers$_anonymous__ihib9s)];
+    tmp.q53_1 = [null, lazy(tmp_0, CompletionList$Companion$$childSerializers$_anonymous__ihib9s)];
   }
 }
 class $serializer_1 {
@@ -432,28 +432,28 @@ class $serializer_1 {
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.completion.CompletionList', this, 2);
     tmp0_serialDesc.w13('isIncomplete', false);
     tmp0_serialDesc.w13('items', false);
-    this.b53_1 = tmp0_serialDesc;
+    this.r53_1 = tmp0_serialDesc;
   }
-  c53(encoder, value) {
-    var tmp0_desc = this.b53_1;
+  s53(encoder, value) {
+    var tmp0_desc = this.r53_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_1().a53_1;
+    var tmp2_cached = Companion_getInstance_1().q53_1;
     tmp1_output.jx(tmp0_desc, 0, value.isIncomplete);
     tmp1_output.tx(tmp0_desc, 1, tmp2_cached[1].k3(), value.items);
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.c53(encoder, value instanceof CompletionList ? value : THROW_CCE());
+    return this.s53(encoder, value instanceof CompletionList ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.b53_1;
+    var tmp0_desc = this.r53_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = false;
     var tmp5_local1 = null;
     var tmp6_input = decoder.bw(tmp0_desc);
-    var tmp7_cached = Companion_getInstance_1().a53_1;
+    var tmp7_cached = Companion_getInstance_1().q53_1;
     if (tmp6_input.sw()) {
       tmp4_local0 = tmp6_input.dw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -479,13 +479,13 @@ class $serializer_1 {
         }
       }
     tmp6_input.cw(tmp0_desc);
-    return CompletionList.d53(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    return CompletionList.t53(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
   lr() {
-    return this.b53_1;
+    return this.r53_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance_1().a53_1;
+    var tmp0_cached = Companion_getInstance_1().q53_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -493,24 +493,24 @@ class $serializer_1 {
   }
 }
 class CompletionList {
-  static e53(isIncomplete, items) {
+  static u53(isIncomplete, items) {
     Companion_getInstance_1();
     var $this = createThis(this);
     $this.isIncomplete = isIncomplete;
     $this.items = items;
     return $this;
   }
-  f53() {
+  v53() {
     return this.isIncomplete;
   }
-  r1s() {
+  t1s() {
     return this.items;
   }
-  static g53(isIncomplete, items) {
+  static w53(isIncomplete, items) {
     Companion_getInstance_1();
     // Inline function 'kotlin.collections.toTypedArray' call
     var tmp$ret$0 = copyToArray(items);
-    return this.e53(isIncomplete, tmp$ret$0);
+    return this.u53(isIncomplete, tmp$ret$0);
   }
   equals(other) {
     if (this === other)
@@ -533,10 +533,10 @@ class CompletionList {
   toString() {
     return 'CompletionList(isIncomplete=' + this.isIncomplete + ', items=' + toString_0(this.items) + ')';
   }
-  static d53(seen0, isIncomplete, items, serializationConstructorMarker) {
+  static t53(seen0, isIncomplete, items, serializationConstructorMarker) {
     Companion_getInstance_1();
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance_2().b53_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance_2().r53_1);
     }
     var $this = createThis(this);
     $this.isIncomplete = isIncomplete;
@@ -551,20 +551,20 @@ class $serializer_2 {
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.completion.LspCommand', this, 2);
     tmp0_serialDesc.w13('title', false);
     tmp0_serialDesc.w13('command', false);
-    this.h53_1 = tmp0_serialDesc;
+    this.x53_1 = tmp0_serialDesc;
   }
-  i53(encoder, value) {
-    var tmp0_desc = this.h53_1;
+  y53(encoder, value) {
+    var tmp0_desc = this.x53_1;
     var tmp1_output = encoder.bw(tmp0_desc);
     tmp1_output.rx(tmp0_desc, 0, value.title);
     tmp1_output.rx(tmp0_desc, 1, value.command);
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.i53(encoder, value instanceof LspCommand ? value : THROW_CCE());
+    return this.y53(encoder, value instanceof LspCommand ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.h53_1;
+    var tmp0_desc = this.x53_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -596,10 +596,10 @@ class $serializer_2 {
         }
       }
     tmp6_input.cw(tmp0_desc);
-    return LspCommand.j53(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    return LspCommand.z53(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
   lr() {
-    return this.h53_1;
+    return this.x53_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -613,10 +613,10 @@ class LspCommand {
     this.title = title;
     this.command = command;
   }
-  k53() {
+  a54() {
     return this.title;
   }
-  e1s() {
+  g1s() {
     return this.command;
   }
   toString() {
@@ -638,9 +638,9 @@ class LspCommand {
       return false;
     return true;
   }
-  static j53(seen0, title, command, serializationConstructorMarker) {
+  static z53(seen0, title, command, serializationConstructorMarker) {
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance_3().h53_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance_3().x53_1);
     }
     var $this = createThis(this);
     $this.title = title;

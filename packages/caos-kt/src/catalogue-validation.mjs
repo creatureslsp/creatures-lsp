@@ -79,7 +79,7 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.o67_1 = [null, lazy(tmp_0, CatalogueError$Companion$$childSerializers$_anonymous__pu1vd7), null, null];
+    tmp.h68_1 = [null, lazy(tmp_0, CatalogueError$Companion$$childSerializers$_anonymous__pu1vd7), null, null];
   }
 }
 class $serializer {
@@ -90,23 +90,23 @@ class $serializer {
     tmp0_serialDesc.w13('parserItem', false);
     tmp0_serialDesc.w13('message', false);
     tmp0_serialDesc.w13('errorType', false);
-    this.p67_1 = tmp0_serialDesc;
+    this.i68_1 = tmp0_serialDesc;
   }
-  q67(encoder, value) {
-    var tmp0_desc = this.p67_1;
+  j68(encoder, value) {
+    var tmp0_desc = this.i68_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_0().o67_1;
-    tmp1_output.tx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.r67_1);
-    tmp1_output.vx(tmp0_desc, 1, tmp2_cached[1].k3(), value.s67_1);
-    tmp1_output.rx(tmp0_desc, 2, value.t67_1);
-    tmp1_output.mx(tmp0_desc, 3, value.u67_1);
+    var tmp2_cached = Companion_getInstance_0().h68_1;
+    tmp1_output.tx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.k68_1);
+    tmp1_output.vx(tmp0_desc, 1, tmp2_cached[1].k3(), value.l68_1);
+    tmp1_output.rx(tmp0_desc, 2, value.m68_1);
+    tmp1_output.mx(tmp0_desc, 3, value.n68_1);
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.q67(encoder, value instanceof CatalogueError ? value : THROW_CCE());
+    return this.j68(encoder, value instanceof CatalogueError ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.p67_1;
+    var tmp0_desc = this.i68_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -115,7 +115,7 @@ class $serializer {
     var tmp6_local2 = null;
     var tmp7_local3 = 0;
     var tmp8_input = decoder.bw(tmp0_desc);
-    var tmp9_cached = Companion_getInstance_0().o67_1;
+    var tmp9_cached = Companion_getInstance_0().h68_1;
     if (tmp8_input.sw()) {
       tmp4_local0 = tmp8_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -153,13 +153,13 @@ class $serializer {
         }
       }
     tmp8_input.cw(tmp0_desc);
-    return CatalogueError.v67(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
+    return CatalogueError.o68(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
   }
   lr() {
-    return this.p67_1;
+    return this.i68_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance_0().o67_1;
+    var tmp0_cached = Companion_getInstance_0().h68_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -169,19 +169,19 @@ class $serializer {
 class CatalogueError {
   constructor(textRange, parserItem, message, errorType) {
     Companion_getInstance_0();
-    this.r67_1 = textRange;
-    this.s67_1 = parserItem;
-    this.t67_1 = message;
-    this.u67_1 = errorType;
+    this.k68_1 = textRange;
+    this.l68_1 = parserItem;
+    this.m68_1 = message;
+    this.n68_1 = errorType;
   }
   toString() {
-    return 'CatalogueError(textRange=' + toString(this.r67_1) + ', parserItem=' + toString_0(this.s67_1) + ', message=' + this.t67_1 + ', errorType=' + this.u67_1 + ')';
+    return 'CatalogueError(textRange=' + toString(this.k68_1) + ', parserItem=' + toString_0(this.l68_1) + ', message=' + this.m68_1 + ', errorType=' + this.n68_1 + ')';
   }
   hashCode() {
-    var result = hashCode(this.r67_1);
-    result = imul(result, 31) + (this.s67_1 == null ? 0 : hashCode(this.s67_1)) | 0;
-    result = imul(result, 31) + getStringHashCode(this.t67_1) | 0;
-    result = imul(result, 31) + this.u67_1 | 0;
+    var result = hashCode(this.k68_1);
+    result = imul(result, 31) + (this.l68_1 == null ? 0 : hashCode(this.l68_1)) | 0;
+    result = imul(result, 31) + getStringHashCode(this.m68_1) | 0;
+    result = imul(result, 31) + this.n68_1 | 0;
     return result;
   }
   equals(other) {
@@ -189,26 +189,26 @@ class CatalogueError {
       return true;
     if (!(other instanceof CatalogueError))
       return false;
-    if (!equals(this.r67_1, other.r67_1))
+    if (!equals(this.k68_1, other.k68_1))
       return false;
-    if (!equals(this.s67_1, other.s67_1))
+    if (!equals(this.l68_1, other.l68_1))
       return false;
-    if (!(this.t67_1 === other.t67_1))
+    if (!(this.m68_1 === other.m68_1))
       return false;
-    if (!(this.u67_1 === other.u67_1))
+    if (!(this.n68_1 === other.n68_1))
       return false;
     return true;
   }
-  static v67(seen0, textRange, parserItem, message, errorType, serializationConstructorMarker) {
+  static o68(seen0, textRange, parserItem, message, errorType, serializationConstructorMarker) {
     Companion_getInstance_0();
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance().p67_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance().i68_1);
     }
     var $this = createThis(this);
-    $this.r67_1 = textRange;
-    $this.s67_1 = parserItem;
-    $this.t67_1 = message;
-    $this.u67_1 = errorType;
+    $this.k68_1 = textRange;
+    $this.l68_1 = parserItem;
+    $this.m68_1 = message;
+    $this.n68_1 = errorType;
     return $this;
   }
 }
@@ -223,43 +223,43 @@ class CatalogueErrorTypes {
     this.SINGLE_QUOTES = 7;
     this.INCOMPLETE_QUOTE = 8;
   }
-  w67() {
+  p68() {
     return this.INVALID_OVERRIDE;
   }
-  x67() {
+  q68() {
     return this.ARRAY_TAG_CONFLICT;
   }
-  y67() {
+  r68() {
     return this.INVALID_ARRAY_COUNT;
   }
-  z67() {
+  s68() {
     return this.NEEDS_QUOTES;
   }
-  a68() {
+  t68() {
     return this.EXTRANEOUS_VALUE;
   }
-  b68() {
+  u68() {
     return this.MUST_BE_UPPERCASE;
   }
-  c68() {
+  v68() {
     return this.SINGLE_QUOTES;
   }
-  d68() {
+  w68() {
     return this.INCOMPLETE_QUOTE;
   }
 }
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.e68_1 = function_0;
+    this.x68_1 = function_0;
   }
   wg(a, b) {
-    return this.e68_1(a, b);
+    return this.x68_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.e68_1;
+    return this.x68_1;
   }
   equals(other) {
     var tmp;
@@ -281,10 +281,10 @@ class sam$kotlin_Comparator$0 {
   }
 }
 class CatalogueValidator {
-  f68(parseResult) {
-    return this.g68(parseResult.catalogueEntries, parseResult.looseItems, parseResult.parserItems);
+  y68(parseResult) {
+    return this.z68(parseResult.catalogueEntries, parseResult.looseItems, parseResult.parserItems);
   }
-  g68(entries, looseItems, parserItems) {
+  z68(entries, looseItems, parserItems) {
     // Inline function 'kotlin.collections.mutableListOf' call
     var out = ArrayList.u1();
     addLooseItemErrors(this, looseItems, out);
@@ -484,8 +484,8 @@ function getTypeName($this, item) {
 }
 function CatalogueValidator$validate$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = get_sortValue(a.r67_1);
-  var tmp$ret$2 = get_sortValue(b.r67_1);
+  var tmp = get_sortValue(a.k68_1);
+  var tmp$ret$2 = get_sortValue(b.k68_1);
   return compareValues(tmp, tmp$ret$2);
 }
 var CatalogueValidator_instance;
@@ -521,7 +521,7 @@ function validateCatalogue(catalogue) {
     }
   }
   var parseResult = tmp;
-  var errors = CatalogueValidator_instance.g68(parseResult.catalogueEntries, parseResult.looseItems, parseResult.parserItems);
+  var errors = CatalogueValidator_instance.z68(parseResult.catalogueEntries, parseResult.looseItems, parseResult.parserItems);
   // Inline function 'kotlin.collections.isEmpty' call
   if (errors.length === 0) {
     // Inline function 'kotlin.emptyArray' call

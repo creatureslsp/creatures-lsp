@@ -63,6 +63,10 @@
       "default": "./dist/caos-libsfile-full.mjs",
       "types": "./dist/caos-libsfile-full.d.mts"
     },
+    "./caos-libsfile-slim": {
+      "default": "./dist/caos-libsfile-slim.mjs",
+      "types": "./dist/caos-libsfile-slim.d.mts"
+    },
     "./caos-parser": {
       "default": "./dist/caos-parser.mjs",
       "types": "./dist/caos-parser.d.mts"

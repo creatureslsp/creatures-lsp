@@ -298,28 +298,36 @@ class Log {
   p1i() {
     return this.h1i_1;
   }
-  q1i(className, message) {
-    this.q1i(className, message);
+  q1i(message) {
+    this.r1i(false, null, message);
   }
-  r1i(message) {
-    this.s1i(null, message);
-  }
-  s1i(color, message) {
-    this.t1i(null, color, message);
-  }
-  u1i(className, message) {
-    this.t1i(className, null, message);
-  }
-  t1i(className, color, message) {
-    if (!this.p1i() && this.o1i().p1h_1 >= LogLevel_ERROR_getInstance().p1h_1) {
-      this.n1i().error(this.v1i('ERROR', className, message), color);
+  r1i(replace, color, message) {
+    if (!this.p1i() && this.o1i().p1h_1 >= LogLevel_LOG_1_getInstance().p1h_1) {
+      this.n1i().info(replace, this.s1i('LOG1', null, message), color);
     }
   }
-  v1i(kind, className, message) {
+  t1i(className, message) {
+    this.t1i(className, message);
+  }
+  u1i(message) {
+    this.v1i(null, message);
+  }
+  v1i(color, message) {
+    this.w1i(null, color, message);
+  }
+  x1i(className, message) {
+    this.w1i(className, null, message);
+  }
+  w1i(className, color, message) {
+    if (!this.p1i() && this.o1i().p1h_1 >= LogLevel_ERROR_getInstance().p1h_1) {
+      this.n1i().error(this.s1i('ERROR', className, message), color);
+    }
+  }
+  s1i(kind, className, message) {
     var tmp0_elvis_lhs = this.n1i().prependLogType;
-    var prependLog = tmp0_elvis_lhs == null ? DefaultLoggerObject_getInstance().w1i_1 : tmp0_elvis_lhs;
+    var prependLog = tmp0_elvis_lhs == null ? DefaultLoggerObject_getInstance().y1i_1 : tmp0_elvis_lhs;
     var tmp;
-    if (prependLog && !this.x1i('log.LOG_NO_PRINT_PREFIX')) {
+    if (prependLog && !this.z1i('log.LOG_NO_PRINT_PREFIX')) {
       tmp = '**' + kind + '** ';
     } else {
       tmp = '';
@@ -334,21 +342,21 @@ class Log {
     }
     return prefix + tmp_0 + message;
   }
-  x1i(mode) {
+  z1i(mode) {
     return this.j1i_1.g2(mode);
   }
-  y1i(logger) {
+  a1j(logger) {
     this.g1i_1 = logger;
   }
 }
 class DefaultLoggerObject {
   constructor() {
     DefaultLoggerObject_instance = this;
-    this.w1i_1 = false;
+    this.y1i_1 = false;
     delete this.prependLogType;
   }
   e1i() {
-    return this.w1i_1;
+    return this.y1i_1;
   }
   log(replace, message, color) {
     var finalMessage = wrap(this, color, message);
@@ -402,20 +410,20 @@ class DefaultLoggerObject {
 }
 class createSingleFunctionLogger$1 {
   constructor($logger) {
-    this.z1i_1 = $logger;
+    this.b1j_1 = $logger;
     delete this.prependLogType;
   }
   log(replace, message, color) {
-    this.z1i_1('log', message);
+    this.b1j_1('log', message);
   }
   info(replace, message, color) {
-    this.z1i_1('info', message);
+    this.b1j_1('info', message);
   }
   warning(message, color) {
-    this.z1i_1('warning', message);
+    this.b1j_1('warning', message);
   }
   error(message, color) {
-    this.z1i_1('error', message);
+    this.b1j_1('error', message);
   }
   getColorPrefix(color) {
     return null;
@@ -557,6 +565,10 @@ function LogLevel_initEntries() {
 function LogLevel_LOG_2_getInstance() {
   LogLevel_initEntries();
   return LogLevel_LOG_2_instance;
+}
+function LogLevel_LOG_1_getInstance() {
+  LogLevel_initEntries();
+  return LogLevel_LOG_1_instance;
 }
 function LogLevel_ERROR_getInstance() {
   LogLevel_initEntries();
@@ -728,7 +740,7 @@ function missingProperties(obj, requiredProperties) {
   return tmp;
 }
 function setLogger(logger) {
-  Log_getInstance().y1i(logger);
+  Log_getInstance().a1j(logger);
 }
 function setSingleFunctionLogger(logger) {
   setLogger(createSingleFunctionLogger(logger));

@@ -140,59 +140,59 @@ var imul = Math.imul;
 //region block: pre-declaration
 class Companion {
   constructor() {
-    this.y5a_1 = true;
-    this.z5a_1 = true;
-    this.a5b_1 = false;
-    this.b5b_1 = false;
+    this.r5b_1 = true;
+    this.s5b_1 = true;
+    this.t5b_1 = false;
+    this.u5b_1 = false;
   }
 }
 class CaosFormatterOptionsImpl extends FormatterOptionsImpl {
   constructor(variant, opts) {
     super(opts);
-    this.o5b_1 = variant;
-    this.p5b_1 = opts;
+    this.h5c_1 = variant;
+    this.i5c_1 = opts;
     var tmp = this;
-    tmp.q5b_1 = lazy(CaosFormatterOptionsImpl$keepSameLine$delegate$lambda(this));
+    tmp.j5c_1 = lazy(CaosFormatterOptionsImpl$keepSameLine$delegate$lambda(this));
     var tmp_0 = this;
-    tmp_0.r5b_1 = lazy(CaosFormatterOptionsImpl$spaceBetweenByteStingBrackets$delegate$lambda(this));
+    tmp_0.k5c_1 = lazy(CaosFormatterOptionsImpl$spaceBetweenByteStingBrackets$delegate$lambda(this));
     var tmp_1 = this;
-    tmp_1.s5b_1 = lazy(CaosFormatterOptionsImpl$trimFinalNewlines$delegate$lambda(this));
+    tmp_1.l5c_1 = lazy(CaosFormatterOptionsImpl$trimFinalNewlines$delegate$lambda(this));
     var tmp_2 = this;
-    tmp_2.t5b_1 = lazy(CaosFormatterOptionsImpl$trimTrailingWhitespace$delegate$lambda(this));
-    var tmp1_safe_receiver = this.p5b_1;
-    if (!((tmp1_safe_receiver == null ? null : tmp1_safe_receiver.b57()) === this.b57())) {
-      var tmp0_safe_receiver = this.p5b_1;
-      println('Indents do not match; Opts: ' + (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.b57()) + '; This: ' + this.b57());
+    tmp_2.m5c_1 = lazy(CaosFormatterOptionsImpl$trimTrailingWhitespace$delegate$lambda(this));
+    var tmp1_safe_receiver = this.i5c_1;
+    if (!((tmp1_safe_receiver == null ? null : tmp1_safe_receiver.r57()) === this.r57())) {
+      var tmp0_safe_receiver = this.i5c_1;
+      println('Indents do not match; Opts: ' + (tmp0_safe_receiver == null ? null : tmp0_safe_receiver.r57()) + '; This: ' + this.r57());
     } else {
-      println('this.continuationIndent: ' + this.b57());
+      println('this.continuationIndent: ' + this.r57());
     }
   }
-  v58() {
-    return this.p5b_1;
+  l59() {
+    return this.i5c_1;
   }
-  u5b() {
-    var tmp0 = this.q5b_1;
+  n5c() {
+    var tmp0 = this.j5c_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('keepSameLine', 1, tmp, CaosFormatterOptionsImpl$_get_keepSameLine_$ref_1r7f4n(), null);
     return tmp0.k3();
   }
-  v5b() {
-    var tmp0 = this.r5b_1;
+  o5c() {
+    var tmp0 = this.k5c_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('spaceBetweenByteStingBrackets', 1, tmp, CaosFormatterOptionsImpl$_get_spaceBetweenByteStingBrackets_$ref_6frqi8(), null);
     return tmp0.k3();
   }
-  x56() {
-    var tmp0 = this.s5b_1;
+  n57() {
+    var tmp0 = this.l5c_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('trimFinalNewlines', 1, tmp, CaosFormatterOptionsImpl$_get_trimFinalNewlines_$ref_y5kbsv(), null);
     return tmp0.k3();
   }
-  v56() {
-    var tmp0 = this.t5b_1;
+  l57() {
+    var tmp0 = this.m5c_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('trimTrailingWhitespace', 1, tmp, CaosFormatterOptionsImpl$_get_trimTrailingWhitespace_$ref_9mxmnn(), null);
@@ -200,11 +200,11 @@ class CaosFormatterOptionsImpl extends FormatterOptionsImpl {
   }
 }
 class FormatExceptionWithCaosErrors extends CaosException {
-  static a5c(message, errors, throwable) {
+  static t5c(message, errors, throwable) {
     throwable = throwable === VOID ? null : throwable;
-    var $this = this.w1s(message, throwable);
-    captureStack($this, $this.z5b_1);
-    $this.y5b_1 = errors;
+    var $this = this.y1s(message, throwable);
+    captureStack($this, $this.s5c_1);
+    $this.r5c_1 = errors;
     return $this;
   }
 }
@@ -218,7 +218,7 @@ class Companion_0 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.b5c_1 = [null, null, tmp_1, lazy_0(tmp_2, FormatResult$Companion$$childSerializers$_anonymous__qoz48m_0)];
+    tmp.u5c_1 = [null, null, tmp_1, lazy_0(tmp_2, FormatResult$Companion$$childSerializers$_anonymous__qoz48m_0)];
   }
 }
 class $serializer {
@@ -229,12 +229,12 @@ class $serializer {
     tmp0_serialDesc.w13('oldText', false);
     tmp0_serialDesc.w13('edits', false);
     tmp0_serialDesc.w13('editReasons', false);
-    this.c5c_1 = tmp0_serialDesc;
+    this.v5c_1 = tmp0_serialDesc;
   }
-  d5c(encoder, value) {
-    var tmp0_desc = this.c5c_1;
+  w5c(encoder, value) {
+    var tmp0_desc = this.v5c_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_0().b5c_1;
+    var tmp2_cached = Companion_getInstance_0().u5c_1;
     tmp1_output.rx(tmp0_desc, 0, value.formattedText);
     tmp1_output.rx(tmp0_desc, 1, value.oldText);
     tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.edits);
@@ -242,10 +242,10 @@ class $serializer {
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.d5c(encoder, value instanceof FormatResult ? value : THROW_CCE());
+    return this.w5c(encoder, value instanceof FormatResult ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.c5c_1;
+    var tmp0_desc = this.v5c_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -254,7 +254,7 @@ class $serializer {
     var tmp6_local2 = null;
     var tmp7_local3 = null;
     var tmp8_input = decoder.bw(tmp0_desc);
-    var tmp9_cached = Companion_getInstance_0().b5c_1;
+    var tmp9_cached = Companion_getInstance_0().u5c_1;
     if (tmp8_input.sw()) {
       tmp4_local0 = tmp8_input.lw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -292,13 +292,13 @@ class $serializer {
         }
       }
     tmp8_input.cw(tmp0_desc);
-    return FormatResult.e5c(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
+    return FormatResult.x5c(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
   }
   lr() {
-    return this.c5c_1;
+    return this.v5c_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance_0().b5c_1;
+    var tmp0_cached = Companion_getInstance_0().u5c_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -313,16 +313,16 @@ class FormatResult {
     this.edits = edits;
     this.editReasons = editReasons;
   }
-  m56() {
+  c57() {
     return this.formattedText;
   }
-  n56() {
+  d57() {
     return this.oldText;
   }
-  o56() {
+  e57() {
     return this.edits;
   }
-  p56() {
+  f57() {
     return this.editReasons;
   }
   equals(other) {
@@ -347,10 +347,10 @@ class FormatResult {
   toString() {
     return 'FormatResult(formattedText=' + this.formattedText + ', oldText=' + this.oldText + ', edits=' + toString(this.edits) + ', editReasons=' + toString(this.editReasons) + ')';
   }
-  static e5c(seen0, formattedText, oldText, edits, editReasons, serializationConstructorMarker) {
+  static x5c(seen0, formattedText, oldText, edits, editReasons, serializationConstructorMarker) {
     Companion_getInstance_0();
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance().c5c_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance().v5c_1);
     }
     var $this = createThis(this);
     $this.formattedText = formattedText;
@@ -363,28 +363,28 @@ class FormatResult {
 class EditReason extends Enum {
   constructor(name, ordinal, commonName) {
     super(name, ordinal);
-    this.h5c_1 = commonName;
+    this.a5d_1 = commonName;
   }
 }
 class Companion_1 {
   constructor() {
     Companion_instance_1 = this;
-    this.i5c_1 = 'Formatter';
-    this.j5c_1 = mapOf([to(token('doif'), listOf([token('elif'), token('else'), token('endi')])), to(token('elif'), listOf([token('elif'), token('else'), token('endi')])), to(token('else'), listOf_0(token('endi'))), to(token('enum'), listOf_0(token('next'))), to(token('etch'), listOf_0(token('next'))), to(token('esee'), listOf_0(token('next'))), to(token('epas'), listOf_0(token('next'))), to(token('econ'), listOf_0(token('next'))), to(token('escn'), listOf_0(token('nscn'))), to(token('reps'), listOf_0(token('repe'))), to(token('loop'), listOf([token('ever'), token('untl')])), to(token('subr'), listOf_0(token('retn')))]);
-    this.k5c_1 = this.j5c_1.n3();
+    this.b5d_1 = 'Formatter';
+    this.c5d_1 = mapOf([to(token('doif'), listOf([token('elif'), token('else'), token('endi')])), to(token('elif'), listOf([token('elif'), token('else'), token('endi')])), to(token('else'), listOf_0(token('endi'))), to(token('enum'), listOf_0(token('next'))), to(token('etch'), listOf_0(token('next'))), to(token('esee'), listOf_0(token('next'))), to(token('epas'), listOf_0(token('next'))), to(token('econ'), listOf_0(token('next'))), to(token('escn'), listOf_0(token('nscn'))), to(token('reps'), listOf_0(token('repe'))), to(token('loop'), listOf([token('ever'), token('untl')])), to(token('subr'), listOf_0(token('retn')))]);
+    this.d5d_1 = this.c5d_1.n3();
     var tmp = this;
-    tmp.l5c_1 = lazy(Formatter$Companion$scriptStarts$delegate$lambda);
-    this.m5c_1 = token('endm');
-    this.n5c_1 = listOf_0(this.m5c_1);
+    tmp.e5d_1 = lazy(Formatter$Companion$scriptStarts$delegate$lambda);
+    this.f5d_1 = token('endm');
+    this.g5d_1 = listOf_0(this.f5d_1);
   }
-  p5c() {
-    var tmp0 = this.l5c_1;
+  i5d() {
+    var tmp0 = this.e5d_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('scriptStarts', 1, tmp, Formatter$Companion$_get_scriptStarts_$ref_6whky8(), null);
     return tmp0.k3();
   }
-  o5c(variant, text, options) {
+  h5d(variant, text, options) {
     var formatter = new Formatter(variant, options, text);
     return format(formatter);
   }
@@ -392,68 +392,68 @@ class Companion_1 {
 class Formatter {
   constructor(variant, opts, text) {
     Companion_getInstance_1();
-    this.q5c_1 = variant;
-    this.r5c_1 = text;
+    this.j5d_1 = variant;
+    this.k5d_1 = text;
     var tmp = this;
-    tmp.s5c_1 = lazy(Formatter$result$delegate$lambda(this));
+    tmp.l5d_1 = lazy(Formatter$result$delegate$lambda(this));
     var tmp_0 = this;
-    tmp_0.t5c_1 = lazy(Formatter$opts$delegate$lambda(this, opts));
+    tmp_0.m5d_1 = lazy(Formatter$opts$delegate$lambda(this, opts));
     var tmp_1 = this;
-    tmp_1.u5c_1 = lazy(Formatter$state$delegate$lambda(this));
+    tmp_1.n5d_1 = lazy(Formatter$state$delegate$lambda(this));
   }
-  v5c() {
-    var tmp0 = this.s5c_1;
+  o5d() {
+    var tmp0 = this.l5d_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('result', 1, tmp, Formatter$_get_result_$ref_jxklah(), null);
     return tmp0.k3();
   }
-  w5c() {
-    var tmp0 = this.u5c_1;
+  p5d() {
+    var tmp0 = this.n5d_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('state', 1, tmp, Formatter$_get_state_$ref_yb193p(), null);
     return tmp0.k3();
   }
-  z5d() {
-    return this.w5c().c57();
+  s5e() {
+    return this.p5d().s57();
   }
-  a5e(token, startIndex) {
-    if (Companion_getInstance_1().k5c_1.g2(token)) {
-      this.w5c().a5d_1.w3(0, ensureNotNull(Companion_getInstance_1().j5c_1.r3(token)));
+  t5e(token, startIndex) {
+    if (Companion_getInstance_1().d5d_1.g2(token)) {
+      this.p5d().t5d_1.w3(0, ensureNotNull(Companion_getInstance_1().c5d_1.r3(token)));
     }
-    if (Companion_getInstance_1().p5c().g2(token) && this.w5c().b5e().g2(startIndex)) {
-      this.w5c().a5d_1.w3(0, Companion_getInstance_1().n5c_1);
+    if (Companion_getInstance_1().i5d().g2(token) && this.p5d().u5e().g2(startIndex)) {
+      this.p5d().t5d_1.w3(0, Companion_getInstance_1().g5d_1);
     }
   }
-  c5e(token) {
-    if (token === Companion_getInstance_1().m5c_1) {
-      this.w5c().a5d_1.u3();
+  v5e(token) {
+    if (token === Companion_getInstance_1().f5d_1) {
+      this.p5d().t5d_1.u3();
       return Unit_instance;
     }
-    var tmp0_safe_receiver = firstOrNull(this.w5c().a5d_1);
+    var tmp0_safe_receiver = firstOrNull(this.p5d().t5d_1);
     if ((tmp0_safe_receiver == null ? null : tmp0_safe_receiver.g2(token)) === true) {
-      this.w5c().a5d_1.x3(0);
+      this.p5d().t5d_1.x3(0);
     }
   }
 }
 class Companion_2 {
   constructor() {
-    this.d5e_1 = 'FormatterState';
+    this.w5e_1 = 'FormatterState';
   }
 }
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.e5e_1 = function_0;
+    this.x5e_1 = function_0;
   }
   wg(a, b) {
-    return this.e5e_1(a, b);
+    return this.x5e_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.e5e_1;
+    return this.x5e_1;
   }
   equals(other) {
     var tmp;
@@ -476,16 +476,16 @@ class sam$kotlin_Comparator$0 {
 }
 class sam$kotlin_Comparator$0_0 {
   constructor(function_0) {
-    this.f5e_1 = function_0;
+    this.y5e_1 = function_0;
   }
   wg(a, b) {
-    return this.f5e_1(a, b);
+    return this.y5e_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.f5e_1;
+    return this.y5e_1;
   }
   equals(other) {
     var tmp;
@@ -508,16 +508,16 @@ class sam$kotlin_Comparator$0_0 {
 }
 class sam$kotlin_Comparator$0_1 {
   constructor(function_0) {
-    this.g5e_1 = function_0;
+    this.z5e_1 = function_0;
   }
   wg(a, b) {
-    return this.g5e_1(a, b);
+    return this.z5e_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.g5e_1;
+    return this.z5e_1;
   }
   equals(other) {
     var tmp;
@@ -540,175 +540,175 @@ class sam$kotlin_Comparator$0_1 {
 }
 class FormatterState {
   constructor(opts, parseResult, whiteSpaceItems) {
-    this.x5c_1 = opts;
-    this.y5c_1 = parseResult;
-    this.z5c_1 = whiteSpaceItems;
+    this.q5d_1 = opts;
+    this.r5d_1 = parseResult;
+    this.s5d_1 = whiteSpaceItems;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.a5d_1 = ArrayList.u1();
-    this.b5d_1 = -1;
-    this.c5d_1 = StringBuilder.s();
+    tmp.t5d_1 = ArrayList.u1();
+    this.u5d_1 = -1;
+    this.v5d_1 = StringBuilder.s();
     var tmp_0 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_0.d5d_1 = ArrayList.u1();
+    tmp_0.w5d_1 = ArrayList.u1();
     var tmp_1 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_1.e5d_1 = ArrayList.u1();
+    tmp_1.x5d_1 = ArrayList.u1();
     var tmp_2 = this;
-    tmp_2.f5d_1 = lazy(FormatterState$itemsCount$delegate$lambda(this));
-    this.g5d_1 = 0;
+    tmp_2.y5d_1 = lazy(FormatterState$itemsCount$delegate$lambda(this));
+    this.z5d_1 = 0;
     var tmp_3 = this;
-    tmp_3.h5d_1 = lazy(FormatterState$commandCalls$delegate$lambda(this));
+    tmp_3.a5e_1 = lazy(FormatterState$commandCalls$delegate$lambda(this));
     var tmp_4 = this;
-    tmp_4.i5d_1 = lazy(FormatterState$equalityStatements$delegate$lambda(this));
+    tmp_4.b5e_1 = lazy(FormatterState$equalityStatements$delegate$lambda(this));
     var tmp_5 = this;
-    tmp_5.j5d_1 = lazy(FormatterState$equalityStatementGroups$delegate$lambda(this));
+    tmp_5.c5e_1 = lazy(FormatterState$equalityStatementGroups$delegate$lambda(this));
     var tmp_6 = this;
-    tmp_6.k5d_1 = lazy(FormatterState$scriptStarts$delegate$lambda(this));
+    tmp_6.d5e_1 = lazy(FormatterState$scriptStarts$delegate$lambda(this));
     var tmp_7 = this;
-    tmp_7.l5d_1 = lazy(FormatterState$blockLevelCommandCalls$delegate$lambda(this));
-    this.m5d_1 = 0;
-    this.n5d_1 = -1;
-    this.o5d_1 = false;
+    tmp_7.e5e_1 = lazy(FormatterState$blockLevelCommandCalls$delegate$lambda(this));
+    this.f5e_1 = 0;
+    this.g5e_1 = -1;
+    this.h5e_1 = false;
     var tmp_8 = this;
-    tmp_8.p5d_1 = lazy(FormatterState$items$delegate$lambda(this));
-    this.q5d_1 = this.x5c_1.o5b_1;
+    tmp_8.i5e_1 = lazy(FormatterState$items$delegate$lambda(this));
+    this.j5e_1 = this.q5d_1.h5c_1;
     var tmp_9 = this;
     var tmp_10;
-    if (this.x5c_1.u56()) {
-      tmp_10 = repeat(' ', this.x5c_1.t56());
+    if (this.q5d_1.k57()) {
+      tmp_10 = repeat(' ', this.q5d_1.j57());
     } else {
       tmp_10 = '\t';
     }
-    tmp_9.r5d_1 = tmp_10;
+    tmp_9.k5e_1 = tmp_10;
     var tmp_11 = this;
     var tmp_12;
-    if (this.x5c_1.u56()) {
-      print('ContinuationIndent: ' + this.x5c_1.b57());
-      tmp_12 = repeat(' ', this.x5c_1.b57() === 0 ? this.x5c_1.t56() : this.x5c_1.b57());
+    if (this.q5d_1.k57()) {
+      print('ContinuationIndent: ' + this.q5d_1.r57());
+      tmp_12 = repeat(' ', this.q5d_1.r57() === 0 ? this.q5d_1.j57() : this.q5d_1.r57());
     } else {
-      tmp_12 = repeat('\t', this.x5c_1.b57() === 0 ? this.x5c_1.t56() : this.x5c_1.b57());
+      tmp_12 = repeat('\t', this.q5d_1.r57() === 0 ? this.q5d_1.j57() : this.q5d_1.r57());
     }
-    tmp_11.s5d_1 = tmp_12;
+    tmp_11.l5e_1 = tmp_12;
     var tmp_13 = this;
-    tmp_13.t5d_1 = lazy(FormatterState$maxBlankLines$delegate$lambda(this));
-    this.u5d_1 = (!(this.q5d_1 === 'C1') && !(this.q5d_1 === 'C2') && this.x5c_1.v5b());
-    this.v5d_1 = repeat(this.x5c_1.c57(), this.x5c_1.y56() + 1 | 0);
+    tmp_13.m5e_1 = lazy(FormatterState$maxBlankLines$delegate$lambda(this));
+    this.n5e_1 = (!(this.j5e_1 === 'C1') && !(this.j5e_1 === 'C2') && this.q5d_1.o5c());
+    this.o5e_1 = repeat(this.q5d_1.s57(), this.q5d_1.o57() + 1 | 0);
   }
-  j5e() {
+  c5f() {
     var tmp;
-    if (this.n5d_1 > 0) {
-      tmp = _get_items__fzd5gv(this).d2(this.n5d_1 - 1 | 0);
+    if (this.g5e_1 > 0) {
+      tmp = _get_items__fzd5gv(this).d2(this.g5e_1 - 1 | 0);
     } else {
       tmp = null;
     }
     return tmp;
   }
-  x5d() {
-    return _get_itemsCount__k57ad8(this) > (this.n5d_1 + 1 | 0);
+  q5e() {
+    return _get_itemsCount__k57ad8(this) > (this.g5e_1 + 1 | 0);
   }
-  k5e() {
-    return this.y5c_1.commandCalls;
+  d5f() {
+    return this.r5d_1.commandCalls;
   }
-  h4w() {
-    var tmp0 = this.i5d_1;
+  x4w() {
+    var tmp0 = this.b5e_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('equalityStatements', 1, tmp, FormatterState$_get_equalityStatements_$ref_up0myv(), null);
     return tmp0.k3();
   }
-  i4w() {
-    return this.y5c_1.equalityStatementRanges;
+  y4w() {
+    return this.r5d_1.equalityStatementRanges;
   }
-  h5e() {
-    var tmp0 = this.j5d_1;
+  a5f() {
+    var tmp0 = this.c5e_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('equalityStatementGroups', 1, tmp, FormatterState$_get_equalityStatementGroups_$ref_xm0ah2(), null);
     return tmp0.k3();
   }
-  b5e() {
-    var tmp0 = this.k5d_1;
+  u5e() {
+    var tmp0 = this.d5e_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('scriptStarts', 1, tmp, FormatterState$_get_scriptStarts_$ref_y3xgmz(), null);
     return tmp0.k3();
   }
-  i5e() {
-    var tmp0 = this.l5d_1;
+  b5f() {
+    var tmp0 = this.e5e_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('blockLevelCommandCalls', 1, tmp, FormatterState$_get_blockLevelCommandCalls_$ref_hsnqra(), null);
     return tmp0.k3();
   }
-  l5e() {
-    return repeat(this.r5d_1, this.a5d_1.b2()) + repeat(this.s5d_1, this.g5d_1) + repeat(this.s5d_1, this.m5d_1);
+  e5f() {
+    return repeat(this.k5e_1, this.t5d_1.b2()) + repeat(this.l5e_1, this.z5d_1) + repeat(this.l5e_1, this.f5e_1);
   }
-  m5e(distance) {
+  f5f(distance) {
     var containsUpper = _get_items__fzd5gv(this).b2() - 1 | 0;
-    var containsArg = this.n5d_1 + distance | 0;
+    var containsArg = this.g5e_1 + distance | 0;
     if (!(0 <= containsArg ? containsArg <= containsUpper : false)) {
       return null;
     }
-    return _get_items__fzd5gv(this).d2(this.n5d_1 + distance | 0);
+    return _get_items__fzd5gv(this).d2(this.g5e_1 + distance | 0);
   }
-  y5d(distance, $super) {
+  r5e(distance, $super) {
     distance = distance === VOID ? 1 : distance;
-    return $super === VOID ? this.m5e(distance) : $super.m5e.call(this, distance);
+    return $super === VOID ? this.f5f(distance) : $super.f5f.call(this, distance);
   }
-  w5d() {
-    return this.c5d_1.toString();
+  p5e() {
+    return this.v5d_1.toString();
   }
   y() {
-    if ((this.n5d_1 + 1 | 0) >= _get_items__fzd5gv(this).b2()) {
+    if ((this.g5e_1 + 1 | 0) >= _get_items__fzd5gv(this).b2()) {
       return null;
     }
     var tmp = _get_items__fzd5gv(this);
-    this.n5d_1 = this.n5d_1 + 1 | 0;
-    return tmp.d2(this.n5d_1);
+    this.g5e_1 = this.g5e_1 + 1 | 0;
+    return tmp.d2(this.g5e_1);
   }
-  t56() {
-    return this.x5c_1.t56();
+  j57() {
+    return this.q5d_1.j57();
   }
-  b57() {
-    return this.x5c_1.b57();
+  r57() {
+    return this.q5d_1.r57();
   }
-  u56() {
-    return this.x5c_1.u56();
+  k57() {
+    return this.q5d_1.k57();
   }
-  v56() {
-    return this.x5c_1.v56();
+  l57() {
+    return this.q5d_1.l57();
   }
-  w56() {
-    return this.x5c_1.w56();
+  m57() {
+    return this.q5d_1.m57();
   }
-  x56() {
-    return this.x5c_1.x56();
+  n57() {
+    return this.q5d_1.n57();
   }
-  u5b() {
-    return this.x5c_1.u5b();
+  n5c() {
+    return this.q5d_1.n5c();
   }
-  z56() {
-    var tmp0 = this.t5d_1;
+  p57() {
+    var tmp0 = this.m5e_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('maxBlankLines', 1, tmp, FormatterState$_get_maxBlankLines_$ref_qdlks4(), null);
     return tmp0.k3();
   }
-  a57() {
-    return this.x5c_1.a57();
+  q57() {
+    return this.q5d_1.q57();
   }
-  v5b() {
-    return this.u5d_1;
+  o5c() {
+    return this.n5e_1;
   }
-  y56() {
-    return this.x5c_1.y56();
+  o57() {
+    return this.q5d_1.o57();
   }
-  c57() {
-    return this.x5c_1.c57();
+  s57() {
+    return this.q5d_1.s57();
   }
-  d57() {
-    return this.x5c_1.d57();
+  t57() {
+    return this.q5d_1.t57();
   }
 }
 //endregion
@@ -718,43 +718,43 @@ function Companion_getInstance() {
 }
 function CaosFormatterOptionsImpl$keepSameLine$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.p5b_1;
+    var tmp0_safe_receiver = this$0.i5c_1;
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : asCaosOptionsFor(tmp0_safe_receiver, 'keepSameLine');
-    var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.u5b();
+    var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.n5c();
     return tmp2_elvis_lhs == null ? true : tmp2_elvis_lhs;
   };
 }
 function CaosFormatterOptionsImpl$_get_keepSameLine_$ref_1r7f4n() {
-  return (p0) => p0.u5b();
+  return (p0) => p0.n5c();
 }
 function CaosFormatterOptionsImpl$spaceBetweenByteStingBrackets$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.p5b_1;
+    var tmp0_safe_receiver = this$0.i5c_1;
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : asCaosOptionsFor(tmp0_safe_receiver, 'spaceBetweenByteStingBrackets');
-    var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.v5b();
+    var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.o5c();
     return tmp2_elvis_lhs == null ? true : tmp2_elvis_lhs;
   };
 }
 function CaosFormatterOptionsImpl$_get_spaceBetweenByteStingBrackets_$ref_6frqi8() {
-  return (p0) => p0.v5b();
+  return (p0) => p0.o5c();
 }
 function CaosFormatterOptionsImpl$trimFinalNewlines$delegate$lambda(this$0) {
   return () => {
-    var tmp0_elvis_lhs = protoOf(FormatterOptionsImpl).x56.call(this$0);
+    var tmp0_elvis_lhs = protoOf(FormatterOptionsImpl).n57.call(this$0);
     return tmp0_elvis_lhs == null ? false : tmp0_elvis_lhs;
   };
 }
 function CaosFormatterOptionsImpl$_get_trimFinalNewlines_$ref_y5kbsv() {
-  return (p0) => p0.x56();
+  return (p0) => p0.n57();
 }
 function CaosFormatterOptionsImpl$trimTrailingWhitespace$delegate$lambda(this$0) {
   return () => {
-    var tmp0_elvis_lhs = protoOf(FormatterOptionsImpl).v56.call(this$0);
+    var tmp0_elvis_lhs = protoOf(FormatterOptionsImpl).l57.call(this$0);
     return tmp0_elvis_lhs == null ? false : tmp0_elvis_lhs;
   };
 }
 function CaosFormatterOptionsImpl$_get_trimTrailingWhitespace_$ref_9mxmnn() {
-  return (p0) => p0.v56();
+  return (p0) => p0.l57();
 }
 function FormatResult$Companion$$childSerializers$_anonymous__qoz48m() {
   return new ReferenceArraySerializer(getKClass(TextEdit), TextEditSerializer_getInstance());
@@ -863,7 +863,7 @@ function EditReason_TAB_CHANGE_getInstance() {
 }
 function formatCaos(variant, text, options) {
   options = options === VOID ? null : options;
-  return Companion_getInstance_1().o5c(variant, text, options);
+  return Companion_getInstance_1().h5d(variant, text, options);
 }
 function Formatter$Companion$scriptStarts$delegate$lambda() {
   // Inline function 'kotlin.collections.map' call
@@ -882,17 +882,17 @@ function Formatter$Companion$scriptStarts$delegate$lambda() {
   return destination;
 }
 function Formatter$Companion$_get_scriptStarts_$ref_6whky8() {
-  return (p0) => p0.p5c();
+  return (p0) => p0.i5d();
 }
 function _get_opts__dblnor($this) {
-  var tmp0 = $this.t5c_1;
+  var tmp0 = $this.m5d_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('opts', 1, tmp, Formatter$_get_opts_$ref_87x784(), null);
   return tmp0.k3();
 }
 function format($this) {
-  var errors = validateCaosParseResult($this.v5c());
+  var errors = validateCaosParseResult($this.o5d());
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
   var destination = ArrayList.u1();
@@ -910,21 +910,21 @@ function format($this) {
   if (!nonWhitespaceErrors.u()) {
     // Inline function 'kotlin.collections.toTypedArray' call
     var tmp$ret$4 = copyToArray(nonWhitespaceErrors);
-    throw FormatExceptionWithCaosErrors.a5c('Cannot format CAOS code with known errors', tmp$ret$4);
+    throw FormatExceptionWithCaosErrors.t5c('Cannot format CAOS code with known errors', tmp$ret$4);
   }
   loop($this);
-  var tmp = $this.w5c().w5d();
+  var tmp = $this.p5d().p5e();
   // Inline function 'kotlin.collections.toTypedArray' call
-  var this_0 = $this.w5c().d5d_1;
+  var this_0 = $this.p5d().w5d_1;
   var tmp_0 = copyToArray(this_0);
   // Inline function 'kotlin.collections.toTypedArray' call
-  var this_1 = $this.w5c().e5d_1;
+  var this_1 = $this.p5d().x5d_1;
   var tmp$ret$6 = copyToArray(this_1);
-  return new FormatResult(tmp, $this.r5c_1, tmp_0, tmp$ret$6);
+  return new FormatResult(tmp, $this.k5d_1, tmp_0, tmp$ret$6);
 }
 function loop($this) {
-  while ($this.w5c().x5d()) {
-    var tmp0_elvis_lhs = $this.w5c().y();
+  while ($this.p5d().q5e()) {
+    var tmp0_elvis_lhs = $this.p5d().y();
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -932,15 +932,15 @@ function loop($this) {
       tmp = tmp0_elvis_lhs;
     }
     var item = tmp;
-    if (get_startLine(item) > $this.w5c().b5d_1) {
-      $this.w5c().g5d_1 = computeContinuationsForFormatter($this.w5c(), item);
+    if (get_startLine(item) > $this.p5d().u5d_1) {
+      $this.p5d().z5d_1 = computeContinuationsForFormatter($this.p5d(), item);
     }
     addNewLineIf($this, item);
     formatItem($this, item);
-    if ($this.w5c().g5d_1 === 0) {
-      $this.w5c().m5d_1 = 0;
+    if ($this.p5d().z5d_1 === 0) {
+      $this.p5d().f5e_1 = 0;
     }
-    $this.w5c().b5d_1 = get_endLine(item);
+    $this.p5d().u5d_1 = get_endLine(item);
   }
 }
 function formatItem($this, item) {
@@ -952,27 +952,27 @@ function formatItem($this, item) {
     } else {
       if (item instanceof IndexedVarVal) {
         formatIndexedVariable($this, item);
-        $this.w5c().o5d_1 = false;
+        $this.p5d().h5e_1 = false;
       } else {
         if (item instanceof CommandToken) {
           formatCommandToken($this, item);
-          $this.w5c().o5d_1 = false;
+          $this.p5d().h5e_1 = false;
         } else {
           if (item instanceof CompoundCommandToken) {
             formatCommandToken_0($this, item);
-            $this.w5c().o5d_1 = false;
+            $this.p5d().h5e_1 = false;
           } else {
             if (item instanceof ByteString) {
               formatByteString($this, item);
-              $this.w5c().o5d_1 = false;
+              $this.p5d().h5e_1 = false;
             } else {
               if (item instanceof Comment) {
                 formatComment($this, item);
-                $this.w5c().o5d_1 = false;
+                $this.p5d().h5e_1 = false;
               } else {
                 if (item instanceof Caos2Comment) {
                   formatCaos2($this, item);
-                  $this.w5c().o5d_1 = false;
+                  $this.p5d().h5e_1 = false;
                 } else {
                   var tmp;
                   if (item instanceof EqJoinVal) {
@@ -982,27 +982,27 @@ function formatItem($this, item) {
                   }
                   if (tmp) {
                     var tmp_0;
-                    if (!(get_startLine(item) === $this.w5c().b5d_1)) {
+                    if (!(get_startLine(item) === $this.p5d().u5d_1)) {
                       tmp_0 = true;
                     } else {
                       var tmp_1 = get_startLine(item);
-                      var tmp1_safe_receiver = $this.w5c().y5d();
+                      var tmp1_safe_receiver = $this.p5d().r5e();
                       tmp_0 = !(tmp_1 === (tmp1_safe_receiver == null ? null : get_startLine(tmp1_safe_receiver)));
                     }
                     if (tmp_0) {
-                      var _receiver__tnumb7 = $this.w5c();
-                      _receiver__tnumb7.m5d_1 = _receiver__tnumb7.m5d_1 + 1 | 0;
+                      var _receiver__tnumb7 = $this.p5d();
+                      _receiver__tnumb7.f5e_1 = _receiver__tnumb7.f5e_1 + 1 | 0;
                     }
                     formatLiteral($this, item);
-                    $this.w5c().o5d_1 = false;
+                    $this.p5d().h5e_1 = false;
                   } else {
                     if (item instanceof AutocompleteHint) {
-                      $this.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(item.x1o_1.h1(), item.x1o_1.f1e()), ''));
-                      $this.w5c().e5d_1.z1(EditReason_DANGLING_AUTO_COMPLETE_getInstance());
-                      $this.w5c().o5d_1 = false;
+                      $this.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(item.z1o_1.h1(), item.z1o_1.f1e()), ''));
+                      $this.p5d().x5d_1.z1(EditReason_DANGLING_AUTO_COMPLETE_getInstance());
+                      $this.p5d().h5e_1 = false;
                     } else {
                       formatLiteral($this, item);
-                      $this.w5c().o5d_1 = false;
+                      $this.p5d().h5e_1 = false;
                     }
                   }
                 }
@@ -1021,16 +1021,16 @@ function Companion_getInstance_1() {
   return Companion_instance_1;
 }
 function Formatter$result$delegate$lambda(this$0) {
-  return () => CaosParser_instance.q4w(this$0.q5c_1, this$0.r5c_1);
+  return () => CaosParser_instance.g4x(this$0.j5d_1, this$0.k5d_1);
 }
 function Formatter$_get_result_$ref_jxklah() {
-  return (p0) => p0.v5c();
+  return (p0) => p0.o5d();
 }
 function Formatter$opts$delegate$lambda(this$0, $opts) {
   return () => {
     // Inline function 'kotlin.also' call
-    var this_0 = new CaosFormatterOptionsImpl(this$0.q5c_1, $opts);
-    println('Opts.continuationIndent: ' + this_0.b57());
+    var this_0 = new CaosFormatterOptionsImpl(this$0.j5d_1, $opts);
+    println('Opts.continuationIndent: ' + this_0.r57());
     return this_0;
   };
 }
@@ -1038,34 +1038,34 @@ function Formatter$_get_opts_$ref_87x784() {
   return (p0) => _get_opts__dblnor(p0);
 }
 function Formatter$state$delegate$lambda(this$0) {
-  return () => new FormatterState(_get_opts__dblnor(this$0), this$0.v5c(), toList(CaosTokenizerUtil_instance.f4i(this$0.r5c_1)));
+  return () => new FormatterState(_get_opts__dblnor(this$0), this$0.o5d(), toList(CaosTokenizerUtil_instance.v4i(this$0.k5d_1)));
 }
 function Formatter$_get_state_$ref_yb193p() {
-  return (p0) => p0.w5c();
+  return (p0) => p0.p5d();
 }
 function _get_itemsCount__k57ad8($this) {
-  var tmp0 = $this.f5d_1;
+  var tmp0 = $this.y5d_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('itemsCount', 1, tmp, FormatterState$_get_itemsCount_$ref_3l29wo(), null);
   return tmp0.k3();
 }
 function _get_commandCalls__9cdy9r($this) {
-  var tmp0 = $this.h5d_1;
+  var tmp0 = $this.a5e_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('commandCalls', 1, tmp, FormatterState$_get_commandCalls_$ref_n9kb2r(), null);
   return tmp0.k3();
 }
 function _get_items__fzd5gv($this) {
-  var tmp0 = $this.p5d_1;
+  var tmp0 = $this.i5e_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('items', 1, tmp, FormatterState$_get_items_$ref_okzgnx(), null);
   return tmp0.k3();
 }
 function getCommandRanges($this) {
-  var eqStatements = $this.y5c_1.equalityStatementRanges;
+  var eqStatements = $this.r5d_1.equalityStatementRanges;
   var requiresCondition = listOf([token('doif'), token('elif'), token('asrt')]);
   // Inline function 'kotlin.collections.mutableListOf' call
   var commandCallRanges = ArrayList.u1();
@@ -1078,8 +1078,8 @@ function getCommandRanges($this) {
       var command = _get_commandCalls__9cdy9r($this).d2(i);
       if (requiresCondition.g2(last(command.tokens).token)) {
         var tmp0_safe_receiver = getOrNull(_get_commandCalls__9cdy9r($this), i + 1 | 0);
-        var next = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.g4x_1;
-        var tmp = command.g4x_1.g1e();
+        var next = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.w4x_1;
+        var tmp = command.w4x_1.g1e();
         var tmp2_elvis_lhs = next == null ? null : next.g1e();
         var commandRange = until(tmp, tmp2_elvis_lhs == null ? 2147483647 : tmp2_elvis_lhs);
         // Inline function 'kotlin.collections.filter' call
@@ -1098,11 +1098,11 @@ function getCommandRanges($this) {
           }
         }
         var eqs = destination;
-        var tmp_0 = command.g4x_1.g1e();
+        var tmp_0 = command.w4x_1.g1e();
         var tmp3_elvis_lhs = lastOrNull(eqs);
-        commandCallRanges.z1(numberRangeToNumber(tmp_0, (tmp3_elvis_lhs == null ? command.g4x_1 : tmp3_elvis_lhs).j1e()));
+        commandCallRanges.z1(numberRangeToNumber(tmp_0, (tmp3_elvis_lhs == null ? command.w4x_1 : tmp3_elvis_lhs).j1e()));
       } else {
-        commandCallRanges.z1(numberRangeToNumber(command.g4x_1.g1e(), command.g4x_1.j1e()));
+        commandCallRanges.z1(numberRangeToNumber(command.w4x_1.g1e(), command.w4x_1.j1e()));
       }
     }
      while (inductionVariable <= last_0);
@@ -1125,14 +1125,14 @@ function FormatterState$_get_itemsCount_$ref_3l29wo() {
 }
 function FormatterState$commandCalls$delegate$lambda$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = a.g4x_1.g1e();
-  var tmp$ret$2 = b.g4x_1.g1e();
+  var tmp = a.w4x_1.g1e();
+  var tmp$ret$2 = b.w4x_1.g1e();
   return compareValues(tmp, tmp$ret$2);
 }
 function FormatterState$commandCalls$delegate$lambda(this$0) {
   return () => {
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = this$0.y5c_1.commandCalls;
+    var tmp0 = this$0.r5d_1.commandCalls;
     // Inline function 'kotlin.collections.filterTo' call
     var destination = ArrayList.u1();
     var inductionVariable = 0;
@@ -1140,7 +1140,7 @@ function FormatterState$commandCalls$delegate$lambda(this$0) {
     while (inductionVariable < last) {
       var element = tmp0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      if (element.n4p()) {
+      if (element.d4q()) {
         destination.z1(element);
       }
     }
@@ -1155,15 +1155,15 @@ function FormatterState$_get_commandCalls_$ref_n9kb2r() {
   return (p0) => _get_commandCalls__9cdy9r(p0);
 }
 function FormatterState$equalityStatements$delegate$lambda(this$0) {
-  return () => this$0.y5c_1.equalityStatements;
+  return () => this$0.r5d_1.equalityStatements;
 }
 function FormatterState$_get_equalityStatements_$ref_up0myv() {
-  return (p0) => p0.h4w();
+  return (p0) => p0.x4w();
 }
 function FormatterState$equalityStatementGroups$delegate$lambda(this$0) {
   return () => {
     // Inline function 'kotlin.collections.map' call
-    var this_0 = this$0.i4w();
+    var this_0 = this$0.y4w();
     // Inline function 'kotlin.collections.mapTo' call
     var destination = ArrayList.y1(this_0.length);
     var inductionVariable = 0;
@@ -1172,7 +1172,7 @@ function FormatterState$equalityStatementGroups$delegate$lambda(this$0) {
       var item = this_0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       // Inline function 'kotlin.collections.filter' call
-      var tmp0 = this$0.h4w();
+      var tmp0 = this$0.x4w();
       // Inline function 'kotlin.collections.filterTo' call
       var destination_0 = ArrayList.u1();
       var inductionVariable_0 = 0;
@@ -1180,7 +1180,7 @@ function FormatterState$equalityStatementGroups$delegate$lambda(this$0) {
       while (inductionVariable_0 < last_0) {
         var element = tmp0[inductionVariable_0];
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        if (contains_1(item, element.z4z_1)) {
+        if (contains_1(item, element.p50_1)) {
           destination_0.z1(element);
         }
       }
@@ -1191,13 +1191,13 @@ function FormatterState$equalityStatementGroups$delegate$lambda(this$0) {
   };
 }
 function FormatterState$_get_equalityStatementGroups_$ref_xm0ah2() {
-  return (p0) => p0.h5e();
+  return (p0) => p0.a5f();
 }
 function FormatterState$scriptStarts$delegate$lambda(this$0) {
   return () => {
     var endm = token('endm');
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = this$0.y5c_1.scripts;
+    var tmp0 = this$0.r5d_1.scripts;
     // Inline function 'kotlin.collections.filterTo' call
     var destination = ArrayList.u1();
     var inductionVariable = 0;
@@ -1232,13 +1232,13 @@ function FormatterState$scriptStarts$delegate$lambda(this$0) {
   };
 }
 function FormatterState$_get_scriptStarts_$ref_y3xgmz() {
-  return (p0) => p0.b5e();
+  return (p0) => p0.u5e();
 }
 function FormatterState$blockLevelCommandCalls$delegate$lambda(this$0) {
   return () => getCommandRanges(this$0);
 }
 function FormatterState$_get_blockLevelCommandCalls_$ref_hsnqra() {
-  return (p0) => p0.i5e();
+  return (p0) => p0.b5f();
 }
 function FormatterState$items$delegate$lambda$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
@@ -1249,7 +1249,7 @@ function FormatterState$items$delegate$lambda$lambda(a, b) {
 function FormatterState$items$delegate$lambda(this$0) {
   return () => {
     // Inline function 'kotlin.collections.sortedBy' call
-    var this_0 = plus(this$0.z5c_1, this$0.y5c_1.items);
+    var this_0 = plus(this$0.s5d_1, this$0.r5d_1.items);
     // Inline function 'kotlin.comparisons.compareBy' call
     var tmp = FormatterState$items$delegate$lambda$lambda;
     var tmp$ret$1 = new sam$kotlin_Comparator$0_0(tmp);
@@ -1262,16 +1262,16 @@ function FormatterState$_get_items_$ref_okzgnx() {
 function FormatterState$maxBlankLines$delegate$lambda(this$0) {
   return () => {
     var tmp;
-    if (this$0.x5c_1.z56() < 0) {
+    if (this$0.q5d_1.p57() < 0) {
       tmp = 32767;
     } else {
-      tmp = this$0.x5c_1.z56();
+      tmp = this$0.q5d_1.p57();
     }
     return tmp;
   };
 }
 function FormatterState$_get_maxBlankLines_$ref_qdlks4() {
-  return (p0) => p0.z56();
+  return (p0) => p0.p57();
 }
 function FormatterState$getCommandRanges$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
@@ -1280,12 +1280,12 @@ function FormatterState$getCommandRanges$lambda(a, b) {
   return compareValues(tmp, tmp$ret$2);
 }
 function formatComment(_this__u8e3s4, item) {
-  if (get_startCharacter(item) === 0 || !_this__u8e3s4.w5c().a57()) {
-    _this__u8e3s4.w5c().c5d_1.t(item.j1p_1);
+  if (get_startCharacter(item) === 0 || !_this__u8e3s4.p5d().q57()) {
+    _this__u8e3s4.p5d().v5d_1.t(item.l1p_1);
     return Unit_instance;
   }
-  var newTab = _this__u8e3s4.w5c().l5e();
-  var lastItem = _this__u8e3s4.w5c().j5e();
+  var newTab = _this__u8e3s4.p5d().e5f();
+  var lastItem = _this__u8e3s4.p5d().c5f();
   var tmp;
   if (!(lastItem == null)) {
     var tmp_0;
@@ -1300,10 +1300,10 @@ function formatComment(_this__u8e3s4, item) {
   }
   var start = tmp;
   if (!((lastItem == null ? null : lastItem.j1f()) === newTab)) {
-    _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(start, get_start(item)), newTab));
-    _this__u8e3s4.w5c().e5d_1.z1(EditReason_COMMENT_getInstance());
+    _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(start, get_start(item)), newTab));
+    _this__u8e3s4.p5d().x5d_1.z1(EditReason_COMMENT_getInstance());
   }
-  _this__u8e3s4.w5c().c5d_1.t(newTab).t(item.j1p_1);
+  _this__u8e3s4.p5d().v5d_1.t(newTab).t(item.l1p_1);
 }
 function formatCaos2(_this__u8e3s4, item) {
   var builder = StringBuilder.we('*# ');
@@ -1331,63 +1331,63 @@ function formatCaos2(_this__u8e3s4, item) {
   var tmp = destination;
   trim(builder.t(joinToString(tmp, ' ', VOID, VOID, VOID, VOID, formatCaos2$lambda)));
   var newText = builder.toString();
-  if (!(item.r1p_1 === newText)) {
-    _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(item.q1p_1.h1(), item.q1p_1.f1e()), newText));
-    _this__u8e3s4.w5c().e5d_1.z1(EditReason_FORMAT_CAOS2_getInstance());
+  if (!(item.t1p_1 === newText)) {
+    _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(item.s1p_1.h1(), item.s1p_1.f1e()), newText));
+    _this__u8e3s4.p5d().x5d_1.z1(EditReason_FORMAT_CAOS2_getInstance());
   }
-  _this__u8e3s4.w5c().c5d_1.t(newText);
+  _this__u8e3s4.p5d().v5d_1.t(newText);
 }
 function formatCaos2$lambda(it) {
   return it.j1f();
 }
 function formatIndexedVariable(_this__u8e3s4, item) {
   ensureSpace(_this__u8e3s4, item);
-  var oldText = item.t1o_1;
+  var oldText = item.v1o_1;
   // Inline function 'kotlin.text.lowercase' call
   // Inline function 'kotlin.js.asDynamic' call
   var newText = oldText.toLowerCase();
   if (!(oldText === newText)) {
-    _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(item.p1o_1.h1(), item.p1o_1.f1e()), newText));
-    _this__u8e3s4.w5c().e5d_1.z1(EditReason_CASE_VARIABLE_getInstance());
+    _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(item.r1o_1.h1(), item.r1o_1.f1e()), newText));
+    _this__u8e3s4.p5d().x5d_1.z1(EditReason_CASE_VARIABLE_getInstance());
   }
-  _this__u8e3s4.w5c().c5d_1.t(newText);
+  _this__u8e3s4.p5d().v5d_1.t(newText);
 }
 function formatCommandToken(_this__u8e3s4, item) {
-  _this__u8e3s4.c5e(item.token);
+  _this__u8e3s4.v5e(item.token);
   ensureSpace(_this__u8e3s4, item);
-  var oldText = item.c1q_1;
+  var oldText = item.e1q_1;
   // Inline function 'kotlin.text.lowercase' call
   // Inline function 'kotlin.js.asDynamic' call
-  var newText = item.c1q_1.toLowerCase();
+  var newText = item.e1q_1.toLowerCase();
   if (!(oldText === newText)) {
-    _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), newText));
-    _this__u8e3s4.w5c().e5d_1.z1(EditReason_CASE_COMMAND_getInstance());
+    _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), newText));
+    _this__u8e3s4.p5d().x5d_1.z1(EditReason_CASE_COMMAND_getInstance());
   }
-  _this__u8e3s4.w5c().c5d_1.t(newText);
-  _this__u8e3s4.a5e(item.token, get_startIndex(item));
+  _this__u8e3s4.p5d().v5d_1.t(newText);
+  _this__u8e3s4.t5e(item.token, get_startIndex(item));
 }
 function formatCommandToken_0(_this__u8e3s4, item) {
   if (item.tokens.length === 1) {
-    _this__u8e3s4.c5e(first(item.tokens).token);
+    _this__u8e3s4.v5e(first(item.tokens).token);
   }
   ensureSpace(_this__u8e3s4, item);
-  var oldText = item.o1q_1;
+  var oldText = item.q1q_1;
   // Inline function 'kotlin.text.trim' call
   var this_0 = joinToString_0(item.tokens, ' ', VOID, VOID, VOID, VOID, formatCommandToken$lambda);
   var newText = toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
   if (!(oldText === newText)) {
-    _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(item.l1q_1.h1(), item.l1q_1.f1e()), newText));
-    _this__u8e3s4.w5c().e5d_1.z1(EditReason_SPACES_BETWEEN_COMMANDS_getInstance());
+    _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(item.n1q_1.h1(), item.n1q_1.f1e()), newText));
+    _this__u8e3s4.p5d().x5d_1.z1(EditReason_SPACES_BETWEEN_COMMANDS_getInstance());
   }
-  _this__u8e3s4.w5c().c5d_1.t(newText);
+  _this__u8e3s4.p5d().v5d_1.t(newText);
   if (item.tokens.length === 1) {
-    _this__u8e3s4.a5e(first(item.tokens).token, get_startIndex(first(item.tokens)));
+    _this__u8e3s4.t5e(first(item.tokens).token, get_startIndex(first(item.tokens)));
   }
 }
 function formatByteString(_this__u8e3s4, item) {
   ensureSpace(_this__u8e3s4, item);
   var oldText = item.j1f();
-  var spaceBetween = _this__u8e3s4.w5c().u5d_1 ? ' ' : '';
+  var spaceBetween = _this__u8e3s4.p5d().n5e_1 ? ' ' : '';
   // Inline function 'kotlin.text.trim' call
   var this_0 = substring(oldText, 1, get_lastIndex(oldText));
   var tmp0 = toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
@@ -1396,26 +1396,26 @@ function formatByteString(_this__u8e3s4, item) {
   var items = Regex.uf('\\s\\s+').bg(tmp0, ' ');
   var newText = '[' + spaceBetween + items + spaceBetween + ']';
   if (!(oldText === newText)) {
-    _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(item.d1e().h1(), item.d1e().f1e()), newText));
-    _this__u8e3s4.w5c().e5d_1.z1(EditReason_SPACE_BETWEEN_BRACKETS_getInstance());
+    _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(item.d1e().h1(), item.d1e().f1e()), newText));
+    _this__u8e3s4.p5d().x5d_1.z1(EditReason_SPACE_BETWEEN_BRACKETS_getInstance());
   }
-  _this__u8e3s4.w5c().c5d_1.t(newText);
+  _this__u8e3s4.p5d().v5d_1.t(newText);
 }
 function formatLiteral(_this__u8e3s4, item) {
   ensureSpace(_this__u8e3s4, item);
   var oldText = item.j1f();
   if (!contains(oldText, '  ')) {
-    _this__u8e3s4.w5c().c5d_1.t(oldText);
+    _this__u8e3s4.p5d().v5d_1.t(oldText);
     return Unit_instance;
   }
   // Inline function 'kotlin.text.toRegex' call
   // Inline function 'kotlin.text.replace' call
   var newText = Regex.uf('\\s\\s+').bg(oldText, ' ');
   if (!(oldText === newText)) {
-    _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), newText));
-    _this__u8e3s4.w5c().e5d_1.z1(EditReason_SPACE_TOKEN_getInstance());
+    _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), newText));
+    _this__u8e3s4.p5d().x5d_1.z1(EditReason_SPACE_TOKEN_getInstance());
   }
-  _this__u8e3s4.w5c().c5d_1.t(newText);
+  _this__u8e3s4.p5d().v5d_1.t(newText);
 }
 function formatCommandToken$lambda(it) {
   return token_0(it.token);
@@ -1444,7 +1444,7 @@ function computeContinuationsForFormatter(state, item) {
   var startIndex = get_startIndex(item);
   var startLine = get_startLine(item);
   var indents = 0;
-  var tmp0 = state.h5e();
+  var tmp0 = state.a5f();
   var tmp$ret$0;
   $l$block: {
     // Inline function 'kotlin.collections.firstOrNull' call
@@ -1484,7 +1484,7 @@ function computeContinuationsForFormatter(state, item) {
        while (inductionVariable <= last_0);
   }
   // Inline function 'kotlin.collections.filter' call
-  var tmp0_0 = state.k5e();
+  var tmp0_0 = state.d5f();
   // Inline function 'kotlin.collections.filterTo' call
   var destination = ArrayList.u1();
   var inductionVariable_0 = 0;
@@ -1492,7 +1492,7 @@ function computeContinuationsForFormatter(state, item) {
   while (inductionVariable_0 < last_1) {
     var element_0 = tmp0_0[inductionVariable_0];
     inductionVariable_0 = inductionVariable_0 + 1 | 0;
-    if (inRange(element_0.g4x_1, line, character)) {
+    if (inRange(element_0.w4x_1, line, character)) {
       destination.z1(element_0);
     }
   }
@@ -1567,7 +1567,7 @@ function computeContinuationsForFormatter(state, item) {
     indents = Math.min(tmp0_1, b);
   }
   var tmp6_safe_receiver = firstOrNull(enclosingCommands);
-  var commandRange = tmp6_safe_receiver == null ? null : tmp6_safe_receiver.g4x_1;
+  var commandRange = tmp6_safe_receiver == null ? null : tmp6_safe_receiver.w4x_1;
   if (indents === 0) {
     if (ensureOne) {
       indents = 1;
@@ -1582,10 +1582,10 @@ function computeContinuationsForFormatter(state, item) {
 function addNewLineIf(_this__u8e3s4, item) {
   var willNewlineNext_0 = willNewlineNext(_this__u8e3s4, 0);
   var tmp = item.d1e().g1e();
-  var tmp0_safe_receiver = firstOrNull(_this__u8e3s4.w5c().i5e());
+  var tmp0_safe_receiver = firstOrNull(_this__u8e3s4.p5d().b5f());
   var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.i1();
   if (tmp > (tmp1_elvis_lhs == null ? 2147483647 : tmp1_elvis_lhs)) {
-    _this__u8e3s4.w5c().i5e().x3(0);
+    _this__u8e3s4.p5d().b5f().x3(0);
   }
   if (!willNewlineNext_0) {
     return Unit_instance;
@@ -1596,13 +1596,13 @@ function addNewLineIf(_this__u8e3s4, item) {
   if (item instanceof EqJoinVal) {
     tmp_1 = true;
   } else {
-    var tmp_2 = _this__u8e3s4.w5c().m5e(-1);
+    var tmp_2 = _this__u8e3s4.p5d().f5f(-1);
     tmp_1 = tmp_2 instanceof EqJoinVal;
   }
   if (tmp_1) {
     tmp_0 = true;
   } else {
-    var tmp0 = _this__u8e3s4.w5c().h4w();
+    var tmp0 = _this__u8e3s4.p5d().x4w();
     var tmp$ret$0;
     $l$block: {
       // Inline function 'kotlin.collections.any' call
@@ -1611,7 +1611,7 @@ function addNewLineIf(_this__u8e3s4, item) {
       while (inductionVariable < last) {
         var element = tmp0[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        if (contains_1(element.z4z_1, itemRange)) {
+        if (contains_1(element.p50_1, itemRange)) {
           tmp$ret$0 = true;
           break $l$block;
         }
@@ -1625,39 +1625,39 @@ function addNewLineIf(_this__u8e3s4, item) {
   }
   var i = -1;
   $l$loop: while (true) {
-    var tmp2_safe_receiver = _this__u8e3s4.w5c().m5e(i);
+    var tmp2_safe_receiver = _this__u8e3s4.p5d().f5f(i);
     if (!((tmp2_safe_receiver == null ? null : get_isWhitespace(tmp2_safe_receiver)) === true)) {
       break $l$loop;
     }
-    var tmp_3 = _this__u8e3s4.w5c().m5e(i);
+    var tmp_3 = _this__u8e3s4.p5d().f5f(i);
     if (tmp_3 instanceof NewLine) {
       return Unit_instance;
     }
     i = i - 1 | 0;
   }
-  var newLine = _this__u8e3s4.w5c().v5d_1;
+  var newLine = _this__u8e3s4.p5d().o5e_1;
   var space = newLineSpace(_this__u8e3s4, item);
   var final = newLine + space;
-  _this__u8e3s4.w5c().c5d_1.t(final);
-  _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_start(item)), final));
-  _this__u8e3s4.w5c().e5d_1.z1(EditReason_NEWLINES_NEEDED_getInstance());
+  _this__u8e3s4.p5d().v5d_1.t(final);
+  _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_start(item)), final));
+  _this__u8e3s4.p5d().x5d_1.z1(EditReason_NEWLINES_NEEDED_getInstance());
 }
 function formatSpace(_this__u8e3s4, item) {
-  var lastItem = _this__u8e3s4.w5c().j5e();
-  var nextItem = _this__u8e3s4.w5c().y5d();
+  var lastItem = _this__u8e3s4.p5d().c5f();
+  var nextItem = _this__u8e3s4.p5d().r5e();
   if (lastItem == null || isWhitespaceOrComment(nextItem)) {
     if (!(nextItem instanceof Comment)) {
-      _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), ''));
-      _this__u8e3s4.w5c().e5d_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
+      _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), ''));
+      _this__u8e3s4.p5d().x5d_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
     }
     return Unit_instance;
   }
   var tmp;
   if (lastItem instanceof NewLine) {
-    tmp = _this__u8e3s4.w5c().l5e();
+    tmp = _this__u8e3s4.p5d().e5f();
   } else {
     if (willNewlineNext(_this__u8e3s4, 0)) {
-      tmp = _this__u8e3s4.w5c().l5e();
+      tmp = _this__u8e3s4.p5d().e5f();
     } else {
       if (willNewlineNext(_this__u8e3s4, 1)) {
         tmp = '';
@@ -1665,60 +1665,60 @@ function formatSpace(_this__u8e3s4, item) {
         if (get_endLine(lastItem) === get_startLine(item)) {
           tmp = ' ';
         } else {
-          tmp = item.h1r_1;
+          tmp = item.j1r_1;
         }
       }
     }
   }
   var space = tmp;
   // Inline function 'kotlin.collections.orEmpty' call
-  var tmp0_elvis_lhs = firstOrNull(_this__u8e3s4.w5c().a5d_1);
+  var tmp0_elvis_lhs = firstOrNull(_this__u8e3s4.p5d().t5d_1);
   var tmp_0 = tmp0_elvis_lhs == null ? emptyList() : tmp0_elvis_lhs;
-  var tmp_1 = _this__u8e3s4.w5c().m5e(1);
+  var tmp_1 = _this__u8e3s4.p5d().f5f(1);
   var tmp0_safe_receiver = tmp_1 instanceof CommandToken ? tmp_1 : null;
   if (contains_0(tmp_0, tmp0_safe_receiver == null ? null : tmp0_safe_receiver.token)) {
-    if (space.length >= _this__u8e3s4.w5c().r5d_1.length) {
-      space = substring_0(space, _this__u8e3s4.w5c().r5d_1.length);
+    if (space.length >= _this__u8e3s4.p5d().k5e_1.length) {
+      space = substring_0(space, _this__u8e3s4.p5d().k5e_1.length);
     }
   }
-  if (!(item.h1r_1 === space)) {
-    var difference = item.h1r_1.length - space.length | 0;
+  if (!(item.j1r_1 === space)) {
+    var difference = item.j1r_1.length - space.length | 0;
     if (difference === 0) {
-      _this__u8e3s4.w5c().e5d_1.z1(EditReason_TAB_CHANGE_getInstance());
+      _this__u8e3s4.p5d().x5d_1.z1(EditReason_TAB_CHANGE_getInstance());
     } else if (difference < 0) {
-      _this__u8e3s4.w5c().e5d_1.z1(EditReason_SPACE_NEEDED_getInstance());
+      _this__u8e3s4.p5d().x5d_1.z1(EditReason_SPACE_NEEDED_getInstance());
     } else {
-      _this__u8e3s4.w5c().e5d_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
+      _this__u8e3s4.p5d().x5d_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
     }
-    _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), space));
+    _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), space));
   }
-  _this__u8e3s4.w5c().c5d_1.t(space);
+  _this__u8e3s4.p5d().v5d_1.t(space);
 }
 function formatNewLine(_this__u8e3s4, item) {
-  var tmp = _this__u8e3s4.w5c().m5e(-1);
+  var tmp = _this__u8e3s4.p5d().f5f(-1);
   var lastWasComment = tmp instanceof Comment;
   var tmp_0;
   if (lastWasComment) {
-    var tmp0_safe_receiver = _this__u8e3s4.w5c().y5d();
+    var tmp0_safe_receiver = _this__u8e3s4.p5d().r5e();
     tmp_0 = (tmp0_safe_receiver == null ? null : isComment(tmp0_safe_receiver)) === true;
   } else {
     tmp_0 = false;
   }
-  var newLines = newLineCountConstrained(_this__u8e3s4, item.x1q_1, lastWasComment, tmp_0);
+  var newLines = newLineCountConstrained(_this__u8e3s4, item.z1q_1, lastWasComment, tmp_0);
   var tmp_1;
   if (newLines > 0) {
-    tmp_1 = repeat(_this__u8e3s4.z5d(), newLines);
+    tmp_1 = repeat(_this__u8e3s4.s5e(), newLines);
   } else {
     tmp_1 = ' ';
   }
   var newLineText = tmp_1;
-  _this__u8e3s4.w5c().o5d_1 = newLines > 0;
-  if (!(item.z1q_1 === newLineText)) {
-    var range = new RangeImpl(item.v1q_1.h1(), item.v1q_1.f1e());
-    _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(range, newLineText));
+  _this__u8e3s4.p5d().h5e_1 = newLines > 0;
+  if (!(item.b1r_1 === newLineText)) {
+    var range = new RangeImpl(item.x1q_1.h1(), item.x1q_1.f1e());
+    _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(range, newLineText));
     // Inline function 'kotlin.text.count' call
     var count = 0;
-    var indexedObject = item.z1q_1;
+    var indexedObject = item.b1r_1;
     var inductionVariable = 0;
     while (inductionVariable < charSequenceLength(indexedObject)) {
       var element = charSequenceGet(indexedObject, inductionVariable);
@@ -1740,21 +1740,21 @@ function formatNewLine(_this__u8e3s4, item) {
     }
     var newLineCount = count_0;
     if (existingLineCount === newLines) {
-      _this__u8e3s4.w5c().e5d_1.z1(EditReason_SPACE_NEEDED_getInstance());
+      _this__u8e3s4.p5d().x5d_1.z1(EditReason_SPACE_NEEDED_getInstance());
     } else if (existingLineCount < newLineCount) {
-      _this__u8e3s4.w5c().e5d_1.z1(EditReason_NEWLINES_NEEDED_getInstance());
+      _this__u8e3s4.p5d().x5d_1.z1(EditReason_NEWLINES_NEEDED_getInstance());
     } else {
-      _this__u8e3s4.w5c().e5d_1.z1(EditReason_NEWLINES_TOO_MANY_getInstance());
+      _this__u8e3s4.p5d().x5d_1.z1(EditReason_NEWLINES_TOO_MANY_getInstance());
     }
   }
-  _this__u8e3s4.w5c().c5d_1.t(newLineText);
+  _this__u8e3s4.p5d().v5d_1.t(newLineText);
 }
 function willNewlineNext(_this__u8e3s4, offset) {
   offset = offset === VOID ? 0 : offset;
-  if (_this__u8e3s4.w5c().u5b()) {
+  if (_this__u8e3s4.p5d().n5c()) {
     return false;
   }
-  var tmp0_elvis_lhs = _this__u8e3s4.w5c().m5e(offset);
+  var tmp0_elvis_lhs = _this__u8e3s4.p5d().f5f(offset);
   var tmp;
   if (tmp0_elvis_lhs == null) {
     return false;
@@ -1762,7 +1762,7 @@ function willNewlineNext(_this__u8e3s4, offset) {
     tmp = tmp0_elvis_lhs;
   }
   var item = tmp;
-  var next = _this__u8e3s4.w5c().m5e(offset + 1 | 0);
+  var next = _this__u8e3s4.p5d().f5f(offset + 1 | 0);
   var tmp_0;
   var tmp_1;
   if (isComment(item)) {
@@ -1778,9 +1778,9 @@ function willNewlineNext(_this__u8e3s4, offset) {
   if (tmp_0) {
     return false;
   }
-  var last = _this__u8e3s4.w5c().m5e(-1);
+  var last = _this__u8e3s4.p5d().f5f(-1);
   if (!(last == null)) {
-    var tmp0 = _this__u8e3s4.w5c().i4w();
+    var tmp0 = _this__u8e3s4.p5d().y4w();
     var tmp$ret$0;
     $l$block: {
       // Inline function 'kotlin.collections.firstOrNull' call
@@ -1801,12 +1801,12 @@ function willNewlineNext(_this__u8e3s4, offset) {
       return !contains_1(eqStatement, item.d1e());
     }
   }
-  var currentCommand = firstOrNull(_this__u8e3s4.w5c().i5e());
+  var currentCommand = firstOrNull(_this__u8e3s4.p5d().b5f());
   return currentCommand == null || !currentCommand.vk(item.d1e().g1e());
 }
 function newLineSpace(_this__u8e3s4, item) {
   var tmp;
-  var tmp0_safe_receiver = _this__u8e3s4.w5c().y5d();
+  var tmp0_safe_receiver = _this__u8e3s4.p5d().r5e();
   if (!((tmp0_safe_receiver == null ? null : get_isWhitespace(tmp0_safe_receiver)) === false)) {
     tmp = !willNewlineNext(_this__u8e3s4);
   } else {
@@ -1821,8 +1821,8 @@ function newLineSpace(_this__u8e3s4, item) {
   } else {
     if (item instanceof Comment) {
       var tmp_1;
-      if (_this__u8e3s4.w5c().a57()) {
-        tmp_1 = _this__u8e3s4.w5c().l5e();
+      if (_this__u8e3s4.p5d().q57()) {
+        tmp_1 = _this__u8e3s4.p5d().e5f();
       } else {
         tmp_1 = '';
       }
@@ -1837,15 +1837,15 @@ function newLineSpace(_this__u8e3s4, item) {
           if (item instanceof CommandToken) {
             var tmp_2;
             // Inline function 'kotlin.collections.orEmpty' call
-            var tmp0_elvis_lhs = getOrNull(_this__u8e3s4.w5c().a5d_1, 0);
+            var tmp0_elvis_lhs = getOrNull(_this__u8e3s4.p5d().t5d_1, 0);
             if ((tmp0_elvis_lhs == null ? emptyList() : tmp0_elvis_lhs).g2(item.token)) {
-              tmp_2 = substring_0(_this__u8e3s4.w5c().l5e(), _this__u8e3s4.w5c().r5d_1.length);
+              tmp_2 = substring_0(_this__u8e3s4.p5d().e5f(), _this__u8e3s4.p5d().k5e_1.length);
             } else {
-              tmp_2 = _this__u8e3s4.w5c().l5e();
+              tmp_2 = _this__u8e3s4.p5d().e5f();
             }
             tmp_0 = tmp_2;
           } else {
-            tmp_0 = _this__u8e3s4.w5c().l5e();
+            tmp_0 = _this__u8e3s4.p5d().e5f();
           }
         }
       }
@@ -1856,24 +1856,24 @@ function newLineSpace(_this__u8e3s4, item) {
 function newLineCountConstrained(_this__u8e3s4, lines, commentLast, commentNext) {
   if (commentNext) {
     // Inline function 'kotlin.math.max' call
-    var a = _this__u8e3s4.w5c().z56();
+    var a = _this__u8e3s4.p5d().p57();
     // Inline function 'kotlin.math.min' call
     var b = Math.max(a, 1);
     return Math.min(lines, b);
   }
   var tmp;
-  if ((lines - 1 | 0) > _this__u8e3s4.w5c().z56()) {
-    tmp = _this__u8e3s4.w5c().z56() + 1 | 0;
-  } else if (_this__u8e3s4.w5c().d57() || !commentLast) {
-    var tmp0 = _this__u8e3s4.w5c().z56() + 1 | 0;
+  if ((lines - 1 | 0) > _this__u8e3s4.p5d().p57()) {
+    tmp = _this__u8e3s4.p5d().p57() + 1 | 0;
+  } else if (_this__u8e3s4.p5d().t57() || !commentLast) {
+    var tmp0 = _this__u8e3s4.p5d().p57() + 1 | 0;
     // Inline function 'kotlin.math.max' call
-    var a_0 = _this__u8e3s4.w5c().y56() + 1 | 0;
+    var a_0 = _this__u8e3s4.p5d().o57() + 1 | 0;
     // Inline function 'kotlin.math.min' call
     var b_0 = Math.max(a_0, lines);
     tmp = Math.min(tmp0, b_0);
   } else {
     // Inline function 'kotlin.math.min' call
-    var a_1 = _this__u8e3s4.w5c().z56() + 1 | 0;
+    var a_1 = _this__u8e3s4.p5d().p57() + 1 | 0;
     tmp = Math.min(a_1, lines);
   }
   var temp = tmp;
@@ -1881,13 +1881,13 @@ function newLineCountConstrained(_this__u8e3s4, lines, commentLast, commentNext)
   return Math.max(1, temp);
 }
 function ensureSpace(_this__u8e3s4, item) {
-  var tmp0_safe_receiver = _this__u8e3s4.w5c().j5e();
+  var tmp0_safe_receiver = _this__u8e3s4.p5d().c5f();
   if ((tmp0_safe_receiver == null ? null : isComment(tmp0_safe_receiver)) === true) {
     return Unit_instance;
   }
   var tmp;
   if (!isWhitespaceOrComment(item)) {
-    var tmp1_safe_receiver = _this__u8e3s4.w5c().m5e(-1);
+    var tmp1_safe_receiver = _this__u8e3s4.p5d().f5f(-1);
     var tmp_0;
     if (tmp1_safe_receiver == null) {
       tmp_0 = null;
@@ -1906,10 +1906,10 @@ function ensureSpace(_this__u8e3s4, item) {
     tmp = false;
   }
   if (tmp) {
-    var space = _this__u8e3s4.w5c().l5e();
-    _this__u8e3s4.w5c().d5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_start(item)), space));
-    _this__u8e3s4.w5c().e5d_1.z1(EditReason_SPACE_NEEDED_getInstance());
-    _this__u8e3s4.w5c().c5d_1.t(space);
+    var space = _this__u8e3s4.p5d().e5f();
+    _this__u8e3s4.p5d().w5d_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_start(item)), space));
+    _this__u8e3s4.p5d().x5d_1.z1(EditReason_SPACE_NEEDED_getInstance());
+    _this__u8e3s4.p5d().v5d_1.t(space);
   }
 }
 function asCaosOptionsFor(_this__u8e3s4, property) {

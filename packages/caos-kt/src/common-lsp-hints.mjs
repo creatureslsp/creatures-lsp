@@ -77,7 +77,7 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.v5g_1 = [null, null, null, lazy(tmp_0, InlayHintImpl$Companion$$childSerializers$_anonymous__uk33a4), null, null, null];
+    tmp.o5h_1 = [null, null, null, lazy(tmp_0, InlayHintImpl$Companion$$childSerializers$_anonymous__uk33a4), null, null, null];
   }
 }
 class $serializer {
@@ -91,36 +91,36 @@ class $serializer {
     tmp0_serialDesc.w13('tooltip', true);
     tmp0_serialDesc.w13('paddingLeft', true);
     tmp0_serialDesc.w13('paddingRight', true);
-    this.w5g_1 = tmp0_serialDesc;
+    this.p5h_1 = tmp0_serialDesc;
   }
-  x5g(encoder, value) {
-    var tmp0_desc = this.w5g_1;
+  q5h(encoder, value) {
+    var tmp0_desc = this.p5h_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance().v5g_1;
-    tmp1_output.tx(tmp0_desc, 0, PositionSerializer_getInstance(), value.y5g_1);
-    tmp1_output.rx(tmp0_desc, 1, value.z5g_1);
-    if (tmp1_output.zx(tmp0_desc, 2) ? true : !(value.a5h_1 === 1)) {
-      tmp1_output.vx(tmp0_desc, 2, IntSerializer_getInstance(), value.a5h_1);
+    var tmp2_cached = Companion_getInstance().o5h_1;
+    tmp1_output.tx(tmp0_desc, 0, PositionSerializer_getInstance(), value.r5h_1);
+    tmp1_output.rx(tmp0_desc, 1, value.s5h_1);
+    if (tmp1_output.zx(tmp0_desc, 2) ? true : !(value.t5h_1 === 1)) {
+      tmp1_output.vx(tmp0_desc, 2, IntSerializer_getInstance(), value.t5h_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 3) ? true : !(value.b5h_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 3, tmp2_cached[3].k3(), value.b5h_1);
+    if (tmp1_output.zx(tmp0_desc, 3) ? true : !(value.u5h_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 3, tmp2_cached[3].k3(), value.u5h_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.c5h_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 4, StringSerializer_getInstance(), value.c5h_1);
+    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.v5h_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 4, StringSerializer_getInstance(), value.v5h_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.d5h_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 5, BooleanSerializer_getInstance(), value.d5h_1);
+    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.w5h_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 5, BooleanSerializer_getInstance(), value.w5h_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 6) ? true : !(value.e5h_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 6, BooleanSerializer_getInstance(), value.e5h_1);
+    if (tmp1_output.zx(tmp0_desc, 6) ? true : !(value.x5h_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 6, BooleanSerializer_getInstance(), value.x5h_1);
     }
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.x5g(encoder, value instanceof InlayHintImpl ? value : THROW_CCE());
+    return this.q5h(encoder, value instanceof InlayHintImpl ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.w5g_1;
+    var tmp0_desc = this.p5h_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -132,7 +132,7 @@ class $serializer {
     var tmp9_local5 = null;
     var tmp10_local6 = null;
     var tmp11_input = decoder.bw(tmp0_desc);
-    var tmp12_cached = Companion_getInstance().v5g_1;
+    var tmp12_cached = Companion_getInstance().o5h_1;
     if (tmp11_input.sw()) {
       tmp4_local0 = tmp11_input.nw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -188,13 +188,13 @@ class $serializer {
         }
       }
     tmp11_input.cw(tmp0_desc);
-    return InlayHintImpl.f5h(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
+    return InlayHintImpl.y5h(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
   }
   lr() {
-    return this.w5g_1;
+    return this.p5h_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance().v5g_1;
+    var tmp0_cached = Companion_getInstance().o5h_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -209,135 +209,135 @@ class InlayHintImpl {
     tooltip = tooltip === VOID ? null : tooltip;
     paddingLeft = paddingLeft === VOID ? null : paddingLeft;
     paddingRight = paddingRight === VOID ? null : paddingRight;
-    this.y5g_1 = position;
-    this.z5g_1 = label;
-    this.a5h_1 = kind;
-    this.b5h_1 = textEdits;
-    this.c5h_1 = tooltip;
-    this.d5h_1 = paddingLeft;
-    this.e5h_1 = paddingRight;
+    this.r5h_1 = position;
+    this.s5h_1 = label;
+    this.t5h_1 = kind;
+    this.u5h_1 = textEdits;
+    this.v5h_1 = tooltip;
+    this.w5h_1 = paddingLeft;
+    this.x5h_1 = paddingRight;
   }
-  i28() {
-    return this.y5g_1;
+  k28() {
+    return this.r5h_1;
   }
-  q5g() {
-    return this.z5g_1;
+  j5h() {
+    return this.s5h_1;
   }
   iu() {
-    return this.a5h_1;
+    return this.t5h_1;
   }
-  r5g() {
-    return this.b5h_1;
+  k5h() {
+    return this.u5h_1;
   }
-  s5g() {
-    return this.c5h_1;
+  l5h() {
+    return this.v5h_1;
   }
-  t5g() {
-    return this.d5h_1;
+  m5h() {
+    return this.w5h_1;
   }
-  u5g() {
-    return this.e5h_1;
+  n5h() {
+    return this.x5h_1;
   }
   equals(other) {
     if (this === other)
       return true;
     if (!(other instanceof InlayHintImpl))
       return false;
-    if (!equals(this.y5g_1, other.y5g_1))
+    if (!equals(this.r5h_1, other.r5h_1))
       return false;
-    if (!(this.z5g_1 === other.z5g_1))
+    if (!(this.s5h_1 === other.s5h_1))
       return false;
-    if (!(this.a5h_1 == other.a5h_1))
+    if (!(this.t5h_1 == other.t5h_1))
       return false;
-    if (!(this.b5h_1 == null)) {
-      if (other.b5h_1 == null)
+    if (!(this.u5h_1 == null)) {
+      if (other.u5h_1 == null)
         return false;
-      if (!contentEquals(this.b5h_1, other.b5h_1))
+      if (!contentEquals(this.u5h_1, other.u5h_1))
         return false;
-    } else if (!(other.b5h_1 == null))
+    } else if (!(other.u5h_1 == null))
       return false;
-    if (!(this.c5h_1 == other.c5h_1))
+    if (!(this.v5h_1 == other.v5h_1))
       return false;
-    if (!(this.d5h_1 == other.d5h_1))
+    if (!(this.w5h_1 == other.w5h_1))
       return false;
-    if (!(this.e5h_1 == other.e5h_1))
+    if (!(this.x5h_1 == other.x5h_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = hashCode(this.y5g_1);
-    result = imul(31, result) + getStringHashCode(this.z5g_1) | 0;
+    var result = hashCode(this.r5h_1);
+    result = imul(31, result) + getStringHashCode(this.s5h_1) | 0;
     var tmp = imul(31, result);
-    var tmp0_elvis_lhs = this.a5h_1;
+    var tmp0_elvis_lhs = this.t5h_1;
     result = tmp + (tmp0_elvis_lhs == null ? 0 : tmp0_elvis_lhs) | 0;
     var tmp_0 = imul(31, result);
-    var tmp1_safe_receiver = this.b5h_1;
+    var tmp1_safe_receiver = this.u5h_1;
     var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : contentHashCode(tmp1_safe_receiver);
     result = tmp_0 + (tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs) | 0;
     var tmp_1 = imul(31, result);
-    var tmp3_safe_receiver = this.c5h_1;
+    var tmp3_safe_receiver = this.v5h_1;
     var tmp4_elvis_lhs = tmp3_safe_receiver == null ? null : getStringHashCode(tmp3_safe_receiver);
     result = tmp_1 + (tmp4_elvis_lhs == null ? 0 : tmp4_elvis_lhs) | 0;
     var tmp_2 = imul(31, result);
-    var tmp5_safe_receiver = this.d5h_1;
+    var tmp5_safe_receiver = this.w5h_1;
     var tmp6_elvis_lhs = tmp5_safe_receiver == null ? null : getBooleanHashCode(tmp5_safe_receiver);
     result = tmp_2 + (tmp6_elvis_lhs == null ? 0 : tmp6_elvis_lhs) | 0;
     var tmp_3 = imul(31, result);
-    var tmp7_safe_receiver = this.e5h_1;
+    var tmp7_safe_receiver = this.x5h_1;
     var tmp8_elvis_lhs = tmp7_safe_receiver == null ? null : getBooleanHashCode(tmp7_safe_receiver);
     result = tmp_3 + (tmp8_elvis_lhs == null ? 0 : tmp8_elvis_lhs) | 0;
     return result;
   }
   toString() {
-    return 'InlayHintImpl(position=' + toString(this.y5g_1) + ', label=' + this.z5g_1 + ', kind=' + this.a5h_1 + ', textEdits=' + toString(this.b5h_1) + ', tooltip=' + this.c5h_1 + ', paddingLeft=' + this.d5h_1 + ', paddingRight=' + this.e5h_1 + ')';
+    return 'InlayHintImpl(position=' + toString(this.r5h_1) + ', label=' + this.s5h_1 + ', kind=' + this.t5h_1 + ', textEdits=' + toString(this.u5h_1) + ', tooltip=' + this.v5h_1 + ', paddingLeft=' + this.w5h_1 + ', paddingRight=' + this.x5h_1 + ')';
   }
-  static f5h(seen0, position, label, kind, textEdits, tooltip, paddingLeft, paddingRight, serializationConstructorMarker) {
+  static y5h(seen0, position, label, kind, textEdits, tooltip, paddingLeft, paddingRight, serializationConstructorMarker) {
     Companion_getInstance();
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance().w5g_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance().p5h_1);
     }
     var $this = createThis(this);
-    $this.y5g_1 = position;
-    $this.z5g_1 = label;
+    $this.r5h_1 = position;
+    $this.s5h_1 = label;
     if (0 === (seen0 & 4))
-      $this.a5h_1 = 1;
+      $this.t5h_1 = 1;
     else
-      $this.a5h_1 = kind;
+      $this.t5h_1 = kind;
     if (0 === (seen0 & 8))
-      $this.b5h_1 = null;
+      $this.u5h_1 = null;
     else
-      $this.b5h_1 = textEdits;
+      $this.u5h_1 = textEdits;
     if (0 === (seen0 & 16))
-      $this.c5h_1 = null;
+      $this.v5h_1 = null;
     else
-      $this.c5h_1 = tooltip;
+      $this.v5h_1 = tooltip;
     if (0 === (seen0 & 32))
-      $this.d5h_1 = null;
+      $this.w5h_1 = null;
     else
-      $this.d5h_1 = paddingLeft;
+      $this.w5h_1 = paddingLeft;
     if (0 === (seen0 & 64))
-      $this.e5h_1 = null;
+      $this.x5h_1 = null;
     else
-      $this.e5h_1 = paddingRight;
+      $this.x5h_1 = paddingRight;
     return $this;
   }
 }
 class InlayHintSerializer {
   constructor() {
     InlayHintSerializer_instance = this;
-    this.g5h_1 = get_nullable(ListSerializer(TextEditSerializer_getInstance()));
-    this.h5h_1 = 0;
-    this.i5h_1 = 1;
-    this.j5h_1 = 2;
-    this.k5h_1 = 3;
-    this.l5h_1 = 4;
-    this.m5h_1 = 5;
-    this.n5h_1 = 6;
+    this.z5h_1 = get_nullable(ListSerializer(TextEditSerializer_getInstance()));
+    this.a5i_1 = 0;
+    this.b5i_1 = 1;
+    this.c5i_1 = 2;
+    this.d5i_1 = 3;
+    this.e5i_1 = 4;
+    this.f5i_1 = 5;
+    this.g5i_1 = 6;
     var tmp = this;
-    tmp.o5h_1 = lazy_0(InlayHintSerializer$descriptor$delegate$lambda);
+    tmp.h5i_1 = lazy_0(InlayHintSerializer$descriptor$delegate$lambda);
   }
   lr() {
-    var tmp0 = this.o5h_1;
+    var tmp0 = this.h5i_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, InlayHintSerializer$_get_descriptor_$ref_mbwu4p(), null);
@@ -372,7 +372,7 @@ class InlayHintSerializer {
           kind = decodeNullableIntElement(ob, descriptor, index);
           break;
         case 3:
-          var tmp1_safe_receiver = ob.ow(descriptor, index, this.g5h_1);
+          var tmp1_safe_receiver = ob.ow(descriptor, index, this.z5h_1);
           var tmp;
           if (tmp1_safe_receiver == null) {
             tmp = null;
@@ -402,21 +402,21 @@ class InlayHintSerializer {
     }
     return new InlayHintImpl(position, label, kind, edits, tooltip, paddingLeft, paddingRight);
   }
-  p5h(encoder, value) {
+  i5i(encoder, value) {
     var ob = encoder.bw(this.lr());
-    ob.tx(this.lr(), 0, PositionSerializer_getInstance(), value.i28());
-    ob.rx(this.lr(), 1, value.q5g());
+    ob.tx(this.lr(), 0, PositionSerializer_getInstance(), value.k28());
+    ob.rx(this.lr(), 1, value.j5h());
     encodeNullableIntElement(ob, this.lr(), 2, value.iu());
     var tmp = this.lr();
-    var tmp0_safe_receiver = value.r5g();
-    ob.tx(tmp, 3, this.g5h_1, tmp0_safe_receiver == null ? null : toList(tmp0_safe_receiver));
-    encodeNullableStringElement(ob, this.lr(), 4, value.s5g());
-    encodeNullableBooleanElement(ob, this.lr(), 5, value.t5g());
-    encodeNullableBooleanElement(ob, this.lr(), 6, value.u5g());
+    var tmp0_safe_receiver = value.k5h();
+    ob.tx(tmp, 3, this.z5h_1, tmp0_safe_receiver == null ? null : toList(tmp0_safe_receiver));
+    encodeNullableStringElement(ob, this.lr(), 4, value.l5h());
+    encodeNullableBooleanElement(ob, this.lr(), 5, value.m5h());
+    encodeNullableBooleanElement(ob, this.lr(), 6, value.n5h());
     ob.cw(this.lr());
   }
   mr(encoder, value) {
-    return this.p5h(encoder, (!(value == null) ? isInterface(value, InlayHint) : false) ? value : THROW_CCE());
+    return this.i5i(encoder, (!(value == null) ? isInterface(value, InlayHint) : false) ? value : THROW_CCE());
   }
 }
 //endregion
@@ -499,7 +499,7 @@ function InlayHintSerializer_getInstance() {
 var EMPTY_INLAY_LIST;
 function code(_this__u8e3s4) {
   _init_properties_util_kt__mcwhvi();
-  return '' + _this__u8e3s4.i28().e1e() + ':' + _this__u8e3s4.i28().i1e() + ':' + _this__u8e3s4.q5g();
+  return '' + _this__u8e3s4.k28().e1e() + ':' + _this__u8e3s4.k28().i1e() + ':' + _this__u8e3s4.j5h();
 }
 var properties_initialized_util_kt_qfsh5w;
 function _init_properties_util_kt__mcwhvi() {

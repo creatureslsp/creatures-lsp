@@ -84,13 +84,13 @@ var imul = Math.imul;
 class ProtoBuf {
   constructor(encodeDefaults, serializersModule) {
     Default_getInstance();
-    this.b4j_1 = encodeDefaults;
-    this.c4j_1 = serializersModule;
+    this.r4j_1 = encodeDefaults;
+    this.s4j_1 = serializersModule;
   }
   rw() {
-    return this.c4j_1;
+    return this.s4j_1;
   }
-  d4j(deserializer, bytes) {
+  t4j(deserializer, bytes) {
     var input = new ByteArrayInput(bytes);
     var decoder = new ProtobufDecoder(this, new ProtobufReader(input), deserializer.lr());
     return decoder.aw(deserializer);
@@ -105,44 +105,44 @@ class Default extends ProtoBuf {
 }
 class ProtoBufBuilder {
   constructor(proto) {
-    this.o4j_1 = proto.b4j_1;
-    this.p4j_1 = proto.rw();
+    this.e4k_1 = proto.r4j_1;
+    this.f4k_1 = proto.rw();
   }
 }
 class ProtoBufImpl extends ProtoBuf {}
 class ProtoNumber {
   constructor(number) {
-    this.q4j_1 = number;
+    this.g4k_1 = number;
   }
   equals(other) {
     if (!(other instanceof ProtoNumber))
       return false;
     var tmp0_other_with_cast = other instanceof ProtoNumber ? other : THROW_CCE();
-    if (!(this.q4j_1 === tmp0_other_with_cast.q4j_1))
+    if (!(this.g4k_1 === tmp0_other_with_cast.g4k_1))
       return false;
     return true;
   }
   hashCode() {
-    return imul(getStringHashCode('number'), 127) ^ this.q4j_1;
+    return imul(getStringHashCode('number'), 127) ^ this.g4k_1;
   }
   toString() {
-    return '@kotlinx.serialization.protobuf.ProtoNumber(' + 'number=' + this.q4j_1 + ')';
+    return '@kotlinx.serialization.protobuf.ProtoNumber(' + 'number=' + this.g4k_1 + ')';
   }
 }
 class ProtoIntegerType extends Enum {
   constructor(name, ordinal, signature) {
     super(name, ordinal);
-    this.t4j_1 = signature;
+    this.j4k_1 = signature;
   }
 }
 class ProtoOneOf {}
 class ProtoType {}
 class ProtoPacked {}
 class ProtobufDecodingException extends SerializationException {
-  static a4k(message, e) {
+  static q4k(message, e) {
     e = e === VOID ? null : e;
     var $this = this.gt(message, e);
-    captureStack($this, $this.z4j_1);
+    captureStack($this, $this.p4k_1);
     return $this;
   }
 }
@@ -163,7 +163,7 @@ class Companion {
         var _iterator__ex2g4s = tmp0.w();
         while (_iterator__ex2g4s.x()) {
           var element = _iterator__ex2g4s.y();
-          if (element.d4k_1 === tmp_2) {
+          if (element.t4k_1 === tmp_2) {
             tmp$ret$3 = element;
             break $l$block;
           }
@@ -174,56 +174,56 @@ class Companion {
       tmp_1[tmp_2] = tmp0_elvis_lhs == null ? ProtoWireType_INVALID_getInstance() : tmp0_elvis_lhs;
       tmp_0 = tmp_0 + 1 | 0;
     }
-    tmp.e4k_1 = tmp_1;
+    tmp.u4k_1 = tmp_1;
   }
-  f4k(value) {
-    return this.e4k_1[value & 7];
+  v4k(value) {
+    return this.u4k_1[value & 7];
   }
 }
 class ProtoWireType extends Enum {
   constructor(name, ordinal, typeId) {
     super(name, ordinal);
-    this.d4k_1 = typeId;
+    this.t4k_1 = typeId;
   }
   toString() {
-    return this.c1_1 + '(' + this.d4k_1 + ')';
+    return this.c1_1 + '(' + this.t4k_1 + ')';
   }
 }
 class ProtobufTaggedBase {
   constructor() {
-    this.l4l_1 = new BigInt64Array(8);
-    this.m4l_1 = -1;
+    this.b4m_1 = new BigInt64Array(8);
+    this.c4m_1 = -1;
   }
-  n4l() {
-    return this.m4l_1 === -1 ? 19500n : this.l4l_1[this.m4l_1];
+  d4m() {
+    return this.c4m_1 === -1 ? 19500n : this.b4m_1[this.c4m_1];
   }
-  o4l() {
+  e4m() {
     var tmp;
-    if (this.m4l_1 === -1) {
+    if (this.c4m_1 === -1) {
       tmp = 19500n;
     } else {
-      var tmp_0 = this.l4l_1;
-      var _unary__edvuaz = this.m4l_1;
-      this.m4l_1 = _unary__edvuaz - 1 | 0;
+      var tmp_0 = this.b4m_1;
+      var _unary__edvuaz = this.c4m_1;
+      this.c4m_1 = _unary__edvuaz - 1 | 0;
       tmp = tmp_0[_unary__edvuaz];
     }
     return tmp;
   }
-  p4l(tag) {
+  f4m(tag) {
     if (tag === 19500n)
       return Unit_instance;
-    this.m4l_1 = this.m4l_1 + 1 | 0;
-    var idx = this.m4l_1;
-    if (this.m4l_1 >= this.l4l_1.length) {
+    this.c4m_1 = this.c4m_1 + 1 | 0;
+    var idx = this.c4m_1;
+    if (this.c4m_1 >= this.b4m_1.length) {
       expand(this);
     }
-    this.l4l_1[idx] = tag;
+    this.b4m_1[idx] = tag;
   }
 }
 class ProtobufTaggedDecoder extends ProtobufTaggedBase {
-  k4l(tag, inlineDescriptor) {
+  a4m(tag, inlineDescriptor) {
     // Inline function 'kotlin.apply' call
-    this.p4l(tag);
+    this.f4m(tag);
     return this;
   }
   mv() {
@@ -233,34 +233,34 @@ class ProtobufTaggedDecoder extends ProtobufTaggedBase {
     return null;
   }
   ov() {
-    return this.z4k(this.o4l());
+    return this.p4l(this.e4m());
   }
   pv() {
-    return this.a4l(this.o4l());
+    return this.q4l(this.e4m());
   }
   qv() {
-    return this.b4l(this.o4l());
+    return this.r4l(this.e4m());
   }
   rv() {
-    return this.c4l(this.o4l());
+    return this.s4l(this.e4m());
   }
   sv() {
-    return this.d4l(this.o4l());
+    return this.t4l(this.e4m());
   }
   tv() {
-    return this.e4l(this.o4l());
+    return this.u4l(this.e4m());
   }
   uv() {
-    return this.f4l(this.o4l());
+    return this.v4l(this.e4m());
   }
   vv() {
-    return this.g4l(this.o4l());
+    return this.w4l(this.e4m());
   }
   wv() {
-    return this.x4k(this.o4l());
+    return this.n4l(this.e4m());
   }
   xv(enumDescriptor) {
-    return this.h4l(this.o4l(), enumDescriptor);
+    return this.x4l(this.e4m(), enumDescriptor);
   }
   bw(descriptor) {
     return this;
@@ -268,42 +268,42 @@ class ProtobufTaggedDecoder extends ProtobufTaggedBase {
   cw(descriptor) {
   }
   dw(descriptor, index) {
-    return this.z4k(this.l1a(descriptor, index));
+    return this.p4l(this.l1a(descriptor, index));
   }
   ew(descriptor, index) {
-    return this.a4l(this.l1a(descriptor, index));
+    return this.q4l(this.l1a(descriptor, index));
   }
   fw(descriptor, index) {
-    return this.b4l(this.l1a(descriptor, index));
+    return this.r4l(this.l1a(descriptor, index));
   }
   gw(descriptor, index) {
-    return this.c4l(this.l1a(descriptor, index));
+    return this.s4l(this.l1a(descriptor, index));
   }
   hw(descriptor, index) {
-    return this.d4l(this.l1a(descriptor, index));
+    return this.t4l(this.l1a(descriptor, index));
   }
   iw(descriptor, index) {
-    return this.e4l(this.l1a(descriptor, index));
+    return this.u4l(this.l1a(descriptor, index));
   }
   jw(descriptor, index) {
-    return this.f4l(this.l1a(descriptor, index));
+    return this.v4l(this.l1a(descriptor, index));
   }
   kw(descriptor, index) {
-    return this.g4l(this.l1a(descriptor, index));
+    return this.w4l(this.l1a(descriptor, index));
   }
   lw(descriptor, index) {
-    return this.x4k(this.l1a(descriptor, index));
+    return this.n4l(this.l1a(descriptor, index));
   }
   nw(descriptor, index, deserializer, previousValue) {
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufTaggedBase.tagBlock' call
     var tag = this.l1a(descriptor, index);
-    this.p4l(tag);
+    this.f4m(tag);
     return this.zv(deserializer, previousValue);
   }
   pw(descriptor, index, deserializer, previousValue) {
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufTaggedBase.tagBlock' call
     var tag = this.l1a(descriptor, index);
-    this.p4l(tag);
+    this.f4m(tag);
     var tmp;
     if (this.mv()) {
       tmp = this.zv(deserializer, previousValue);
@@ -313,30 +313,30 @@ class ProtobufTaggedDecoder extends ProtobufTaggedBase {
     return tmp;
   }
   yv(descriptor) {
-    return this.k4l(this.o4l(), descriptor);
+    return this.a4m(this.e4m(), descriptor);
   }
   mw(descriptor, index) {
-    return this.k4l(this.l1a(descriptor, index), descriptor.pu(index));
+    return this.a4m(this.l1a(descriptor, index), descriptor.pu(index));
   }
 }
 class ProtobufDecoder extends ProtobufTaggedDecoder {
   constructor(proto, reader, descriptor) {
     super();
-    this.g4j_1 = proto;
-    this.h4j_1 = reader;
-    this.i4j_1 = descriptor;
-    this.j4j_1 = null;
-    this.k4j_1 = null;
-    this.l4j_1 = null;
-    this.m4j_1 = false;
+    this.w4j_1 = proto;
+    this.x4j_1 = reader;
+    this.y4j_1 = descriptor;
+    this.z4j_1 = null;
+    this.a4k_1 = null;
+    this.b4k_1 = null;
+    this.c4k_1 = false;
     var tmp = this;
-    tmp.n4j_1 = new ElementMarker(this.i4j_1, ProtobufDecoder$readIfAbsent$ref(this));
-    this.y4k(this.i4j_1);
+    tmp.d4k_1 = new ElementMarker(this.y4j_1, ProtobufDecoder$readIfAbsent$ref(this));
+    this.o4l(this.y4j_1);
   }
   rw() {
-    return this.g4j_1.rw();
+    return this.w4j_1.rw();
   }
-  y4k(descriptor) {
+  o4l(descriptor) {
     var elements = descriptor.ku();
     if (elements < 32) {
       var tmp = 0;
@@ -360,7 +360,7 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
           }
         }
          while (inductionVariable < elements);
-      this.j4j_1 = cache;
+      this.z4j_1 = cache;
     } else {
       populateCacheMap(this, descriptor, elements);
     }
@@ -371,21 +371,21 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
       var tmp0_subject = descriptor.iu();
       var tmp_0;
       if (equals(tmp0_subject, LIST_getInstance())) {
-        var tag = this.n4l();
+        var tag = this.d4m();
         var tmp_1;
-        if (equals(this.i4j_1.iu(), LIST_getInstance()) && !(tag === 19500n) && !equals(this.i4j_1, descriptor)) {
-          var reader = makeDelimited(this.h4j_1, tag);
-          reader.t4l();
+        if (equals(this.y4j_1.iu(), LIST_getInstance()) && !(tag === 19500n) && !equals(this.y4j_1, descriptor)) {
+          var reader = makeDelimited(this.x4j_1, tag);
+          reader.j4m();
           // Inline function 'kotlinx.serialization.protobuf.internal.ProtoDesc' call
           var packedBits = false ? 4294967296n : 0n;
           var oneOfBits = false ? 68719476736n : 0n;
-          var tmp$ret$0 = packedBits | oneOfBits | ProtoIntegerType_DEFAULT_getInstance().t4j_1 | fromInt(1);
-          tmp_1 = new RepeatedDecoder(this.g4j_1, reader, tmp$ret$0, descriptor);
-        } else if (this.h4j_1.t4k_1.equals(ProtoWireType_SIZE_DELIMITED_getInstance()) && get_isPackable(descriptor.pu(0))) {
-          var sliceReader = new ProtobufReader(this.h4j_1.s4l());
-          tmp_1 = new PackedArrayDecoder(this.g4j_1, sliceReader, descriptor);
+          var tmp$ret$0 = packedBits | oneOfBits | ProtoIntegerType_DEFAULT_getInstance().j4k_1 | fromInt(1);
+          tmp_1 = new RepeatedDecoder(this.w4j_1, reader, tmp$ret$0, descriptor);
+        } else if (this.x4j_1.j4l_1.equals(ProtoWireType_SIZE_DELIMITED_getInstance()) && get_isPackable(descriptor.pu(0))) {
+          var sliceReader = new ProtobufReader(this.x4j_1.i4m());
+          tmp_1 = new PackedArrayDecoder(this.w4j_1, sliceReader, descriptor);
         } else {
-          tmp_1 = new RepeatedDecoder(this.g4j_1, this.h4j_1, tag, descriptor);
+          tmp_1 = new RepeatedDecoder(this.w4j_1, this.x4j_1, tag, descriptor);
         }
         return tmp_1;
       } else {
@@ -402,13 +402,13 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
           tmp_2 = tmp_3;
         }
         if (tmp_2) {
-          var tag_0 = this.n4l();
-          if (tag_0 === 19500n && equals(this.i4j_1, descriptor))
+          var tag_0 = this.d4m();
+          if (tag_0 === 19500n && equals(this.y4j_1, descriptor))
             return this;
           if (get_isOneOf(tag_0)) {
             // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
             var rawIndex = convertToInt(tag_0 & 2147483647n) - 1 | 0;
-            var tmp1_safe_receiver = this.l4j_1;
+            var tmp1_safe_receiver = this.b4k_1;
             var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.r3(rawIndex);
             var tmp_4;
             if (tmp2_safe_receiver == null) {
@@ -419,12 +419,12 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
             }
             var tmp3_elvis_lhs = tmp_4;
             var restoredTag = tmp3_elvis_lhs == null ? tag_0 : tmp3_elvis_lhs;
-            return new OneOfPolymorphicReader(this.g4j_1, this.h4j_1, restoredTag, descriptor);
+            return new OneOfPolymorphicReader(this.w4j_1, this.x4j_1, restoredTag, descriptor);
           }
-          return new ProtobufDecoder(this.g4j_1, makeDelimited(this.h4j_1, tag_0), descriptor);
+          return new ProtobufDecoder(this.w4j_1, makeDelimited(this.x4j_1, tag_0), descriptor);
         } else {
           if (equals(tmp0_subject, MAP_getInstance())) {
-            tmp_0 = new MapEntryReader(this.g4j_1, makeDelimitedForced(this.h4j_1, this.n4l()), this.n4l(), descriptor);
+            tmp_0 = new MapEntryReader(this.w4j_1, makeDelimitedForced(this.x4j_1, this.d4m()), this.d4m(), descriptor);
           } else {
             throw SerializationException.dt('Primitives are not supported at top-level');
           }
@@ -436,11 +436,11 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
       if ($p instanceof ProtobufDecodingException) {
         var e = $p;
         var tmp_6 = descriptor.ps();
-        var tmp_7 = this.i4j_1.ps();
+        var tmp_7 = this.y4j_1.ps();
         // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
-        var this_0 = this.n4l();
+        var this_0 = this.d4m();
         var tmp$ret$4 = convertToInt(this_0 & 2147483647n);
-        throw ProtobufDecodingException.a4k('Fail to begin structure for ' + tmp_6 + ' in ' + tmp_7 + ' at proto number ' + tmp$ret$4, e);
+        throw ProtobufDecodingException.q4k('Fail to begin structure for ' + tmp_6 + ' in ' + tmp_7 + ' at proto number ' + tmp$ret$4, e);
       } else {
         throw $p;
       }
@@ -449,8 +449,8 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
   }
   cw(descriptor) {
   }
-  z4k(tag) {
-    var value = this.c4l(tag);
+  p4l(tag) {
+    var value = this.s4l(tag);
     var tmp;
     switch (value) {
       case 0:
@@ -464,22 +464,22 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
     }
     return tmp;
   }
-  a4l(tag) {
-    return toByte(this.c4l(tag));
+  q4l(tag) {
+    return toByte(this.s4l(tag));
   }
-  b4l(tag) {
-    return toShort(this.c4l(tag));
+  r4l(tag) {
+    return toShort(this.s4l(tag));
   }
-  c4l(tag) {
+  s4l(tag) {
     var tmp$ret$0;
     $l$block: {
       // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.decodeOrThrow' call
       try {
         var tmp;
         if (tag === 19500n) {
-          tmp = this.h4j_1.v4l();
+          tmp = this.x4j_1.l4m();
         } else {
-          tmp = this.h4j_1.u4l(get_integerType(tag));
+          tmp = this.x4j_1.k4m(get_integerType(tag));
         }
         tmp$ret$0 = tmp;
         break $l$block;
@@ -489,7 +489,7 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
           // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.rethrowException' call
           // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
           var tmp$ret$3 = convertToInt(tag & 2147483647n);
-          throw ProtobufDecodingException.a4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + this.i4j_1.ps(), e);
+          throw ProtobufDecodingException.q4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + this.y4j_1.ps(), e);
         } else {
           throw $p;
         }
@@ -497,16 +497,16 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
     }
     return tmp$ret$0;
   }
-  d4l(tag) {
+  t4l(tag) {
     var tmp$ret$0;
     $l$block: {
       // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.decodeOrThrow' call
       try {
         var tmp;
         if (tag === 19500n) {
-          tmp = this.h4j_1.x4l();
+          tmp = this.x4j_1.n4m();
         } else {
-          tmp = this.h4j_1.w4l(get_integerType(tag));
+          tmp = this.x4j_1.m4m(get_integerType(tag));
         }
         tmp$ret$0 = tmp;
         break $l$block;
@@ -516,7 +516,7 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
           // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.rethrowException' call
           // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
           var tmp$ret$3 = convertToInt(tag & 2147483647n);
-          throw ProtobufDecodingException.a4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + this.i4j_1.ps(), e);
+          throw ProtobufDecodingException.q4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + this.y4j_1.ps(), e);
         } else {
           throw $p;
         }
@@ -524,16 +524,16 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
     }
     return tmp$ret$0;
   }
-  e4l(tag) {
+  u4l(tag) {
     var tmp$ret$0;
     $l$block: {
       // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.decodeOrThrow' call
       try {
         var tmp;
         if (tag === 19500n) {
-          tmp = this.h4j_1.z4l();
+          tmp = this.x4j_1.p4m();
         } else {
-          tmp = this.h4j_1.y4l();
+          tmp = this.x4j_1.o4m();
         }
         tmp$ret$0 = tmp;
         break $l$block;
@@ -543,7 +543,7 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
           // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.rethrowException' call
           // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
           var tmp$ret$3 = convertToInt(tag & 2147483647n);
-          throw ProtobufDecodingException.a4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + this.i4j_1.ps(), e);
+          throw ProtobufDecodingException.q4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + this.y4j_1.ps(), e);
         } else {
           throw $p;
         }
@@ -551,16 +551,16 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
     }
     return tmp$ret$0;
   }
-  f4l(tag) {
+  v4l(tag) {
     var tmp$ret$0;
     $l$block: {
       // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.decodeOrThrow' call
       try {
         var tmp;
         if (tag === 19500n) {
-          tmp = this.h4j_1.b4m();
+          tmp = this.x4j_1.r4m();
         } else {
-          tmp = this.h4j_1.a4m();
+          tmp = this.x4j_1.q4m();
         }
         tmp$ret$0 = tmp;
         break $l$block;
@@ -570,7 +570,7 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
           // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.rethrowException' call
           // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
           var tmp$ret$3 = convertToInt(tag & 2147483647n);
-          throw ProtobufDecodingException.a4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + this.i4j_1.ps(), e);
+          throw ProtobufDecodingException.q4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + this.y4j_1.ps(), e);
         } else {
           throw $p;
         }
@@ -578,19 +578,19 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
     }
     return tmp$ret$0;
   }
-  g4l(tag) {
-    return numberToChar(this.c4l(tag));
+  w4l(tag) {
+    return numberToChar(this.s4l(tag));
   }
-  x4k(tag) {
+  n4l(tag) {
     var tmp$ret$0;
     $l$block: {
       // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.decodeOrThrow' call
       try {
         var tmp;
         if (tag === 19500n) {
-          tmp = this.h4j_1.d4m();
+          tmp = this.x4j_1.t4m();
         } else {
-          tmp = this.h4j_1.c4m();
+          tmp = this.x4j_1.s4m();
         }
         tmp$ret$0 = tmp;
         break $l$block;
@@ -600,7 +600,7 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
           // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.rethrowException' call
           // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
           var tmp$ret$3 = convertToInt(tag & 2147483647n);
-          throw ProtobufDecodingException.a4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + this.i4j_1.ps(), e);
+          throw ProtobufDecodingException.q4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + this.y4j_1.ps(), e);
         } else {
           throw $p;
         }
@@ -608,8 +608,8 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
     }
     return tmp$ret$0;
   }
-  h4l(tag, enumDescription) {
-    return findIndexByTag(this, enumDescription, this.c4l(tag));
+  x4l(tag, enumDescription) {
+    return findIndexByTag(this, enumDescription, this.s4l(tag));
   }
   aw(deserializer) {
     return this.zv(deserializer, null);
@@ -659,14 +659,14 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
       var tmp_5;
       if ($p instanceof ProtobufDecodingException) {
         var e = $p;
-        var currentTag = this.n4l();
+        var currentTag = this.d4m();
         var tmp_6;
-        if (!equals(this.i4j_1, deserializer.lr())) {
+        if (!equals(this.y4j_1, deserializer.lr())) {
           var tmp_7;
-          if (equals(this.i4j_1.iu(), LIST_getInstance()) && !equals(deserializer.lr().iu(), MAP_getInstance())) {
+          if (equals(this.y4j_1.iu(), LIST_getInstance()) && !equals(deserializer.lr().iu(), MAP_getInstance())) {
             // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
             tmp_7 = 'Error while decoding index ' + (convertToInt(currentTag & 2147483647n) - 1 | 0) + ' in repeated field of ' + deserializer.lr().ps();
-          } else if (equals(this.i4j_1.iu(), MAP_getInstance())) {
+          } else if (equals(this.y4j_1.iu(), MAP_getInstance())) {
             // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
             var index = (convertToInt(currentTag & 2147483647n) - 1 | 0) / 2 | 0;
             var tmp_8;
@@ -681,14 +681,14 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
           } else {
             var tmp_9 = deserializer.lr().ps();
             // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
-            tmp_7 = 'Error while decoding ' + tmp_9 + ' at proto number ' + convertToInt(currentTag & 2147483647n) + ' of ' + this.i4j_1.ps();
+            tmp_7 = 'Error while decoding ' + tmp_9 + ' at proto number ' + convertToInt(currentTag & 2147483647n) + ' of ' + this.y4j_1.ps();
           }
           tmp_6 = tmp_7;
         } else {
-          tmp_6 = 'Error while decoding ' + this.i4j_1.ps();
+          tmp_6 = 'Error while decoding ' + this.y4j_1.ps();
         }
         var msg = tmp_6;
-        throw ProtobufDecodingException.a4k(msg, e);
+        throw ProtobufDecodingException.q4k(msg, e);
       } else {
         throw $p;
       }
@@ -701,45 +701,45 @@ class ProtobufDecoder extends ProtobufTaggedDecoder {
   tw(descriptor) {
     try {
       while (true) {
-        var protoId = this.h4j_1.t4l();
+        var protoId = this.x4j_1.j4m();
         if (protoId === -1) {
-          return this.n4j_1.l12();
+          return this.d4k_1.l12();
         }
         if (protoId === 0) {
           throw SerializationException.dt('0 is not allowed as the protobuf field number in ' + descriptor.ps() + ', the input bytes may have been corrupted');
         }
         var index = getIndexByNum(this, protoId);
         if (index === -1) {
-          this.h4j_1.e4m();
+          this.x4j_1.u4m();
         } else {
           if (get_isOneOf(extractParameters(descriptor, index))) {
-            var tmp0_safe_receiver = this.l4j_1;
+            var tmp0_safe_receiver = this.b4k_1;
             if (tmp0_safe_receiver == null)
               null;
             else
               tmp0_safe_receiver.l3(index, protoId);
           }
-          this.n4j_1.k12(index);
+          this.d4k_1.k12(index);
           return index;
         }
       }
     } catch ($p) {
       if ($p instanceof ProtobufDecodingException) {
         var e = $p;
-        throw ProtobufDecodingException.a4k('Fail to get element index for ' + descriptor.ps() + ' in ' + this.i4j_1.ps(), e);
+        throw ProtobufDecodingException.q4k('Fail to get element index for ' + descriptor.ps() + ' in ' + this.y4j_1.ps(), e);
       } else {
         throw $p;
       }
     }
   }
   mv() {
-    return !this.m4j_1;
+    return !this.c4k_1;
   }
 }
 class PackedArrayDecoder extends ProtobufDecoder {
   constructor(proto, reader, descriptor) {
     super(proto, reader, descriptor);
-    this.q4k_1 = 0;
+    this.g4l_1 = 0;
   }
   l1a(_this__u8e3s4, index) {
     return 19500n;
@@ -748,20 +748,20 @@ class PackedArrayDecoder extends ProtobufDecoder {
     throw SerializationException.dt('Packing only supports primitive number types. The input type however was a struct: ' + toString(descriptor));
   }
   tw(descriptor) {
-    if (this.h4j_1.w4k())
+    if (this.x4j_1.m4l())
       return -1;
-    var _unary__edvuaz = this.q4k_1;
-    this.q4k_1 = _unary__edvuaz + 1 | 0;
+    var _unary__edvuaz = this.g4l_1;
+    this.g4l_1 = _unary__edvuaz + 1 | 0;
     return _unary__edvuaz;
   }
-  x4k(tag) {
+  n4l(tag) {
     throw SerializationException.dt('Packing only supports primitive number types. The actual reading is for string.');
   }
 }
 class MapEntryReader extends ProtobufDecoder {
   constructor(proto, decoder, parentTag, descriptor) {
     super(proto, decoder, descriptor);
-    this.p4m_1 = parentTag;
+    this.f4n_1 = parentTag;
   }
   l1a(_this__u8e3s4, index) {
     var tmp;
@@ -769,12 +769,12 @@ class MapEntryReader extends ProtobufDecoder {
       // Inline function 'kotlinx.serialization.protobuf.internal.ProtoDesc' call
       var packedBits = false ? 4294967296n : 0n;
       var oneOfBits = false ? 68719476736n : 0n;
-      tmp = packedBits | oneOfBits | get_integerType(this.p4m_1).t4j_1 | fromInt(1);
+      tmp = packedBits | oneOfBits | get_integerType(this.f4n_1).j4k_1 | fromInt(1);
     } else {
       // Inline function 'kotlinx.serialization.protobuf.internal.ProtoDesc' call
       var packedBits_0 = false ? 4294967296n : 0n;
       var oneOfBits_0 = false ? 68719476736n : 0n;
-      tmp = packedBits_0 | oneOfBits_0 | get_integerType(this.p4m_1).t4j_1 | fromInt(2);
+      tmp = packedBits_0 | oneOfBits_0 | get_integerType(this.f4n_1).j4k_1 | fromInt(2);
     }
     return tmp;
   }
@@ -782,11 +782,11 @@ class MapEntryReader extends ProtobufDecoder {
 class RepeatedDecoder extends ProtobufDecoder {
   constructor(proto, decoder, currentTag, descriptor) {
     super(proto, decoder, descriptor);
-    this.a4n_1 = -1;
+    this.q4n_1 = -1;
     var tmp = this;
     var tmp_0;
     if (currentTag === 19500n) {
-      var length = this.h4j_1.v4l();
+      var length = this.x4j_1.l4m();
       // Inline function 'kotlin.require' call
       if (!(length >= 0)) {
         var message = 'Expected positive length for ' + toString(descriptor) + ', but got ' + length;
@@ -796,26 +796,26 @@ class RepeatedDecoder extends ProtobufDecoder {
     } else {
       tmp_0 = currentTag;
     }
-    tmp.b4n_1 = tmp_0;
+    tmp.r4n_1 = tmp_0;
   }
   tw(descriptor) {
-    if (this.b4n_1 > 0n) {
+    if (this.r4n_1 > 0n) {
       return decodeTaggedListIndex(this);
     }
     return decodeListIndexNoTag(this);
   }
   l1a(_this__u8e3s4, index) {
-    if (this.b4n_1 > 0n)
-      return this.b4n_1;
+    if (this.r4n_1 > 0n)
+      return this.r4n_1;
     return 19500n;
   }
 }
 class OneOfPolymorphicReader extends ProtobufDecoder {
   constructor(proto, decoder, parentTag, descriptor) {
     super(proto, decoder, descriptor);
-    this.o4n_1 = parentTag;
-    this.p4n_1 = false;
-    this.q4n_1 = false;
+    this.e4o_1 = parentTag;
+    this.f4o_1 = false;
+    this.g4o_1 = false;
   }
   l1a(_this__u8e3s4, index) {
     var tmp;
@@ -828,38 +828,38 @@ class OneOfPolymorphicReader extends ProtobufDecoder {
   }
   bw(descriptor) {
     var tmp;
-    if (equals(descriptor, this.i4j_1)) {
+    if (equals(descriptor, this.y4j_1)) {
       tmp = this;
     } else {
-      tmp = new OneOfElementReader(this.g4j_1, this.h4j_1, descriptor);
+      tmp = new OneOfElementReader(this.w4j_1, this.x4j_1, descriptor);
     }
     return tmp;
   }
   tw(descriptor) {
-    if (!this.p4n_1) {
-      this.p4n_1 = true;
+    if (!this.f4o_1) {
+      this.f4o_1 = true;
       return 0;
-    } else if (!this.q4n_1) {
-      this.q4n_1 = true;
+    } else if (!this.g4o_1) {
+      this.g4o_1 = true;
       return 1;
     } else {
       return -1;
     }
   }
-  x4k(tag) {
+  n4l(tag) {
     var tmp;
     if (tag === 19501n) {
       var tmp_0 = this.rw();
       // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
-      var this_0 = this.o4n_1;
+      var this_0 = this.e4o_1;
       var tmp$ret$0 = convertToInt(this_0 & 2147483647n);
-      var tmp0_safe_receiver = getActualOneOfSerializer(this.i4j_1, tmp_0, tmp$ret$0);
+      var tmp0_safe_receiver = getActualOneOfSerializer(this.y4j_1, tmp_0, tmp$ret$0);
       var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.ps();
       var tmp_1;
       if (tmp1_elvis_lhs == null) {
-        var tmp_2 = this.i4j_1.ps();
+        var tmp_2 = this.y4j_1.ps();
         // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
-        var this_1 = this.o4n_1;
+        var this_1 = this.e4o_1;
         var tmp$ret$1 = convertToInt(this_1 & 2147483647n);
         throw SerializationException.dt('Cannot find a subclass of ' + tmp_2 + ' annotated with @ProtoNumber(' + tmp$ret$1 + ').');
       } else {
@@ -867,7 +867,7 @@ class OneOfPolymorphicReader extends ProtobufDecoder {
       }
       tmp = tmp_1;
     } else {
-      tmp = super.x4k(tag);
+      tmp = super.n4l(tag);
     }
     return tmp;
   }
@@ -897,8 +897,8 @@ class OneOfElementReader extends ProtobufDecoder {
       var message_0 = 'Implementation of oneOf type ' + descriptor.ps() + ' should have @ProtoNumber annotation';
       throw IllegalArgumentException.m1(toString(message_0));
     }
-    this.b4o_1 = protoNumber.q4j_1;
-    this.c4o_1 = false;
+    this.r4o_1 = protoNumber.g4k_1;
+    this.s4o_1 = false;
   }
   bw(descriptor) {
     var tmp0_subject = descriptor.iu();
@@ -916,12 +916,12 @@ class OneOfElementReader extends ProtobufDecoder {
       tmp_0 = tmp_1;
     }
     if (tmp_0) {
-      var tag = this.n4l();
-      if (tag === 19500n && equals(this.i4j_1, descriptor))
+      var tag = this.d4m();
+      if (tag === 19500n && equals(this.y4j_1, descriptor))
         return this;
       if (get_isOneOf(tag))
         throw SerializationException.dt('An oneof element cannot be directly child of another oneof element');
-      tmp = new ProtobufDecoder(this.g4j_1, makeDelimited(this.h4j_1, tag), descriptor);
+      tmp = new ProtobufDecoder(this.w4j_1, makeDelimited(this.x4j_1, tag), descriptor);
     } else {
       throw SerializationException.dt('Type ' + descriptor.iu().toString() + ' cannot be directly child of oneof element');
     }
@@ -929,10 +929,10 @@ class OneOfElementReader extends ProtobufDecoder {
   }
   tw(descriptor) {
     var tmp;
-    if (this.c4o_1) {
+    if (this.s4o_1) {
       tmp = -1;
     } else {
-      this.c4o_1 = true;
+      this.s4o_1 = true;
       tmp = 0;
     }
     return tmp;
@@ -940,253 +940,253 @@ class OneOfElementReader extends ProtobufDecoder {
 }
 class ProtobufReader {
   constructor(input) {
-    this.r4k_1 = input;
-    this.s4k_1 = -1;
-    this.t4k_1 = ProtoWireType_INVALID_getInstance();
-    this.u4k_1 = false;
-    this.v4k_1 = 0;
+    this.h4l_1 = input;
+    this.i4l_1 = -1;
+    this.j4l_1 = ProtoWireType_INVALID_getInstance();
+    this.k4l_1 = false;
+    this.l4l_1 = 0;
   }
-  w4k() {
-    return !this.u4k_1 && this.r4k_1.j4o() === 0;
+  m4l() {
+    return !this.k4l_1 && this.h4l_1.z4o() === 0;
   }
-  t4l() {
-    if (this.u4k_1) {
-      this.u4k_1 = false;
-      var previousHeader = this.s4k_1 << 3 | this.t4k_1.d4k_1;
+  j4m() {
+    if (this.k4l_1) {
+      this.k4l_1 = false;
+      var previousHeader = this.i4l_1 << 3 | this.j4l_1.t4k_1;
       // Inline function 'kotlin.also' call
-      var this_0 = updateIdAndType(this, this.v4k_1);
-      this.v4k_1 = previousHeader;
+      var this_0 = updateIdAndType(this, this.l4l_1);
+      this.l4l_1 = previousHeader;
       return this_0;
     }
-    this.v4k_1 = this.s4k_1 << 3 | this.t4k_1.d4k_1;
-    var header = convertToInt(this.r4k_1.h4o(true));
+    this.l4l_1 = this.i4l_1 << 3 | this.j4l_1.t4k_1;
+    var header = convertToInt(this.h4l_1.x4o(true));
     return updateIdAndType(this, header);
   }
-  c4n() {
-    this.u4k_1 = true;
-    var nextHeader = this.s4k_1 << 3 | this.t4k_1.d4k_1;
-    updateIdAndType(this, this.v4k_1);
-    this.v4k_1 = nextHeader;
+  s4n() {
+    this.k4l_1 = true;
+    var nextHeader = this.i4l_1 << 3 | this.j4l_1.t4k_1;
+    updateIdAndType(this, this.l4l_1);
+    this.l4l_1 = nextHeader;
   }
-  e4m() {
-    switch (this.t4k_1.d1_1) {
+  u4m() {
+    switch (this.j4l_1.d1_1) {
       case 1:
-        this.u4l(ProtoIntegerType_DEFAULT_getInstance());
+        this.k4m(ProtoIntegerType_DEFAULT_getInstance());
         break;
       case 2:
-        this.w4l(ProtoIntegerType_FIXED_getInstance());
+        this.m4m(ProtoIntegerType_FIXED_getInstance());
         break;
       case 3:
-        this.k4o();
+        this.a4p();
         break;
       case 4:
-        this.u4l(ProtoIntegerType_FIXED_getInstance());
+        this.k4m(ProtoIntegerType_FIXED_getInstance());
         break;
       default:
-        throw ProtobufDecodingException.a4k('Unsupported start group or end group wire type: ' + this.t4k_1.toString());
+        throw ProtobufDecodingException.q4k('Unsupported start group or end group wire type: ' + this.j4l_1.toString());
     }
   }
-  q4l() {
+  g4m() {
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufReader.assertWireType' call
     var expected = ProtoWireType_SIZE_DELIMITED_getInstance();
-    if (!this.t4k_1.equals(expected))
-      throw ProtobufDecodingException.a4k('Expected wire type ' + expected.toString() + ', but found ' + this.t4k_1.toString());
-    return this.r4l();
+    if (!this.j4l_1.equals(expected))
+      throw ProtobufDecodingException.q4k('Expected wire type ' + expected.toString() + ', but found ' + this.j4l_1.toString());
+    return this.h4m();
   }
-  k4o() {
+  a4p() {
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufReader.assertWireType' call
     var expected = ProtoWireType_SIZE_DELIMITED_getInstance();
-    if (!this.t4k_1.equals(expected))
-      throw ProtobufDecodingException.a4k('Expected wire type ' + expected.toString() + ', but found ' + this.t4k_1.toString());
+    if (!this.j4l_1.equals(expected))
+      throw ProtobufDecodingException.q4k('Expected wire type ' + expected.toString() + ', but found ' + this.j4l_1.toString());
     var length = decode32(this);
     checkLength(this, length);
-    this.r4k_1.l4o(length);
+    this.h4l_1.b4p(length);
   }
-  r4l() {
+  h4m() {
     var length = decode32(this);
     checkLength(this, length);
-    return this.r4k_1.m4o(length);
+    return this.h4l_1.c4p(length);
   }
-  s4l() {
+  i4m() {
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufReader.assertWireType' call
     var expected = ProtoWireType_SIZE_DELIMITED_getInstance();
-    if (!this.t4k_1.equals(expected))
-      throw ProtobufDecodingException.a4k('Expected wire type ' + expected.toString() + ', but found ' + this.t4k_1.toString());
-    return this.d4n();
+    if (!this.j4l_1.equals(expected))
+      throw ProtobufDecodingException.q4k('Expected wire type ' + expected.toString() + ', but found ' + this.j4l_1.toString());
+    return this.t4n();
   }
-  d4n() {
+  t4n() {
     var length = decode32(this);
     checkLength(this, length);
-    return this.r4k_1.n4o(length);
+    return this.h4l_1.d4p(length);
   }
-  u4l(format) {
+  k4m(format) {
     var wireType = format.equals(ProtoIntegerType_FIXED_getInstance()) ? ProtoWireType_i32_getInstance() : ProtoWireType_VARINT_getInstance();
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufReader.assertWireType' call
-    if (!this.t4k_1.equals(wireType))
-      throw ProtobufDecodingException.a4k('Expected wire type ' + wireType.toString() + ', but found ' + this.t4k_1.toString());
+    if (!this.j4l_1.equals(wireType))
+      throw ProtobufDecodingException.q4k('Expected wire type ' + wireType.toString() + ', but found ' + this.j4l_1.toString());
     return decode32(this, format);
   }
-  v4l() {
+  l4m() {
     return decode32(this);
   }
-  w4l(format) {
+  m4m(format) {
     var wireType = format.equals(ProtoIntegerType_FIXED_getInstance()) ? ProtoWireType_i64_getInstance() : ProtoWireType_VARINT_getInstance();
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufReader.assertWireType' call
-    if (!this.t4k_1.equals(wireType))
-      throw ProtobufDecodingException.a4k('Expected wire type ' + wireType.toString() + ', but found ' + this.t4k_1.toString());
+    if (!this.j4l_1.equals(wireType))
+      throw ProtobufDecodingException.q4k('Expected wire type ' + wireType.toString() + ', but found ' + this.j4l_1.toString());
     return decode64(this, format);
   }
-  x4l() {
+  n4m() {
     return decode64(this, ProtoIntegerType_DEFAULT_getInstance());
   }
-  y4l() {
+  o4m() {
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufReader.assertWireType' call
     var expected = ProtoWireType_i32_getInstance();
-    if (!this.t4k_1.equals(expected))
-      throw ProtobufDecodingException.a4k('Expected wire type ' + expected.toString() + ', but found ' + this.t4k_1.toString());
+    if (!this.j4l_1.equals(expected))
+      throw ProtobufDecodingException.q4k('Expected wire type ' + expected.toString() + ', but found ' + this.j4l_1.toString());
     // Inline function 'kotlin.fromBits' call
     var bits = readIntLittleEndian(this);
     return floatFromBits(bits);
   }
-  z4l() {
+  p4m() {
     // Inline function 'kotlin.fromBits' call
     var bits = readIntLittleEndian(this);
     return floatFromBits(bits);
   }
-  a4m() {
+  q4m() {
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufReader.assertWireType' call
     var expected = ProtoWireType_i64_getInstance();
-    if (!this.t4k_1.equals(expected))
-      throw ProtobufDecodingException.a4k('Expected wire type ' + expected.toString() + ', but found ' + this.t4k_1.toString());
+    if (!this.j4l_1.equals(expected))
+      throw ProtobufDecodingException.q4k('Expected wire type ' + expected.toString() + ', but found ' + this.j4l_1.toString());
     // Inline function 'kotlin.fromBits' call
     var bits = readLongLittleEndian(this);
     return doubleFromBits(bits);
   }
-  b4m() {
+  r4m() {
     // Inline function 'kotlin.fromBits' call
     var bits = readLongLittleEndian(this);
     return doubleFromBits(bits);
   }
-  c4m() {
+  s4m() {
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufReader.assertWireType' call
     var expected = ProtoWireType_SIZE_DELIMITED_getInstance();
-    if (!this.t4k_1.equals(expected))
-      throw ProtobufDecodingException.a4k('Expected wire type ' + expected.toString() + ', but found ' + this.t4k_1.toString());
+    if (!this.j4l_1.equals(expected))
+      throw ProtobufDecodingException.q4k('Expected wire type ' + expected.toString() + ', but found ' + this.j4l_1.toString());
     var length = decode32(this);
     checkLength(this, length);
-    return this.r4k_1.o4o(length);
+    return this.h4l_1.e4p(length);
   }
-  d4m() {
+  t4m() {
     var length = decode32(this);
     checkLength(this, length);
-    return this.r4k_1.o4o(length);
+    return this.h4l_1.e4p(length);
   }
 }
 class ByteArrayInput {
   constructor(array, endIndex) {
     endIndex = endIndex === VOID ? array.length : endIndex;
-    this.d4o_1 = array;
-    this.e4o_1 = endIndex;
-    this.f4o_1 = 0;
+    this.t4o_1 = array;
+    this.u4o_1 = endIndex;
+    this.v4o_1 = 0;
   }
-  j4o() {
-    return this.e4o_1 - this.f4o_1 | 0;
+  z4o() {
+    return this.u4o_1 - this.v4o_1 | 0;
   }
-  n4o(size) {
+  d4p(size) {
     ensureEnoughBytes(this, size);
-    var result = new ByteArrayInput(this.d4o_1, this.f4o_1 + size | 0);
-    result.f4o_1 = this.f4o_1;
-    this.f4o_1 = this.f4o_1 + size | 0;
+    var result = new ByteArrayInput(this.t4o_1, this.v4o_1 + size | 0);
+    result.v4o_1 = this.v4o_1;
+    this.v4o_1 = this.v4o_1 + size | 0;
     return result;
   }
-  g4o() {
+  w4o() {
     var tmp;
-    if (this.f4o_1 < this.e4o_1) {
-      var tmp_0 = this.d4o_1;
-      var _unary__edvuaz = this.f4o_1;
-      this.f4o_1 = _unary__edvuaz + 1 | 0;
+    if (this.v4o_1 < this.u4o_1) {
+      var tmp_0 = this.t4o_1;
+      var _unary__edvuaz = this.v4o_1;
+      this.v4o_1 = _unary__edvuaz + 1 | 0;
       tmp = tmp_0[_unary__edvuaz] & 255;
     } else {
       tmp = -1;
     }
     return tmp;
   }
-  m4o(bytesCount) {
+  c4p(bytesCount) {
     ensureEnoughBytes(this, bytesCount);
     var b = new Int8Array(bytesCount);
     var length = b.length;
-    var copied = (this.e4o_1 - this.f4o_1 | 0) < length ? this.e4o_1 - this.f4o_1 | 0 : length;
-    var tmp0 = this.d4o_1;
-    var tmp6 = this.f4o_1;
+    var copied = (this.u4o_1 - this.v4o_1 | 0) < length ? this.u4o_1 - this.v4o_1 | 0 : length;
+    var tmp0 = this.t4o_1;
+    var tmp6 = this.v4o_1;
     // Inline function 'kotlin.collections.copyInto' call
-    var endIndex = this.f4o_1 + copied | 0;
+    var endIndex = this.v4o_1 + copied | 0;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp = tmp0;
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     arrayCopy(tmp, b, 0, tmp6, endIndex);
-    this.f4o_1 = this.f4o_1 + copied | 0;
+    this.v4o_1 = this.v4o_1 + copied | 0;
     return b;
   }
-  l4o(bytesCount) {
+  b4p(bytesCount) {
     ensureEnoughBytes(this, bytesCount);
-    this.f4o_1 = this.f4o_1 + bytesCount | 0;
+    this.v4o_1 = this.v4o_1 + bytesCount | 0;
   }
-  o4o(length) {
-    var result = decodeToString(this.d4o_1, this.f4o_1, this.f4o_1 + length | 0);
-    this.f4o_1 = this.f4o_1 + length | 0;
+  e4p(length) {
+    var result = decodeToString(this.t4o_1, this.v4o_1, this.v4o_1 + length | 0);
+    this.v4o_1 = this.v4o_1 + length | 0;
     return result;
   }
-  i4o() {
-    if (this.f4o_1 === this.e4o_1) {
+  y4o() {
+    if (this.v4o_1 === this.u4o_1) {
       eof(this);
     }
-    var currentPosition = this.f4o_1;
-    var tmp = this.d4o_1;
+    var currentPosition = this.v4o_1;
+    var tmp = this.t4o_1;
     var _unary__edvuaz = currentPosition;
     currentPosition = _unary__edvuaz + 1 | 0;
     var result = tmp[_unary__edvuaz];
     if (result >= 0) {
-      this.f4o_1 = currentPosition;
+      this.v4o_1 = currentPosition;
       return result;
-    } else if ((this.e4o_1 - this.f4o_1 | 0) > 1) {
+    } else if ((this.u4o_1 - this.v4o_1 | 0) > 1) {
       var tmp_0 = result;
-      var tmp_1 = this.d4o_1;
+      var tmp_1 = this.t4o_1;
       var _unary__edvuaz_0 = currentPosition;
       currentPosition = _unary__edvuaz_0 + 1 | 0;
       result = tmp_0 ^ tmp_1[_unary__edvuaz_0] << 7;
       if (result < 0) {
-        this.f4o_1 = currentPosition;
+        this.v4o_1 = currentPosition;
         return result ^ -128;
       }
     }
     return readVarint32SlowPath(this);
   }
-  h4o(eofAllowed) {
-    if (this.f4o_1 === this.e4o_1) {
+  x4o(eofAllowed) {
+    if (this.v4o_1 === this.u4o_1) {
       if (eofAllowed)
         return -1n;
       else {
         eof(this);
       }
     }
-    var currentPosition = this.f4o_1;
-    var tmp = this.d4o_1;
+    var currentPosition = this.v4o_1;
+    var tmp = this.t4o_1;
     var _unary__edvuaz = currentPosition;
     currentPosition = _unary__edvuaz + 1 | 0;
     var result = fromInt(tmp[_unary__edvuaz]);
     if (result >= 0n) {
-      this.f4o_1 = currentPosition;
+      this.v4o_1 = currentPosition;
       return result;
-    } else if ((this.e4o_1 - this.f4o_1 | 0) > 1) {
+    } else if ((this.u4o_1 - this.v4o_1 | 0) > 1) {
       var tmp_0 = result;
-      var tmp_1 = this.d4o_1;
+      var tmp_1 = this.t4o_1;
       var _unary__edvuaz_0 = currentPosition;
       currentPosition = _unary__edvuaz_0 + 1 | 0;
       result = tmp_0 ^ shiftLeft(fromInt(tmp_1[_unary__edvuaz_0]), 7);
       if (result < 0n) {
-        this.f4o_1 = currentPosition;
+        this.v4o_1 = currentPosition;
         return result ^ -128n;
       }
     }
@@ -1204,7 +1204,7 @@ function ProtoBuf_0(from, builderAction) {
   from = from === VOID ? Default_getInstance() : from;
   var b = new ProtoBufBuilder(from);
   builderAction(b);
-  return new ProtoBufImpl(b.o4j_1, b.p4j_1);
+  return new ProtoBufImpl(b.e4k_1, b.f4k_1);
 }
 var ProtoIntegerType_DEFAULT_instance;
 var ProtoIntegerType_SIGNED_instance;
@@ -1244,7 +1244,7 @@ function extractProtoId(descriptor, index, zeroBasedDefault) {
         return -2;
       } else {
         if (annotation instanceof ProtoNumber) {
-          result = annotation.q4j_1;
+          result = annotation.g4k_1;
           if (!zeroBasedDefault) {
             checkFieldNumber(result, i, descriptor);
           }
@@ -1314,11 +1314,11 @@ function extractParameters(_this__u8e3s4, index) {
       inductionVariable = inductionVariable + 1 | 0;
       var annotation = annotations.d2(i);
       if (annotation instanceof ProtoNumber) {
-        protoId = annotation.q4j_1;
+        protoId = annotation.g4k_1;
         checkFieldNumber(protoId, i, _this__u8e3s4);
       } else {
         if (annotation instanceof ProtoType) {
-          format = annotation.u4j_1;
+          format = annotation.k4k_1;
         } else {
           if (annotation instanceof ProtoPacked) {
             protoPacked = true;
@@ -1338,7 +1338,7 @@ function extractParameters(_this__u8e3s4, index) {
   // Inline function 'kotlinx.serialization.protobuf.internal.ProtoDesc' call
   var packedBits = protoPacked ? 4294967296n : 0n;
   var oneOfBits = isOneOf ? 68719476736n : 0n;
-  return packedBits | oneOfBits | format.t4j_1 | fromInt(tmp0);
+  return packedBits | oneOfBits | format.j4k_1 | fromInt(tmp0);
 }
 var ProtoWireType_INVALID_instance;
 var ProtoWireType_VARINT_instance;
@@ -1395,7 +1395,7 @@ function overrideId(_this__u8e3s4, protoId) {
 }
 function get_integerType(_this__u8e3s4) {
   var tmp0_subject = _this__u8e3s4 & 25769803776n;
-  return tmp0_subject === ProtoIntegerType_DEFAULT_getInstance().t4j_1 ? ProtoIntegerType_DEFAULT_getInstance() : tmp0_subject === ProtoIntegerType_SIGNED_getInstance().t4j_1 ? ProtoIntegerType_SIGNED_getInstance() : ProtoIntegerType_FIXED_getInstance();
+  return tmp0_subject === ProtoIntegerType_DEFAULT_getInstance().j4k_1 ? ProtoIntegerType_DEFAULT_getInstance() : tmp0_subject === ProtoIntegerType_SIGNED_getInstance().j4k_1 ? ProtoIntegerType_SIGNED_getInstance() : ProtoIntegerType_FIXED_getInstance();
 }
 function getActualOneOfSerializer(_this__u8e3s4, serializersModule, protoId) {
   // Inline function 'kotlin.collections.find' call
@@ -1477,15 +1477,15 @@ function populateCacheMap($this, descriptor, elements) {
     }
      while (inductionVariable < elements);
   if (oneOfCount > 0) {
-    $this.l4j_1 = HashMap.k8(oneOfCount, 1.0);
+    $this.b4k_1 = HashMap.k8(oneOfCount, 1.0);
   }
-  $this.k4j_1 = map;
+  $this.a4k_1 = map;
 }
 function putProtoId($this, $receiver, protoId, index) {
   $receiver.l3(protoId, index);
 }
 function getIndexByNum($this, protoNum) {
-  var array = $this.j4j_1;
+  var array = $this.z4j_1;
   if (!(array == null)) {
     // Inline function 'kotlin.collections.getOrElse' call
     var tmp;
@@ -1500,7 +1500,7 @@ function getIndexByNum($this, protoNum) {
 }
 function getIndexByNumSlowPath($this, protoTag) {
   // Inline function 'kotlin.collections.getOrElse' call
-  var tmp0_elvis_lhs = ensureNotNull($this.k4j_1).r3(protoTag);
+  var tmp0_elvis_lhs = ensureNotNull($this.a4k_1).r3(protoTag);
   var tmp;
   if (tmp0_elvis_lhs == null) {
     tmp = -1;
@@ -1529,19 +1529,19 @@ function findIndexByTagSlowPath($this, desc, protoTag) {
         return i;
     }
      while (inductionVariable < last);
-  throw ProtobufDecodingException.a4k('' + protoTag + ' is not among valid ' + $this.i4j_1.ps() + ' enum proto numbers');
+  throw ProtobufDecodingException.q4k('' + protoTag + ' is not among valid ' + $this.y4j_1.ps() + ' enum proto numbers');
 }
 function deserializeByteArray($this, previousValue) {
-  var tag = $this.n4l();
+  var tag = $this.d4m();
   var tmp$ret$0;
   $l$block: {
     // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.decodeOrThrow' call
     try {
       var tmp;
       if (tag === 19500n) {
-        tmp = $this.h4j_1.r4l();
+        tmp = $this.x4j_1.h4m();
       } else {
-        tmp = $this.h4j_1.q4l();
+        tmp = $this.x4j_1.g4m();
       }
       tmp$ret$0 = tmp;
       break $l$block;
@@ -1551,7 +1551,7 @@ function deserializeByteArray($this, previousValue) {
         // Inline function 'kotlinx.serialization.protobuf.internal.ProtobufDecoder.rethrowException' call
         // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
         var tmp$ret$3 = convertToInt(tag & 2147483647n);
-        throw ProtobufDecodingException.a4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + $this.i4j_1.ps(), e);
+        throw ProtobufDecodingException.q4k('Error while decoding proto number ' + tmp$ret$3 + ' of ' + $this.y4j_1.ps(), e);
       } else {
         throw $p;
       }
@@ -1592,10 +1592,10 @@ function readIfAbsent($this, descriptor, index) {
     var elementDescriptor = descriptor.pu(index);
     var kind = elementDescriptor.iu();
     if (equals(kind, MAP_getInstance()) || equals(kind, LIST_getInstance())) {
-      $this.m4j_1 = false;
+      $this.c4k_1 = false;
       return true;
     } else if (elementDescriptor.vt()) {
-      $this.m4j_1 = true;
+      $this.c4k_1 = true;
       return true;
     }
   }
@@ -1610,53 +1610,53 @@ function ProtobufDecoder$readIfAbsent$ref(p0) {
   return l;
 }
 function decodeListIndexNoTag($this) {
-  var size = negate($this.b4n_1);
-  $this.a4n_1 = $this.a4n_1 + 1 | 0;
-  var idx = $this.a4n_1;
-  if (fromInt(idx) === size || $this.h4j_1.w4k())
+  var size = negate($this.r4n_1);
+  $this.q4n_1 = $this.q4n_1 + 1 | 0;
+  var idx = $this.q4n_1;
+  if (fromInt(idx) === size || $this.x4j_1.m4l())
     return -1;
   return idx;
 }
 function decodeTaggedListIndex($this) {
   var tmp;
-  if ($this.a4n_1 === -1) {
-    tmp = $this.h4j_1.s4k_1;
+  if ($this.q4n_1 === -1) {
+    tmp = $this.x4j_1.i4l_1;
   } else {
-    tmp = $this.h4j_1.t4l();
+    tmp = $this.x4j_1.j4m();
   }
   var protoId = tmp;
   var tmp_0;
   // Inline function 'kotlinx.serialization.protobuf.internal.protoId' call
-  var this_0 = $this.b4n_1;
+  var this_0 = $this.r4n_1;
   if (protoId === convertToInt(this_0 & 2147483647n)) {
-    $this.a4n_1 = $this.a4n_1 + 1 | 0;
-    tmp_0 = $this.a4n_1;
+    $this.q4n_1 = $this.q4n_1 + 1 | 0;
+    tmp_0 = $this.q4n_1;
   } else {
-    $this.h4j_1.c4n();
+    $this.x4j_1.s4n();
     tmp_0 = -1;
   }
   return tmp_0;
 }
 function makeDelimited(decoder, parentTag) {
   var tagless = parentTag === 19500n;
-  var input = tagless ? decoder.d4n() : decoder.s4l();
+  var input = tagless ? decoder.t4n() : decoder.i4m();
   return new ProtobufReader(input);
 }
 function makeDelimitedForced(decoder, parentTag) {
   var tagless = parentTag === 19500n;
-  var input = tagless ? decoder.d4n() : decoder.s4l();
+  var input = tagless ? decoder.t4n() : decoder.i4m();
   return new ProtobufReader(input);
 }
 function updateIdAndType($this, header) {
   var tmp;
   if (header === -1) {
-    $this.s4k_1 = -1;
-    $this.t4k_1 = ProtoWireType_INVALID_getInstance();
+    $this.i4l_1 = -1;
+    $this.j4l_1 = ProtoWireType_INVALID_getInstance();
     tmp = -1;
   } else {
-    $this.s4k_1 = header >>> 3 | 0;
-    $this.t4k_1 = Companion_getInstance().f4k(header);
-    tmp = $this.s4k_1;
+    $this.i4l_1 = header >>> 3 | 0;
+    $this.j4l_1 = Companion_getInstance().v4k(header);
+    tmp = $this.i4l_1;
   }
   return tmp;
 }
@@ -1667,7 +1667,7 @@ function readIntLittleEndian($this) {
     do {
       var i = inductionVariable;
       inductionVariable = inductionVariable + 1 | 0;
-      var byte = $this.r4k_1.g4o() & 255;
+      var byte = $this.h4l_1.w4o() & 255;
       result = result | byte << imul(i, 8);
     }
      while (inductionVariable <= 3);
@@ -1680,7 +1680,7 @@ function readLongLittleEndian($this) {
     do {
       var i = inductionVariable;
       inductionVariable = inductionVariable + 1 | 0;
-      var byte = fromInt($this.r4k_1.g4o() & 255);
+      var byte = fromInt($this.h4l_1.w4o() & 255);
       result = result | shiftLeft(byte, imul(i, 8));
     }
      while (inductionVariable <= 7);
@@ -1688,7 +1688,7 @@ function readLongLittleEndian($this) {
 }
 function checkLength($this, length) {
   if (length < 0) {
-    throw ProtobufDecodingException.a4k('Unexpected negative length: ' + length);
+    throw ProtobufDecodingException.q4k('Unexpected negative length: ' + length);
   }
 }
 function decode32($this, format) {
@@ -1696,10 +1696,10 @@ function decode32($this, format) {
   var tmp;
   switch (format.d1_1) {
     case 0:
-      tmp = convertToInt($this.r4k_1.h4o(false));
+      tmp = convertToInt($this.h4l_1.x4o(false));
       break;
     case 1:
-      tmp = decodeSignedVarintInt($this, $this.r4k_1);
+      tmp = decodeSignedVarintInt($this, $this.h4l_1);
       break;
     case 2:
       tmp = readIntLittleEndian($this);
@@ -1715,10 +1715,10 @@ function decode64($this, format) {
   var tmp;
   switch (format.d1_1) {
     case 0:
-      tmp = $this.r4k_1.h4o(false);
+      tmp = $this.h4l_1.x4o(false);
       break;
     case 1:
-      tmp = decodeSignedVarintLong($this, $this.r4k_1);
+      tmp = decodeSignedVarintLong($this, $this.h4l_1);
       break;
     case 2:
       tmp = readLongLittleEndian($this);
@@ -1730,21 +1730,21 @@ function decode64($this, format) {
   return tmp;
 }
 function decodeSignedVarintInt($this, input) {
-  var raw = input.i4o();
+  var raw = input.y4o();
   var temp = (raw << 31 >> 31 ^ raw) >> 1;
   return temp ^ raw & -2147483648;
 }
 function decodeSignedVarintLong($this, input) {
-  var raw = input.h4o(false);
+  var raw = input.x4o(false);
   var temp = shiftRight(shiftRight(shiftLeft(raw, 63), 63) ^ raw, 1);
   return temp ^ raw & -9223372036854775808n;
 }
 function expand($this) {
-  $this.l4l_1 = copyOf($this.l4l_1, imul($this.l4l_1.length, 2));
+  $this.b4m_1 = copyOf($this.b4m_1, imul($this.b4m_1.length, 2));
 }
 function ensureEnoughBytes($this, bytesCount) {
-  if (bytesCount > $this.j4o()) {
-    throw SerializationException.dt('Unexpected EOF, available ' + $this.j4o() + ' bytes, requested: ' + bytesCount);
+  if (bytesCount > $this.z4o()) {
+    throw SerializationException.dt('Unexpected EOF, available ' + $this.z4o() + ' bytes, requested: ' + bytesCount);
   }
 }
 function eof($this) {
@@ -1754,7 +1754,7 @@ function readVarint64SlowPath($this) {
   var result = 0n;
   var shift = 0;
   while (shift < 64) {
-    var byte = $this.g4o();
+    var byte = $this.w4o();
     result = result | shiftLeft(fromInt(byte & 127), shift);
     if ((byte & 128) === 0) {
       return result;
@@ -1767,7 +1767,7 @@ function readVarint32SlowPath($this) {
   var result = 0;
   var shift = 0;
   while (shift < 32) {
-    var byte = $this.g4o();
+    var byte = $this.w4o();
     result = result | (byte & 127) << shift;
     if ((byte & 128) === 0) {
       return result;

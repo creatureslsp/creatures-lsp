@@ -34,8 +34,8 @@ var imul = Math.imul;
 //region block: pre-declaration
 class ClosestItemResult {
   constructor(closest, previous) {
-    this.l53_1 = closest;
-    this.m53_1 = previous;
+    this.b54_1 = closest;
+    this.c54_1 = previous;
   }
   equals(other) {
     if (this === other)
@@ -44,19 +44,19 @@ class ClosestItemResult {
       return false;
     if (!(other instanceof ClosestItemResult))
       THROW_CCE();
-    if (!equals(this.l53_1, other.l53_1))
+    if (!equals(this.b54_1, other.b54_1))
       return false;
-    if (!contentEquals(this.m53_1, other.m53_1))
+    if (!contentEquals(this.c54_1, other.c54_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = hashCode(this.l53_1);
-    result = imul(31, result) + contentHashCode(this.m53_1) | 0;
+    var result = hashCode(this.b54_1);
+    result = imul(31, result) + contentHashCode(this.c54_1) | 0;
     return result;
   }
   toString() {
-    return 'ClosestItemResult(closest=' + toString(this.l53_1) + ', previous=' + toString(this.m53_1) + ')';
+    return 'ClosestItemResult(closest=' + toString(this.b54_1) + ', previous=' + toString(this.c54_1) + ')';
   }
 }
 class Companion {
@@ -64,7 +64,7 @@ class Companion {
     Companion_instance = this;
     var tmp = this;
     var tmp_0 = LazyThreadSafetyMode_PUBLICATION_getInstance();
-    tmp.n53_1 = lazy(tmp_0, CursorPosition$Companion$_anonymous__riyxn4);
+    tmp.d54_1 = lazy(tmp_0, CursorPosition$Companion$_anonymous__riyxn4);
   }
   k1e() {
     return _get_$cachedSerializer__te6jhj(this);
@@ -76,7 +76,7 @@ class Companion {
 class CursorPosition extends Enum {
   constructor(name, ordinal, value) {
     super(name, ordinal);
-    this.q53_1 = value;
+    this.g54_1 = value;
   }
 }
 class Companion_0 {}
@@ -86,20 +86,20 @@ class $serializer {
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.cursor.Distance', this, 2);
     tmp0_serialDesc.w13('lineOffset', false);
     tmp0_serialDesc.w13('columnOffset', false);
-    this.r53_1 = tmp0_serialDesc;
+    this.h54_1 = tmp0_serialDesc;
   }
-  s53(encoder, value) {
-    var tmp0_desc = this.r53_1;
+  i54(encoder, value) {
+    var tmp0_desc = this.h54_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.mx(tmp0_desc, 0, value.t53_1);
-    tmp1_output.mx(tmp0_desc, 1, value.u53_1);
+    tmp1_output.mx(tmp0_desc, 0, value.j54_1);
+    tmp1_output.mx(tmp0_desc, 1, value.k54_1);
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.s53(encoder, value instanceof Distance ? value : THROW_CCE());
+    return this.i54(encoder, value instanceof Distance ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.r53_1;
+    var tmp0_desc = this.h54_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -131,10 +131,10 @@ class $serializer {
         }
       }
     tmp6_input.cw(tmp0_desc);
-    return Distance.v53(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    return Distance.l54(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
   lr() {
-    return this.r53_1;
+    return this.h54_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -145,15 +145,15 @@ class $serializer {
 }
 class Distance {
   constructor(lineOffset, columnOffset) {
-    this.t53_1 = lineOffset;
-    this.u53_1 = columnOffset;
+    this.j54_1 = lineOffset;
+    this.k54_1 = columnOffset;
   }
   toString() {
-    return 'Distance(lineOffset=' + this.t53_1 + ', columnOffset=' + this.u53_1 + ')';
+    return 'Distance(lineOffset=' + this.j54_1 + ', columnOffset=' + this.k54_1 + ')';
   }
   hashCode() {
-    var result = this.t53_1;
-    result = imul(result, 31) + this.u53_1 | 0;
+    var result = this.j54_1;
+    result = imul(result, 31) + this.k54_1 | 0;
     return result;
   }
   equals(other) {
@@ -161,19 +161,19 @@ class Distance {
       return true;
     if (!(other instanceof Distance))
       return false;
-    if (!(this.t53_1 === other.t53_1))
+    if (!(this.j54_1 === other.j54_1))
       return false;
-    if (!(this.u53_1 === other.u53_1))
+    if (!(this.k54_1 === other.k54_1))
       return false;
     return true;
   }
-  static v53(seen0, lineOffset, columnOffset, serializationConstructorMarker) {
+  static l54(seen0, lineOffset, columnOffset, serializationConstructorMarker) {
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance().r53_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance().h54_1);
     }
     var $this = createThis(this);
-    $this.t53_1 = lineOffset;
-    $this.u53_1 = columnOffset;
+    $this.j54_1 = lineOffset;
+    $this.k54_1 = columnOffset;
     return $this;
   }
 }
@@ -183,36 +183,36 @@ class Companion_1 {
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.cursor.Distanced', null, 2);
     tmp0_serialDesc.w13('item', false);
     tmp0_serialDesc.w13('distance', false);
-    this.w53_1 = tmp0_serialDesc;
+    this.m54_1 = tmp0_serialDesc;
   }
-  c4u(typeSerial0) {
-    return $serializer_0.z53(typeSerial0);
+  s4u(typeSerial0) {
+    return $serializer_0.p54(typeSerial0);
   }
   y14(typeParamsSerializers) {
-    return this.c4u(typeParamsSerializers[0]);
+    return this.s4u(typeParamsSerializers[0]);
   }
 }
 class $serializer_0 {
-  static a54() {
+  static q54() {
     var $this = createThis(this);
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.cursor.Distanced', $this, 2);
     tmp0_serialDesc.w13('item', false);
     tmp0_serialDesc.w13('distance', false);
-    $this.x53_1 = tmp0_serialDesc;
+    $this.n54_1 = tmp0_serialDesc;
     return $this;
   }
-  b54(encoder, value) {
-    var tmp0_desc = this.x53_1;
+  r54(encoder, value) {
+    var tmp0_desc = this.n54_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.tx(tmp0_desc, 0, this.y53_1, value.c54_1);
-    tmp1_output.tx(tmp0_desc, 1, $serializer_getInstance(), value.d54_1);
+    tmp1_output.tx(tmp0_desc, 0, this.o54_1, value.s54_1);
+    tmp1_output.tx(tmp0_desc, 1, $serializer_getInstance(), value.t54_1);
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.b54(encoder, value instanceof Distanced ? value : THROW_CCE());
+    return this.r54(encoder, value instanceof Distanced ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.x53_1;
+    var tmp0_desc = this.n54_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -220,7 +220,7 @@ class $serializer_0 {
     var tmp5_local1 = null;
     var tmp6_input = decoder.bw(tmp0_desc);
     if (tmp6_input.sw()) {
-      tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, this.y53_1, tmp4_local0);
+      tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, this.o54_1, tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
       tmp5_local1 = tmp6_input.nw(tmp0_desc, 1, $serializer_getInstance(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
@@ -232,7 +232,7 @@ class $serializer_0 {
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, this.y53_1, tmp4_local0);
+            tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, this.o54_1, tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
@@ -244,41 +244,41 @@ class $serializer_0 {
         }
       }
     tmp6_input.cw(tmp0_desc);
-    return Distanced.e54(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    return Distanced.u54(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
   lr() {
-    return this.x53_1;
+    return this.n54_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [this.y53_1, $serializer_getInstance()];
+    return [this.o54_1, $serializer_getInstance()];
   }
   m14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [this.y53_1];
+    return [this.o54_1];
   }
-  static z53(typeSerial0) {
-    var $this = this.a54();
-    $this.y53_1 = typeSerial0;
+  static p54(typeSerial0) {
+    var $this = this.q54();
+    $this.o54_1 = typeSerial0;
     return $this;
   }
 }
 class Distanced {
   constructor(item, distance) {
     Companion_getInstance_1();
-    this.c54_1 = item;
-    this.d54_1 = distance;
+    this.s54_1 = item;
+    this.t54_1 = distance;
   }
   toString() {
-    return 'Distanced(item=' + toString(this.c54_1) + ', distance=' + this.d54_1.toString() + ')';
+    return 'Distanced(item=' + toString(this.s54_1) + ', distance=' + this.t54_1.toString() + ')';
   }
   hashCode() {
-    var result = hashCode(this.c54_1);
-    result = imul(result, 31) + this.d54_1.hashCode() | 0;
+    var result = hashCode(this.s54_1);
+    result = imul(result, 31) + this.t54_1.hashCode() | 0;
     return result;
   }
   equals(other) {
@@ -286,26 +286,26 @@ class Distanced {
       return true;
     if (!(other instanceof Distanced))
       return false;
-    if (!equals(this.c54_1, other.c54_1))
+    if (!equals(this.s54_1, other.s54_1))
       return false;
-    if (!this.d54_1.equals(other.d54_1))
+    if (!this.t54_1.equals(other.t54_1))
       return false;
     return true;
   }
-  static e54(seen0, item, distance, serializationConstructorMarker) {
+  static u54(seen0, item, distance, serializationConstructorMarker) {
     Companion_getInstance_1();
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, Companion_getInstance_1().w53_1);
+      throwMissingFieldException(seen0, 3, Companion_getInstance_1().m54_1);
     }
     var $this = createThis(this);
-    $this.c54_1 = item;
-    $this.d54_1 = distance;
+    $this.s54_1 = item;
+    $this.t54_1 = distance;
     return $this;
   }
 }
 //endregion
 function _get_$cachedSerializer__te6jhj($this) {
-  return $this.n53_1.k3();
+  return $this.d54_1.k3();
 }
 function CursorPosition$Companion$_anonymous__riyxn4() {
   return createSimpleEnumSerializer('com.bedalton.common.lsp.cursor.CursorPosition', values());

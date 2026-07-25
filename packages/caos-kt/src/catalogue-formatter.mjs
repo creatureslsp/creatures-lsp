@@ -103,12 +103,12 @@ var imul = Math.imul;
 //region block: pre-declaration
 class CatalogueFormatException extends Exception {
   constructor(message, throwable) {
-    return new.target.j68(message, throwable);
+    return new.target.c69(message, throwable);
   }
-  static j68(message, throwable) {
+  static c69(message, throwable) {
     throwable = throwable === VOID ? null : throwable;
     var $this = this.hc(message, throwable);
-    captureStack($this, $this.i68_1);
+    captureStack($this, $this.b69_1);
     return $this;
   }
 }
@@ -126,45 +126,45 @@ class $serializer {
     tmp0_serialDesc.w13('newLineChar', true);
     tmp0_serialDesc.w13('trimFinalNewlines', true);
     tmp0_serialDesc.w13('removeCustomLineSpacing', true);
-    this.k68_1 = tmp0_serialDesc;
+    this.d69_1 = tmp0_serialDesc;
   }
-  l68(encoder, value) {
-    var tmp0_desc = this.k68_1;
+  e69(encoder, value) {
+    var tmp0_desc = this.d69_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    if (tmp1_output.zx(tmp0_desc, 0) ? true : !(value.m68_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 0, BooleanSerializer_getInstance(), value.m68_1);
+    if (tmp1_output.zx(tmp0_desc, 0) ? true : !(value.f69_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 0, BooleanSerializer_getInstance(), value.f69_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 1) ? true : !(value.n68_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 1, BooleanSerializer_getInstance(), value.n68_1);
+    if (tmp1_output.zx(tmp0_desc, 1) ? true : !(value.g69_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 1, BooleanSerializer_getInstance(), value.g69_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 2) ? true : !(value.o68_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 2, IntSerializer_getInstance(), value.o68_1);
+    if (tmp1_output.zx(tmp0_desc, 2) ? true : !(value.h69_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 2, IntSerializer_getInstance(), value.h69_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 3) ? true : !(value.p68_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 3, IntSerializer_getInstance(), value.p68_1);
+    if (tmp1_output.zx(tmp0_desc, 3) ? true : !(value.i69_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 3, IntSerializer_getInstance(), value.i69_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.q68_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 4, IntSerializer_getInstance(), value.q68_1);
+    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.j69_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 4, IntSerializer_getInstance(), value.j69_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.r68_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 5, IntSerializer_getInstance(), value.r68_1);
+    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.k69_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 5, IntSerializer_getInstance(), value.k69_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 6) ? true : !(value.s68_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 6, StringSerializer_getInstance(), value.s68_1);
+    if (tmp1_output.zx(tmp0_desc, 6) ? true : !(value.l69_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 6, StringSerializer_getInstance(), value.l69_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 7) ? true : !(value.t68_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 7, BooleanSerializer_getInstance(), value.t68_1);
+    if (tmp1_output.zx(tmp0_desc, 7) ? true : !(value.m69_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 7, BooleanSerializer_getInstance(), value.m69_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 8) ? true : !(value.u68_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 8, BooleanSerializer_getInstance(), value.u68_1);
+    if (tmp1_output.zx(tmp0_desc, 8) ? true : !(value.n69_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 8, BooleanSerializer_getInstance(), value.n69_1);
     }
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.l68(encoder, value instanceof CatalogueFormattingOptions ? value : THROW_CCE());
+    return this.e69(encoder, value instanceof CatalogueFormattingOptions ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.k68_1;
+    var tmp0_desc = this.d69_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -245,10 +245,10 @@ class $serializer {
         }
       }
     tmp13_input.cw(tmp0_desc);
-    return CatalogueFormattingOptions.v68(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, null);
+    return CatalogueFormattingOptions.o69(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, null);
   }
   lr() {
-    return this.k68_1;
+    return this.d69_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -268,29 +268,29 @@ class CatalogueFormattingOptions {
     newLineChar = newLineChar === VOID ? null : newLineChar;
     trimFinalNewlines = trimFinalNewlines === VOID ? null : trimFinalNewlines;
     removeCustomLineSpacing = removeCustomLineSpacing === VOID ? null : removeCustomLineSpacing;
-    this.m68_1 = forceMinBlankLinesAfterComments;
-    this.n68_1 = insertFinalNewline;
-    this.o68_1 = minBlankLinesBetweenValues;
-    this.p68_1 = maxBlankLinesBetweenValues;
-    this.q68_1 = maxBlankLinesBetweenEntries;
-    this.r68_1 = minBlankLinesBetweenEntries;
-    this.s68_1 = newLineChar;
-    this.t68_1 = trimFinalNewlines;
-    this.u68_1 = removeCustomLineSpacing;
+    this.f69_1 = forceMinBlankLinesAfterComments;
+    this.g69_1 = insertFinalNewline;
+    this.h69_1 = minBlankLinesBetweenValues;
+    this.i69_1 = maxBlankLinesBetweenValues;
+    this.j69_1 = maxBlankLinesBetweenEntries;
+    this.k69_1 = minBlankLinesBetweenEntries;
+    this.l69_1 = newLineChar;
+    this.m69_1 = trimFinalNewlines;
+    this.n69_1 = removeCustomLineSpacing;
   }
   toString() {
-    return 'CatalogueFormattingOptions(forceMinBlankLinesAfterComments=' + this.m68_1 + ', insertFinalNewline=' + this.n68_1 + ', minBlankLinesBetweenValues=' + this.o68_1 + ', maxBlankLinesBetweenValues=' + this.p68_1 + ', maxBlankLinesBetweenEntries=' + this.q68_1 + ', minBlankLinesBetweenEntries=' + this.r68_1 + ', newLineChar=' + this.s68_1 + ', trimFinalNewlines=' + this.t68_1 + ', removeCustomLineSpacing=' + this.u68_1 + ')';
+    return 'CatalogueFormattingOptions(forceMinBlankLinesAfterComments=' + this.f69_1 + ', insertFinalNewline=' + this.g69_1 + ', minBlankLinesBetweenValues=' + this.h69_1 + ', maxBlankLinesBetweenValues=' + this.i69_1 + ', maxBlankLinesBetweenEntries=' + this.j69_1 + ', minBlankLinesBetweenEntries=' + this.k69_1 + ', newLineChar=' + this.l69_1 + ', trimFinalNewlines=' + this.m69_1 + ', removeCustomLineSpacing=' + this.n69_1 + ')';
   }
   hashCode() {
-    var result = this.m68_1 == null ? 0 : getBooleanHashCode(this.m68_1);
-    result = imul(result, 31) + (this.n68_1 == null ? 0 : getBooleanHashCode(this.n68_1)) | 0;
-    result = imul(result, 31) + (this.o68_1 == null ? 0 : this.o68_1) | 0;
-    result = imul(result, 31) + (this.p68_1 == null ? 0 : this.p68_1) | 0;
-    result = imul(result, 31) + (this.q68_1 == null ? 0 : this.q68_1) | 0;
-    result = imul(result, 31) + (this.r68_1 == null ? 0 : this.r68_1) | 0;
-    result = imul(result, 31) + (this.s68_1 == null ? 0 : getStringHashCode(this.s68_1)) | 0;
-    result = imul(result, 31) + (this.t68_1 == null ? 0 : getBooleanHashCode(this.t68_1)) | 0;
-    result = imul(result, 31) + (this.u68_1 == null ? 0 : getBooleanHashCode(this.u68_1)) | 0;
+    var result = this.f69_1 == null ? 0 : getBooleanHashCode(this.f69_1);
+    result = imul(result, 31) + (this.g69_1 == null ? 0 : getBooleanHashCode(this.g69_1)) | 0;
+    result = imul(result, 31) + (this.h69_1 == null ? 0 : this.h69_1) | 0;
+    result = imul(result, 31) + (this.i69_1 == null ? 0 : this.i69_1) | 0;
+    result = imul(result, 31) + (this.j69_1 == null ? 0 : this.j69_1) | 0;
+    result = imul(result, 31) + (this.k69_1 == null ? 0 : this.k69_1) | 0;
+    result = imul(result, 31) + (this.l69_1 == null ? 0 : getStringHashCode(this.l69_1)) | 0;
+    result = imul(result, 31) + (this.m69_1 == null ? 0 : getBooleanHashCode(this.m69_1)) | 0;
+    result = imul(result, 31) + (this.n69_1 == null ? 0 : getBooleanHashCode(this.n69_1)) | 0;
     return result;
   }
   equals(other) {
@@ -298,101 +298,101 @@ class CatalogueFormattingOptions {
       return true;
     if (!(other instanceof CatalogueFormattingOptions))
       return false;
-    if (!(this.m68_1 == other.m68_1))
+    if (!(this.f69_1 == other.f69_1))
       return false;
-    if (!(this.n68_1 == other.n68_1))
+    if (!(this.g69_1 == other.g69_1))
       return false;
-    if (!(this.o68_1 == other.o68_1))
+    if (!(this.h69_1 == other.h69_1))
       return false;
-    if (!(this.p68_1 == other.p68_1))
+    if (!(this.i69_1 == other.i69_1))
       return false;
-    if (!(this.q68_1 == other.q68_1))
+    if (!(this.j69_1 == other.j69_1))
       return false;
-    if (!(this.r68_1 == other.r68_1))
+    if (!(this.k69_1 == other.k69_1))
       return false;
-    if (!(this.s68_1 == other.s68_1))
+    if (!(this.l69_1 == other.l69_1))
       return false;
-    if (!(this.t68_1 == other.t68_1))
+    if (!(this.m69_1 == other.m69_1))
       return false;
-    if (!(this.u68_1 == other.u68_1))
+    if (!(this.n69_1 == other.n69_1))
       return false;
     return true;
   }
-  static v68(seen0, forceMinBlankLinesAfterComments, insertFinalNewline, minBlankLinesBetweenValues, maxBlankLinesBetweenValues, maxBlankLinesBetweenEntries, minBlankLinesBetweenEntries, newLineChar, trimFinalNewlines, removeCustomLineSpacing, serializationConstructorMarker) {
+  static o69(seen0, forceMinBlankLinesAfterComments, insertFinalNewline, minBlankLinesBetweenValues, maxBlankLinesBetweenValues, maxBlankLinesBetweenEntries, minBlankLinesBetweenEntries, newLineChar, trimFinalNewlines, removeCustomLineSpacing, serializationConstructorMarker) {
     if (!(0 === (0 & seen0))) {
-      throwMissingFieldException(seen0, 0, $serializer_getInstance().k68_1);
+      throwMissingFieldException(seen0, 0, $serializer_getInstance().d69_1);
     }
     var $this = createThis(this);
     if (0 === (seen0 & 1))
-      $this.m68_1 = null;
+      $this.f69_1 = null;
     else
-      $this.m68_1 = forceMinBlankLinesAfterComments;
+      $this.f69_1 = forceMinBlankLinesAfterComments;
     if (0 === (seen0 & 2))
-      $this.n68_1 = null;
+      $this.g69_1 = null;
     else
-      $this.n68_1 = insertFinalNewline;
+      $this.g69_1 = insertFinalNewline;
     if (0 === (seen0 & 4))
-      $this.o68_1 = null;
+      $this.h69_1 = null;
     else
-      $this.o68_1 = minBlankLinesBetweenValues;
+      $this.h69_1 = minBlankLinesBetweenValues;
     if (0 === (seen0 & 8))
-      $this.p68_1 = null;
+      $this.i69_1 = null;
     else
-      $this.p68_1 = maxBlankLinesBetweenValues;
+      $this.i69_1 = maxBlankLinesBetweenValues;
     if (0 === (seen0 & 16))
-      $this.q68_1 = null;
+      $this.j69_1 = null;
     else
-      $this.q68_1 = maxBlankLinesBetweenEntries;
+      $this.j69_1 = maxBlankLinesBetweenEntries;
     if (0 === (seen0 & 32))
-      $this.r68_1 = null;
+      $this.k69_1 = null;
     else
-      $this.r68_1 = minBlankLinesBetweenEntries;
+      $this.k69_1 = minBlankLinesBetweenEntries;
     if (0 === (seen0 & 64))
-      $this.s68_1 = null;
+      $this.l69_1 = null;
     else
-      $this.s68_1 = newLineChar;
+      $this.l69_1 = newLineChar;
     if (0 === (seen0 & 128))
-      $this.t68_1 = null;
+      $this.m69_1 = null;
     else
-      $this.t68_1 = trimFinalNewlines;
+      $this.m69_1 = trimFinalNewlines;
     if (0 === (seen0 & 256))
-      $this.u68_1 = null;
+      $this.n69_1 = null;
     else
-      $this.u68_1 = removeCustomLineSpacing;
+      $this.n69_1 = removeCustomLineSpacing;
     return $this;
   }
 }
 class Companion_0 {
-  w68(text, opts) {
+  p69(text, opts) {
     var formatter = new Formatter(text, opts);
     return format(formatter);
   }
 }
 class Formatter {
   constructor(text, formattingOptions) {
-    this.q69_1 = text;
-    this.r69_1 = parseCatalogue(this.q69_1);
+    this.j6a_1 = text;
+    this.k6a_1 = parseCatalogue(this.j6a_1);
     var tmp = this;
-    tmp.s69_1 = new FormatterState(formattingOptions == null ? new CatalogueFormattingOptions() : formattingOptions, this.r69_1);
+    tmp.l6a_1 = new FormatterState(formattingOptions == null ? new CatalogueFormattingOptions() : formattingOptions, this.k6a_1);
   }
 }
 class Companion_1 {
   constructor() {
-    this.t69_1 = 'FormatterState';
+    this.m6a_1 = 'FormatterState';
   }
 }
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.u69_1 = function_0;
+    this.n6a_1 = function_0;
   }
   wg(a, b) {
-    return this.u69_1(a, b);
+    return this.n6a_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.u69_1;
+    return this.n6a_1;
   }
   equals(other) {
     var tmp;
@@ -415,76 +415,76 @@ class sam$kotlin_Comparator$0 {
 }
 class FormatterState {
   constructor(opts, parseResult) {
-    this.x68_1 = opts;
-    this.y68_1 = parseResult;
-    this.z68_1 = -1;
-    this.a69_1 = StringBuilder.s();
+    this.q69_1 = opts;
+    this.r69_1 = parseResult;
+    this.s69_1 = -1;
+    this.t69_1 = StringBuilder.s();
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.b69_1 = ArrayList.u1();
+    tmp.u69_1 = ArrayList.u1();
     var tmp_0 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_0.c69_1 = ArrayList.u1();
-    this.d69_1 = null;
+    tmp_0.v69_1 = ArrayList.u1();
+    this.w69_1 = null;
     var tmp_1 = this;
-    tmp_1.e69_1 = lazy(FormatterState$items$delegate$lambda(this));
+    tmp_1.x69_1 = lazy(FormatterState$items$delegate$lambda(this));
     var tmp_2 = this;
-    tmp_2.f69_1 = lazy(FormatterState$itemsCount$delegate$lambda(this));
+    tmp_2.y69_1 = lazy(FormatterState$itemsCount$delegate$lambda(this));
     var tmp_3 = this;
-    tmp_3.g69_1 = lazy(FormatterState$scriptStarts$delegate$lambda(this));
-    this.h69_1 = -1;
-    this.i69_1 = false;
-    this.j69_1 = false;
+    tmp_3.z69_1 = lazy(FormatterState$scriptStarts$delegate$lambda(this));
+    this.a6a_1 = -1;
+    this.b6a_1 = false;
+    this.c6a_1 = false;
     var tmp_4 = this;
-    tmp_4.k69_1 = lazy(FormatterState$maxBlankLinesBetweenValues$delegate$lambda(this));
+    tmp_4.d6a_1 = lazy(FormatterState$maxBlankLinesBetweenValues$delegate$lambda(this));
     var tmp_5 = this;
-    var tmp0_elvis_lhs = this.x68_1.o68_1;
-    tmp_5.l69_1 = tmp0_elvis_lhs == null ? 0 : tmp0_elvis_lhs;
+    var tmp0_elvis_lhs = this.q69_1.h69_1;
+    tmp_5.e6a_1 = tmp0_elvis_lhs == null ? 0 : tmp0_elvis_lhs;
     var tmp_6 = this;
-    tmp_6.m69_1 = lazy(FormatterState$maxBlankLinesBetweenEntries$delegate$lambda(this));
+    tmp_6.f6a_1 = lazy(FormatterState$maxBlankLinesBetweenEntries$delegate$lambda(this));
     var tmp_7 = this;
-    var tmp0_elvis_lhs_0 = this.x68_1.r68_1;
-    tmp_7.n69_1 = tmp0_elvis_lhs_0 == null ? 0 : tmp0_elvis_lhs_0;
+    var tmp0_elvis_lhs_0 = this.q69_1.k69_1;
+    tmp_7.g6a_1 = tmp0_elvis_lhs_0 == null ? 0 : tmp0_elvis_lhs_0;
     var tmp_8 = this;
-    var tmp0_elvis_lhs_1 = this.x68_1.s68_1;
-    tmp_8.o69_1 = tmp0_elvis_lhs_1 == null ? '\r\n' : tmp0_elvis_lhs_1;
-    this.p69_1 = repeat(this.o69_1, this.l69_1 + 1 | 0);
+    var tmp0_elvis_lhs_1 = this.q69_1.l69_1;
+    tmp_8.h6a_1 = tmp0_elvis_lhs_1 == null ? '\r\n' : tmp0_elvis_lhs_1;
+    this.i6a_1 = repeat(this.h6a_1, this.e6a_1 + 1 | 0);
   }
-  v69() {
-    var tmp0 = this.e69_1;
+  o6a() {
+    var tmp0 = this.x69_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('items', 1, tmp, FormatterState$_get_items_$ref_okzgnx(), null);
     return tmp0.k3();
   }
-  j5e() {
+  c5f() {
     var tmp;
-    if (this.h69_1 > 1) {
-      tmp = this.v69().d2(this.h69_1 - 2 | 0);
+    if (this.a6a_1 > 1) {
+      tmp = this.o6a().d2(this.a6a_1 - 2 | 0);
     } else {
       tmp = null;
     }
     return tmp;
   }
-  x5d() {
-    return _get_itemsCount__k57ad8(this) > (this.h69_1 + 1 | 0);
+  q5e() {
+    return _get_itemsCount__k57ad8(this) > (this.a6a_1 + 1 | 0);
   }
-  m5e(distance) {
-    var containsUpper = this.v69().b2() - 1 | 0;
-    var containsArg = this.h69_1 + distance | 0;
+  f5f(distance) {
+    var containsUpper = this.o6a().b2() - 1 | 0;
+    var containsArg = this.a6a_1 + distance | 0;
     if (!(0 <= containsArg ? containsArg <= containsUpper : false)) {
       return null;
     }
-    return this.v69().d2(this.h69_1 + distance | 0);
+    return this.o6a().d2(this.a6a_1 + distance | 0);
   }
-  y69(distance, $super) {
+  r6a(distance, $super) {
     distance = distance === VOID ? 1 : distance;
-    return $super === VOID ? this.m5e(distance) : $super.m5e.call(this, distance);
+    return $super === VOID ? this.f5f(distance) : $super.f5f.call(this, distance);
   }
-  z69(distance) {
-    var i = this.h69_1 + distance | 0;
-    while (0 <= i ? i <= (this.v69().b2() - 1 | 0) : false) {
-      var tmp = this.v69();
+  s6a(distance) {
+    var i = this.a6a_1 + distance | 0;
+    while (0 <= i ? i <= (this.o6a().b2() - 1 | 0) : false) {
+      var tmp = this.o6a();
       var _unary__edvuaz = i;
       i = _unary__edvuaz + 1 | 0;
       var item = tmp.d2(_unary__edvuaz);
@@ -494,12 +494,12 @@ class FormatterState {
     }
     return null;
   }
-  a6a(distance, $super) {
+  t6a(distance, $super) {
     distance = distance === VOID ? 1 : distance;
-    return $super === VOID ? this.z69(distance) : $super.z69.call(this, distance);
+    return $super === VOID ? this.s6a(distance) : $super.s6a.call(this, distance);
   }
-  b6a() {
-    var tmp0_safe_receiver = this.d69_1;
+  u6a() {
+    var tmp0_safe_receiver = this.w69_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
@@ -511,7 +511,7 @@ class FormatterState {
     $l$loop_0: while (onlyWhitespaceLeft) {
       var _unary__edvuaz = nextI;
       nextI = _unary__edvuaz + 1 | 0;
-      var tmp1_elvis_lhs = this.m5e(_unary__edvuaz);
+      var tmp1_elvis_lhs = this.f5f(_unary__edvuaz);
       var tmp;
       if (tmp1_elvis_lhs == null) {
         break $l$loop_0;
@@ -524,58 +524,58 @@ class FormatterState {
         break $l$loop_0;
       }
     }
-    this.d69_1 = onlyWhitespaceLeft;
+    this.w69_1 = onlyWhitespaceLeft;
     return onlyWhitespaceLeft;
   }
-  w5d() {
-    return this.a69_1.toString();
+  p5e() {
+    return this.t69_1.toString();
   }
   y() {
-    if ((this.h69_1 + 1 | 0) >= this.v69().b2()) {
-      this.d69_1 = true;
+    if ((this.a6a_1 + 1 | 0) >= this.o6a().b2()) {
+      this.w69_1 = true;
       return null;
     }
-    this.d69_1 = null;
-    var tmp = this.v69();
-    this.h69_1 = this.h69_1 + 1 | 0;
-    return tmp.d2(this.h69_1);
+    this.w69_1 = null;
+    var tmp = this.o6a();
+    this.a6a_1 = this.a6a_1 + 1 | 0;
+    return tmp.d2(this.a6a_1);
   }
-  w56() {
-    return this.x68_1.n68_1 === true;
+  m57() {
+    return this.q69_1.g69_1 === true;
   }
-  x56() {
-    return this.x68_1.t68_1 === true;
+  n57() {
+    return this.q69_1.m69_1 === true;
   }
-  w69() {
-    var tmp0 = this.k69_1;
+  p6a() {
+    var tmp0 = this.d6a_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('maxBlankLinesBetweenValues', 1, tmp, FormatterState$_get_maxBlankLinesBetweenValues_$ref_s32f8k(), null);
     return tmp0.k3();
   }
-  x69() {
-    var tmp0 = this.m69_1;
+  q6a() {
+    var tmp0 = this.f6a_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('maxBlankLinesBetweenEntries', 1, tmp, FormatterState$_get_maxBlankLinesBetweenEntries_$ref_fs4ac4(), null);
     return tmp0.k3();
   }
-  d57() {
-    return this.x68_1.m68_1 === true;
+  t57() {
+    return this.q69_1.f69_1 === true;
   }
 }
 class sam$kotlin_Comparator$0_0 {
   constructor(function_0) {
-    this.c6a_1 = function_0;
+    this.v6a_1 = function_0;
   }
   wg(a, b) {
-    return this.c6a_1(a, b);
+    return this.v6a_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.c6a_1;
+    return this.v6a_1;
   }
   equals(other) {
     var tmp;
@@ -608,7 +608,7 @@ function $serializer_getInstance() {
   return $serializer_instance;
 }
 function formatCatalogue(text, opts) {
-  return Companion_instance_0.w68(text, opts);
+  return Companion_instance_0.p69(text, opts);
 }
 function formatCatalogue_0(text) {
   return formatCatalogue(text, new CatalogueFormattingOptions());
@@ -656,35 +656,35 @@ function formatItem(_this__u8e3s4, item) {
     } else {
       if (item instanceof CatalogueTagKeyword) {
         formatKeyword(_this__u8e3s4, item);
-        _this__u8e3s4.s69_1.i69_1 = false;
+        _this__u8e3s4.l6a_1.b6a_1 = false;
       } else {
         if (item instanceof CatalogueArrayKeyword) {
           formatKeyword(_this__u8e3s4, item);
-          _this__u8e3s4.s69_1.i69_1 = false;
+          _this__u8e3s4.l6a_1.b6a_1 = false;
         } else {
           if (item instanceof CatalogueOverrideKeyword) {
             formatKeyword(_this__u8e3s4, item);
-            _this__u8e3s4.s69_1.i69_1 = false;
+            _this__u8e3s4.l6a_1.b6a_1 = false;
           } else {
             if (item instanceof CatalogueIntValue) {
               formatNumber(_this__u8e3s4, item);
-              _this__u8e3s4.s69_1.i69_1 = false;
+              _this__u8e3s4.l6a_1.b6a_1 = false;
             } else {
               if (item instanceof CatalogueFloatValue) {
                 formatNumber(_this__u8e3s4, item);
-                _this__u8e3s4.s69_1.i69_1 = false;
+                _this__u8e3s4.l6a_1.b6a_1 = false;
               } else {
                 if (item instanceof CatalogueComment) {
                   formatComment(_this__u8e3s4, item);
-                  _this__u8e3s4.s69_1.i69_1 = false;
+                  _this__u8e3s4.l6a_1.b6a_1 = false;
                 } else {
                   if (item instanceof CatalogueErrorChar) {
                     formatLiteral(_this__u8e3s4, item);
-                    _this__u8e3s4.s69_1.i69_1 = false;
+                    _this__u8e3s4.l6a_1.b6a_1 = false;
                   } else {
                     if (item instanceof CatalogueStringValue) {
                       formatLiteral(_this__u8e3s4, item);
-                      _this__u8e3s4.s69_1.i69_1 = false;
+                      _this__u8e3s4.l6a_1.b6a_1 = false;
                     } else {
                       noWhenBranchMatchedException();
                     }
@@ -698,7 +698,7 @@ function formatItem(_this__u8e3s4, item) {
     }
   }
   if (nonWhitespace) {
-    _this__u8e3s4.s69_1.j69_1 = true;
+    _this__u8e3s4.l6a_1.c6a_1 = true;
   }
   addNewLineIf(_this__u8e3s4, item);
 }
@@ -708,12 +708,12 @@ function formatKeyword(_this__u8e3s4, item) {
   // Inline function 'kotlin.js.asDynamic' call
   var text = originalText.toUpperCase();
   if (text === originalText) {
-    _this__u8e3s4.s69_1.a69_1.t(originalText);
+    _this__u8e3s4.l6a_1.t69_1.t(originalText);
     return Unit_instance;
   }
-  _this__u8e3s4.s69_1.a69_1.t(text);
-  _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_start(item)), text));
-  _this__u8e3s4.s69_1.c69_1.z1(EditReason_INCORRECT_CASE_getInstance());
+  _this__u8e3s4.l6a_1.t69_1.t(text);
+  _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_start(item)), text));
+  _this__u8e3s4.l6a_1.v69_1.z1(EditReason_INCORRECT_CASE_getInstance());
 }
 function formatNumber(_this__u8e3s4, item) {
   var tmp;
@@ -723,37 +723,37 @@ function formatNumber(_this__u8e3s4, item) {
     tmp = '"' + item.j1f() + '"';
   }
   var text = tmp;
-  _this__u8e3s4.s69_1.a69_1.t(text);
+  _this__u8e3s4.l6a_1.t69_1.t(text);
 }
 function formatLiteral(_this__u8e3s4, item) {
-  _this__u8e3s4.s69_1.a69_1.t(item.j1f());
+  _this__u8e3s4.l6a_1.t69_1.t(item.j1f());
 }
 function format($this) {
-  var errors = CatalogueValidator_instance.f68($this.r69_1);
+  var errors = CatalogueValidator_instance.y68($this.k6a_1);
   // Inline function 'kotlin.collections.isNotEmpty' call
   // Inline function 'kotlin.collections.isEmpty' call
   if (!(errors.length === 0)) {
-    throw CatalogueFormatException.j68('Cannot format catalogue with known errors');
+    throw CatalogueFormatException.c69('Cannot format catalogue with known errors');
   }
   // Inline function 'kotlin.collections.isNotEmpty' call
   // Inline function 'kotlin.collections.isEmpty' call
   if (!(errors.length === 0)) {
-    throw CatalogueFormatException.j68('Cannot format Catalogue text with known errors');
+    throw CatalogueFormatException.c69('Cannot format Catalogue text with known errors');
   }
   loop($this);
   finalizeTrailingWhitespace($this);
-  var tmp = $this.s69_1.w5d();
+  var tmp = $this.l6a_1.p5e();
   // Inline function 'kotlin.collections.toTypedArray' call
-  var this_0 = $this.s69_1.b69_1;
+  var this_0 = $this.l6a_1.u69_1;
   var tmp_0 = copyToArray(this_0);
   // Inline function 'kotlin.collections.toTypedArray' call
-  var this_1 = $this.s69_1.c69_1;
+  var this_1 = $this.l6a_1.v69_1;
   var tmp$ret$5 = copyToArray(this_1);
-  return new FormatResult(tmp, $this.q69_1, tmp_0, tmp$ret$5);
+  return new FormatResult(tmp, $this.j6a_1, tmp_0, tmp$ret$5);
 }
 function loop($this) {
-  while ($this.s69_1.x5d()) {
-    var tmp0_elvis_lhs = $this.s69_1.y();
+  while ($this.l6a_1.q5e()) {
+    var tmp0_elvis_lhs = $this.l6a_1.y();
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -762,7 +762,7 @@ function loop($this) {
     }
     var item = tmp;
     formatItem($this, item);
-    $this.s69_1.z68_1 = get_endLine(item);
+    $this.l6a_1.s69_1 = get_endLine(item);
   }
 }
 var Companion_instance_0;
@@ -770,7 +770,7 @@ function Companion_getInstance_0() {
   return Companion_instance_0;
 }
 function _get_itemsCount__k57ad8($this) {
-  var tmp0 = $this.f69_1;
+  var tmp0 = $this.y69_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('itemsCount', 1, tmp, FormatterState$_get_itemsCount_$ref_3l29wo(), null);
@@ -789,7 +789,7 @@ function FormatterState$items$delegate$lambda$lambda(a, b) {
 function FormatterState$items$delegate$lambda(this$0) {
   return () => {
     // Inline function 'kotlin.collections.sortedBy' call
-    var this_0 = this$0.y68_1.parserItems;
+    var this_0 = this$0.r69_1.parserItems;
     // Inline function 'kotlin.comparisons.compareBy' call
     var tmp = FormatterState$items$delegate$lambda$lambda;
     var tmp$ret$1 = new sam$kotlin_Comparator$0(tmp);
@@ -797,10 +797,10 @@ function FormatterState$items$delegate$lambda(this$0) {
   };
 }
 function FormatterState$_get_items_$ref_okzgnx() {
-  return (p0) => p0.v69();
+  return (p0) => p0.o6a();
 }
 function FormatterState$itemsCount$delegate$lambda(this$0) {
-  return () => this$0.v69().b2();
+  return () => this$0.o6a().b2();
 }
 function FormatterState$_get_itemsCount_$ref_3l29wo() {
   return (p0) => _get_itemsCount__k57ad8(p0);
@@ -808,7 +808,7 @@ function FormatterState$_get_itemsCount_$ref_3l29wo() {
 function FormatterState$scriptStarts$delegate$lambda(this$0) {
   return () => {
     // Inline function 'kotlin.collections.map' call
-    var this_0 = this$0.y68_1.catalogueEntries;
+    var this_0 = this$0.r69_1.catalogueEntries;
     // Inline function 'kotlin.collections.mapTo' call
     var destination = ArrayList.y1(this_0.length);
     var inductionVariable = 0;
@@ -824,7 +824,7 @@ function FormatterState$scriptStarts$delegate$lambda(this$0) {
 }
 function FormatterState$maxBlankLinesBetweenValues$delegate$lambda(this$0) {
   return () => {
-    var tmp0_elvis_lhs = this$0.x68_1.p68_1;
+    var tmp0_elvis_lhs = this$0.q69_1.i69_1;
     var maxBlankLines = tmp0_elvis_lhs == null ? -1 : tmp0_elvis_lhs;
     var tmp;
     if (maxBlankLines < 0) {
@@ -836,11 +836,11 @@ function FormatterState$maxBlankLinesBetweenValues$delegate$lambda(this$0) {
   };
 }
 function FormatterState$_get_maxBlankLinesBetweenValues_$ref_s32f8k() {
-  return (p0) => p0.w69();
+  return (p0) => p0.p6a();
 }
 function FormatterState$maxBlankLinesBetweenEntries$delegate$lambda(this$0) {
   return () => {
-    var tmp0_elvis_lhs = this$0.x68_1.q68_1;
+    var tmp0_elvis_lhs = this$0.q69_1.j69_1;
     var maxBlankLines = tmp0_elvis_lhs == null ? -1 : tmp0_elvis_lhs;
     var tmp;
     if (maxBlankLines < 0) {
@@ -852,7 +852,7 @@ function FormatterState$maxBlankLinesBetweenEntries$delegate$lambda(this$0) {
   };
 }
 function FormatterState$_get_maxBlankLinesBetweenEntries_$ref_fs4ac4() {
-  return (p0) => p0.x69();
+  return (p0) => p0.q6a();
 }
 function finalizeTrailingWhitespace(_this__u8e3s4) {
   // Inline function 'kotlin.collections.sortedBy' call
@@ -862,10 +862,10 @@ function finalizeTrailingWhitespace(_this__u8e3s4) {
   var tmp$ret$1 = new sam$kotlin_Comparator$0_0(tmp);
   var finalWhitespace = sortedWith_0(this_0, tmp$ret$1);
   if (finalWhitespace.u()) {
-    if (_this__u8e3s4.s69_1.x56() || !_this__u8e3s4.s69_1.w56()) {
+    if (_this__u8e3s4.l6a_1.n57() || !_this__u8e3s4.l6a_1.m57()) {
       return Unit_instance;
     }
-    var tmp0_safe_receiver = lastOrNull(_this__u8e3s4.s69_1.v69());
+    var tmp0_safe_receiver = lastOrNull(_this__u8e3s4.l6a_1.o6a());
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : get_end(tmp0_safe_receiver);
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
@@ -875,34 +875,34 @@ function finalizeTrailingWhitespace(_this__u8e3s4) {
     }
     var point = tmp_0;
     var range = new RangeImpl(point, point);
-    _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(range, _this__u8e3s4.s69_1.o69_1));
-    _this__u8e3s4.s69_1.a69_1.t(_this__u8e3s4.s69_1.o69_1);
-    _this__u8e3s4.s69_1.c69_1.z1(EditReason_NEWLINES_NEEDED_getInstance());
+    _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(range, _this__u8e3s4.l6a_1.h6a_1));
+    _this__u8e3s4.l6a_1.t69_1.t(_this__u8e3s4.l6a_1.h6a_1);
+    _this__u8e3s4.l6a_1.v69_1.z1(EditReason_NEWLINES_NEEDED_getInstance());
     return Unit_instance;
   }
   var start = get_start(first(finalWhitespace));
   var end = get_end(last(finalWhitespace));
   var range_0 = new RangeImpl(start, end);
-  if (_this__u8e3s4.s69_1.x56()) {
-    _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(range_0, ''));
-    _this__u8e3s4.s69_1.c69_1.z1(EditReason_NEWLINES_TOO_MANY_getInstance());
+  if (_this__u8e3s4.l6a_1.n57()) {
+    _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(range_0, ''));
+    _this__u8e3s4.l6a_1.v69_1.z1(EditReason_NEWLINES_TOO_MANY_getInstance());
     return Unit_instance;
   }
   var originalText = joinToString(finalWhitespace, '', VOID, VOID, VOID, VOID, finalizeTrailingWhitespace$lambda_0);
   var tmp_1;
-  if (_this__u8e3s4.s69_1.w56()) {
-    tmp_1 = _this__u8e3s4.s69_1.o69_1;
+  if (_this__u8e3s4.l6a_1.m57()) {
+    tmp_1 = _this__u8e3s4.l6a_1.h6a_1;
   } else {
     var tmp0 = replace(replace(originalText, ' ', ''), '\t', '');
     // Inline function 'kotlin.text.toRegex' call
     var tmp2 = Regex.uf('\r?\n');
     // Inline function 'kotlin.text.replace' call
-    var replacement = _this__u8e3s4.s69_1.o69_1;
+    var replacement = _this__u8e3s4.l6a_1.h6a_1;
     tmp_1 = tmp2.bg(tmp0, replacement);
   }
   var targetText = tmp_1;
   if (originalText === targetText) {
-    _this__u8e3s4.s69_1.a69_1.t(originalText);
+    _this__u8e3s4.l6a_1.t69_1.t(originalText);
     return Unit_instance;
   }
   var tmp_2;
@@ -937,16 +937,16 @@ function finalizeTrailingWhitespace(_this__u8e3s4) {
     }
   }
   var reason = tmp_2;
-  _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(range_0, targetText));
-  _this__u8e3s4.s69_1.c69_1.z1(reason);
-  _this__u8e3s4.s69_1.a69_1.t(targetText);
+  _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(range_0, targetText));
+  _this__u8e3s4.l6a_1.v69_1.z1(reason);
+  _this__u8e3s4.l6a_1.t69_1.t(targetText);
 }
 function getTrailingWhitespace(_this__u8e3s4) {
   // Inline function 'kotlin.collections.mutableListOf' call
   var out = ArrayList.u1();
-  var i = get_lastIndex(_this__u8e3s4.s69_1.v69());
+  var i = get_lastIndex(_this__u8e3s4.l6a_1.o6a());
   $l$loop: while (i >= 0) {
-    var tmp = _this__u8e3s4.s69_1.v69();
+    var tmp = _this__u8e3s4.l6a_1.o6a();
     var _unary__edvuaz = i;
     i = _unary__edvuaz - 1 | 0;
     var item = tmp.d2(_unary__edvuaz);
@@ -959,20 +959,20 @@ function getTrailingWhitespace(_this__u8e3s4) {
   return out;
 }
 function ensureSpace(_this__u8e3s4, item) {
-  var tmp0_safe_receiver = _this__u8e3s4.s69_1.j5e();
+  var tmp0_safe_receiver = _this__u8e3s4.l6a_1.c5f();
   if ((tmp0_safe_receiver == null ? null : isComment(tmp0_safe_receiver)) === true) {
     return Unit_instance;
   }
   if (isWhitespaceOrComment(item)) {
     return Unit_instance;
   }
-  var previous = _this__u8e3s4.s69_1.m5e(-1);
-  if (_this__u8e3s4.s69_1.i69_1) {
+  var previous = _this__u8e3s4.l6a_1.f5f(-1);
+  if (_this__u8e3s4.l6a_1.b6a_1) {
     return Unit_instance;
   }
   var tmp;
   var tmp_0;
-  if (!_this__u8e3s4.s69_1.i69_1) {
+  if (!_this__u8e3s4.l6a_1.b6a_1) {
     tmp_0 = !((previous == null ? null : isComment(previous)) === true);
   } else {
     tmp_0 = false;
@@ -986,28 +986,28 @@ function ensureSpace(_this__u8e3s4, item) {
   if (!needsSpace) {
     return Unit_instance;
   }
-  _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_start(item)), ' '));
-  _this__u8e3s4.s69_1.c69_1.z1(EditReason_SPACE_NEEDED_getInstance());
-  _this__u8e3s4.s69_1.a69_1.t(' ');
+  _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_start(item)), ' '));
+  _this__u8e3s4.l6a_1.v69_1.z1(EditReason_SPACE_NEEDED_getInstance());
+  _this__u8e3s4.l6a_1.t69_1.t(' ');
 }
 function formatSpace(_this__u8e3s4, item) {
-  var lastItem = _this__u8e3s4.s69_1.j5e();
+  var lastItem = _this__u8e3s4.l6a_1.c5f();
   var tmp;
-  if (_this__u8e3s4.s69_1.i69_1 || lastItem == null) {
+  if (_this__u8e3s4.l6a_1.b6a_1 || lastItem == null) {
     tmp = true;
   } else {
     tmp = lastItem instanceof CatalogueNewline;
   }
   if (tmp) {
-    _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), ''));
-    _this__u8e3s4.s69_1.c69_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
+    _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), ''));
+    _this__u8e3s4.l6a_1.v69_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
     return Unit_instance;
   }
-  var nextItem = _this__u8e3s4.s69_1.y69();
+  var nextItem = _this__u8e3s4.l6a_1.r6a();
   if ((nextItem == null ? null : isWhitespaceOrComment(nextItem)) === true) {
     if (!(nextItem instanceof CatalogueComment)) {
-      _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), ''));
-      _this__u8e3s4.s69_1.c69_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
+      _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), ''));
+      _this__u8e3s4.l6a_1.v69_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
     }
     return Unit_instance;
   }
@@ -1024,30 +1024,30 @@ function formatSpace(_this__u8e3s4, item) {
         if (get_endLine(lastItem) === get_startLine(item)) {
           tmp_0 = ' ';
         } else {
-          tmp_0 = item.k64_1;
+          tmp_0 = item.d65_1;
         }
       }
     }
   }
   var space = tmp_0;
-  if (!(item.k64_1 === space)) {
-    var difference = item.k64_1.length - space.length | 0;
+  if (!(item.d65_1 === space)) {
+    var difference = item.d65_1.length - space.length | 0;
     if (difference === 0) {
-      _this__u8e3s4.s69_1.c69_1.z1(EditReason_TAB_CHANGE_getInstance());
+      _this__u8e3s4.l6a_1.v69_1.z1(EditReason_TAB_CHANGE_getInstance());
     } else if (difference < 0) {
-      _this__u8e3s4.s69_1.c69_1.z1(EditReason_SPACE_NEEDED_getInstance());
+      _this__u8e3s4.l6a_1.v69_1.z1(EditReason_SPACE_NEEDED_getInstance());
     } else {
-      _this__u8e3s4.s69_1.c69_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
+      _this__u8e3s4.l6a_1.v69_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
     }
-    _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), space));
+    _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_end(item)), space));
   }
-  _this__u8e3s4.s69_1.a69_1.t(space);
+  _this__u8e3s4.l6a_1.t69_1.t(space);
 }
 function formatNewLine(_this__u8e3s4, item) {
-  var tmp = _this__u8e3s4.s69_1.m5e(-1);
+  var tmp = _this__u8e3s4.l6a_1.f5f(-1);
   var lastWasComment = tmp instanceof CatalogueComment;
-  var next = _this__u8e3s4.s69_1.y69();
-  if (_this__u8e3s4.s69_1.b6a()) {
+  var next = _this__u8e3s4.l6a_1.r6a();
+  if (_this__u8e3s4.l6a_1.u6a()) {
     return Unit_instance;
   }
   var tmp_0;
@@ -1057,23 +1057,23 @@ function formatNewLine(_this__u8e3s4, item) {
     tmp_0 = false;
   }
   var isItemBetweenComments = tmp_0;
-  var tmp1_safe_receiver = _this__u8e3s4.s69_1.a6a();
+  var tmp1_safe_receiver = _this__u8e3s4.l6a_1.t6a();
   var isEntityNext = (tmp1_safe_receiver == null ? null : isEntityStart(tmp1_safe_receiver)) === true;
-  var newLines = newLineCountConstrained(_this__u8e3s4, item.b64_1, lastWasComment, isItemBetweenComments, isEntityNext);
+  var newLines = newLineCountConstrained(_this__u8e3s4, item.u64_1, lastWasComment, isItemBetweenComments, isEntityNext);
   var tmp_1;
   if (newLines > 0) {
-    tmp_1 = repeat(_this__u8e3s4.s69_1.o69_1, newLines);
+    tmp_1 = repeat(_this__u8e3s4.l6a_1.h6a_1, newLines);
   } else {
     tmp_1 = '';
   }
   var newLineText = tmp_1;
-  _this__u8e3s4.s69_1.i69_1 = newLines > 0;
-  if (!(item.a64_1 === newLineText)) {
-    var range = new RangeImpl(item.z63_1.h1(), item.z63_1.f1e());
-    _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(range, newLineText));
+  _this__u8e3s4.l6a_1.b6a_1 = newLines > 0;
+  if (!(item.t64_1 === newLineText)) {
+    var range = new RangeImpl(item.s64_1.h1(), item.s64_1.f1e());
+    _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(range, newLineText));
     // Inline function 'kotlin.text.count' call
     var count = 0;
-    var indexedObject = item.a64_1;
+    var indexedObject = item.t64_1;
     var inductionVariable = 0;
     while (inductionVariable < charSequenceLength(indexedObject)) {
       var element = charSequenceGet(indexedObject, inductionVariable);
@@ -1095,14 +1095,14 @@ function formatNewLine(_this__u8e3s4, item) {
     }
     var newLineCount = count_0;
     if (existingLineCount === newLines) {
-      _this__u8e3s4.s69_1.c69_1.z1(EditReason_SPACE_NEEDED_getInstance());
+      _this__u8e3s4.l6a_1.v69_1.z1(EditReason_SPACE_NEEDED_getInstance());
     } else if (existingLineCount < newLineCount) {
-      _this__u8e3s4.s69_1.c69_1.z1(EditReason_NEWLINES_NEEDED_getInstance());
+      _this__u8e3s4.l6a_1.v69_1.z1(EditReason_NEWLINES_NEEDED_getInstance());
     } else {
-      _this__u8e3s4.s69_1.c69_1.z1(EditReason_NEWLINES_TOO_MANY_getInstance());
+      _this__u8e3s4.l6a_1.v69_1.z1(EditReason_NEWLINES_TOO_MANY_getInstance());
     }
   }
-  _this__u8e3s4.s69_1.a69_1.t(newLineText);
+  _this__u8e3s4.l6a_1.t69_1.t(newLineText);
 }
 function addNewLineIf(_this__u8e3s4, item) {
   if (isWhitespace(item)) {
@@ -1116,7 +1116,7 @@ function addNewLineIf(_this__u8e3s4, item) {
   $l$loop_0: while (true) {
     var _unary__edvuaz = nextI;
     nextI = _unary__edvuaz + 1 | 0;
-    var tmp0_elvis_lhs = _this__u8e3s4.s69_1.m5e(_unary__edvuaz);
+    var tmp0_elvis_lhs = _this__u8e3s4.l6a_1.f5f(_unary__edvuaz);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1133,18 +1133,18 @@ function addNewLineIf(_this__u8e3s4, item) {
       break $l$loop_0;
     }
   }
-  var next_0 = _this__u8e3s4.s69_1.y69();
+  var next_0 = _this__u8e3s4.l6a_1.r6a();
   if ((next_0 == null ? null : isWhitespace(next_0)) === true) {
     return Unit_instance;
   }
-  if (_this__u8e3s4.s69_1.b6a()) {
+  if (_this__u8e3s4.l6a_1.u6a()) {
     return Unit_instance;
   }
   var i = -1;
   $l$loop_1: while (true) {
     var tmp_0;
     if (i >= 0) {
-      var tmp2_safe_receiver = _this__u8e3s4.s69_1.m5e(i);
+      var tmp2_safe_receiver = _this__u8e3s4.l6a_1.f5f(i);
       tmp_0 = (tmp2_safe_receiver == null ? null : isWhitespace(tmp2_safe_receiver)) === true;
     } else {
       tmp_0 = false;
@@ -1152,24 +1152,24 @@ function addNewLineIf(_this__u8e3s4, item) {
     if (!tmp_0) {
       break $l$loop_1;
     }
-    var tmp_1 = _this__u8e3s4.s69_1.m5e(i);
+    var tmp_1 = _this__u8e3s4.l6a_1.f5f(i);
     if (tmp_1 instanceof CatalogueNewline) {
       return Unit_instance;
     }
     i = i - 1 | 0;
   }
-  var newLine = _this__u8e3s4.s69_1.p69_1;
-  _this__u8e3s4.s69_1.i69_1 = true;
-  _this__u8e3s4.s69_1.a69_1.t(newLine);
-  _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_start(item)), newLine));
-  _this__u8e3s4.s69_1.c69_1.z1(EditReason_NEWLINES_NEEDED_getInstance());
+  var newLine = _this__u8e3s4.l6a_1.i6a_1;
+  _this__u8e3s4.l6a_1.b6a_1 = true;
+  _this__u8e3s4.l6a_1.t69_1.t(newLine);
+  _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(new RangeImpl(get_start(item), get_start(item)), newLine));
+  _this__u8e3s4.l6a_1.v69_1.z1(EditReason_NEWLINES_NEEDED_getInstance());
 }
 function willNewlineNext(_this__u8e3s4, offset) {
   offset = offset === VOID ? 0 : offset;
-  if (_this__u8e3s4.s69_1.i69_1) {
+  if (_this__u8e3s4.l6a_1.b6a_1) {
     return false;
   }
-  var tmp0_elvis_lhs = _this__u8e3s4.s69_1.m5e(offset);
+  var tmp0_elvis_lhs = _this__u8e3s4.l6a_1.f5f(offset);
   var tmp;
   if (tmp0_elvis_lhs == null) {
     return false;
@@ -1177,7 +1177,7 @@ function willNewlineNext(_this__u8e3s4, offset) {
     tmp = tmp0_elvis_lhs;
   }
   var item = tmp;
-  var next = _this__u8e3s4.s69_1.m5e(offset + 1 | 0);
+  var next = _this__u8e3s4.l6a_1.f5f(offset + 1 | 0);
   if (isComment(item)) {
     return false;
   }
@@ -1211,8 +1211,8 @@ function willNewlineNext(_this__u8e3s4, offset) {
   return true;
 }
 function newLineCountConstrained(_this__u8e3s4, lines, commentLast, commentNext, newEntityNext) {
-  var maxBlankLines = newEntityNext ? _this__u8e3s4.s69_1.x69() : _this__u8e3s4.s69_1.w69();
-  var minBlankLines = newEntityNext ? _this__u8e3s4.s69_1.n69_1 : _this__u8e3s4.s69_1.l69_1;
+  var maxBlankLines = newEntityNext ? _this__u8e3s4.l6a_1.q6a() : _this__u8e3s4.l6a_1.p6a();
+  var minBlankLines = newEntityNext ? _this__u8e3s4.l6a_1.g6a_1 : _this__u8e3s4.l6a_1.e6a_1;
   if (commentNext) {
     // Inline function 'kotlin.math.max' call
     // Inline function 'kotlin.math.min' call
@@ -1222,7 +1222,7 @@ function newLineCountConstrained(_this__u8e3s4, lines, commentLast, commentNext,
   var tmp;
   if ((lines - 1 | 0) > maxBlankLines) {
     tmp = maxBlankLines + 1 | 0;
-  } else if (_this__u8e3s4.s69_1.d57() || !commentLast) {
+  } else if (_this__u8e3s4.l6a_1.t57() || !commentLast) {
     var tmp0 = maxBlankLines + 1 | 0;
     // Inline function 'kotlin.math.max' call
     var a = minBlankLines + 1 | 0;
@@ -1249,10 +1249,10 @@ function finalizeTrailingWhitespace$lambda_0(it) {
 }
 function formatComment(_this__u8e3s4, item) {
   if (get_startCharacter(item) === 0) {
-    _this__u8e3s4.s69_1.a69_1.t(item.t63_1);
+    _this__u8e3s4.l6a_1.t69_1.t(item.m64_1);
     return Unit_instance;
   }
-  var lastItem = _this__u8e3s4.s69_1.j5e();
+  var lastItem = _this__u8e3s4.l6a_1.c5f();
   var newTab = '';
   var tmp;
   if (!(lastItem == null)) {
@@ -1268,10 +1268,10 @@ function formatComment(_this__u8e3s4, item) {
   }
   var start = tmp;
   if (!((lastItem == null ? null : lastItem.j1f()) === newTab)) {
-    _this__u8e3s4.s69_1.b69_1.z1(new TextEditImpl(new RangeImpl(start, get_start(item)), newTab));
-    _this__u8e3s4.s69_1.c69_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
+    _this__u8e3s4.l6a_1.u69_1.z1(new TextEditImpl(new RangeImpl(start, get_start(item)), newTab));
+    _this__u8e3s4.l6a_1.v69_1.z1(EditReason_SPACE_TOO_MANY_getInstance());
   }
-  _this__u8e3s4.s69_1.a69_1.t(item.t63_1);
+  _this__u8e3s4.l6a_1.t69_1.t(item.m64_1);
 }
 function formatCatalogue_1(text, optionsRaw) {
   var options = getFormattingOptions(optionsRaw);
@@ -1310,7 +1310,7 @@ function getFormattingOptions(optionsRaw) {
   } catch ($p) {
     if ($p instanceof Exception) {
       var e = $p;
-      throw CatalogueFormatException.j68('Failed to parse catalogue formatting options; ' + formatted(e, true), e);
+      throw CatalogueFormatException.c69('Failed to parse catalogue formatting options; ' + formatted(e, true), e);
     } else {
       throw $p;
     }

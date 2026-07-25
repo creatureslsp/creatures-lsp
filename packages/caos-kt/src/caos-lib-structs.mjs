@@ -95,7 +95,7 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.p4o_1 = [null, null, tmp_1, null, null, tmp_3, null, lazy(tmp_4, CaosCommand$Companion$$childSerializers$_anonymous__psokld_1), null, null, null, null, null, null, null];
+    tmp.f4p_1 = [null, null, tmp_1, null, null, tmp_3, null, lazy(tmp_4, CaosCommand$Companion$$childSerializers$_anonymous__psokld_1), null, null, null, null, null, null, null];
   }
 }
 class $serializer {
@@ -132,48 +132,48 @@ class $serializer {
     tmp0_serialDesc.e13(new ProtoNumber(14));
     tmp0_serialDesc.w13('ceOnly', true);
     tmp0_serialDesc.e13(new ProtoNumber(15));
-    this.q4o_1 = tmp0_serialDesc;
+    this.g4p_1 = tmp0_serialDesc;
   }
-  r4o(encoder, value) {
-    var tmp0_desc = this.q4o_1;
+  h4p(encoder, value) {
+    var tmp0_desc = this.g4p_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance().p4o_1;
-    tmp1_output.mx(tmp0_desc, 0, value.s4o_1);
-    tmp1_output.rx(tmp0_desc, 1, value.t4o_1);
-    tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.u4o_1);
-    tmp1_output.mx(tmp0_desc, 3, value.v4o_1);
-    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.w4o_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 4, StringSerializer_getInstance(), value.w4o_1);
+    var tmp2_cached = Companion_getInstance().f4p_1;
+    tmp1_output.mx(tmp0_desc, 0, value.i4p_1);
+    tmp1_output.rx(tmp0_desc, 1, value.j4p_1);
+    tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.k4p_1);
+    tmp1_output.mx(tmp0_desc, 3, value.l4p_1);
+    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.m4p_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 4, StringSerializer_getInstance(), value.m4p_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.x4o_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 5, tmp2_cached[5].k3(), value.x4o_1);
+    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.n4p_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 5, tmp2_cached[5].k3(), value.n4p_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 6) ? true : !(value.y4o_1 === 0)) {
-      tmp1_output.mx(tmp0_desc, 6, value.y4o_1);
+    if (tmp1_output.zx(tmp0_desc, 6) ? true : !(value.o4p_1 === 0)) {
+      tmp1_output.mx(tmp0_desc, 6, value.o4p_1);
     }
-    tmp1_output.tx(tmp0_desc, 7, tmp2_cached[7].k3(), value.z4o_1);
-    tmp1_output.jx(tmp0_desc, 8, value.a4p_1);
-    tmp1_output.jx(tmp0_desc, 9, value.b4p_1);
-    if (tmp1_output.zx(tmp0_desc, 10) ? true : !(value.c4p_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 10, StringSerializer_getInstance(), value.c4p_1);
+    tmp1_output.tx(tmp0_desc, 7, tmp2_cached[7].k3(), value.p4p_1);
+    tmp1_output.jx(tmp0_desc, 8, value.q4p_1);
+    tmp1_output.jx(tmp0_desc, 9, value.r4p_1);
+    if (tmp1_output.zx(tmp0_desc, 10) ? true : !(value.s4p_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 10, StringSerializer_getInstance(), value.s4p_1);
     }
-    tmp1_output.rx(tmp0_desc, 11, value.d4p_1);
-    if (tmp1_output.zx(tmp0_desc, 12) ? true : !(value.e4p_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 12, StringSerializer_getInstance(), value.e4p_1);
+    tmp1_output.rx(tmp0_desc, 11, value.t4p_1);
+    if (tmp1_output.zx(tmp0_desc, 12) ? true : !(value.u4p_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 12, StringSerializer_getInstance(), value.u4p_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 13) ? true : !(value.f4p_1 === false)) {
-      tmp1_output.jx(tmp0_desc, 13, value.f4p_1);
+    if (tmp1_output.zx(tmp0_desc, 13) ? true : !(value.v4p_1 === false)) {
+      tmp1_output.jx(tmp0_desc, 13, value.v4p_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 14) ? true : !(value.g4p_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 14, BooleanSerializer_getInstance(), value.g4p_1);
+    if (tmp1_output.zx(tmp0_desc, 14) ? true : !(value.w4p_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 14, BooleanSerializer_getInstance(), value.w4p_1);
     }
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.r4o(encoder, value instanceof CaosCommand ? value : THROW_CCE());
+    return this.h4p(encoder, value instanceof CaosCommand ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.q4o_1;
+    var tmp0_desc = this.g4p_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -193,7 +193,7 @@ class $serializer {
     var tmp17_local13 = false;
     var tmp18_local14 = null;
     var tmp22_input = decoder.bw(tmp0_desc);
-    var tmp23_cached = Companion_getInstance().p4o_1;
+    var tmp23_cached = Companion_getInstance().f4p_1;
     if (tmp22_input.sw()) {
       tmp4_local0 = tmp22_input.gw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -297,13 +297,13 @@ class $serializer {
         }
       }
     tmp22_input.cw(tmp0_desc);
-    return CaosCommand.k4p(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, tmp17_local13, tmp18_local14, null);
+    return CaosCommand.a4q(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, tmp17_local13, tmp18_local14, null);
   }
   lr() {
-    return this.q4o_1;
+    return this.g4p_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance().p4o_1;
+    var tmp0_cached = Companion_getInstance().f4p_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -320,40 +320,40 @@ class CaosCommand {
     doifFormat = doifFormat === VOID ? null : doifFormat;
     requiresCreatureOwnr = requiresCreatureOwnr === VOID ? false : requiresCreatureOwnr;
     ceOnly = ceOnly === VOID ? null : ceOnly;
-    this.s4o_1 = id;
-    this.t4o_1 = command;
-    this.u4o_1 = parameters;
-    this.v4o_1 = returnTypeId;
-    this.w4o_1 = description;
-    this.x4o_1 = returnValuesListIds;
-    this.y4o_1 = requiresOwnr;
-    this.z4o_1 = variants;
-    this.a4p_1 = rvalue;
-    this.b4p_1 = lvalue;
-    this.c4p_1 = lvalueName;
-    this.d4p_1 = commandGroup;
-    this.e4p_1 = doifFormat;
-    this.f4p_1 = requiresCreatureOwnr;
-    this.g4p_1 = ceOnly;
+    this.i4p_1 = id;
+    this.j4p_1 = command;
+    this.k4p_1 = parameters;
+    this.l4p_1 = returnTypeId;
+    this.m4p_1 = description;
+    this.n4p_1 = returnValuesListIds;
+    this.o4p_1 = requiresOwnr;
+    this.p4p_1 = variants;
+    this.q4p_1 = rvalue;
+    this.r4p_1 = lvalue;
+    this.s4p_1 = lvalueName;
+    this.t4p_1 = commandGroup;
+    this.u4p_1 = doifFormat;
+    this.v4p_1 = requiresCreatureOwnr;
+    this.w4p_1 = ceOnly;
     var tmp = this;
-    tmp.h4p_1 = lazy_0(CaosCommand$tokens$delegate$lambda(this));
+    tmp.x4p_1 = lazy_0(CaosCommand$tokens$delegate$lambda(this));
     var tmp_0 = this;
-    tmp_0.i4p_1 = lazy_0(CaosCommand$fullCommandHeader$delegate$lambda(this));
+    tmp_0.y4p_1 = lazy_0(CaosCommand$fullCommandHeader$delegate$lambda(this));
     var tmp_1 = this;
-    tmp_1.j4p_1 = lazy_0(CaosCommand$isCommand$delegate$lambda(this));
+    tmp_1.z4p_1 = lazy_0(CaosCommand$isCommand$delegate$lambda(this));
   }
-  l4p() {
-    return Companion_instance.fromIntValue(this.v4o_1);
+  b4q() {
+    return Companion_instance.fromIntValue(this.l4p_1);
   }
-  h1s() {
-    var tmp0 = this.h4p_1;
+  j1s() {
+    var tmp0 = this.x4p_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('tokens', 1, tmp, CaosCommand$_get_tokens_$ref_qlm063(), null);
     return tmp0.k3();
   }
-  n4p() {
-    var tmp0 = this.j4p_1;
+  d4q() {
+    var tmp0 = this.z4p_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('isCommand', 1, tmp, CaosCommand$_get_isCommand_$ref_j0upw(), null);
@@ -364,137 +364,137 @@ class CaosCommand {
       return true;
     if (!(other instanceof CaosCommand))
       return false;
-    if (!(this.s4o_1 === other.s4o_1))
+    if (!(this.i4p_1 === other.i4p_1))
       return false;
-    if (!(this.t4o_1 === other.t4o_1))
+    if (!(this.j4p_1 === other.j4p_1))
       return false;
-    if (!contentEquals(this.u4o_1, other.u4o_1))
+    if (!contentEquals(this.k4p_1, other.k4p_1))
       return false;
-    if (!this.l4p().equals(other.l4p()))
+    if (!this.b4q().equals(other.b4q()))
       return false;
-    if (!(this.w4o_1 == other.w4o_1))
+    if (!(this.m4p_1 == other.m4p_1))
       return false;
-    if (!equals(this.x4o_1, other.x4o_1))
+    if (!equals(this.n4p_1, other.n4p_1))
       return false;
-    if (!(this.y4o_1 === other.y4o_1))
+    if (!(this.o4p_1 === other.o4p_1))
       return false;
-    if (!contentEquals(this.z4o_1, other.z4o_1))
+    if (!contentEquals(this.p4p_1, other.p4p_1))
       return false;
-    if (!(this.a4p_1 === other.a4p_1))
+    if (!(this.q4p_1 === other.q4p_1))
       return false;
-    if (!(this.b4p_1 === other.b4p_1))
+    if (!(this.r4p_1 === other.r4p_1))
       return false;
-    if (!(this.c4p_1 == other.c4p_1))
+    if (!(this.s4p_1 == other.s4p_1))
       return false;
-    if (!(this.d4p_1 === other.d4p_1))
+    if (!(this.t4p_1 === other.t4p_1))
       return false;
-    if (!(this.e4p_1 == other.e4p_1))
+    if (!(this.u4p_1 == other.u4p_1))
       return false;
-    if (!(this.f4p_1 === other.f4p_1))
+    if (!(this.v4p_1 === other.v4p_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = this.s4o_1;
-    result = imul(31, result) + getStringHashCode(this.t4o_1) | 0;
-    result = imul(31, result) + contentHashCode(this.u4o_1) | 0;
-    result = imul(31, result) + this.l4p().hashCode() | 0;
+    var result = this.i4p_1;
+    result = imul(31, result) + getStringHashCode(this.j4p_1) | 0;
+    result = imul(31, result) + contentHashCode(this.k4p_1) | 0;
+    result = imul(31, result) + this.b4q().hashCode() | 0;
     var tmp = imul(31, result);
-    var tmp0_safe_receiver = this.w4o_1;
+    var tmp0_safe_receiver = this.m4p_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : getStringHashCode(tmp0_safe_receiver);
     result = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
     var tmp_0 = imul(31, result);
-    var tmp2_safe_receiver = this.x4o_1;
+    var tmp2_safe_receiver = this.n4p_1;
     var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : hashCode(tmp2_safe_receiver);
     result = tmp_0 + (tmp3_elvis_lhs == null ? 0 : tmp3_elvis_lhs) | 0;
-    result = imul(31, result) + this.y4o_1 | 0;
-    result = imul(31, result) + contentHashCode(this.z4o_1) | 0;
-    result = imul(31, result) + getBooleanHashCode(this.a4p_1) | 0;
-    result = imul(31, result) + getBooleanHashCode(this.b4p_1) | 0;
+    result = imul(31, result) + this.o4p_1 | 0;
+    result = imul(31, result) + contentHashCode(this.p4p_1) | 0;
+    result = imul(31, result) + getBooleanHashCode(this.q4p_1) | 0;
+    result = imul(31, result) + getBooleanHashCode(this.r4p_1) | 0;
     var tmp_1 = imul(31, result);
-    var tmp4_safe_receiver = this.c4p_1;
+    var tmp4_safe_receiver = this.s4p_1;
     var tmp5_elvis_lhs = tmp4_safe_receiver == null ? null : getStringHashCode(tmp4_safe_receiver);
     result = tmp_1 + (tmp5_elvis_lhs == null ? 0 : tmp5_elvis_lhs) | 0;
-    result = imul(31, result) + getStringHashCode(this.d4p_1) | 0;
+    result = imul(31, result) + getStringHashCode(this.t4p_1) | 0;
     var tmp_2 = imul(31, result);
-    var tmp6_safe_receiver = this.e4p_1;
+    var tmp6_safe_receiver = this.u4p_1;
     var tmp7_elvis_lhs = tmp6_safe_receiver == null ? null : getStringHashCode(tmp6_safe_receiver);
     result = tmp_2 + (tmp7_elvis_lhs == null ? 0 : tmp7_elvis_lhs) | 0;
-    result = imul(31, result) + getBooleanHashCode(this.f4p_1) | 0;
+    result = imul(31, result) + getBooleanHashCode(this.v4p_1) | 0;
     return result;
   }
-  o4p(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly) {
+  e4q(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly) {
     return new CaosCommand(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly);
   }
-  p4p(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly, $super) {
-    id = id === VOID ? this.s4o_1 : id;
-    command = command === VOID ? this.t4o_1 : command;
-    parameters = parameters === VOID ? this.u4o_1 : parameters;
-    returnTypeId = returnTypeId === VOID ? this.v4o_1 : returnTypeId;
-    description = description === VOID ? this.w4o_1 : description;
-    returnValuesListIds = returnValuesListIds === VOID ? this.x4o_1 : returnValuesListIds;
-    requiresOwnr = requiresOwnr === VOID ? this.y4o_1 : requiresOwnr;
-    variants = variants === VOID ? this.z4o_1 : variants;
-    rvalue = rvalue === VOID ? this.a4p_1 : rvalue;
-    lvalue = lvalue === VOID ? this.b4p_1 : lvalue;
-    lvalueName = lvalueName === VOID ? this.c4p_1 : lvalueName;
-    commandGroup = commandGroup === VOID ? this.d4p_1 : commandGroup;
-    doifFormat = doifFormat === VOID ? this.e4p_1 : doifFormat;
-    requiresCreatureOwnr = requiresCreatureOwnr === VOID ? this.f4p_1 : requiresCreatureOwnr;
-    ceOnly = ceOnly === VOID ? this.g4p_1 : ceOnly;
-    return $super === VOID ? this.o4p(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly) : $super.o4p.call(this, id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly);
+  f4q(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly, $super) {
+    id = id === VOID ? this.i4p_1 : id;
+    command = command === VOID ? this.j4p_1 : command;
+    parameters = parameters === VOID ? this.k4p_1 : parameters;
+    returnTypeId = returnTypeId === VOID ? this.l4p_1 : returnTypeId;
+    description = description === VOID ? this.m4p_1 : description;
+    returnValuesListIds = returnValuesListIds === VOID ? this.n4p_1 : returnValuesListIds;
+    requiresOwnr = requiresOwnr === VOID ? this.o4p_1 : requiresOwnr;
+    variants = variants === VOID ? this.p4p_1 : variants;
+    rvalue = rvalue === VOID ? this.q4p_1 : rvalue;
+    lvalue = lvalue === VOID ? this.r4p_1 : lvalue;
+    lvalueName = lvalueName === VOID ? this.s4p_1 : lvalueName;
+    commandGroup = commandGroup === VOID ? this.t4p_1 : commandGroup;
+    doifFormat = doifFormat === VOID ? this.u4p_1 : doifFormat;
+    requiresCreatureOwnr = requiresCreatureOwnr === VOID ? this.v4p_1 : requiresCreatureOwnr;
+    ceOnly = ceOnly === VOID ? this.w4p_1 : ceOnly;
+    return $super === VOID ? this.e4q(id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly) : $super.e4q.call(this, id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly);
   }
   toString() {
-    return 'CaosCommand(id=' + this.s4o_1 + ', command=' + this.t4o_1 + ', parameters=' + toString(this.u4o_1) + ', returnTypeId=' + this.v4o_1 + ', description=' + this.w4o_1 + ', returnValuesListIds=' + toString_0(this.x4o_1) + ', requiresOwnr=' + this.y4o_1 + ', variants=' + toString(this.z4o_1) + ', rvalue=' + this.a4p_1 + ', lvalue=' + this.b4p_1 + ', lvalueName=' + this.c4p_1 + ', commandGroup=' + this.d4p_1 + ', doifFormat=' + this.e4p_1 + ', requiresCreatureOwnr=' + this.f4p_1 + ', ceOnly=' + this.g4p_1 + ')';
+    return 'CaosCommand(id=' + this.i4p_1 + ', command=' + this.j4p_1 + ', parameters=' + toString(this.k4p_1) + ', returnTypeId=' + this.l4p_1 + ', description=' + this.m4p_1 + ', returnValuesListIds=' + toString_0(this.n4p_1) + ', requiresOwnr=' + this.o4p_1 + ', variants=' + toString(this.p4p_1) + ', rvalue=' + this.q4p_1 + ', lvalue=' + this.r4p_1 + ', lvalueName=' + this.s4p_1 + ', commandGroup=' + this.t4p_1 + ', doifFormat=' + this.u4p_1 + ', requiresCreatureOwnr=' + this.v4p_1 + ', ceOnly=' + this.w4p_1 + ')';
   }
-  static k4p(seen0, id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly, serializationConstructorMarker) {
+  static a4q(seen0, id, command, parameters, returnTypeId, description, returnValuesListIds, requiresOwnr, variants, rvalue, lvalue, lvalueName, commandGroup, doifFormat, requiresCreatureOwnr, ceOnly, serializationConstructorMarker) {
     Companion_getInstance();
     if (!(2959 === (2959 & seen0))) {
-      throwMissingFieldException(seen0, 2959, $serializer_getInstance().q4o_1);
+      throwMissingFieldException(seen0, 2959, $serializer_getInstance().g4p_1);
     }
     var $this = createThis(this);
-    $this.s4o_1 = id;
-    $this.t4o_1 = command;
-    $this.u4o_1 = parameters;
-    $this.v4o_1 = returnTypeId;
+    $this.i4p_1 = id;
+    $this.j4p_1 = command;
+    $this.k4p_1 = parameters;
+    $this.l4p_1 = returnTypeId;
     if (0 === (seen0 & 16))
-      $this.w4o_1 = null;
+      $this.m4p_1 = null;
     else
-      $this.w4o_1 = description;
+      $this.m4p_1 = description;
     if (0 === (seen0 & 32))
-      $this.x4o_1 = null;
+      $this.n4p_1 = null;
     else
-      $this.x4o_1 = returnValuesListIds;
+      $this.n4p_1 = returnValuesListIds;
     if (0 === (seen0 & 64))
-      $this.y4o_1 = 0;
+      $this.o4p_1 = 0;
     else
-      $this.y4o_1 = requiresOwnr;
-    $this.z4o_1 = variants;
-    $this.a4p_1 = rvalue;
-    $this.b4p_1 = lvalue;
+      $this.o4p_1 = requiresOwnr;
+    $this.p4p_1 = variants;
+    $this.q4p_1 = rvalue;
+    $this.r4p_1 = lvalue;
     if (0 === (seen0 & 1024))
-      $this.c4p_1 = null;
+      $this.s4p_1 = null;
     else
-      $this.c4p_1 = lvalueName;
-    $this.d4p_1 = commandGroup;
+      $this.s4p_1 = lvalueName;
+    $this.t4p_1 = commandGroup;
     if (0 === (seen0 & 4096))
-      $this.e4p_1 = null;
+      $this.u4p_1 = null;
     else
-      $this.e4p_1 = doifFormat;
+      $this.u4p_1 = doifFormat;
     if (0 === (seen0 & 8192))
-      $this.f4p_1 = false;
+      $this.v4p_1 = false;
     else
-      $this.f4p_1 = requiresCreatureOwnr;
+      $this.v4p_1 = requiresCreatureOwnr;
     if (0 === (seen0 & 16384))
-      $this.g4p_1 = null;
+      $this.w4p_1 = null;
     else
-      $this.g4p_1 = ceOnly;
+      $this.w4p_1 = ceOnly;
     var tmp = $this;
-    tmp.h4p_1 = lazy_0(CaosCommand$_init_$lambda_fg2qzm($this));
+    tmp.x4p_1 = lazy_0(CaosCommand$_init_$lambda_fg2qzm($this));
     var tmp_0 = $this;
-    tmp_0.i4p_1 = lazy_0(CaosCommand$_init_$lambda_fg2qzm_0($this));
+    tmp_0.y4p_1 = lazy_0(CaosCommand$_init_$lambda_fg2qzm_0($this));
     var tmp_1 = $this;
-    tmp_1.j4p_1 = lazy_0(CaosCommand$_init_$lambda_fg2qzm_1($this));
+    tmp_1.z4p_1 = lazy_0(CaosCommand$_init_$lambda_fg2qzm_1($this));
     return $this;
   }
 }
@@ -510,7 +510,7 @@ class Companion_0 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.q4p_1 = [null, tmp_1, tmp_3, lazy(tmp_4, CaosLibDefinitions$Companion$$childSerializers$_anonymous__fp73zn_1)];
+    tmp.g4q_1 = [null, tmp_1, tmp_3, lazy(tmp_4, CaosLibDefinitions$Companion$$childSerializers$_anonymous__fp73zn_1)];
   }
   k1e() {
     return $serializer_getInstance_0();
@@ -528,23 +528,23 @@ class $serializer_0 {
     tmp0_serialDesc.e13(new ProtoNumber(3));
     tmp0_serialDesc.w13('valuesLists', false);
     tmp0_serialDesc.e13(new ProtoNumber(4));
-    this.r4p_1 = tmp0_serialDesc;
+    this.h4q_1 = tmp0_serialDesc;
   }
-  s4p(encoder, value) {
-    var tmp0_desc = this.r4p_1;
+  i4q(encoder, value) {
+    var tmp0_desc = this.h4q_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_0().q4p_1;
-    tmp1_output.nx(tmp0_desc, 0, value.t4p_1);
-    tmp1_output.tx(tmp0_desc, 1, tmp2_cached[1].k3(), value.u4p_1);
-    tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.v4p_1);
-    tmp1_output.tx(tmp0_desc, 3, tmp2_cached[3].k3(), value.w4p_1);
+    var tmp2_cached = Companion_getInstance_0().g4q_1;
+    tmp1_output.nx(tmp0_desc, 0, value.j4q_1);
+    tmp1_output.tx(tmp0_desc, 1, tmp2_cached[1].k3(), value.k4q_1);
+    tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.l4q_1);
+    tmp1_output.tx(tmp0_desc, 3, tmp2_cached[3].k3(), value.m4q_1);
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.s4p(encoder, value instanceof CaosLibDefinitions ? value : THROW_CCE());
+    return this.i4q(encoder, value instanceof CaosLibDefinitions ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.r4p_1;
+    var tmp0_desc = this.h4q_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -553,7 +553,7 @@ class $serializer_0 {
     var tmp6_local2 = null;
     var tmp7_local3 = null;
     var tmp9_input = decoder.bw(tmp0_desc);
-    var tmp10_cached = Companion_getInstance_0().q4p_1;
+    var tmp10_cached = Companion_getInstance_0().g4q_1;
     if (tmp9_input.sw()) {
       tmp4_local0 = tmp9_input.hw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -591,13 +591,13 @@ class $serializer_0 {
         }
       }
     tmp9_input.cw(tmp0_desc);
-    return CaosLibDefinitions.y4p(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
+    return CaosLibDefinitions.o4q(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
   }
   lr() {
-    return this.r4p_1;
+    return this.h4q_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance_0().q4p_1;
+    var tmp0_cached = Companion_getInstance_0().g4q_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -607,38 +607,38 @@ class $serializer_0 {
 class CaosLibDefinitions {
   constructor(modDate, commands, variantMap, valuesLists) {
     Companion_getInstance_0();
-    this.t4p_1 = modDate;
-    this.u4p_1 = commands;
-    this.v4p_1 = variantMap;
-    this.w4p_1 = valuesLists;
+    this.j4q_1 = modDate;
+    this.k4q_1 = commands;
+    this.l4q_1 = variantMap;
+    this.m4q_1 = valuesLists;
     var tmp = this;
-    tmp.x4p_1 = lazy_0(CaosLibDefinitions$commandsById$delegate$lambda(this));
+    tmp.n4q_1 = lazy_0(CaosLibDefinitions$commandsById$delegate$lambda(this));
   }
-  z4p() {
-    var tmp0 = this.x4p_1;
+  p4q() {
+    var tmp0 = this.n4q_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('commandsById', 1, tmp, CaosLibDefinitions$_get_commandsById_$ref_g2b0sn(), null);
     return tmp0.k3();
   }
-  a4q(modDate, commands, variantMap, valuesLists) {
+  q4q(modDate, commands, variantMap, valuesLists) {
     return new CaosLibDefinitions(modDate, commands, variantMap, valuesLists);
   }
-  b4q(modDate, commands, variantMap, valuesLists, $super) {
-    modDate = modDate === VOID ? this.t4p_1 : modDate;
-    commands = commands === VOID ? this.u4p_1 : commands;
-    variantMap = variantMap === VOID ? this.v4p_1 : variantMap;
-    valuesLists = valuesLists === VOID ? this.w4p_1 : valuesLists;
-    return $super === VOID ? this.a4q(modDate, commands, variantMap, valuesLists) : $super.a4q.call(this, modDate, commands, variantMap, valuesLists);
+  r4q(modDate, commands, variantMap, valuesLists, $super) {
+    modDate = modDate === VOID ? this.j4q_1 : modDate;
+    commands = commands === VOID ? this.k4q_1 : commands;
+    variantMap = variantMap === VOID ? this.l4q_1 : variantMap;
+    valuesLists = valuesLists === VOID ? this.m4q_1 : valuesLists;
+    return $super === VOID ? this.q4q(modDate, commands, variantMap, valuesLists) : $super.q4q.call(this, modDate, commands, variantMap, valuesLists);
   }
   toString() {
-    return 'CaosLibDefinitions(modDate=' + this.t4p_1.toString() + ', commands=' + toString(this.u4p_1) + ', variantMap=' + toString(this.v4p_1) + ', valuesLists=' + toString(this.w4p_1) + ')';
+    return 'CaosLibDefinitions(modDate=' + this.j4q_1.toString() + ', commands=' + toString(this.k4q_1) + ', variantMap=' + toString(this.l4q_1) + ', valuesLists=' + toString(this.m4q_1) + ')';
   }
   hashCode() {
-    var result = getBigIntHashCode(this.t4p_1);
-    result = imul(result, 31) + hashCode(this.u4p_1) | 0;
-    result = imul(result, 31) + hashCode(this.v4p_1) | 0;
-    result = imul(result, 31) + hashCode(this.w4p_1) | 0;
+    var result = getBigIntHashCode(this.j4q_1);
+    result = imul(result, 31) + hashCode(this.k4q_1) | 0;
+    result = imul(result, 31) + hashCode(this.l4q_1) | 0;
+    result = imul(result, 31) + hashCode(this.m4q_1) | 0;
     return result;
   }
   equals(other) {
@@ -646,28 +646,28 @@ class CaosLibDefinitions {
       return true;
     if (!(other instanceof CaosLibDefinitions))
       return false;
-    if (!(this.t4p_1 === other.t4p_1))
+    if (!(this.j4q_1 === other.j4q_1))
       return false;
-    if (!equals(this.u4p_1, other.u4p_1))
+    if (!equals(this.k4q_1, other.k4q_1))
       return false;
-    if (!equals(this.v4p_1, other.v4p_1))
+    if (!equals(this.l4q_1, other.l4q_1))
       return false;
-    if (!equals(this.w4p_1, other.w4p_1))
+    if (!equals(this.m4q_1, other.m4q_1))
       return false;
     return true;
   }
-  static y4p(seen0, modDate, commands, variantMap, valuesLists, serializationConstructorMarker) {
+  static o4q(seen0, modDate, commands, variantMap, valuesLists, serializationConstructorMarker) {
     Companion_getInstance_0();
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance_0().r4p_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance_0().h4q_1);
     }
     var $this = createThis(this);
-    $this.t4p_1 = modDate;
-    $this.u4p_1 = commands;
-    $this.v4p_1 = variantMap;
-    $this.w4p_1 = valuesLists;
+    $this.j4q_1 = modDate;
+    $this.k4q_1 = commands;
+    $this.l4q_1 = variantMap;
+    $this.m4q_1 = valuesLists;
     var tmp = $this;
-    tmp.x4p_1 = lazy_0(CaosLibDefinitions$_init_$lambda_tfojde($this));
+    tmp.n4q_1 = lazy_0(CaosLibDefinitions$_init_$lambda_tfojde($this));
     return $this;
   }
 }
@@ -679,7 +679,7 @@ class Companion_1 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.c4q_1 = [null, null, null, lazy(tmp_0, CaosParameter$Companion$$childSerializers$_anonymous__oeh02l), null, null, null];
+    tmp.s4q_1 = [null, null, null, lazy(tmp_0, CaosParameter$Companion$$childSerializers$_anonymous__oeh02l), null, null, null];
   }
 }
 class $serializer_1 {
@@ -700,12 +700,12 @@ class $serializer_1 {
     tmp0_serialDesc.e13(new ProtoNumber(6));
     tmp0_serialDesc.w13('max', true);
     tmp0_serialDesc.e13(new ProtoNumber(7));
-    this.d4q_1 = tmp0_serialDesc;
+    this.t4q_1 = tmp0_serialDesc;
   }
-  e4q(encoder, value) {
-    var tmp0_desc = this.d4q_1;
+  u4q(encoder, value) {
+    var tmp0_desc = this.t4q_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_1().c4q_1;
+    var tmp2_cached = Companion_getInstance_1().s4q_1;
     tmp1_output.mx(tmp0_desc, 0, value.index);
     tmp1_output.rx(tmp0_desc, 1, value.name);
     tmp1_output.mx(tmp0_desc, 2, value.typeId);
@@ -724,10 +724,10 @@ class $serializer_1 {
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.e4q(encoder, value instanceof CaosParameter ? value : THROW_CCE());
+    return this.u4q(encoder, value instanceof CaosParameter ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.d4q_1;
+    var tmp0_desc = this.t4q_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -739,7 +739,7 @@ class $serializer_1 {
     var tmp9_local5 = null;
     var tmp10_local6 = null;
     var tmp12_input = decoder.bw(tmp0_desc);
-    var tmp13_cached = Companion_getInstance_1().c4q_1;
+    var tmp13_cached = Companion_getInstance_1().s4q_1;
     if (tmp12_input.sw()) {
       tmp4_local0 = tmp12_input.gw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -795,13 +795,13 @@ class $serializer_1 {
         }
       }
     tmp12_input.cw(tmp0_desc);
-    return CaosParameter.f4q(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
+    return CaosParameter.v4q(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
   }
   lr() {
-    return this.d4q_1;
+    return this.t4q_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance_1().c4q_1;
+    var tmp0_cached = Companion_getInstance_1().s4q_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -823,31 +823,31 @@ class CaosParameter {
     this.min = min;
     this.max = max;
     var tmp = this;
-    tmp.m4p_1 = lazy_0(CaosParameter$type$delegate$lambda(this));
+    tmp.c4q_1 = lazy_0(CaosParameter$type$delegate$lambda(this));
   }
-  w1r() {
+  y1r() {
     return this.index;
   }
   o() {
     return this.name;
   }
-  g4q() {
+  w4q() {
     return this.typeId;
   }
-  h4q() {
+  x4q() {
     return this.valuesListIds;
   }
-  i4q() {
+  y4q() {
     return this.description;
   }
-  j4q() {
+  z4q() {
     return this.min;
   }
-  k4q() {
+  a4r() {
     return this.max;
   }
-  v1r() {
-    var tmp0 = this.m4p_1;
+  x1r() {
+    var tmp0 = this.c4q_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('type', 1, tmp, CaosParameter$_get_type_$ref_n5tl2b(), null);
@@ -887,10 +887,10 @@ class CaosParameter {
       return false;
     return true;
   }
-  static f4q(seen0, index, name, typeId, valuesListIds, description, min, max, serializationConstructorMarker) {
+  static v4q(seen0, index, name, typeId, valuesListIds, description, min, max, serializationConstructorMarker) {
     Companion_getInstance_1();
     if (!(7 === (7 & seen0))) {
-      throwMissingFieldException(seen0, 7, $serializer_getInstance_1().d4q_1);
+      throwMissingFieldException(seen0, 7, $serializer_getInstance_1().t4q_1);
     }
     var $this = createThis(this);
     $this.index = index;
@@ -913,11 +913,11 @@ class CaosParameter {
     else
       $this.max = max;
     var tmp = $this;
-    tmp.m4p_1 = lazy_0(CaosParameter$_init_$lambda_3besw4($this));
+    tmp.c4q_1 = lazy_0(CaosParameter$_init_$lambda_3besw4($this));
     return $this;
   }
   get type() {
-    return this.v1r();
+    return this.x1r();
   }
 }
 class Companion_2 {
@@ -925,7 +925,7 @@ class Companion_2 {
     Companion_instance_3 = this;
     var tmp = this;
     var tmp_0 = LazyThreadSafetyMode_PUBLICATION_getInstance();
-    tmp.l4q_1 = lazy(tmp_0, CaosScriptVarTokenGroup$Companion$_anonymous__6yzde9);
+    tmp.b4r_1 = lazy(tmp_0, CaosScriptVarTokenGroup$Companion$_anonymous__6yzde9);
   }
   k1e() {
     return _get_$cachedSerializer__te6jhj(this);
@@ -937,7 +937,7 @@ class Companion_2 {
 class CaosScriptVarTokenGroup extends Enum {
   constructor(name, ordinal, value) {
     super(name, ordinal);
-    this.o4q_1 = value;
+    this.e4r_1 = value;
   }
 }
 class Companion_3 {
@@ -952,7 +952,7 @@ class Companion_3 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.p4q_1 = [null, null, tmp_1, null, null, tmp_3, lazy(tmp_4, CaosValuesList$Companion$$childSerializers$_anonymous__8fg7ag_1)];
+    tmp.f4r_1 = [null, null, tmp_1, null, null, tmp_3, lazy(tmp_4, CaosValuesList$Companion$$childSerializers$_anonymous__8fg7ag_1)];
   }
 }
 class $serializer_2 {
@@ -971,12 +971,12 @@ class $serializer_2 {
     tmp0_serialDesc.e13(new ProtoNumber(5));
     tmp0_serialDesc.w13('negative', true);
     tmp0_serialDesc.w13('greaterThan', true);
-    this.q4q_1 = tmp0_serialDesc;
+    this.g4r_1 = tmp0_serialDesc;
   }
-  r4q(encoder, value) {
-    var tmp0_desc = this.q4q_1;
+  h4r(encoder, value) {
+    var tmp0_desc = this.g4r_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_3().p4q_1;
+    var tmp2_cached = Companion_getInstance_3().f4r_1;
     tmp1_output.mx(tmp0_desc, 0, value.id);
     tmp1_output.rx(tmp0_desc, 1, value.name);
     tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.values);
@@ -999,14 +999,14 @@ class $serializer_2 {
       while (inductionVariable < last) {
         var element = tmp0[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        if (element.y4q()) {
+        if (element.o4r()) {
           destination.z1(element);
         }
       }
-      tmp = !equals(value.s4q_1, destination);
+      tmp = !equals(value.i4r_1, destination);
     }
     if (tmp) {
-      tmp1_output.tx(tmp0_desc, 5, tmp2_cached[5].k3(), value.s4q_1);
+      tmp1_output.tx(tmp0_desc, 5, tmp2_cached[5].k3(), value.i4r_1);
     }
     var tmp_0;
     if (tmp1_output.zx(tmp0_desc, 6)) {
@@ -1021,22 +1021,22 @@ class $serializer_2 {
       while (inductionVariable_0 < last_0) {
         var element_0 = tmp0_0[inductionVariable_0];
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        if (element_0.z4q()) {
+        if (element_0.p4r()) {
           destination_0.z1(element_0);
         }
       }
-      tmp_0 = !equals(value.t4q_1, destination_0);
+      tmp_0 = !equals(value.j4r_1, destination_0);
     }
     if (tmp_0) {
-      tmp1_output.tx(tmp0_desc, 6, tmp2_cached[6].k3(), value.t4q_1);
+      tmp1_output.tx(tmp0_desc, 6, tmp2_cached[6].k3(), value.j4r_1);
     }
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.r4q(encoder, value instanceof CaosValuesList ? value : THROW_CCE());
+    return this.h4r(encoder, value instanceof CaosValuesList ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.q4q_1;
+    var tmp0_desc = this.g4r_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -1048,7 +1048,7 @@ class $serializer_2 {
     var tmp9_local5 = null;
     var tmp10_local6 = null;
     var tmp12_input = decoder.bw(tmp0_desc);
-    var tmp13_cached = Companion_getInstance_3().p4q_1;
+    var tmp13_cached = Companion_getInstance_3().f4r_1;
     if (tmp12_input.sw()) {
       tmp4_local0 = tmp12_input.gw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -1104,13 +1104,13 @@ class $serializer_2 {
         }
       }
     tmp12_input.cw(tmp0_desc);
-    return CaosValuesList.a4r(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
+    return CaosValuesList.q4r(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
   }
   lr() {
-    return this.q4q_1;
+    return this.g4r_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance_3().p4q_1;
+    var tmp0_cached = Companion_getInstance_3().f4r_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -1137,11 +1137,11 @@ class CaosValuesList {
     while (inductionVariable < last) {
       var element = tmp0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      if (element.y4q()) {
+      if (element.o4r()) {
         destination.z1(element);
       }
     }
-    tmp.s4q_1 = destination;
+    tmp.i4r_1 = destination;
     var tmp_0 = this;
     // Inline function 'kotlin.collections.filter' call
     var tmp0_0 = this.values;
@@ -1152,15 +1152,15 @@ class CaosValuesList {
     while (inductionVariable_0 < last_0) {
       var element_0 = tmp0_0[inductionVariable_0];
       inductionVariable_0 = inductionVariable_0 + 1 | 0;
-      if (element_0.z4q()) {
+      if (element_0.p4r()) {
         destination_0.z1(element_0);
       }
     }
-    tmp_0.t4q_1 = destination_0;
+    tmp_0.j4r_1 = destination_0;
     var tmp_1 = this;
-    tmp_1.u4q_1 = lazy_0(CaosValuesList$bitflag$delegate$lambda(this));
+    tmp_1.k4r_1 = lazy_0(CaosValuesList$bitflag$delegate$lambda(this));
   }
-  c4r() {
+  s4r() {
     return this.id;
   }
   o() {
@@ -1169,10 +1169,10 @@ class CaosValuesList {
   o3() {
     return this.values;
   }
-  i4q() {
+  y4q() {
     return this.description;
   }
-  d4r() {
+  t4r() {
     return this.extensionType;
   }
   getValueWithString(key) {
@@ -1211,7 +1211,7 @@ class CaosValuesList {
       while (inductionVariable < last) {
         var element = tmp0[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        if (element.f1s() === key) {
+        if (element.h1s() === key) {
           tmp$ret$0 = element;
           break $l$block;
         }
@@ -1221,14 +1221,14 @@ class CaosValuesList {
     var tmp0_elvis_lhs = tmp$ret$0;
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      var tmp0_0 = this.s4q_1;
+      var tmp0_0 = this.i4r_1;
       var tmp$ret$2;
       $l$block_0: {
         // Inline function 'kotlin.collections.firstOrNull' call
         var _iterator__ex2g4s = tmp0_0.w();
         while (_iterator__ex2g4s.x()) {
           var element_0 = _iterator__ex2g4s.y();
-          if (!(element_0.f1s() === key)) {
+          if (!(element_0.h1s() === key)) {
             tmp$ret$2 = element_0;
             break $l$block_0;
           }
@@ -1242,14 +1242,14 @@ class CaosValuesList {
     var tmp1_elvis_lhs = tmp;
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
-      var tmp0_1 = this.t4q_1;
+      var tmp0_1 = this.j4r_1;
       var tmp$ret$4;
       $l$block_1: {
         // Inline function 'kotlin.collections.firstOrNull' call
         var _iterator__ex2g4s_0 = tmp0_1.w();
         while (_iterator__ex2g4s_0.x()) {
           var element_1 = _iterator__ex2g4s_0.y();
-          if (ensureNotNull(element_1.f1s()) < key) {
+          if (ensureNotNull(element_1.h1s()) < key) {
             tmp$ret$4 = element_1;
             break $l$block_1;
           }
@@ -1271,7 +1271,7 @@ class CaosValuesList {
       THROW_CCE();
     if (!(this.id === other.id))
       return false;
-    if (!(this.b4r() === other.b4r()))
+    if (!(this.r4r() === other.r4r()))
       return false;
     if (!(this.name === other.name))
       return false;
@@ -1281,15 +1281,15 @@ class CaosValuesList {
       return false;
     if (!(this.extensionType == other.extensionType))
       return false;
-    if (!equals(this.s4q_1, other.s4q_1))
+    if (!equals(this.i4r_1, other.i4r_1))
       return false;
-    if (!equals(this.t4q_1, other.t4q_1))
+    if (!equals(this.j4r_1, other.j4r_1))
       return false;
     return true;
   }
   hashCode() {
     var result = this.id;
-    result = imul(31, result) + getBooleanHashCode(this.b4r()) | 0;
+    result = imul(31, result) + getBooleanHashCode(this.r4r()) | 0;
     result = imul(31, result) + getStringHashCode(this.name) | 0;
     result = imul(31, result) + contentHashCode(this.values) | 0;
     var tmp = imul(31, result);
@@ -1300,12 +1300,12 @@ class CaosValuesList {
     var tmp2_safe_receiver = this.extensionType;
     var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : getStringHashCode(tmp2_safe_receiver);
     result = tmp_0 + (tmp3_elvis_lhs == null ? 0 : tmp3_elvis_lhs) | 0;
-    result = imul(31, result) + hashCode(this.s4q_1) | 0;
-    result = imul(31, result) + hashCode(this.t4q_1) | 0;
+    result = imul(31, result) + hashCode(this.i4r_1) | 0;
+    result = imul(31, result) + hashCode(this.j4r_1) | 0;
     return result;
   }
-  b4r() {
-    var tmp0 = this.u4q_1;
+  r4r() {
+    var tmp0 = this.k4r_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('bitflag', 1, tmp, CaosValuesList$_get_bitflag_$ref_koiysb(), null);
@@ -1314,10 +1314,10 @@ class CaosValuesList {
   toString() {
     return 'CaosValuesList(id=' + this.id + ', name=' + this.name + ', values=' + toString(this.values) + ', description=' + this.description + ', extensionType=' + this.extensionType + ')';
   }
-  static a4r(seen0, id, name, values, description, extensionType, negative, greaterThan, serializationConstructorMarker) {
+  static q4r(seen0, id, name, values, description, extensionType, negative, greaterThan, serializationConstructorMarker) {
     Companion_getInstance_3();
     if (!(7 === (7 & seen0))) {
-      throwMissingFieldException(seen0, 7, $serializer_getInstance_2().q4q_1);
+      throwMissingFieldException(seen0, 7, $serializer_getInstance_2().g4r_1);
     }
     var $this = createThis(this);
     $this.id = id;
@@ -1342,13 +1342,13 @@ class CaosValuesList {
       while (inductionVariable < last) {
         var element = tmp0[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        if (element.y4q()) {
+        if (element.o4r()) {
           destination.z1(element);
         }
       }
-      tmp.s4q_1 = destination;
+      tmp.i4r_1 = destination;
     } else
-      $this.s4q_1 = negative;
+      $this.i4r_1 = negative;
     if (0 === (seen0 & 64)) {
       var tmp_0 = $this;
       // Inline function 'kotlin.collections.filter' call
@@ -1360,15 +1360,15 @@ class CaosValuesList {
       while (inductionVariable_0 < last_0) {
         var element_0 = tmp0_0[inductionVariable_0];
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        if (element_0.z4q()) {
+        if (element_0.p4r()) {
           destination_0.z1(element_0);
         }
       }
-      tmp_0.t4q_1 = destination_0;
+      tmp_0.j4r_1 = destination_0;
     } else
-      $this.t4q_1 = greaterThan;
+      $this.j4r_1 = greaterThan;
     var tmp_1 = $this;
-    tmp_1.u4q_1 = lazy_0(CaosValuesList$_init_$lambda_11sxhl($this));
+    tmp_1.k4r_1 = lazy_0(CaosValuesList$_init_$lambda_11sxhl($this));
     return $this;
   }
 }
@@ -1385,10 +1385,10 @@ class $serializer_3 {
     tmp0_serialDesc.e13(new ProtoNumber(3));
     tmp0_serialDesc.w13('beforeRegion', true);
     tmp0_serialDesc.e13(new ProtoNumber(4));
-    this.e4r_1 = tmp0_serialDesc;
+    this.u4r_1 = tmp0_serialDesc;
   }
-  f4r(encoder, value) {
-    var tmp0_desc = this.e4r_1;
+  v4r(encoder, value) {
+    var tmp0_desc = this.u4r_1;
     var tmp1_output = encoder.bw(tmp0_desc);
     tmp1_output.rx(tmp0_desc, 0, value.value);
     tmp1_output.rx(tmp0_desc, 1, value.name);
@@ -1401,10 +1401,10 @@ class $serializer_3 {
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.f4r(encoder, value instanceof ValuesListValue ? value : THROW_CCE());
+    return this.v4r(encoder, value instanceof ValuesListValue ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.e4r_1;
+    var tmp0_desc = this.u4r_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -1450,10 +1450,10 @@ class $serializer_3 {
         }
       }
     tmp11_input.cw(tmp0_desc);
-    return ValuesListValue.g4r(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
+    return ValuesListValue.w4r(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
   }
   lr() {
-    return this.e4r_1;
+    return this.u4r_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -1471,11 +1471,11 @@ class ValuesListValue {
     this.description = description;
     this.beforeRegion = beforeRegion;
     var tmp = this;
-    tmp.v4q_1 = lazy_0(CaosValuesListValue$intValue$delegate$lambda(this));
+    tmp.l4r_1 = lazy_0(CaosValuesListValue$intValue$delegate$lambda(this));
     var tmp_0 = this;
-    tmp_0.w4q_1 = lazy_0(CaosValuesListValue$not$delegate$lambda(this));
+    tmp_0.m4r_1 = lazy_0(CaosValuesListValue$not$delegate$lambda(this));
     var tmp_1 = this;
-    tmp_1.x4q_1 = lazy_0(CaosValuesListValue$greaterThan$delegate$lambda(this));
+    tmp_1.n4r_1 = lazy_0(CaosValuesListValue$greaterThan$delegate$lambda(this));
   }
   k3() {
     return this.value;
@@ -1483,28 +1483,28 @@ class ValuesListValue {
   o() {
     return this.name;
   }
-  i4q() {
+  y4q() {
     return this.description;
   }
-  h4r() {
+  x4r() {
     return this.beforeRegion;
   }
-  f1s() {
-    var tmp0 = this.v4q_1;
+  h1s() {
+    var tmp0 = this.l4r_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('intValue', 1, tmp, CaosValuesListValue$_get_intValue_$ref_pvr0wd(), null);
     return tmp0.k3();
   }
-  y4q() {
-    var tmp0 = this.w4q_1;
+  o4r() {
+    var tmp0 = this.m4r_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('not', 1, tmp, CaosValuesListValue$_get_not_$ref_4vgyw(), null);
     return tmp0.k3();
   }
-  z4q() {
-    var tmp0 = this.x4q_1;
+  p4r() {
+    var tmp0 = this.n4r_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('greaterThan', 1, tmp, CaosValuesListValue$_get_greaterThan_$ref_das0vk(), null);
@@ -1535,9 +1535,9 @@ class ValuesListValue {
       return false;
     return true;
   }
-  static g4r(seen0, value, name, description, beforeRegion, serializationConstructorMarker) {
+  static w4r(seen0, value, name, description, beforeRegion, serializationConstructorMarker) {
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance_3().e4r_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance_3().u4r_1);
     }
     var $this = createThis(this);
     $this.value = value;
@@ -1551,21 +1551,21 @@ class ValuesListValue {
     else
       $this.beforeRegion = beforeRegion;
     var tmp = $this;
-    tmp.v4q_1 = lazy_0(CaosValuesListValue$_init_$lambda_7cqd18($this));
+    tmp.l4r_1 = lazy_0(CaosValuesListValue$_init_$lambda_7cqd18($this));
     var tmp_0 = $this;
-    tmp_0.w4q_1 = lazy_0(CaosValuesListValue$_init_$lambda_7cqd18_0($this));
+    tmp_0.m4r_1 = lazy_0(CaosValuesListValue$_init_$lambda_7cqd18_0($this));
     var tmp_1 = $this;
-    tmp_1.x4q_1 = lazy_0(CaosValuesListValue$_init_$lambda_7cqd18_1($this));
+    tmp_1.n4r_1 = lazy_0(CaosValuesListValue$_init_$lambda_7cqd18_1($this));
     return $this;
   }
   get intValue() {
-    return this.f1s();
+    return this.h1s();
   }
   get negatedValue() {
-    return this.y4q();
+    return this.o4r();
   }
   get greaterThanValue() {
-    return this.z4q();
+    return this.p4r();
   }
 }
 class Companion_5 {}
@@ -1583,23 +1583,23 @@ class $serializer_4 {
     tmp0_serialDesc.e13(new ProtoNumber(4));
     tmp0_serialDesc.w13('MVxx', false);
     tmp0_serialDesc.e13(new ProtoNumber(5));
-    this.i4r_1 = tmp0_serialDesc;
+    this.y4r_1 = tmp0_serialDesc;
   }
-  j4r(encoder, value) {
-    var tmp0_desc = this.i4r_1;
+  z4r(encoder, value) {
+    var tmp0_desc = this.y4r_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.vx(tmp0_desc, 0, IntSerializer_getInstance(), value.k4r_1);
-    tmp1_output.vx(tmp0_desc, 1, IntSerializer_getInstance(), value.l4r_1);
-    tmp1_output.vx(tmp0_desc, 2, IntSerializer_getInstance(), value.m4r_1);
-    tmp1_output.vx(tmp0_desc, 3, IntSerializer_getInstance(), value.n4r_1);
-    tmp1_output.vx(tmp0_desc, 4, IntSerializer_getInstance(), value.o4r_1);
+    tmp1_output.vx(tmp0_desc, 0, IntSerializer_getInstance(), value.a4s_1);
+    tmp1_output.vx(tmp0_desc, 1, IntSerializer_getInstance(), value.b4s_1);
+    tmp1_output.vx(tmp0_desc, 2, IntSerializer_getInstance(), value.c4s_1);
+    tmp1_output.vx(tmp0_desc, 3, IntSerializer_getInstance(), value.d4s_1);
+    tmp1_output.vx(tmp0_desc, 4, IntSerializer_getInstance(), value.e4s_1);
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.j4r(encoder, value instanceof CaosVarConstraints ? value : THROW_CCE());
+    return this.z4r(encoder, value instanceof CaosVarConstraints ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.i4r_1;
+    var tmp0_desc = this.y4r_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -1652,10 +1652,10 @@ class $serializer_4 {
         }
       }
     tmp9_input.cw(tmp0_desc);
-    return CaosVarConstraints.p4r(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, null);
+    return CaosVarConstraints.f4s(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, null);
   }
   lr() {
-    return this.i4r_1;
+    return this.y4r_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -1666,29 +1666,29 @@ class $serializer_4 {
 }
 class CaosVarConstraints {
   constructor(VARx, VAxx, OBVx, OVxx, MVxx) {
-    this.k4r_1 = VARx;
-    this.l4r_1 = VAxx;
-    this.m4r_1 = OBVx;
-    this.n4r_1 = OVxx;
-    this.o4r_1 = MVxx;
+    this.a4s_1 = VARx;
+    this.b4s_1 = VAxx;
+    this.c4s_1 = OBVx;
+    this.d4s_1 = OVxx;
+    this.e4s_1 = MVxx;
   }
-  q4r(key) {
+  g4s(key) {
     var tmp;
     switch (key.d1_1) {
       case 1:
-        tmp = this.k4r_1;
+        tmp = this.a4s_1;
         break;
       case 3:
-        tmp = this.l4r_1;
+        tmp = this.b4s_1;
         break;
       case 2:
-        tmp = this.m4r_1;
+        tmp = this.c4s_1;
         break;
       case 4:
-        tmp = this.n4r_1;
+        tmp = this.d4s_1;
         break;
       case 5:
-        tmp = this.o4r_1;
+        tmp = this.e4s_1;
         break;
       case 0:
         tmp = null;
@@ -1700,17 +1700,17 @@ class CaosVarConstraints {
     return tmp;
   }
   get(key) {
-    return this.q4r(key instanceof CaosScriptVarTokenGroup ? key : THROW_CCE());
+    return this.g4s(key instanceof CaosScriptVarTokenGroup ? key : THROW_CCE());
   }
   toString() {
-    return 'CaosVarConstraints(VARx=' + this.k4r_1 + ', VAxx=' + this.l4r_1 + ', OBVx=' + this.m4r_1 + ', OVxx=' + this.n4r_1 + ', MVxx=' + this.o4r_1 + ')';
+    return 'CaosVarConstraints(VARx=' + this.a4s_1 + ', VAxx=' + this.b4s_1 + ', OBVx=' + this.c4s_1 + ', OVxx=' + this.d4s_1 + ', MVxx=' + this.e4s_1 + ')';
   }
   hashCode() {
-    var result = this.k4r_1 == null ? 0 : this.k4r_1;
-    result = imul(result, 31) + (this.l4r_1 == null ? 0 : this.l4r_1) | 0;
-    result = imul(result, 31) + (this.m4r_1 == null ? 0 : this.m4r_1) | 0;
-    result = imul(result, 31) + (this.n4r_1 == null ? 0 : this.n4r_1) | 0;
-    result = imul(result, 31) + (this.o4r_1 == null ? 0 : this.o4r_1) | 0;
+    var result = this.a4s_1 == null ? 0 : this.a4s_1;
+    result = imul(result, 31) + (this.b4s_1 == null ? 0 : this.b4s_1) | 0;
+    result = imul(result, 31) + (this.c4s_1 == null ? 0 : this.c4s_1) | 0;
+    result = imul(result, 31) + (this.d4s_1 == null ? 0 : this.d4s_1) | 0;
+    result = imul(result, 31) + (this.e4s_1 == null ? 0 : this.e4s_1) | 0;
     return result;
   }
   equals(other) {
@@ -1718,79 +1718,79 @@ class CaosVarConstraints {
       return true;
     if (!(other instanceof CaosVarConstraints))
       return false;
-    if (!(this.k4r_1 == other.k4r_1))
+    if (!(this.a4s_1 == other.a4s_1))
       return false;
-    if (!(this.l4r_1 == other.l4r_1))
+    if (!(this.b4s_1 == other.b4s_1))
       return false;
-    if (!(this.m4r_1 == other.m4r_1))
+    if (!(this.c4s_1 == other.c4s_1))
       return false;
-    if (!(this.n4r_1 == other.n4r_1))
+    if (!(this.d4s_1 == other.d4s_1))
       return false;
-    if (!(this.o4r_1 == other.o4r_1))
+    if (!(this.e4s_1 == other.e4s_1))
       return false;
     return true;
   }
-  static p4r(seen0, VARx, VAxx, OBVx, OVxx, MVxx, serializationConstructorMarker) {
+  static f4s(seen0, VARx, VAxx, OBVx, OVxx, MVxx, serializationConstructorMarker) {
     if (!(31 === (31 & seen0))) {
-      throwMissingFieldException(seen0, 31, $serializer_getInstance_4().i4r_1);
+      throwMissingFieldException(seen0, 31, $serializer_getInstance_4().y4r_1);
     }
     var $this = createThis(this);
-    $this.k4r_1 = VARx;
-    $this.l4r_1 = VAxx;
-    $this.m4r_1 = OBVx;
-    $this.n4r_1 = OVxx;
-    $this.o4r_1 = MVxx;
+    $this.a4s_1 = VARx;
+    $this.b4s_1 = VAxx;
+    $this.c4s_1 = OBVx;
+    $this.d4s_1 = OVxx;
+    $this.e4s_1 = MVxx;
     return $this;
   }
 }
 class CaosVariant {
   constructor(code, fullName, index) {
     Companion_getInstance_6();
-    this.t4r_1 = code;
-    this.u4r_1 = fullName;
-    this.v4r_1 = index;
+    this.j4s_1 = code;
+    this.k4s_1 = fullName;
+    this.l4s_1 = index;
   }
-  w4r() {
-    return this.t4r_1;
+  m4s() {
+    return this.j4s_1;
   }
-  w1r() {
-    return this.v4r_1;
+  y1r() {
+    return this.l4s_1;
   }
-  x4r() {
+  n4s() {
     return get_VARIANT_OLD().g2(this);
   }
-  y4r() {
+  o4s() {
     return !get_VARIANT_OLD().g2(this);
   }
-  z4r() {
+  p4s() {
     return !get_VARIANT_OLD().g2(this);
   }
   toString() {
-    return this.w4r();
+    return this.m4s();
   }
   compareTo(version) {
-    return (this.w1r() - version | 0) < 0 ? -1 : (this.w1r() - version | 0) > 0 ? 1 : 0;
+    return (this.y1r() - version | 0) < 0 ? -1 : (this.y1r() - version | 0) > 0 ? 1 : 0;
   }
   equals(other) {
     if (this === other)
       return true;
     if (!(other instanceof CaosVariant))
       return false;
-    if (!(this.w4r() === other.w4r()))
+    if (!(this.m4s() === other.m4s()))
       return false;
     return true;
   }
   hashCode() {
-    return getStringHashCode(this.w4r());
+    return getStringHashCode(this.m4s());
   }
   get isOld() {
-    return this.x4r();
+    return this.n4s();
   }
   get isNotOld() {
-    return this.y4r();
+    return this.o4s();
   }
   get isNew() {
-    return this.z4r();
+    return this.p4s();
   }
 }
 class C1 extends CaosVariant {
@@ -1854,12 +1854,12 @@ class Companion_6 {
     Companion_instance_7 = this;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.r4r_1 = ArrayList.u1();
+    tmp.h4s_1 = ArrayList.u1();
     var tmp_0 = this;
     var tmp_1 = LazyThreadSafetyMode_PUBLICATION_getInstance();
-    tmp_0.s4r_1 = lazy(tmp_1, CaosVariant$Companion$_anonymous__9oo02c);
+    tmp_0.i4s_1 = lazy(tmp_1, CaosVariant$Companion$_anonymous__9oo02c);
   }
-  a4s(variant) {
+  q4s(variant) {
     var tmp;
     switch (variant) {
       case 'C1':
@@ -1884,14 +1884,14 @@ class Companion_6 {
         tmp = CE_getInstance();
         break;
       default:
-        var tmp0 = this.r4r_1;
+        var tmp0 = this.h4s_1;
         var tmp$ret$0;
         $l$block: {
           // Inline function 'kotlin.collections.firstOrNull' call
           var _iterator__ex2g4s = tmp0.w();
           while (_iterator__ex2g4s.x()) {
             var element = _iterator__ex2g4s.y();
-            if (element.w4r() === variant) {
+            if (element.m4s() === variant) {
               tmp$ret$0 = element;
               break $l$block;
             }
@@ -1926,7 +1926,7 @@ class Companion_7 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.b4s_1 = [null, null, null, tmp_1, tmp_3, tmp_5, lazy(tmp_6, CaosVariantData$Companion$$childSerializers$_anonymous__z6x1a5_2)];
+    tmp.r4s_1 = [null, null, null, tmp_1, tmp_3, tmp_5, lazy(tmp_6, CaosVariantData$Companion$$childSerializers$_anonymous__z6x1a5_2)];
   }
 }
 class $serializer_5 {
@@ -1947,36 +1947,36 @@ class $serializer_5 {
     tmp0_serialDesc.e13(new ProtoNumber(6));
     tmp0_serialDesc.w13('valuesListsIds', true);
     tmp0_serialDesc.e13(new ProtoNumber(7));
-    this.c4s_1 = tmp0_serialDesc;
+    this.s4s_1 = tmp0_serialDesc;
   }
-  d4s(encoder, value) {
-    var tmp0_desc = this.c4s_1;
+  t4s(encoder, value) {
+    var tmp0_desc = this.s4s_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_7().b4s_1;
-    tmp1_output.rx(tmp0_desc, 0, value.e4s_1);
-    tmp1_output.rx(tmp0_desc, 1, value.f4s_1);
-    tmp1_output.tx(tmp0_desc, 2, $serializer_getInstance_4(), value.g4s_1);
-    tmp1_output.tx(tmp0_desc, 3, tmp2_cached[3].k3(), value.h4s_1);
-    tmp1_output.tx(tmp0_desc, 4, tmp2_cached[4].k3(), value.i4s_1);
-    tmp1_output.tx(tmp0_desc, 5, tmp2_cached[5].k3(), value.j4s_1);
+    var tmp2_cached = Companion_getInstance_7().r4s_1;
+    tmp1_output.rx(tmp0_desc, 0, value.u4s_1);
+    tmp1_output.rx(tmp0_desc, 1, value.v4s_1);
+    tmp1_output.tx(tmp0_desc, 2, $serializer_getInstance_4(), value.w4s_1);
+    tmp1_output.tx(tmp0_desc, 3, tmp2_cached[3].k3(), value.x4s_1);
+    tmp1_output.tx(tmp0_desc, 4, tmp2_cached[4].k3(), value.y4s_1);
+    tmp1_output.tx(tmp0_desc, 5, tmp2_cached[5].k3(), value.z4s_1);
     var tmp;
     if (tmp1_output.zx(tmp0_desc, 6)) {
       tmp = true;
     } else {
       // Inline function 'kotlin.emptyArray' call
       var tmp$ret$0 = [];
-      tmp = !equals(value.k4s_1, tmp$ret$0);
+      tmp = !equals(value.a4t_1, tmp$ret$0);
     }
     if (tmp) {
-      tmp1_output.tx(tmp0_desc, 6, tmp2_cached[6].k3(), value.k4s_1);
+      tmp1_output.tx(tmp0_desc, 6, tmp2_cached[6].k3(), value.a4t_1);
     }
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.d4s(encoder, value instanceof CaosVariantData ? value : THROW_CCE());
+    return this.t4s(encoder, value instanceof CaosVariantData ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.c4s_1;
+    var tmp0_desc = this.s4s_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -1988,7 +1988,7 @@ class $serializer_5 {
     var tmp9_local5 = null;
     var tmp10_local6 = null;
     var tmp13_input = decoder.bw(tmp0_desc);
-    var tmp14_cached = Companion_getInstance_7().b4s_1;
+    var tmp14_cached = Companion_getInstance_7().r4s_1;
     if (tmp13_input.sw()) {
       tmp4_local0 = tmp13_input.lw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -2044,13 +2044,13 @@ class $serializer_5 {
         }
       }
     tmp13_input.cw(tmp0_desc);
-    return CaosVariantData.n4s(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
+    return CaosVariantData.d4t(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
   }
   lr() {
-    return this.c4s_1;
+    return this.s4s_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance_7().b4s_1;
+    var tmp0_cached = Companion_getInstance_7().r4s_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -2068,87 +2068,87 @@ class CaosVariantData {
       tmp = valuesListsIds;
     }
     valuesListsIds = tmp;
-    this.e4s_1 = name;
-    this.f4s_1 = code;
-    this.g4s_1 = vars;
-    this.h4s_1 = commands;
-    this.i4s_1 = lvalues;
-    this.j4s_1 = rvalues;
-    this.k4s_1 = valuesListsIds;
+    this.u4s_1 = name;
+    this.v4s_1 = code;
+    this.w4s_1 = vars;
+    this.x4s_1 = commands;
+    this.y4s_1 = lvalues;
+    this.z4s_1 = rvalues;
+    this.a4t_1 = valuesListsIds;
     var tmp_0 = this;
-    tmp_0.l4s_1 = lazy_0(CaosVariantData$isOld$delegate$lambda(this));
+    tmp_0.b4t_1 = lazy_0(CaosVariantData$isOld$delegate$lambda(this));
     var tmp_1 = this;
-    tmp_1.m4s_1 = lazy_0(CaosVariantData$isNew$delegate$lambda(this));
+    tmp_1.c4t_1 = lazy_0(CaosVariantData$isNew$delegate$lambda(this));
   }
   equals(other) {
     if (this === other)
       return true;
     if (!(other instanceof CaosVariantData))
       return false;
-    if (!(this.e4s_1 === other.e4s_1))
+    if (!(this.u4s_1 === other.u4s_1))
       return false;
-    if (!(this.f4s_1 === other.f4s_1))
+    if (!(this.v4s_1 === other.v4s_1))
       return false;
-    if (!this.g4s_1.equals(other.g4s_1))
+    if (!this.w4s_1.equals(other.w4s_1))
       return false;
-    if (!equals(this.h4s_1, other.h4s_1))
+    if (!equals(this.x4s_1, other.x4s_1))
       return false;
-    if (!equals(this.i4s_1, other.i4s_1))
+    if (!equals(this.y4s_1, other.y4s_1))
       return false;
-    if (!equals(this.j4s_1, other.j4s_1))
+    if (!equals(this.z4s_1, other.z4s_1))
       return false;
-    if (!contentEquals(this.k4s_1, other.k4s_1))
+    if (!contentEquals(this.a4t_1, other.a4t_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = getStringHashCode(this.e4s_1);
-    result = imul(31, result) + getStringHashCode(this.f4s_1) | 0;
-    result = imul(31, result) + this.g4s_1.hashCode() | 0;
-    result = imul(31, result) + hashCode(this.h4s_1) | 0;
-    result = imul(31, result) + hashCode(this.i4s_1) | 0;
-    result = imul(31, result) + hashCode(this.j4s_1) | 0;
-    result = imul(31, result) + contentHashCode(this.k4s_1) | 0;
+    var result = getStringHashCode(this.u4s_1);
+    result = imul(31, result) + getStringHashCode(this.v4s_1) | 0;
+    result = imul(31, result) + this.w4s_1.hashCode() | 0;
+    result = imul(31, result) + hashCode(this.x4s_1) | 0;
+    result = imul(31, result) + hashCode(this.y4s_1) | 0;
+    result = imul(31, result) + hashCode(this.z4s_1) | 0;
+    result = imul(31, result) + contentHashCode(this.a4t_1) | 0;
     return result;
   }
-  o4s(name, code, vars, commands, lvalues, rvalues, valuesListsIds) {
+  e4t(name, code, vars, commands, lvalues, rvalues, valuesListsIds) {
     return new CaosVariantData(name, code, vars, commands, lvalues, rvalues, valuesListsIds);
   }
-  p4s(name, code, vars, commands, lvalues, rvalues, valuesListsIds, $super) {
-    name = name === VOID ? this.e4s_1 : name;
-    code = code === VOID ? this.f4s_1 : code;
-    vars = vars === VOID ? this.g4s_1 : vars;
-    commands = commands === VOID ? this.h4s_1 : commands;
-    lvalues = lvalues === VOID ? this.i4s_1 : lvalues;
-    rvalues = rvalues === VOID ? this.j4s_1 : rvalues;
-    valuesListsIds = valuesListsIds === VOID ? this.k4s_1 : valuesListsIds;
-    return $super === VOID ? this.o4s(name, code, vars, commands, lvalues, rvalues, valuesListsIds) : $super.o4s.call(this, name, code, vars, commands, lvalues, rvalues, valuesListsIds);
+  f4t(name, code, vars, commands, lvalues, rvalues, valuesListsIds, $super) {
+    name = name === VOID ? this.u4s_1 : name;
+    code = code === VOID ? this.v4s_1 : code;
+    vars = vars === VOID ? this.w4s_1 : vars;
+    commands = commands === VOID ? this.x4s_1 : commands;
+    lvalues = lvalues === VOID ? this.y4s_1 : lvalues;
+    rvalues = rvalues === VOID ? this.z4s_1 : rvalues;
+    valuesListsIds = valuesListsIds === VOID ? this.a4t_1 : valuesListsIds;
+    return $super === VOID ? this.e4t(name, code, vars, commands, lvalues, rvalues, valuesListsIds) : $super.e4t.call(this, name, code, vars, commands, lvalues, rvalues, valuesListsIds);
   }
   toString() {
-    return 'CaosVariantData(name=' + this.e4s_1 + ', code=' + this.f4s_1 + ', vars=' + this.g4s_1.toString() + ', commands=' + toString(this.h4s_1) + ', lvalues=' + toString(this.i4s_1) + ', rvalues=' + toString(this.j4s_1) + ', valuesListsIds=' + toString(this.k4s_1) + ')';
+    return 'CaosVariantData(name=' + this.u4s_1 + ', code=' + this.v4s_1 + ', vars=' + this.w4s_1.toString() + ', commands=' + toString(this.x4s_1) + ', lvalues=' + toString(this.y4s_1) + ', rvalues=' + toString(this.z4s_1) + ', valuesListsIds=' + toString(this.a4t_1) + ')';
   }
-  static n4s(seen0, name, code, vars, commands, lvalues, rvalues, valuesListsIds, serializationConstructorMarker) {
+  static d4t(seen0, name, code, vars, commands, lvalues, rvalues, valuesListsIds, serializationConstructorMarker) {
     Companion_getInstance_7();
     if (!(63 === (63 & seen0))) {
-      throwMissingFieldException(seen0, 63, $serializer_getInstance_5().c4s_1);
+      throwMissingFieldException(seen0, 63, $serializer_getInstance_5().s4s_1);
     }
     var $this = createThis(this);
-    $this.e4s_1 = name;
-    $this.f4s_1 = code;
-    $this.g4s_1 = vars;
-    $this.h4s_1 = commands;
-    $this.i4s_1 = lvalues;
-    $this.j4s_1 = rvalues;
+    $this.u4s_1 = name;
+    $this.v4s_1 = code;
+    $this.w4s_1 = vars;
+    $this.x4s_1 = commands;
+    $this.y4s_1 = lvalues;
+    $this.z4s_1 = rvalues;
     if (0 === (seen0 & 64)) {
       var tmp = $this;
       // Inline function 'kotlin.emptyArray' call
-      tmp.k4s_1 = [];
+      tmp.a4t_1 = [];
     } else
-      $this.k4s_1 = valuesListsIds;
+      $this.a4t_1 = valuesListsIds;
     var tmp_0 = $this;
-    tmp_0.l4s_1 = lazy_0(CaosVariantData$_init_$lambda_7brc0u($this));
+    tmp_0.b4t_1 = lazy_0(CaosVariantData$_init_$lambda_7brc0u($this));
     var tmp_1 = $this;
-    tmp_1.m4s_1 = lazy_0(CaosVariantData$_init_$lambda_7brc0u_0($this));
+    tmp_1.c4t_1 = lazy_0(CaosVariantData$_init_$lambda_7brc0u_0($this));
     return $this;
   }
 }
@@ -2164,7 +2164,7 @@ class Companion_8 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.q4s_1 = [tmp_1, tmp_3, lazy(tmp_4, Commands$Companion$$childSerializers$_anonymous__37qrhe_1)];
+    tmp.g4t_1 = [tmp_1, tmp_3, lazy(tmp_4, Commands$Companion$$childSerializers$_anonymous__37qrhe_1)];
   }
 }
 class $serializer_6 {
@@ -2177,22 +2177,22 @@ class $serializer_6 {
     tmp0_serialDesc.e13(new ProtoNumber(2));
     tmp0_serialDesc.w13('lvalues', false);
     tmp0_serialDesc.e13(new ProtoNumber(3));
-    this.r4s_1 = tmp0_serialDesc;
+    this.h4t_1 = tmp0_serialDesc;
   }
-  s4s(encoder, value) {
-    var tmp0_desc = this.r4s_1;
+  i4t(encoder, value) {
+    var tmp0_desc = this.h4t_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_8().q4s_1;
+    var tmp2_cached = Companion_getInstance_8().g4t_1;
     tmp1_output.tx(tmp0_desc, 0, tmp2_cached[0].k3(), value.commands);
     tmp1_output.tx(tmp0_desc, 1, tmp2_cached[1].k3(), value.rvalues);
     tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.lvalues);
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.s4s(encoder, value instanceof Commands ? value : THROW_CCE());
+    return this.i4t(encoder, value instanceof Commands ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.r4s_1;
+    var tmp0_desc = this.h4t_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -2200,7 +2200,7 @@ class $serializer_6 {
     var tmp5_local1 = null;
     var tmp6_local2 = null;
     var tmp7_input = decoder.bw(tmp0_desc);
-    var tmp8_cached = Companion_getInstance_8().q4s_1;
+    var tmp8_cached = Companion_getInstance_8().g4t_1;
     if (tmp7_input.sw()) {
       tmp4_local0 = tmp7_input.nw(tmp0_desc, 0, tmp8_cached[0].k3(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -2232,13 +2232,13 @@ class $serializer_6 {
         }
       }
     tmp7_input.cw(tmp0_desc);
-    return Commands.t4s(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, null);
+    return Commands.j4t(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, null);
   }
   lr() {
-    return this.r4s_1;
+    return this.h4t_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance_8().q4s_1;
+    var tmp0_cached = Companion_getInstance_8().g4t_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -2252,13 +2252,13 @@ class Commands {
     this.rvalues = rvalues;
     this.lvalues = lvalues;
   }
-  u4s() {
+  k4t() {
     return this.commands;
   }
-  v4s() {
+  l4t() {
     return this.rvalues;
   }
-  w4s() {
+  m4t() {
     return this.lvalues;
   }
   equals(other) {
@@ -2283,10 +2283,10 @@ class Commands {
   toString() {
     return 'Commands(commands=' + toString(this.commands) + ', rvalues=' + toString(this.rvalues) + ', lvalues=' + toString(this.lvalues) + ')';
   }
-  static t4s(seen0, commands, rvalues, lvalues, serializationConstructorMarker) {
+  static j4t(seen0, commands, rvalues, lvalues, serializationConstructorMarker) {
     Companion_getInstance_8();
     if (!(7 === (7 & seen0))) {
-      throwMissingFieldException(seen0, 7, $serializer_getInstance_6().r4s_1);
+      throwMissingFieldException(seen0, 7, $serializer_getInstance_6().h4t_1);
     }
     var $this = createThis(this);
     $this.commands = commands;
@@ -2297,10 +2297,10 @@ class Commands {
 }
 class HasGetterImpl {
   constructor(getter) {
-    this.x4s_1 = getter;
+    this.n4t_1 = getter;
   }
   r3(key) {
-    return this.x4s_1(key);
+    return this.n4t_1(key);
   }
   get(key) {
     return this.r3(key);
@@ -2318,7 +2318,7 @@ class Companion_9 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.b4t_1 = [null, tmp_1, null, null, null, null, null, tmp_3, null, null, lazy(tmp_4, VariantCaosCommand$Companion$$childSerializers$_anonymous__495hkq_1), null, null, null, null, null, null];
+    tmp.r4t_1 = [null, tmp_1, null, null, null, null, null, tmp_3, null, null, lazy(tmp_4, VariantCaosCommand$Companion$$childSerializers$_anonymous__495hkq_1), null, null, null, null, null, null];
   }
 }
 class $serializer_7 {
@@ -2359,12 +2359,12 @@ class $serializer_7 {
     tmp0_serialDesc.e13(new ProtoNumber(16));
     tmp0_serialDesc.w13('ceOnly', false);
     tmp0_serialDesc.e13(new ProtoNumber(17));
-    this.c4t_1 = tmp0_serialDesc;
+    this.s4t_1 = tmp0_serialDesc;
   }
-  d4t(encoder, value) {
-    var tmp0_desc = this.c4t_1;
+  t4t(encoder, value) {
+    var tmp0_desc = this.s4t_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_9().b4t_1;
+    var tmp2_cached = Companion_getInstance_9().r4t_1;
     tmp1_output.rx(tmp0_desc, 0, value.command);
     tmp1_output.tx(tmp0_desc, 1, tmp2_cached[1].k3(), value.parameters);
     tmp1_output.jx(tmp0_desc, 2, value.isLvalue);
@@ -2397,10 +2397,10 @@ class $serializer_7 {
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.d4t(encoder, value instanceof ICaosCommand ? value : THROW_CCE());
+    return this.t4t(encoder, value instanceof ICaosCommand ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.c4t_1;
+    var tmp0_desc = this.s4t_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -2422,7 +2422,7 @@ class $serializer_7 {
     var tmp19_local15 = null;
     var tmp20_local16 = false;
     var tmp21_input = decoder.bw(tmp0_desc);
-    var tmp22_cached = Companion_getInstance_9().b4t_1;
+    var tmp22_cached = Companion_getInstance_9().r4t_1;
     if (tmp21_input.sw()) {
       tmp4_local0 = tmp21_input.lw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -2538,13 +2538,13 @@ class $serializer_7 {
         }
       }
     tmp21_input.cw(tmp0_desc);
-    return ICaosCommand.e4t(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, tmp17_local13, tmp18_local14, tmp19_local15, tmp20_local16, null);
+    return ICaosCommand.u4t(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, tmp17_local13, tmp18_local14, tmp19_local15, tmp20_local16, null);
   }
   lr() {
-    return this.c4t_1;
+    return this.s4t_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance_9().b4t_1;
+    var tmp0_cached = Companion_getInstance_9().r4t_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -2578,58 +2578,58 @@ class ICaosCommand {
     this.tokens = tokens;
     this.ceOnly = ceOnly;
   }
-  e1s() {
+  g1s() {
     return this.command;
   }
-  f4t() {
+  v4t() {
     return this.parameters;
   }
-  g4t() {
+  w4t() {
     return this.isLvalue;
   }
-  h4t() {
+  x4t() {
     return this.isRvalue;
   }
-  n4p() {
+  d4q() {
     return this.isCommand;
   }
-  i4t() {
+  y4t() {
     return this.returnTypeId;
   }
-  j4t() {
+  z4t() {
     return this.returnTypeName;
   }
-  k4t() {
+  a4u() {
     return this.variants;
   }
-  i4q() {
+  y4q() {
     return this.description;
   }
-  l4t() {
+  b4u() {
     return this.lvalueName;
   }
-  m4t() {
+  c4u() {
     return this.returnValuesListIds;
   }
-  n4t() {
+  d4u() {
     return this.requiresOwnr;
   }
-  o4t() {
+  e4u() {
     return this.commandGroup;
   }
-  p4t() {
+  f4u() {
     return this.doifFormat;
   }
-  q4t() {
+  g4u() {
     return this.requiresCreatureOwnr;
   }
-  h1s() {
+  j1s() {
     return this.tokens;
   }
-  r4t() {
+  h4u() {
     return this.ceOnly;
   }
-  s4t() {
+  i4u() {
     return singleOrNull(this.tokens);
   }
   equals(other) {
@@ -2702,10 +2702,10 @@ class ICaosCommand {
     result = imul(31, result) + getBooleanHashCode(this.ceOnly) | 0;
     return result;
   }
-  t4t(command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly) {
+  j4u(command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly) {
     return new ICaosCommand(command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly);
   }
-  u4t(command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly, $super) {
+  k4u(command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly, $super) {
     command = command === VOID ? this.command : command;
     parameters = parameters === VOID ? this.parameters : parameters;
     isLvalue = isLvalue === VOID ? this.isLvalue : isLvalue;
@@ -2723,15 +2723,15 @@ class ICaosCommand {
     requiresCreatureOwnr = requiresCreatureOwnr === VOID ? this.requiresCreatureOwnr : requiresCreatureOwnr;
     tokens = tokens === VOID ? this.tokens : tokens;
     ceOnly = ceOnly === VOID ? this.ceOnly : ceOnly;
-    return $super === VOID ? this.t4t(command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly) : $super.t4t.call(this, command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly);
+    return $super === VOID ? this.j4u(command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly) : $super.j4u.call(this, command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly);
   }
   toString() {
     return 'VariantCaosCommand(command=' + this.command + ', parameters=' + toString(this.parameters) + ', isLvalue=' + this.isLvalue + ', isRvalue=' + this.isRvalue + ', isCommand=' + this.isCommand + ', returnTypeId=' + this.returnTypeId + ', returnTypeName=' + this.returnTypeName + ', variants=' + toString(this.variants) + ', description=' + this.description + ', lvalueName=' + this.lvalueName + ', returnValuesListIds=' + toString_0(this.returnValuesListIds) + ', requiresOwnr=' + this.requiresOwnr + ', commandGroup=' + this.commandGroup + ', doifFormat=' + this.doifFormat + ', requiresCreatureOwnr=' + this.requiresCreatureOwnr + ', tokens=' + toString(this.tokens) + ', ceOnly=' + this.ceOnly + ')';
   }
-  static e4t(seen0, command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly, serializationConstructorMarker) {
+  static u4t(seen0, command, parameters, isLvalue, isRvalue, isCommand, returnTypeId, returnTypeName, variants, description, lvalueName, returnValuesListIds, requiresOwnr, commandGroup, doifFormat, requiresCreatureOwnr, tokens, ceOnly, serializationConstructorMarker) {
     Companion_getInstance_9();
     if (!(102895 === (102895 & seen0))) {
-      throwMissingFieldException(seen0, 102895, $serializer_getInstance_7().c4t_1);
+      throwMissingFieldException(seen0, 102895, $serializer_getInstance_7().s4t_1);
     }
     var $this = createThis(this);
     $this.command = command;
@@ -2787,10 +2787,10 @@ class $serializer_8 {
     tmp0_serialDesc.e13(new ProtoNumber(4));
     tmp0_serialDesc.w13('valuesListId', true);
     tmp0_serialDesc.e13(new ProtoNumber(5));
-    this.v4t_1 = tmp0_serialDesc;
+    this.l4u_1 = tmp0_serialDesc;
   }
-  w4t(encoder, value) {
-    var tmp0_desc = this.v4t_1;
+  m4u(encoder, value) {
+    var tmp0_desc = this.l4u_1;
     var tmp1_output = encoder.bw(tmp0_desc);
     tmp1_output.mx(tmp0_desc, 0, value.index);
     tmp1_output.rx(tmp0_desc, 1, value.name);
@@ -2802,10 +2802,10 @@ class $serializer_8 {
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.w4t(encoder, value instanceof ICaosParameter ? value : THROW_CCE());
+    return this.m4u(encoder, value instanceof ICaosParameter ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.v4t_1;
+    var tmp0_desc = this.l4u_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -2858,10 +2858,10 @@ class $serializer_8 {
         }
       }
     tmp9_input.cw(tmp0_desc);
-    return ICaosParameter.x4t(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, null);
+    return ICaosParameter.n4u(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, null);
   }
   lr() {
-    return this.v4t_1;
+    return this.l4u_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -2871,7 +2871,7 @@ class $serializer_8 {
   }
 }
 class ICaosParameter {
-  static y4t(index, name, typeId, typeName, valuesListId) {
+  static o4u(index, name, typeId, typeName, valuesListId) {
     valuesListId = valuesListId === VOID ? null : valuesListId;
     var $this = createThis(this);
     $this.index = index;
@@ -2881,25 +2881,25 @@ class ICaosParameter {
     $this.valuesListId = valuesListId;
     return $this;
   }
-  w1r() {
+  y1r() {
     return this.index;
   }
   o() {
     return this.name;
   }
-  g4q() {
+  w4q() {
     return this.typeId;
   }
-  v1r() {
+  x1r() {
     return this.type;
   }
-  z4t() {
+  p4u() {
     return this.valuesListId;
   }
-  static a4u(parameter, variant) {
-    var tmp = parameter.v1r().simpleName;
+  static q4u(parameter, variant) {
+    var tmp = parameter.x1r().simpleName;
     var tmp0_safe_receiver = parameter.valuesListIds;
-    return this.y4t(parameter.index, parameter.name, parameter.typeId, tmp, tmp0_safe_receiver == null ? null : tmp0_safe_receiver.r3(variant));
+    return this.o4u(parameter.index, parameter.name, parameter.typeId, tmp, tmp0_safe_receiver == null ? null : tmp0_safe_receiver.r3(variant));
   }
   toString() {
     return 'VariantCaosParameter(index=' + this.index + ', name=' + this.name + ', typeId=' + this.typeId + ', typeName=' + this.type + ', valuesListId=' + this.valuesListId + ')';
@@ -2929,9 +2929,9 @@ class ICaosParameter {
       return false;
     return true;
   }
-  static x4t(seen0, index, name, typeId, typeName, valuesListId, serializationConstructorMarker) {
+  static n4u(seen0, index, name, typeId, typeName, valuesListId, serializationConstructorMarker) {
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance_8().v4t_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance_8().l4u_1);
     }
     var $this = createThis(this);
     $this.index = index;
@@ -2955,17 +2955,17 @@ class Companion_11 {
     tmp0_serialDesc.w13('C3', true);
     tmp0_serialDesc.w13('DS', true);
     tmp0_serialDesc.w13('SM', true);
-    this.b4u_1 = tmp0_serialDesc;
+    this.r4u_1 = tmp0_serialDesc;
   }
-  c4u(typeSerial0) {
-    return $serializer_9.a4t(typeSerial0);
+  s4u(typeSerial0) {
+    return $serializer_9.q4t(typeSerial0);
   }
   y14(typeParamsSerializers) {
-    return this.c4u(typeParamsSerializers[0]);
+    return this.s4u(typeParamsSerializers[0]);
   }
 }
 class $serializer_9 {
-  static d4u() {
+  static t4u() {
     var $this = createThis(this);
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.libstructs.VariantData', $this, 6);
     tmp0_serialDesc.w13('C1', true);
@@ -2980,37 +2980,37 @@ class $serializer_9 {
     tmp0_serialDesc.e13(new ProtoNumber(5));
     tmp0_serialDesc.w13('SM', true);
     tmp0_serialDesc.e13(new ProtoNumber(6));
-    $this.y4s_1 = tmp0_serialDesc;
+    $this.o4t_1 = tmp0_serialDesc;
     return $this;
   }
-  e4u(encoder, value) {
-    var tmp0_desc = this.y4s_1;
+  u4u(encoder, value) {
+    var tmp0_desc = this.o4t_1;
     var tmp1_output = encoder.bw(tmp0_desc);
     if (tmp1_output.zx(tmp0_desc, 0) ? true : !(value.C1 == null)) {
-      tmp1_output.vx(tmp0_desc, 0, this.z4s_1, value.C1);
+      tmp1_output.vx(tmp0_desc, 0, this.p4t_1, value.C1);
     }
     if (tmp1_output.zx(tmp0_desc, 1) ? true : !(value.C2 == null)) {
-      tmp1_output.vx(tmp0_desc, 1, this.z4s_1, value.C2);
+      tmp1_output.vx(tmp0_desc, 1, this.p4t_1, value.C2);
     }
     if (tmp1_output.zx(tmp0_desc, 2) ? true : !(value.CV == null)) {
-      tmp1_output.vx(tmp0_desc, 2, this.z4s_1, value.CV);
+      tmp1_output.vx(tmp0_desc, 2, this.p4t_1, value.CV);
     }
     if (tmp1_output.zx(tmp0_desc, 3) ? true : !(value.C3 == null)) {
-      tmp1_output.vx(tmp0_desc, 3, this.z4s_1, value.C3);
+      tmp1_output.vx(tmp0_desc, 3, this.p4t_1, value.C3);
     }
     if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.DS == null)) {
-      tmp1_output.vx(tmp0_desc, 4, this.z4s_1, value.DS);
+      tmp1_output.vx(tmp0_desc, 4, this.p4t_1, value.DS);
     }
     if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.SM == null)) {
-      tmp1_output.vx(tmp0_desc, 5, this.z4s_1, value.SM);
+      tmp1_output.vx(tmp0_desc, 5, this.p4t_1, value.SM);
     }
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.e4u(encoder, value instanceof VariantData ? value : THROW_CCE());
+    return this.u4u(encoder, value instanceof VariantData ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.y4s_1;
+    var tmp0_desc = this.o4t_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -3022,17 +3022,17 @@ class $serializer_9 {
     var tmp9_local5 = null;
     var tmp10_input = decoder.bw(tmp0_desc);
     if (tmp10_input.sw()) {
-      tmp4_local0 = tmp10_input.pw(tmp0_desc, 0, this.z4s_1, tmp4_local0);
+      tmp4_local0 = tmp10_input.pw(tmp0_desc, 0, this.p4t_1, tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp10_input.pw(tmp0_desc, 1, this.z4s_1, tmp5_local1);
+      tmp5_local1 = tmp10_input.pw(tmp0_desc, 1, this.p4t_1, tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp10_input.pw(tmp0_desc, 2, this.z4s_1, tmp6_local2);
+      tmp6_local2 = tmp10_input.pw(tmp0_desc, 2, this.p4t_1, tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp10_input.pw(tmp0_desc, 3, this.z4s_1, tmp7_local3);
+      tmp7_local3 = tmp10_input.pw(tmp0_desc, 3, this.p4t_1, tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp10_input.pw(tmp0_desc, 4, this.z4s_1, tmp8_local4);
+      tmp8_local4 = tmp10_input.pw(tmp0_desc, 4, this.p4t_1, tmp8_local4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp10_input.pw(tmp0_desc, 5, this.z4s_1, tmp9_local5);
+      tmp9_local5 = tmp10_input.pw(tmp0_desc, 5, this.p4t_1, tmp9_local5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
     } else
       while (tmp1_flag) {
@@ -3042,27 +3042,27 @@ class $serializer_9 {
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp10_input.pw(tmp0_desc, 0, this.z4s_1, tmp4_local0);
+            tmp4_local0 = tmp10_input.pw(tmp0_desc, 0, this.p4t_1, tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp10_input.pw(tmp0_desc, 1, this.z4s_1, tmp5_local1);
+            tmp5_local1 = tmp10_input.pw(tmp0_desc, 1, this.p4t_1, tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp10_input.pw(tmp0_desc, 2, this.z4s_1, tmp6_local2);
+            tmp6_local2 = tmp10_input.pw(tmp0_desc, 2, this.p4t_1, tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp10_input.pw(tmp0_desc, 3, this.z4s_1, tmp7_local3);
+            tmp7_local3 = tmp10_input.pw(tmp0_desc, 3, this.p4t_1, tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp10_input.pw(tmp0_desc, 4, this.z4s_1, tmp8_local4);
+            tmp8_local4 = tmp10_input.pw(tmp0_desc, 4, this.p4t_1, tmp8_local4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp10_input.pw(tmp0_desc, 5, this.z4s_1, tmp9_local5);
+            tmp9_local5 = tmp10_input.pw(tmp0_desc, 5, this.p4t_1, tmp9_local5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           default:
@@ -3070,31 +3070,31 @@ class $serializer_9 {
         }
       }
     tmp10_input.cw(tmp0_desc);
-    return VariantData.f4u(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, null);
+    return VariantData.v4u(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, null);
   }
   lr() {
-    return this.y4s_1;
+    return this.o4t_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [get_nullable(this.z4s_1), get_nullable(this.z4s_1), get_nullable(this.z4s_1), get_nullable(this.z4s_1), get_nullable(this.z4s_1), get_nullable(this.z4s_1)];
+    return [get_nullable(this.p4t_1), get_nullable(this.p4t_1), get_nullable(this.p4t_1), get_nullable(this.p4t_1), get_nullable(this.p4t_1), get_nullable(this.p4t_1)];
   }
   m14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [this.z4s_1];
+    return [this.p4t_1];
   }
-  static a4t(typeSerial0) {
-    var $this = this.d4u();
-    $this.z4s_1 = typeSerial0;
+  static q4t(typeSerial0) {
+    var $this = this.t4u();
+    $this.p4t_1 = typeSerial0;
     return $this;
   }
 }
 class VariantData {
-  static g4u(C1, C2, CV, C3, DS, SM) {
+  static w4u(C1, C2, CV, C3, DS, SM) {
     Companion_getInstance_11();
     C1 = C1 === VOID ? null : C1;
     C2 = C2 === VOID ? null : C2;
@@ -3111,42 +3111,42 @@ class VariantData {
     $this.SM = SM;
     return $this;
   }
-  h4u() {
+  x4u() {
     return this.C1;
   }
-  i4u() {
+  y4u() {
     return this.C2;
   }
-  j4u() {
+  z4u() {
     return this.CV;
   }
-  k4u() {
+  a4v() {
     return this.C3;
   }
-  l4u() {
+  b4v() {
     return this.DS;
   }
-  m4u() {
+  c4v() {
     return this.SM;
   }
-  static n4u(map) {
+  static d4v(map) {
     Companion_getInstance_11();
-    return this.g4u(map.r3('C1'), map.r3('C2'), map.r3('CV'), map.r3('C3'), map.r3('DS'), map.r3('SM'));
+    return this.w4u(map.r3('C1'), map.r3('C2'), map.r3('CV'), map.r3('C3'), map.r3('DS'), map.r3('SM'));
   }
   copyWithValueForVariantEnum(variant, value) {
     var tmp;
     if (variant.equals(C1_getInstance())) {
-      tmp = this.o4u(value);
+      tmp = this.e4v(value);
     } else if (variant.equals(C2_getInstance())) {
-      tmp = this.o4u(VOID, value);
+      tmp = this.e4v(VOID, value);
     } else if (variant.equals(CV_getInstance())) {
-      tmp = this.o4u(VOID, VOID, value);
+      tmp = this.e4v(VOID, VOID, value);
     } else if (variant.equals(C3_getInstance())) {
-      tmp = this.o4u(VOID, VOID, VOID, value);
+      tmp = this.e4v(VOID, VOID, VOID, value);
     } else if (variant.equals(DS_getInstance())) {
-      tmp = this.o4u(VOID, VOID, VOID, VOID, value);
+      tmp = this.e4v(VOID, VOID, VOID, VOID, value);
     } else if (variant.equals(SM_getInstance())) {
-      tmp = this.o4u(VOID, VOID, VOID, VOID, VOID, value);
+      tmp = this.e4v(VOID, VOID, VOID, VOID, VOID, value);
     } else {
       throw Exception.gc('Invalid variant');
     }
@@ -3175,17 +3175,17 @@ class VariantData {
         return null;
     }
   }
-  p4u(C1, C2, CV, C3, DS, SM) {
-    return VariantData.g4u(C1, C2, CV, C3, DS, SM);
+  f4v(C1, C2, CV, C3, DS, SM) {
+    return VariantData.w4u(C1, C2, CV, C3, DS, SM);
   }
-  o4u(C1, C2, CV, C3, DS, SM, $super) {
+  e4v(C1, C2, CV, C3, DS, SM, $super) {
     C1 = C1 === VOID ? this.C1 : C1;
     C2 = C2 === VOID ? this.C2 : C2;
     CV = CV === VOID ? this.CV : CV;
     C3 = C3 === VOID ? this.C3 : C3;
     DS = DS === VOID ? this.DS : DS;
     SM = SM === VOID ? this.SM : SM;
-    return $super === VOID ? this.p4u(C1, C2, CV, C3, DS, SM) : $super.p4u.call(this, C1, C2, CV, C3, DS, SM);
+    return $super === VOID ? this.f4v(C1, C2, CV, C3, DS, SM) : $super.f4v.call(this, C1, C2, CV, C3, DS, SM);
   }
   toString() {
     return 'VariantData(C1=' + toString_0(this.C1) + ', C2=' + toString_0(this.C2) + ', CV=' + toString_0(this.CV) + ', C3=' + toString_0(this.C3) + ', DS=' + toString_0(this.DS) + ', SM=' + toString_0(this.SM) + ')';
@@ -3218,10 +3218,10 @@ class VariantData {
       return false;
     return true;
   }
-  static f4u(seen0, C1, C2, CV, C3, DS, SM, serializationConstructorMarker) {
+  static v4u(seen0, C1, C2, CV, C3, DS, SM, serializationConstructorMarker) {
     Companion_getInstance_11();
     if (!(0 === (0 & seen0))) {
-      throwMissingFieldException(seen0, 0, Companion_getInstance_11().b4u_1);
+      throwMissingFieldException(seen0, 0, Companion_getInstance_11().r4u_1);
     }
     var $this = createThis(this);
     if (0 === (seen0 & 1))
@@ -3253,16 +3253,16 @@ class VariantData {
 }
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.q4u_1 = function_0;
+    this.g4v_1 = function_0;
   }
   wg(a, b) {
-    return this.q4u_1(a, b);
+    return this.g4v_1(a, b);
   }
   compare(a, b) {
     return this.wg(a, b);
   }
   f4() {
-    return this.q4u_1;
+    return this.g4v_1;
   }
   equals(other) {
     var tmp;
@@ -3308,7 +3308,7 @@ function $serializer_getInstance() {
 function CaosCommand$tokens$delegate$lambda(this$0) {
   return () => {
     // Inline function 'kotlin.collections.map' call
-    var this_0 = split(this$0.t4o_1, charArrayOf([_Char___init__impl__6a9atx(32)]));
+    var this_0 = split(this$0.j4p_1, charArrayOf([_Char___init__impl__6a9atx(32)]));
     // Inline function 'kotlin.collections.mapTo' call
     var destination = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
     var _iterator__ex2g4s = this_0.w();
@@ -3321,24 +3321,24 @@ function CaosCommand$tokens$delegate$lambda(this$0) {
   };
 }
 function CaosCommand$_get_tokens_$ref_qlm063() {
-  return (p0) => p0.h1s();
+  return (p0) => p0.j1s();
 }
 function CaosCommand$fullCommandHeader$delegate$lambda(this$0) {
   return () => {
-    var commandHeader = formatNameWithType(this$0.t4o_1, this$0.l4p());
+    var commandHeader = formatNameWithType(this$0.j4p_1, this$0.b4q());
     var tmp;
-    if (nullIfEmpty(this$0.u4o_1) == null) {
+    if (nullIfEmpty(this$0.k4p_1) == null) {
       tmp = null;
     } else {
       // Inline function 'kotlin.let' call
       var builder = StringBuilder.we(commandHeader);
-      var indexedObject = this$0.u4o_1;
+      var indexedObject = this$0.k4p_1;
       var inductionVariable = 0;
       var last = indexedObject.length;
       while (inductionVariable < last) {
         var parameter = indexedObject[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        builder.t(' ').t(formatNameWithType(parameter.name, parameter.v1r()));
+        builder.t(' ').t(formatNameWithType(parameter.name, parameter.x1r()));
       }
       tmp = builder.toString();
     }
@@ -3347,15 +3347,15 @@ function CaosCommand$fullCommandHeader$delegate$lambda(this$0) {
   };
 }
 function CaosCommand$isCommand$delegate$lambda(this$0) {
-  return () => !(this$0.a4p_1 || this$0.b4p_1);
+  return () => !(this$0.q4p_1 || this$0.r4p_1);
 }
 function CaosCommand$_get_isCommand_$ref_j0upw() {
-  return (p0) => p0.n4p();
+  return (p0) => p0.d4q();
 }
 function CaosCommand$_init_$lambda_fg2qzm(this$0) {
   return () => {
     // Inline function 'kotlin.collections.map' call
-    var this_0 = split(this$0.t4o_1, charArrayOf([_Char___init__impl__6a9atx(32)]));
+    var this_0 = split(this$0.j4p_1, charArrayOf([_Char___init__impl__6a9atx(32)]));
     // Inline function 'kotlin.collections.mapTo' call
     var destination = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
     var _iterator__ex2g4s = this_0.w();
@@ -3369,20 +3369,20 @@ function CaosCommand$_init_$lambda_fg2qzm(this$0) {
 }
 function CaosCommand$_init_$lambda_fg2qzm_0(this$0) {
   return () => {
-    var commandHeader = formatNameWithType(this$0.t4o_1, this$0.l4p());
+    var commandHeader = formatNameWithType(this$0.j4p_1, this$0.b4q());
     var tmp;
-    if (nullIfEmpty(this$0.u4o_1) == null) {
+    if (nullIfEmpty(this$0.k4p_1) == null) {
       tmp = null;
     } else {
       // Inline function 'kotlin.let' call
       var builder = StringBuilder.we(commandHeader);
-      var indexedObject = this$0.u4o_1;
+      var indexedObject = this$0.k4p_1;
       var inductionVariable = 0;
       var last = indexedObject.length;
       while (inductionVariable < last) {
         var parameter = indexedObject[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        builder.t(' ').t(formatNameWithType(parameter.name, parameter.v1r()));
+        builder.t(' ').t(formatNameWithType(parameter.name, parameter.x1r()));
       }
       tmp = builder.toString();
     }
@@ -3391,7 +3391,7 @@ function CaosCommand$_init_$lambda_fg2qzm_0(this$0) {
   };
 }
 function CaosCommand$_init_$lambda_fg2qzm_1(this$0) {
-  return () => !(this$0.a4p_1 || this$0.b4p_1);
+  return () => !(this$0.q4p_1 || this$0.r4p_1);
 }
 function formatNameWithType(name, type) {
   // Inline function 'kotlin.let' call
@@ -3422,7 +3422,7 @@ function $serializer_getInstance_0() {
 function CaosLibDefinitions$commandsById$delegate$lambda(this$0) {
   return () => {
     // Inline function 'kotlin.collections.map' call
-    var this_0 = this$0.u4p_1;
+    var this_0 = this$0.k4q_1;
     // Inline function 'kotlin.collections.mapTo' call
     var destination = ArrayList.y1(this_0.b2());
     // Inline function 'kotlin.collections.iterator' call
@@ -3436,12 +3436,12 @@ function CaosLibDefinitions$commandsById$delegate$lambda(this$0) {
   };
 }
 function CaosLibDefinitions$_get_commandsById_$ref_g2b0sn() {
-  return (p0) => p0.z4p();
+  return (p0) => p0.p4q();
 }
 function CaosLibDefinitions$_init_$lambda_tfojde(this$0) {
   return () => {
     // Inline function 'kotlin.collections.map' call
-    var this_0 = this$0.u4p_1;
+    var this_0 = this$0.k4q_1;
     // Inline function 'kotlin.collections.mapTo' call
     var destination = ArrayList.y1(this_0.b2());
     // Inline function 'kotlin.collections.iterator' call
@@ -3473,13 +3473,13 @@ function CaosParameter$type$delegate$lambda(this$0) {
   return () => Companion_instance.fromIntValue(this$0.typeId);
 }
 function CaosParameter$_get_type_$ref_n5tl2b() {
-  return (p0) => p0.v1r();
+  return (p0) => p0.x1r();
 }
 function CaosParameter$_init_$lambda_3besw4(this$0) {
   return () => Companion_instance.fromIntValue(this$0.typeId);
 }
 function _get_$cachedSerializer__te6jhj($this) {
-  return $this.l4q_1.k3();
+  return $this.b4r_1.k3();
 }
 function CaosScriptVarTokenGroup$Companion$_anonymous__6yzde9() {
   var tmp = values();
@@ -3598,7 +3598,7 @@ function CaosValuesList$bitflag$delegate$lambda(this$0) {
   };
 }
 function CaosValuesList$_get_bitflag_$ref_koiysb() {
-  return (p0) => p0.b4r();
+  return (p0) => p0.r4r();
 }
 function CaosValuesList$_init_$lambda_11sxhl(this$0) {
   return () => {
@@ -3626,19 +3626,19 @@ function CaosValuesListValue$intValue$delegate$lambda(this$0) {
   };
 }
 function CaosValuesListValue$_get_intValue_$ref_pvr0wd() {
-  return (p0) => p0.f1s();
+  return (p0) => p0.h1s();
 }
 function CaosValuesListValue$not$delegate$lambda(this$0) {
   return () => startsWith(this$0.value, '!');
 }
 function CaosValuesListValue$_get_not_$ref_4vgyw() {
-  return (p0) => p0.y4q();
+  return (p0) => p0.o4r();
 }
 function CaosValuesListValue$greaterThan$delegate$lambda(this$0) {
-  return () => !(this$0.f1s() == null) && startsWith(this$0.value, '>');
+  return () => !(this$0.h1s() == null) && startsWith(this$0.value, '>');
 }
 function CaosValuesListValue$_get_greaterThan_$ref_das0vk() {
-  return (p0) => p0.z4q();
+  return (p0) => p0.p4r();
 }
 function CaosValuesListValue$_init_$lambda_7cqd18(this$0) {
   return () => {
@@ -3652,7 +3652,7 @@ function CaosValuesListValue$_init_$lambda_7cqd18_0(this$0) {
   return () => startsWith(this$0.value, '!');
 }
 function CaosValuesListValue$_init_$lambda_7cqd18_1(this$0) {
-  return () => !(this$0.f1s() == null) && startsWith(this$0.value, '>');
+  return () => !(this$0.h1s() == null) && startsWith(this$0.value, '>');
 }
 var Companion_instance_6;
 function Companion_getInstance_5() {
@@ -3670,7 +3670,7 @@ function get_VARIANT_OLD() {
 }
 var VARIANT_OLD;
 function _get_$cachedSerializer__te6jhj_0($this) {
-  return $this.s4r_1.k3();
+  return $this.i4s_1.k3();
 }
 function CaosVariant$Companion$_anonymous__9oo02c() {
   var tmp = getKClass(CaosVariant);
@@ -3784,16 +3784,16 @@ function $serializer_getInstance_5() {
   return $serializer_instance_5;
 }
 function CaosVariantData$isOld$delegate$lambda(this$0) {
-  return () => listOf(['C1', 'C2']).g2(this$0.f4s_1);
+  return () => listOf(['C1', 'C2']).g2(this$0.v4s_1);
 }
 function CaosVariantData$isNew$delegate$lambda(this$0) {
-  return () => !listOf(['C1', 'C2']).g2(this$0.f4s_1);
+  return () => !listOf(['C1', 'C2']).g2(this$0.v4s_1);
 }
 function CaosVariantData$_init_$lambda_7brc0u(this$0) {
-  return () => listOf(['C1', 'C2']).g2(this$0.f4s_1);
+  return () => listOf(['C1', 'C2']).g2(this$0.v4s_1);
 }
 function CaosVariantData$_init_$lambda_7brc0u_0(this$0) {
-  return () => !listOf(['C1', 'C2']).g2(this$0.f4s_1);
+  return () => !listOf(['C1', 'C2']).g2(this$0.v4s_1);
 }
 function Commands$Companion$$childSerializers$_anonymous__37qrhe() {
   return new ReferenceArraySerializer(getKClass(ICaosCommand), $serializer_getInstance_7());
@@ -3823,7 +3823,7 @@ function VariantCaosCommand$Companion$$childSerializers$_anonymous__495hkq_0() {
   return new ReferenceArraySerializer(PrimitiveClasses_getInstance().je(), StringSerializer_getInstance());
 }
 function VariantCaosCommand$Companion$$childSerializers$_anonymous__495hkq_1() {
-  return $serializer_9.a4t(IntSerializer_getInstance());
+  return $serializer_9.q4t(IntSerializer_getInstance());
 }
 var Companion_instance_10;
 function Companion_getInstance_9() {
@@ -3872,9 +3872,9 @@ function nullIfEmpty(_this__u8e3s4) {
   return tmp;
 }
 function toVariantCommand(_this__u8e3s4, variant) {
-  var tmp1_command = _this__u8e3s4.t4o_1;
+  var tmp1_command = _this__u8e3s4.j4p_1;
   // Inline function 'kotlin.collections.map' call
-  var this_0 = _this__u8e3s4.u4o_1;
+  var this_0 = _this__u8e3s4.k4p_1;
   // Inline function 'kotlin.collections.mapTo' call
   var destination = ArrayList.y1(this_0.length);
   var inductionVariable = 0;
@@ -3882,7 +3882,7 @@ function toVariantCommand(_this__u8e3s4, variant) {
   while (inductionVariable < last) {
     var item = this_0[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
-    var tmp$ret$2 = ICaosParameter.a4u(item, variant);
+    var tmp$ret$2 = ICaosParameter.q4u(item, variant);
     destination.z1(tmp$ret$2);
   }
   // Inline function 'kotlin.collections.sortedBy' call
@@ -3892,29 +3892,29 @@ function toVariantCommand(_this__u8e3s4, variant) {
   // Inline function 'kotlin.collections.toTypedArray' call
   var this_1 = sortedWith(destination, tmp$ret$4);
   var tmp2_parameters = copyToArray(this_1);
-  var tmp3_isLvalue = _this__u8e3s4.b4p_1;
-  var tmp4_isRvalue = _this__u8e3s4.a4p_1;
-  var tmp5_returnTypeId = _this__u8e3s4.l4p().value;
-  var tmp6_returnTypeName = _this__u8e3s4.l4p().simpleName;
-  var tmp7_variants = _this__u8e3s4.z4o_1;
-  var tmp8_description = _this__u8e3s4.w4o_1;
-  var tmp9_commandGroup = _this__u8e3s4.d4p_1;
-  var tmp10_doifFormat = _this__u8e3s4.e4p_1;
-  var tmp11_lvalueName = _this__u8e3s4.c4p_1;
-  var tmp12_requiresCreatureOwnr = _this__u8e3s4.f4p_1;
-  var tmp13_requiresOwnr = _this__u8e3s4.y4o_1;
-  var tmp0_safe_receiver = _this__u8e3s4.x4o_1;
+  var tmp3_isLvalue = _this__u8e3s4.r4p_1;
+  var tmp4_isRvalue = _this__u8e3s4.q4p_1;
+  var tmp5_returnTypeId = _this__u8e3s4.b4q().value;
+  var tmp6_returnTypeName = _this__u8e3s4.b4q().simpleName;
+  var tmp7_variants = _this__u8e3s4.p4p_1;
+  var tmp8_description = _this__u8e3s4.m4p_1;
+  var tmp9_commandGroup = _this__u8e3s4.t4p_1;
+  var tmp10_doifFormat = _this__u8e3s4.u4p_1;
+  var tmp11_lvalueName = _this__u8e3s4.s4p_1;
+  var tmp12_requiresCreatureOwnr = _this__u8e3s4.v4p_1;
+  var tmp13_requiresOwnr = _this__u8e3s4.o4p_1;
+  var tmp0_safe_receiver = _this__u8e3s4.n4p_1;
   var tmp_0;
   if (tmp0_safe_receiver == null) {
     tmp_0 = null;
   } else {
     // Inline function 'kotlin.let' call
-    tmp_0 = VariantData.n4u(tmp0_safe_receiver);
+    tmp_0 = VariantData.d4v(tmp0_safe_receiver);
   }
   var tmp14_returnValuesListIds = tmp_0;
-  var tmp15_isCommand = _this__u8e3s4.n4p();
-  var tmp16_tokens = _this__u8e3s4.h1s();
-  var tmp17_ceOnly = _this__u8e3s4.g4p_1 === true;
+  var tmp15_isCommand = _this__u8e3s4.d4q();
+  var tmp16_tokens = _this__u8e3s4.j1s();
+  var tmp17_ceOnly = _this__u8e3s4.w4p_1 === true;
   return new ICaosCommand(tmp1_command, tmp2_parameters, tmp3_isLvalue, tmp4_isRvalue, tmp15_isCommand, tmp5_returnTypeId, tmp6_returnTypeName, tmp7_variants, tmp8_description, tmp11_lvalueName, tmp14_returnValuesListIds, tmp13_requiresOwnr, tmp9_commandGroup, tmp10_doifFormat, tmp12_requiresCreatureOwnr, tmp16_tokens, tmp17_ceOnly);
 }
 function toVariantCommand$lambda(a, b) {
@@ -3979,7 +3979,7 @@ initMetadataForObject($serializer_8, '$serializer', VOID, VOID, [GeneratedSerial
 initMetadataForClass(ICaosParameter, 'VariantCaosParameter', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance_8});
 initMetadataForCompanion(Companion_11, VOID, [SerializerFactory]);
 initMetadataForClass($serializer_9, '$serializer', VOID, VOID, [GeneratedSerializer]);
-initMetadataForClass(VariantData, 'VariantData', VariantData.g4u, VOID, VOID, VOID, VOID, {0: Companion_getInstance_11});
+initMetadataForClass(VariantData, 'VariantData', VariantData.w4u, VOID, VOID, VOID, VOID, {0: Companion_getInstance_11});
 initMetadataForClass(sam$kotlin_Comparator$0, 'sam$kotlin_Comparator$0', VOID, VOID, [Comparator, FunctionAdapter]);
 //endregion
 //region block: init

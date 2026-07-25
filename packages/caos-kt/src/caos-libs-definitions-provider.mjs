@@ -66,7 +66,7 @@ function setCaosLibProvider(provider) {
 }
 function libProvider$lambda() {
   _init_properties_universalLib_kt__7v7mii();
-  throw CaosException.w1s('CAOS lib not yet provided. Use setCaosLibProvider() before trying to access the CAOS library.');
+  throw CaosException.y1s('CAOS lib not yet provided. Use setCaosLibProvider() before trying to access the CAOS library.');
 }
 function caosLibsProtoSerializer$delegate$lambda() {
   _init_properties_universalLib_kt__7v7mii();
@@ -80,7 +80,7 @@ function _get_caosLibsProtoSerializer_$ref_a8v4qe() {
   return () => get_caosLibsProtoSerializer();
 }
 function setProtoBufProvider$lambda($get) {
-  return () => get_caosLibsProtoSerializer().d4j(Companion_getInstance().k1e(), $get());
+  return () => get_caosLibsProtoSerializer().t4j(Companion_getInstance().k1e(), $get());
 }
 var properties_initialized_universalLib_kt_px3evw;
 function _init_properties_universalLib_kt__7v7mii() {

@@ -69,7 +69,7 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.h67_1 = [tmp_1, lazy(tmp_2, CatalogueCursorData$Companion$$childSerializers$_anonymous__dulzi7_0), null];
+    tmp.a68_1 = [tmp_1, lazy(tmp_2, CatalogueCursorData$Companion$$childSerializers$_anonymous__dulzi7_0), null];
   }
 }
 class $serializer {
@@ -79,33 +79,33 @@ class $serializer {
     tmp0_serialDesc.w13('item', false);
     tmp0_serialDesc.w13('position', false);
     tmp0_serialDesc.w13('positionString', true);
-    this.i67_1 = tmp0_serialDesc;
+    this.b68_1 = tmp0_serialDesc;
   }
-  j67(encoder, value) {
-    var tmp0_desc = this.i67_1;
+  c68(encoder, value) {
+    var tmp0_desc = this.b68_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_1().h67_1;
-    tmp1_output.tx(tmp0_desc, 0, tmp2_cached[0].k3(), value.k67_1);
-    tmp1_output.tx(tmp0_desc, 1, tmp2_cached[1].k3(), value.l67_1);
+    var tmp2_cached = Companion_getInstance_1().a68_1;
+    tmp1_output.tx(tmp0_desc, 0, tmp2_cached[0].k3(), value.d68_1);
+    tmp1_output.tx(tmp0_desc, 1, tmp2_cached[1].k3(), value.e68_1);
     var tmp;
     if (tmp1_output.zx(tmp0_desc, 2)) {
       tmp = true;
     } else {
       // Inline function 'kotlin.text.uppercase' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp$ret$0 = value.l67_1.c1_1.toUpperCase();
-      tmp = !(value.m67_1 === tmp$ret$0);
+      var tmp$ret$0 = value.e68_1.c1_1.toUpperCase();
+      tmp = !(value.f68_1 === tmp$ret$0);
     }
     if (tmp) {
-      tmp1_output.rx(tmp0_desc, 2, value.m67_1);
+      tmp1_output.rx(tmp0_desc, 2, value.f68_1);
     }
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.j67(encoder, value instanceof CatalogueCursorData ? value : THROW_CCE());
+    return this.c68(encoder, value instanceof CatalogueCursorData ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.i67_1;
+    var tmp0_desc = this.b68_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -113,7 +113,7 @@ class $serializer {
     var tmp5_local1 = null;
     var tmp6_local2 = null;
     var tmp7_input = decoder.bw(tmp0_desc);
-    var tmp8_cached = Companion_getInstance_1().h67_1;
+    var tmp8_cached = Companion_getInstance_1().a68_1;
     if (tmp7_input.sw()) {
       tmp4_local0 = tmp7_input.nw(tmp0_desc, 0, tmp8_cached[0].k3(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -145,13 +145,13 @@ class $serializer {
         }
       }
     tmp7_input.cw(tmp0_desc);
-    return CatalogueCursorData.n67(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, null);
+    return CatalogueCursorData.g68(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, null);
   }
   lr() {
-    return this.i67_1;
+    return this.b68_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance_1().h67_1;
+    var tmp0_cached = Companion_getInstance_1().a68_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -161,19 +161,19 @@ class $serializer {
 class CatalogueCursorData {
   constructor(item, position) {
     Companion_getInstance_1();
-    this.k67_1 = item;
-    this.l67_1 = position;
+    this.d68_1 = item;
+    this.e68_1 = position;
     var tmp = this;
     // Inline function 'kotlin.text.uppercase' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.m67_1 = this.l67_1.c1_1.toUpperCase();
+    tmp.f68_1 = this.e68_1.c1_1.toUpperCase();
   }
   toString() {
-    return 'CatalogueCursorData(item=' + toString(this.k67_1) + ', position=' + this.l67_1.toString() + ')';
+    return 'CatalogueCursorData(item=' + toString(this.d68_1) + ', position=' + this.e68_1.toString() + ')';
   }
   hashCode() {
-    var result = hashCode(this.k67_1);
-    result = imul(result, 31) + this.l67_1.hashCode() | 0;
+    var result = hashCode(this.d68_1);
+    result = imul(result, 31) + this.e68_1.hashCode() | 0;
     return result;
   }
   equals(other) {
@@ -181,27 +181,27 @@ class CatalogueCursorData {
       return true;
     if (!(other instanceof CatalogueCursorData))
       return false;
-    if (!equals(this.k67_1, other.k67_1))
+    if (!equals(this.d68_1, other.d68_1))
       return false;
-    if (!this.l67_1.equals(other.l67_1))
+    if (!this.e68_1.equals(other.e68_1))
       return false;
     return true;
   }
-  static n67(seen0, item, position, positionString, serializationConstructorMarker) {
+  static g68(seen0, item, position, positionString, serializationConstructorMarker) {
     Companion_getInstance_1();
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance().i67_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance().b68_1);
     }
     var $this = createThis(this);
-    $this.k67_1 = item;
-    $this.l67_1 = position;
+    $this.d68_1 = item;
+    $this.e68_1 = position;
     if (0 === (seen0 & 4)) {
       var tmp = $this;
       // Inline function 'kotlin.text.uppercase' call
       // Inline function 'kotlin.js.asDynamic' call
-      tmp.m67_1 = $this.l67_1.c1_1.toUpperCase();
+      tmp.f68_1 = $this.e68_1.c1_1.toUpperCase();
     } else
-      $this.m67_1 = positionString;
+      $this.f68_1 = positionString;
     return $this;
   }
 }
@@ -310,7 +310,7 @@ function getCatalogueCursorPosition(parseResult, lineNumber, column, includeAfte
 }
 function getDistanceAbsoluteAsInt(range, lineNumber, column) {
   var distance = getAbsoluteDistanceFromNearestEdge(range, lineNumber, column);
-  return distance.t53_1 << 16 | distance.u53_1;
+  return distance.j54_1 << 16 | distance.k54_1;
 }
 function getCatalogueCursor(text, line, character, includeAfter) {
   includeAfter = includeAfter === VOID ? false : includeAfter;
@@ -361,13 +361,13 @@ function fromDynamic(dynamic) {
     var this_5 = serializer(this_4, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CatalogueParserItem), arrayOf([]), false))]), false));
     var tmp$ret$4 = isInterface(this_5, KSerializer) ? this_5 : THROW_CCE();
     var items = decodeFromDynamic(this_3, tmp$ret$4, dynamic);
-    return (new CatalogueRawItemWalker(items)).b67();
+    return (new CatalogueRawItemWalker(items)).u67();
   }
   var jsonString = JSON.stringify(dynamic);
   if (jsonString.length > 1200) {
     jsonString = substring(jsonString, 0, 1200);
   }
-  Log_getInstance().r1i('Argument is not a catalogue parse result; JSON(slice): ' + jsonString);
+  Log_getInstance().u1i('Argument is not a catalogue parse result; JSON(slice): ' + jsonString);
   return null;
 }
 //region block: post-declaration

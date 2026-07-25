@@ -65,7 +65,7 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.i56_1 = [null, null, tmp_1, lazy(tmp_2, FormatResult$Companion$$childSerializers$_anonymous__qoz48m_0)];
+    tmp.y56_1 = [null, null, tmp_1, lazy(tmp_2, FormatResult$Companion$$childSerializers$_anonymous__qoz48m_0)];
   }
 }
 class $serializer {
@@ -76,12 +76,12 @@ class $serializer {
     tmp0_serialDesc.w13('oldText', false);
     tmp0_serialDesc.w13('edits', false);
     tmp0_serialDesc.w13('editReasons', false);
-    this.j56_1 = tmp0_serialDesc;
+    this.z56_1 = tmp0_serialDesc;
   }
-  k56(encoder, value) {
-    var tmp0_desc = this.j56_1;
+  a57(encoder, value) {
+    var tmp0_desc = this.z56_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance().i56_1;
+    var tmp2_cached = Companion_getInstance().y56_1;
     tmp1_output.rx(tmp0_desc, 0, value.formattedText);
     tmp1_output.rx(tmp0_desc, 1, value.oldText);
     tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.edits);
@@ -89,10 +89,10 @@ class $serializer {
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.k56(encoder, value instanceof FormatResult ? value : THROW_CCE());
+    return this.a57(encoder, value instanceof FormatResult ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.j56_1;
+    var tmp0_desc = this.z56_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -101,7 +101,7 @@ class $serializer {
     var tmp6_local2 = null;
     var tmp7_local3 = null;
     var tmp8_input = decoder.bw(tmp0_desc);
-    var tmp9_cached = Companion_getInstance().i56_1;
+    var tmp9_cached = Companion_getInstance().y56_1;
     if (tmp8_input.sw()) {
       tmp4_local0 = tmp8_input.lw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
@@ -139,13 +139,13 @@ class $serializer {
         }
       }
     tmp8_input.cw(tmp0_desc);
-    return FormatResult.l56(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
+    return FormatResult.b57(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
   }
   lr() {
-    return this.j56_1;
+    return this.z56_1;
   }
   l14() {
-    var tmp0_cached = Companion_getInstance().i56_1;
+    var tmp0_cached = Companion_getInstance().y56_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -160,16 +160,16 @@ class FormatResult {
     this.edits = edits;
     this.editReasons = editReasons;
   }
-  m56() {
+  c57() {
     return this.formattedText;
   }
-  n56() {
+  d57() {
     return this.oldText;
   }
-  o56() {
+  e57() {
     return this.edits;
   }
-  p56() {
+  f57() {
     return this.editReasons;
   }
   equals(other) {
@@ -194,10 +194,10 @@ class FormatResult {
   toString() {
     return 'FormatResult(formattedText=' + this.formattedText + ', oldText=' + this.oldText + ', edits=' + toString(this.edits) + ', editReasons=' + toString(this.editReasons) + ')';
   }
-  static l56(seen0, formattedText, oldText, edits, editReasons, serializationConstructorMarker) {
+  static b57(seen0, formattedText, oldText, edits, editReasons, serializationConstructorMarker) {
     Companion_getInstance();
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance().j56_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance().z56_1);
     }
     var $this = createThis(this);
     $this.formattedText = formattedText;
@@ -210,113 +210,113 @@ class FormatResult {
 class EditReason extends Enum {
   constructor(name, ordinal, commonName) {
     super(name, ordinal);
-    this.s56_1 = commonName;
+    this.i57_1 = commonName;
   }
 }
 class FormatterOptions {}
 class FormatterOptionsBuilder {
   constructor() {
-    this.e57_1 = null;
-    this.f57_1 = null;
-    this.g57_1 = null;
-    this.h57_1 = null;
-    this.i57_1 = null;
-    this.j57_1 = null;
-    this.k57_1 = null;
-    this.l57_1 = null;
-    this.m57_1 = null;
-    this.n57_1 = null;
-    this.o57_1 = null;
+    this.u57_1 = null;
+    this.v57_1 = null;
+    this.w57_1 = null;
+    this.x57_1 = null;
+    this.y57_1 = null;
+    this.z57_1 = null;
+    this.a58_1 = null;
+    this.b58_1 = null;
+    this.c58_1 = null;
+    this.d58_1 = null;
+    this.e58_1 = null;
   }
-  t56() {
-    var tmp0_elvis_lhs = this.e57_1;
+  j57() {
+    var tmp0_elvis_lhs = this.u57_1;
     return tmp0_elvis_lhs == null ? 4 : tmp0_elvis_lhs;
   }
-  p57(tabSize) {
-    this.e57_1 = tabSize;
+  f58(tabSize) {
+    this.u57_1 = tabSize;
     return this;
   }
-  u56() {
-    var tmp0_elvis_lhs = this.f57_1;
+  k57() {
+    var tmp0_elvis_lhs = this.v57_1;
     return tmp0_elvis_lhs == null ? true : tmp0_elvis_lhs;
   }
-  q57(insert) {
-    this.f57_1 = insert;
+  g58(insert) {
+    this.v57_1 = insert;
     return this;
   }
-  v56() {
-    return this.g57_1;
+  l57() {
+    return this.w57_1;
   }
-  r57(trim) {
-    this.g57_1 = trim;
+  h58(trim) {
+    this.w57_1 = trim;
     return this;
   }
-  w56() {
-    return this.h57_1;
+  m57() {
+    return this.x57_1;
   }
-  s57(insert) {
-    this.h57_1 = insert;
+  i58(insert) {
+    this.x57_1 = insert;
     return this;
   }
-  x56() {
-    return this.i57_1;
+  n57() {
+    return this.y57_1;
   }
-  t57(trim) {
-    this.i57_1 = trim;
+  j58(trim) {
+    this.y57_1 = trim;
     return this;
   }
-  y56() {
-    return this.j57_1;
+  o57() {
+    return this.z57_1;
   }
-  u57(minBlankLines) {
-    this.j57_1 = minBlankLines;
+  k58(minBlankLines) {
+    this.z57_1 = minBlankLines;
     return this;
   }
-  z56() {
-    return this.k57_1;
+  p57() {
+    return this.a58_1;
   }
-  v57(maxBlankLines) {
-    this.k57_1 = maxBlankLines;
+  l58(maxBlankLines) {
+    this.a58_1 = maxBlankLines;
     return this;
   }
-  a57() {
-    return this.l57_1;
+  q57() {
+    return this.b58_1;
   }
-  w57(indent) {
-    this.l57_1 = indent;
+  m58(indent) {
+    this.b58_1 = indent;
     return this;
   }
-  b57() {
-    return this.m57_1;
+  r57() {
+    return this.c58_1;
   }
-  x57(indent) {
-    this.m57_1 = indent;
+  n58(indent) {
+    this.c58_1 = indent;
     return this;
   }
-  c57() {
-    return this.n57_1;
+  s57() {
+    return this.d58_1;
   }
-  y57(newline) {
-    this.n57_1 = newline;
+  o58(newline) {
+    this.d58_1 = newline;
     return this;
   }
-  d57() {
-    return this.o57_1;
+  t57() {
+    return this.e58_1;
   }
-  z57(force) {
-    this.o57_1 = force;
+  p58(force) {
+    this.e58_1 = force;
     return this;
   }
 }
 class Companion_0 {
   constructor() {
-    this.a58_1 = 4;
-    this.b58_1 = true;
-    this.c58_1 = false;
-    this.d58_1 = true;
-    this.e58_1 = 0;
-    this.f58_1 = '\n';
-    this.g58_1 = false;
+    this.q58_1 = 4;
+    this.r58_1 = true;
+    this.s58_1 = false;
+    this.t58_1 = true;
+    this.u58_1 = 0;
+    this.v58_1 = '\n';
+    this.w58_1 = false;
   }
 }
 class $serializer_0 {
@@ -324,21 +324,21 @@ class $serializer_0 {
     $serializer_instance_0 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.formatter.FormatterOptionsImpl', this, 1);
     tmp0_serialDesc.w13('opts', true);
-    this.h58_1 = tmp0_serialDesc;
+    this.x58_1 = tmp0_serialDesc;
   }
-  i58(encoder, value) {
-    var tmp0_desc = this.h58_1;
+  y58(encoder, value) {
+    var tmp0_desc = this.x58_1;
     var tmp1_output = encoder.bw(tmp0_desc);
-    if (tmp1_output.zx(tmp0_desc, 0) ? true : !(value.v58() == null)) {
-      tmp1_output.vx(tmp0_desc, 0, FormatterOptionsSerializer_getInstance(), value.v58());
+    if (tmp1_output.zx(tmp0_desc, 0) ? true : !(value.l59() == null)) {
+      tmp1_output.vx(tmp0_desc, 0, FormatterOptionsSerializer_getInstance(), value.l59());
     }
     tmp1_output.cw(tmp0_desc);
   }
   mr(encoder, value) {
-    return this.i58(encoder, value instanceof FormatterOptionsImpl ? value : THROW_CCE());
+    return this.y58(encoder, value instanceof FormatterOptionsImpl ? value : THROW_CCE());
   }
   nr(decoder) {
-    var tmp0_desc = this.h58_1;
+    var tmp0_desc = this.x58_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -363,10 +363,10 @@ class $serializer_0 {
         }
       }
     tmp16_input.cw(tmp0_desc);
-    return FormatterOptionsImpl.w58(tmp3_bitMask0, tmp4_local0, null);
+    return FormatterOptionsImpl.m59(tmp3_bitMask0, tmp4_local0, null);
   }
   lr() {
-    return this.h58_1;
+    return this.x58_1;
   }
   l14() {
     // Inline function 'kotlin.arrayOf' call
@@ -378,141 +378,141 @@ class $serializer_0 {
 class FormatterOptionsImpl {
   constructor(opts) {
     opts = opts === VOID ? null : opts;
-    this.j58_1 = opts;
+    this.z58_1 = opts;
     var tmp = this;
-    tmp.k58_1 = lazy_0(FormatterOptionsImpl$tabSize$delegate$lambda(this));
+    tmp.a59_1 = lazy_0(FormatterOptionsImpl$tabSize$delegate$lambda(this));
     var tmp_0 = this;
-    tmp_0.l58_1 = lazy_0(FormatterOptionsImpl$insertSpaces$delegate$lambda(this));
+    tmp_0.b59_1 = lazy_0(FormatterOptionsImpl$insertSpaces$delegate$lambda(this));
     var tmp_1 = this;
-    tmp_1.m58_1 = lazy_0(FormatterOptionsImpl$trimTrailingWhitespace$delegate$lambda(this));
+    tmp_1.c59_1 = lazy_0(FormatterOptionsImpl$trimTrailingWhitespace$delegate$lambda(this));
     var tmp_2 = this;
-    tmp_2.n58_1 = lazy_0(FormatterOptionsImpl$insertFinalNewline$delegate$lambda(this));
+    tmp_2.d59_1 = lazy_0(FormatterOptionsImpl$insertFinalNewline$delegate$lambda(this));
     var tmp_3 = this;
-    tmp_3.o58_1 = lazy_0(FormatterOptionsImpl$trimFinalNewlines$delegate$lambda(this));
+    tmp_3.e59_1 = lazy_0(FormatterOptionsImpl$trimFinalNewlines$delegate$lambda(this));
     var tmp_4 = this;
-    tmp_4.p58_1 = lazy_0(FormatterOptionsImpl$indentComments$delegate$lambda(this));
+    tmp_4.f59_1 = lazy_0(FormatterOptionsImpl$indentComments$delegate$lambda(this));
     var tmp_5 = this;
-    tmp_5.q58_1 = lazy_0(FormatterOptionsImpl$continuationIndent$delegate$lambda(this));
+    tmp_5.g59_1 = lazy_0(FormatterOptionsImpl$continuationIndent$delegate$lambda(this));
     var tmp_6 = this;
-    tmp_6.r58_1 = lazy_0(FormatterOptionsImpl$minBlankLines$delegate$lambda(this));
+    tmp_6.h59_1 = lazy_0(FormatterOptionsImpl$minBlankLines$delegate$lambda(this));
     var tmp_7 = this;
-    tmp_7.s58_1 = lazy_0(FormatterOptionsImpl$maxBlankLines$delegate$lambda(this));
+    tmp_7.i59_1 = lazy_0(FormatterOptionsImpl$maxBlankLines$delegate$lambda(this));
     var tmp_8 = this;
-    tmp_8.t58_1 = lazy_0(FormatterOptionsImpl$newLineChar$delegate$lambda(this));
+    tmp_8.j59_1 = lazy_0(FormatterOptionsImpl$newLineChar$delegate$lambda(this));
     var tmp_9 = this;
-    tmp_9.u58_1 = lazy_0(FormatterOptionsImpl$forceMinBlankLinesAfterComments$delegate$lambda(this));
+    tmp_9.k59_1 = lazy_0(FormatterOptionsImpl$forceMinBlankLinesAfterComments$delegate$lambda(this));
   }
-  v58() {
-    return this.j58_1;
+  l59() {
+    return this.z58_1;
   }
-  t56() {
-    var tmp0 = this.k58_1;
+  j57() {
+    var tmp0 = this.a59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('tabSize', 1, tmp, FormatterOptionsImpl$_get_tabSize_$ref_hwkkhy(), null);
     return tmp0.k3();
   }
-  u56() {
-    var tmp0 = this.l58_1;
+  k57() {
+    var tmp0 = this.b59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('insertSpaces', 1, tmp, FormatterOptionsImpl$_get_insertSpaces_$ref_pa5tks(), null);
     return tmp0.k3();
   }
-  v56() {
-    var tmp0 = this.m58_1;
+  l57() {
+    var tmp0 = this.c59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('trimTrailingWhitespace', 1, tmp, FormatterOptionsImpl$_get_trimTrailingWhitespace_$ref_5jjnm9(), null);
     return tmp0.k3();
   }
-  w56() {
-    var tmp0 = this.n58_1;
+  m57() {
+    var tmp0 = this.d59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('insertFinalNewline', 1, tmp, FormatterOptionsImpl$_get_insertFinalNewline_$ref_negokt(), null);
     return tmp0.k3();
   }
-  x56() {
-    var tmp0 = this.o58_1;
+  n57() {
+    var tmp0 = this.e59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('trimFinalNewlines', 1, tmp, FormatterOptionsImpl$_get_trimFinalNewlines_$ref_mabf19(), null);
     return tmp0.k3();
   }
-  a57() {
-    var tmp0 = this.p58_1;
+  q57() {
+    var tmp0 = this.f59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('indentComments', 1, tmp, FormatterOptionsImpl$_get_indentComments_$ref_3c1vuy(), null);
     return tmp0.k3();
   }
-  b57() {
-    var tmp0 = this.q58_1;
+  r57() {
+    var tmp0 = this.g59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('continuationIndent', 1, tmp, FormatterOptionsImpl$_get_continuationIndent_$ref_slxct5(), null);
     return tmp0.k3();
   }
-  y56() {
-    var tmp0 = this.r58_1;
+  o57() {
+    var tmp0 = this.h59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('minBlankLines', 1, tmp, FormatterOptionsImpl$_get_minBlankLines_$ref_ghgmtv(), null);
     return tmp0.k3();
   }
-  z56() {
-    var tmp0 = this.s58_1;
+  p57() {
+    var tmp0 = this.i59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('maxBlankLines', 1, tmp, FormatterOptionsImpl$_get_maxBlankLines_$ref_xwldq7(), null);
     return tmp0.k3();
   }
-  c57() {
-    var tmp0 = this.t58_1;
+  s57() {
+    var tmp0 = this.j59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('newLineChar', 1, tmp, FormatterOptionsImpl$_get_newLineChar_$ref_ipusee(), null);
     return tmp0.k3();
   }
-  d57() {
-    var tmp0 = this.u58_1;
+  t57() {
+    var tmp0 = this.k59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('forceMinBlankLinesAfterComments', 1, tmp, FormatterOptionsImpl$_get_forceMinBlankLinesAfterComments_$ref_axojzm(), null);
     return tmp0.k3();
   }
-  static w58(seen0, opts, serializationConstructorMarker) {
+  static m59(seen0, opts, serializationConstructorMarker) {
     if (!(0 === (0 & seen0))) {
-      throwMissingFieldException(seen0, 0, $serializer_getInstance_0().h58_1);
+      throwMissingFieldException(seen0, 0, $serializer_getInstance_0().x58_1);
     }
     var $this = createThis(this);
     if (0 === (seen0 & 1))
-      $this.j58_1 = null;
+      $this.z58_1 = null;
     else
-      $this.j58_1 = opts;
+      $this.z58_1 = opts;
     var tmp = $this;
-    tmp.k58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax($this));
+    tmp.a59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax($this));
     var tmp_0 = $this;
-    tmp_0.l58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_0($this));
+    tmp_0.b59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_0($this));
     var tmp_1 = $this;
-    tmp_1.m58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_1($this));
+    tmp_1.c59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_1($this));
     var tmp_2 = $this;
-    tmp_2.n58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_2($this));
+    tmp_2.d59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_2($this));
     var tmp_3 = $this;
-    tmp_3.o58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_3($this));
+    tmp_3.e59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_3($this));
     var tmp_4 = $this;
-    tmp_4.p58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_4($this));
+    tmp_4.f59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_4($this));
     var tmp_5 = $this;
-    tmp_5.q58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_5($this));
+    tmp_5.g59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_5($this));
     var tmp_6 = $this;
-    tmp_6.r58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_6($this));
+    tmp_6.h59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_6($this));
     var tmp_7 = $this;
-    tmp_7.s58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_7($this));
+    tmp_7.i59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_7($this));
     var tmp_8 = $this;
-    tmp_8.t58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_8($this));
+    tmp_8.j59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_8($this));
     var tmp_9 = $this;
-    tmp_9.u58_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_9($this));
+    tmp_9.k59_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_9($this));
     return $this;
   }
 }
@@ -520,10 +520,10 @@ class FormatterOptionsSerializer {
   constructor() {
     FormatterOptionsSerializer_instance = this;
     var tmp = this;
-    tmp.x58_1 = lazy_0(FormatterOptionsSerializer$descriptor$delegate$lambda);
+    tmp.n59_1 = lazy_0(FormatterOptionsSerializer$descriptor$delegate$lambda);
   }
   lr() {
-    var tmp0 = this.x58_1;
+    var tmp0 = this.n59_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, FormatterOptionsSerializer$_get_descriptor_$ref_lajlo7(), null);
@@ -586,28 +586,28 @@ class FormatterOptionsSerializer {
       }
     }
     o.cw(descriptor);
-    return (new FormatterOptionsBuilder()).p57(tabSize).q57(insertSpaces).r57(trimTrailingWhitespace).s57(insertFinalNewline).t57(trimFinalNewlines).u57(minBlankLines).v57(maxBlankLines).w57(indentComments).x57(continuationIndent).y57(newLineChar).z57(forceMinBlankLinesAfterComments);
+    return (new FormatterOptionsBuilder()).f58(tabSize).g58(insertSpaces).h58(trimTrailingWhitespace).i58(insertFinalNewline).j58(trimFinalNewlines).k58(minBlankLines).l58(maxBlankLines).m58(indentComments).n58(continuationIndent).o58(newLineChar).p58(forceMinBlankLinesAfterComments);
   }
-  y58(encoder, value) {
+  o59(encoder, value) {
     var nullableBool = get_nullable(serializer_1(BooleanCompanionObject_instance));
     var nullableInt = get_nullable(serializer_0(IntCompanionObject_instance));
     var descriptor = this.lr();
     var o = encoder.bw(descriptor);
-    o.vx(descriptor, 0, nullableInt, value.t56());
-    o.vx(descriptor, 1, nullableBool, value.u56());
-    o.vx(descriptor, 2, nullableBool, value.v56());
-    o.vx(descriptor, 3, nullableBool, value.w56());
-    o.vx(descriptor, 4, nullableBool, value.x56());
-    o.vx(descriptor, 5, nullableInt, value.y56());
-    o.vx(descriptor, 6, nullableInt, value.z56());
-    o.vx(descriptor, 7, nullableBool, value.a57());
-    o.vx(descriptor, 8, nullableInt, value.b57());
-    o.vx(descriptor, 9, get_nullable(serializer_2(StringCompanionObject_instance)), value.c57());
-    o.vx(descriptor, 10, nullableBool, value.d57());
+    o.vx(descriptor, 0, nullableInt, value.j57());
+    o.vx(descriptor, 1, nullableBool, value.k57());
+    o.vx(descriptor, 2, nullableBool, value.l57());
+    o.vx(descriptor, 3, nullableBool, value.m57());
+    o.vx(descriptor, 4, nullableBool, value.n57());
+    o.vx(descriptor, 5, nullableInt, value.o57());
+    o.vx(descriptor, 6, nullableInt, value.p57());
+    o.vx(descriptor, 7, nullableBool, value.q57());
+    o.vx(descriptor, 8, nullableInt, value.r57());
+    o.vx(descriptor, 9, get_nullable(serializer_2(StringCompanionObject_instance)), value.s57());
+    o.vx(descriptor, 10, nullableBool, value.t57());
     o.cw(descriptor);
   }
   mr(encoder, value) {
-    return this.y58(encoder, (!(value == null) ? isInterface(value, FormatterOptions) : false) ? value : THROW_CCE());
+    return this.o59(encoder, (!(value == null) ? isInterface(value, FormatterOptions) : false) ? value : THROW_CCE());
   }
 }
 //endregion
@@ -716,164 +716,164 @@ function $serializer_getInstance_0() {
 }
 function FormatterOptionsImpl$tabSize$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.t56();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.j57();
     return tmp1_elvis_lhs == null ? 4 : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_get_tabSize_$ref_hwkkhy() {
-  return (p0) => p0.t56();
+  return (p0) => p0.j57();
 }
 function FormatterOptionsImpl$insertSpaces$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.u56();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.k57();
     return tmp1_elvis_lhs == null ? true : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_get_insertSpaces_$ref_pa5tks() {
-  return (p0) => p0.u56();
+  return (p0) => p0.k57();
 }
 function FormatterOptionsImpl$trimTrailingWhitespace$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.v56();
+    var tmp0_safe_receiver = this$0.l59();
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.l57();
   };
 }
 function FormatterOptionsImpl$_get_trimTrailingWhitespace_$ref_5jjnm9() {
-  return (p0) => p0.v56();
+  return (p0) => p0.l57();
 }
 function FormatterOptionsImpl$insertFinalNewline$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.w56();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.m57();
     return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_get_insertFinalNewline_$ref_negokt() {
-  return (p0) => p0.w56();
+  return (p0) => p0.m57();
 }
 function FormatterOptionsImpl$trimFinalNewlines$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.x56();
+    var tmp0_safe_receiver = this$0.l59();
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.n57();
   };
 }
 function FormatterOptionsImpl$_get_trimFinalNewlines_$ref_mabf19() {
-  return (p0) => p0.x56();
+  return (p0) => p0.n57();
 }
 function FormatterOptionsImpl$indentComments$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.a57();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q57();
     return tmp1_elvis_lhs == null ? true : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_get_indentComments_$ref_3c1vuy() {
-  return (p0) => p0.a57();
+  return (p0) => p0.q57();
 }
 function FormatterOptionsImpl$continuationIndent$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.b57();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.r57();
     return tmp1_elvis_lhs == null ? get_defaultContinuationIndent(this$0) : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_get_continuationIndent_$ref_slxct5() {
-  return (p0) => p0.b57();
+  return (p0) => p0.r57();
 }
 function FormatterOptionsImpl$minBlankLines$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.y56();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.o57();
     // Inline function 'kotlin.math.max' call
     var b = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
     return Math.max(0, b);
   };
 }
 function FormatterOptionsImpl$_get_minBlankLines_$ref_ghgmtv() {
-  return (p0) => p0.y56();
+  return (p0) => p0.o57();
 }
 function FormatterOptionsImpl$maxBlankLines$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    return coalesceMaxBlankLines(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.z56());
+    var tmp0_safe_receiver = this$0.l59();
+    return coalesceMaxBlankLines(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.p57());
   };
 }
 function FormatterOptionsImpl$_get_maxBlankLines_$ref_xwldq7() {
-  return (p0) => p0.z56();
+  return (p0) => p0.p57();
 }
 function FormatterOptionsImpl$newLineChar$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.c57();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.s57();
     return tmp1_elvis_lhs == null ? '\n' : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_get_newLineChar_$ref_ipusee() {
-  return (p0) => p0.c57();
+  return (p0) => p0.s57();
 }
 function FormatterOptionsImpl$forceMinBlankLinesAfterComments$delegate$lambda(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.d57();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.t57();
     return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_get_forceMinBlankLinesAfterComments_$ref_axojzm() {
-  return (p0) => p0.d57();
+  return (p0) => p0.t57();
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.t56();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.j57();
     return tmp1_elvis_lhs == null ? 4 : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax_0(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.u56();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.k57();
     return tmp1_elvis_lhs == null ? true : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax_1(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.v56();
+    var tmp0_safe_receiver = this$0.l59();
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.l57();
   };
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax_2(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.w56();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.m57();
     return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax_3(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.x56();
+    var tmp0_safe_receiver = this$0.l59();
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.n57();
   };
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax_4(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.a57();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q57();
     return tmp1_elvis_lhs == null ? true : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax_5(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.b57();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.r57();
     return tmp1_elvis_lhs == null ? get_defaultContinuationIndent(this$0) : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax_6(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.y56();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.o57();
     // Inline function 'kotlin.math.max' call
     var b = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
     return Math.max(0, b);
@@ -881,27 +881,27 @@ function FormatterOptionsImpl$_init_$lambda_68b2ax_6(this$0) {
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax_7(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    return coalesceMaxBlankLines(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.z56());
+    var tmp0_safe_receiver = this$0.l59();
+    return coalesceMaxBlankLines(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.p57());
   };
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax_8(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.c57();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.s57();
     return tmp1_elvis_lhs == null ? '\n' : tmp1_elvis_lhs;
   };
 }
 function FormatterOptionsImpl$_init_$lambda_68b2ax_9(this$0) {
   return () => {
-    var tmp0_safe_receiver = this$0.v58();
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.d57();
+    var tmp0_safe_receiver = this$0.l59();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.t57();
     return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
   };
 }
 function get_defaultContinuationIndent(_this__u8e3s4) {
   // Inline function 'kotlin.math.floor' call
-  var x = _this__u8e3s4.t56() / 2.0;
+  var x = _this__u8e3s4.j57() / 2.0;
   var tmp$ret$0 = Math.floor(x);
   // Inline function 'kotlin.math.max' call
   var b = numberToInt(tmp$ret$0);
