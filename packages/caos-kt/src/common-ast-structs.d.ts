@@ -1,5 +1,4 @@
-
-import type {KtSingleton, Nullable} from "./types.d.ts";
+import type {Nullable} from "./types.d.ts";
 import type {InlayHintKind} from "vscode-languageserver";
 
 export declare type ParseTreeItem = TextWithRange & {
@@ -10,18 +9,16 @@ export declare type ParseTreeItem = TextWithRange & {
     readonly parserIndexEnd: Nullable<number>;
 }
 
-export declare type ParserItemWithIndex =  {
+export declare type ParserItemWithIndex = {
     readonly currentParserIndex: number;
     readonly offsetParserItemIndex: Nullable<number>;
     readonly offsetLine: Nullable<number>;
     readonly offsetColumn: Nullable<number>;
 }
 
-export declare type WhitespaceParseTreeItem = ParseTreeItem & {
-}
+export declare type WhitespaceParseTreeItem = ParseTreeItem & {}
 
-export declare type SpaceParseTreeItem = WhitespaceParseTreeItem & {
-}
+export declare type SpaceParseTreeItem = WhitespaceParseTreeItem & {}
 
 export declare type NewLineParseTreeItem = WhitespaceParseTreeItem & {
     readonly lines: number;
@@ -59,25 +56,25 @@ export declare interface ITextEdit {
 export declare type InlayHint = {
     readonly position: Position;
     readonly label: string;
-    readonly kind: InlayHintKind|undefined;
-    readonly textEdits: Nullable<Array<TextEdit>>;
-    readonly tooltip: Nullable<string>;
-    readonly paddingLeft: Nullable<boolean>;
-    readonly paddingRight: Nullable<boolean>;
+    readonly kind: InlayHintKind | undefined;
+    readonly textEdits: TextEdit[] | undefined;
+    readonly tooltip: string | undefined;
+    readonly paddingLeft: boolean | undefined;
+    readonly paddingRight: boolean | undefined;
 }
 
-export declare type InsertReplaceEdit =  ITextEdit & {
+export declare type InsertReplaceEdit = ITextEdit & {
     readonly newText: string;
     readonly insert: Range;
     readonly replace: Range;
 }
 
-export declare type Position =  {
+export declare type Position = {
     readonly line: number;
     readonly character: number;
 }
 
-export declare type Range  = {
+export declare type Range = {
     readonly start: Position;
     readonly end: Position;
 }
