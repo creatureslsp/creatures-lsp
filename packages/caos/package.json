@@ -134,7 +134,7 @@
     }
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "scripts": {
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p dist",
