@@ -12,8 +12,8 @@ import {
 import {Range} from "vscode-languageserver";
 import type {Nullable} from "@creatureslsp/extension-util";
 import {
-    GameVariant,
-} from '@creatureslsp/caos';
+    GameVariant, getCaosInlayHintsWithOffset,
+} from "@creatureslsp/caos";
 
 import {
     parseCaosWithin,
@@ -82,7 +82,7 @@ export class CaosInlayHintsProvider implements InlayHintsProvider {
             return [];
         }
 
-        const raw = getCaosInlayHints(parseResult, disabled, [], minimumParameters)
+        const raw = getCaosInlayHintsWithOffset(parseResult.variant, parseResult, disabled, minimumParameters, 1)
             .filter(it => it != null);
         
         return raw.map((hint) => {

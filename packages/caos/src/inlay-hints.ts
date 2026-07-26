@@ -44,7 +44,7 @@ export function getCaosInlayHintsWithOffset(
             ...hint,
             position: {
                 line: hint.position.line,
-                character: hint.position.character + offset + (hint.kind == InlayHintKind.Type ? 1 : 0),
+                character: hint.position.character + (hint.kind == InlayHintKind.Type ? 0 : offset),
             }
         }
     });
