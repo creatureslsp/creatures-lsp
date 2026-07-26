@@ -1,11 +1,11 @@
-# caos-language-server
+# @creatures-lsp/server
 
 Language Server Protocol implementation for the Creatures CAOS language and catalogue files. It provides diagnostics, completions, hover documentation, formatting, semantic tokens, inlay hints, symbols, definitions, references, and rename support.
 
 ## Install
 
 ```sh
-npm install caos-language-server
+npm install @creatures-lsp/server
 ```
 
 ## Use with an editor client

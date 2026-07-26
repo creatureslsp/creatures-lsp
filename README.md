@@ -32,8 +32,8 @@ Packages are published independently for integrations that need CAOS or catalogu
 - [`@creatures-lsp/caos`](./packages/caos): CAOS editor features built on `caos-kt`, such as completions, formatting, hovers, and semantic tokens.
 - [`@creatures-lsp/catalogue`](./packages/catalogue): Catalogue editor features, including completions and semantic tokens.
 - [`@creatures-lsp/extension-util`](./packages/extension-util): Shared utilities used by this project; published for dependency resolution, not intended as a broadly stable API.
-- [`caos-language-server`](./packages/server): The CAOS Language Server Protocol implementation.
-- [`caos-vscode-client`](./packages/client): The VS Code client used by the extension.
+- [`@creatures-lsp/server`](./packages/server): The CAOS Language Server Protocol implementation.
+- [`@creatures-lsp/vs-client`](./packages/client): The VS Code client used by the extension.
 
 Each package directory has its own npm-focused README with installation and usage notes.
 

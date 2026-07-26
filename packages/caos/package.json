@@ -10,7 +10,7 @@
   "repository": {
     "type": "git",
     "directory": "packages/caos",
-    "url": "https://github.com/bedalton/caos-language-server"
+    "url": "https://github.com/creatureslsp/creatures-lsp"
   },
   "publishConfig": {
     "access": "public"

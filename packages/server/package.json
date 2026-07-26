@@ -1,6 +1,5 @@
 {
   "name": "@creatures-lsp/server",
-  "author": "bedalton",
   "displayName": "CAOSEditor",
   "type":  "module",
   "license": "MIT",
@@ -35,7 +34,7 @@
   "repository": {
     "type": "git",
     "directory": "packages/server",
-    "url": "git+https://github.com/bedalton/caos-language-server.git"
+    "url": "git+https://github.com/creatureslsp/creatures-lsp.git"
   },
   "dependencies": {
     "vscode-languageserver": "^9.0.1",

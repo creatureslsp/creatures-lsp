@@ -10,8 +10,8 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "directory": "packages/interop",
-    "url": "https://github.com/bedalton/caos-language-server"
+    "directory": "packages/catalogue",
+    "url": "https://github.com/creatureslsp/creatures-lsp"
   },
   "publishConfig": {
     "access": "public"
