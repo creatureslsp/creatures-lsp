@@ -27,7 +27,7 @@ export declare type Argument = TextWithRange & CaosItem & {
 
     readonly parameterIndex: Nullable<number>;
 
-    readonly type: number;
+    readonly typeId: number;
 
     readonly text: string;
 

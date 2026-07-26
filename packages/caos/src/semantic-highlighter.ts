@@ -422,8 +422,8 @@ function addStringDecorations(tokens: SemanticToken[], call: CommandCall) {
     });
     const args = call.arguments;
     for (let argument of stringArguments) {
-        const isAnimation = argument.type === ANIMATION_TYPE_ID || argument.type === BYTE_STRING_TYPE_ID;
-        const typeId = isAnimation ? BYTE_STRING_TYPE_ID : argument.parserItem?.typeToken;
+        const isAnimation = argument.typeId === ANIMATION_TYPE_ID || argument.typeId === BYTE_STRING_TYPE_ID;
+        const typeId = isAnimation ? BYTE_STRING_PARSER_TYPE: argument.parserItem?.typeToken;
         const text = argument.text;
         if (text == null) {
             console.log(
@@ -436,7 +436,7 @@ function addStringDecorations(tokens: SemanticToken[], call: CommandCall) {
             tokens.push({
                 range: toSemanticRange(argument.textRange),
                 tokenType: SemanticTokensTypes.STRING_TOKEN,
-                modifiers: [],
+                modifiers: [SemanticTokenModifiers.C1_STRING_MODIFIER_TOKEN],
                 tokenLength: argument.textRange.endIndex - argument.textRange.startIndex + 1
             });
         } else if (typeId == QUOTE_STRING_PARSER_TYPE) {
@@ -588,7 +588,7 @@ function getTextSliceRange(text: string, start: Position, startInString: number,
  * @param call
  */
 function addTokensFromCall(tokens: SemanticToken[], call: CommandCall) {
-    const tokenArguments = call.arguments.filter((p: Argument) => p.type == TOKEN_TYPE_ID);
+    const tokenArguments = call.arguments.filter((p: Argument) => p.typeId == TOKEN_TYPE_ID);
     if (tokenArguments.length == 0) {
         return;
     }
