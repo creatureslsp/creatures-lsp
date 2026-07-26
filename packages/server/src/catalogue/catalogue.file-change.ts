@@ -3,7 +3,7 @@ import {TextDocument} from "vscode-languageserver-textdocument";
 import {indexCatalogue} from "../indices/index.catalogue.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
 import {nextDocumentVersionId, validateDocument} from "../validate.js";
-import {formatUriForRead, trimFileSchemePrefix} from "@creatures-lsp/extension-util";
+import {formatUriForRead, trimFileSchemePrefix} from "@creatureslsp/extension-util";
 import {DocumentContentChange} from "../types.js";
 import {isCatalogueDocument, unpackDocument} from "../document.js";
 import {Log} from "../ConnLogger.js";

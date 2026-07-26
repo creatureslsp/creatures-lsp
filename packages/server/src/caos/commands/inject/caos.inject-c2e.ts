@@ -1,11 +1,11 @@
-import {caosScriptOffsets} from "@creatures-lsp/caos/parser";
-import type {BlockRange} from "@creatures-lsp/caos/core";
+import {caosScriptOffsets} from "@creatureslsp/caos/parser";
+import type {BlockRange} from "@creatureslsp/caos/core";
 import type {Socket} from "net";
 import net from "net";
 import {Buffer} from "buffer";
 import fs from "fs";
-import type {JectStatus, ScriptJectResult, ScriptType} from "@creatures-lsp/caos";
-import type {Nullable} from "@creatures-lsp/caos";
+import type {JectStatus, ScriptJectResult, ScriptType} from "@creatureslsp/caos";
+import type {Nullable} from "@creatureslsp/caos";
 import {showMessage} from "../../../showMessage.js";
 import {connection} from "../../../connection.vscode.js";
 import {Log} from "../../../ConnLogger.js";

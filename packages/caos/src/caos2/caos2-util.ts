@@ -1,5 +1,5 @@
 import {Caos2Validators} from "./caos2.validators.js";
-import {extname} from "@creatures-lsp/extension-util";
+import {extname} from "@creatureslsp/extension-util";
 
 export enum Caos2ValueType {
     NUMBER,

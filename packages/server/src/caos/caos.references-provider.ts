@@ -2,18 +2,18 @@
 
 import {Location} from "vscode-languageserver";
 import {ReferenceParams} from "vscode-languageserver-protocol";
-import {inRange, sortTextRanges} from "@creatures-lsp/extension-util";
-import {Is} from "@creatures-lsp/caos";
-import {parseCaosNear} from "@creatures-lsp/caos/parser";
+import {inRange, sortTextRanges} from "@creatureslsp/extension-util";
+import {Is} from "@creatureslsp/caos";
+import {parseCaosNear} from "@creatureslsp/caos/parser";
 import {getJournalFileNameReferences} from "./references/references.journal.js";
 import {getNamedVariableReferences} from "./references/references.named-variable.js";
 import {formatCommandToLocation, getAllCommandUsages} from "./references/references.util.js";
 import {getCaosCatalogueNameReferences} from "./references/references.catalogue.js";
 import {CreaturesDocument, isCaosDocument} from "../document.js";
 import {caosInitLib} from "./caos-init-lib.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
-import {getCaosCursorPosition} from "@creatures-lsp/caos/cursor-data";
-import type {C2eStringVal, CaosParserItem} from "@creatures-lsp/caos/core";
+import type {Nullable} from "@creatureslsp/extension-util";
+import {getCaosCursorPosition} from "@creatureslsp/caos/cursor-data";
+import type {C2eStringVal, CaosParserItem} from "@creatureslsp/caos/core";
 import {Log} from "../ConnLogger.js";
 
 // export async function getRawCaosLocations(

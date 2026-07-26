@@ -9,12 +9,12 @@ import {spinUpServer} from "./spinUpServer.vscode.js";
 import {closeDisposables, pushDisposable} from "./disposables.js";
 import {deleteClient, getClient, getClients} from "./clients.js";
 import {registerCommands} from "./commands/register-commands.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 import {CatalogueSymbolProvider} from "./catalogue.outliner.js";
-import {catalogueSemanticLegend} from "@creatures-lsp/catalogue";
+import {catalogueSemanticLegend} from "@creatureslsp/catalogue";
 import {catalogueSemanticTokensProvider} from "./catalogue.semantic-tokens.js";
 import {initVfs} from "./vfs.js";
-import {useFullCaosLibDefinitions} from "@creatures-lsp/caos/libsfile-full";
+import {useFullCaosLibDefinitions} from "@creatureslsp/caos/libsfile-full";
 
 let defaultClient: LanguageClient;
 

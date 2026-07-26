@@ -1,4 +1,4 @@
-import {getCaosInlayHintsWithOffset} from "@creatures-lsp/caos/inlay-hints";
+import {getCaosInlayHintsWithOffset} from "@creatureslsp/caos/inlay-hints";
 import type {InlayHint, InlayHintParams} from "vscode-languageserver";
 import {isCaosDocument, unpackDocument} from "./document.js";
 import {connection} from "./connection.vscode.js";

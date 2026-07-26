@@ -5,7 +5,7 @@ import {FileChangeType} from "vscode-languageserver-protocol/lib/common/protocol
 import {WorkspaceScopedSet} from "./workspace-scoped-set.js";
 import {getWorkspaceUriForFile} from "./workspace-folders.js";
 import {clearIndexForFile, indexFile, pauseIndex, resumeIndex} from "./indices/index.file.js";
-import {filterByExtension, isVsCode, type Nullable, trimLeadingSlashOnFileScheme} from "@creatures-lsp/extension-util";
+import {filterByExtension, isVsCode, type Nullable, trimLeadingSlashOnFileScheme} from "@creatureslsp/extension-util";
 import {nextDocumentVersionId, validateDocument} from "./validate.js";
 import {
     fileExistsVsCode,

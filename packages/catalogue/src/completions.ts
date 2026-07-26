@@ -1,14 +1,14 @@
 // noinspection SpellCheckingInspection
-import {isVsCode, inflect, INFLECT_SPLITTER, multiCase, Nullable} from "@creatures-lsp/extension-util"
+import {isVsCode, inflect, INFLECT_SPLITTER, multiCase, Nullable} from "@creatureslsp/extension-util"
 import {
     type CatalogueParseResult,
     parseCatalogue
-} from "@creatures-lsp/caos-kt/catalogue-core";
+} from "@creatureslsp/caos-kt/catalogue-core";
 
 import {
     type CatalogueCursorData,
     getCatalogueCursor,
-} from "@creatures-lsp/caos-kt/catalogue-cursor";
+} from "@creatureslsp/caos-kt/catalogue-cursor";
 
 import {
     CompletionItem,
@@ -21,7 +21,7 @@ import {
 import {Range} from "vscode-languageserver";
 import {appendAgentHelpCompletion} from "./completion/completions.agent-help.js";
 import {appendKeywordCompletions} from "./completion/completions.keywords.js";
-import {isSublime} from "@creatures-lsp/extension-util/lsp-runner";
+import {isSublime} from "@creatureslsp/extension-util/lsp-runner";
 
 export function createEmptyCompletionList(): CompletionList {
     return {

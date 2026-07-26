@@ -1,13 +1,13 @@
 import {connection} from "../../../connection.vscode.js";
 import {readTextFile} from "../../../files.js";
 import {Log} from "../../../ConnLogger.js";
-import type {JectResult, JectStatus, ScriptJectResult} from "@creatures-lsp/caos";
-import {type GameVariant, isC3DSVariant} from "@creatures-lsp/caos";
-import type {Nullable} from "@creatures-lsp/caos";
+import type {JectResult, JectStatus, ScriptJectResult} from "@creatureslsp/caos";
+import {type GameVariant, isC3DSVariant} from "@creatureslsp/caos";
+import type {Nullable} from "@creatureslsp/caos";
 import {isLinux, isMacOS, isUnix, isWin} from "../../../os.js";
 import {caosJectTcpC2e} from "./caos.inject-c2e.js";
 import {ExecuteCommandParams} from "vscode-languageserver-protocol";
-import {extname} from "@creatures-lsp/extension-util";
+import {extname} from "@creatureslsp/extension-util";
 
 export function isCaosInjectSupportedForVariant(variant: GameVariant): boolean {
     if (isC3DSVariant(variant)) {

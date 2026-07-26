@@ -2,7 +2,7 @@ import {LanguageClient} from "vscode-languageclient/node.js";
 import {pushDisposable} from "./disposables.js";
 import * as vscode from "vscode";
 import {Uri} from "vscode";
-import {Nullable, trimLeadingSlashOnFileScheme} from "@creatures-lsp/extension-util";
+import {Nullable, trimLeadingSlashOnFileScheme} from "@creatureslsp/extension-util";
 import {getWorkspaceFolderForFile} from "./workspace-folders.js";
 
 export const clients: Map<string, LanguageClient> = new Map();

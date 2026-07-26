@@ -1,4 +1,4 @@
-import type {GameVariant} from "@creatures-lsp/caos-kt";
+import type {GameVariant} from "@creatureslsp/caos-kt";
 
 
 export function isSimilarVariant(variant: GameVariant, other: GameVariant): boolean {

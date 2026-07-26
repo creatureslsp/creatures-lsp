@@ -1,16 +1,16 @@
 import {connection} from "./connection.vscode.js";
 import type {PrepareRenameParams, RenameParams, WorkspaceEdit} from "vscode-languageserver";
-import {type Nullable} from "@creatures-lsp/caos";
+import {type Nullable} from "@creatureslsp/caos";
 import {caosInitLib} from "./caos/caos-init-lib.js";
-import {getCaosCursorPositionFromRawText} from "@creatures-lsp/caos/cursor-data";
+import {getCaosCursorPositionFromRawText} from "@creatureslsp/caos/cursor-data";
 import {isCaosDocument, isCatalogueDocument, unpackDocument} from "./document.js";
 import {renameInCaosDocument} from "./rename/rename.caos.js";
 import {renameInCatalogueDocument} from "./rename/rename.catalogue.js";
 import type {Range} from "vscode-languageserver-protocol";
-import type {ParseTreeItem} from "@creatures-lsp/extension-util";
+import type {ParseTreeItem} from "@creatureslsp/extension-util";
 import {getCatalogueNameUnderCursor} from "./catalogue/catalogue.util.js";
 import {resumeIndex} from "./indices/index.file.js";
-import {offsetRenameRange} from "@creatures-lsp/extension-util/get-workspace-edits";
+import {offsetRenameRange} from "@creatureslsp/extension-util/get-workspace-edits";
 
 /**
  * Registers an LSP formatting function if needed

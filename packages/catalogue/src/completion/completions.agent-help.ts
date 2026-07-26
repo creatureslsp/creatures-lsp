@@ -1,9 +1,9 @@
 import {CompletionItem} from "vscode-languageserver-types";
 import {Range} from "vscode-languageserver";
 import {IsCatalogue} from "../is.js";
-import {CatalogueCursorData} from "@creatures-lsp/caos-kt/catalogue-cursor";
+import {CatalogueCursorData} from "@creatureslsp/caos-kt/catalogue-cursor";
 import {createCompletionItem} from "../completions.js";
-import {isVsCode, toVsRange} from "@creatures-lsp/extension-util";
+import {isVsCode, toVsRange} from "@creatureslsp/extension-util";
 
 export function appendAgentHelpCompletion(cursor: CatalogueCursorData, out: CompletionItem[]) {
     let complete = false;

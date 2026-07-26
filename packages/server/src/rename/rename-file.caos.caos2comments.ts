@@ -2,19 +2,19 @@ import {
     type GameVariant,
     requiresFilesWithExtensionRegex,
     requiresFileWithoutExtensionRegex
-} from "@creatures-lsp/caos";
+} from "@creatureslsp/caos";
 import type {
     Caos2Comment,
-} from "@creatures-lsp/caos/core"
+} from "@creatureslsp/caos/core"
 import {
     FileNameData,
     getArrayAccessFileNameIndex,
     getFileName,
     toVsRange,
     WorkspaceChanges
-} from "@creatures-lsp/extension-util";
+} from "@creatureslsp/extension-util";
 import {DocumentUri, TextEdit} from "vscode-languageserver";
-import {Nullable} from "@creatures-lsp/caos";
+import {Nullable} from "@creatureslsp/caos";
 import Path from "path";
 
 export function collectFileRenameEditsForCaos2Comments(

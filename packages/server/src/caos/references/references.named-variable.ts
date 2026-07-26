@@ -1,7 +1,7 @@
 import {Location} from "vscode-languageserver";
 import {getNamedVariableLocationsForType} from "../../indices/index.caos.named-variables.js";
-import {NamedVarPrefix} from "@creatures-lsp/caos";
-import {offsetRenameRange} from "@creatures-lsp/extension-util/get-workspace-edits";
+import {NamedVarPrefix} from "@creatureslsp/caos";
+import {offsetRenameRange} from "@creatureslsp/extension-util/get-workspace-edits";
 
 
 export function getNamedVariableReferences(

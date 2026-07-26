@@ -1,7 +1,7 @@
-import {getCaosScriptDocumentSymbols} from "@creatures-lsp/caos";
+import {getCaosScriptDocumentSymbols} from "@creatureslsp/caos";
 import {DocumentSymbol} from "vscode-languageserver-types";
 import {CaosDocument} from "./caos.document.js";
-import {toVsRange} from "@creatures-lsp/extension-util";
+import {toVsRange} from "@creatureslsp/extension-util";
 
 
 export async function getCaosDocumentSymbolsInDocument(document: CaosDocument) {

@@ -6,7 +6,7 @@ import {
     hasExtension,
     stripSurroundingQuotes,
     extname
-} from "@creatures-lsp/extension-util";
+} from "@creatureslsp/extension-util";
 
 export const Caos2Validators = {
     isNumber: isNumber,

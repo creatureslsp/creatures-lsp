@@ -1,12 +1,12 @@
 import {Definition, LocationLink} from "vscode-languageserver-types";
-import {inRange, Nullable, toVsRange} from "@creatures-lsp/extension-util"
+import {inRange, Nullable, toVsRange} from "@creatureslsp/extension-util"
 import type {
     GameVariant,
-} from "@creatures-lsp/caos-kt";
+} from "@creatureslsp/caos-kt";
 
 import type {
     CaosParserItem,
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatureslsp/caos-kt/caos-core";
 
 import {
     type CaosParseResult,
@@ -14,12 +14,12 @@ import {
     parseCaosTokens,
     caosScriptOffsets,
     parseCaosWithin
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatureslsp/caos-kt/caos-parser";
 
 import {
     type CaosCursorData,
     getCaosCursorPosition,
-} from "@creatures-lsp/caos-kt/caos-cursor-data";
+} from "@creatureslsp/caos-kt/caos-cursor-data";
 
 import {Is} from "./is-util.js";
 

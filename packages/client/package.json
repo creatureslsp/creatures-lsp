@@ -1,9 +1,9 @@
 {
-  "name": "@creatures-lsp/vs-client",
+  "name": "@creatureslsp/vs-client",
   "type": "module",
-  "displayName": "CAOSEditor",
+  "displayName": "Creatures-LSP: VS-Client",
   "description": "An editor for the Creature's CAOS language",
-  "version": "0.0.8",
+  "version": "0.0.1",
   "main": "./dist/node/extension.cjs",
   "browser": "./dist/web/extension.cjs",
   "types": "./dist/extension.d.ts",
@@ -23,6 +23,7 @@
     "url": "https://github.com/creatureslsp/creatures-lsp"
   },
   "scripts": {
+    "npm-publish": "npm publish",
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "prepack": "yarn build",
     "build": "tsc --build && cp \"./package.json\" ./dist/",
@@ -36,22 +37,23 @@
     "./dist/web/extension.cjs"
   ],
   "dependencies": {
-    "@creatures-lsp/caos": "0.0.8",
-    "@creatures-lsp/catalogue": "0.0.8",
-    "@creatures-lsp/extension-util": "0.0.8",
+    "@creatureslsp/caos": "0.0.1",
+    "@creatureslsp/catalogue": "0.0.1",
+    "@creatureslsp/extension-util": "0.0.1",
     "vscode-languageclient": "^9.0.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.40",
     "@types/vscode": "^1.81.0",
     "@vscode/test-electron": "^2.1.2",
-    "rimraf": "^6.1.3",
-    "@vscode/test-web": "^0.0.48"
+    "@vscode/test-web": "^0.0.48",
+    "rimraf": "^6.1.3"
   },
   "exports": {
     ".": {
       "default": "./dist/node/extension.cjs"
     }
   },
-  "extensionDependencies": []
+  "extensionDependencies": [],
+  "gitHead": "2da6bd9bdc7af39861033140c010c209728ea72c"
 }

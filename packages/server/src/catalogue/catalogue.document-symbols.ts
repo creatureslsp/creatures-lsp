@@ -1,9 +1,9 @@
-import {parseCatalogue, type CatalogueEntry} from "@creatures-lsp/catalogue/core";
-import {getCatalogueRange} from "@creatures-lsp/catalogue";
+import {parseCatalogue, type CatalogueEntry} from "@creatureslsp/catalogue/core";
+import {getCatalogueRange} from "@creatureslsp/catalogue";
 import type {CatalogueDocument} from "./catalogue.document.js";
 import type {DocumentSymbol} from "vscode-languageserver-types";
 import {SymbolKind} from "vscode-languageserver";
-import {toVsRange} from "@creatures-lsp/extension-util";
+import {toVsRange} from "@creatureslsp/extension-util";
 
 export function getCatalogueDocumentSymbolsInDocument(document: CatalogueDocument) {
     const text = document.text;

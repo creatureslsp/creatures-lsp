@@ -1,7 +1,7 @@
-import {Nullable, offsetRenameRange} from "@creatures-lsp/extension-util";
-import type {GameVariant} from "@creatures-lsp/caos-kt";
-import {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
-import {CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
+import {Nullable, offsetRenameRange} from "@creatureslsp/extension-util";
+import type {GameVariant} from "@creatureslsp/caos-kt";
+import {CommandCall} from "@creatureslsp/caos-kt/caos-parser";
+import {CaosParserItem} from "@creatureslsp/caos-kt/caos-core";
 import {NamedVarPrefix} from "../completions.js";
 import {CompletionItem, Range} from "vscode-languageserver-types";
 import {getNameCompletionItems} from "./completion.createNameCompletionItem.js";

@@ -1,7 +1,7 @@
 import type {DocumentUri, Range} from "vscode-languageserver";
-import type {CaosParseResult} from "@creatures-lsp/caos/parser";
+import type {CaosParseResult} from "@creatureslsp/caos/parser";
 import {clearNamedVariables, indexNamedVariablesInDocument} from "./index.caos.named-variables.js";
-import {type Nullable, rangesIntersect} from "@creatures-lsp/extension-util";
+import {type Nullable, rangesIntersect} from "@creatureslsp/extension-util";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
 import {clearJournalFileNames, indexJournalNamesInDocument} from "./index.caos.journal-files.js";
 import {clearCaosCatalogueUsages, indexCaosCatalogueUsagesInDocument} from "./index.caos.catalogue-usages.js";

@@ -25,14 +25,14 @@ import {
     VFS_WRITE_FILE_REQUEST,
     VfsReadBinaryFileRequest,
     VfsWriteFileRequest
-} from "@creatures-lsp/extension-util";
+} from "@creatureslsp/extension-util";
 import path from "path";
 import {Log} from "./log.js";
 import {
     isWriteBinaryFileEvent,
     VFS_WRITE_BINARY_FILE_REQUEST,
     VfsWriteBinaryFileRequest
-} from "@creatures-lsp/extension-util/vfs";
+} from "@creatureslsp/extension-util/vfs";
 
 const {fs} = workspace;
 

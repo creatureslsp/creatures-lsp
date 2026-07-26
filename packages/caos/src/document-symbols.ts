@@ -4,21 +4,21 @@ import {
     TypeTokens,
     CaosParserItem,
     CaosScript,
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatureslsp/caos-kt/caos-core";
 import {
     parseCaos,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatureslsp/caos-kt/caos-parser";
 import type {
     GameVariant,
-} from "@creatures-lsp/caos-kt";
+} from "@creatureslsp/caos-kt";
 import type {
     CaosParseResult,
     CommandCall,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatureslsp/caos-kt/caos-parser";
 
 import {DocumentSymbol, Range, SymbolKind} from "vscode-languageserver-types";
 import {getSubroutines} from "./subroutines.js";
-import {Nullable, rangesIntersect} from "@creatures-lsp/extension-util";
+import {Nullable, rangesIntersect} from "@creatureslsp/extension-util";
 
 
 export function getCaosScriptDocumentSymbols(variant: GameVariant, text: string): DocumentSymbol[] {

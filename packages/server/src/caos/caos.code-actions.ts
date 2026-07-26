@@ -1,16 +1,16 @@
 import {connection} from "../connection.vscode.js";
 import type {CodeAction, CodeActionParams, Command, Diagnostic, WorkspaceEdit} from "vscode-languageserver-protocol";
 import type {ServerRequestHandler} from "vscode-languageserver/lib/common/server.js";
-import {ErrorTypes} from "@creatures-lsp/caos/core";
+import {ErrorTypes} from "@creatureslsp/caos/core";
 import {getDocumentText} from "../documents.js";
-import type {Nullable} from "@creatures-lsp/caos";
-import {type CaosParseResult, parseCaosNear} from "@creatures-lsp/caos/parser";
-import type {GameVariant} from "@creatures-lsp/caos";
+import type {Nullable} from "@creatureslsp/caos";
+import {type CaosParseResult, parseCaosNear} from "@creatureslsp/caos/parser";
+import type {GameVariant} from "@creatureslsp/caos";
 import {getCaosDocumentSettings} from "./settings.js";
-import type {Position} from "@creatures-lsp/caos/core";
+import type {Position} from "@creatureslsp/caos/core";
 import {CodeActionKind, type TextEdit} from "vscode-languageserver";
-import {inRange, toVsRange} from "@creatures-lsp/extension-util";
-import type {CommandCall} from "@creatures-lsp/caos/parser";
+import {inRange, toVsRange} from "@creatureslsp/extension-util";
+import type {CommandCall} from "@creatureslsp/caos/parser";
 import {Log} from "../ConnLogger.js";
 
 type Action = Command | CodeAction;

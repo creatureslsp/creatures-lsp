@@ -1,5 +1,5 @@
 import {CompletionItem, CompletionItemKind, InsertTextFormat, InsertTextMode, Range} from "vscode-languageserver-types";
-import {Nullable, quoteString, INFLECT_SPLITTER} from "@creatures-lsp/extension-util";
+import {Nullable, quoteString, INFLECT_SPLITTER} from "@creatureslsp/extension-util";
 
 /**
  * Creates a completion item based solely on a plain text string

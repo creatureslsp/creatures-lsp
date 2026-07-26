@@ -3,7 +3,7 @@ import {type CatalogueDocument, unpackCatalogueDocument} from "./catalogue/catal
 import {CATALOGUE_LANGUAGE_ID} from "./catalogue/settings.js";
 import {CAOS_LANGUAGE_ID, getGlobalCaosSettings} from "./caos/settings.js";
 import {getDocument} from "./documents.js";
-import {getExtension, type Nullable, toFileUri} from "@creatures-lsp/extension-util";
+import {getExtension, type Nullable, toFileUri} from "@creatureslsp/extension-util";
 import type {TextDocument} from "vscode-languageserver-textdocument";
 import {fileExists, isFileURINaive, readTextFile} from "./files.js";
 import {caosInitLib} from "./caos/caos-init-lib.js";

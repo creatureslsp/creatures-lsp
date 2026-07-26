@@ -1,6 +1,6 @@
-import {type ILoggerObject, setLogger, LoggerColor} from "@creatures-lsp/caos-kt/bedalton-common-log";
+import {type ILoggerObject, setLogger, LoggerColor} from "@creatureslsp/caos-kt/bedalton-common-log";
 import {connection} from "./connection.vscode.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 
 
 if (typeof self != 'undefined') {

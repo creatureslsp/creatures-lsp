@@ -1,6 +1,6 @@
-import type {ValuesListValue} from "@creatures-lsp/caos-kt/caos-libs";
-import {getValuesList} from "@creatures-lsp/caos-kt/caos-libs";
-import type {CaosCursorData} from "@creatures-lsp/caos-kt/caos-cursor-data";
+import type {ValuesListValue} from "@creatureslsp/caos-kt/caos-libs";
+import {getValuesList} from "@creatureslsp/caos-kt/caos-libs";
+import type {CaosCursorData} from "@creatureslsp/caos-kt/caos-cursor-data";
 import {
     CompletionItem,
     CompletionItemKind,
@@ -8,7 +8,7 @@ import {
     InsertTextMode,
     Position
 } from "vscode-languageserver-types";
-import {inflect, offsetRange} from "@creatures-lsp/extension-util";
+import {inflect, offsetRange} from "@creatureslsp/extension-util";
 
 const numbersRegex = /[+-]?[0-9]*\.[0-9]+|[+-]?[0-9]+/
 

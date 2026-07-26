@@ -15,10 +15,10 @@
     ],
     "references": [
         {
-            "path": "../caos-kt"
+            "path": "../caos"
         },
         {
-            "path": "../caos"
+            "path": "../caos-kt"
         },
         {
             "path": "../catalogue"

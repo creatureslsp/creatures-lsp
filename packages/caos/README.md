@@ -1,11 +1,11 @@
-# @creatures-lsp/caos
+# @creatureslsp/caos
 
-Editor-oriented utilities for the Creatures CAOS language. It builds on `@creatures-lsp/caos-kt` to provide completions, formatting, hover documentation, inlay hints, document symbols, navigation, and semantic tokens.
+Editor-oriented utilities for the Creatures CAOS language. It builds on `@creatureslsp/caos-kt` to provide completions, formatting, hover documentation, inlay hints, document symbols, navigation, and semantic tokens.
 
 ## Install
 
 ```sh
-npm install @creatures-lsp/caos
+npm install @creatureslsp/caos
 ```
 
 ## Usage
@@ -13,8 +13,8 @@ npm install @creatures-lsp/caos
 Load CAOS definitions before calling APIs that inspect commands or values. The following formats a CAOS document into Language Server Protocol text edits:
 
 ```ts
-import { useFullCaosLibDefinitions } from "@creatures-lsp/caos-kt/caos-libsfile-full";
-import { format } from "@creatures-lsp/caos";
+import { useFullCaosLibDefinitions } from "@creatureslsp/caos-kt/caos-libsfile-full";
+import { format } from "@creatureslsp/caos";
 
 useFullCaosLibDefinitions();
 
@@ -26,7 +26,7 @@ const edits = format("DS", 'scrp 2 11 10 1\nouts "Hello"\nendm', {
 });
 ```
 
-For direct parser access, import from `@creatures-lsp/caos-kt/caos-parser`.
+For direct parser access, import from `@creatureslsp/caos-kt/caos-parser`.
 
 ## Highlights
 

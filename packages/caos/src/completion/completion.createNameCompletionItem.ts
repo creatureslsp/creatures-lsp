@@ -1,7 +1,7 @@
 import {CompletionItem} from "vscode-languageserver";
-import {inflect, INFLECT_SPLITTER, multiCase, Nullable, offsetRenameRange} from "@creatures-lsp/extension-util";
+import {inflect, INFLECT_SPLITTER, multiCase, Nullable, offsetRenameRange} from "@creatureslsp/extension-util";
 import {CompletionItemKind, InsertTextFormat, InsertTextMode, Range} from "vscode-languageserver-types";
-import {CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
+import {CaosParserItem} from "@creatureslsp/caos-kt/caos-core";
 
 export function getNameCompletionItems(
     names: string[],

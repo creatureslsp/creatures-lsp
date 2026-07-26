@@ -1,8 +1,8 @@
-import type { Nullable} from "@creatures-lsp/caos";
-import type { CatalogueEntry } from "@creatures-lsp/catalogue/core";
+import type { Nullable} from "@creatureslsp/caos";
+import type { CatalogueEntry } from "@creatureslsp/catalogue/core";
 import {getCatalogueEntriesLocator} from "../../indices/index.catalogue.entries.js";
-import type {GameVariant} from "@creatures-lsp/caos";
-import type {CaosParseResult, CommandCall} from "@creatures-lsp/caos/parser";
+import type {GameVariant} from "@creatureslsp/caos";
+import type {CaosParseResult, CommandCall} from "@creatureslsp/caos/parser";
 import type {Range} from "vscode-languageserver";
 import {parseCaos} from "../caos.parse.js";
 

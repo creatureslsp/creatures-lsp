@@ -1,6 +1,6 @@
-import type {GameVariant} from "@creatures-lsp/caos-kt";
-import {CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
-import {Nullable} from "@creatures-lsp/extension-util";
+import type {GameVariant} from "@creatureslsp/caos-kt";
+import {CommandCall} from "@creatureslsp/caos-kt/caos-parser";
+import {Nullable} from "@creatureslsp/extension-util";
 import {CompletionItem} from "vscode-languageserver";
 import {isC1eVariant} from "../is-similar-variant.js";
 import {Is} from "../is-util.js";

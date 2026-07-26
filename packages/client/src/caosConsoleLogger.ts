@@ -1,8 +1,8 @@
 import {LogOutputChannel, Uri, window} from "vscode";
-import type {ScriptJectResult} from "@creatures-lsp/caos";
+import type {ScriptJectResult} from "@creatureslsp/caos";
 import {pushDisposable} from "./disposables.js";
 import {workspaceUriToString} from "./workspace-uri.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 
 export declare type CaosConsoleLogger = {
     error: (message: string, ...args: any) => void;

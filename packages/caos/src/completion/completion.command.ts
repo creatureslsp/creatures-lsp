@@ -1,8 +1,8 @@
-import {isVsCode, Nullable} from "@creatures-lsp/extension-util";
-import type {GameVariant} from "@creatures-lsp/caos-kt";
-import type {CaosParserItem, CommandToken} from "@creatures-lsp/caos-kt/caos-core";
-import type {Commands, CaosCommand} from "@creatures-lsp/caos-kt/caos-libs";
-import type {CaosCursorData} from "@creatures-lsp/caos-kt/caos-cursor-data";
+import {isVsCode, Nullable} from "@creatureslsp/extension-util";
+import type {GameVariant} from "@creatureslsp/caos-kt";
+import type {CaosParserItem, CommandToken} from "@creatureslsp/caos-kt/caos-core";
+import type {Commands, CaosCommand} from "@creatureslsp/caos-kt/caos-libs";
+import type {CaosCursorData} from "@creatureslsp/caos-kt/caos-cursor-data";
 import type {CompletionItem, Position, Range, TextEdit} from "vscode-languageserver-types";
 import {ANY_TYPE_ID, COMMAND_TYPE_ID, UNKNOWN_TYPE_ID, VARIABLE_TYPE_ID} from "../constants.js";
 import {isSimilarType} from "../is-similar.js";

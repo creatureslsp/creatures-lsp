@@ -3,7 +3,7 @@
 import type {
     CommandCall,
     CaosParseResult,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatureslsp/caos-kt/caos-parser";
 
 import type {
     AutocompleteHint,
@@ -23,7 +23,7 @@ import type {
     TokenVal,
     Comment,
     CaosParserItem
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatureslsp/caos-kt/caos-core";
 
 export declare interface ICaosContextListener {
     onIndexedVar(token: IndexedVarVal): void;

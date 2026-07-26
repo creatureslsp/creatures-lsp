@@ -1,5 +1,5 @@
-import {CaosParameter} from "@creatures-lsp/caos/libs";
-import {Nullable} from "@creatures-lsp/caos";
+import {CaosParameter} from "@creatureslsp/caos/libs";
+import {Nullable} from "@creatureslsp/caos";
 
 export function isFileParameterWithExtension(parameter: CaosParameter, extension: Nullable<string>): boolean {
     

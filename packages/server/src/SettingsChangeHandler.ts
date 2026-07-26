@@ -1,7 +1,7 @@
 // noinspection JSIgnoredPromiseFromCall
 
 import {connection} from "./connection.vscode.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 import {clientCapabilities} from "./client-capabilities.js";
 import {type CaosSettings, clearCaosDocumentSettings, setGlobalCaosSettings} from "./caos/settings.js";
 import {DidChangeConfigurationNotification, Disposable} from "vscode-languageserver";

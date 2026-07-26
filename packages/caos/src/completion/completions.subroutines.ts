@@ -1,11 +1,11 @@
-import type {GameVariant} from "@creatures-lsp/caos-kt";
-import type {CaosParserItem, CaosScript} from "@creatures-lsp/caos-kt/caos-core";
-import type {CaosParseResult} from "@creatures-lsp/caos-kt/caos-parser";
-import {parseCaos, getScriptsFromCaosParseResult} from "@creatures-lsp/caos-kt/caos-parser";
-import {CaosCursorData} from "@creatures-lsp/caos-kt/caos-cursor-data";
+import type {GameVariant} from "@creatureslsp/caos-kt";
+import type {CaosParserItem, CaosScript} from "@creatureslsp/caos-kt/caos-core";
+import type {CaosParseResult} from "@creatureslsp/caos-kt/caos-parser";
+import {parseCaos, getScriptsFromCaosParseResult} from "@creatureslsp/caos-kt/caos-parser";
+import {CaosCursorData} from "@creatureslsp/caos-kt/caos-cursor-data";
 import {CompletionItem, CompletionItemKind, InsertTextFormat, InsertTextMode} from "vscode-languageserver-types";
 import {Is} from "../is-util.js";
-import {inRange, Nullable} from "@creatures-lsp/extension-util";
+import {inRange, Nullable} from "@creatureslsp/extension-util";
 import {getSubroutines} from "../subroutines.js";
 
 /**

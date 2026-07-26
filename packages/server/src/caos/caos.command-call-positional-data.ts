@@ -1,15 +1,15 @@
 import {CaosDocument} from "./caos.document.js";
 import {Position} from "vscode-languageserver";
-import {Nullable} from "@creatures-lsp/extension-util";
+import {Nullable} from "@creatureslsp/extension-util";
 import {
     getCommandCallPositionalDataFromParseResult
-} from "@creatures-lsp/caos";
+} from "@creatureslsp/caos";
 import {
     parseCaosNear,
-} from "@creatures-lsp/caos/parser";
+} from "@creatureslsp/caos/parser";
 import type {
     CommandCallPositionalData,
-} from "@creatures-lsp/caos";
+} from "@creatureslsp/caos";
 
 export function getCommandCallPositionalDataFromDocument(
     document: CaosDocument,

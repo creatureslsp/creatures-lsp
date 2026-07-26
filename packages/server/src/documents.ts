@@ -1,6 +1,6 @@
 // noinspection JSUnusedGlobalSymbols
 
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 import {TextDocuments} from "vscode-languageserver/node.js";
 import {TextDocument} from "vscode-languageserver-textdocument";
 import {readTextFile} from "./files.js";

@@ -1,7 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 
 import type {DocumentUri} from "vscode-languageserver";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 
 export class WorkspaceScopedObject<K extends number | string, V> {
     

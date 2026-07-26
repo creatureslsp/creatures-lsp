@@ -1,21 +1,21 @@
 import {
     type CaosCursorData,
     getCaosCursorPosition,
-} from "@creatures-lsp/caos/cursor-data";
+} from "@creatureslsp/caos/cursor-data";
 
 import type {
     CaosParserItem
-} from "@creatures-lsp/caos/core";
+} from "@creatureslsp/caos/core";
 
 import {
     type CaosParseResult,
     parseCaosNear,
-} from "@creatures-lsp/caos/parser";
+} from "@creatureslsp/caos/parser";
 
 import {
     getGotoInformation,
     isInCaosCatalogueKey
-} from "@creatures-lsp/caos";
+} from "@creatureslsp/caos";
 
 import {caosInitLib} from "./caos/caos-init-lib.js";
 
@@ -24,7 +24,7 @@ import type {Definition, LocationLink} from "vscode-languageserver-types";
 import {connection} from "./connection.vscode.js";
 import {isCaosDocument, unpackDocument} from "./document.js";
 import type {CaosDocument} from "./caos/caos.document.js";
-import {inRange, isVsCode, Nullable, toFileUri, toVsRange} from "@creatures-lsp/extension-util";
+import {inRange, isVsCode, Nullable, toFileUri, toVsRange} from "@creatureslsp/extension-util";
 import {getWorkspaceUriForFile} from "./workspace-folders.js";
 import {getCatalogueLocations} from "./indices/index.catalogue.entries.js";
 import {Log} from "./ConnLogger.js";

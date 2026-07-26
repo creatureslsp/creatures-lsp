@@ -1,4 +1,4 @@
-# @creatures-lsp/extension-util
+# @creatureslsp/extension-util
 
 Shared utilities for the CAOS language-server workspace. This package is published because other workspace packages depend on it, but it is primarily an internal implementation dependency rather than a general-purpose, stability-guaranteed utility library.
 
@@ -7,7 +7,7 @@ Shared utilities for the CAOS language-server workspace. This package is publish
 Most consumers should not install this package directly. If you are building an integration that already depends on its APIs:
 
 ```sh
-npm install @creatures-lsp/extension-util
+npm install @creatureslsp/extension-util
 ```
 
 ## Usage
@@ -15,8 +15,8 @@ npm install @creatures-lsp/extension-util
 Import only the specific utility module your integration needs.
 
 ```ts
-import { filterNotNull } from "@creatures-lsp/extension-util/array-util";
-import { quoteString } from "@creatures-lsp/extension-util/string-util";
+import { filterNotNull } from "@creatureslsp/extension-util/array-util";
+import { quoteString } from "@creatureslsp/extension-util/string-util";
 
 const names = filterNotNull(["Ettin", null, "Norn"]);
 const quotedName = quoteString(names[0]);

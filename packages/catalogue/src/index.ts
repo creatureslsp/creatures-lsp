@@ -1,5 +1,5 @@
 
-export { Nullable } from "@creatures-lsp/caos-kt";
+export { Nullable } from "@creatureslsp/caos-kt";
 export * from "./completions.js";
 export * from "./is.js";
 export * from "./semantic-highlighter.js";

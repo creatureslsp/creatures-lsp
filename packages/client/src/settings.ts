@@ -1,7 +1,7 @@
 // noinspection JSUnusedGlobalSymbols
 
 import {workspace, WorkspaceConfiguration} from "vscode";
-import {GameVariant} from "@creatures-lsp/caos";
+import {GameVariant} from "@creatureslsp/caos";
 
 
 export function getSettings(): WorkspaceConfiguration {

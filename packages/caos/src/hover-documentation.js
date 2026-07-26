@@ -1,0 +1,64 @@
+/* eslint-disable eqeqeq */
+// noinspection JSUnusedGlobalSymbols
+import { inRange, toVsRange } from "@creatureslsp/extension-util";
+import { formatCaosDocumentation } from "./documentation-formattter.js";
+import { getCaosCursorPosition, getCaosCursorPositionFromRawText } from "@creatureslsp/caos-kt/caos-cursor-data";
+import { Is } from "./is-util.js";
+// /**
+//  * Gets the hover information as close to the position as possible, drilling down through all child command calls
+//  * @param variant
+//  * @param position
+//  * @param commandCalls
+//  */
+// export function getHoverItem(variant: GameVariant, position: Position, commandCalls: CommandCall[]): Nullable<Hover> {
+//     const commandCall = getCommandBeneathCursor(
+//         variant,
+//         commandCalls,
+//         position,
+//         true,
+//     );
+//     if (commandCall == null) {
+//         return null;
+//     }
+//     const actualCommand = caosCommandDefinitionFromCommandCall(variant, commandCall);
+//     if (!actualCommand) {
+//         return null;
+//     }
+//     return <Hover>{
+//         range: toVsRange(commandCall.tokenTextRange),
+//         contents: {
+//             kind: 'markdown',
+//             value: formatCaosDocumentation(variant, actualCommand)
+//         }
+//     };
+// }
+/**
+ * Gets the hover information as close to the position as possible, drilling down through all child command calls
+ * @param variant
+ * @param text
+ * @param position
+ */
+export function getHoverItem(variant, text, position) {
+    const { line, character } = position;
+    const cursor = typeof text === "string"
+        ? getCaosCursorPositionFromRawText(variant, text, line, character, true, false)
+        : getCaosCursorPosition(text, line, character, false);
+    if (cursor == null || cursor.command == null || cursor.closestItem == null) {
+        return null;
+    }
+    const closestItem = cursor.closestItem;
+    if (!Is.commandToken(closestItem)) {
+        return null;
+    }
+    if (!inRange(closestItem.textRange, line, character, false)) {
+        return null;
+    }
+    const command = cursor.command;
+    return {
+        range: toVsRange(closestItem.textRange),
+        contents: {
+            kind: 'markdown',
+            value: formatCaosDocumentation(variant, command)
+        }
+    };
+}

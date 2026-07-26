@@ -1,11 +1,11 @@
-import type {GameVariant} from "@creatures-lsp/caos-kt";
+import type {GameVariant} from "@creatureslsp/caos-kt";
 import {
     type CaosCommand,
     type CaosParameter,
     getValueTypeName,
     getValuesList,
-} from "@creatures-lsp/caos-kt/caos-libs";
-import {Nullable} from "@creatures-lsp/extension-util";
+} from "@creatureslsp/caos-kt/caos-libs";
+import {Nullable} from "@creatureslsp/extension-util";
 
 function wrapParameter(parameter: string) : string {
     if (parameter == null) {

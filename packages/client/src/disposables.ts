@@ -1,5 +1,5 @@
 import {Disposable} from "vscode";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 
 
 const _disposables: Disposable[] = [];

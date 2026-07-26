@@ -1,6 +1,6 @@
 import {CompletionItem, CompletionItemKind, Range} from "vscode-languageserver-types";
-import type {GameVariant} from "@creatures-lsp/caos-kt";
-import type {Caos2Comment} from "@creatures-lsp/caos-kt/caos-core";
+import type {GameVariant} from "@creatureslsp/caos-kt";
+import type {Caos2Comment} from "@creatureslsp/caos-kt/caos-core";
 import {getC1TagCompletions, getC2TagCompletions} from "./completions.caos2cob.tags.js";
 import {getC3DSTagCompletions} from "../../caos2/caos2pray-definitions.js";
 import {createSimpleCompletionItem} from "../completions.create.js";

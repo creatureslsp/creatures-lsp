@@ -1,8 +1,8 @@
-import {CommandCall} from "@creatures-lsp/caos/parser";
-import {Nullable, toVsRange} from "@creatures-lsp/extension-util";
+import {CommandCall} from "@creatureslsp/caos/parser";
+import {Nullable, toVsRange} from "@creatureslsp/extension-util";
 import {Location} from "vscode-languageserver";
-import {isInCaosCatalogueKey} from "@creatures-lsp/caos";
-import type {CaosParserItem} from "@creatures-lsp/caos/core";
+import {isInCaosCatalogueKey} from "@creatureslsp/caos";
+import type {CaosParserItem} from "@creatureslsp/caos/core";
 import {getCaosCatalogueLocations} from "../../indices/index.caos.catalogue-usages.js";
 import {getCatalogueLocations} from "../../indices/index.catalogue.entries.js";
 import {IndexedItemLocation} from "../../indices/indices.js";

@@ -6,9 +6,9 @@ import {
     SymbolKind,
     TextDocument,
 } from "vscode";
-import {parseCatalogue, type CatalogueEntry, type CatalogueParserItem} from "@creatures-lsp/catalogue/core";
+import {parseCatalogue, type CatalogueEntry, type CatalogueParserItem} from "@creatureslsp/catalogue/core";
 import {toVsCodeRange} from "./helpers.js";
-import {getCatalogueRange} from "@creatures-lsp/catalogue";
+import {getCatalogueRange} from "@creatureslsp/catalogue";
 import {Log} from "./log.js";
 
 type Symbols = SymbolInformation[] | DocumentSymbol[];

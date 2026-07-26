@@ -1,7 +1,7 @@
 import {ExtensionContext, TextDocument, Uri} from "vscode";
 import {LanguageClient, LanguageClientOptions} from "vscode-languageclient/browser.js";
 import {registerClientDisposable} from "./clients.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 
 let defaultClient: Nullable<LanguageClient> = null;
 

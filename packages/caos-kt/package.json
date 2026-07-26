@@ -1,9 +1,9 @@
 {
-  "name": "@creatures-lsp/caos-kt",
-  "displayName": "CAOS KT",
+  "name": "@creatureslsp/caos-kt",
+  "displayName": "Creatures-LSP: CAOS-KT",
   "license": "MIT",
   "description": "Combined export of CAOS and Catalogue Kotlin JS libs",
-  "version": "0.0.8",
+  "version": "0.0.1",
   "engines": {
     "node": "*"
   },
@@ -14,6 +14,7 @@
   "types": "./dist/index.d.mts",
   "sideEffects": false,
   "scripts": {
+    "npm-publish": "npm publish",
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "prepack": "yarn build",
     "copy-files": "tsc -p . && mkdir -p ./dist  && find ./src \\( -iname \\*.js -o -iname \\*.js.map -o -iname \\*.mjs.map -o -iname \\*.mjs -o -iname \\*.json -o -iname \\*.d.ts  -o -iname \\*.d.mts \\) -exec cp {} ./dist/ \\; ",
@@ -85,7 +86,6 @@
       "default": "./dist/caos-validation-report.mjs",
       "types": "./dist/caos-validation-report.d.mts"
     },
-
     "./catalogue-index": {
       "default": "./dist/catalogue-index.mjs",
       "types": "./dist/catalogue-index.d.mts"
@@ -151,5 +151,6 @@
   },
   "devDependencies": {
     "rimraf": "^6.1.3"
-  }
+  },
+  "gitHead": "2da6bd9bdc7af39861033140c010c209728ea72c"
 }

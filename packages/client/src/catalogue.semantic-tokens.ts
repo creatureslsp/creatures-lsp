@@ -1,5 +1,5 @@
 import vscode from "vscode";
-import {catalogueSemanticLegend, getCatalogueSemanticTokens} from "@creatures-lsp/catalogue";
+import {catalogueSemanticLegend, getCatalogueSemanticTokens} from "@creatureslsp/catalogue";
 import {toVsCodeRange} from "./helpers.js";
 
 export const catalogueSemanticTokensProvider: vscode.DocumentSemanticTokensProvider = {

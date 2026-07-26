@@ -1,2 +1,2 @@
-export * from "@creatures-lsp/caos-kt/caos-core";
-export * from "@creatures-lsp/caos-kt/common-ast-structs";
+export * from "@creatureslsp/caos-kt/caos-core";
+export * from "@creatureslsp/caos-kt/common-ast-structs";

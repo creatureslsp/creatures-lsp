@@ -17,7 +17,7 @@ import {initVfs} from "./vfs.js";
 import {setDefaultClient} from "./extension.js";
 import {Log} from "./log.js";
 import {caosOnInjectUpdate, caosUpdateCanInject} from "./commands/command.inject.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 
 
 let _nextListenerId = 0;

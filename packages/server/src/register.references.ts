@@ -5,7 +5,7 @@ import {unpackDocument} from "./document.js";
 import {getRawCaosLocations} from "./caos/caos.references-provider.js";
 import {getRawCatalogueLocations} from "./catalogue/catalogue.references-provider.js";
 import {getWorkspaceUriForFile} from "./workspace-folders.js";
-import {isVsCode, toFileUri} from "@creatures-lsp/extension-util";
+import {isVsCode, toFileUri} from "@creatureslsp/extension-util";
 import {Log} from "./ConnLogger.js";
 
 

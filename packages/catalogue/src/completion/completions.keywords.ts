@@ -1,8 +1,8 @@
-import {CatalogueParserItem} from "@creatures-lsp/caos-kt/catalogue-core";
-import {CatalogueCursorData} from "@creatures-lsp/caos-kt/catalogue-cursor";
+import {CatalogueParserItem} from "@creatureslsp/caos-kt/catalogue-core";
+import {CatalogueCursorData} from "@creatureslsp/caos-kt/catalogue-cursor";
 import {CompletionItem} from "vscode-languageserver-types";
 import {IsCatalogue} from "../is.js";
-import {Nullable, rangesEqual, toVsRange} from "@creatures-lsp/extension-util";
+import {Nullable, rangesEqual, toVsRange} from "@creatureslsp/extension-util";
 import {createCompletionItem} from "../completions.js";
 
 const arrayOrTag = ["ARRAY", "TAG"];

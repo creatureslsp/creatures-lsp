@@ -1,4 +1,4 @@
-import type {Range} from "@creatures-lsp/extension-util";
+import type {Range} from "@creatureslsp/extension-util";
 
 export declare type ScriptType = "install" | "remove" | "event";
 export declare type JectStatus = "skipped" | "ok" | "failed" | "conn_failed";

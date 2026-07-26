@@ -16,14 +16,14 @@ import type {
     CatalogueStringValue,
     CatalogueTagKeyword,
     CatalogueTreeVisitor,
-} from "@creatures-lsp/caos-kt/catalogue-core";
+} from "@creatureslsp/caos-kt/catalogue-core";
 
 import {
     parseCatalogue,
     walkCatalogue
-} from "@creatures-lsp/caos-kt/catalogue-core";
+} from "@creatureslsp/caos-kt/catalogue-core";
 
-import {CancellationToken, Nullable, offsetRange, RangeWithIndex, SemanticToken} from "@creatures-lsp/extension-util"
+import {CancellationToken, Nullable, offsetRange, RangeWithIndex, SemanticToken} from "@creatureslsp/extension-util"
 import {Range, SemanticTokens, SemanticTokensLegend, uinteger} from "vscode-languageserver-types";
 import {IsCatalogue} from "./is.js";
 

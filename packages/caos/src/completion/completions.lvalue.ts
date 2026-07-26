@@ -1,6 +1,6 @@
-import type {Nullable} from "@creatures-lsp/extension-util";
-import type {GameVariant} from "@creatures-lsp/caos-kt";
-import type {Commands} from "@creatures-lsp/caos-kt/caos-libs";
+import type {Nullable} from "@creatureslsp/extension-util";
+import type {GameVariant} from "@creatureslsp/caos-kt";
+import type {Commands} from "@creatureslsp/caos-kt/caos-libs";
 import type {CompletionItem, Position} from "vscode-languageserver-types";
 import {VARIABLE_TYPE_ID} from "../constants.js";
 import {COMMAND_TYPE__LVALUE, type CaosCompletionSettings} from "../completions.js";

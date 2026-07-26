@@ -1,6 +1,6 @@
 import vscode from "vscode";
 import {pushDisposable} from "../disposables.js";
-import type {GameVariant} from "@creatures-lsp/caos";
+import type {GameVariant} from "@creatureslsp/caos";
 
 
 export function registerSetVariantToCommand() {

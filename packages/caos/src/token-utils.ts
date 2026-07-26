@@ -1,6 +1,6 @@
-import {Nullable} from "@creatures-lsp/extension-util";
+import {Nullable} from "@creatureslsp/extension-util";
 import {Is} from "./is-util.js";
-import type {CommandToken} from "@creatures-lsp/caos-kt/caos-core";
+import type {CommandToken} from "@creatureslsp/caos-kt/caos-core";
 
 /**
  * Converts 4-letter CAOS words to int and CAOS word ints back into strings

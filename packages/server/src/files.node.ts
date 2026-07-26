@@ -4,7 +4,7 @@ import {
     type Nullable,
     trimFileSchemePrefix,
     trimLeadingSlashOnFileScheme
-} from "@creatures-lsp/extension-util";
+} from "@creatureslsp/extension-util";
 import fs from "node:fs";
 
 export async function readTextFileNode(documentUri: string): Promise<string> {

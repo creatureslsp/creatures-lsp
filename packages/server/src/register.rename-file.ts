@@ -1,6 +1,6 @@
 import {connection} from "./connection.vscode.js";
 import type {RenameFilesParams, WorkspaceEdit} from "vscode-languageserver";
-import {toFileUri, WorkspaceChanges} from "@creatures-lsp/extension-util";
+import {toFileUri, WorkspaceChanges} from "@creatureslsp/extension-util";
 import {renameFileOrFolder} from "./rename/rename-file.js";
 
 /**

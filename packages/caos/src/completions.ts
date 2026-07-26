@@ -1,41 +1,41 @@
 // noinspection SpellCheckingInspection
-import {inRange, type Nullable, sortTextRanges, sortTextRangesReversed} from "@creatures-lsp/extension-util";
+import {inRange, type Nullable, sortTextRanges, sortTextRangesReversed} from "@creatureslsp/extension-util";
 
 import type {
     GameVariant,
-} from "@creatures-lsp/caos-kt";
+} from "@creatureslsp/caos-kt";
 
 import type {
     Commands,
-} from "@creatures-lsp/caos-kt/caos-libs";
+} from "@creatureslsp/caos-kt/caos-libs";
 
 import {
     type CaosParseResult,
     parseCaosNear,
     getCaos2PrayComments,
     type CommandCall,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatureslsp/caos-kt/caos-parser";
 
 import type {
     Caos2Comment, CaosParserItem
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatureslsp/caos-kt/caos-core";
 
 import type {
     CaosCompletionOptions,
     CaosCompletionSettings
-} from "@creatures-lsp/caos-kt/caos-completion";
+} from "@creatureslsp/caos-kt/caos-completion";
 
 import {
     type CaosCursorData,
     getCaosCursorPosition,
     cancelComplete,
     inQuotes
-} from "@creatures-lsp/caos-kt/caos-cursor-data";
+} from "@creatureslsp/caos-kt/caos-cursor-data";
 
 export type {
     CaosCompletionSettings,
     CaosCompletionOptions,
-} from "@creatures-lsp/caos-kt/caos-completion"
+} from "@creatureslsp/caos-kt/caos-completion"
 
 import type {CompletionItem, CompletionList, Position} from "vscode-languageserver-types";
 import {CAOS2_COMMENT_TYPE_ID} from "./constants.js";

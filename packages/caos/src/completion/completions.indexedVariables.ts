@@ -1,8 +1,8 @@
 import {CompletionItem, CompletionItemKind} from "vscode-languageserver-types";
-import type {GameVariant} from "@creatures-lsp/caos-kt";
-import type {CaosCommand} from "@creatures-lsp/caos-kt/caos-libs";
+import type {GameVariant} from "@creatureslsp/caos-kt";
+import type {CaosCommand} from "@creatureslsp/caos-kt/caos-libs";
 import {VariantArray} from "../completions.js";
-import {repack, Nullable} from "@creatures-lsp/extension-util";
+import {repack, Nullable} from "@creatureslsp/extension-util";
 
 const variables: VariantArray<CompletionItem> = <any>{};
 

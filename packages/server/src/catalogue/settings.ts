@@ -1,6 +1,6 @@
 // The example settings
 import {connection} from "../connection.vscode.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 import {clientCapabilities} from "../client-capabilities.js";
 
 export const CATALOGUE_LANGUAGE_ID = 'creatures-catalogue';

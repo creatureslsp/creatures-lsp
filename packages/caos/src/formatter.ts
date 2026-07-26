@@ -1,10 +1,10 @@
 /* eslint-disable eqeqeq */
 // noinspection JSUnusedLocalSymbols,GrazieInspection
 
-import {formatCaos} from "@creatures-lsp/caos-kt/caos-formatter";
-export type {CaosFormatterOptions} from "@creatures-lsp/caos-kt/caos-formatter";
-import type {GameVariant, MessageType} from "@creatures-lsp/caos-kt";
-import type {CaosFormatterOptions} from "@creatures-lsp/caos-kt/caos-formatter";
+import {formatCaos} from "@creatureslsp/caos-kt/caos-formatter";
+export type {CaosFormatterOptions} from "@creatureslsp/caos-kt/caos-formatter";
+import type {GameVariant, MessageType} from "@creatureslsp/caos-kt";
+import type {CaosFormatterOptions} from "@creatureslsp/caos-kt/caos-formatter";
 import {TextEdit} from "vscode-languageserver-types";
 
 

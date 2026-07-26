@@ -10,10 +10,10 @@
     ],
     "references": [
         {
-            "path": "../extension-util"
+            "path": "../caos-kt"
         },
         {
-            "path": "../caos-kt"
+            "path": "../extension-util"
         }
     ]
 }

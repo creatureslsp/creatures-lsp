@@ -1,5 +1,5 @@
-import {getHoverItem} from "@creatures-lsp/caos/hover-documentation";
-import {Nullable} from "@creatures-lsp/extension-util";
+import {getHoverItem} from "@creatureslsp/caos/hover-documentation";
+import {Nullable} from "@creatureslsp/extension-util";
 import {Hover, Position} from "vscode-languageserver";
 import {CaosSettings} from "./settings.js";
 

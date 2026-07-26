@@ -1,9 +1,9 @@
 // The example settings
 import {connection} from "../connection.vscode.js";
 import {clientCapabilities} from "../client-capabilities.js";
-import type {GameVariant,} from "@creatures-lsp/caos";
-import {getCaosInlayOptions} from "@creatures-lsp/caos/inlay-hints";
-import {HashUtil, type Nullable} from "@creatures-lsp/extension-util";
+import type {GameVariant,} from "@creatureslsp/caos";
+import {getCaosInlayOptions} from "@creatureslsp/caos/inlay-hints";
+import {HashUtil, type Nullable} from "@creatureslsp/extension-util";
 
 const DEFAULT_INDENT_COMMENTS = true;
 

@@ -7,8 +7,8 @@ import {
     getFileNameWithoutExtensions,
     Nullable,
     stripSurroundingQuotes
-} from "@creatures-lsp/extension-util";
-import type {Caos2Comment} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatureslsp/extension-util";
+import type {Caos2Comment} from "@creatureslsp/caos-kt/caos-core";
 
 export const requiresFileWithoutExtensionRegex = RegExp("^" + [
     "Egg\\s+Gallery\\s+male",

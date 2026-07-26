@@ -1,14 +1,14 @@
 import type {CaosDocument} from "../caos/caos.document.js";
 import type {DocumentUri, Position, TextEdit, WorkspaceEdit} from "vscode-languageserver";
 import {getCommandCallPositionalDataFromDocument} from "../caos/caos.command-call-positional-data.js";
-import {type CommandCallPositionalData, Is, type NamedVarPrefix} from "@creatures-lsp/caos";
-import type {Nullable} from "@creatures-lsp/caos";
+import {type CommandCallPositionalData, Is, type NamedVarPrefix} from "@creatureslsp/caos";
+import type {Nullable} from "@creatureslsp/caos";
 import {getNamedVariableLocationsForType} from "../indices/index.caos.named-variables.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
-import {isVsCode, getWorkspaceEdits, rangesIntersect} from "@creatures-lsp/extension-util";
+import {isVsCode, getWorkspaceEdits, rangesIntersect} from "@creatureslsp/extension-util";
 import {renameCatalogueInCatalogueAndCaosFiles} from "./rename.catalogue.js";
-import {offsetRenameRange} from "@creatures-lsp/extension-util/get-workspace-edits";
-import {pushInto} from "@creatures-lsp/extension-util/array-util";
+import {offsetRenameRange} from "@creatureslsp/extension-util/get-workspace-edits";
+import {pushInto} from "@creatureslsp/extension-util/array-util";
 
 export function renameInCaosDocument(
     document: CaosDocument,

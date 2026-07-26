@@ -10,7 +10,7 @@ import {
     VfsReadBinaryFileRequest,
     VfsReadDirectoryEvent,
     VfsReadFileRequest, VfsWriteBinaryFileRequest, VfsWriteFileRequest
-} from "@creatures-lsp/extension-util";
+} from "@creatureslsp/extension-util";
 import {Log} from "./ConnLogger.js";
 
 export async function readTextFileVsCode(documentUri: string): Promise<string> {

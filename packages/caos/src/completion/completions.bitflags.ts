@@ -1,7 +1,7 @@
-import {Nullable} from "@creatures-lsp/extension-util";
-import type {CaosValuesList} from "@creatures-lsp/caos-kt/caos-libs";
-import {getValuesList} from "@creatures-lsp/caos-kt/caos-libs";
-import type {CaosCursorData} from "@creatures-lsp/caos-kt/caos-cursor-data";
+import {Nullable} from "@creatureslsp/extension-util";
+import type {CaosValuesList} from "@creatureslsp/caos-kt/caos-libs";
+import {getValuesList} from "@creatureslsp/caos-kt/caos-libs";
+import type {CaosCursorData} from "@creatureslsp/caos-kt/caos-cursor-data";
 import type {CompletionItem, Range} from "vscode-languageserver-types";
 import {getValuesListValueCompletionItem} from "./completions.values-list-values.js";
 

@@ -1,5 +1,5 @@
 import type {DocumentUri} from "vscode-languageserver";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 import {
     fileExistsVsCode,
     isDirectoryVsCode,

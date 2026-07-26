@@ -1,15 +1,15 @@
 import type {CommandInspection, Nullable} from "../../types.js";
-import {tok} from "@creatures-lsp/caos";
-import type {GameVariant} from "@creatures-lsp/caos";
-import type {CommandToken} from "@creatures-lsp/caos/core";
-import type {CommandCall} from "@creatures-lsp/caos/parser";
+import {tok} from "@creatureslsp/caos";
+import type {GameVariant} from "@creatureslsp/caos";
+import type {CommandToken} from "@creatureslsp/caos/core";
+import type {CommandCall} from "@creatureslsp/caos/parser";
 import type {Diagnostic} from "vscode-languageserver/node.js";
 import {InspectionData} from "./InspectionData.js";
-import {toVsRange} from "@creatures-lsp/extension-util";
+import {toVsRange} from "@creatureslsp/extension-util";
 import {initializeCaosInspections} from "./inspections.register.js";
 import {Log} from "../../ConnLogger.js";
 import type {Range} from "vscode-languageserver";
-import {VersionedDocumentData} from "@creatures-lsp/extension-util/VersionedDocumentData";
+import {VersionedDocumentData} from "@creatureslsp/extension-util/VersionedDocumentData";
 import {CAOS_LANGUAGE_ID} from "../settings.js";
 
 let oldDiagnostics: VersionedDocumentData<Diagnostic[]> = new VersionedDocumentData();

@@ -1,13 +1,13 @@
-import type {Nullable} from "@creatures-lsp/catalogue";
-import {parseCatalogue} from "@creatures-lsp/catalogue/core";
+import type {Nullable} from "@creatureslsp/catalogue";
+import {parseCatalogue} from "@creatureslsp/catalogue/core";
 import type {DocumentUri, Position, TextEdit, WorkspaceEdit} from "vscode-languageserver";
 import {getCatalogueLocations} from "../indices/index.catalogue.entries.js";
-import {isVsCode, getWorkspaceEdits, inRange} from "@creatures-lsp/extension-util";
+import {isVsCode, getWorkspaceEdits, inRange} from "@creatureslsp/extension-util";
 import {getCaosCatalogueLocations} from "../indices/index.caos.catalogue-usages.js";
 import type {CatalogueDocument} from "../catalogue/catalogue.document.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
-import {offsetRenameRange} from "@creatures-lsp/extension-util";
-import {pushInto} from "@creatures-lsp/extension-util/array-util";
+import {offsetRenameRange} from "@creatureslsp/extension-util";
+import {pushInto} from "@creatureslsp/extension-util/array-util";
 
 
 export function renameInCatalogueDocument(

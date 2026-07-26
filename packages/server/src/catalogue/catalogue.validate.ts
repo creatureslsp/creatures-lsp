@@ -1,7 +1,7 @@
 import type {CatalogueDocument} from "./catalogue.document.js";
 import type {Diagnostic} from "vscode-languageserver/node.js";
-import {offsetRange, toVsRange} from "@creatures-lsp/extension-util";
-import {type CatalogueError, validateCatalogue} from "@creatures-lsp/catalogue/validation";
+import {offsetRange, toVsRange} from "@creatureslsp/extension-util";
+import {type CatalogueError, validateCatalogue} from "@creatureslsp/catalogue/validation";
 import {DiagnosticSeverity} from "vscode-languageserver-types";
 import type {Nullable} from "../types.js";
 import type {Range} from "vscode-languageserver";

@@ -1,6 +1,6 @@
-import {type CatalogueParseResult, type CatalogueParserItem, parseCatalogue} from "@creatures-lsp/catalogue/core";
-import {type Nullable} from "@creatures-lsp/catalogue";
-import {inRange} from "@creatures-lsp/extension-util";
+import {type CatalogueParseResult, type CatalogueParserItem, parseCatalogue} from "@creatureslsp/catalogue/core";
+import {type Nullable} from "@creatureslsp/catalogue";
+import {inRange} from "@creatureslsp/extension-util";
 
 
 export function getCatalogueNameUnderCursor(

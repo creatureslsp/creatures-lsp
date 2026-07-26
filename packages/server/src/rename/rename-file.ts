@@ -1,6 +1,6 @@
 import type {DocumentUri} from "vscode-languageserver";
 import {renameFileReferencesInCaosDocument} from "../caos/caos.update-file-references.js";
-import {type FileNameData, getFileNameData, getPathSeparator, type WorkspaceChanges} from "@creatures-lsp/extension-util";
+import {type FileNameData, getFileNameData, getPathSeparator, type WorkspaceChanges} from "@creatureslsp/extension-util";
 import {getFiles, isDirectory, onFileRenamed} from "../files.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
 import type {CaosDocument} from "../caos/caos.document.js";

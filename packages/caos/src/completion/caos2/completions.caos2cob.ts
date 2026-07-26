@@ -1,4 +1,4 @@
-import {Nullable} from "@creatures-lsp/extension-util";
+import {Nullable} from "@creatureslsp/extension-util";
 import {Caos2CobTag, findCobTag} from "../../caos2/caos2cob.js";
 import {Caos2ValueType} from "../../caos2/caos2-util.js";
 import {getFilenameCompletionPaths} from "../completions.file.js";

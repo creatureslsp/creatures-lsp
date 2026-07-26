@@ -1,4 +1,4 @@
-import type {CaosParseResult, CommandCall} from "@creatures-lsp/caos-kt/caos-parser";
+import type {CaosParseResult, CommandCall} from "@creatureslsp/caos-kt/caos-parser";
 import {
     type C2eStringVal,
     type Caos2Comment,
@@ -7,9 +7,9 @@ import {
     type IntVal,
     type TokenVal,
     TypeTokens
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatureslsp/caos-kt/caos-core";
 
-import {Nullable} from "@creatures-lsp/extension-util";
+import {Nullable} from "@creatureslsp/extension-util";
 
 
 /**

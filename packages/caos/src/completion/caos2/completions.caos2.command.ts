@@ -1,5 +1,5 @@
-import type {GameVariant} from "@creatures-lsp/caos-kt";
-import type {Caos2Comment} from "@creatures-lsp/caos-kt/caos-core";
+import type {GameVariant} from "@creatureslsp/caos-kt";
+import type {Caos2Comment} from "@creatureslsp/caos-kt/caos-core";
 import type {CompletionItem, Range} from "vscode-languageserver-types";
 import {CompletionItemKind} from "vscode-languageserver-types";
 import {createSimpleCompletionItem} from "../completions.create.js";

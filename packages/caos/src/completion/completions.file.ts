@@ -1,5 +1,5 @@
 import {CompletionItem, CompletionItemKind, Range} from "vscode-languageserver-types";
-import {filterByExtension, Nullable, relative, trimFileSchemePrefix} from "@creatures-lsp/extension-util";
+import {filterByExtension, Nullable, relative, trimFileSchemePrefix} from "@creatureslsp/extension-util";
 import {createQuotedCompletionItem} from "./completions.create.js";
 
 /**

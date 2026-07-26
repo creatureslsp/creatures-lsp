@@ -1,7 +1,7 @@
 import type {DocumentFormattingParams, TextEdit} from "vscode-languageserver";
 import type {CaosDocument} from "./caos.document.js";
-import {format} from "@creatures-lsp/caos";
-import type {CaosFormatterOptions} from "@creatures-lsp/caos/formatter";
+import {format} from "@creatureslsp/caos";
+import type {CaosFormatterOptions} from "@creatureslsp/caos/formatter";
 import {showMessage} from "../showMessage.js";
 
 

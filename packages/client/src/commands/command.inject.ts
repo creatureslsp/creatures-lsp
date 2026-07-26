@@ -1,17 +1,17 @@
 import vscode, {type QuickPickItem, TextEditor, TextEditorEdit, window} from "vscode";
 import {getVariant} from "../settings.js";
 import {Log} from "../log.js";
-import {type JectResult, ScriptJectResult} from "@creatures-lsp/caos";
+import {type JectResult, ScriptJectResult} from "@creatureslsp/caos";
 import {getCaosLogger} from "../caosConsoleLogger.js";
 import {pushDisposable} from "../disposables.js";
-import {type Nullable, toVsRange, inRange} from "@creatures-lsp/extension-util";
+import {type Nullable, toVsRange, inRange} from "@creatureslsp/extension-util";
 import {generateUuid} from "vscode-languageclient/lib/common/utils/uuid.js";
 import { EventEmitter } from "events";
 import type {Range} from "vscode-languageserver";
-import type {BlockRange} from "@creatures-lsp/caos/core";
-import {caosScriptOffsets} from "@creatures-lsp/caos/parser";
+import type {BlockRange} from "@creatureslsp/caos/core";
+import {caosScriptOffsets} from "@creatureslsp/caos/parser";
 import {toVsCodeRange} from "../helpers.js";
-import {validateCaos} from "@creatures-lsp/caos/validation";
+import {validateCaos} from "@creatureslsp/caos/validation";
 
 declare type CaosOnInjectNotificationProps = {
     serial: string;

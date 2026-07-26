@@ -3,7 +3,7 @@ import {indexCaosFile} from "../indices/index.caos.js";
 import {DidChangeTextDocumentParams, TextDocumentChangeEvent} from "vscode-languageserver";
 import {TextDocument} from "vscode-languageserver-textdocument";
 import {validateDocument, nextDocumentVersionId} from "../validate.js";
-import {formatUriForRead, trimFileSchemePrefix} from "@creatures-lsp/extension-util";
+import {formatUriForRead, trimFileSchemePrefix} from "@creatureslsp/extension-util";
 import {getDocuments} from "../documents.js";
 import {DocumentContentChange} from "../types.js";
 import {caosInitLib} from "./caos-init-lib.js";

@@ -1,7 +1,7 @@
-import type {CaosCommand, CaosParameter} from "@creatures-lsp/caos-kt/caos-libs";
-import {getValueTypeName} from "@creatures-lsp/caos-kt/caos-libs";
+import type {CaosCommand, CaosParameter} from "@creatureslsp/caos-kt/caos-libs";
+import {getValueTypeName} from "@creatureslsp/caos-kt/caos-libs";
 import {CompletionItem, CompletionItemKind, InsertTextFormat, InsertTextMode} from "vscode-languageserver-types";
-import {Nullable, repack} from "@creatures-lsp/extension-util";
+import {Nullable, repack} from "@creatureslsp/extension-util";
 import {tok} from "../token-utils.js";
 
 /**

@@ -1,6 +1,6 @@
 import {Range} from "vscode-languageserver";
-import type {CatalogueEntry} from "@creatures-lsp/caos-kt/catalogue-core";
-import {HasRange} from "@creatures-lsp/extension-util";
+import type {CatalogueEntry} from "@creatureslsp/caos-kt/catalogue-core";
+import {HasRange} from "@creatureslsp/extension-util";
 
 export function getCatalogueRange(entry: CatalogueEntry): Range {
     const start = entry.keywordParserItem.textRange.start

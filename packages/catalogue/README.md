@@ -1,19 +1,19 @@
-# @creatures-lsp/catalogue
+# @creatureslsp/catalogue
 
 Editor tooling for Creatures catalogue files. The package provides completion helpers, semantic tokens, ranges, and predicates for integrations built on the Language Server Protocol.
 
 ## Install
 
 ```sh
-npm install @creatures-lsp/catalogue
+npm install @creatureslsp/catalogue
 ```
 
 ## Usage
 
-Use the package with LSP positions and completion lists. Parsing is handled by `@creatures-lsp/caos-kt` internally when you provide source text.
+Use the package with LSP positions and completion lists. Parsing is handled by `@creatureslsp/caos-kt` internally when you provide source text.
 
 ```ts
-import { getCatalogueCompletionItems } from "@creatures-lsp/catalogue";
+import { getCatalogueCompletionItems } from "@creatureslsp/catalogue";
 
 const completions = await getCatalogueCompletionItems(
   '"Agent Help 1 2 3" "Example"',

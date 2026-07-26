@@ -1,9 +1,9 @@
 import type {DocumentUri, Position, Range} from "vscode-languageserver";
 import type {CommandIndex, IndexedItemLocation} from "./indices.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
-import type {C2eStringVal} from "@creatures-lsp/caos/core";
-import type {CommandCall} from "@creatures-lsp/caos/parser";
-import {Is} from "@creatures-lsp/caos";
+import type {Nullable} from "@creatureslsp/extension-util";
+import type {C2eStringVal} from "@creatureslsp/caos/core";
+import type {CommandCall} from "@creatureslsp/caos/parser";
+import {Is} from "@creatureslsp/caos";
 import {indexFilterDoNotDelete} from "./index.utils.js";
 
 

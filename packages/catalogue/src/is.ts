@@ -10,9 +10,9 @@ import type {
     CatalogueParserItem,
     CatalogueStringValue,
     CatalogueTagKeyword
-} from "@creatures-lsp/caos-kt/catalogue-core";
+} from "@creatureslsp/caos-kt/catalogue-core";
 
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 
 export const CatalogueParserItemTypes = {
     TAG_KEYWORD: 1,

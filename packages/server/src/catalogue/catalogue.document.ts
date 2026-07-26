@@ -1,5 +1,5 @@
 import {CATALOGUE_LANGUAGE_ID, type CatalogueSettings, getCatalogueDocumentSettings} from "./settings.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 import type {CreaturesDocument} from "../document.js";
 import type {DocumentUri} from "vscode-languageserver";
 

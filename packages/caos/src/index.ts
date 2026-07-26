@@ -5,7 +5,7 @@
 //
 // Type-only re-export (never a value/bare import — see caos-kt's own
 // index.mts for why the bare specifier must stay side-effect-free).
-export type {GameVariant, MessageType, Nullable} from "@creatures-lsp/caos-kt";
+export type {GameVariant, MessageType, Nullable} from "@creatureslsp/caos-kt";
 
 export * from "./commands.js";
 export * from "./completions.js";

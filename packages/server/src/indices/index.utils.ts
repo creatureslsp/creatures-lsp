@@ -1,6 +1,6 @@
 import type {DocumentUri, Range} from "vscode-languageserver";
 import type {IndexedItemLocation} from "./indices.js";
-import {type Nullable, rangesIntersect} from "@creatures-lsp/extension-util";
+import {type Nullable, rangesIntersect} from "@creatureslsp/extension-util";
 
 
 export function indexFilterDoNotDelete(documentUri: DocumentUri, range : Nullable<Range>): (location: IndexedItemLocation) => boolean {

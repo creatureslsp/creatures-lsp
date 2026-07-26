@@ -2,37 +2,37 @@ import {CompletionItem, CompletionList, DocumentUri, Position} from "vscode-lang
 import {getCaosDocumentSettings, getGlobalCaosSettings} from "./settings.js";
 import {
     type GameVariant,
-} from "@creatures-lsp/caos";
+} from "@creatureslsp/caos";
 
 import {
     type CaosCompletionOptions,
     type CaosCompletionSettings,
-} from "@creatures-lsp/caos/completions";
+} from "@creatureslsp/caos/completions";
 
 import {
     getCompletionItems as getCaosCompletionItems,
-} from "@creatures-lsp/caos";
+} from "@creatureslsp/caos";
 
 import {
     createEmptyCompletionList,
     getCatalogueNameCompletions,
     getJournalNameCompletions,
     getNamedVariableCompletionItems
-} from "@creatures-lsp/caos";
+} from "@creatureslsp/caos";
 
 import type {
     CommandCall,
-} from "@creatures-lsp/caos/parser";
+} from "@creatureslsp/caos/parser";
 
 import {
     type CaosCursorData
-} from "@creatures-lsp/caos/cursor-data";
+} from "@creatureslsp/caos/cursor-data";
 
 import * as path from "path";
 import {getFiles} from "../files.js";
 import {initWorkspaceIndices} from "../indices/index.workspace.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
-import {INFLECT_SPLITTER, isSublime, Nullable, trimLeadingSlashOnFileScheme} from "@creatures-lsp/extension-util";
+import {INFLECT_SPLITTER, isSublime, Nullable, trimLeadingSlashOnFileScheme} from "@creatureslsp/extension-util";
 import {getNamedVariableKeysForType} from "../indices/index.caos.named-variables.js";
 import {getJournalFileNames} from "../indices/index.caos.journal-files.js";
 import {getCatalogueKeys} from "../indices/index.catalogue.entries.js";

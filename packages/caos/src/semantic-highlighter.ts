@@ -2,22 +2,22 @@
 
 import {formatCommandStringAsMarkdown} from "./documentation-formattter.js";
 import {semanticLegend, SemanticTokenModifiers, SemanticTokensMap, SemanticTokensTypes} from "./semantics-legend.js";
-import type {GameVariant} from "@creatures-lsp/caos-kt";
-import {type Commands,} from "@creatures-lsp/caos-kt/caos-libs";
+import type {GameVariant} from "@creatureslsp/caos-kt";
+import {type Commands,} from "@creatureslsp/caos-kt/caos-libs";
 import {
     type Argument,
     type CaosParseResult,
     type CommandCall,
     parseCaosWithin,
     parseCaos,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatureslsp/caos-kt/caos-parser";
 
 import {
     type CancellationToken,
     type Nullable,
     type RangeWithIndex,
     offsetVsRange,
-} from "@creatures-lsp/extension-util";
+} from "@creatureslsp/extension-util";
 
 import {
     AGENT_TYPE_ID,
@@ -66,7 +66,7 @@ import type {
     TokenVal,
     Comment,
     CaosParserItem
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatureslsp/caos-kt/caos-core";
 import {
     type ICaosContextListener,
     walkCaosParseResult

@@ -2,16 +2,16 @@
 // noinspection JSUnusedGlobalSymbols
 
 import {Hover, Position} from "vscode-languageserver-types";
-import type {GameVariant} from "@creatures-lsp/caos-kt";
+import type {GameVariant} from "@creatureslsp/caos-kt";
 import {
     caosCommandDefinitionFromCommandCall,
     type CaosParseResult,
     CommandCall
-} from "@creatures-lsp/caos-kt/caos-parser";
-import {inRange, Nullable, toVsRange} from "@creatures-lsp/extension-util";
+} from "@creatureslsp/caos-kt/caos-parser";
+import {inRange, Nullable, toVsRange} from "@creatureslsp/extension-util";
 import {formatCaosDocumentation} from "./documentation-formattter.js";
 import {getCommandBeneathCursor} from "./cursor-data.js";
-import {getCaosCursorPosition, getCaosCursorPositionFromRawText} from "@creatures-lsp/caos-kt/caos-cursor-data";
+import {getCaosCursorPosition, getCaosCursorPositionFromRawText} from "@creatureslsp/caos-kt/caos-cursor-data";
 import {Is} from "./is-util.js";
 
 // /**

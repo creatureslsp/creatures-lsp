@@ -1,8 +1,8 @@
 import {CaosDocument} from "./caos.document.js";
 import {DocumentUri, WorkspaceEdit} from "vscode-languageserver";
-import {GameVariant} from "@creatures-lsp/caos";
-import {type CommandCall, parseCaos} from "@creatures-lsp/caos/parser";
-import {FileNameData, WorkspaceChanges} from "@creatures-lsp/extension-util";
+import {GameVariant} from "@creatureslsp/caos";
+import {type CommandCall, parseCaos} from "@creatureslsp/caos/parser";
+import {FileNameData, WorkspaceChanges} from "@creatureslsp/extension-util";
 import {collectFileRenameEditsForCommand} from "../rename/rename-file.caos.command.js";
 import {collectFileRenameEditsForCaos2Comments} from "../rename/rename-file.caos.caos2comments.js";
 

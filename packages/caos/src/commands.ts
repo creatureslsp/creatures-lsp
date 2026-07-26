@@ -1,6 +1,6 @@
-import type { GameVariant} from "@creatures-lsp/caos-kt";
-import {type Commands, getCommandsForVariant} from "@creatures-lsp/caos-kt/caos-libs";
-import {Nullable} from "@creatures-lsp/extension-util"
+import type { GameVariant} from "@creatureslsp/caos-kt";
+import {type Commands, getCommandsForVariant} from "@creatureslsp/caos-kt/caos-libs";
+import {Nullable} from "@creatureslsp/extension-util"
 
 const _commands: { [variant: string]: Commands } = {};
 

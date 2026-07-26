@@ -1,11 +1,11 @@
-# @creatures-lsp/caos-kt
+# @creatureslsp/caos-kt
 
 Core CAOS and catalogue language tooling for JavaScript and TypeScript. It exposes parser, formatter, validation, completion, cursor, and command-library modules used by the CAOS language server.
 
 ## Install
 
 ```sh
-npm install @creatures-lsp/caos-kt
+npm install @creatureslsp/caos-kt
 ```
 
 ## Usage
@@ -13,8 +13,8 @@ npm install @creatures-lsp/caos-kt
 The root export provides shared types. Import functionality from the documented subpath exports.
 
 ```ts
-import { useFullCaosLibDefinitions } from "@creatures-lsp/caos-kt/caos-libsfile-full";
-import { parseCaos } from "@creatures-lsp/caos-kt/caos-parser";
+import { useFullCaosLibDefinitions } from "@creatureslsp/caos-kt/caos-libsfile-full";
+import { parseCaos } from "@creatureslsp/caos-kt/caos-parser";
 
 // Load command and value definitions once before parsing or using other CAOS APIs.
 useFullCaosLibDefinitions();
@@ -23,7 +23,7 @@ const result = parseCaos("DS", 'scrp 2 11 10 1\nouts "Hello, world!"\nendm');
 console.log(result.errors);
 ```
 
-For smaller bundles, import `useSlimCaosLibDefinitions` from `@creatures-lsp/caos-kt/caos-libsfile-slim` instead. The root module is intentionally side-effect-free and does not load command-library data.
+For smaller bundles, import `useSlimCaosLibDefinitions` from `@creatureslsp/caos-kt/caos-libsfile-slim` instead. The root module is intentionally side-effect-free and does not load command-library data.
 
 ## Public modules
 

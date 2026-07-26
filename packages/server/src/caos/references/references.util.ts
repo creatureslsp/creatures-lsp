@@ -4,23 +4,23 @@ import {type DocumentUri, type Location, WorkDoneProgress} from "vscode-language
 import {
     Is,
     isSimilarVariant,
-} from "@creatures-lsp/caos";
+} from "@creatureslsp/caos";
 import {
     parseCaos
-} from "@creatures-lsp/caos/parser";
-import {type GameVariant} from "@creatures-lsp/caos";
+} from "@creatureslsp/caos/parser";
+import {type GameVariant} from "@creatureslsp/caos";
 import type {
     Argument,
     CaosParseResult,
     CommandCall,
-} from "@creatures-lsp/caos/parser";
+} from "@creatureslsp/caos/parser";
 import {caosInitLib} from "./../caos-init-lib.js";
-import {Nullable} from "@creatures-lsp/extension-util";
+import {Nullable} from "@creatureslsp/extension-util";
 import {ReferenceParams} from "vscode-languageserver-protocol";
 import {getFiles} from "../../files.js";
 import {connection} from "../../connection.vscode.js";
 import {isCaosDocument, unpackDocument} from "../../document.js";
-import {offsetRenameRange} from "@creatures-lsp/extension-util/get-workspace-edits";
+import {offsetRenameRange} from "@creatureslsp/extension-util/get-workspace-edits";
 
 
 

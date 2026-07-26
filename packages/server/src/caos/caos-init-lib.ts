@@ -1,4 +1,4 @@
-import {useFullCaosLibDefinitions} from "@creatures-lsp/caos/libsfile-full";
+import {useFullCaosLibDefinitions} from "@creatureslsp/caos/libsfile-full";
 
 let didInit = false;
 

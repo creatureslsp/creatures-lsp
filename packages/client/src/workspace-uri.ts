@@ -1,4 +1,4 @@
-import {Nullable} from "@creatures-lsp/extension-util";
+import {Nullable} from "@creatureslsp/extension-util";
 import {DocumentUri} from "vscode-languageserver";
 import {Uri, workspace} from "vscode";
 import {createFileUri} from "./vfs.js";

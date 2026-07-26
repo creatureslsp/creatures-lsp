@@ -1,5 +1,5 @@
 import {Uri, workspace, WorkspaceFolder} from "vscode";
-import {Nullable, trimFileSchemePrefix} from "@creatures-lsp/extension-util";
+import {Nullable, trimFileSchemePrefix} from "@creatureslsp/extension-util";
 import {pushDisposable} from "./disposables.js";
 import {DocumentUri} from "vscode-languageserver";
 

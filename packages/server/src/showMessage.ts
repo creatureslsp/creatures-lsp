@@ -1,5 +1,5 @@
 import {connection} from "./connection.vscode.js";
-import type {MessageType} from "@creatures-lsp/caos";
+import type {MessageType} from "@creatureslsp/caos";
 
 
 export function showMessage(type: MessageType, message: string): void {

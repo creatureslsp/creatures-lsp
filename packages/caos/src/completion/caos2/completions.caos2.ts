@@ -1,7 +1,7 @@
-import type { GameVariant } from "@creatures-lsp/caos-kt";
-import type {CaosParserItem, Caos2Comment} from "@creatures-lsp/caos-kt/caos-core";
+import type { GameVariant } from "@creatureslsp/caos-kt";
+import type {CaosParserItem, Caos2Comment} from "@creatureslsp/caos-kt/caos-core";
 import type {CompletionItem, Range} from "vscode-languageserver-types";
-import {inRange} from "@creatures-lsp/extension-util";
+import {inRange} from "@creatureslsp/extension-util";
 import type {CaosCompletionOptions} from "../../completions.js";
 import {getCaos2TagCompletions} from "./completions.caos2.tag.js";
 import {getCaos2TagValueCompletions} from "./completions.caos2.values.js";

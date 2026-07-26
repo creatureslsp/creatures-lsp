@@ -1,6 +1,6 @@
 import {Caos2CobFormat, Caos2CobFormats} from "./caos2cob.formats.js";
 import {Caos2ValueType} from "./caos2-util.js";
-import {Nullable} from "@creatures-lsp/extension-util"
+import {Nullable} from "@creatureslsp/extension-util"
 
 export type Caos2CobTag = {
     tags: string[];

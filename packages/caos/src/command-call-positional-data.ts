@@ -1,20 +1,20 @@
 import {Position} from "vscode-languageserver";
-import {inRange, Nullable} from "@creatures-lsp/extension-util";
+import {inRange, Nullable} from "@creatureslsp/extension-util";
 import {drillDown} from "./drillDown.js";
 import type {
     Argument,
     CommandCall,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatureslsp/caos-kt/caos-parser";
 import {
     type CaosCursorData,
     getCaosCursorPosition,
-} from "@creatures-lsp/caos-kt/caos-cursor-data";
+} from "@creatureslsp/caos-kt/caos-cursor-data";
 import type {
     CaosParseResult,
-} from "@creatures-lsp/caos-kt/caos-parser";
+} from "@creatureslsp/caos-kt/caos-parser";
 import type {
     CaosParserItem
-} from "@creatures-lsp/caos-kt/caos-core";
+} from "@creatureslsp/caos-kt/caos-core";
 
 import {Is} from "./is-util.js";
 

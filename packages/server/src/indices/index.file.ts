@@ -2,7 +2,7 @@ import type {DocumentUri, Range} from "vscode-languageserver";
 import * as path from "path";
 import {clearCaosDocumentIndices, indexCaosFile} from "./index.caos.js";
 import {indexCatalogue} from "./index.catalogue.js";
-import {formatUriForRead, trimFileSchemePrefix} from "@creatures-lsp/extension-util";
+import {formatUriForRead, trimFileSchemePrefix} from "@creatureslsp/extension-util";
 import {clearCatalogueEntries} from "./index.catalogue.entries.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
 import {isFileURINaive} from "../files.js";

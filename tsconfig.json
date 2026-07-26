@@ -1,22 +1,22 @@
 {
     "compilerOptions": {
         "paths": {
-            "@creatures-lsp/catalogue": [
+            "@creatureslsp/catalogue": [
                 "./catalogue/src/*"
             ],
-            "@creatures-lsp/caos-kt": [
+            "@creatureslsp/caos-kt": [
                 "./caos-kt/src/*"
             ],
-            "@creatures-lsp/caos/*": [
+            "@creatureslsp/caos/*": [
                 "./caos/src/*"
             ],
-            "@creatures-lsp/caos-vscode-client/*": [
+            "@creatureslsp/caos-vscode-client/*": [
                 "./client/src/*"
             ],
-            "@creatures-lsp/caos-language-server/*": [
+            "@creatureslsp/caos-language-server/*": [
                 "./server/src/*"
             ],
-            "@creatures-lsp/extension-util/*": [
+            "@creatureslsp/extension-util/*": [
                 "./extension-util/src/*"
             ]
         }

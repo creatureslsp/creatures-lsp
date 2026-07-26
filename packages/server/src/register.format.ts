@@ -1,6 +1,6 @@
 import {connection} from "./connection.vscode.js";
 import type {DocumentFormattingParams, TextEdit} from "vscode-languageserver";
-import type {Nullable} from "@creatures-lsp/caos";
+import type {Nullable} from "@creatureslsp/caos";
 import {caosInitLib} from "./caos/caos-init-lib.js";
 import {formatCaosDocument} from "./caos/caos.format.js";
 import {isCaosDocument, isCatalogueDocument, unpackDocument} from "./document.js";

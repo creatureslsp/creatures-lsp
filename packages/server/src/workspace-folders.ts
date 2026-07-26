@@ -3,7 +3,7 @@ import {clearFilesForWorkspace, initFileList, isDirectory} from "./files.js";
 import * as _path from "path"
 import {connection} from "./connection.vscode.js";
 
-import {defaultWorkspaceUri, trimLeadingSlashOnFileScheme} from "@creatures-lsp/extension-util";
+import {defaultWorkspaceUri, trimLeadingSlashOnFileScheme} from "@creatureslsp/extension-util";
 import {revalidateAllFiles} from "./validate.js";
 import {clearWorkspaceIndices, initWorkspaceIndices} from "./indices/index.workspace.js";
 import {didFinishInit} from "./did-finish-init.js";

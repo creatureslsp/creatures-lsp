@@ -1,7 +1,7 @@
 // noinspection JSIgnoredPromiseFromCall
 
 import {type InitializeParams, type InitializeResult, TextDocumentSyncKind} from "vscode-languageserver/node.js";
-import {getSemanticTokensLegend} from "@creatures-lsp/caos";
+import {getSemanticTokensLegend} from "@creatureslsp/caos";
 import {getDocuments} from "./documents.js";
 import {clientCapabilities} from "./client-capabilities.js";
 import {CAOS_LANGUAGE_ID, deleteCaosDocumentSettings} from "./caos/settings.js";
@@ -20,7 +20,7 @@ import {
     type Nullable,
     setLspRunner,
     trimFileSchemePrefix
-} from "@creatures-lsp/extension-util";
+} from "@creatureslsp/extension-util";
 import {setDidFinishInit} from "./did-finish-init.js";
 import type {RenameOptions} from "vscode-languageserver-protocol/lib/common/protocol.js";
 import {Log, initLSPLogger} from "./ConnLogger.js";

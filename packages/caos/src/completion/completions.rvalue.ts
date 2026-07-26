@@ -1,7 +1,7 @@
-import {Nullable} from "@creatures-lsp/extension-util";
-import type {GameVariant} from "@creatures-lsp/caos-kt";
-import type {Commands} from "@creatures-lsp/caos-kt/caos-libs";
-import type {CaosCursorData} from "@creatures-lsp/caos-kt/caos-cursor-data";
+import {Nullable} from "@creatureslsp/extension-util";
+import type {GameVariant} from "@creatureslsp/caos-kt";
+import type {Commands} from "@creatureslsp/caos-kt/caos-libs";
+import type {CaosCursorData} from "@creatureslsp/caos-kt/caos-cursor-data";
 import {CompletionItem, Position} from "vscode-languageserver-types";
 import {ANY_TYPE_ID} from "../constants.js";
 import {getValuesListCompletions} from "./completions.values-list-values.js";

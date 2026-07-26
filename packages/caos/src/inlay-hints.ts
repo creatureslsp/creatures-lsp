@@ -1,10 +1,10 @@
 import {InlayHint} from "vscode-languageserver-types";
-import type {GameVariant} from '@creatures-lsp/caos-kt';
-import {type CaosParseResult, parseCaos} from '@creatures-lsp/caos-kt/caos-parser';
-import {getCaosInlayHints} from '@creatures-lsp/caos-kt/caos-inlay-hints';
-import {isVsCode, Nullable} from "@creatures-lsp/extension-util";
+import type {GameVariant} from '@creatureslsp/caos-kt';
+import {type CaosParseResult, parseCaos} from '@creatureslsp/caos-kt/caos-parser';
+import {getCaosInlayHints} from '@creatureslsp/caos-kt/caos-inlay-hints';
+import {isVsCode, Nullable} from "@creatureslsp/extension-util";
 import {Is} from "./is-util.js";
-export {getCaosInlayHints, getCaosInlayOptions} from "@creatures-lsp/caos-kt/caos-inlay-hints";
+export {getCaosInlayHints, getCaosInlayOptions} from "@creatureslsp/caos-kt/caos-inlay-hints";
 
 /**
  * Create inlay handler if needed or requested

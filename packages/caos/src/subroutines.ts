@@ -2,9 +2,9 @@
 // noinspection JSUnusedGlobalSymbols
 
 import {COMMAND_TOKEN_PARSER_TYPE, TOKEN_PARSER_TYPE} from "./constants.js";
-import {inRange} from "@creatures-lsp/extension-util";
-import type { CaosParseResult} from "@creatures-lsp/caos-kt/caos-parser";
-import type {CaosParserItem} from "@creatures-lsp/caos-kt/caos-core";
+import {inRange} from "@creatureslsp/extension-util";
+import type { CaosParseResult} from "@creatureslsp/caos-kt/caos-parser";
+import type {CaosParserItem} from "@creatureslsp/caos-kt/caos-core";
 import {tok} from "./token-utils.js";
 
 const SUBR: number = tok("subr") as number;

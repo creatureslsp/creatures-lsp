@@ -1,1 +1,1 @@
-export * from "@creatures-lsp/caos-kt/caos-parser";
+export * from "@creatureslsp/caos-kt/caos-parser";

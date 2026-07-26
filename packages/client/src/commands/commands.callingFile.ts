@@ -1,6 +1,6 @@
 import vscode, {workspace} from "vscode";
 import {createFileUri} from "../vfs.js";
-import type {Nullable} from "@creatures-lsp/extension-util";
+import type {Nullable} from "@creatureslsp/extension-util";
 
 
 export const getCallingFile = (uri?: vscode.Uri): Nullable<vscode.Uri> => {

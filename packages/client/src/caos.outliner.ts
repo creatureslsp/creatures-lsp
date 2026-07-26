@@ -6,8 +6,8 @@ import {
     SymbolInformation,
     TextDocument,
 } from "vscode";
-import {type GameVariant,} from "@creatures-lsp/caos";
-import { getCaosScriptDocumentSymbols } from "@creatures-lsp/caos/document-symbols";
+import {type GameVariant,} from "@creatureslsp/caos";
+import { getCaosScriptDocumentSymbols } from "@creatureslsp/caos/document-symbols";
 import {DocumentSymbol as IDocumentSymbol} from "vscode-languageserver-types";
 import {getVariant} from "./settings.js";
 import {toVsCodeRange} from "./helpers.js";
