@@ -16,6 +16,14 @@
   resolved "https://registry.yarnpkg.com/@babel/helper-validator-identifier/-/helper-validator-identifier-7.29.7.tgz#bd87084ced0c796ec46bda492de6e83d29e89fc2"
   integrity sha512-qehxGkRj55h/ff8EMaJ+cYhyaKlHIxqYDn682wQD7RNp9UujOQsHog2uS0r2vzr4pW+sXf90NeeayjcNaX3fFg==
 
+"@creatureslsp/extension-util@0.0.1":
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/@creatureslsp/extension-util/-/extension-util-0.0.1.tgz#89ad1845e4166df880f48d55798cdb30bf91e492"
+  integrity sha512-urGe/O5MaMYttFjKGKsfI5XOv0NVJke3Tv0bRWOHNsH2lgvDZAvhH25u1qQbEFksdDFHqUt5x4he121XqnQKuw==
+  dependencies:
+    vscode-languageserver "^9.0.1"
+    vscode-languageserver-textdocument "^1.0.5"
+
 "@discoveryjs/json-ext@^0.5.0":
   version "0.5.7"
   resolved "https://registry.yarnpkg.com/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz#1d572bfbbe14b7704e0ba0f39b74815b84870d70"
