@@ -337,6 +337,7 @@ const keywords = [
     tok("scrp"),
     tok("iscr"),
     tok("rscr"),
+    tok("endm"),
     tok("doif"),
     tok("elif"),
     tok("endi"),
