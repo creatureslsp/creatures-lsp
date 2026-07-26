@@ -1,7 +1,7 @@
 {
   "name": "@creatureslsp/caos",
   "displayName": "Creatures-LSP: CAOS",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "description": "Utility methods for parsing and validating CAOS scripts for the Creatures games",
   "types": "./dist/index.d.ts",
@@ -152,8 +152,8 @@
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
   "dependencies": {
-    "@creatureslsp/caos-kt": "0.0.3",
-    "@creatureslsp/extension-util": "0.0.3"
+    "@creatureslsp/caos-kt": "0.0.4",
+    "@creatureslsp/extension-util": "0.0.4"
   },
   "devDependencies": {
     "rimraf": "^6.1.3",
