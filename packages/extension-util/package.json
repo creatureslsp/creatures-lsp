@@ -4,7 +4,7 @@
   "displayName": "AST-Util",
   "license": "MIT",
   "description": "Helper functions for dealing with language extensions",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "type": "module",
   "engines": {
     "node": "*"

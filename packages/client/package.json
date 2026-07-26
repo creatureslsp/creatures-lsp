@@ -1,9 +1,9 @@
 {
-  "name": "caos-vscode-client",
+  "name": "@creatures-lsp/vs-client",
   "type": "module",
   "displayName": "CAOSEditor",
   "description": "An editor for the Creature's CAOS language",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "main": "./dist/node/extension.cjs",
   "browser": "./dist/web/extension.cjs",
   "types": "./dist/extension.d.ts",
@@ -36,9 +36,9 @@
     "./dist/web/extension.cjs"
   ],
   "dependencies": {
-    "@creatures-lsp/caos-util": "*",
-    "@creatures-lsp/catalogue": "*",
-    "@creatures-lsp/extension-util": "*",
+    "@creatures-lsp/caos": "0.0.8",
+    "@creatures-lsp/catalogue": "0.0.8",
+    "@creatures-lsp/extension-util": "0.0.8",
     "vscode-languageclient": "^9.0.1"
   },
   "devDependencies": {

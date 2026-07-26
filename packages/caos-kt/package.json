@@ -4,7 +4,7 @@
   "displayName": "CAOS KT",
   "license": "MIT",
   "description": "Combined export of CAOS and Catalogue Kotlin JS libs",
-  "version": "0.0.2",
+  "version": "0.0.8",
   "engines": {
     "node": "*"
   },

@@ -8,5 +8,6 @@
     "packages/extension-util"
   ],
   "npmClient": "yarn",
-  "version": "independent"
+  "version": "0.0.8",
+  "message": "chore(release): publish %s"
 }
