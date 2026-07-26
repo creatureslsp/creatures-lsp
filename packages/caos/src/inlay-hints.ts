@@ -1,4 +1,4 @@
-import {InlayHint} from "vscode-languageserver-types";
+import {InlayHint, InlayHintKind} from "vscode-languageserver-types";
 import type {GameVariant} from '@creatureslsp/caos-kt';
 import {type CaosParseResult, parseCaos} from '@creatureslsp/caos-kt/caos-parser';
 import {getCaosInlayHints} from '@creatureslsp/caos-kt/caos-inlay-hints';
@@ -21,7 +21,6 @@ export function getCaosInlayHintsWithOffset(
     minimumParametersForInlayHints: Nullable<number> = null,
     offset: number = isVsCode() ? 1 : 0,
 ): InlayHint[] {
-    
     const parseResult = typeof text === 'string'
         ? parseCaos(variant, text)
         : (Is.parseResult(text) ? text : null);
@@ -45,7 +44,7 @@ export function getCaosInlayHintsWithOffset(
             ...hint,
             position: {
                 line: hint.position.line,
-                character: hint.position.character + offset,
+                character: hint.position.character + offset + (hint.kind == InlayHintKind.Type ? 1 : 0),
             }
         }
     });
