@@ -462,7 +462,7 @@ function addStringDecorations(tokens: SemanticToken[], call: CommandCall) {
                 null,
                 SemanticTokensTypes.STRING_ESCAPE_CHARACTER
             );
-        } else if (typeId === ANIMATION_TYPE_ID || typeId === BYTE_STRING_TYPE_ID) {
+        } else if (argument.typeId === ANIMATION_TYPE_ID || argument.typeId === BYTE_STRING_TYPE_ID) {
             expandStringComponents(
                 tokens,
                 argument.text,
