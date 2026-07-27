@@ -64,7 +64,6 @@ import type {
     IndexedVarVal,
     IntVal,
     TokenVal,
-    Comment,
     CaosParserItem
 } from "@creatureslsp/caos-kt/caos-core";
 import {
@@ -89,8 +88,8 @@ export class RequestCancelledException extends Error {
  * @param range
  * @param offsetStart
  */
-function toSemanticRange(range: Range, offsetStart: boolean = true): Range {
-    return offsetVsRange(range, 0, offsetStart && range.start.character !== 0 ? 1 : 0, 0, 1);
+function toSemanticRange(range: Range, offsetStart: boolean = false): Range {
+    return offsetVsRange(range, 0, offsetStart ? 1 : 0, 0, 1);
 }
 
 /**
@@ -139,7 +138,7 @@ export class SemanticTokensWalker implements ICaosContextListener {
         // Will be altered in onCommandCall
     }
     
-    onC1eString(token: C1eStringVal) {
+    onC1eString(_token: C1eStringVal) {
         // this.tokens.push({
         //     range: toSemanticRange(token.textRange),
         //     tokenType: SemanticTokensTypes.STRING_TOKEN,
@@ -147,7 +146,7 @@ export class SemanticTokensWalker implements ICaosContextListener {
         // })
     }
     
-    onC2eString(token: C2eStringVal) {
+    onC2eString(_token: C2eStringVal) {
         // this.tokens.push({
         //     range: toSemanticRange(token.textRange, true),
         //     tokenType: SemanticTokensTypes.STRING_TOKEN,
@@ -245,6 +244,15 @@ export class SemanticTokensWalker implements ICaosContextListener {
     
     onCaos2Comment(token: Caos2Comment): void {
         const tag = token.tag;
+        
+        if (token.caos2Hash) {
+            this.tokens.push({
+                range: toSemanticRange(token.caos2Hash.textRange),
+                tokenType: SemanticTokensTypes.CAOS2PRAY_HASH,
+                modifiers: [],
+                tokenLength: token.caos2Hash.textRange.endIndex - token.caos2Hash.textRange.startIndex + 1
+            });
+        }
         if (tag) {
             this.onCaos2PrayTag(token, tag);
             return;
@@ -274,12 +282,18 @@ export class SemanticTokensWalker implements ICaosContextListener {
             range: toSemanticRange(range),
             tokenType: SemanticTokensTypes.CAOS2PRAY_TAG,
             modifiers,
-            tokenLength: token.textRange.endIndex - token.textRange.startIndex + 1
+            tokenLength: range.endIndex - range.startIndex + 1
         });
     }
     
-    private onCaos2PrayCommand(_token: Caos2Comment, _command: string): void {
-    
+    private onCaos2PrayCommand(token: Caos2Comment, _command: string): void {
+        const range = token.token.textRange;
+        this.tokens.push({
+            range: toSemanticRange(range),
+            tokenType: SemanticTokensTypes.CAOS2PRAY_COMMAND,
+            modifiers:[],
+            tokenLength: range.endIndex - range.startIndex + 1
+        });
     }
     
     onComment(_token: CaosParserItem): void {
@@ -420,10 +434,9 @@ function addStringDecorations(tokens: SemanticToken[], call: CommandCall) {
         const typeToken = a.parserItem?.typeToken;
         return typeToken === QUOTE_STRING_PARSER_TYPE || typeToken === BYTE_STRING_PARSER_TYPE || typeToken === BRACKET_STRING_PARSER_TYPE;
     });
-    const args = call.arguments;
     for (let argument of stringArguments) {
         const isAnimation = argument.typeId === ANIMATION_TYPE_ID || argument.typeId === BYTE_STRING_TYPE_ID;
-        const typeId = isAnimation ? BYTE_STRING_PARSER_TYPE: argument.parserItem?.typeToken;
+        const typeId = isAnimation ? BYTE_STRING_PARSER_TYPE : argument.parserItem?.typeToken;
         const text = argument.text;
         if (text == null) {
             console.log(
@@ -455,9 +468,9 @@ function addStringDecorations(tokens: SemanticToken[], call: CommandCall) {
                 argument.text,
                 argument?.textRange,
                 SemanticTokenModifiers.BYTE_STRING_MODIFIER_TOKEN,
-                /(\d+)|([Rr])$/,
+                /([Rr])\]$/,
                 null,
-                [SemanticTokensTypes.NUMBER, SemanticTokensTypes.STRING_ESCAPE_CHARACTER],
+                SemanticTokensTypes.STRING_ESCAPE_CHARACTER,
             );
         }
     }
@@ -467,7 +480,7 @@ function addStringDecorations(tokens: SemanticToken[], call: CommandCall) {
             line: range.start.line,
             character: range.start.character
         } satisfies Position;
-        let match = text.match(regex);
+        let match = regex.exec(text);
         if (match == null) {
             tokens.push({
                 range: toSemanticRange(range),
@@ -539,8 +552,8 @@ function addStringDecorations(tokens: SemanticToken[], call: CommandCall) {
             start = newRange.end;
             lastIndex = endIndex;
             
-            match = text.substring(lastIndex)
-                .match(regex);
+            match = regex.exec(text.substring(lastIndex))
+                // .match(regex);
         }
         
         const startIndex = lastIndex;

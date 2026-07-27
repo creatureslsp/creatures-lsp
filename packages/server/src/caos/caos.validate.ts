@@ -8,7 +8,6 @@ import type {
 import {
     ERROR_TYPE_TYPE_ERROR,
     hasSubroutine,
-    RequestCancelledException,
 } from "@creatureslsp/caos"
 import {
     type CaosParseResult,
@@ -20,15 +19,13 @@ import {
 } from "@creatureslsp/caos/validation";
 
 import type {Diagnostic} from "vscode-languageserver/node.js";
-import {type Nullable, offsetRange, sortTextRanges, toVsRange} from "@creatureslsp/extension-util";
+import {type Nullable, sortTextRanges, toVsRange} from "@creatureslsp/extension-util";
 import {DiagnosticSeverity} from "vscode-languageserver-types";
 import type {Range} from "vscode-languageserver";
 import type {ErrorVal} from "@creatureslsp/caos/core";
 import {CaosDocument} from "./caos.document.js";
 import {collectCaosInspectionErrors} from "./inspections/inspections.core.js";
 import {getWorkspaceUriForFile} from "../workspace-folders.js";
-import {sign} from "node:crypto";
-
 
 declare type AbortSignalData = {
     version: number;
@@ -228,7 +225,7 @@ function validateParserResult(
             const textRange = arg.textRange;
             if (!hasSubroutine(parseResult, arg.text.trim(), textRange.start.line, textRange.start.character)) {
                 errorMarkers.push({
-                    range: offsetRange(arg.textRange, 0, 1),
+                    range: arg.textRange,
                     message: "Subroutine '" + arg.text.trim() + "' was not found in containing script",
                     severity: DiagnosticSeverity.Error
                 });

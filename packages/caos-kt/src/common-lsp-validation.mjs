@@ -17,10 +17,6 @@ import {
   getStringHashCode26igk1bx568vk as getStringHashCode,
   getOrNull1go7ef9ldk0df as getOrNull,
   substringiqarkczpya5m as substring,
-  firstOrNulltrxqttxfxqju as firstOrNull,
-  Char19o2r8palgjof as Char,
-  _Char___init__impl__6a9atx2gndcvjvc5pke as _Char___init__impl__6a9atx,
-  equals2au1ep9vhcato as equals,
 } from './kotlin-kotlin-stdlib.mjs';
 import {
   PluginGeneratedSerialDescriptorqdzeg5asqhfg as PluginGeneratedSerialDescriptor,
@@ -389,38 +385,11 @@ class Companion_1 {
     if (isEmptyAtZero) {
       tmp_0 = '^';
     } else {
-      var tmp_1;
-      var tmp_2;
-      if (column === 1) {
-        var tmp_3 = firstOrNull(location.e5a_1);
-        tmp_2 = equals(tmp_3 == null ? null : new Char(tmp_3), new Char(_Char___init__impl__6a9atx(49)));
-      } else {
-        tmp_2 = false;
-      }
-      if (tmp_2) {
-        tmp_1 = true;
-      } else {
-        var tmp_4;
-        if (column === 0) {
-          var tmp_5 = firstOrNull(location.e5a_1);
-          tmp_4 = equals(tmp_5 == null ? null : new Char(tmp_5), new Char(_Char___init__impl__6a9atx(48)));
-        } else {
-          tmp_4 = false;
-        }
-        tmp_1 = tmp_4;
-      }
-      if (tmp_1) {
-        var tmp_6 = repeat(' ', column - 1 | 0);
-        // Inline function 'kotlin.math.max' call
-        var a = markerLength + 1 | 0;
-        var tmp$ret$1 = Math.max(a, 1);
-        tmp_0 = tmp_6 + repeat('^', tmp$ret$1);
-      } else {
-        var tmp_7 = repeat(' ', column);
-        // Inline function 'kotlin.math.max' call
-        var tmp$ret$2 = Math.max(markerLength, 1);
-        tmp_0 = tmp_7 + repeat('^', tmp$ret$2);
-      }
+      var tmp_1 = repeat(' ', column - 1 | 0);
+      // Inline function 'kotlin.math.max' call
+      var a = markerLength + 1 | 0;
+      var tmp$ret$1 = Math.max(a, 1);
+      tmp_0 = tmp_1 + repeat('^', tmp$ret$1);
     }
     var marker = tmp_0;
     return new Source(line, marker);

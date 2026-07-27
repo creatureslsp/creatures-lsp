@@ -24,17 +24,6 @@ export async function getCaos2TagValueCompletions(
             start: {line, character: character},
             end: {line, character}
         };
-    
-    range = {
-        start: {
-            line: range.start.line,
-            character: range.start.character + 1
-        },
-        end: {
-            line: range.end.line,
-            character: range.end.character
-        },
-    };
     let completions: string[];
     const tag = comment.eq == null || comment.values.length == 0 ? (comment.tag ?? comment.command) : comment.tag;
     const command = comment.eq == null || comment.values.length == 0 ? (comment.command ?? comment.tag) : comment.command;

@@ -1,5 +1,5 @@
 // noinspection SpellCheckingInspection
-import {isVsCode, inflect, INFLECT_SPLITTER, multiCase, Nullable} from "@creatureslsp/extension-util"
+import {inflect, INFLECT_SPLITTER, multiCase, Nullable} from "@creatureslsp/extension-util"
 import {
     type CatalogueParseResult,
     parseCatalogue
@@ -54,7 +54,7 @@ export async function getCatalogueCompletionItems(
         cursor = getCatalogueCursor(
             parseResult,
             position.line,
-            Math.max(position.character - 1, 0),
+            position.character, // Math.max(position.character - 1, 0),
         )
     } catch (e) {
         const error = e instanceof Error ? e.message +"\n" + e.stack : e;

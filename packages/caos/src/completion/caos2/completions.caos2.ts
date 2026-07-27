@@ -43,17 +43,6 @@ export async function getCaos2PrayCompletions(
         ?? (ranges ? ranges[0] : null)
         ?? {start: {line, character}, end: {line, character}};
     
-    range = {
-        start: {
-            line: range.start.line,
-            character: range.start.character + 2
-        },
-        end: {
-            line: range.end.line,
-            character: range.end.character + 1
-        }
-    };
-    
     if (isTag || isUndetermined) {
         if (inCommandOrTag) {
             out = out.concat(getCaos2TagCompletions(variant, allComments, item.eq != null, range));

@@ -22,7 +22,6 @@ import {
 } from '@creatureslsp/caos/parser';
 
 import {
-    getCaosInlayHints,
     getCaosInlayOptions,
 } from "@creatureslsp/caos/inlay-hints";
 
@@ -51,13 +50,13 @@ export class CaosInlayHintsProvider implements InlayHintsProvider {
             // Get disabled type hints
             disabled = inlayOptions
                 .filter((option: string) => {
-                    return option != null && hintSettings?.has(option) == true && hintSettings?.get(option) === false;
+                    return option != null && hintSettings?.has(option) && hintSettings?.get(option) === false;
                 });
         } else {
             disabled = [];
         }
         const minimumParameters: Nullable<number> = settings.get('inlayHints.parameterHints.minimumParameterCountForParameterInlayHints');
-        const keepGoing = () => token?.isCancellationRequested != true
+        const keepGoing = () => !token?.isCancellationRequested
         let parseResult: CaosParseResult;
         if (range != null) {
             parseResult = parseCaosWithin(
@@ -82,7 +81,7 @@ export class CaosInlayHintsProvider implements InlayHintsProvider {
             return [];
         }
 
-        const raw = getCaosInlayHintsWithOffset(parseResult.variant, parseResult, disabled, minimumParameters, 1)
+        const raw = getCaosInlayHintsWithOffset(parseResult.variant, parseResult, disabled, minimumParameters, 0)
             .filter(it => it != null);
         
         return raw.map((hint) => {

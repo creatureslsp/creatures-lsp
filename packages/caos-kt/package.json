@@ -3,7 +3,7 @@
   "displayName": "Creatures-LSP: CAOS-KT",
   "license": "MIT",
   "description": "Combined export of CAOS and Catalogue Kotlin JS libs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "node": "*"
   },
@@ -15,6 +15,7 @@
   "sideEffects": false,
   "scripts": {
     "npm-publish": "npm publish",
+    "webpack": "npm run build",
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo",
     "prepack": "yarn build",
     "copy-files": "tsc -p . && mkdir -p ./dist  && find ./src \\( -iname \\*.js -o -iname \\*.js.map -o -iname \\*.mjs.map -o -iname \\*.mjs -o -iname \\*.json -o -iname \\*.d.ts  -o -iname \\*.d.mts \\) -exec cp {} ./dist/ \\; ",

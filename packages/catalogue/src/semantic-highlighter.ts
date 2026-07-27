@@ -38,13 +38,13 @@ export class RequestCancelledException extends Error {
 /**
  * Converts a Kotlin range into a valid semantic token range
  * @param range
- * @param endoffset
+ * @param endOffset
  */
-function toSemanticRange(range: RangeWithIndex, endoffset: number = 0): RangeWithIndex {
+function toSemanticRange(range: RangeWithIndex, endOffset: number = 0): RangeWithIndex {
     if (range.start == null) {
         console.log(JSON.stringify(range, null, 2));
     }
-    return offsetRange(range, 0, 1, endoffset);
+    return offsetRange(range, 0, 0, endOffset);
 }
 
 /**
@@ -178,7 +178,7 @@ function convertContext(tokens: SemanticToken[], blockRange?: Range): uinteger[]
         const range: RangeWithIndex = token.range;
         
         let modifier = token.modifiers.length > 0 ? getModifier(token.modifiers) : 0;
-        let tokenLength = (range.endIndex - range.startIndex) + 1;
+        let tokenLength = (range.endIndex - range.startIndex);
         
         if (prevLine !== range.start.line) {
             prevChar = 0;

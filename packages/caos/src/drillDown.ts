@@ -1,7 +1,7 @@
 import type {GameVariant} from "@creatureslsp/caos-kt";
 import type {CommandCall} from "@creatureslsp/caos-kt/caos-parser";
 import {Position} from "vscode-languageserver-types";
-import {isVsCode, Nullable, RangeWithIndex} from "@creatureslsp/extension-util";
+import {Nullable, RangeWithIndex} from "@creatureslsp/extension-util";
 import {Is} from "./is-util.js";
 
 /**
@@ -56,8 +56,7 @@ function inRange(range: RangeWithIndex, position: Position): boolean {
     }
     
     if (position.line == range.start.line) {
-        const offsetStart = isVsCode() ? -1 : 0;
-        if (position.character < (range.start.character! + offsetStart)) {
+        if (position.character < range.start.character!) {
             return false;
         }
     }

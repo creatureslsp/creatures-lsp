@@ -3,7 +3,7 @@
   "displayName": "Creatures-LSP: Extension-Util",
   "license": "MIT",
   "description": "Helper functions for dealing with language extensions",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "engines": {
     "node": "*"
@@ -94,6 +94,7 @@
   },
   "scripts": {
     "npm-publish": "npm publish",
+    "webpack": "npm run build",
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p ./dist",
     "prepack": "yarn build",
     "copy-files": "mkdir -p ./dist && cp \"./package.json\" ./dist/ && find \"./src\" -name \"*.d.ts\" -exec cp -LR {} ./dist \\;",

@@ -30,6 +30,6 @@ export function getWorkspaceEdits(locations: IndexedItemLocation[], newText: str
 
 export function offsetRenameRange(range: Range): Range {
     return isVsCode()
-        ? toVsRange(range, true, 1)
+        ? toVsRange(range, true, 0)
         : toVsRange(range, true);
 }

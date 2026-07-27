@@ -13,6 +13,7 @@ export const SemanticTokensTypes = {
     PLACEHOLDER_TEXT: "placeholder-text",
     CAOS2PRAY_TAG: "caos2pray-tag",
     CAOS2PRAY_COMMAND: "caos2pray-command",
+    CAOS2PRAY_HASH: "caos2pray-hash",
     STRING_ESCAPE_CHARACTER: "string-escape-character",
     NUMBER: "number",
 }
@@ -33,6 +34,7 @@ const tokenTypes = [
     SemanticTokensTypes.PLACEHOLDER_TEXT,
     SemanticTokensTypes.CAOS2PRAY_TAG,
     SemanticTokensTypes.CAOS2PRAY_COMMAND,
+    SemanticTokensTypes.CAOS2PRAY_HASH,
     SemanticTokensTypes.STRING_ESCAPE_CHARACTER,
     SemanticTokensTypes.NUMBER,
 ];
@@ -59,6 +61,7 @@ export const SemanticTokenModifiers = {
 }
 
 const tokenModifiers = [
+    "",
     SemanticTokenModifiers.C1_STRING_MODIFIER_TOKEN,
     SemanticTokenModifiers.QUOTE_STRING_MODIFIER_TOKEN,
     SemanticTokenModifiers.BYTE_STRING_MODIFIER_TOKEN,

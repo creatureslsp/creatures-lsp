@@ -1,7 +1,7 @@
 {
   "name": "@creatureslsp/catalogue",
   "displayName": "Creatures-LSP: Catalogue",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
   "description": "Catalogue",
   "main": "./dist/index.js",
@@ -60,6 +60,7 @@
   ],
   "scripts": {
     "npm-publish": "npm publish",
+    "webpack": "npm run build",
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p dist",
     "copy-files": "cp \"./package.json\" ./dist/",
     "build": "yarn copy-files && tsc --build",
@@ -67,8 +68,8 @@
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
   "dependencies": {
-    "@creatureslsp/caos-kt": "0.0.4",
-    "@creatureslsp/extension-util": "0.0.4",
+    "@creatureslsp/caos-kt": "0.0.5",
+    "@creatureslsp/extension-util": "0.0.5",
     "vscode-languageserver": "^9.0.1",
     "vscode-languageserver-textdocument": "^1.0.5"
   },

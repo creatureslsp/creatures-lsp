@@ -114,7 +114,7 @@ function createRangeWithIndex_0(start, end, parserIndex, offsetIndex, offsetLine
   }
   // Inline function 'kotlin.comparisons.maxOf' call
   var tmp4_endIndex = Math.max(offsetEndIndex, offsetStartIndex);
-  var tmp5_start = new PositionImpl((start.e1e() - 1 | 0) + offsetLine | 0, sub1OrZero(startColumn));
+  var tmp5_start = new PositionImpl((start.e1e() - 1 | 0) + offsetLine | 0, startColumn);
   var tmp6_end = new PositionImpl((end.e1e() - 1 | 0) + offsetLine | 0, sub1OrZero(endColumn));
   return new RangeWithIndexImpl(tmp5_start, tmp6_end, offsetStartIndex, tmp4_endIndex, parserIndex);
 }
@@ -177,7 +177,7 @@ function createRangeWithIndex_1(ctx, parserIndex) {
     tmp_3 = tmp11_elvis_lhs;
   }
   var stopColumn = tmp_3;
-  var tmp12_start = new PositionImpl(startLine - 1 | 0, sub1OrZero(startColumn));
+  var tmp12_start = new PositionImpl(startLine - 1 | 0, startColumn);
   var tmp13_end = new PositionImpl(stopLine - 1 | 0, sub1OrZero(stopColumn));
   return new RangeWithIndexImpl(tmp12_start, tmp13_end, startIndex, endIndex, parserIndex);
 }
@@ -185,7 +185,7 @@ function createRangeWithIndex_2(start, stop, startIndex, stopIndex, parserIndex)
   var stopNotNull = ensureNotNull(furthestPoint_0([stop, start]));
   // Inline function 'kotlin.comparisons.maxOf' call
   var tmp0_endIndex = Math.max(stopIndex, startIndex);
-  var tmp1_start = new PositionImpl(start.n29_1 - 1 | 0, sub1OrZero(start.o29_1));
+  var tmp1_start = new PositionImpl(start.n29_1 - 1 | 0, start.o29_1);
   var tmp = stopNotNull.n29_1 - 1 | 0;
   var tmp_0;
   if (stopNotNull.n29_1 === start.n29_1) {

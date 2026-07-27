@@ -1,6 +1,6 @@
 import type {CatalogueDocument} from "./catalogue.document.js";
 import type {Diagnostic} from "vscode-languageserver/node.js";
-import {offsetRange, toVsRange} from "@creatureslsp/extension-util";
+import {toVsRange} from "@creatureslsp/extension-util";
 import {type CatalogueError, validateCatalogue} from "@creatureslsp/catalogue/validation";
 import {DiagnosticSeverity} from "vscode-languageserver-types";
 import type {Nullable} from "../types.js";
@@ -28,7 +28,7 @@ export function getCatalogueDocumentValidationErrors(
 
     return rawErrors
         .map((error: CatalogueError) => {
-            const textRange = offsetRange(error.textRange, 0, 0, 1);
+            const textRange = error.textRange;
             const out: Diagnostic = {
                 range: toVsRange(textRange),
                 message: error.message,

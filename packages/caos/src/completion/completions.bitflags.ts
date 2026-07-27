@@ -19,7 +19,7 @@ export function getBitflagsOptionsProvider(data: CaosCursorData): Nullable<Compl
     const closestItemRange = data.closestItem?.textRange;
     let start = {
         line: closestItemRange?.start?.line ?? data.line,
-        character: (closestItemRange?.start?.character ?? data.character) + 1
+        character: (closestItemRange?.start?.character ?? data.character)
     };
     
     // let end = {

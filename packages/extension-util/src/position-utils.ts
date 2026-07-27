@@ -99,7 +99,7 @@ export function offsetRange(textRange: RangeWithIndex, lineMod: number = 0, char
     return <RangeWithIndex>{
         start: {
             line: textRange.start.line + lineMod,
-            character: textRange.start.character + (charMod == 0 || textRange.start.character  <= 1 ? 0 : charMod),
+            character: textRange.start.character + (charMod == 0 ? 0 : charMod),
         },
         end: {
             line: textRange.end.line + lineMod,
@@ -136,7 +136,7 @@ export function offsetVsRange(textRange: Range, lineStartMod: number = 0, charSt
 
 let offsetStart: Nullable<number> = null
 
-export function toVsRange(textRange: Range, expandEnd?: boolean, startMod: number = 1, endMod: number = 0): Range {
+export function toVsRange(textRange: Range, expandEnd?: boolean, startMod: number = 0, endMod: number = 0): Range {
     if (offsetStart == null) {
         offsetStart = getRangeStartOffset()
     }

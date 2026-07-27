@@ -1,42 +1,22 @@
 // noinspection SpellCheckingInspection
-import {inRange, type Nullable, sortTextRanges, sortTextRangesReversed} from "@creatureslsp/extension-util";
+import {type Nullable} from "@creatureslsp/extension-util";
 
-import type {
-    GameVariant,
-} from "@creatureslsp/caos-kt";
+import type {GameVariant,} from "@creatureslsp/caos-kt";
 
-import type {
-    Commands,
-} from "@creatureslsp/caos-kt/caos-libs";
+import type {Commands,} from "@creatureslsp/caos-kt/caos-libs";
 
-import {
-    type CaosParseResult,
-    parseCaosNear,
-    getCaos2PrayComments,
-    type CommandCall,
-} from "@creatureslsp/caos-kt/caos-parser";
+import {type CaosParseResult, getCaos2PrayComments, parseCaosNear,} from "@creatureslsp/caos-kt/caos-parser";
 
-import type {
-    Caos2Comment, CaosParserItem
-} from "@creatureslsp/caos-kt/caos-core";
+import type {Caos2Comment} from "@creatureslsp/caos-kt/caos-core";
 
-import type {
-    CaosCompletionOptions,
-    CaosCompletionSettings
-} from "@creatureslsp/caos-kt/caos-completion";
+import type {CaosCompletionOptions, CaosCompletionSettings} from "@creatureslsp/caos-kt/caos-completion";
 
 import {
+    cancelComplete,
     type CaosCursorData,
     getCaosCursorPosition,
-    cancelComplete,
     inQuotes
 } from "@creatureslsp/caos-kt/caos-cursor-data";
-
-export type {
-    CaosCompletionSettings,
-    CaosCompletionOptions,
-} from "@creatureslsp/caos-kt/caos-completion"
-
 import type {CompletionItem, CompletionList, Position} from "vscode-languageserver-types";
 import {CAOS2_COMMENT_TYPE_ID} from "./constants.js";
 import {getCommands} from "./commands.js";
@@ -47,6 +27,11 @@ import {getValuesListCompletions} from "./completion/completions.values-list-val
 import {getCommandCompletions, getDumbCompletionItems} from "./completion/completion.command.js";
 import {getSubroutineCompletions} from "./completion/completions.subroutines.js";
 import {getCommandBeneathCursor} from "./cursor-data.js";
+
+export type {
+    CaosCompletionSettings,
+    CaosCompletionOptions,
+} from "@creatureslsp/caos-kt/caos-completion"
 
 export * from "./completion/completion.namedVariables.js";
 export * from "./completion/completion.journal.js";
@@ -99,14 +84,14 @@ export async function getCompletionItems(
         variant,
         text,
         position.line,
-        Math.max(position.character - 1, 0),
+        position.character,// Math.max(position.character - 1, 0),
         opts?.incomplete ?? true,
     ) : text as CaosParseResult;
     
     cursor = getCaosCursorPosition(
         parseResult,
         position.line,
-        Math.max(position.character - 1, 0),
+        position.character,// Math.max(position.character - 1, 0),
         opts?.incomplete ?? true,
         true,
     );
@@ -237,7 +222,7 @@ async function getInitialCompletionItems(
             closestItem as Caos2Comment,
             options,
         )
-    } else if (closestItem && inQuotes(closestItem, positionData.line, positionData.character + 1)) {
+    } else if (closestItem && inQuotes(closestItem, positionData.line, positionData.character)) {
         raw = getValuesListCompletions(
             positionData,
             {line: positionData.line, character: positionData.character},
