@@ -601,7 +601,7 @@ function getTextSliceRange(text: string, start: Position, startInString: number,
  * @param call
  */
 function addTokensFromCall(tokens: SemanticToken[], call: CommandCall) {
-    const tokenArguments = call.arguments.filter((p: Argument) => p.typeId == TOKEN_TYPE_ID);
+    const tokenArguments = call.arguments.filter((p: Argument) => p.typeId === TOKEN_TYPE_ID);
     if (tokenArguments.length == 0) {
         return;
     }
@@ -610,10 +610,10 @@ function addTokensFromCall(tokens: SemanticToken[], call: CommandCall) {
             range: toSemanticRange(token.textRange),
             // Tokens in C1e can also be file names. These are represented as a string
             tokenType: call.commandString !== "GSUB" && call.commandString !== "SUBR" && call.commandString !== "GOTO"
-                ? SemanticTokensTypes.STRING_TOKEN
+                ? SemanticTokensTypes.TOKEN_TOKEN
                 : SemanticTokensTypes.SUBROUTINE_NAME_TOKEN,
             modifiers: [],
-            tokenLength: token.textRange.endIndex - token.textRange.startIndex
+            tokenLength: token.textRange.endIndex - token.textRange.startIndex + 1
         });
     }
 }
