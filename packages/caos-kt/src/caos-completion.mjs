@@ -1663,7 +1663,7 @@ function getCaos2PrayCompletions(variant, allComments, item, line, character, op
   var tmp2_elvis_lhs = tmp$ret$4;
   var tmp3_elvis_lhs = tmp2_elvis_lhs == null ? firstOrNull(ranges) : tmp2_elvis_lhs;
   var rawRange = tmp3_elvis_lhs == null ? new RangeWithIndexImpl(new PositionImpl(line, character), new PositionImpl(line, character), 0, 0, null) : tmp3_elvis_lhs;
-  var range = new RangeImpl(new PositionImpl(rawRange.h1().e1e(), rawRange.h1().i1e() + 2 | 0), new PositionImpl(rawRange.f1e().e1e(), rawRange.f1e().i1e() + 1 | 0));
+  var range = new RangeImpl(new PositionImpl(rawRange.h1().e1e(), rawRange.h1().i1e() + 1 | 0), new PositionImpl(rawRange.f1e().e1e(), rawRange.f1e().i1e() + 1 | 0));
   // Inline function 'kotlin.collections.mutableListOf' call
   var out = ArrayList.u1();
   if (isTag || isUndetermined) {
@@ -2612,7 +2612,7 @@ function getCaos2TagValueCompletions(thisFileName, variant, comment, allComments
   var tmp0_safe_receiver = tmp$ret$1;
   var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.d1e();
   var valueRange = tmp1_elvis_lhs == null ? new RangeWithIndexImpl(new PositionImpl(line, character), new PositionImpl(line, character), 0, 0, null) : tmp1_elvis_lhs;
-  var range = new RangeImpl(new PositionImpl(valueRange.h1().e1e(), valueRange.h1().i1e() + 1 | 0), new PositionImpl(valueRange.f1e().e1e(), valueRange.f1e().i1e()));
+  var range = new RangeImpl(new PositionImpl(valueRange.h1().e1e(), valueRange.h1().i1e()), new PositionImpl(valueRange.f1e().e1e(), valueRange.f1e().i1e()));
   var tmp;
   if (!(comment.eq == null)) {
     // Inline function 'kotlin.collections.isNotEmpty' call
@@ -3272,7 +3272,7 @@ function getBitflagsOptionsProvider(data) {
   var tmp_1 = tmp6_elvis_lhs == null ? data.e1e() : tmp6_elvis_lhs;
   var tmp8_safe_receiver = closestItemRange == null ? null : closestItemRange.h1();
   var tmp9_elvis_lhs = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.i1e();
-  var start = new PositionImpl(tmp_1, (tmp9_elvis_lhs == null ? data.i1e() : tmp9_elvis_lhs) + 1 | 0);
+  var start = new PositionImpl(tmp_1, tmp9_elvis_lhs == null ? data.i1e() : tmp9_elvis_lhs);
   var range = new RangeImpl(start, start);
   var commandItem = new CompletionItem('Generate Bitflag Value for ' + valuesList.name, VOID, VOID, VOID, VOID, '0_ bit flag', VOID, '', VOID, VOID, new TextEditImpl(range, ''), new LspCommand('Generate Bitflag Value for ' + valuesList.name, 'caos.generateBitflagValue'));
   var out = mutableListOf([commandItem]);

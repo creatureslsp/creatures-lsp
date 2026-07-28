@@ -22,9 +22,6 @@ import {
   isNumberiramasdbon0i as isNumber,
   numberToInt1ygmcfwhs2fkq as numberToInt,
   substringiqarkczpya5m as substring,
-  emptyList1g2z5xcrvp2zy as emptyList,
-  toList383f556t1dixk as toList,
-  Exceptiondt2hlxn7j7vw as Exception,
 } from './kotlin-kotlin-stdlib.mjs';
 //region block: imports
 var imul = Math.imul;
@@ -247,20 +244,19 @@ class CallbackLogger {
       return true;
     if (!(other instanceof CallbackLogger))
       return false;
-    var tmp0_other_with_cast = other instanceof CallbackLogger ? other : THROW_CCE();
-    if (!equals(this.w1h_1, tmp0_other_with_cast.w1h_1))
+    if (!equals(this.w1h_1, other.w1h_1))
       return false;
-    if (!equals(this.x1h_1, tmp0_other_with_cast.x1h_1))
+    if (!equals(this.x1h_1, other.x1h_1))
       return false;
-    if (!equals(this.y1h_1, tmp0_other_with_cast.y1h_1))
+    if (!equals(this.y1h_1, other.y1h_1))
       return false;
-    if (!equals(this.z1h_1, tmp0_other_with_cast.z1h_1))
+    if (!equals(this.z1h_1, other.z1h_1))
       return false;
-    if (!equals(this.a1i_1, tmp0_other_with_cast.a1i_1))
+    if (!equals(this.a1i_1, other.a1i_1))
       return false;
-    if (!equals(this.b1i_1, tmp0_other_with_cast.b1i_1))
+    if (!equals(this.b1i_1, other.b1i_1))
       return false;
-    if (!(this.c1i_1 == tmp0_other_with_cast.c1i_1))
+    if (!(this.c1i_1 == other.c1i_1))
       return false;
     return true;
   }
@@ -336,7 +332,7 @@ class Log {
     var tmp_0;
     // Inline function 'kotlin.text.isNullOrBlank' call
     if (!(className == null || isBlank(className))) {
-      tmp_0 = '' + className + '::';
+      tmp_0 = className + '::';
     } else {
       tmp_0 = '';
     }
@@ -384,16 +380,13 @@ class DefaultLoggerObject {
   logMemory() {
     console.log('Cannot log memory');
     lastLineLength = 17;
-    var process = nodeRequireSafe('process', []);
-    var tmp;
-    if (process != null) {
-      var tmp_0 = process.hasOwnProperty('memoryUsage');
-      tmp = (!(tmp_0 == null) ? typeof tmp_0 === 'boolean' : false) ? tmp_0 : THROW_CCE();
-    } else {
-      tmp = false;
-    }
-    if (tmp) {
-      console.log(process.memoryUsage());
+    var tmp0_safe_receiver = nodeRequires;
+    var process = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.process();
+    if (!(process == null)) {
+      var tmp = console;
+      var tmp1_safe_receiver = process.memoryUsage;
+      var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver();
+      tmp.log(tmp2_elvis_lhs == null ? '' : tmp2_elvis_lhs);
     }
   }
   error(message, color) {
@@ -590,6 +583,10 @@ function get_consoleColorEscapeSequence() {
 }
 var consoleColorEscapeSequence;
 var lastLineLength;
+var nodeRequires;
+function setNodeLoggingImports(requires) {
+  nodeRequires = requires;
+}
 function wrap($this, color, message) {
   var colorPrefix = $this.getColorPrefix(color);
   var tmp;
@@ -624,20 +621,22 @@ function logReplace(message, fallback) {
     fallback(message);
     return Unit_instance;
   }
-  var tmp0_safe_receiver = nodeRequireSafe('process', ['stdout']);
-  var stdout = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.stdout;
+  var tmp0_safe_receiver = nodeRequires;
+  var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.process();
+  var stdout = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.stdout;
   var tmp_0;
   if (stdout == null) {
     tmp_0 = true;
   } else {
-    var tmp1_safe_receiver = stdout.constructor;
-    tmp_0 = (tmp1_safe_receiver == null ? null : tmp1_safe_receiver.name) != 'WriteStream';
+    var tmp2_safe_receiver = stdout.constructor;
+    tmp_0 = (tmp2_safe_receiver == null ? null : tmp2_safe_receiver.name) != 'WriteStream';
   }
   if (tmp_0) {
     fallback(message);
     return Unit_instance;
   }
-  var readline = nodeRequireSafe('readline', ['clearLine', 'cursorTo']);
+  var tmp3_safe_receiver = nodeRequires;
+  var readline = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.readline();
   if (readline == null) {
     fallback(message);
     return Unit_instance;
@@ -659,85 +658,6 @@ function logReplace(message, fallback) {
   var b = messagePadded.length;
   var tmp$ret$0 = Math.min(tmp0, b);
   stdout.write(substring(messagePadded, 0, tmp$ret$0), 'utf8');
-}
-function nodeRequireSafe(moduleName, requiredProperties) {
-  var tmp = typeof window === 'undefined';
-  var inBrowser = !((!(tmp == null) ? typeof tmp === 'boolean' : false) ? tmp : THROW_CCE());
-  if (inBrowser) {
-    return null;
-  }
-  var tmp_0 = typeof WorkerGlobalScope !== 'undefined' && self instanceof WorkerGlobalScope;
-  var worker = (!(tmp_0 == null) ? typeof tmp_0 === 'boolean' : false) ? tmp_0 : THROW_CCE();
-  if (worker) {
-    return null;
-  }
-  var mod = function () {
-    if (require == null) {
-      return null;
-    }
-    try {
-      return require(moduleName);
-    } catch (e) {
-      return null;
-    }
-  }();
-  // Inline function 'kotlin.collections.isNotEmpty' call
-  if (!missingProperties(moduleName, requiredProperties).u()) {
-    return null;
-  }
-  return mod;
-}
-function missingProperties(obj, requiredProperties) {
-  // Inline function 'kotlin.collections.isEmpty' call
-  if (requiredProperties.length === 0) {
-    return emptyList();
-  }
-  var tmp;
-  if (obj.hasOwnProperty != null) {
-    // Inline function 'kotlin.js.unsafeCast' call
-    var jsObject = obj;
-    // Inline function 'kotlin.collections.filter' call
-    // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
-    var inductionVariable = 0;
-    var last = requiredProperties.length;
-    while (inductionVariable < last) {
-      var element = requiredProperties[inductionVariable];
-      inductionVariable = inductionVariable + 1 | 0;
-      if (!jsObject.hasOwnProperty(element)) {
-        destination.z1(element);
-      }
-    }
-    tmp = destination;
-  } else {
-    var tmp_0;
-    try {
-      // Inline function 'kotlin.collections.filter' call
-      // Inline function 'kotlin.collections.filterTo' call
-      var destination_0 = ArrayList.u1();
-      var inductionVariable_0 = 0;
-      var last_0 = requiredProperties.length;
-      while (inductionVariable_0 < last_0) {
-        var element_0 = requiredProperties[inductionVariable_0];
-        inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        if (obj[element_0] == null) {
-          destination_0.z1(element_0);
-        }
-      }
-      tmp_0 = destination_0;
-    } catch ($p) {
-      var tmp_1;
-      if ($p instanceof Exception) {
-        var e = $p;
-        tmp_1 = toList(requiredProperties);
-      } else {
-        throw $p;
-      }
-      tmp_0 = tmp_1;
-    }
-    tmp = tmp_0;
-  }
-  return tmp;
 }
 function setLogger(logger) {
   Log_getInstance().a1j(logger);
@@ -769,6 +689,7 @@ initMetadataForClass(createSingleFunctionLogger$1);
 //region block: init
 consoleColorEscapeSequence = '\x1B';
 lastLineLength = 0;
+nodeRequires = null;
 //endregion
 //region block: exports
 defineProp(LoggerColor, 'BLACK', BLACK_getInstance, VOID, true);
@@ -782,6 +703,7 @@ defineProp(LoggerColor, 'WHITE', WHITE_getInstance, VOID, true);
 export {
   LoggerColor as LoggerColor,
   LoggerBuilder as LoggerBuilder,
+  setNodeLoggingImports as setNodeLoggingImports,
   setLogger as setLogger,
   setSingleFunctionLogger as setSingleFunctionLogger,
 };
