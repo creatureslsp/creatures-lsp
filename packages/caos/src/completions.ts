@@ -7,7 +7,7 @@ import type {Commands,} from "@creatureslsp/caos-kt/caos-libs";
 
 import {type CaosParseResult, getCaos2PrayComments, parseCaosNear,} from "@creatureslsp/caos-kt/caos-parser";
 
-import type {Caos2Comment} from "@creatureslsp/caos-kt/caos-core";
+import type {Caos2Comment, ErrorVal} from "@creatureslsp/caos-kt/caos-core";
 
 import type {CaosCompletionOptions, CaosCompletionSettings} from "@creatureslsp/caos-kt/caos-completion";
 
@@ -18,13 +18,17 @@ import {
     inQuotes
 } from "@creatureslsp/caos-kt/caos-cursor-data";
 import type {CompletionItem, CompletionList, Position} from "vscode-languageserver-types";
-import {CAOS2_COMMENT_TYPE_ID} from "./constants.js";
+import {CAOS2_COMMENT_TYPE_ID, COMMAND_TYPE_ID} from "./constants.js";
 import {getCommands} from "./commands.js";
 import {Is} from "./is-util.js";
 import {getCaos2PrayCompletions} from "./completion/caos2/completions.caos2.js";
 import {getBitflagsOptionsProvider} from "./completion/completions.bitflags.js";
 import {getValuesListCompletions} from "./completion/completions.values-list-values.js";
-import {getCommandCompletions, getDumbCompletionItems} from "./completion/completion.command.js";
+import {
+    getCommandCompletions,
+    getCommandCompletionsForCommandType,
+    getDumbCompletionItems
+} from "./completion/completion.command.js";
 import {getSubroutineCompletions} from "./completion/completions.subroutines.js";
 import {getCommandBeneathCursor} from "./cursor-data.js";
 
@@ -161,6 +165,10 @@ export async function getCompletionItemsWithParseResult(
     
     if (items == null) {
         return emptyCompletionList;
+    }
+    
+    if (parseResult.controlStatementErrors.length > 0) {
+        items = presortControlStatements(items, parseResult.controlStatementErrors);
     }
     
     const hasClosestItemAndCommand = cursor.command != null && cursor.closestItem != null;
@@ -380,4 +388,99 @@ async function getInitialCompletionItemsSafe(
         console.error("Failed to general CAOS completions; " + error);
         return null
     }
+}
+
+
+function getControlStatementSorters(controlStatementErrors: ErrorVal[]): Record<string, number> {
+    let ends = [
+        "NEXT",
+        "NSCN",
+        "REPE",
+        "UNTL",
+        "EVER",
+        "RETN",
+        "ENDI"
+    ];
+    
+    const regex = /Missing terminating `(.{4})`/i;
+    const extractMissing = (e: ErrorVal): Nullable<string> => {
+        const match = regex.exec(e.message);
+        console.log(match ? match[1] : "<no-match>");
+        return match ? match[1].toUpperCase() : null;
+    };
+    
+    const offsets: Record<string, number> = {};
+    let next = 0;
+    for (let i=0; i<controlStatementErrors.length && next <= 9; i++) {
+        const error = controlStatementErrors[i];
+        const missing = extractMissing(error);
+        if (!missing) {
+            continue;
+        }
+        offsets[missing.toUpperCase()] = next++;
+    }
+    const found: string[] = Object.keys(offsets);
+    for (const end of ends) {
+        if (found.indexOf(end) < 0) {
+            offsets[end] = -1;
+        }
+    }
+    
+    return offsets;
+}
+
+const abc = "ABCDEFGHIJKL";
+
+function sortValue(item: CompletionItem, offset: number): string {
+    return (offset >= 0 ? (offset < 10 ? abc[offset] : abc[10]) :  "z") + "_" + item.sortText
+}
+
+function presortControlStatements(items: CompletionItem[], controlStatementErrors: ErrorVal[]): CompletionItem[] {
+    if (!controlStatementErrors) {
+        return items;
+    }
+    const offsets: Record<string, number> = getControlStatementSorters(controlStatementErrors);
+    if (Object.keys(offsets).length == 1) {
+        const main = Object.keys(offsets)[0];
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].label.toUpperCase() !== main) {
+                continue;
+            }
+            const item = items[i];
+            items[i] = {
+                ...item,
+                preselect: true,
+                sortText: sortValue(item, 0)
+            } satisfies CompletionItem;
+            break;
+        }
+        return items;
+    }
+    items = items.map((item: CompletionItem) => {
+        if (typeof offsets[item.label] === "undefined") {
+            return item;
+        }
+        const offset = offsets[item.label];
+        delete offsets[item.label];
+        return {
+            ...item,
+            sortText: sortValue(item, offset)
+        } satisfies CompletionItem;
+    });
+
+    const missing = Object.keys(offsets);
+    if (missing) {
+        const more = getCommandCompletionsForCommandType(
+            "DS",
+            getCommands("DS"),
+            COMMAND_TYPE__COMMAND,
+            undefined,
+            [],
+            COMMAND_TYPE_ID,
+            null,
+            (l: string) => missing.indexOf(l.toUpperCase()) >= 0,
+        );
+        items = items.concat(more);
+    }
+    return items;
 }

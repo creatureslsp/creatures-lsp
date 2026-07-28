@@ -1,6 +1,6 @@
 import {isVsCode, Nullable} from "@creatureslsp/extension-util";
 import type {GameVariant} from "@creatureslsp/caos-kt";
-import type {CaosParserItem, CommandToken} from "@creatureslsp/caos-kt/caos-core";
+import type {CommandToken} from "@creatureslsp/caos-kt/caos-core";
 import type {Commands, CaosCommand} from "@creatureslsp/caos-kt/caos-libs";
 import type {CaosCursorData} from "@creatureslsp/caos-kt/caos-cursor-data";
 import type {CompletionItem, Position, Range, TextEdit} from "vscode-languageserver-types";
@@ -87,23 +87,29 @@ export function getCommandCompletions(
  * @param position
  * @param previousTokens
  * @param returnType
+ * @param filter
  */
 export function getCommandCompletionsForCommandType(
     variant: GameVariant,
     commands: Commands,
     commandType: number,
-    position: Position,
+    position: Nullable<Position>,
     previousTokens: CommandToken[],
     returnType: number,
     settings: Nullable<CaosCompletionSettings>,
+    filter: Nullable<(label: string) => boolean> = null,
 ): CompletionItem[] {
-    let out = getMultiTokenCommands(variant, commands, commandType, position, previousTokens);
+    let out = position ? getMultiTokenCommands(variant, commands, commandType, position, previousTokens) : [];
     if (previousTokens.length === 0 || out.length === 0) {
         out = out.concat(getSingleTokenCommands(variant, commands, commandType));
     }
     
+    if (filter) {
+        out = out.filter(c => filter(c.label));
+    }
+    
     out = (returnType == ANY_TYPE_ID || returnType == UNKNOWN_TYPE_ID) ? out : out.map(item => {
-        const prefix = isSimilarType((<CaosCommand>item.data)?.returnTypeId, returnType) ? 'a_' : 'b_';
+        const prefix = isSimilarType((<CaosCommand>item.data)?.returnTypeId, returnType) ? 'n_' : 'o_';
         return {
             ...item,
             sortText: prefix + item.sortText
