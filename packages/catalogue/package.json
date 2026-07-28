@@ -1,7 +1,7 @@
 {
   "name": "@creatureslsp/catalogue",
   "displayName": "Creatures-LSP: Catalogue",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
   "description": "Catalogue",
   "main": "./dist/index.js",
@@ -68,8 +68,8 @@
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
   "dependencies": {
-    "@creatureslsp/caos-kt": "0.0.5",
-    "@creatureslsp/extension-util": "0.0.5",
+    "@creatureslsp/caos-kt": "0.0.6",
+    "@creatureslsp/extension-util": "0.0.6",
     "vscode-languageserver": "^9.0.1",
     "vscode-languageserver-textdocument": "^1.0.5"
   },

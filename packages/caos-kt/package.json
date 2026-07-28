@@ -3,7 +3,7 @@
   "displayName": "Creatures-LSP: CAOS-KT",
   "license": "MIT",
   "description": "Combined export of CAOS and Catalogue Kotlin JS libs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "engines": {
     "node": "*"
   },
