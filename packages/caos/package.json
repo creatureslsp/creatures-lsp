@@ -1,7 +1,7 @@
 {
   "name": "@creatureslsp/caos",
   "displayName": "Creatures-LSP: CAOS",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "description": "Utility methods for parsing and validating CAOS scripts for the Creatures games",
   "types": "./dist/index.d.ts",
@@ -143,7 +143,7 @@
   ],
   "scripts": {
     "npm-publish": "npm publish",
-    "webpack": "npm run build",
+    "webpack": "yarn run build",
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p dist",
     "prepack": "yarn build",
     "copy-files": "find ./src \\( -iname \\*.js -o -iname \\*.js.map -o -iname \\*.json -o -iname \\*.d.ts \\) -exec cp {} ./dist/ \\;",
@@ -153,8 +153,8 @@
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --max-warnings=0"
   },
   "dependencies": {
-    "@creatureslsp/caos-kt": "0.0.6",
-    "@creatureslsp/extension-util": "0.0.6"
+    "@creatureslsp/caos-kt": "0.0.7",
+    "@creatureslsp/extension-util": "0.0.7"
   },
   "devDependencies": {
     "rimraf": "^6.1.3",

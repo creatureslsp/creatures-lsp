@@ -3,7 +3,7 @@
   "displayName": "Creatures-LSP: Extension-Util",
   "license": "MIT",
   "description": "Helper functions for dealing with language extensions",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "type": "module",
   "engines": {
     "node": "*"
@@ -94,11 +94,11 @@
   },
   "scripts": {
     "npm-publish": "npm publish",
-    "webpack": "npm run build",
+    "webpack": "yarn run build",
     "clean": "rimraf dist && rimraf tsconfig.tsbuildinfo && mkdir -p ./dist",
     "prepack": "yarn build",
     "copy-files": "mkdir -p ./dist && cp \"./package.json\" ./dist/ && find \"./src\" -name \"*.d.ts\" -exec cp -LR {} ./dist \\;",
-    "build-first": "echo \"export * from \\\"./types.js\\\"\" > ./dist/index.d.ts && cat ./src/_index.ts >> ./dist/index.d.ts",
+    "build-first": "yarn run copy-files && echo \"export * from \\\"./types.js\\\"\" > ./dist/index.d.ts && cat ./src/_index.ts >> ./dist/index.d.ts",
     "rename-index-js-file": "( [ ! -f ./dist/_index.js ] || mv ./dist/_index.js ./dist/index.js) && ([ ! -f ./dist/_index.d.ts.map ] || rm ./dist/_index.d.ts.map)  && ([ ! -f ./dist/_index.js ] || rm ./dist/_index.d.ts)",
     "run-after": "yarn copy-files && yarn rename-index-js-file",
     "build": "yarn build-first && tsc --build && sleep 4 && yarn run-after",

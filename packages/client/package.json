@@ -3,7 +3,7 @@
   "type": "module",
   "displayName": "Creatures-LSP: VS-Client",
   "description": "An editor for the Creature's CAOS language",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "./dist/node/extension.cjs",
   "browser": "./dist/web/extension.cjs",
   "types": "./dist/extension.d.ts",
@@ -37,9 +37,9 @@
     "./dist/web/extension.cjs"
   ],
   "dependencies": {
-    "@creatureslsp/caos": "0.0.6",
-    "@creatureslsp/catalogue": "0.0.6",
-    "@creatureslsp/extension-util": "0.0.6",
+    "@creatureslsp/caos": "0.0.7",
+    "@creatureslsp/catalogue": "0.0.7",
+    "@creatureslsp/extension-util": "0.0.7",
     "vscode-languageclient": "^9.0.1"
   },
   "devDependencies": {
