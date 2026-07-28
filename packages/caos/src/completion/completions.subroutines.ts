@@ -7,14 +7,16 @@ import {CompletionItem, CompletionItemKind, InsertTextFormat, InsertTextMode} fr
 import {Is} from "../is-util.js";
 import {inRange, Nullable} from "@creatureslsp/extension-util";
 import {getSubroutines} from "../subroutines.js";
+import {tok} from "../token-utils.js";
 
 /**
  * Gets subroutine data in the script where the cursor resides
  * @param variant
  * @param text
  * @param cursor
+ * @param afterToken
  */
-export function getSubroutineCompletions(variant: GameVariant, text: string | CaosParseResult | unknown, cursor: CaosCursorData): CompletionItem[] {
+export function getSubroutineCompletions(variant: GameVariant, text: string | CaosParseResult | unknown, cursor: CaosCursorData, afterToken: "GSUB"|"GOTO"|"SUBR" = "SUBR"): CompletionItem[] {
     
     const tokens: Nullable<CaosParseResult> = Is.parseResult(text) ? text : (typeof text === 'string' ? parseCaos(variant, text) : null);
     if (tokens == null || tokens.items.length < 1) {
@@ -31,9 +33,17 @@ export function getSubroutineCompletions(variant: GameVariant, text: string | Ca
     
     const line = cursor.line;
     const character = cursor.character;
-    const scriptTokens = scripts.find(s => inRange(s.textRange, line, character))?.items;
+    const scriptTokens = scripts.find(s => {
+        const offset = s.items ? (s.items[0]?.textRange?.start ?? null) : null;
+        const lineOffset = offset?.line ?? 0
+        const charOffset = (offset && lineOffset == line) ? offset.character : 0;
+        inRange(s.textRange, line - lineOffset, character - charOffset);
+    })?.items ?? (scripts.length == 1 ? scripts[0]?.items : []);
     
-    return getSubroutines(scriptTokens ?? [])
+    if (!scriptTokens) {
+        return [];
+    }
+    return getSubroutines(scriptTokens ?? [], tok(afterToken.toLowerCase()))
         .map((t: CaosParserItem) => {
             return <CompletionItem>{
                 label: t.value,

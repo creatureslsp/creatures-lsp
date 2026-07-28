@@ -141,11 +141,16 @@ export async function getCompletionItemsWithParseResult(
     const variant = parseResult.variant;
     const text = parseResult.originalText;
     const commandString = cursor.command?.command?.toLowerCase();
-    
+    if (commandString === "subr" || cursor.beforeText?.toLowerCase() === "subr") {
+        return {
+            isIncomplete: false,
+            items: []
+        };
+    }
     
     // Get subroutine names if any near cursor
-    if (commandString === "gsub") {
-        const subroutines = getSubroutineCompletions(variant, text, cursor);
+    if (commandString === "gsub" || commandString === "goto") {
+        const subroutines = getSubroutineCompletions(variant, text, cursor, "SUBR");
         return {
             isIncomplete: false,
             items: subroutines

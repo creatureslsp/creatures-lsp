@@ -53,7 +53,7 @@ export function getSubroutines(items: CaosParserItem[], afterToken: number = SUB
                 console.error("Item length is invalid. Expected: 4; Actual: " + item.value.length);
                 continue;
             }
-            if (tok(item.value) === afterToken) {
+            if (tok(item.text.toLowerCase()) === afterToken) {
                 subroutineNext = true;
             }
         }
