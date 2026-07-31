@@ -269,7 +269,7 @@
             "default": null,
             "description": "The number of spaces to use for continuation indents. i.e. When a newline exists between arguements in a command"
           },
-          "caosScript.formatting.spaceBetweenByteStingBrackets": {
+          "caosScript.formatting.spaceBetweenByteStringBrackets": {
             "type": "boolean",
             "scope": "workspace",
             "default": false,
