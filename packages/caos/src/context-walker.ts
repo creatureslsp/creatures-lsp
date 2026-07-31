@@ -22,7 +22,8 @@ import type {
     IntVal,
     TokenVal,
     Comment,
-    CaosParserItem
+    CaosParserItem,
+    ListBrace
 } from "@creatureslsp/caos-kt/caos-core";
 
 export declare interface ICaosContextListener {
@@ -61,8 +62,9 @@ export declare interface ICaosContextListener {
     onComment(token: Comment): void
     
     onCaos2Comment(token: Caos2Comment): void;
+    
+    onListBrace?: (token: ListBrace) => void;
 }
-
 
 import {
     BINARY_PARSER_TYPE,
@@ -78,6 +80,7 @@ import {
     FLOAT_PARSER_TYPE,
     INDEXED_VAR_PARSER_TYPE,
     INT_PARSER_TYPE,
+    LIST_BRACE_TYPE,
     PICT_DIMENSION_PARSER_TYPE,
     PLACEHOLDER_TYPE,
     QUOTE_STRING_PARSER_TYPE,
@@ -103,6 +106,10 @@ export function walkCaosParseResult(result: CaosParseResult, listener: ICaosCont
     //     return (aRange?.start.line ?? 0) - (bRange?.start.line ?? 0);
     // });
     // for (let item of items) {
+    
+    const onListBrace = listener.onListBrace ? (item: ListBrace) => {
+        listener.onListBrace?.call(listener, item);
+    } : () => {}
     for (let item of result.items) {
         switch (item.typeToken) {
             case INT_PARSER_TYPE:
@@ -155,6 +162,9 @@ export function walkCaosParseResult(result: CaosParseResult, listener: ICaosCont
                 continue;
             case CAOS2_COMMENT_TYPE:
                 listener.onCaos2Comment(<Caos2Comment>item);
+                continue;
+            case LIST_BRACE_TYPE:
+                onListBrace(<ListBrace>item);
                 continue;
             default:
                 throw Error("Failed to route item " + tok(item.typeToken) + '(' + item.value + ')');
@@ -228,6 +238,9 @@ export class CaosContextListenerBase implements ICaosContextListener {
     }
     
     onCaos2Comment(_token: CaosParserItem) {
+    }
+    
+    onListBrace(_token: ListBrace): void {
     }
     
 }

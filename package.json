@@ -274,6 +274,39 @@
             "scope": "workspace",
             "default": false,
             "description": "Place a space between the numbers and the brackets in a byte-string. i.e. `[ 1 2 3 ]` vs `[1 2 3]`"
+          },
+          "caosScript.formatting.listAlignment": {
+            "type": "string",
+            "scope": "workspace",
+            "default": null,
+            "enum": [
+              "open-brace",
+              "rvalue",
+              "command"
+            ],
+            "enumDescriptions": [
+              "Align closing brace with opening",
+              "Align closing brace with immediate rvalue parent",
+              "Align closing brace with topmost command parent"
+            ],
+            "description": "Brace alignment in multiline lists"
+          },
+
+          "caosScript.formatting.listBraceSpacing": {
+            "type": "string",
+            "scope": "workspace",
+            "default": null,
+            "enum": [
+              "space-between",
+              "trim-space",
+              "keep"
+            ],
+            "enumDescriptions": [
+              "Add space between braces and list items: `{ va00 }`",
+              "Trim any spaces between the braces and the list items: `{va00}`",
+              "Keep existing spacing: `{    va00}"
+            ],
+            "description": "Add/Remove or keep spaces between braces and list items"
           }
         }
       },

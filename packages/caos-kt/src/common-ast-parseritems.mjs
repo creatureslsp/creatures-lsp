@@ -9,10 +9,10 @@ import { TextWithRange2q8nc6zoqlr5f as TextWithRange } from './common-ast-struct
 //region block: pre-declaration
 class ParseTreeItem {}
 function get_parserIndexStart() {
-  return this.d1e().g1e();
+  return this.g1e().j1e();
 }
 function get_parserIndexEnd() {
-  return this.d1e().j1e();
+  return this.g1e().m1e();
 }
 class WhitespaceParseTreeItem {}
 class NewLineParseTreeItem {}

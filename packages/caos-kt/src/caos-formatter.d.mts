@@ -23,31 +23,52 @@ export type CaosFormatterOptions = {
 
     readonly insertSpaces: boolean;
 
-    readonly trimTrailingWhitespace: Nullable<boolean>;
+    readonly trimTrailingWhitespace?: Nullable<boolean>;
 
-    readonly insertFinalNewline: Nullable<boolean>;
+    readonly insertFinalNewline?: Nullable<boolean>;
 
-    readonly trimFinalNewlines: Nullable<boolean>;
+    readonly trimFinalNewlines?: Nullable<boolean>;
 
     /**
      * Allow multiple commands on a single line
      */
-    readonly keepSameLine: Nullable<boolean>;
+    readonly keepSameLine?: Nullable<boolean>;
 
-    readonly maxBlankLines: Nullable<number>;
+    readonly maxBlankLines?: Nullable<number>;
 
-    readonly indentComments: Nullable<boolean>;
+    readonly indentComments?: Nullable<boolean>;
 
-    readonly continuationIndent: Nullable<number>;
+    readonly continuationIndent?: Nullable<number>;
 
-    readonly spaceBetweenByteStingBrackets: Nullable<boolean>;
+    readonly spaceBetweenByteStingBrackets?: Nullable<boolean>;
 
-    readonly minBlankLines: Nullable<number>;
+    readonly minBlankLines?: Nullable<number>;
 
-    readonly newLineChar: Nullable<string>;
+    readonly newLineChar?: Nullable<string>;
 
-    readonly forceMinBlankLinesAfterComments: Nullable<boolean>;
+    readonly forceMinBlankLinesAfterComments?: Nullable<boolean>;
+
+    readonly listBraceSpacing?: Nullable<ListBraceSpacing>;
+
+    readonly listAlignment?: Nullable<ListAlignment>
 }
+
+
+/**
+ * How to align the list.
+ *  - open-brace aligns the open and close brace when the closing brace is on its own line
+ *  - rvalue - aligns the closing brace with the start token of its parent rvalue command
+ *  - command - aligns the closing brace with the parent most command
+ */
+export type ListAlignment = "open-brace" | "rvalue" | "command";
+
+/**
+ * Spacing between braces and items in list
+ * - space-between - adds a space between the braces and first and last item in list: `{ va00 va01 }`
+ * - trim-space - removes spacing between the braces `{va00 va01}`
+ * - keep - keep whatever spaces existing between the braces and items: `{    va00 va01}`
+ */
+export type ListBraceSpacing = "space-between" | "trim-space" | "keep";
 
 export type CaosEditReason = "DANGLING_AUTO_COMPLETE"
     | "FORMAT_CAOS2"

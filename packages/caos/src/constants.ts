@@ -53,3 +53,4 @@ export const ERROR_PARSER_TYPE = tok('errr');
 export const PLACEHOLDER_TYPE = tok('plch');
 export const COMMENT_TYPE = tok('****');
 export const CAOS2_COMMENT_TYPE = tok('*###');
+export const LIST_BRACE_TYPE = tok("_{}_");

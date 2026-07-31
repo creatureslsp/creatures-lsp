@@ -59,7 +59,7 @@ var imul = Math.imul;
 //endregion
 //region block: pre-declaration
 class Companion {
-  k1e() {
+  n1e() {
     return $serializer_getInstance();
   }
 }
@@ -67,50 +67,50 @@ class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.ast.structs.HasRangeImpl', this, 1);
-    tmp0_serialDesc.w13('textRange', false);
-    this.l1e_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('textRange', false);
+    this.o1e_1 = tmp0_serialDesc;
   }
-  m1e(encoder, value) {
-    var tmp0_desc = this.l1e_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.tx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.n1e_1);
-    tmp1_output.cw(tmp0_desc);
+  p1e(encoder, value) {
+    var tmp0_desc = this.o1e_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    tmp1_output.wx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.q1e_1);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.m1e(encoder, value instanceof HasRangeImpl ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.p1e(encoder, value instanceof HasRangeImpl ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.l1e_1;
+  qr(decoder) {
+    var tmp0_desc = this.o1e_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = null;
-    var tmp5_input = decoder.bw(tmp0_desc);
-    if (tmp5_input.sw()) {
-      tmp4_local0 = tmp5_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
+    var tmp5_input = decoder.ew(tmp0_desc);
+    if (tmp5_input.vw()) {
+      tmp4_local0 = tmp5_input.qw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp5_input.tw(tmp0_desc);
+        tmp2_index = tmp5_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp5_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
+            tmp4_local0 = tmp5_input.qw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp5_input.cw(tmp0_desc);
-    return HasRangeImpl.o1e(tmp3_bitMask0, tmp4_local0, null);
+    tmp5_input.fw(tmp0_desc);
+    return HasRangeImpl.r1e(tmp3_bitMask0, tmp4_local0, null);
   }
-  lr() {
-    return this.l1e_1;
+  or() {
+    return this.o1e_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -120,38 +120,38 @@ class $serializer {
 class HasRange {}
 class HasRangeImpl {
   constructor(textRange) {
-    this.n1e_1 = textRange;
+    this.q1e_1 = textRange;
   }
-  d1e() {
-    return this.n1e_1;
+  g1e() {
+    return this.q1e_1;
   }
   toString() {
-    return 'HasRangeImpl(textRange=' + toString(this.n1e_1) + ')';
+    return 'HasRangeImpl(textRange=' + toString(this.q1e_1) + ')';
   }
   hashCode() {
-    return hashCode(this.n1e_1);
+    return hashCode(this.q1e_1);
   }
   equals(other) {
     if (this === other)
       return true;
     if (!(other instanceof HasRangeImpl))
       return false;
-    if (!equals(this.n1e_1, other.n1e_1))
+    if (!equals(this.q1e_1, other.q1e_1))
       return false;
     return true;
   }
-  static o1e(seen0, textRange, serializationConstructorMarker) {
+  static r1e(seen0, textRange, serializationConstructorMarker) {
     if (!(1 === (1 & seen0))) {
-      throwMissingFieldException(seen0, 1, $serializer_getInstance().l1e_1);
+      throwMissingFieldException(seen0, 1, $serializer_getInstance().o1e_1);
     }
     var $this = createThis(this);
-    $this.n1e_1 = textRange;
+    $this.q1e_1 = textRange;
     return $this;
   }
 }
 class Position {}
 class Companion_0 {
-  k1e() {
+  n1e() {
     return $serializer_getInstance_0();
   }
 }
@@ -159,59 +159,59 @@ class $serializer_0 {
   constructor() {
     $serializer_instance_0 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.ast.structs.PositionImpl', this, 2);
-    tmp0_serialDesc.w13('line', false);
-    tmp0_serialDesc.w13('character', false);
-    this.p1e_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('line', false);
+    tmp0_serialDesc.z13('character', false);
+    this.s1e_1 = tmp0_serialDesc;
   }
-  q1e(encoder, value) {
-    var tmp0_desc = this.p1e_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.mx(tmp0_desc, 0, value.r1e_1);
-    tmp1_output.mx(tmp0_desc, 1, value.s1e_1);
-    tmp1_output.cw(tmp0_desc);
+  t1e(encoder, value) {
+    var tmp0_desc = this.s1e_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    tmp1_output.px(tmp0_desc, 0, value.u1e_1);
+    tmp1_output.px(tmp0_desc, 1, value.v1e_1);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.q1e(encoder, value instanceof PositionImpl ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.t1e(encoder, value instanceof PositionImpl ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.p1e_1;
+  qr(decoder) {
+    var tmp0_desc = this.s1e_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = 0;
     var tmp5_local1 = 0;
-    var tmp6_input = decoder.bw(tmp0_desc);
-    if (tmp6_input.sw()) {
-      tmp4_local0 = tmp6_input.gw(tmp0_desc, 0);
+    var tmp6_input = decoder.ew(tmp0_desc);
+    if (tmp6_input.vw()) {
+      tmp4_local0 = tmp6_input.jw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp6_input.gw(tmp0_desc, 1);
+      tmp5_local1 = tmp6_input.jw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp6_input.tw(tmp0_desc);
+        tmp2_index = tmp6_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp6_input.gw(tmp0_desc, 0);
+            tmp4_local0 = tmp6_input.jw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp6_input.gw(tmp0_desc, 1);
+            tmp5_local1 = tmp6_input.jw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp6_input.cw(tmp0_desc);
-    return PositionImpl.t1e(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    tmp6_input.fw(tmp0_desc);
+    return PositionImpl.w1e(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
-  lr() {
-    return this.p1e_1;
+  or() {
+    return this.s1e_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -220,21 +220,21 @@ class $serializer_0 {
 }
 class PositionImpl {
   constructor(line, character) {
-    this.r1e_1 = line;
-    this.s1e_1 = character;
+    this.u1e_1 = line;
+    this.v1e_1 = character;
   }
-  e1e() {
-    return this.r1e_1;
+  h1e() {
+    return this.u1e_1;
   }
-  i1e() {
-    return this.s1e_1;
+  l1e() {
+    return this.v1e_1;
   }
   toString() {
-    return 'PositionImpl(line=' + this.r1e_1 + ', character=' + this.s1e_1 + ')';
+    return 'PositionImpl(line=' + this.u1e_1 + ', character=' + this.v1e_1 + ')';
   }
   hashCode() {
-    var result = this.r1e_1;
-    result = imul(result, 31) + this.s1e_1 | 0;
+    var result = this.u1e_1;
+    result = imul(result, 31) + this.v1e_1 | 0;
     return result;
   }
   equals(other) {
@@ -242,19 +242,19 @@ class PositionImpl {
       return true;
     if (!(other instanceof PositionImpl))
       return false;
-    if (!(this.r1e_1 === other.r1e_1))
+    if (!(this.u1e_1 === other.u1e_1))
       return false;
-    if (!(this.s1e_1 === other.s1e_1))
+    if (!(this.v1e_1 === other.v1e_1))
       return false;
     return true;
   }
-  static t1e(seen0, line, character, serializationConstructorMarker) {
+  static w1e(seen0, line, character, serializationConstructorMarker) {
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance_0().p1e_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance_0().s1e_1);
     }
     var $this = createThis(this);
-    $this.r1e_1 = line;
-    $this.s1e_1 = character;
+    $this.u1e_1 = line;
+    $this.v1e_1 = character;
     return $this;
   }
 }
@@ -264,59 +264,59 @@ class $serializer_1 {
   constructor() {
     $serializer_instance_1 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.ast.structs.RangeImpl', this, 2);
-    tmp0_serialDesc.w13('start', false);
-    tmp0_serialDesc.w13('end', false);
-    this.u1e_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('start', false);
+    tmp0_serialDesc.z13('end', false);
+    this.x1e_1 = tmp0_serialDesc;
   }
-  v1e(encoder, value) {
-    var tmp0_desc = this.u1e_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.tx(tmp0_desc, 0, PositionSerializer_getInstance(), value.w1e_1);
-    tmp1_output.tx(tmp0_desc, 1, PositionSerializer_getInstance(), value.x1e_1);
-    tmp1_output.cw(tmp0_desc);
+  y1e(encoder, value) {
+    var tmp0_desc = this.x1e_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    tmp1_output.wx(tmp0_desc, 0, PositionSerializer_getInstance(), value.z1e_1);
+    tmp1_output.wx(tmp0_desc, 1, PositionSerializer_getInstance(), value.a1f_1);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.v1e(encoder, value instanceof RangeImpl ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.y1e(encoder, value instanceof RangeImpl ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.u1e_1;
+  qr(decoder) {
+    var tmp0_desc = this.x1e_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = null;
     var tmp5_local1 = null;
-    var tmp6_input = decoder.bw(tmp0_desc);
-    if (tmp6_input.sw()) {
-      tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
+    var tmp6_input = decoder.ew(tmp0_desc);
+    if (tmp6_input.vw()) {
+      tmp4_local0 = tmp6_input.qw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp6_input.nw(tmp0_desc, 1, PositionSerializer_getInstance(), tmp5_local1);
+      tmp5_local1 = tmp6_input.qw(tmp0_desc, 1, PositionSerializer_getInstance(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp6_input.tw(tmp0_desc);
+        tmp2_index = tmp6_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
+            tmp4_local0 = tmp6_input.qw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp6_input.nw(tmp0_desc, 1, PositionSerializer_getInstance(), tmp5_local1);
+            tmp5_local1 = tmp6_input.qw(tmp0_desc, 1, PositionSerializer_getInstance(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp6_input.cw(tmp0_desc);
-    return RangeImpl.y1e(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    tmp6_input.fw(tmp0_desc);
+    return RangeImpl.b1f(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
-  lr() {
-    return this.u1e_1;
+  or() {
+    return this.x1e_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -325,21 +325,21 @@ class $serializer_1 {
 }
 class RangeImpl {
   constructor(start, end) {
-    this.w1e_1 = start;
-    this.x1e_1 = end;
+    this.z1e_1 = start;
+    this.a1f_1 = end;
   }
-  h1() {
-    return this.w1e_1;
+  o1() {
+    return this.z1e_1;
   }
-  f1e() {
-    return this.x1e_1;
+  i1e() {
+    return this.a1f_1;
   }
   toString() {
-    return 'RangeImpl(start=' + toString(this.w1e_1) + ', end=' + toString(this.x1e_1) + ')';
+    return 'RangeImpl(start=' + toString(this.z1e_1) + ', end=' + toString(this.a1f_1) + ')';
   }
   hashCode() {
-    var result = hashCode(this.w1e_1);
-    result = imul(result, 31) + hashCode(this.x1e_1) | 0;
+    var result = hashCode(this.z1e_1);
+    result = imul(result, 31) + hashCode(this.a1f_1) | 0;
     return result;
   }
   equals(other) {
@@ -347,25 +347,25 @@ class RangeImpl {
       return true;
     if (!(other instanceof RangeImpl))
       return false;
-    if (!equals(this.w1e_1, other.w1e_1))
+    if (!equals(this.z1e_1, other.z1e_1))
       return false;
-    if (!equals(this.x1e_1, other.x1e_1))
+    if (!equals(this.a1f_1, other.a1f_1))
       return false;
     return true;
   }
-  static y1e(seen0, start, end, serializationConstructorMarker) {
+  static b1f(seen0, start, end, serializationConstructorMarker) {
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance_1().u1e_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance_1().x1e_1);
     }
     var $this = createThis(this);
-    $this.w1e_1 = start;
-    $this.x1e_1 = end;
+    $this.z1e_1 = start;
+    $this.a1f_1 = end;
     return $this;
   }
 }
 class RangeWithIndex {}
 class Companion_2 {
-  k1e() {
+  n1e() {
     return $serializer_getInstance_2();
   }
 }
@@ -373,30 +373,30 @@ class $serializer_2 {
   constructor() {
     $serializer_instance_2 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.ast.structs.RangeWithIndexImpl', this, 5);
-    tmp0_serialDesc.w13('start', false);
-    tmp0_serialDesc.w13('end', false);
-    tmp0_serialDesc.w13('startIndex', false);
-    tmp0_serialDesc.w13('endIndex', false);
-    tmp0_serialDesc.w13('parserIndex', true);
-    this.z1e_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('start', false);
+    tmp0_serialDesc.z13('end', false);
+    tmp0_serialDesc.z13('startIndex', false);
+    tmp0_serialDesc.z13('endIndex', false);
+    tmp0_serialDesc.z13('parserIndex', true);
+    this.c1f_1 = tmp0_serialDesc;
   }
-  a1f(encoder, value) {
-    var tmp0_desc = this.z1e_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.tx(tmp0_desc, 0, PositionSerializer_getInstance(), value.b1f_1);
-    tmp1_output.tx(tmp0_desc, 1, PositionSerializer_getInstance(), value.c1f_1);
-    tmp1_output.mx(tmp0_desc, 2, value.d1f_1);
-    tmp1_output.mx(tmp0_desc, 3, value.e1f_1);
-    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.f1f_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 4, IntSerializer_getInstance(), value.f1f_1);
+  d1f(encoder, value) {
+    var tmp0_desc = this.c1f_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    tmp1_output.wx(tmp0_desc, 0, PositionSerializer_getInstance(), value.e1f_1);
+    tmp1_output.wx(tmp0_desc, 1, PositionSerializer_getInstance(), value.f1f_1);
+    tmp1_output.px(tmp0_desc, 2, value.g1f_1);
+    tmp1_output.px(tmp0_desc, 3, value.h1f_1);
+    if (tmp1_output.cy(tmp0_desc, 4) ? true : !(value.i1f_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 4, IntSerializer_getInstance(), value.i1f_1);
     }
-    tmp1_output.cw(tmp0_desc);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.a1f(encoder, value instanceof RangeWithIndexImpl ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.d1f(encoder, value instanceof RangeWithIndexImpl ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.z1e_1;
+  qr(decoder) {
+    var tmp0_desc = this.c1f_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -405,56 +405,56 @@ class $serializer_2 {
     var tmp6_local2 = 0;
     var tmp7_local3 = 0;
     var tmp8_local4 = null;
-    var tmp9_input = decoder.bw(tmp0_desc);
-    if (tmp9_input.sw()) {
-      tmp4_local0 = tmp9_input.nw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
+    var tmp9_input = decoder.ew(tmp0_desc);
+    if (tmp9_input.vw()) {
+      tmp4_local0 = tmp9_input.qw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp9_input.nw(tmp0_desc, 1, PositionSerializer_getInstance(), tmp5_local1);
+      tmp5_local1 = tmp9_input.qw(tmp0_desc, 1, PositionSerializer_getInstance(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp9_input.gw(tmp0_desc, 2);
+      tmp6_local2 = tmp9_input.jw(tmp0_desc, 2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp9_input.gw(tmp0_desc, 3);
+      tmp7_local3 = tmp9_input.jw(tmp0_desc, 3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp9_input.pw(tmp0_desc, 4, IntSerializer_getInstance(), tmp8_local4);
+      tmp8_local4 = tmp9_input.sw(tmp0_desc, 4, IntSerializer_getInstance(), tmp8_local4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp9_input.tw(tmp0_desc);
+        tmp2_index = tmp9_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp9_input.nw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
+            tmp4_local0 = tmp9_input.qw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp9_input.nw(tmp0_desc, 1, PositionSerializer_getInstance(), tmp5_local1);
+            tmp5_local1 = tmp9_input.qw(tmp0_desc, 1, PositionSerializer_getInstance(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp9_input.gw(tmp0_desc, 2);
+            tmp6_local2 = tmp9_input.jw(tmp0_desc, 2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp9_input.gw(tmp0_desc, 3);
+            tmp7_local3 = tmp9_input.jw(tmp0_desc, 3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp9_input.pw(tmp0_desc, 4, IntSerializer_getInstance(), tmp8_local4);
+            tmp8_local4 = tmp9_input.sw(tmp0_desc, 4, IntSerializer_getInstance(), tmp8_local4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp9_input.cw(tmp0_desc);
-    return RangeWithIndexImpl.g1f(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, null);
+    tmp9_input.fw(tmp0_desc);
+    return RangeWithIndexImpl.j1f(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, null);
   }
-  lr() {
-    return this.z1e_1;
+  or() {
+    return this.c1f_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -464,48 +464,48 @@ class $serializer_2 {
 class RangeWithIndexImpl {
   constructor(start, end, startIndex, endIndex, parserIndex) {
     parserIndex = parserIndex === VOID ? null : parserIndex;
-    this.b1f_1 = start;
-    this.c1f_1 = end;
-    this.d1f_1 = startIndex;
-    this.e1f_1 = endIndex;
-    this.f1f_1 = parserIndex;
+    this.e1f_1 = start;
+    this.f1f_1 = end;
+    this.g1f_1 = startIndex;
+    this.h1f_1 = endIndex;
+    this.i1f_1 = parserIndex;
     assertIsValid(this);
   }
-  h1() {
-    return this.b1f_1;
-  }
-  f1e() {
-    return this.c1f_1;
-  }
-  g1e() {
-    return this.d1f_1;
-  }
-  j1e() {
+  o1() {
     return this.e1f_1;
   }
-  h1e() {
+  i1e() {
     return this.f1f_1;
   }
-  h1f(start, end, startIndex, endIndex, parserIndex) {
+  j1e() {
+    return this.g1f_1;
+  }
+  m1e() {
+    return this.h1f_1;
+  }
+  k1e() {
+    return this.i1f_1;
+  }
+  k1f(start, end, startIndex, endIndex, parserIndex) {
     return new RangeWithIndexImpl(start, end, startIndex, endIndex, parserIndex);
   }
-  i1f(start, end, startIndex, endIndex, parserIndex, $super) {
-    start = start === VOID ? this.b1f_1 : start;
-    end = end === VOID ? this.c1f_1 : end;
-    startIndex = startIndex === VOID ? this.d1f_1 : startIndex;
-    endIndex = endIndex === VOID ? this.e1f_1 : endIndex;
-    parserIndex = parserIndex === VOID ? this.f1f_1 : parserIndex;
-    return $super === VOID ? this.h1f(start, end, startIndex, endIndex, parserIndex) : $super.h1f.call(this, start, end, startIndex, endIndex, parserIndex);
+  l1f(start, end, startIndex, endIndex, parserIndex, $super) {
+    start = start === VOID ? this.e1f_1 : start;
+    end = end === VOID ? this.f1f_1 : end;
+    startIndex = startIndex === VOID ? this.g1f_1 : startIndex;
+    endIndex = endIndex === VOID ? this.h1f_1 : endIndex;
+    parserIndex = parserIndex === VOID ? this.i1f_1 : parserIndex;
+    return $super === VOID ? this.k1f(start, end, startIndex, endIndex, parserIndex) : $super.k1f.call(this, start, end, startIndex, endIndex, parserIndex);
   }
   toString() {
-    return 'RangeWithIndexImpl(start=' + toString(this.b1f_1) + ', end=' + toString(this.c1f_1) + ', startIndex=' + this.d1f_1 + ', endIndex=' + this.e1f_1 + ', parserIndex=' + this.f1f_1 + ')';
+    return 'RangeWithIndexImpl(start=' + toString(this.e1f_1) + ', end=' + toString(this.f1f_1) + ', startIndex=' + this.g1f_1 + ', endIndex=' + this.h1f_1 + ', parserIndex=' + this.i1f_1 + ')';
   }
   hashCode() {
-    var result = hashCode(this.b1f_1);
-    result = imul(result, 31) + hashCode(this.c1f_1) | 0;
-    result = imul(result, 31) + this.d1f_1 | 0;
-    result = imul(result, 31) + this.e1f_1 | 0;
-    result = imul(result, 31) + (this.f1f_1 == null ? 0 : this.f1f_1) | 0;
+    var result = hashCode(this.e1f_1);
+    result = imul(result, 31) + hashCode(this.f1f_1) | 0;
+    result = imul(result, 31) + this.g1f_1 | 0;
+    result = imul(result, 31) + this.h1f_1 | 0;
+    result = imul(result, 31) + (this.i1f_1 == null ? 0 : this.i1f_1) | 0;
     return result;
   }
   equals(other) {
@@ -513,31 +513,31 @@ class RangeWithIndexImpl {
       return true;
     if (!(other instanceof RangeWithIndexImpl))
       return false;
-    if (!equals(this.b1f_1, other.b1f_1))
+    if (!equals(this.e1f_1, other.e1f_1))
       return false;
-    if (!equals(this.c1f_1, other.c1f_1))
+    if (!equals(this.f1f_1, other.f1f_1))
       return false;
-    if (!(this.d1f_1 === other.d1f_1))
+    if (!(this.g1f_1 === other.g1f_1))
       return false;
-    if (!(this.e1f_1 === other.e1f_1))
+    if (!(this.h1f_1 === other.h1f_1))
       return false;
-    if (!(this.f1f_1 == other.f1f_1))
+    if (!(this.i1f_1 == other.i1f_1))
       return false;
     return true;
   }
-  static g1f(seen0, start, end, startIndex, endIndex, parserIndex, serializationConstructorMarker) {
+  static j1f(seen0, start, end, startIndex, endIndex, parserIndex, serializationConstructorMarker) {
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance_2().z1e_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance_2().c1f_1);
     }
     var $this = createThis(this);
-    $this.b1f_1 = start;
-    $this.c1f_1 = end;
-    $this.d1f_1 = startIndex;
-    $this.e1f_1 = endIndex;
+    $this.e1f_1 = start;
+    $this.f1f_1 = end;
+    $this.g1f_1 = startIndex;
+    $this.h1f_1 = endIndex;
     if (0 === (seen0 & 16))
-      $this.f1f_1 = null;
+      $this.i1f_1 = null;
     else
-      $this.f1f_1 = parserIndex;
+      $this.i1f_1 = parserIndex;
     assertIsValid($this);
     return $this;
   }
@@ -546,23 +546,23 @@ class HasText {}
 class TextWithRange {}
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.k1f_1 = function_0;
+    this.n1f_1 = function_0;
   }
-  wg(a, b) {
-    return this.k1f_1(a, b);
+  zg(a, b) {
+    return this.n1f_1(a, b);
   }
   compare(a, b) {
-    return this.wg(a, b);
+    return this.zg(a, b);
   }
-  f4() {
-    return this.k1f_1;
+  m4() {
+    return this.n1f_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.f4(), other.f4());
+        tmp_0 = equals(this.m4(), other.m4());
       } else {
         tmp_0 = false;
       }
@@ -573,11 +573,11 @@ class sam$kotlin_Comparator$0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.f4());
+    return hashCode(this.m4());
   }
 }
 class Companion_3 {
-  k1e() {
+  n1e() {
     return $serializer_getInstance_3();
   }
 }
@@ -585,59 +585,59 @@ class $serializer_3 {
   constructor() {
     $serializer_instance_3 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.ast.structs.TextWithRangeImpl', this, 2);
-    tmp0_serialDesc.w13('textRange', false);
-    tmp0_serialDesc.w13('text', false);
-    this.l1f_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('textRange', false);
+    tmp0_serialDesc.z13('text', false);
+    this.o1f_1 = tmp0_serialDesc;
   }
-  m1f(encoder, value) {
-    var tmp0_desc = this.l1f_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.tx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.n1f_1);
-    tmp1_output.rx(tmp0_desc, 1, value.o1f_1);
-    tmp1_output.cw(tmp0_desc);
+  p1f(encoder, value) {
+    var tmp0_desc = this.o1f_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    tmp1_output.wx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.q1f_1);
+    tmp1_output.ux(tmp0_desc, 1, value.r1f_1);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.m1f(encoder, value instanceof TextWithRangeImpl ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.p1f(encoder, value instanceof TextWithRangeImpl ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.l1f_1;
+  qr(decoder) {
+    var tmp0_desc = this.o1f_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = null;
     var tmp5_local1 = null;
-    var tmp6_input = decoder.bw(tmp0_desc);
-    if (tmp6_input.sw()) {
-      tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
+    var tmp6_input = decoder.ew(tmp0_desc);
+    if (tmp6_input.vw()) {
+      tmp4_local0 = tmp6_input.qw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp6_input.lw(tmp0_desc, 1);
+      tmp5_local1 = tmp6_input.ow(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp6_input.tw(tmp0_desc);
+        tmp2_index = tmp6_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
+            tmp4_local0 = tmp6_input.qw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp6_input.lw(tmp0_desc, 1);
+            tmp5_local1 = tmp6_input.ow(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp6_input.cw(tmp0_desc);
-    return TextWithRangeImpl.p1f(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    tmp6_input.fw(tmp0_desc);
+    return TextWithRangeImpl.s1f(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
-  lr() {
-    return this.l1f_1;
+  or() {
+    return this.o1f_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -646,21 +646,21 @@ class $serializer_3 {
 }
 class TextWithRangeImpl {
   constructor(textRange, text) {
-    this.n1f_1 = textRange;
-    this.o1f_1 = text;
+    this.q1f_1 = textRange;
+    this.r1f_1 = text;
   }
-  d1e() {
-    return this.n1f_1;
+  g1e() {
+    return this.q1f_1;
   }
-  j1f() {
-    return this.o1f_1;
+  m1f() {
+    return this.r1f_1;
   }
   toString() {
-    return 'TextWithRangeImpl(textRange=' + toString(this.n1f_1) + ', text=' + this.o1f_1 + ')';
+    return 'TextWithRangeImpl(textRange=' + toString(this.q1f_1) + ', text=' + this.r1f_1 + ')';
   }
   hashCode() {
-    var result = hashCode(this.n1f_1);
-    result = imul(result, 31) + getStringHashCode(this.o1f_1) | 0;
+    var result = hashCode(this.q1f_1);
+    result = imul(result, 31) + getStringHashCode(this.r1f_1) | 0;
     return result;
   }
   equals(other) {
@@ -668,19 +668,19 @@ class TextWithRangeImpl {
       return true;
     if (!(other instanceof TextWithRangeImpl))
       return false;
-    if (!equals(this.n1f_1, other.n1f_1))
+    if (!equals(this.q1f_1, other.q1f_1))
       return false;
-    if (!(this.o1f_1 === other.o1f_1))
+    if (!(this.r1f_1 === other.r1f_1))
       return false;
     return true;
   }
-  static p1f(seen0, textRange, text, serializationConstructorMarker) {
+  static s1f(seen0, textRange, text, serializationConstructorMarker) {
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance_3().l1f_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance_3().o1f_1);
     }
     var $this = createThis(this);
-    $this.n1f_1 = textRange;
-    $this.o1f_1 = text;
+    $this.q1f_1 = textRange;
+    $this.r1f_1 = text;
     return $this;
   }
 }
@@ -688,23 +688,23 @@ class HasRangeSerializer {
   constructor() {
     HasRangeSerializer_instance = this;
     var tmp = this;
-    tmp.t1f_1 = lazy(HasRangeSerializer$descriptor$delegate$lambda);
+    tmp.w1f_1 = lazy(HasRangeSerializer$descriptor$delegate$lambda);
   }
-  lr() {
-    var tmp0 = this.t1f_1;
+  or() {
+    var tmp0 = this.w1f_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, HasRangeSerializer$_get_descriptor_$ref_mc9kd6(), null);
-    return tmp0.k3();
+    return tmp0.r3();
   }
-  nr(decoder) {
-    var obj = decoder.bw(this.lr());
+  qr(decoder) {
+    var obj = decoder.ew(this.or());
     var textRange = null;
     $l$loop: while (true) {
-      var index = obj.tw(this.lr());
+      var index = obj.ww(this.or());
       switch (index) {
         case 0:
-          textRange = obj.ow(this.lr(), index, RangeWithIndexSerializer_getInstance());
+          textRange = obj.rw(this.or(), index, RangeWithIndexSerializer_getInstance());
           break;
         case -1:
           break $l$loop;
@@ -712,55 +712,55 @@ class HasRangeSerializer {
           // Inline function 'kotlin.error' call
 
           var message = 'Unexpected index: ' + index;
-          throw IllegalStateException.l4(toString(message));
+          throw IllegalStateException.s4(toString(message));
       }
     }
-    obj.cw(this.lr());
+    obj.fw(this.or());
     if (textRange == null) {
-      throw SerializationException.dt('Missing textRange in HasRange');
+      throw SerializationException.gt('Missing textRange in HasRange');
     }
     return new HasRangeImpl(textRange);
   }
-  u1f(encoder, value) {
-    var obj = encoder.bw(this.lr());
-    obj.tx(this.lr(), 0, RangeSerializer_getInstance(), value.d1e());
-    obj.cw(this.lr());
+  x1f(encoder, value) {
+    var obj = encoder.ew(this.or());
+    obj.wx(this.or(), 0, RangeSerializer_getInstance(), value.g1e());
+    obj.fw(this.or());
   }
-  mr(encoder, value) {
-    return this.u1f(encoder, (!(value == null) ? isInterface(value, HasRange) : false) ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.x1f(encoder, (!(value == null) ? isInterface(value, HasRange) : false) ? value : THROW_CCE());
   }
 }
 class PositionSerializer {
   constructor() {
     PositionSerializer_instance = this;
     var tmp = this;
-    tmp.v1f_1 = lazy(PositionSerializer$descriptor$delegate$lambda);
+    tmp.y1f_1 = lazy(PositionSerializer$descriptor$delegate$lambda);
   }
-  lr() {
-    var tmp0 = this.v1f_1;
+  or() {
+    var tmp0 = this.y1f_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, PositionSerializer$_get_descriptor_$ref_xy4f64(), null);
-    return tmp0.k3();
+    return tmp0.r3();
   }
-  nr(decoder) {
-    var structure = decoder.bw(this.lr());
-    var index = structure.tw(this.lr());
+  qr(decoder) {
+    var structure = decoder.ew(this.or());
+    var index = structure.ww(this.or());
     var line = null;
     var character = null;
     while (!(index === -1)) {
       var tmp0_subject = index;
       if (tmp0_subject === 0)
-        line = structure.gw(this.lr(), index);
+        line = structure.jw(this.or(), index);
       else if (tmp0_subject === 1)
-        character = structure.gw(this.lr(), index);
-      index = structure.tw(this.lr());
+        character = structure.jw(this.or(), index);
+      index = structure.ww(this.or());
     }
-    structure.cw(this.lr());
+    structure.fw(this.or());
     var tmp1_elvis_lhs = line;
     var tmp;
     if (tmp1_elvis_lhs == null) {
-      throw SerializationException.dt('Position is missing element: "line"');
+      throw SerializationException.gt('Position is missing element: "line"');
     } else {
       tmp = tmp1_elvis_lhs;
     }
@@ -768,40 +768,40 @@ class PositionSerializer {
     var tmp2_elvis_lhs = character;
     var tmp_1;
     if (tmp2_elvis_lhs == null) {
-      throw SerializationException.dt('Position is missing element: "character"');
+      throw SerializationException.gt('Position is missing element: "character"');
     } else {
       tmp_1 = tmp2_elvis_lhs;
     }
     return new PositionImpl(tmp_0, tmp_1);
   }
-  w1f(encoder, value) {
-    var structure = encoder.bw(this.lr());
-    structure.mx(this.lr(), 0, value.e1e());
-    structure.mx(this.lr(), 1, value.i1e());
-    structure.cw(this.lr());
+  z1f(encoder, value) {
+    var structure = encoder.ew(this.or());
+    structure.px(this.or(), 0, value.h1e());
+    structure.px(this.or(), 1, value.l1e());
+    structure.fw(this.or());
   }
-  mr(encoder, value) {
-    return this.w1f(encoder, (!(value == null) ? isInterface(value, Position) : false) ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.z1f(encoder, (!(value == null) ? isInterface(value, Position) : false) ? value : THROW_CCE());
   }
 }
 class RangeSerializer {
   constructor() {
     RangeSerializer_instance = this;
-    this.q1f_1 = 'RangeWithIndex';
-    this.r1f_1 = 'Range';
+    this.t1f_1 = 'RangeWithIndex';
+    this.u1f_1 = 'Range';
     var tmp = this;
-    tmp.s1f_1 = lazy(RangeSerializer$descriptor$delegate$lambda);
+    tmp.v1f_1 = lazy(RangeSerializer$descriptor$delegate$lambda);
   }
-  lr() {
-    var tmp0 = this.s1f_1;
+  or() {
+    var tmp0 = this.v1f_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, RangeSerializer$_get_descriptor_$ref_5fb4dc(), null);
-    return tmp0.k3();
+    return tmp0.r3();
   }
-  nr(decoder) {
-    var structure = decoder.bw(this.lr());
-    var index = structure.tw(this.lr());
+  qr(decoder) {
+    var structure = decoder.ew(this.or());
+    var index = structure.ww(this.or());
     var type = null;
     var start = null;
     var end = null;
@@ -811,34 +811,34 @@ class RangeSerializer {
     while (!(index === -1)) {
       switch (index) {
         case 0:
-          type = structure.lw(this.lr(), index);
+          type = structure.ow(this.or(), index);
           break;
         case 1:
-          start = structure.ow(this.lr(), index, PositionSerializer_getInstance());
+          start = structure.rw(this.or(), index, PositionSerializer_getInstance());
           break;
         case 2:
-          end = structure.ow(this.lr(), index, PositionSerializer_getInstance());
+          end = structure.rw(this.or(), index, PositionSerializer_getInstance());
           break;
         case 3:
-          startIndex = structure.gw(this.lr(), index);
+          startIndex = structure.jw(this.or(), index);
           break;
         case 4:
-          endIndex = structure.gw(this.lr(), index);
+          endIndex = structure.jw(this.or(), index);
           break;
         case 5:
-          parserIndex = decodeNullableIntElement(structure, this.lr(), index);
+          parserIndex = decodeNullableIntElement(structure, this.or(), index);
           break;
       }
-      index = structure.tw(this.lr());
+      index = structure.ww(this.or());
     }
-    structure.cw(this.lr());
+    structure.fw(this.or());
     var tmp;
     switch (type) {
       case 'RangeWithIndex':
         var tmp2_elvis_lhs = start;
         var tmp_0;
         if (tmp2_elvis_lhs == null) {
-          throw SerializationException.dt('Range with index is missing "start"');
+          throw SerializationException.gt('Range with index is missing "start"');
         } else {
           tmp_0 = tmp2_elvis_lhs;
         }
@@ -847,7 +847,7 @@ class RangeSerializer {
         var tmp3_elvis_lhs = end;
         var tmp_2;
         if (tmp3_elvis_lhs == null) {
-          throw SerializationException.dt('Range with index is missing "end"');
+          throw SerializationException.gt('Range with index is missing "end"');
         } else {
           tmp_2 = tmp3_elvis_lhs;
         }
@@ -856,7 +856,7 @@ class RangeSerializer {
         var tmp4_elvis_lhs = startIndex;
         var tmp_4;
         if (tmp4_elvis_lhs == null) {
-          throw SerializationException.dt('Range with index is missing "startIndex"');
+          throw SerializationException.gt('Range with index is missing "startIndex"');
         } else {
           tmp_4 = tmp4_elvis_lhs;
         }
@@ -865,7 +865,7 @@ class RangeSerializer {
         var tmp5_elvis_lhs = endIndex;
         var tmp_6;
         if (tmp5_elvis_lhs == null) {
-          throw SerializationException.dt('Range with index is missing "endIndex"');
+          throw SerializationException.gt('Range with index is missing "endIndex"');
         } else {
           tmp_6 = tmp5_elvis_lhs;
         }
@@ -877,7 +877,7 @@ class RangeSerializer {
         var tmp6_elvis_lhs = start;
         var tmp_7;
         if (tmp6_elvis_lhs == null) {
-          throw SerializationException.dt('Range without index is missing "start"');
+          throw SerializationException.gt('Range without index is missing "start"');
         } else {
           tmp_7 = tmp6_elvis_lhs;
         }
@@ -886,7 +886,7 @@ class RangeSerializer {
         var tmp7_elvis_lhs = end;
         var tmp_9;
         if (tmp7_elvis_lhs == null) {
-          throw SerializationException.dt('Range without index is missing "end"');
+          throw SerializationException.gt('Range without index is missing "end"');
         } else {
           tmp_9 = tmp7_elvis_lhs;
         }
@@ -894,45 +894,45 @@ class RangeSerializer {
         tmp = new RangeImpl(tmp_8, tmp_9);
         break;
       default:
-        throw SerializationException.dt('Invalid range type: ' + type);
+        throw SerializationException.gt('Invalid range type: ' + type);
     }
     return tmp;
   }
-  x1f(encoder, value) {
-    var structure = encoder.bw(this.lr());
+  a1g(encoder, value) {
+    var structure = encoder.ew(this.or());
     if (isRangeWithIndex(value)) {
       var range = isInterface(value, RangeWithIndex) ? value : THROW_CCE();
-      structure.rx(this.lr(), 0, 'RangeWithIndex');
-      structure.mx(this.lr(), 3, range.g1e());
-      structure.mx(this.lr(), 4, range.j1e());
-      structure.vx(this.lr(), 5, serializer_0(IntCompanionObject_instance), range.h1e());
+      structure.ux(this.or(), 0, 'RangeWithIndex');
+      structure.px(this.or(), 3, range.j1e());
+      structure.px(this.or(), 4, range.m1e());
+      structure.yx(this.or(), 5, serializer_0(IntCompanionObject_instance), range.k1e());
     } else {
-      structure.rx(this.lr(), 0, 'Range');
+      structure.ux(this.or(), 0, 'Range');
     }
-    structure.tx(this.lr(), 1, PositionSerializer_getInstance(), value.h1());
-    structure.tx(this.lr(), 2, PositionSerializer_getInstance(), value.f1e());
-    structure.cw(this.lr());
+    structure.wx(this.or(), 1, PositionSerializer_getInstance(), value.o1());
+    structure.wx(this.or(), 2, PositionSerializer_getInstance(), value.i1e());
+    structure.fw(this.or());
   }
-  mr(encoder, value) {
-    return this.x1f(encoder, (!(value == null) ? isInterface(value, Range) : false) ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.a1g(encoder, (!(value == null) ? isInterface(value, Range) : false) ? value : THROW_CCE());
   }
 }
 class RangeWithIndexSerializer {
   constructor() {
     RangeWithIndexSerializer_instance = this;
     var tmp = this;
-    tmp.y1f_1 = lazy(RangeWithIndexSerializer$descriptor$delegate$lambda);
+    tmp.b1g_1 = lazy(RangeWithIndexSerializer$descriptor$delegate$lambda);
   }
-  lr() {
-    var tmp0 = this.y1f_1;
+  or() {
+    var tmp0 = this.b1g_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, RangeWithIndexSerializer$_get_descriptor_$ref_uvhlf2(), null);
-    return tmp0.k3();
+    return tmp0.r3();
   }
-  nr(decoder) {
-    var structure = decoder.bw(this.lr());
-    var index = structure.tw(this.lr());
+  qr(decoder) {
+    var structure = decoder.ew(this.or());
+    var index = structure.ww(this.or());
     var type = null;
     var start = null;
     var end = null;
@@ -942,27 +942,27 @@ class RangeWithIndexSerializer {
     while (!(index === -1)) {
       switch (index) {
         case 0:
-          type = structure.lw(this.lr(), index);
+          type = structure.ow(this.or(), index);
           break;
         case 1:
-          start = structure.ow(this.lr(), index, PositionSerializer_getInstance());
+          start = structure.rw(this.or(), index, PositionSerializer_getInstance());
           break;
         case 2:
-          end = structure.ow(this.lr(), index, PositionSerializer_getInstance());
+          end = structure.rw(this.or(), index, PositionSerializer_getInstance());
           break;
         case 3:
-          startIndex = structure.gw(this.lr(), index);
+          startIndex = structure.jw(this.or(), index);
           break;
         case 4:
-          endIndex = structure.gw(this.lr(), index);
+          endIndex = structure.jw(this.or(), index);
           break;
         case 5:
-          parserIndex = structure.qw(this.lr(), index, get_nullable(serializer_0(IntCompanionObject_instance)));
+          parserIndex = structure.tw(this.or(), index, get_nullable(serializer_0(IntCompanionObject_instance)));
           break;
       }
-      index = structure.tw(this.lr());
+      index = structure.ww(this.or());
     }
-    structure.cw(this.lr());
+    structure.fw(this.or());
     var tmp;
     switch (type) {
       case 'RangeWithIndex':
@@ -970,49 +970,49 @@ class RangeWithIndexSerializer {
         tmp = new RangeWithIndexImpl(ensureNotNull(start), ensureNotNull(end), ensureNotNull(startIndex), ensureNotNull(endIndex), parserIndex);
         break;
       default:
-        throw SerializationException.dt('Invalid range type: ' + type);
+        throw SerializationException.gt('Invalid range type: ' + type);
     }
     return tmp;
   }
-  z1f(encoder, value) {
-    var structure = encoder.bw(this.lr());
-    structure.rx(this.lr(), 0, 'RangeWithIndex');
-    structure.tx(this.lr(), 1, PositionSerializer_getInstance(), value.h1());
-    structure.tx(this.lr(), 2, PositionSerializer_getInstance(), value.f1e());
-    structure.mx(this.lr(), 3, value.g1e());
-    structure.mx(this.lr(), 4, value.j1e());
-    structure.vx(this.lr(), 5, serializer_0(IntCompanionObject_instance), value.h1e());
-    structure.cw(this.lr());
+  c1g(encoder, value) {
+    var structure = encoder.ew(this.or());
+    structure.ux(this.or(), 0, 'RangeWithIndex');
+    structure.wx(this.or(), 1, PositionSerializer_getInstance(), value.o1());
+    structure.wx(this.or(), 2, PositionSerializer_getInstance(), value.i1e());
+    structure.px(this.or(), 3, value.j1e());
+    structure.px(this.or(), 4, value.m1e());
+    structure.yx(this.or(), 5, serializer_0(IntCompanionObject_instance), value.k1e());
+    structure.fw(this.or());
   }
-  mr(encoder, value) {
-    return this.z1f(encoder, (!(value == null) ? isInterface(value, RangeWithIndex) : false) ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.c1g(encoder, (!(value == null) ? isInterface(value, RangeWithIndex) : false) ? value : THROW_CCE());
   }
 }
 class TextWithRangeSerializer {
   constructor() {
     TextWithRangeSerializer_instance = this;
     var tmp = this;
-    tmp.a1g_1 = lazy(TextWithRangeSerializer$descriptor$delegate$lambda);
+    tmp.d1g_1 = lazy(TextWithRangeSerializer$descriptor$delegate$lambda);
   }
-  lr() {
-    var tmp0 = this.a1g_1;
+  or() {
+    var tmp0 = this.d1g_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, TextWithRangeSerializer$_get_descriptor_$ref_du0lpp(), null);
-    return tmp0.k3();
+    return tmp0.r3();
   }
-  nr(decoder) {
-    var obj = decoder.bw(this.lr());
+  qr(decoder) {
+    var obj = decoder.ew(this.or());
     var textRange = null;
     var text = null;
     $l$loop: while (true) {
-      var index = obj.tw(this.lr());
+      var index = obj.ww(this.or());
       switch (index) {
         case 0:
-          textRange = obj.ow(this.lr(), index, RangeWithIndexSerializer_getInstance());
+          textRange = obj.rw(this.or(), index, RangeWithIndexSerializer_getInstance());
           break;
         case 1:
-          text = obj.lw(this.lr(), index);
+          text = obj.ow(this.or(), index);
           break;
         case -1:
           break $l$loop;
@@ -1020,57 +1020,57 @@ class TextWithRangeSerializer {
           // Inline function 'kotlin.error' call
 
           var message = 'Unexpected index: ' + index;
-          throw IllegalStateException.l4(toString(message));
+          throw IllegalStateException.s4(toString(message));
       }
     }
-    obj.cw(this.lr());
+    obj.fw(this.or());
     // Inline function 'kotlin.collections.mutableListOf' call
-    var missing = ArrayList.u1();
+    var missing = ArrayList.b2();
     if (textRange == null) {
-      missing.z1('textRange');
+      missing.g2('textRange');
     }
     if (text == null) {
-      missing.z1('text');
+      missing.g2('text');
     }
-    if (missing.b2() > 0) {
-      throw SerializationException.dt('Failed to decode TextWithRange. Missing ' + toString(missing));
+    if (missing.i2() > 0) {
+      throw SerializationException.gt('Failed to decode TextWithRange. Missing ' + toString(missing));
     }
     return new TextWithRangeImpl(ensureNotNull(textRange), ensureNotNull(text));
   }
-  b1g(encoder, value) {
-    var obj = encoder.bw(this.lr());
-    obj.tx(this.lr(), 0, RangeSerializer_getInstance(), value.d1e());
-    obj.rx(this.lr(), 1, value.j1f());
-    obj.cw(this.lr());
+  e1g(encoder, value) {
+    var obj = encoder.ew(this.or());
+    obj.wx(this.or(), 0, RangeSerializer_getInstance(), value.g1e());
+    obj.ux(this.or(), 1, value.m1f());
+    obj.fw(this.or());
   }
-  mr(encoder, value) {
-    return this.b1g(encoder, (!(value == null) ? isInterface(value, TextWithRange) : false) ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.e1g(encoder, (!(value == null) ? isInterface(value, TextWithRange) : false) ? value : THROW_CCE());
   }
 }
 //endregion
 function get_start(_this__u8e3s4) {
-  return _this__u8e3s4.d1e().h1();
+  return _this__u8e3s4.g1e().o1();
 }
 function get_startLine(_this__u8e3s4) {
-  return _this__u8e3s4.d1e().h1().e1e();
+  return _this__u8e3s4.g1e().o1().h1e();
 }
 function get_endLine(_this__u8e3s4) {
-  return _this__u8e3s4.d1e().f1e().e1e();
+  return _this__u8e3s4.g1e().i1e().h1e();
 }
 function get_startIndex(_this__u8e3s4) {
-  return _this__u8e3s4.d1e().g1e();
+  return _this__u8e3s4.g1e().j1e();
 }
 function get_parserIndex(_this__u8e3s4) {
-  return _this__u8e3s4.d1e().h1e();
+  return _this__u8e3s4.g1e().k1e();
 }
 function get_startCharacter(_this__u8e3s4) {
-  return _this__u8e3s4.d1e().h1().i1e();
+  return _this__u8e3s4.g1e().o1().l1e();
 }
 function get_endIndex(_this__u8e3s4) {
-  return _this__u8e3s4.d1e().j1e();
+  return _this__u8e3s4.g1e().m1e();
 }
 function get_end(_this__u8e3s4) {
-  return _this__u8e3s4.d1e().f1e();
+  return _this__u8e3s4.g1e().i1e();
 }
 var Companion_instance;
 function Companion_getInstance() {
@@ -1085,9 +1085,9 @@ function $serializer_getInstance() {
 function offset(_this__u8e3s4, lineOffset, characterOffset) {
   lineOffset = lineOffset === VOID ? null : lineOffset;
   characterOffset = characterOffset === VOID ? null : characterOffset;
-  var tmp = _this__u8e3s4.e1e();
+  var tmp = _this__u8e3s4.h1e();
   var tmp_0 = tmp + (lineOffset == null ? 0 : lineOffset) | 0;
-  var tmp_1 = _this__u8e3s4.i1e();
+  var tmp_1 = _this__u8e3s4.l1e();
   return new PositionImpl(tmp_0, tmp_1 + (characterOffset == null ? 0 : characterOffset) | 0);
 }
 var Companion_instance_0;
@@ -1104,10 +1104,10 @@ function inRange(range, lineNumber, column, ignoreColumn, soft) {
   ignoreColumn = ignoreColumn === VOID ? null : ignoreColumn;
   soft = soft === VOID ? null : soft;
   if (range == null) {
-    throw Exception.gc('TextRange is invalid in getRange');
+    throw Exception.lc('TextRange is invalid in getRange');
   }
-  var startLineNumber = range.h1().e1e();
-  var endLineNumber = range.f1e().e1e();
+  var startLineNumber = range.o1().h1e();
+  var endLineNumber = range.i1e().h1e();
   var offsetColumn = column;
   var tmp;
   if (startLineNumber === endLineNumber) {
@@ -1124,17 +1124,17 @@ function inRange(range, lineNumber, column, ignoreColumn, soft) {
       tmp_0 = 0;
     }
     var mod = tmp_0;
-    var containsLower = range.h1().i1e() - mod | 0;
-    tmp = column <= (range.f1e().i1e() + mod | 0) ? containsLower <= column : false;
+    var containsLower = range.o1().l1e() - mod | 0;
+    tmp = column <= (range.i1e().l1e() + mod | 0) ? containsLower <= column : false;
   } else if (startLineNumber === lineNumber) {
     if (ignoreColumn == null ? false : ignoreColumn) {
       return true;
     }
     var tmp_1;
     if (soft == null ? true : soft) {
-      tmp_1 = (range.h1().i1e() - 1 | 0) <= offsetColumn;
+      tmp_1 = (range.o1().l1e() - 1 | 0) <= offsetColumn;
     } else {
-      tmp_1 = range.h1().i1e() <= offsetColumn;
+      tmp_1 = range.o1().l1e() <= offsetColumn;
     }
     tmp = tmp_1;
   } else if (endLineNumber === lineNumber) {
@@ -1143,9 +1143,9 @@ function inRange(range, lineNumber, column, ignoreColumn, soft) {
     }
     var tmp_2;
     if (soft == null ? true : soft) {
-      tmp_2 = (range.f1e().i1e() + 1 | 0) >= offsetColumn;
+      tmp_2 = (range.i1e().l1e() + 1 | 0) >= offsetColumn;
     } else {
-      tmp_2 = range.f1e().i1e() >= offsetColumn;
+      tmp_2 = range.i1e().l1e() >= offsetColumn;
     }
     tmp = tmp_2;
   } else {
@@ -1154,17 +1154,17 @@ function inRange(range, lineNumber, column, ignoreColumn, soft) {
   return tmp;
 }
 function contains(_this__u8e3s4, otherRange) {
-  var oStart = _this__u8e3s4.g1e();
-  var oEnd = _this__u8e3s4.j1e();
+  var oStart = _this__u8e3s4.j1e();
+  var oEnd = _this__u8e3s4.m1e();
   var theRange = numberRangeToNumber(oStart, oEnd);
   var tmp;
-  var containsLower = theRange.p2_1;
-  var containsUpper = theRange.q2_1;
-  var containsArg = otherRange.g1e();
+  var containsLower = theRange.w2_1;
+  var containsUpper = theRange.x2_1;
+  var containsArg = otherRange.j1e();
   if (containsLower <= containsArg ? containsArg <= containsUpper : false) {
-    var containsLower_0 = theRange.p2_1;
-    var containsUpper_0 = theRange.q2_1;
-    var containsArg_0 = otherRange.j1e();
+    var containsLower_0 = theRange.w2_1;
+    var containsUpper_0 = theRange.x2_1;
+    var containsArg_0 = otherRange.m1e();
     tmp = containsLower_0 <= containsArg_0 ? containsArg_0 <= containsUpper_0 : false;
   } else {
     tmp = false;
@@ -1172,27 +1172,27 @@ function contains(_this__u8e3s4, otherRange) {
   return tmp;
 }
 function get_sortValue(_this__u8e3s4) {
-  var startLine = _this__u8e3s4.h1().e1e();
-  var startColumn = _this__u8e3s4.h1().i1e();
+  var startLine = _this__u8e3s4.o1().h1e();
+  var startColumn = _this__u8e3s4.o1().l1e();
   return startLine << 16 | startColumn;
 }
 function inRange_0(child, parent) {
-  if (child.h1().e1e() < parent.h1().e1e()) {
+  if (child.o1().h1e() < parent.o1().h1e()) {
     return false;
   }
-  var endLineNumber = child.f1e().e1e();
-  if (endLineNumber > parent.f1e().e1e()) {
+  var endLineNumber = child.i1e().h1e();
+  if (endLineNumber > parent.i1e().h1e()) {
     return false;
   }
-  if (child.h1().e1e() === parent.h1().e1e()) {
-    var startColumn = child.h1().i1e();
-    if (startColumn < parent.h1().i1e()) {
+  if (child.o1().h1e() === parent.o1().h1e()) {
+    var startColumn = child.o1().l1e();
+    if (startColumn < parent.o1().l1e()) {
       return false;
     }
   }
-  if (endLineNumber === parent.f1e().e1e()) {
-    var endColumn = child.f1e().i1e();
-    if (endColumn > parent.f1e().i1e()) {
+  if (endLineNumber === parent.i1e().h1e()) {
+    var endColumn = child.i1e().l1e();
+    if (endColumn > parent.i1e().l1e()) {
       return false;
     }
   }
@@ -1224,34 +1224,34 @@ function assertIsValid(_this__u8e3s4) {
   var tmp_0;
   var tmp_1;
   if (isInterface(_this__u8e3s4, RangeWithIndex)) {
-    tmp_1 = _this__u8e3s4.h1().e1e() === _this__u8e3s4.f1e().e1e();
+    tmp_1 = _this__u8e3s4.o1().h1e() === _this__u8e3s4.i1e().h1e();
   } else {
     tmp_1 = false;
   }
   if (tmp_1) {
-    tmp_0 = _this__u8e3s4.h1().i1e() === _this__u8e3s4.f1e().i1e();
+    tmp_0 = _this__u8e3s4.o1().l1e() === _this__u8e3s4.i1e().l1e();
   } else {
     tmp_0 = false;
   }
   if (tmp_0) {
-    tmp = !(_this__u8e3s4.g1e() === _this__u8e3s4.j1e());
+    tmp = !(_this__u8e3s4.j1e() === _this__u8e3s4.m1e());
   } else {
     tmp = false;
   }
   if (tmp) {
-    throw Exception.gc('Range is invalid; ' + _this__u8e3s4.h1().e1e() + ':' + _this__u8e3s4.h1().i1e() + ' to ' + _this__u8e3s4.f1e().e1e() + ':' + _this__u8e3s4.f1e().i1e() + '; StarIndex: ' + _this__u8e3s4.g1e() + '; EndIndex: ' + _this__u8e3s4.j1e());
+    throw Exception.lc('Range is invalid; ' + _this__u8e3s4.o1().h1e() + ':' + _this__u8e3s4.o1().l1e() + ' to ' + _this__u8e3s4.i1e().h1e() + ':' + _this__u8e3s4.i1e().l1e() + '; StarIndex: ' + _this__u8e3s4.j1e() + '; EndIndex: ' + _this__u8e3s4.m1e());
   }
   if (isValid(_this__u8e3s4)) {
     return Unit_instance;
   }
-  throw Exception.gc('Range is invalid; ' + _this__u8e3s4.h1().e1e() + ':' + _this__u8e3s4.h1().i1e() + ' to ' + _this__u8e3s4.f1e().e1e() + ':' + _this__u8e3s4.f1e().i1e());
+  throw Exception.lc('Range is invalid; ' + _this__u8e3s4.o1().h1e() + ':' + _this__u8e3s4.o1().l1e() + ' to ' + _this__u8e3s4.i1e().h1e() + ':' + _this__u8e3s4.i1e().l1e());
 }
 function isValid(_this__u8e3s4) {
-  if (_this__u8e3s4.f1e().e1e() < _this__u8e3s4.h1().e1e()) {
+  if (_this__u8e3s4.i1e().h1e() < _this__u8e3s4.o1().h1e()) {
     return false;
   }
-  if (_this__u8e3s4.h1().e1e() === _this__u8e3s4.f1e().e1e()) {
-    return _this__u8e3s4.f1e().i1e() >= _this__u8e3s4.h1().i1e();
+  if (_this__u8e3s4.o1().h1e() === _this__u8e3s4.i1e().h1e()) {
+    return _this__u8e3s4.i1e().l1e() >= _this__u8e3s4.o1().l1e();
   }
   return true;
 }
@@ -1266,23 +1266,23 @@ function $serializer_getInstance_1() {
   return $serializer_instance_1;
 }
 function toRange(_this__u8e3s4) {
-  return new RangeImpl(_this__u8e3s4.h1(), _this__u8e3s4.f1e());
+  return new RangeImpl(_this__u8e3s4.o1(), _this__u8e3s4.i1e());
 }
 function empty(_this__u8e3s4) {
-  return _this__u8e3s4.j1e() <= _this__u8e3s4.g1e();
+  return _this__u8e3s4.m1e() <= _this__u8e3s4.j1e();
 }
 function plus(_this__u8e3s4, other) {
-  var tmp0 = _this__u8e3s4.g1e();
+  var tmp0 = _this__u8e3s4.j1e();
   // Inline function 'kotlin.math.min' call
-  var b = other.g1e();
+  var b = other.j1e();
   var tmp0_startIndex = Math.min(tmp0, b);
-  var tmp0_0 = _this__u8e3s4.j1e();
+  var tmp0_0 = _this__u8e3s4.m1e();
   // Inline function 'kotlin.math.max' call
-  var b_0 = other.j1e();
+  var b_0 = other.m1e();
   var tmp1_endIndex = Math.max(tmp0_0, b_0);
-  var tmp2_start = _this__u8e3s4.g1e() < other.g1e() ? _this__u8e3s4.h1() : other.h1();
-  var tmp3_end = _this__u8e3s4.j1e() > other.j1e() ? _this__u8e3s4.f1e() : other.f1e();
-  var tmp4_parserIndex = _this__u8e3s4.h1e();
+  var tmp2_start = _this__u8e3s4.j1e() < other.j1e() ? _this__u8e3s4.o1() : other.o1();
+  var tmp3_end = _this__u8e3s4.m1e() > other.m1e() ? _this__u8e3s4.i1e() : other.i1e();
+  var tmp4_parserIndex = _this__u8e3s4.k1e();
   return new RangeWithIndexImpl(tmp2_start, tmp3_end, tmp0_startIndex, tmp1_endIndex, tmp4_parserIndex);
 }
 var Companion_instance_2;
@@ -1303,29 +1303,29 @@ function stitch(_this__u8e3s4) {
   var itemsSorted = sortedWith(_this__u8e3s4, tmp$ret$1);
   var last = null;
   var out = '';
-  var _iterator__ex2g4s = itemsSorted.w();
-  $l$loop: while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
-    if (startsWith(item.j1f(), _Char___init__impl__6a9atx(123))) {
+  var _iterator__ex2g4s = itemsSorted.d1();
+  $l$loop: while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
+    if (startsWith(item.m1f(), _Char___init__impl__6a9atx(123))) {
       last = item;
       continue $l$loop;
     }
     out = out + (!(last == null) ? gap(last, item) : '');
-    out = out + item.j1f();
+    out = out + item.m1f();
     last = item;
   }
   return out;
 }
 function gap(last, next) {
-  var lines = next.d1e().h1().e1e() - last.d1e().f1e().e1e() | 0;
+  var lines = next.g1e().o1().h1e() - last.g1e().i1e().h1e() | 0;
   var tmp;
   if (lines === 0) {
-    tmp = (next.d1e().h1().i1e() + 1 | 0) - last.d1e().f1e().i1e() | 0;
+    tmp = (next.g1e().o1().l1e() + 1 | 0) - last.g1e().i1e().l1e() | 0;
   } else {
-    tmp = next.d1e().h1().i1e();
+    tmp = next.g1e().o1().l1e();
   }
   var spaces = tmp;
-  var padding = next.d1e().g1e() - ((lines + spaces | 0) + last.d1e().j1e() | 0) | 0;
+  var padding = next.g1e().j1e() - ((lines + spaces | 0) + last.g1e().m1e() | 0) | 0;
   var tmp_0;
   if (padding > 0 && lines > 1) {
     tmp_0 = '\n' + repeat(' ', padding) + repeat('\n', lines - 1 | 0);
@@ -1342,8 +1342,8 @@ function gap(last, next) {
 }
 function stitch$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = a.d1e().h1().e1e() << 8 | a.d1e().h1().e1e();
-  var tmp$ret$2 = b.d1e().h1().e1e() << 8 | b.d1e().h1().e1e();
+  var tmp = a.g1e().o1().h1e() << 8 | a.g1e().o1().h1e();
+  var tmp$ret$2 = b.g1e().o1().h1e() << 8 | b.g1e().o1().h1e();
   return compareValues(tmp, tmp$ret$2);
 }
 var Companion_instance_3;
@@ -1360,11 +1360,11 @@ function HasRangeSerializer$descriptor$delegate$lambda() {
   return buildClassSerialDescriptor('HasRange', [], HasRangeSerializer$descriptor$delegate$lambda$lambda);
 }
 function HasRangeSerializer$descriptor$delegate$lambda$lambda($this$buildClassSerialDescriptor) {
-  $this$buildClassSerialDescriptor.wr('textRange', RangeSerializer_getInstance().lr());
+  $this$buildClassSerialDescriptor.zr('textRange', RangeSerializer_getInstance().or());
   return Unit_instance;
 }
 function HasRangeSerializer$_get_descriptor_$ref_mc9kd6() {
-  return (p0) => p0.lr();
+  return (p0) => p0.or();
 }
 var HasRangeSerializer_instance;
 function HasRangeSerializer_getInstance() {
@@ -1380,21 +1380,21 @@ function PositionSerializer$descriptor$delegate$lambda$lambda($this$buildClassSe
   var annotations = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
-  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu('line', descriptor, annotations, false);
+  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().he(), arrayOf([]), false));
+  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av('line', descriptor, annotations, false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName = 'character';
   var annotations_0 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
-  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu(elementName, descriptor_0, annotations_0, false);
+  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().he(), arrayOf([]), false));
+  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av(elementName, descriptor_0, annotations_0, false);
   return Unit_instance;
 }
 function PositionSerializer$_get_descriptor_$ref_xy4f64() {
-  return (p0) => p0.lr();
+  return (p0) => p0.or();
 }
 var PositionSerializer_instance;
 function PositionSerializer_getInstance() {
@@ -1410,39 +1410,39 @@ function RangeSerializer$descriptor$delegate$lambda$lambda($this$buildClassSeria
   var annotations = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().je(), arrayOf([]), false));
-  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu('type', descriptor, annotations, true);
-  $this$buildClassSerialDescriptor.xu('start', PositionSerializer_getInstance().lr(), emptyList(), false);
-  $this$buildClassSerialDescriptor.xu('end', PositionSerializer_getInstance().lr(), emptyList(), false);
+  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().me(), arrayOf([]), false));
+  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av('type', descriptor, annotations, true);
+  $this$buildClassSerialDescriptor.av('start', PositionSerializer_getInstance().or(), emptyList(), false);
+  $this$buildClassSerialDescriptor.av('end', PositionSerializer_getInstance().or(), emptyList(), false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName = 'startIndex';
   var annotations_0 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
-  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu(elementName, descriptor_0, annotations_0, true);
+  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().he(), arrayOf([]), false));
+  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av(elementName, descriptor_0, annotations_0, true);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName_0 = 'endIndex';
   var annotations_1 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
-  var descriptor_1 = (isInterface(this_2, KSerializer) ? this_2 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu(elementName_0, descriptor_1, annotations_1, true);
+  var this_2 = serializer(createKType(PrimitiveClasses_getInstance().he(), arrayOf([]), false));
+  var descriptor_1 = (isInterface(this_2, KSerializer) ? this_2 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av(elementName_0, descriptor_1, annotations_1, true);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName_1 = 'parserIndex';
   var annotations_2 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_3 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
-  var descriptor_2 = (isInterface(this_3, KSerializer) ? this_3 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu(elementName_1, descriptor_2, annotations_2, true);
+  var this_3 = serializer(createKType(PrimitiveClasses_getInstance().he(), arrayOf([]), false));
+  var descriptor_2 = (isInterface(this_3, KSerializer) ? this_3 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av(elementName_1, descriptor_2, annotations_2, true);
   return Unit_instance;
 }
 function RangeSerializer$_get_descriptor_$ref_5fb4dc() {
-  return (p0) => p0.lr();
+  return (p0) => p0.or();
 }
 var RangeSerializer_instance;
 function RangeSerializer_getInstance() {
@@ -1458,39 +1458,39 @@ function RangeWithIndexSerializer$descriptor$delegate$lambda$lambda($this$buildC
   var annotations = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().je(), arrayOf([]), false));
-  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu('type', descriptor, annotations, false);
-  $this$buildClassSerialDescriptor.xu('start', PositionSerializer_getInstance().lr(), emptyList(), false);
-  $this$buildClassSerialDescriptor.xu('end', PositionSerializer_getInstance().lr(), emptyList(), false);
+  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().me(), arrayOf([]), false));
+  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av('type', descriptor, annotations, false);
+  $this$buildClassSerialDescriptor.av('start', PositionSerializer_getInstance().or(), emptyList(), false);
+  $this$buildClassSerialDescriptor.av('end', PositionSerializer_getInstance().or(), emptyList(), false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName = 'startIndex';
   var annotations_0 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
-  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu(elementName, descriptor_0, annotations_0, true);
+  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().he(), arrayOf([]), false));
+  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av(elementName, descriptor_0, annotations_0, true);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName_0 = 'endIndex';
   var annotations_1 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
-  var descriptor_1 = (isInterface(this_2, KSerializer) ? this_2 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu(elementName_0, descriptor_1, annotations_1, true);
+  var this_2 = serializer(createKType(PrimitiveClasses_getInstance().he(), arrayOf([]), false));
+  var descriptor_1 = (isInterface(this_2, KSerializer) ? this_2 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av(elementName_0, descriptor_1, annotations_1, true);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName_1 = 'parserIndex';
   var annotations_2 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_3 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
-  var descriptor_2 = (isInterface(this_3, KSerializer) ? this_3 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu(elementName_1, descriptor_2, annotations_2, true);
+  var this_3 = serializer(createKType(PrimitiveClasses_getInstance().he(), arrayOf([]), false));
+  var descriptor_2 = (isInterface(this_3, KSerializer) ? this_3 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av(elementName_1, descriptor_2, annotations_2, true);
   return Unit_instance;
 }
 function RangeWithIndexSerializer$_get_descriptor_$ref_uvhlf2() {
-  return (p0) => p0.lr();
+  return (p0) => p0.or();
 }
 var RangeWithIndexSerializer_instance;
 function RangeWithIndexSerializer_getInstance() {
@@ -1515,10 +1515,10 @@ function astCoreRangeWithIndexPolymorphic(_this__u8e3s4, init) {
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_0 = serializer(createKType(getKClass(RangeWithIndexImpl), arrayOf([]), false));
   var tmp$ret$3 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-  builder.v1c(clazz, tmp$ret$3);
+  builder.y1c(clazz, tmp$ret$3);
   init(builder);
-  builder.w1c(astCoreRangeWithIndexPolymorphic$lambda_0);
-  builder.x1c(_this__u8e3s4);
+  builder.z1c(astCoreRangeWithIndexPolymorphic$lambda_0);
+  builder.a1d(_this__u8e3s4);
   return _this__u8e3s4;
 }
 function astCoreRangeWithIndexDefaultSerializer(_this__u8e3s4, getSerializer) {
@@ -1530,7 +1530,7 @@ function astCoreRangeWithIndexDefaultSerializer(_this__u8e3s4, getSerializer) {
   }
   getSerializer = tmp;
   var tmp_0 = getKClass(RangeWithIndex);
-  _this__u8e3s4.n1d(tmp_0, astCoreRangeWithIndexDefaultSerializer$lambda_0(getSerializer));
+  _this__u8e3s4.q1d(tmp_0, astCoreRangeWithIndexDefaultSerializer$lambda_0(getSerializer));
   return _this__u8e3s4;
 }
 function astCoreRangePolymorphic(_this__u8e3s4, init) {
@@ -1550,10 +1550,10 @@ function astCoreRangePolymorphic(_this__u8e3s4, init) {
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_0 = serializer(createKType(getKClass(RangeWithIndexImpl), arrayOf([]), false));
   var tmp$ret$3 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-  builder.v1c(clazz, tmp$ret$3);
+  builder.y1c(clazz, tmp$ret$3);
   init(builder);
-  builder.w1c(astCoreRangePolymorphic$lambda_0);
-  builder.x1c(_this__u8e3s4);
+  builder.z1c(astCoreRangePolymorphic$lambda_0);
+  builder.a1d(_this__u8e3s4);
   return _this__u8e3s4;
 }
 function astCoreRangeDefaultSerializer(_this__u8e3s4, getSerializer) {
@@ -1565,7 +1565,7 @@ function astCoreRangeDefaultSerializer(_this__u8e3s4, getSerializer) {
   }
   getSerializer = tmp;
   var tmp_0 = getKClass(Range);
-  _this__u8e3s4.n1d(tmp_0, astCoreRangeDefaultSerializer$lambda_0(getSerializer));
+  _this__u8e3s4.q1d(tmp_0, astCoreRangeDefaultSerializer$lambda_0(getSerializer));
   return _this__u8e3s4;
 }
 function astCoreHasTextPolymorphic(_this__u8e3s4, init) {
@@ -1585,9 +1585,9 @@ function astCoreHasTextPolymorphic(_this__u8e3s4, init) {
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_0 = serializer(createKType(getKClass(TextWithRange), arrayOf([]), false));
   var tmp$ret$3 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-  builder.v1c(clazz, tmp$ret$3);
+  builder.y1c(clazz, tmp$ret$3);
   init(builder);
-  builder.x1c(_this__u8e3s4);
+  builder.a1d(_this__u8e3s4);
   return _this__u8e3s4;
 }
 function astCoreHasTextDefaultSerializer(_this__u8e3s4, getSerializer) {
@@ -1599,7 +1599,7 @@ function astCoreHasTextDefaultSerializer(_this__u8e3s4, getSerializer) {
   }
   getSerializer = tmp;
   var tmp_0 = getKClass(HasText);
-  _this__u8e3s4.n1d(tmp_0, astCoreHasTextDefaultSerializer$lambda_0(getSerializer));
+  _this__u8e3s4.q1d(tmp_0, astCoreHasTextDefaultSerializer$lambda_0(getSerializer));
   return _this__u8e3s4;
 }
 function astCorePositionPolymorphic(_this__u8e3s4, init) {
@@ -1619,10 +1619,10 @@ function astCorePositionPolymorphic(_this__u8e3s4, init) {
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_0 = serializer(createKType(getKClass(PositionImpl), arrayOf([]), false));
   var tmp$ret$3 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-  builder.v1c(clazz, tmp$ret$3);
+  builder.y1c(clazz, tmp$ret$3);
   init(builder);
-  builder.w1c(astCorePositionPolymorphic$lambda_0);
-  builder.x1c(_this__u8e3s4);
+  builder.z1c(astCorePositionPolymorphic$lambda_0);
+  builder.a1d(_this__u8e3s4);
   return _this__u8e3s4;
 }
 function astCorePositionDefaultSerializer(_this__u8e3s4, getSerializer) {
@@ -1634,7 +1634,7 @@ function astCorePositionDefaultSerializer(_this__u8e3s4, getSerializer) {
   }
   getSerializer = tmp;
   var tmp_0 = getKClass(Position);
-  _this__u8e3s4.n1d(tmp_0, astCorePositionDefaultSerializer$lambda_0(getSerializer));
+  _this__u8e3s4.q1d(tmp_0, astCorePositionDefaultSerializer$lambda_0(getSerializer));
   return _this__u8e3s4;
 }
 function astCoreHasRangePolymorphic(_this__u8e3s4, init) {
@@ -1654,10 +1654,10 @@ function astCoreHasRangePolymorphic(_this__u8e3s4, init) {
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_0 = serializer(createKType(getKClass(TextWithRangeImpl), arrayOf([]), false));
   var tmp$ret$3 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-  builder.v1c(clazz, tmp$ret$3);
-  builder.w1c(astCoreHasRangePolymorphic$lambda_0);
+  builder.y1c(clazz, tmp$ret$3);
+  builder.z1c(astCoreHasRangePolymorphic$lambda_0);
   init(builder);
-  builder.x1c(_this__u8e3s4);
+  builder.a1d(_this__u8e3s4);
   return _this__u8e3s4;
 }
 function astCoreHasRangeDefaultSerializer(_this__u8e3s4, getSerializer) {
@@ -1669,7 +1669,7 @@ function astCoreHasRangeDefaultSerializer(_this__u8e3s4, getSerializer) {
   }
   getSerializer = tmp;
   var tmp_0 = getKClass(HasRange);
-  _this__u8e3s4.n1d(tmp_0, astCoreHasRangeDefaultSerializer$lambda_0(getSerializer));
+  _this__u8e3s4.q1d(tmp_0, astCoreHasRangeDefaultSerializer$lambda_0(getSerializer));
   return _this__u8e3s4;
 }
 function astCoreTextWithRangePolymorphic(_this__u8e3s4, init) {
@@ -1689,10 +1689,10 @@ function astCoreTextWithRangePolymorphic(_this__u8e3s4, init) {
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_0 = serializer(createKType(getKClass(TextWithRangeImpl), arrayOf([]), false));
   var tmp$ret$3 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-  builder.v1c(clazz, tmp$ret$3);
+  builder.y1c(clazz, tmp$ret$3);
   init(builder);
-  builder.w1c(astCoreTextWithRangePolymorphic$lambda_0);
-  builder.x1c(_this__u8e3s4);
+  builder.z1c(astCoreTextWithRangePolymorphic$lambda_0);
+  builder.a1d(_this__u8e3s4);
   return _this__u8e3s4;
 }
 function astCoreTextWithRangeDefaultSerializer(_this__u8e3s4, getSerializer) {
@@ -1704,7 +1704,7 @@ function astCoreTextWithRangeDefaultSerializer(_this__u8e3s4, getSerializer) {
   }
   getSerializer = tmp;
   var tmp_0 = getKClass(TextWithRange);
-  _this__u8e3s4.n1d(tmp_0, astCoreTextWithRangeDefaultSerializer$lambda_0(getSerializer));
+  _this__u8e3s4.q1d(tmp_0, astCoreTextWithRangeDefaultSerializer$lambda_0(getSerializer));
   return _this__u8e3s4;
 }
 function astCoreRangeWithIndexPolymorphic$lambda(_this__u8e3s4) {
@@ -1727,7 +1727,7 @@ function astCoreRangeWithIndexDefaultSerializer$lambda_0($getSerializer) {
     }
     var tmp;
     if (instance instanceof RangeWithIndexImpl) {
-      var tmp_0 = Companion_instance_2.k1e();
+      var tmp_0 = Companion_instance_2.n1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       tmp = RangeWithIndexSerializer_getInstance();
@@ -1755,7 +1755,7 @@ function astCoreRangeDefaultSerializer$lambda_0($getSerializer) {
     }
     var tmp;
     if (instance instanceof RangeWithIndexImpl) {
-      var tmp_0 = Companion_instance_2.k1e();
+      var tmp_0 = Companion_instance_2.n1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       if (isInterface(instance, RangeWithIndex)) {
@@ -1785,7 +1785,7 @@ function astCoreHasTextDefaultSerializer$lambda_0($getSerializer) {
     }
     var tmp;
     if (instance instanceof TextWithRangeImpl) {
-      var tmp_0 = Companion_instance_3.k1e();
+      var tmp_0 = Companion_instance_3.n1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       tmp = null;
@@ -1813,7 +1813,7 @@ function astCorePositionDefaultSerializer$lambda_0($getSerializer) {
     }
     var tmp;
     if (instance instanceof PositionImpl) {
-      var tmp_0 = Companion_instance_0.k1e();
+      var tmp_0 = Companion_instance_0.n1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       tmp = PositionSerializer_getInstance();
@@ -1841,7 +1841,7 @@ function astCoreHasRangeDefaultSerializer$lambda_0($getSerializer) {
     }
     var tmp;
     if (instance instanceof TextWithRangeImpl) {
-      var tmp_0 = Companion_instance_3.k1e();
+      var tmp_0 = Companion_instance_3.n1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       if (isInterface(instance, TextWithRange)) {
@@ -1849,7 +1849,7 @@ function astCoreHasRangeDefaultSerializer$lambda_0($getSerializer) {
         tmp = isInterface(tmp_1, SerializationStrategy) ? tmp_1 : THROW_CCE();
       } else {
         if (instance instanceof HasRangeImpl) {
-          var tmp_2 = Companion_instance.k1e();
+          var tmp_2 = Companion_instance.n1e();
           tmp = isInterface(tmp_2, SerializationStrategy) ? tmp_2 : THROW_CCE();
         } else {
           tmp = HasRangeSerializer_getInstance();
@@ -1879,7 +1879,7 @@ function astCoreTextWithRangeDefaultSerializer$lambda_0($getSerializer) {
     }
     var tmp;
     if (instance instanceof TextWithRangeImpl) {
-      var tmp_0 = Companion_instance_3.k1e();
+      var tmp_0 = Companion_instance_3.n1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       tmp = TextWithRangeSerializer_getInstance();
@@ -1891,18 +1891,18 @@ function TextWithRangeSerializer$descriptor$delegate$lambda() {
   return buildClassSerialDescriptor('TextWithRange', [], TextWithRangeSerializer$descriptor$delegate$lambda$lambda);
 }
 function TextWithRangeSerializer$descriptor$delegate$lambda$lambda($this$buildClassSerialDescriptor) {
-  $this$buildClassSerialDescriptor.wr('textRange', RangeSerializer_getInstance().lr());
+  $this$buildClassSerialDescriptor.zr('textRange', RangeSerializer_getInstance().or());
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var annotations = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().je(), arrayOf([]), false));
-  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu('text', descriptor, annotations, false);
+  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().me(), arrayOf([]), false));
+  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av('text', descriptor, annotations, false);
   return Unit_instance;
 }
 function TextWithRangeSerializer$_get_descriptor_$ref_du0lpp() {
-  return (p0) => p0.lr();
+  return (p0) => p0.or();
 }
 var TextWithRangeSerializer_instance;
 function TextWithRangeSerializer_getInstance() {
@@ -1920,30 +1920,30 @@ function isRangeWithIndex(range) {
 }
 //region block: post-declaration
 initMetadataForCompanion(Companion);
-protoOf($serializer).m14 = typeParametersSerializers;
+protoOf($serializer).p14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForInterface(HasRange, 'HasRange', VOID, VOID, VOID, VOID, VOID, {0: HasRangeSerializer_getInstance});
 initMetadataForClass(HasRangeImpl, 'HasRangeImpl', VOID, VOID, [HasRange], VOID, VOID, {0: $serializer_getInstance});
 initMetadataForInterface(Position, 'Position', VOID, VOID, VOID, VOID, VOID, {0: PositionSerializer_getInstance});
 initMetadataForCompanion(Companion_0);
-protoOf($serializer_0).m14 = typeParametersSerializers;
+protoOf($serializer_0).p14 = typeParametersSerializers;
 initMetadataForObject($serializer_0, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(PositionImpl, 'PositionImpl', VOID, VOID, [Position], VOID, VOID, {0: $serializer_getInstance_0});
 initMetadataForInterface(Range, 'Range', VOID, VOID, VOID, VOID, VOID, {0: RangeSerializer_getInstance});
 initMetadataForCompanion(Companion_1);
-protoOf($serializer_1).m14 = typeParametersSerializers;
+protoOf($serializer_1).p14 = typeParametersSerializers;
 initMetadataForObject($serializer_1, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(RangeImpl, 'RangeImpl', VOID, VOID, [Range], VOID, VOID, {0: $serializer_getInstance_1});
 initMetadataForInterface(RangeWithIndex, 'RangeWithIndex', VOID, VOID, [Range], VOID, VOID, {0: RangeWithIndexSerializer_getInstance});
 initMetadataForCompanion(Companion_2);
-protoOf($serializer_2).m14 = typeParametersSerializers;
+protoOf($serializer_2).p14 = typeParametersSerializers;
 initMetadataForObject($serializer_2, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(RangeWithIndexImpl, 'RangeWithIndexImpl', VOID, VOID, [RangeWithIndex], VOID, VOID, {0: $serializer_getInstance_2});
 initMetadataForInterface(HasText, 'HasText');
 initMetadataForInterface(TextWithRange, 'TextWithRange', VOID, VOID, [HasRange, HasText], VOID, VOID, {0: TextWithRangeSerializer_getInstance});
 initMetadataForClass(sam$kotlin_Comparator$0, 'sam$kotlin_Comparator$0', VOID, VOID, [Comparator, FunctionAdapter]);
 initMetadataForCompanion(Companion_3);
-protoOf($serializer_3).m14 = typeParametersSerializers;
+protoOf($serializer_3).p14 = typeParametersSerializers;
 initMetadataForObject($serializer_3, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(TextWithRangeImpl, 'TextWithRangeImpl', VOID, VOID, [TextWithRange], VOID, VOID, {0: $serializer_getInstance_3});
 initMetadataForObject(HasRangeSerializer, 'HasRangeSerializer', VOID, VOID, [KSerializer]);

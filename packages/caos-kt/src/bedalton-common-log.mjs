@@ -30,38 +30,38 @@ var imul = Math.imul;
 class DefaultConsoleColors {
   constructor() {
     DefaultConsoleColors_instance = this;
-    this.h1g_1 = get_consoleColorEscapeSequence() + '[0m';
-    this.i1g_1 = get_consoleColorEscapeSequence() + '[1m';
-    this.j1g_1 = get_consoleColorEscapeSequence() + '[1m';
-    this.k1g_1 = get_consoleColorEscapeSequence() + '[2m';
-    this.l1g_1 = get_consoleColorEscapeSequence() + '[4m';
-    this.m1g_1 = get_consoleColorEscapeSequence() + '[5m';
-    this.n1g_1 = get_consoleColorEscapeSequence() + '[7m';
-    this.o1g_1 = get_consoleColorEscapeSequence() + '[8m';
-    this.p1g_1 = get_consoleColorEscapeSequence() + '[30m';
-    this.q1g_1 = get_consoleColorEscapeSequence() + '[31m';
-    this.r1g_1 = get_consoleColorEscapeSequence() + '[32m';
-    this.s1g_1 = get_consoleColorEscapeSequence() + '[33m';
-    this.t1g_1 = get_consoleColorEscapeSequence() + '[34m';
-    this.u1g_1 = get_consoleColorEscapeSequence() + '[35m';
-    this.v1g_1 = get_consoleColorEscapeSequence() + '[36m';
-    this.w1g_1 = get_consoleColorEscapeSequence() + '[38;5;15m';
-    this.x1g_1 = get_consoleColorEscapeSequence() + '[40m';
-    this.y1g_1 = get_consoleColorEscapeSequence() + '[41m';
-    this.z1g_1 = get_consoleColorEscapeSequence() + '[42m';
-    this.a1h_1 = get_consoleColorEscapeSequence() + '[43m';
-    this.b1h_1 = get_consoleColorEscapeSequence() + '[44m';
-    this.c1h_1 = get_consoleColorEscapeSequence() + '[45m';
-    this.d1h_1 = get_consoleColorEscapeSequence() + '[46m';
-    this.e1h_1 = get_consoleColorEscapeSequence() + '[48;5;15m';
-    this.f1h_1 = get_consoleColorEscapeSequence() + '[4;30m';
-    this.g1h_1 = get_consoleColorEscapeSequence() + '[4;31m';
-    this.h1h_1 = get_consoleColorEscapeSequence() + '[4;32m';
-    this.i1h_1 = get_consoleColorEscapeSequence() + '[4;33m';
-    this.j1h_1 = get_consoleColorEscapeSequence() + '[4;34m';
-    this.k1h_1 = get_consoleColorEscapeSequence() + '[4;35m';
-    this.l1h_1 = get_consoleColorEscapeSequence() + '[4;36m';
-    this.m1h_1 = get_consoleColorEscapeSequence() + '[4;37m';
+    this.k1g_1 = get_consoleColorEscapeSequence() + '[0m';
+    this.l1g_1 = get_consoleColorEscapeSequence() + '[1m';
+    this.m1g_1 = get_consoleColorEscapeSequence() + '[1m';
+    this.n1g_1 = get_consoleColorEscapeSequence() + '[2m';
+    this.o1g_1 = get_consoleColorEscapeSequence() + '[4m';
+    this.p1g_1 = get_consoleColorEscapeSequence() + '[5m';
+    this.q1g_1 = get_consoleColorEscapeSequence() + '[7m';
+    this.r1g_1 = get_consoleColorEscapeSequence() + '[8m';
+    this.s1g_1 = get_consoleColorEscapeSequence() + '[30m';
+    this.t1g_1 = get_consoleColorEscapeSequence() + '[31m';
+    this.u1g_1 = get_consoleColorEscapeSequence() + '[32m';
+    this.v1g_1 = get_consoleColorEscapeSequence() + '[33m';
+    this.w1g_1 = get_consoleColorEscapeSequence() + '[34m';
+    this.x1g_1 = get_consoleColorEscapeSequence() + '[35m';
+    this.y1g_1 = get_consoleColorEscapeSequence() + '[36m';
+    this.z1g_1 = get_consoleColorEscapeSequence() + '[38;5;15m';
+    this.a1h_1 = get_consoleColorEscapeSequence() + '[40m';
+    this.b1h_1 = get_consoleColorEscapeSequence() + '[41m';
+    this.c1h_1 = get_consoleColorEscapeSequence() + '[42m';
+    this.d1h_1 = get_consoleColorEscapeSequence() + '[43m';
+    this.e1h_1 = get_consoleColorEscapeSequence() + '[44m';
+    this.f1h_1 = get_consoleColorEscapeSequence() + '[45m';
+    this.g1h_1 = get_consoleColorEscapeSequence() + '[46m';
+    this.h1h_1 = get_consoleColorEscapeSequence() + '[48;5;15m';
+    this.i1h_1 = get_consoleColorEscapeSequence() + '[4;30m';
+    this.j1h_1 = get_consoleColorEscapeSequence() + '[4;31m';
+    this.k1h_1 = get_consoleColorEscapeSequence() + '[4;32m';
+    this.l1h_1 = get_consoleColorEscapeSequence() + '[4;33m';
+    this.m1h_1 = get_consoleColorEscapeSequence() + '[4;34m';
+    this.n1h_1 = get_consoleColorEscapeSequence() + '[4;35m';
+    this.o1h_1 = get_consoleColorEscapeSequence() + '[4;36m';
+    this.p1h_1 = get_consoleColorEscapeSequence() + '[4;37m';
   }
 }
 class LoggerColor {}
@@ -124,100 +124,100 @@ class WHITE extends LoggerColor {
 class LogLevel extends Enum {
   constructor(name, ordinal, value) {
     super(name, ordinal);
-    this.p1h_1 = value;
+    this.s1h_1 = value;
   }
 }
 class LoggerBuilder {
   constructor() {
-    this.q1h_1 = null;
-    this.r1h_1 = null;
-    this.s1h_1 = null;
     this.t1h_1 = null;
     this.u1h_1 = null;
     this.v1h_1 = null;
+    this.w1h_1 = null;
+    this.x1h_1 = null;
+    this.y1h_1 = null;
   }
   withLog(log) {
-    this.q1h_1 = log;
+    this.t1h_1 = log;
   }
   info(log) {
-    this.r1h_1 = log;
-    return this;
-  }
-  warning(log) {
-    this.s1h_1 = log;
-    return this;
-  }
-  error(log) {
-    this.t1h_1 = log;
-    return this;
-  }
-  logMemory(log) {
     this.u1h_1 = log;
     return this;
   }
+  warning(log) {
+    this.v1h_1 = log;
+    return this;
+  }
+  error(log) {
+    this.w1h_1 = log;
+    return this;
+  }
+  logMemory(log) {
+    this.x1h_1 = log;
+    return this;
+  }
   getColor(callback) {
-    this.v1h_1 = callback;
+    this.y1h_1 = callback;
     return this;
   }
   build() {
-    return new CallbackLogger(this.q1h_1, this.r1h_1, this.s1h_1, this.t1h_1, this.u1h_1, this.v1h_1);
+    return new CallbackLogger(this.t1h_1, this.u1h_1, this.v1h_1, this.w1h_1, this.x1h_1, this.y1h_1);
   }
 }
 class CallbackLogger {
   constructor(mLog, mInfo, mWarning, mError, mLogMemory, mGetColor, prependLogType) {
     prependLogType = prependLogType === VOID ? null : prependLogType;
-    this.w1h_1 = mLog;
-    this.x1h_1 = mInfo;
-    this.y1h_1 = mWarning;
-    this.z1h_1 = mError;
-    this.a1i_1 = mLogMemory;
-    this.b1i_1 = mGetColor;
-    this.c1i_1 = prependLogType;
+    this.z1h_1 = mLog;
+    this.a1i_1 = mInfo;
+    this.b1i_1 = mWarning;
+    this.c1i_1 = mError;
+    this.d1i_1 = mLogMemory;
+    this.e1i_1 = mGetColor;
+    this.f1i_1 = prependLogType;
     delete this.prependLogType;
   }
-  d1i(_set____db54di) {
-    this.c1i_1 = _set____db54di;
+  g1i(_set____db54di) {
+    this.f1i_1 = _set____db54di;
   }
-  e1i() {
-    return this.c1i_1;
+  h1i() {
+    return this.f1i_1;
   }
   log(replace, message, color) {
-    var tmp0_safe_receiver = this.w1h_1;
+    var tmp0_safe_receiver = this.z1h_1;
     if (tmp0_safe_receiver == null)
       null;
     else
       tmp0_safe_receiver(replace, message, color);
   }
   info(replace, message, color) {
-    var tmp0_safe_receiver = this.x1h_1;
+    var tmp0_safe_receiver = this.a1i_1;
     if (tmp0_safe_receiver == null)
       null;
     else
       tmp0_safe_receiver(replace, message, color);
   }
   warning(message, color) {
-    var tmp0_safe_receiver = this.y1h_1;
+    var tmp0_safe_receiver = this.b1i_1;
     if (tmp0_safe_receiver == null)
       null;
     else
       tmp0_safe_receiver(message, color);
   }
   error(message, color) {
-    var tmp0_safe_receiver = this.z1h_1;
+    var tmp0_safe_receiver = this.c1i_1;
     if (tmp0_safe_receiver == null)
       null;
     else
       tmp0_safe_receiver(message, color);
   }
   logMemory() {
-    var tmp0_safe_receiver = this.a1i_1;
+    var tmp0_safe_receiver = this.d1i_1;
     if (tmp0_safe_receiver == null)
       null;
     else
       tmp0_safe_receiver();
   }
   getColorPrefix(color) {
-    var tmp0_elvis_lhs = this.b1i_1;
+    var tmp0_elvis_lhs = this.e1i_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       tmp = getLogColorPrefix$ref();
@@ -227,16 +227,16 @@ class CallbackLogger {
     return tmp(color);
   }
   toString() {
-    return 'CallbackLogger(mLog=' + toString_0(this.w1h_1) + ', mInfo=' + toString_0(this.x1h_1) + ', mWarning=' + toString_0(this.y1h_1) + ', mError=' + toString_0(this.z1h_1) + ', mLogMemory=' + toString_0(this.a1i_1) + ', mGetColor=' + toString_0(this.b1i_1) + ', prependLogType=' + this.c1i_1 + ')';
+    return 'CallbackLogger(mLog=' + toString_0(this.z1h_1) + ', mInfo=' + toString_0(this.a1i_1) + ', mWarning=' + toString_0(this.b1i_1) + ', mError=' + toString_0(this.c1i_1) + ', mLogMemory=' + toString_0(this.d1i_1) + ', mGetColor=' + toString_0(this.e1i_1) + ', prependLogType=' + this.f1i_1 + ')';
   }
   hashCode() {
-    var result = this.w1h_1 == null ? 0 : hashCode(this.w1h_1);
-    result = imul(result, 31) + (this.x1h_1 == null ? 0 : hashCode(this.x1h_1)) | 0;
-    result = imul(result, 31) + (this.y1h_1 == null ? 0 : hashCode(this.y1h_1)) | 0;
-    result = imul(result, 31) + (this.z1h_1 == null ? 0 : hashCode(this.z1h_1)) | 0;
+    var result = this.z1h_1 == null ? 0 : hashCode(this.z1h_1);
     result = imul(result, 31) + (this.a1i_1 == null ? 0 : hashCode(this.a1i_1)) | 0;
     result = imul(result, 31) + (this.b1i_1 == null ? 0 : hashCode(this.b1i_1)) | 0;
-    result = imul(result, 31) + (this.c1i_1 == null ? 0 : getBooleanHashCode(this.c1i_1)) | 0;
+    result = imul(result, 31) + (this.c1i_1 == null ? 0 : hashCode(this.c1i_1)) | 0;
+    result = imul(result, 31) + (this.d1i_1 == null ? 0 : hashCode(this.d1i_1)) | 0;
+    result = imul(result, 31) + (this.e1i_1 == null ? 0 : hashCode(this.e1i_1)) | 0;
+    result = imul(result, 31) + (this.f1i_1 == null ? 0 : getBooleanHashCode(this.f1i_1)) | 0;
     return result;
   }
   equals(other) {
@@ -244,63 +244,55 @@ class CallbackLogger {
       return true;
     if (!(other instanceof CallbackLogger))
       return false;
-    if (!equals(this.w1h_1, other.w1h_1))
-      return false;
-    if (!equals(this.x1h_1, other.x1h_1))
-      return false;
-    if (!equals(this.y1h_1, other.y1h_1))
-      return false;
     if (!equals(this.z1h_1, other.z1h_1))
       return false;
     if (!equals(this.a1i_1, other.a1i_1))
       return false;
     if (!equals(this.b1i_1, other.b1i_1))
       return false;
-    if (!(this.c1i_1 == other.c1i_1))
+    if (!equals(this.c1i_1, other.c1i_1))
+      return false;
+    if (!equals(this.d1i_1, other.d1i_1))
+      return false;
+    if (!equals(this.e1i_1, other.e1i_1))
+      return false;
+    if (!(this.f1i_1 == other.f1i_1))
       return false;
     return true;
   }
   get prependLogType() {
-    return this.e1i();
+    return this.h1i();
   }
   set prependLogType(value) {
-    this.d1i(value);
+    this.g1i(value);
   }
 }
 class Log {
   constructor() {
     Log_instance = this;
-    this.f1i_1 = 'log.LOG_NO_PRINT_PREFIX';
-    this.g1i_1 = DefaultLoggerObject_getInstance();
-    this.h1i_1 = false;
-    this.i1i_1 = LogLevel_LOG_2_getInstance();
+    this.i1i_1 = 'log.LOG_NO_PRINT_PREFIX';
+    this.j1i_1 = DefaultLoggerObject_getInstance();
+    this.k1i_1 = false;
+    this.l1i_1 = LogLevel_LOG_2_getInstance();
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.j1i_1 = ArrayList.u1();
-    this.k1i_1 = false;
+    tmp.m1i_1 = ArrayList.b2();
+    this.n1i_1 = false;
     var tmp_0 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_0.l1i_1 = ArrayList.u1();
+    tmp_0.o1i_1 = ArrayList.b2();
     var tmp_1 = this;
     // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp_1.m1i_1 = LinkedHashMap.mb();
+    tmp_1.p1i_1 = LinkedHashMap.tb();
   }
-  n1i() {
-    return this.g1i_1;
+  q1i() {
+    return this.j1i_1;
   }
-  o1i() {
-    return this.i1i_1;
+  r1i() {
+    return this.l1i_1;
   }
-  p1i() {
-    return this.h1i_1;
-  }
-  q1i(message) {
-    this.r1i(false, null, message);
-  }
-  r1i(replace, color, message) {
-    if (!this.p1i() && this.o1i().p1h_1 >= LogLevel_LOG_1_getInstance().p1h_1) {
-      this.n1i().info(replace, this.s1i('LOG1', null, message), color);
-    }
+  s1i() {
+    return this.k1i_1;
   }
   t1i(className, message) {
     this.t1i(className, message);
@@ -315,15 +307,15 @@ class Log {
     this.w1i(className, null, message);
   }
   w1i(className, color, message) {
-    if (!this.p1i() && this.o1i().p1h_1 >= LogLevel_ERROR_getInstance().p1h_1) {
-      this.n1i().error(this.s1i('ERROR', className, message), color);
+    if (!this.s1i() && this.r1i().s1h_1 >= LogLevel_ERROR_getInstance().s1h_1) {
+      this.q1i().error(this.y1i('ERROR', className, message), color);
     }
   }
-  s1i(kind, className, message) {
-    var tmp0_elvis_lhs = this.n1i().prependLogType;
-    var prependLog = tmp0_elvis_lhs == null ? DefaultLoggerObject_getInstance().y1i_1 : tmp0_elvis_lhs;
+  y1i(kind, className, message) {
+    var tmp0_elvis_lhs = this.q1i().prependLogType;
+    var prependLog = tmp0_elvis_lhs == null ? DefaultLoggerObject_getInstance().z1i_1 : tmp0_elvis_lhs;
     var tmp;
-    if (prependLog && !this.z1i('log.LOG_NO_PRINT_PREFIX')) {
+    if (prependLog && !this.a1j('log.LOG_NO_PRINT_PREFIX')) {
       tmp = '**' + kind + '** ';
     } else {
       tmp = '';
@@ -338,21 +330,21 @@ class Log {
     }
     return prefix + tmp_0 + message;
   }
-  z1i(mode) {
-    return this.j1i_1.g2(mode);
+  a1j(mode) {
+    return this.m1i_1.n2(mode);
   }
-  a1j(logger) {
-    this.g1i_1 = logger;
+  b1j(logger) {
+    this.j1i_1 = logger;
   }
 }
 class DefaultLoggerObject {
   constructor() {
     DefaultLoggerObject_instance = this;
-    this.y1i_1 = false;
+    this.z1i_1 = false;
     delete this.prependLogType;
   }
-  e1i() {
-    return this.y1i_1;
+  h1i() {
+    return this.z1i_1;
   }
   log(replace, message, color) {
     var finalMessage = wrap(this, color, message);
@@ -398,36 +390,36 @@ class DefaultLoggerObject {
     return getLogColorPrefix(color);
   }
   get prependLogType() {
-    return this.e1i();
+    return this.h1i();
   }
 }
 class createSingleFunctionLogger$1 {
   constructor($logger) {
-    this.b1j_1 = $logger;
+    this.c1j_1 = $logger;
     delete this.prependLogType;
   }
   log(replace, message, color) {
-    this.b1j_1('log', message);
+    this.c1j_1('log', message);
   }
   info(replace, message, color) {
-    this.b1j_1('info', message);
+    this.c1j_1('info', message);
   }
   warning(message, color) {
-    this.b1j_1('warning', message);
+    this.c1j_1('warning', message);
   }
   error(message, color) {
-    this.b1j_1('error', message);
+    this.c1j_1('error', message);
   }
   getColorPrefix(color) {
     return null;
   }
   logMemory() {
   }
-  e1i() {
+  h1i() {
     return null;
   }
   get prependLogType() {
-    return this.e1i();
+    return this.h1i();
   }
 }
 //endregion
@@ -446,13 +438,13 @@ function getNamespacePrefix(_this__u8e3s4) {
   _init_properties_DefaultLoggerObject_kt__11m6n2();
   // Inline function 'kotlin.text.replace' call
   // Inline function 'kotlin.text.trim' call
-  var this_0 = get_namespacePrefixRegex().bg(_this__u8e3s4, '$1');
+  var this_0 = get_namespacePrefixRegex().eg(_this__u8e3s4, '$1');
   return toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
 }
 function stripNamespacePrefix(_this__u8e3s4) {
   _init_properties_DefaultLoggerObject_kt__11m6n2();
   // Inline function 'kotlin.text.replace' call
-  return get_namespacePrefixRegex().bg(_this__u8e3s4, '$2');
+  return get_namespacePrefixRegex().eg(_this__u8e3s4, '$2');
 }
 var properties_initialized_DefaultLoggerObject_kt_gbdsjk;
 function _init_properties_DefaultLoggerObject_kt__11m6n2() {
@@ -460,7 +452,7 @@ function _init_properties_DefaultLoggerObject_kt__11m6n2() {
     properties_initialized_DefaultLoggerObject_kt_gbdsjk = true;
     // Inline function 'kotlin.text.toRegex' call
     var this_0 = '^%([^%]+)%(.*)$';
-    namespacePrefixRegex = Regex.uf(this_0);
+    namespacePrefixRegex = Regex.xf(this_0);
   }
 }
 function getLogColorPrefix(color) {
@@ -469,21 +461,21 @@ function getLogColorPrefix(color) {
   }
   var tmp;
   if (equals(color, BLACK_getInstance())) {
-    tmp = DefaultConsoleColors_getInstance().p1g_1;
-  } else if (equals(color, RED_getInstance())) {
-    tmp = DefaultConsoleColors_getInstance().q1g_1;
-  } else if (equals(color, GREEN_getInstance())) {
-    tmp = DefaultConsoleColors_getInstance().r1g_1;
-  } else if (equals(color, YELLOW_getInstance())) {
     tmp = DefaultConsoleColors_getInstance().s1g_1;
-  } else if (equals(color, BLUE_getInstance())) {
+  } else if (equals(color, RED_getInstance())) {
     tmp = DefaultConsoleColors_getInstance().t1g_1;
-  } else if (equals(color, MAGENTA_getInstance())) {
+  } else if (equals(color, GREEN_getInstance())) {
     tmp = DefaultConsoleColors_getInstance().u1g_1;
-  } else if (equals(color, CYAN_getInstance())) {
+  } else if (equals(color, YELLOW_getInstance())) {
     tmp = DefaultConsoleColors_getInstance().v1g_1;
-  } else if (equals(color, WHITE_getInstance())) {
+  } else if (equals(color, BLUE_getInstance())) {
     tmp = DefaultConsoleColors_getInstance().w1g_1;
+  } else if (equals(color, MAGENTA_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().x1g_1;
+  } else if (equals(color, CYAN_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().y1g_1;
+  } else if (equals(color, WHITE_getInstance())) {
+    tmp = DefaultConsoleColors_getInstance().z1g_1;
   } else {
     noWhenBranchMatchedException();
   }
@@ -559,10 +551,6 @@ function LogLevel_LOG_2_getInstance() {
   LogLevel_initEntries();
   return LogLevel_LOG_2_instance;
 }
-function LogLevel_LOG_1_getInstance() {
-  LogLevel_initEntries();
-  return LogLevel_LOG_1_instance;
-}
 function LogLevel_ERROR_getInstance() {
   LogLevel_initEntries();
   return LogLevel_ERROR_instance;
@@ -591,7 +579,7 @@ function wrap($this, color, message) {
   var colorPrefix = $this.getColorPrefix(color);
   var tmp;
   if (!(colorPrefix == null)) {
-    tmp = getNamespacePrefix(message) + colorPrefix + stripNamespacePrefix(message) + DefaultConsoleColors_getInstance().h1g_1;
+    tmp = getNamespacePrefix(message) + colorPrefix + stripNamespacePrefix(message) + DefaultConsoleColors_getInstance().k1g_1;
   } else {
     tmp = message;
   }
@@ -660,7 +648,7 @@ function logReplace(message, fallback) {
   stdout.write(substring(messagePadded, 0, tmp$ret$0), 'utf8');
 }
 function setLogger(logger) {
-  Log_getInstance().a1j(logger);
+  Log_getInstance().b1j(logger);
 }
 function setSingleFunctionLogger(logger) {
   setLogger(createSingleFunctionLogger(logger));

@@ -81,119 +81,119 @@ import {
 //region block: pre-declaration
 class CaosLib {
   constructor(lib, variant) {
-    this.h4v_1 = lib;
-    this.i4v_1 = variant;
+    this.v4w_1 = lib;
+    this.w4w_1 = variant;
     var tmp = this;
-    switch (this.i4v_1.v4s_1) {
+    switch (this.w4w_1.s24_1) {
       case 'DS':
-        tmp.j4v_1 = false;
+        tmp.x4w_1 = false;
         break;
       case 'DS:CE':
-        tmp.j4v_1 = true;
+        tmp.x4w_1 = true;
         break;
       default:
-        tmp.j4v_1 = null;
+        tmp.x4w_1 = null;
         break;
     }
     var tmp_0 = this;
-    var tmp_1 = this.h4v_1.p4q();
+    var tmp_1 = this.v4w_1.m22();
     // Inline function 'kotlin.collections.map' call
-    var this_0 = this.i4v_1.z4s_1;
+    var this_0 = this.w4w_1.w24_1;
     // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList.y1(this_0.b2());
+    var destination = ArrayList.f2(this_0.i2());
     // Inline function 'kotlin.collections.iterator' call
-    var _iterator__ex2g4s = this_0.m2().w();
-    while (_iterator__ex2g4s.x()) {
-      var item = _iterator__ex2g4s.y();
+    var _iterator__ex2g4s = this_0.t2().d1();
+    while (_iterator__ex2g4s.e1()) {
+      var item = _iterator__ex2g4s.f1();
       // Inline function 'kotlin.collections.component1' call
-      var commandString = item.j3();
+      var commandString = item.q3();
       // Inline function 'kotlin.collections.component2' call
-      var commandIds = item.k3();
-      var tmp$ret$3 = to(commandString, toIntArray(commandIds.o3()));
-      destination.z1(tmp$ret$3);
+      var commandIds = item.r3();
+      var tmp$ret$3 = to(commandString, toIntArray(commandIds.v3()));
+      destination.g2(tmp$ret$3);
     }
-    tmp_0.k4v_1 = new CaosCommandMap(tmp_1, toMap(destination), this.j4v_1);
+    tmp_0.y4w_1 = new CaosCommandMap(tmp_1, toMap(destination), this.x4w_1);
     var tmp_2 = this;
-    tmp_2.l4v_1 = lazy(CaosLib$rvalues$delegate$lambda(this));
+    tmp_2.z4w_1 = lazy(CaosLib$rvalues$delegate$lambda(this));
     var tmp_3 = this;
-    var tmp_4 = this.h4v_1.p4q();
+    var tmp_4 = this.v4w_1.m22();
     // Inline function 'kotlin.collections.map' call
-    var this_1 = this.i4v_1.y4s_1;
+    var this_1 = this.w4w_1.v24_1;
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_0 = ArrayList.y1(this_1.b2());
+    var destination_0 = ArrayList.f2(this_1.i2());
     // Inline function 'kotlin.collections.iterator' call
-    var _iterator__ex2g4s_0 = this_1.m2().w();
-    while (_iterator__ex2g4s_0.x()) {
-      var item_0 = _iterator__ex2g4s_0.y();
+    var _iterator__ex2g4s_0 = this_1.t2().d1();
+    while (_iterator__ex2g4s_0.e1()) {
+      var item_0 = _iterator__ex2g4s_0.f1();
       // Inline function 'kotlin.collections.component1' call
-      var commandString_0 = item_0.j3();
+      var commandString_0 = item_0.q3();
       // Inline function 'kotlin.collections.component2' call
-      var commandId = item_0.k3();
+      var commandId = item_0.r3();
       // Inline function 'kotlin.intArrayOf' call
       var tmp$ret$12 = new Int32Array([commandId]);
       var tmp$ret$9 = to(commandString_0, tmp$ret$12);
-      destination_0.z1(tmp$ret$9);
+      destination_0.g2(tmp$ret$9);
     }
-    tmp_3.m4v_1 = new CaosCommandMap(tmp_4, toMap(destination_0), this.j4v_1);
+    tmp_3.a4x_1 = new CaosCommandMap(tmp_4, toMap(destination_0), this.x4w_1);
     var tmp_5 = this;
-    tmp_5.n4v_1 = lazy(CaosLib$lvalues$delegate$lambda(this));
+    tmp_5.b4x_1 = lazy(CaosLib$lvalues$delegate$lambda(this));
     var tmp_6 = this;
-    var tmp_7 = this.h4v_1.p4q();
+    var tmp_7 = this.v4w_1.m22();
     // Inline function 'kotlin.collections.map' call
-    var this_2 = this.i4v_1.x4s_1;
+    var this_2 = this.w4w_1.u24_1;
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_1 = ArrayList.y1(this_2.b2());
+    var destination_1 = ArrayList.f2(this_2.i2());
     // Inline function 'kotlin.collections.iterator' call
-    var _iterator__ex2g4s_1 = this_2.m2().w();
-    while (_iterator__ex2g4s_1.x()) {
-      var item_1 = _iterator__ex2g4s_1.y();
+    var _iterator__ex2g4s_1 = this_2.t2().d1();
+    while (_iterator__ex2g4s_1.e1()) {
+      var item_1 = _iterator__ex2g4s_1.f1();
       // Inline function 'kotlin.collections.component1' call
-      var commandString_1 = item_1.j3();
+      var commandString_1 = item_1.q3();
       // Inline function 'kotlin.collections.component2' call
-      var commandId_0 = item_1.k3();
+      var commandId_0 = item_1.r3();
       // Inline function 'kotlin.intArrayOf' call
       var tmp$ret$19 = new Int32Array([commandId_0]);
       var tmp$ret$16 = to(commandString_1, tmp$ret$19);
-      destination_1.z1(tmp$ret$16);
+      destination_1.g2(tmp$ret$16);
     }
-    tmp_6.o4v_1 = new CaosCommandMap(tmp_7, toMap(destination_1), this.j4v_1);
+    tmp_6.c4x_1 = new CaosCommandMap(tmp_7, toMap(destination_1), this.x4w_1);
     var tmp_8 = this;
-    tmp_8.p4v_1 = lazy(CaosLib$commands$delegate$lambda(this));
+    tmp_8.d4x_1 = lazy(CaosLib$commands$delegate$lambda(this));
     var tmp_9 = this;
-    tmp_9.q4v_1 = lazy(CaosLib$allCommands$delegate$lambda(this));
-    this.r4v_1 = this.i4v_1.w4s_1;
-    this.s4v_1 = this.i4v_1.v4s_1;
-    this.t4v_1 = this.i4v_1.u4s_1;
+    tmp_9.e4x_1 = lazy(CaosLib$allCommands$delegate$lambda(this));
+    this.f4x_1 = this.w4w_1.t24_1;
+    this.g4x_1 = this.w4w_1.s24_1;
+    this.h4x_1 = this.w4w_1.r24_1;
   }
-  l4t() {
-    var tmp0 = this.l4v_1;
+  i25() {
+    var tmp0 = this.z4w_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('rvalues', 1, tmp, CaosLib$_get_rvalues_$ref_yauua3(), null);
-    return tmp0.k3();
+    return tmp0.r3();
   }
-  m4t() {
-    var tmp0 = this.n4v_1;
+  j25() {
+    var tmp0 = this.b4x_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('lvalues', 1, tmp, CaosLib$_get_lvalues_$ref_lhqp3l(), null);
-    return tmp0.k3();
+    return tmp0.r3();
   }
-  k4t() {
-    var tmp0 = this.p4v_1;
+  h25() {
+    var tmp0 = this.d4x_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('commands', 1, tmp, CaosLib$_get_commands_$ref_38ij03(), null);
-    return tmp0.k3();
+    return tmp0.r3();
   }
-  u4v() {
-    return CaosLibs_getInstance().a4w(this.i4v_1.a4t_1);
+  i4x() {
+    return CaosLibs_getInstance().o4x(this.w4w_1.x24_1);
   }
   valuesListWithId(valuesListId) {
-    return CaosLibs_getInstance().y4v_1.get(valuesListId);
+    return CaosLibs_getInstance().m4x_1.get(valuesListId);
   }
   valuesListWithName(valuesListName) {
-    var tmp0 = this.u4v();
+    var tmp0 = this.i4x();
     var tmp$ret$0;
     $l$block: {
       // Inline function 'kotlin.collections.firstOrNull' call
@@ -211,106 +211,106 @@ class CaosLib {
     }
     return tmp$ret$0;
   }
-  b4w(type) {
+  p4x(type) {
     var tmp;
-    if (type === Companion_getInstance().b1t_1) {
-      tmp = this.k4v_1;
-    } else if (type === Companion_getInstance().a1t_1) {
-      tmp = this.m4v_1;
-    } else if (type === Companion_getInstance().z1s_1) {
-      tmp = this.o4v_1;
+    if (type === Companion_getInstance().m1t_1) {
+      tmp = this.y4w_1;
+    } else if (type === Companion_getInstance().l1t_1) {
+      tmp = this.a4x_1;
+    } else if (type === Companion_getInstance().k1t_1) {
+      tmp = this.c4x_1;
     } else {
       throwOnInvalid(type);
     }
     return tmp;
   }
-  c4w(type, tokens, bias) {
+  q4x(type, tokens, bias) {
     var tmp;
-    if (type === Companion_getInstance().b1t_1) {
-      tmp = this.k4v_1;
-    } else if (type === Companion_getInstance().a1t_1) {
-      tmp = this.m4v_1;
-    } else if (type === Companion_getInstance().z1s_1) {
-      tmp = this.o4v_1;
+    if (type === Companion_getInstance().m1t_1) {
+      tmp = this.y4w_1;
+    } else if (type === Companion_getInstance().l1t_1) {
+      tmp = this.a4x_1;
+    } else if (type === Companion_getInstance().k1t_1) {
+      tmp = this.c4x_1;
     } else {
       throwOnInvalid(type);
     }
-    return tmp.d4w(tokens, bias);
+    return tmp.r4x(tokens, bias);
   }
   getCommandWithTypeEnum(type, tokens, bias, $super) {
     bias = bias === VOID ? ValueType_ANY_getInstance() : bias;
-    return $super === VOID ? this.c4w(type, tokens, bias) : $super.c4w.call(this, new CommandType(type), tokens, bias);
+    return $super === VOID ? this.q4x(type, tokens, bias) : $super.q4x.call(this, new CommandType(type), tokens, bias);
   }
-  e4w(type, commandString, bias) {
+  s4x(type, commandString, bias) {
     // Inline function 'kotlin.text.toRegex' call
     // Inline function 'kotlin.text.split' call
     // Inline function 'kotlin.collections.map' call
-    var this_0 = Regex.uf('\\s+').eg(commandString, 0);
+    var this_0 = Regex.xf('\\s+').hg(commandString, 0);
     // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
-    var _iterator__ex2g4s = this_0.w();
-    while (_iterator__ex2g4s.x()) {
-      var item = _iterator__ex2g4s.y();
+    var destination = ArrayList.f2(collectionSizeOrDefault(this_0, 10));
+    var _iterator__ex2g4s = this_0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var item = _iterator__ex2g4s.f1();
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp$ret$5 = item.toLowerCase();
       var tmp$ret$4 = token(tmp$ret$5);
-      destination.z1(tmp$ret$4);
+      destination.g2(tmp$ret$4);
     }
     var tokens = toIntArray(destination);
     var tmp;
-    if (type === Companion_getInstance().b1t_1) {
-      tmp = this.k4v_1;
-    } else if (type === Companion_getInstance().a1t_1) {
-      tmp = this.m4v_1;
-    } else if (type === Companion_getInstance().z1s_1) {
-      tmp = this.o4v_1;
+    if (type === Companion_getInstance().m1t_1) {
+      tmp = this.y4w_1;
+    } else if (type === Companion_getInstance().l1t_1) {
+      tmp = this.a4x_1;
+    } else if (type === Companion_getInstance().k1t_1) {
+      tmp = this.c4x_1;
     } else {
       throwOnInvalid(type);
     }
-    return tmp.d4w(tokens, bias);
+    return tmp.r4x(tokens, bias);
   }
   getCommandFromString(type, commandString, bias, $super) {
     bias = bias === VOID ? ValueType_ANY_getInstance() : bias;
-    return $super === VOID ? this.e4w(type, commandString, bias) : $super.e4w.call(this, new CommandType(type), commandString, bias);
+    return $super === VOID ? this.s4x(type, commandString, bias) : $super.s4x.call(this, new CommandType(type), commandString, bias);
   }
-  f4w(type, tokens, bias) {
+  t4x(type, tokens, bias) {
     var tmp;
-    if (type === Companion_getInstance().b1t_1) {
-      tmp = this.k4v_1;
-    } else if (type === Companion_getInstance().a1t_1) {
-      tmp = this.m4v_1;
-    } else if (type === Companion_getInstance().z1s_1) {
-      tmp = this.o4v_1;
+    if (type === Companion_getInstance().m1t_1) {
+      tmp = this.y4w_1;
+    } else if (type === Companion_getInstance().l1t_1) {
+      tmp = this.a4x_1;
+    } else if (type === Companion_getInstance().k1t_1) {
+      tmp = this.c4x_1;
     } else {
       throwOnInvalid(type);
     }
-    return tmp.d4w(tokens, Companion_instance.fromIntValue(bias));
+    return tmp.r4x(tokens, Companion_instance.fromIntValue(bias));
   }
   get(type, tokens, bias, $super) {
     bias = bias === VOID ? ValueType_ANY_getInstance().value : bias;
-    return $super === VOID ? this.f4w(type, tokens, bias) : $super.f4w.call(this, new CommandType(type), tokens, bias);
+    return $super === VOID ? this.t4x(type, tokens, bias) : $super.t4x.call(this, new CommandType(type), tokens, bias);
   }
 }
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.g4w_1 = function_0;
+    this.u4x_1 = function_0;
   }
-  wg(a, b) {
-    return this.g4w_1(a, b);
+  zg(a, b) {
+    return this.u4x_1(a, b);
   }
   compare(a, b) {
-    return this.wg(a, b);
+    return this.zg(a, b);
   }
-  f4() {
-    return this.g4w_1;
+  m4() {
+    return this.u4x_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals_0(this.f4(), other.f4());
+        tmp_0 = equals_0(this.m4(), other.m4());
       } else {
         tmp_0 = false;
       }
@@ -321,70 +321,70 @@ class sam$kotlin_Comparator$0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.f4());
+    return hashCode(this.m4());
   }
 }
 class CaosLibs$valuesList$1 {
-  d2(key) {
-    return CaosLibs_getInstance().h4w().m4q_1.r3('list_' + key);
+  k2(key) {
+    return CaosLibs_getInstance().v4x().j22_1.y3('list_' + key);
   }
   get(key) {
-    return this.d2((!(key == null) ? typeof key === 'number' : false) ? key : THROW_CCE());
+    return this.k2((!(key == null) ? typeof key === 'number' : false) ? key : THROW_CCE());
   }
 }
 class CaosLibs {
   constructor() {
     CaosLibs_instance = this;
     var tmp = this;
-    tmp.v4v_1 = lazy(CaosLibs$ceOnlyCommands$delegate$lambda);
+    tmp.j4x_1 = lazy(CaosLibs$ceOnlyCommands$delegate$lambda);
     var tmp_0 = this;
-    tmp_0.w4v_1 = lazy(CaosLibs$universalLib$delegate$lambda);
+    tmp_0.k4x_1 = lazy(CaosLibs$universalLib$delegate$lambda);
     var tmp_1 = this;
     // Inline function 'kotlin.collections.mutableMapOf' call
-    tmp_1.x4v_1 = LinkedHashMap.mb();
+    tmp_1.l4x_1 = LinkedHashMap.tb();
     var tmp_2 = this;
-    tmp_2.y4v_1 = new CaosLibs$valuesList$1();
+    tmp_2.m4x_1 = new CaosLibs$valuesList$1();
     var tmp_3 = this;
-    tmp_3.z4v_1 = lazy(CaosLibs$valuesLists$delegate$lambda);
+    tmp_3.n4x_1 = lazy(CaosLibs$valuesLists$delegate$lambda);
   }
-  h4w() {
-    var tmp0 = this.w4v_1;
+  v4x() {
+    var tmp0 = this.k4x_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('universalLib', 1, tmp, CaosLibs$_get_universalLib_$ref_3hwyms(), null);
-    return tmp0.k3();
+    return tmp0.r3();
   }
-  a4w(ids) {
+  o4x(ids) {
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = this.h4w().m4q_1.o3();
+    var tmp0 = this.v4x().j22_1.v3();
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
+    var destination = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
       if (contains(ids, element.id)) {
-        destination.z1(element);
+        destination.g2(element);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
     return copyToArray(destination);
   }
-  j4w(tokens) {
+  x4x(tokens) {
     var numTokens = tokens.length;
     if (numTokens < 1)
       return null;
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = this.h4w().k4q_1.o3();
+    var tmp0 = this.v4x().h22_1.v3();
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
-      if (element.j1s()[0] === tokens[0]) {
-        destination.z1(element);
+    var destination = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
+      if (element.s1s()[0] === tokens[0]) {
+        destination.g2(element);
       }
     }
-    var tmp0_elvis_lhs = this.k4w(destination);
+    var tmp0_elvis_lhs = this.y4x(destination);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return null;
@@ -395,7 +395,7 @@ class CaosLibs {
     var depth = 1;
     var tmp_0;
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!matchSets.u()) {
+    if (!matchSets.b1()) {
       tmp_0 = tokens.length > 1;
     } else {
       tmp_0 = false;
@@ -404,34 +404,34 @@ class CaosLibs {
       // Inline function 'kotlin.collections.filter' call
       var tmp0_0 = matchSets;
       // Inline function 'kotlin.collections.filterTo' call
-      var destination_0 = ArrayList.u1();
-      var _iterator__ex2g4s_0 = tmp0_0.w();
-      while (_iterator__ex2g4s_0.x()) {
-        var element_0 = _iterator__ex2g4s_0.y();
-        if (tokens[1] === getOrNull(element_0.j1s(), 1)) {
-          destination_0.z1(element_0);
+      var destination_0 = ArrayList.b2();
+      var _iterator__ex2g4s_0 = tmp0_0.d1();
+      while (_iterator__ex2g4s_0.e1()) {
+        var element_0 = _iterator__ex2g4s_0.f1();
+        if (tokens[1] === getOrNull(element_0.s1s(), 1)) {
+          destination_0.g2(element_0);
         }
       }
       var tempMatches = destination_0;
       // Inline function 'kotlin.collections.isNotEmpty' call
-      if (!tempMatches.u()) {
+      if (!tempMatches.b1()) {
         depth = depth + 1 | 0;
         matchSets = tempMatches;
         if (tokens.length > 2) {
           // Inline function 'kotlin.collections.filter' call
           var tmp0_1 = matchSets;
           // Inline function 'kotlin.collections.filterTo' call
-          var destination_1 = ArrayList.u1();
-          var _iterator__ex2g4s_1 = tmp0_1.w();
-          while (_iterator__ex2g4s_1.x()) {
-            var element_1 = _iterator__ex2g4s_1.y();
-            if (tokens[2] === getOrNull(element_1.j1s(), 2)) {
-              destination_1.z1(element_1);
+          var destination_1 = ArrayList.b2();
+          var _iterator__ex2g4s_1 = tmp0_1.d1();
+          while (_iterator__ex2g4s_1.e1()) {
+            var element_1 = _iterator__ex2g4s_1.f1();
+            if (tokens[2] === getOrNull(element_1.s1s(), 2)) {
+              destination_1.g2(element_1);
             }
           }
           tempMatches = destination_1;
           // Inline function 'kotlin.collections.isNotEmpty' call
-          if (!tempMatches.u()) {
+          if (!tempMatches.b1()) {
             depth = depth + 1 | 0;
             matchSets = tempMatches;
           }
@@ -441,50 +441,50 @@ class CaosLibs {
     // Inline function 'kotlin.collections.filter' call
     var tmp0_2 = matchSets;
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_2 = ArrayList.u1();
-    var _iterator__ex2g4s_2 = tmp0_2.w();
-    while (_iterator__ex2g4s_2.x()) {
-      var element_2 = _iterator__ex2g4s_2.y();
-      if (element_2.j1s().length === depth) {
-        destination_2.z1(element_2);
+    var destination_2 = ArrayList.b2();
+    var _iterator__ex2g4s_2 = tmp0_2.d1();
+    while (_iterator__ex2g4s_2.e1()) {
+      var element_2 = _iterator__ex2g4s_2.f1();
+      if (element_2.s1s().length === depth) {
+        destination_2.g2(element_2);
       }
     }
     matchSets = destination_2;
     return new Pair(matchSets, depth);
   }
-  kg(variantCode) {
-    var tmp0_safe_receiver = this.x4v_1.r3(variantCode);
+  ng(variantCode) {
+    var tmp0_safe_receiver = this.l4x_1.y3(variantCode);
     if (tmp0_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       return tmp0_safe_receiver;
     }
-    var tmp1_elvis_lhs = this.h4w().l4q_1.r3(variantCode);
+    var tmp1_elvis_lhs = this.v4x().i22_1.y3(variantCode);
     var tmp;
     if (tmp1_elvis_lhs == null) {
-      throw Exception.gc("Invalid variant: '" + variantCode + "' encountered. Known variants are: " + toString(this.h4w().l4q_1.n3()));
+      throw Exception.lc("Invalid variant: '" + variantCode + "' encountered. Known variants are: " + toString(this.v4x().i22_1.u3()));
     } else {
       tmp = tmp1_elvis_lhs;
     }
     var variant = tmp;
-    var lib = new CaosLib(this.h4w(), variant);
+    var lib = new CaosLib(this.v4x(), variant);
     // Inline function 'kotlin.collections.set' call
-    this.x4v_1.l3(variantCode, lib);
+    this.l4x_1.s3(variantCode, lib);
     return lib;
   }
-  i4w(_this__u8e3s4) {
+  w4x(_this__u8e3s4) {
     // Inline function 'kotlin.collections.sortedBy' call
-    var this_0 = this.a4w(_this__u8e3s4.a4t_1);
+    var this_0 = this.o4x(_this__u8e3s4.x24_1);
     // Inline function 'kotlin.comparisons.compareBy' call
     var tmp = CaosLibs$_get_valuesLists_$lambda_xys3of;
     var tmp$ret$1 = new sam$kotlin_Comparator$0(tmp);
     return sortedWith(this_0, tmp$ret$1);
   }
-  k4w(_this__u8e3s4) {
+  y4x(_this__u8e3s4) {
     var tmp;
     // Inline function 'kotlin.collections.isNullOrEmpty' call
-    if (_this__u8e3s4 == null || _this__u8e3s4.u()) {
+    if (_this__u8e3s4 == null || _this__u8e3s4.b1()) {
       tmp = null;
     } else {
       tmp = _this__u8e3s4;
@@ -495,27 +495,27 @@ class CaosLibs {
 class CommandGetter {}
 function get$default(tokens, bias, $super) {
   bias = bias === VOID ? ValueType_ANY_getInstance() : bias;
-  return $super === VOID ? this.d4w(tokens, bias) : $super.d4w.call(this, tokens, bias);
+  return $super === VOID ? this.r4x(tokens, bias) : $super.r4x.call(this, tokens, bias);
 }
 class sam$kotlin_Comparator$0_0 {
   constructor(function_0) {
-    this.m4w_1 = function_0;
+    this.a4y_1 = function_0;
   }
-  wg(a, b) {
-    return this.m4w_1(a, b);
+  zg(a, b) {
+    return this.a4y_1(a, b);
   }
   compare(a, b) {
-    return this.wg(a, b);
+    return this.zg(a, b);
   }
-  f4() {
-    return this.m4w_1;
+  m4() {
+    return this.a4y_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals_0(this.f4(), other.f4());
+        tmp_0 = equals_0(this.m4(), other.m4());
       } else {
         tmp_0 = false;
       }
@@ -526,26 +526,26 @@ class sam$kotlin_Comparator$0_0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.f4());
+    return hashCode(this.m4());
   }
 }
 class CaosCommandMap {
   constructor(commands, tokenIds, ceEnabled) {
-    this.n4w_1 = mapCommands(commands, tokenIds, ceEnabled);
+    this.b4y_1 = mapCommands(commands, tokenIds, ceEnabled);
   }
-  d4w(tokens, bias) {
+  r4x(tokens, bias) {
     var numTokens = tokens.length;
     if (numTokens < 1)
       return null;
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = this.n4w_1;
+    var tmp0 = this.b4y_1;
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
+    var destination = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
       if (tokens[0] === element.first[0]) {
-        destination.z1(element);
+        destination.g2(element);
       }
     }
     var matchSets = destination;
@@ -559,17 +559,17 @@ class CaosCommandMap {
         // Inline function 'kotlin.collections.filter' call
         var tmp0_0 = matchSets;
         // Inline function 'kotlin.collections.filterTo' call
-        var destination_0 = ArrayList.u1();
-        var _iterator__ex2g4s_0 = tmp0_0.w();
-        while (_iterator__ex2g4s_0.x()) {
-          var element_0 = _iterator__ex2g4s_0.y();
+        var destination_0 = ArrayList.b2();
+        var _iterator__ex2g4s_0 = tmp0_0.d1();
+        while (_iterator__ex2g4s_0.e1()) {
+          var element_0 = _iterator__ex2g4s_0.f1();
           if (element_0.first.length > i && tokens[i] === element_0.first[i]) {
-            destination_0.z1(element_0);
+            destination_0.g2(element_0);
           }
         }
         var tempMatches = destination_0;
         // Inline function 'kotlin.collections.isNotEmpty' call
-        if (!tempMatches.u()) {
+        if (!tempMatches.b1()) {
           depth = depth + 1 | 0;
           matchSets = tempMatches;
         }
@@ -578,29 +578,29 @@ class CaosCommandMap {
     // Inline function 'kotlin.collections.filter' call
     var tmp0_1 = matchSets;
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_1 = ArrayList.u1();
-    var _iterator__ex2g4s_1 = tmp0_1.w();
-    while (_iterator__ex2g4s_1.x()) {
-      var element_1 = _iterator__ex2g4s_1.y();
+    var destination_1 = ArrayList.b2();
+    var _iterator__ex2g4s_1 = tmp0_1.d1();
+    while (_iterator__ex2g4s_1.e1()) {
+      var element_1 = _iterator__ex2g4s_1.f1();
       if (element_1.first.length === depth) {
-        destination_1.z1(element_1);
+        destination_1.g2(element_1);
       }
     }
     matchSets = destination_1;
-    if (matchSets.u()) {
+    if (matchSets.b1()) {
       return null;
     }
-    if (matchSets.b2() > 1) {
+    if (matchSets.i2() > 1) {
       var tmp = copyOfRange(tokens, 0, depth);
-      throw Exception.gc('Too many results returned for command ' + joinToString(tmp, ' ', VOID, VOID, VOID, VOID, CaosCommandMap$get$lambda));
+      throw Exception.lc('Too many results returned for command ' + joinToString(tmp, ' ', VOID, VOID, VOID, VOID, CaosCommandMap$get$lambda));
     }
     // Inline function 'kotlin.collections.flatMap' call
     var tmp0_2 = matchSets;
     // Inline function 'kotlin.collections.flatMapTo' call
-    var destination_2 = ArrayList.u1();
-    var _iterator__ex2g4s_2 = tmp0_2.w();
-    while (_iterator__ex2g4s_2.x()) {
-      var element_2 = _iterator__ex2g4s_2.y();
+    var destination_2 = ArrayList.b2();
+    var _iterator__ex2g4s_2 = tmp0_2.d1();
+    while (_iterator__ex2g4s_2.e1()) {
+      var element_2 = _iterator__ex2g4s_2.f1();
       var list = toList(element_2.second);
       addAll(destination_2, list);
     }
@@ -618,25 +618,25 @@ class CaosCommandMap {
 function CaosLib$rvalues$delegate$lambda(this$0) {
   return () => {
     // Inline function 'kotlin.collections.flatMap' call
-    var tmp0 = this$0.i4v_1.z4s_1.o3();
+    var tmp0 = this$0.w4w_1.w24_1.v3();
     // Inline function 'kotlin.collections.flatMapTo' call
-    var destination = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
-      var list = element.o3();
+    var destination = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
+      var list = element.v3();
       addAll(destination, list);
     }
     var rvalueCommandIds = destination;
     // Inline function 'kotlin.collections.filter' call
-    var tmp0_0 = this$0.h4v_1.k4q_1.o3();
+    var tmp0_0 = this$0.v4w_1.h22_1.v3();
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_0 = ArrayList.u1();
-    var _iterator__ex2g4s_0 = tmp0_0.w();
-    while (_iterator__ex2g4s_0.x()) {
-      var element_0 = _iterator__ex2g4s_0.y();
-      if (rvalueCommandIds.g2(element_0.i4p_1) && (this$0.j4v_1 == null || this$0.j4v_1 || !(element_0.w4p_1 === true))) {
-        destination_0.z1(element_0);
+    var destination_0 = ArrayList.b2();
+    var _iterator__ex2g4s_0 = tmp0_0.d1();
+    while (_iterator__ex2g4s_0.e1()) {
+      var element_0 = _iterator__ex2g4s_0.f1();
+      if (rvalueCommandIds.n2(element_0.f21_1) && (this$0.x4w_1 == null || this$0.x4w_1 || !(element_0.t21_1 === true))) {
+        destination_0.g2(element_0);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
@@ -644,20 +644,20 @@ function CaosLib$rvalues$delegate$lambda(this$0) {
   };
 }
 function CaosLib$_get_rvalues_$ref_yauua3() {
-  return (p0) => p0.l4t();
+  return (p0) => p0.i25();
 }
 function CaosLib$lvalues$delegate$lambda(this$0) {
   return () => {
-    var lvalueCommandIds = this$0.i4v_1.y4s_1.o3();
+    var lvalueCommandIds = this$0.w4w_1.v24_1.v3();
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = this$0.h4v_1.k4q_1.o3();
+    var tmp0 = this$0.v4w_1.h22_1.v3();
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
-      if (lvalueCommandIds.g2(element.i4p_1) && (this$0.j4v_1 == null || this$0.j4v_1 || !(element.w4p_1 === true))) {
-        destination.z1(element);
+    var destination = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
+      if (lvalueCommandIds.n2(element.f21_1) && (this$0.x4w_1 == null || this$0.x4w_1 || !(element.t21_1 === true))) {
+        destination.g2(element);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
@@ -665,20 +665,20 @@ function CaosLib$lvalues$delegate$lambda(this$0) {
   };
 }
 function CaosLib$_get_lvalues_$ref_lhqp3l() {
-  return (p0) => p0.m4t();
+  return (p0) => p0.j25();
 }
 function CaosLib$commands$delegate$lambda(this$0) {
   return () => {
-    var commandIds = this$0.i4v_1.x4s_1.o3();
+    var commandIds = this$0.w4w_1.u24_1.v3();
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = this$0.h4v_1.k4q_1.o3();
+    var tmp0 = this$0.v4w_1.h22_1.v3();
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
-      if (commandIds.g2(element.i4p_1) && (this$0.j4v_1 == null || this$0.j4v_1 || !(element.w4p_1 === true))) {
-        destination.z1(element);
+    var destination = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
+      if (commandIds.n2(element.f21_1) && (this$0.x4w_1 == null || this$0.x4w_1 || !(element.t21_1 === true))) {
+        destination.g2(element);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
@@ -686,30 +686,30 @@ function CaosLib$commands$delegate$lambda(this$0) {
   };
 }
 function CaosLib$_get_commands_$ref_38ij03() {
-  return (p0) => p0.k4t();
+  return (p0) => p0.h25();
 }
 function CaosLib$allCommands$delegate$lambda(this$0) {
   return () => {
     // Inline function 'kotlin.collections.flatMap' call
-    var tmp0 = this$0.i4v_1.z4s_1.o3();
+    var tmp0 = this$0.w4w_1.w24_1.v3();
     // Inline function 'kotlin.collections.flatMapTo' call
-    var destination = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
-      var list = element.o3();
+    var destination = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
+      var list = element.v3();
       addAll(destination, list);
     }
-    var commandIds = plus(plus(destination, this$0.i4v_1.y4s_1.o3()), this$0.i4v_1.x4s_1.o3());
+    var commandIds = plus(plus(destination, this$0.w4w_1.v24_1.v3()), this$0.w4w_1.u24_1.v3());
     // Inline function 'kotlin.collections.filter' call
-    var tmp0_0 = this$0.h4v_1.k4q_1.o3();
+    var tmp0_0 = this$0.v4w_1.h22_1.v3();
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_0 = ArrayList.u1();
-    var _iterator__ex2g4s_0 = tmp0_0.w();
-    while (_iterator__ex2g4s_0.x()) {
-      var element_0 = _iterator__ex2g4s_0.y();
-      if (commandIds.g2(element_0.i4p_1) && (this$0.j4v_1 == null || this$0.j4v_1 || !(element_0.w4p_1 === true))) {
-        destination_0.z1(element_0);
+    var destination_0 = ArrayList.b2();
+    var _iterator__ex2g4s_0 = tmp0_0.d1();
+    while (_iterator__ex2g4s_0.e1()) {
+      var element_0 = _iterator__ex2g4s_0.f1();
+      if (commandIds.n2(element_0.f21_1) && (this$0.x4w_1 == null || this$0.x4w_1 || !(element_0.t21_1 === true))) {
+        destination_0.g2(element_0);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
@@ -718,58 +718,58 @@ function CaosLib$allCommands$delegate$lambda(this$0) {
 }
 function CaosLibs$ceOnlyCommands$delegate$lambda() {
   // Inline function 'kotlin.collections.filter' call
-  var tmp0 = CaosLibs_getInstance().h4w().k4q_1;
+  var tmp0 = CaosLibs_getInstance().v4x().h22_1;
   // Inline function 'kotlin.collections.filterTo' call
-  var destination = LinkedHashMap.mb();
+  var destination = LinkedHashMap.tb();
   // Inline function 'kotlin.collections.iterator' call
-  var _iterator__ex2g4s = tmp0.m2().w();
-  while (_iterator__ex2g4s.x()) {
-    var element = _iterator__ex2g4s.y();
-    if (element.k3().w4p_1 === true) {
-      destination.l3(element.j3(), element.k3());
+  var _iterator__ex2g4s = tmp0.t2().d1();
+  while (_iterator__ex2g4s.e1()) {
+    var element = _iterator__ex2g4s.f1();
+    if (element.r3().t21_1 === true) {
+      destination.s3(element.q3(), element.r3());
     }
   }
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_0 = ArrayList.y1(destination.b2());
+  var destination_0 = ArrayList.f2(destination.i2());
   // Inline function 'kotlin.collections.iterator' call
-  var _iterator__ex2g4s_0 = destination.m2().w();
-  while (_iterator__ex2g4s_0.x()) {
-    var item = _iterator__ex2g4s_0.y();
-    var tmp$ret$7 = item.k3().i4p_1;
-    destination_0.z1(tmp$ret$7);
+  var _iterator__ex2g4s_0 = destination.t2().d1();
+  while (_iterator__ex2g4s_0.e1()) {
+    var item = _iterator__ex2g4s_0.f1();
+    var tmp$ret$7 = item.r3().f21_1;
+    destination_0.g2(tmp$ret$7);
   }
   return destination_0;
 }
 function CaosLibs$universalLib$delegate$lambda() {
   var lib = get_universalLib();
   // Inline function 'kotlin.collections.map' call
-  var this_0 = lib.k4q_1;
+  var this_0 = lib.h22_1;
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(this_0.b2());
+  var destination = ArrayList.f2(this_0.i2());
   // Inline function 'kotlin.collections.iterator' call
-  var _iterator__ex2g4s = this_0.m2().w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var _iterator__ex2g4s = this_0.t2().d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     // Inline function 'kotlin.collections.component1' call
-    var key = item.j3();
+    var key = item.q3();
     // Inline function 'kotlin.collections.component2' call
-    var command = item.k3();
+    var command = item.r3();
     var tmp$ret$3 = to(key, applyCE(command));
-    destination.z1(tmp$ret$3);
+    destination.g2(tmp$ret$3);
   }
-  return lib.r4q(VOID, toMap(destination), mapOf([to('C1', ensureNotNull(lib.l4q_1.r3('C1'))), to('C2', ensureNotNull(lib.l4q_1.r3('C2'))), to('CV', ensureNotNull(lib.l4q_1.r3('CV'))), to('C3', ensureNotNull(lib.l4q_1.r3('C3'))), to('DS', ensureNotNull(lib.l4q_1.r3('DS'))), to('DS:CE', ensureNotNull(lib.l4q_1.r3('DS')).f4t('DS: Community Edition', 'DS:CE')), to('SM', ensureNotNull(lib.l4q_1.r3('SM')))]));
+  return lib.o22(VOID, toMap(destination), mapOf([to('C1', ensureNotNull(lib.i22_1.y3('C1'))), to('C2', ensureNotNull(lib.i22_1.y3('C2'))), to('CV', ensureNotNull(lib.i22_1.y3('CV'))), to('C3', ensureNotNull(lib.i22_1.y3('C3'))), to('DS', ensureNotNull(lib.i22_1.y3('DS'))), to('DS:CE', ensureNotNull(lib.i22_1.y3('DS')).c25('DS: Community Edition', 'DS:CE')), to('SM', ensureNotNull(lib.i22_1.y3('SM')))]));
 }
 function CaosLibs$_get_universalLib_$ref_3hwyms() {
-  return (p0) => p0.h4w();
+  return (p0) => p0.v4x();
 }
 function CaosLibs$valuesLists$delegate$lambda() {
   return new HasGetterImpl(CaosLibs$valuesLists$delegate$lambda$lambda);
 }
 function CaosLibs$valuesLists$delegate$lambda$lambda(variant) {
-  var tmp0_safe_receiver = CaosLibs_getInstance().h4w().l4q_1.r3(variant.m4s());
+  var tmp0_safe_receiver = CaosLibs_getInstance().v4x().i22_1.y3(variant.j24());
   // Inline function 'kotlin.collections.orEmpty' call
-  var tmp0_elvis_lhs = tmp0_safe_receiver == null ? null : CaosLibs_getInstance().i4w(tmp0_safe_receiver);
+  var tmp0_elvis_lhs = tmp0_safe_receiver == null ? null : CaosLibs_getInstance().w4x(tmp0_safe_receiver);
   return tmp0_elvis_lhs == null ? emptyList() : tmp0_elvis_lhs;
 }
 function CaosLibs$_get_valuesLists_$lambda_xys3of(a, b) {
@@ -785,77 +785,77 @@ function CaosLibs_getInstance() {
   return CaosLibs_instance;
 }
 function applyCE(_this__u8e3s4) {
-  if (!contains(_this__u8e3s4.p4p_1, 'DS')) {
+  if (!contains(_this__u8e3s4.m21_1, 'DS')) {
     return _this__u8e3s4;
   }
   // Inline function 'kotlin.collections.plus' call
   // Inline function 'kotlin.js.asDynamic' call
-  var tmp$ret$1 = _this__u8e3s4.p4p_1;
+  var tmp$ret$1 = _this__u8e3s4.m21_1;
   // Inline function 'kotlin.arrayOf' call
   // Inline function 'kotlin.js.unsafeCast' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$2 = ['DS:CE'];
   var variants = tmp$ret$1.concat(tmp$ret$2);
-  if (_this__u8e3s4.w4p_1 === true) {
+  if (_this__u8e3s4.t21_1 === true) {
     // Inline function 'kotlin.collections.filter' call
     var tmp0 = variants;
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
+    var destination = ArrayList.b2();
     var inductionVariable = 0;
     var last = tmp0.length;
     while (inductionVariable < last) {
       var element = tmp0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       if (!(element === 'DS')) {
-        destination.z1(element);
+        destination.g2(element);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
     variants = copyToArray(destination);
   }
-  return _this__u8e3s4.f4q(VOID, VOID, VOID, VOID, VOID, VOID, VOID, variants);
+  return _this__u8e3s4.c22(VOID, VOID, VOID, VOID, VOID, VOID, VOID, variants);
 }
 function getCommandsForLib(variant) {
-  var lib = CaosLibs_getInstance().kg(variant);
+  var lib = CaosLibs_getInstance().ng(variant);
   // Inline function 'kotlin.collections.map' call
-  var this_0 = lib.k4t();
+  var this_0 = lib.h25();
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(this_0.length);
+  var destination = ArrayList.f2(this_0.length);
   var inductionVariable = 0;
   var last = this_0.length;
   while (inductionVariable < last) {
     var item = this_0[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
     var tmp$ret$2 = toVariantCommand(item, variant);
-    destination.z1(tmp$ret$2);
+    destination.g2(tmp$ret$2);
   }
   // Inline function 'kotlin.collections.toTypedArray' call
   var tmp0_commands = copyToArray(destination);
   // Inline function 'kotlin.collections.map' call
-  var this_1 = lib.m4t();
+  var this_1 = lib.j25();
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_0 = ArrayList.y1(this_1.length);
+  var destination_0 = ArrayList.f2(this_1.length);
   var inductionVariable_0 = 0;
   var last_0 = this_1.length;
   while (inductionVariable_0 < last_0) {
     var item_0 = this_1[inductionVariable_0];
     inductionVariable_0 = inductionVariable_0 + 1 | 0;
     var tmp$ret$6 = toVariantCommand(item_0, variant);
-    destination_0.z1(tmp$ret$6);
+    destination_0.g2(tmp$ret$6);
   }
   // Inline function 'kotlin.collections.toTypedArray' call
   var tmp1_lvalues = copyToArray(destination_0);
   // Inline function 'kotlin.collections.map' call
-  var this_2 = lib.l4t();
+  var this_2 = lib.i25();
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_1 = ArrayList.y1(this_2.length);
+  var destination_1 = ArrayList.f2(this_2.length);
   var inductionVariable_1 = 0;
   var last_1 = this_2.length;
   while (inductionVariable_1 < last_1) {
     var item_1 = this_2[inductionVariable_1];
     inductionVariable_1 = inductionVariable_1 + 1 | 0;
     var tmp$ret$10 = toVariantCommand(item_1, variant);
-    destination_1.z1(tmp$ret$10);
+    destination_1.g2(tmp$ret$10);
   }
   // Inline function 'kotlin.collections.toTypedArray' call
   var tmp2_rvalues = copyToArray(destination_1);
@@ -869,81 +869,81 @@ function CaosCommandMap$get$lambda(it) {
 function CaosCommandMap$get$lambda_0($bias) {
   return (a, b) => {
     // Inline function 'kotlin.comparisons.compareValuesBy' call
-    var tmp = a.b4q().equals($bias) ? 0 : like(a.b4q(), $bias) ? 1 : 100;
-    var tmp$ret$2 = b.b4q().equals($bias) ? 0 : like(b.b4q(), $bias) ? 1 : 100;
+    var tmp = a.y21().equals($bias) ? 0 : like(a.y21(), $bias) ? 1 : 100;
+    var tmp$ret$2 = b.y21().equals($bias) ? 0 : like(b.y21(), $bias) ? 1 : 100;
     return compareValues(tmp, tmp$ret$2);
   };
 }
 function mapCommands(commands, tokenIds, ceEnabled) {
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(tokenIds.b2());
+  var destination = ArrayList.f2(tokenIds.i2());
   // Inline function 'kotlin.collections.iterator' call
-  var _iterator__ex2g4s = tokenIds.m2().w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var _iterator__ex2g4s = tokenIds.t2().d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     // Inline function 'kotlin.collections.component1' call
-    var commandString = item.j3();
+    var commandString = item.q3();
     // Inline function 'kotlin.collections.component2' call
-    var commandIds = item.k3();
+    var commandIds = item.r3();
     // Inline function 'kotlin.collections.map' call
     var this_0 = split(commandString, charArrayOf([_Char___init__impl__6a9atx(32)]));
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_0 = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
-    var _iterator__ex2g4s_0 = this_0.w();
-    while (_iterator__ex2g4s_0.x()) {
-      var item_0 = _iterator__ex2g4s_0.y();
+    var destination_0 = ArrayList.f2(collectionSizeOrDefault(this_0, 10));
+    var _iterator__ex2g4s_0 = this_0.d1();
+    while (_iterator__ex2g4s_0.e1()) {
+      var item_0 = _iterator__ex2g4s_0.f1();
       var tmp$ret$8 = token(item_0);
-      destination_0.z1(tmp$ret$8);
+      destination_0.g2(tmp$ret$8);
     }
     var tokens = toIntArray(destination_0);
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_1 = LinkedHashMap.mb();
+    var destination_1 = LinkedHashMap.tb();
     // Inline function 'kotlin.collections.iterator' call
-    var _iterator__ex2g4s_1 = commands.m2().w();
-    while (_iterator__ex2g4s_1.x()) {
-      var element = _iterator__ex2g4s_1.y();
-      if (contains_0(commandIds, element.j3())) {
-        destination_1.l3(element.j3(), element.k3());
+    var _iterator__ex2g4s_1 = commands.t2().d1();
+    while (_iterator__ex2g4s_1.e1()) {
+      var element = _iterator__ex2g4s_1.f1();
+      if (contains_0(commandIds, element.q3())) {
+        destination_1.s3(element.q3(), element.r3());
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_1 = destination_1.o3();
+    var this_1 = destination_1.v3();
     var matchingCommands = copyToArray(this_1);
     if (!(matchingCommands.length === commandIds.length))
-      throw Exception.gc("Mismatched token to id conversion. Failed to find all referenced commands for '" + commandString + "'");
+      throw Exception.lc("Mismatched token to id conversion. Failed to find all referenced commands for '" + commandString + "'");
     var tmp$ret$3 = to(tokens, matchingCommands);
-    destination.z1(tmp$ret$3);
+    destination.g2(tmp$ret$3);
   }
   var out = destination;
   var tmp;
   if (ceEnabled === false) {
     // Inline function 'kotlin.collections.mapNotNull' call
     // Inline function 'kotlin.collections.mapNotNullTo' call
-    var destination_2 = ArrayList.u1();
+    var destination_2 = ArrayList.b2();
     // Inline function 'kotlin.collections.forEach' call
-    var _iterator__ex2g4s_2 = out.w();
-    while (_iterator__ex2g4s_2.x()) {
-      var element_0 = _iterator__ex2g4s_2.y();
-      var tokens_0 = element_0.ki();
-      var commands_0 = element_0.li();
+    var _iterator__ex2g4s_2 = out.d1();
+    while (_iterator__ex2g4s_2.e1()) {
+      var element_0 = _iterator__ex2g4s_2.f1();
+      var tokens_0 = element_0.ni();
+      var commands_0 = element_0.oi();
       // Inline function 'kotlin.collections.filter' call
       // Inline function 'kotlin.collections.filterTo' call
-      var destination_3 = ArrayList.u1();
+      var destination_3 = ArrayList.b2();
       var inductionVariable = 0;
       var last = commands_0.length;
       while (inductionVariable < last) {
         var element_1 = commands_0[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        if (!(element_1.w4p_1 === true)) {
-          destination_3.z1(element_1);
+        if (!(element_1.t21_1 === true)) {
+          destination_3.g2(element_1);
         }
       }
       var filtered = destination_3;
       var tmp_0;
       // Inline function 'kotlin.collections.isNotEmpty' call
-      if (!filtered.u()) {
+      if (!filtered.b1()) {
         // Inline function 'kotlin.collections.toTypedArray' call
         var tmp$ret$23 = copyToArray(filtered);
         tmp_0 = to(tokens_0, tmp$ret$23);
@@ -955,7 +955,7 @@ function mapCommands(commands, tokenIds, ceEnabled) {
         null;
       else {
         // Inline function 'kotlin.let' call
-        destination_2.z1(tmp0_safe_receiver);
+        destination_2.g2(tmp0_safe_receiver);
       }
     }
     tmp = destination_2;
@@ -965,7 +965,7 @@ function mapCommands(commands, tokenIds, ceEnabled) {
   return tmp;
 }
 function getValuesList(id) {
-  return get_universalLib().m4q_1.r3('list_' + id);
+  return get_universalLib().j22_1.y3('list_' + id);
 }
 function getValueTypeName(value) {
   return Companion_instance.simpleName(value);
@@ -976,7 +976,7 @@ function get_caosLibsJsonSerializer() {
   var tmp = KProperty0;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('caosLibsJsonSerializer', 0, tmp, _get_caosLibsJsonSerializer_$ref_d145f4(), null);
-  return tmp0.k3();
+  return tmp0.r3();
 }
 var caosLibsJsonSerializer$delegate;
 function getCommandsForVariant(variant) {
@@ -985,7 +985,7 @@ function getCommandsForVariant(variant) {
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosLibsJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.rw();
+  var this_1 = this_0.uw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer(this_1, createKType(getKClass(Commands), arrayOf([]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -997,7 +997,7 @@ function getValuesList_0(id) {
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosLibsJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.rw();
+  var this_1 = this_0.uw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer(this_1, createKType(getKClass(CaosValuesList), arrayOf([]), true));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -1005,13 +1005,13 @@ function getValuesList_0(id) {
 }
 function getAllValuesLists(variant) {
   _init_properties_libs_kt__k8ocmq();
-  var valuesLists = CaosLibs_getInstance().kg(variant).u4v();
+  var valuesLists = CaosLibs_getInstance().ng(variant).i4x();
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosLibsJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.rw();
+  var this_1 = this_0.uw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer(this_1, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CaosValuesList), arrayOf([]), false))]), false));
+  var this_2 = serializer(this_1, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CaosValuesList), arrayOf([]), false))]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
   return encodeToDynamic(this_0, tmp$ret$1, valuesLists);
 }
@@ -1025,7 +1025,7 @@ function caosLibsJsonSerializer$delegate$lambda() {
 }
 function caosLibsJsonSerializer$delegate$lambda$lambda($this$Json) {
   _init_properties_libs_kt__k8ocmq();
-  $this$Json.w45_1 = true;
+  $this$Json.a4j_1 = true;
   return Unit_instance;
 }
 function _get_caosLibsJsonSerializer_$ref_d145f4() {
@@ -1045,7 +1045,7 @@ initMetadataForClass(CaosLibs$valuesList$1);
 initMetadataForObject(CaosLibs, 'CaosLibs');
 initMetadataForInterface(CommandGetter, 'CommandGetter');
 initMetadataForClass(sam$kotlin_Comparator$0_0, 'sam$kotlin_Comparator$0', VOID, VOID, [Comparator, FunctionAdapter]);
-protoOf(CaosCommandMap).l4w = get$default;
+protoOf(CaosCommandMap).z4x = get$default;
 initMetadataForClass(CaosCommandMap, 'CaosCommandMap', VOID, VOID, [CommandGetter]);
 //endregion
 //region block: exports

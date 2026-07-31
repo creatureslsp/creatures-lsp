@@ -30,97 +30,71 @@ export type CaosParserItem = TextWithRange & CaosItem & ParseTreeItem & {
 }
 
 export declare type IntVal = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: number;
 }
 
 export declare type FloatVal = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: number;
 }
 
 export declare type CharVal = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: number;
 }
 
 export declare type BinaryVal = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: number;
 }
 
 export declare type ByteString = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: string;
 }
 
 export declare type C2eStringVal = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: string;
 }
 
 export declare type C1eStringVal = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: string;
 }
 
 export declare type TokenVal = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: string;
 }
 
 export declare type EqJoinVal = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: string;
 }
 
 export declare type EqOpVal = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: string;
 }
 
 export declare type DdePictVal = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: { first: number; second: number; };
 }
 
 export declare type ErrorVal = CaosParserItem & {
     readonly message: string;
     readonly errorCode: number;
-    readonly actualType: number;
     readonly actualTokenType: number;
-    readonly typeToken: number;
     readonly value: string;
 }
 
 export declare type IndexedVarVal = CaosParserItem & {
     readonly indexedVarType: string;
     readonly index: number;
-    readonly typeToken: number;
-    readonly actualType: number;
+    readonly value: string;
+}
+
+export declare type ListBrace = CaosParserItem & {
     readonly value: string;
 }
 
 export declare type AutocompleteHint = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: string;
 }
 
 export declare type Comment = CaosParserItem & {
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly value: string;
 }
 
@@ -130,8 +104,6 @@ export declare type Caos2Comment = CaosParserItem & {
     readonly eq: Nullable<TokenVal>;
     readonly caos2Hash: Nullable<TokenVal>;
     readonly valueAsStrings: Array<string>;
-    readonly typeToken: number;
-    readonly actualType: number;
     readonly isTag: boolean;
     readonly tag: Nullable<string>;
     readonly command: Nullable<string>;
@@ -139,15 +111,11 @@ export declare type Caos2Comment = CaosParserItem & {
     readonly value: string;
 }
 export declare type CommandToken = CaosParserItem & {
-    readonly actualType: number;
     readonly token: number;
-    readonly typeToken: number;
     readonly value: string;
 }
 export declare type CompoundCommandToken = CaosParserItem & {
-    readonly actualType: number;
     readonly tokens: Array<CommandToken>;
-    readonly typeToken: number;
     readonly value: string;
 }
 
@@ -156,14 +124,10 @@ export declare type WhitespaceItem = CaosParserItem & WhitespaceParseTreeItem & 
 }
 
 export declare type NewLine = WhitespaceItem & {
-    readonly actualType: number;
-    readonly typeToken: number;
+    readonly lines: number;
 }
 
-export declare type Spaces = WhitespaceItem & NewLineParseTreeItem & {
-    readonly actualType: number;
-    readonly typeToken: number;
-}
+export declare type Spaces = WhitespaceItem & NewLineParseTreeItem;
 
 export declare class CaosScript {
     readonly commandString: Nullable<string>;

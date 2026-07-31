@@ -45,59 +45,59 @@ class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.edit.TextEditImpl', this, 2);
-    tmp0_serialDesc.w13('range', false);
-    tmp0_serialDesc.w13('newText', false);
-    this.k52_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('range', false);
+    tmp0_serialDesc.z13('newText', false);
+    this.u54_1 = tmp0_serialDesc;
   }
-  l52(encoder, value) {
-    var tmp0_desc = this.k52_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.tx(tmp0_desc, 0, RangeSerializer_getInstance(), value.m52_1);
-    tmp1_output.rx(tmp0_desc, 1, value.n52_1);
-    tmp1_output.cw(tmp0_desc);
+  v54(encoder, value) {
+    var tmp0_desc = this.u54_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    tmp1_output.wx(tmp0_desc, 0, RangeSerializer_getInstance(), value.w54_1);
+    tmp1_output.ux(tmp0_desc, 1, value.x54_1);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.l52(encoder, value instanceof TextEditImpl ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.v54(encoder, value instanceof TextEditImpl ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.k52_1;
+  qr(decoder) {
+    var tmp0_desc = this.u54_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = null;
     var tmp5_local1 = null;
-    var tmp6_input = decoder.bw(tmp0_desc);
-    if (tmp6_input.sw()) {
-      tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, RangeSerializer_getInstance(), tmp4_local0);
+    var tmp6_input = decoder.ew(tmp0_desc);
+    if (tmp6_input.vw()) {
+      tmp4_local0 = tmp6_input.qw(tmp0_desc, 0, RangeSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp6_input.lw(tmp0_desc, 1);
+      tmp5_local1 = tmp6_input.ow(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp6_input.tw(tmp0_desc);
+        tmp2_index = tmp6_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, RangeSerializer_getInstance(), tmp4_local0);
+            tmp4_local0 = tmp6_input.qw(tmp0_desc, 0, RangeSerializer_getInstance(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp6_input.lw(tmp0_desc, 1);
+            tmp5_local1 = tmp6_input.ow(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp6_input.cw(tmp0_desc);
-    return TextEditImpl.o52(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    tmp6_input.fw(tmp0_desc);
+    return TextEditImpl.y54(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
-  lr() {
-    return this.k52_1;
+  or() {
+    return this.u54_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -106,29 +106,29 @@ class $serializer {
 }
 class TextEditImpl {
   constructor(range, newText) {
-    this.m52_1 = range;
-    this.n52_1 = newText;
+    this.w54_1 = range;
+    this.x54_1 = newText;
   }
-  dg() {
-    return this.m52_1;
+  gg() {
+    return this.w54_1;
   }
-  j52() {
-    return this.n52_1;
+  t54() {
+    return this.x54_1;
   }
-  p52(range, newText) {
+  z54(range, newText) {
     return new TextEditImpl(range, newText);
   }
-  q52(range, newText, $super) {
-    range = range === VOID ? this.m52_1 : range;
-    newText = newText === VOID ? this.n52_1 : newText;
-    return $super === VOID ? this.p52(range, newText) : $super.p52.call(this, range, newText);
+  a55(range, newText, $super) {
+    range = range === VOID ? this.w54_1 : range;
+    newText = newText === VOID ? this.x54_1 : newText;
+    return $super === VOID ? this.z54(range, newText) : $super.z54.call(this, range, newText);
   }
   toString() {
-    return 'TextEditImpl(range=' + toString(this.m52_1) + ', newText=' + this.n52_1 + ')';
+    return 'TextEditImpl(range=' + toString(this.w54_1) + ', newText=' + this.x54_1 + ')';
   }
   hashCode() {
-    var result = hashCode(this.m52_1);
-    result = imul(result, 31) + getStringHashCode(this.n52_1) | 0;
+    var result = hashCode(this.w54_1);
+    result = imul(result, 31) + getStringHashCode(this.x54_1) | 0;
     return result;
   }
   equals(other) {
@@ -136,72 +136,72 @@ class TextEditImpl {
       return true;
     if (!(other instanceof TextEditImpl))
       return false;
-    if (!equals(this.m52_1, other.m52_1))
+    if (!equals(this.w54_1, other.w54_1))
       return false;
-    if (!(this.n52_1 === other.n52_1))
+    if (!(this.x54_1 === other.x54_1))
       return false;
     return true;
   }
-  static o52(seen0, range, newText, serializationConstructorMarker) {
+  static y54(seen0, range, newText, serializationConstructorMarker) {
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance().k52_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance().u54_1);
     }
     var $this = createThis(this);
-    $this.m52_1 = range;
-    $this.n52_1 = newText;
+    $this.w54_1 = range;
+    $this.x54_1 = newText;
     return $this;
   }
 }
 class TextEditSerializer {
   constructor() {
     TextEditSerializer_instance = this;
-    this.r52_1 = 0;
-    this.s52_1 = 1;
+    this.b55_1 = 0;
+    this.c55_1 = 1;
     var tmp = this;
-    tmp.t52_1 = lazy(TextEditSerializer$descriptor$delegate$lambda);
+    tmp.d55_1 = lazy(TextEditSerializer$descriptor$delegate$lambda);
   }
-  lr() {
-    var tmp0 = this.t52_1;
+  or() {
+    var tmp0 = this.d55_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, TextEditSerializer$_get_descriptor_$ref_svr1dy(), null);
-    return tmp0.k3();
+    return tmp0.r3();
   }
-  nr(decoder) {
-    var descriptor = this.lr();
+  qr(decoder) {
+    var descriptor = this.or();
     var range = null;
     var newText = null;
-    var ob = decoder.bw(descriptor);
+    var ob = decoder.ew(descriptor);
     var index;
     $l$loop: while (true) {
       // Inline function 'kotlin.also' call
-      var this_0 = ob.tw(descriptor);
+      var this_0 = ob.ww(descriptor);
       index = this_0;
       if (!!(this_0 === -1)) {
         break $l$loop;
       }
       if (index === 0)
-        range = ob.ow(descriptor, index, RangeSerializer_getInstance());
+        range = ob.rw(descriptor, index, RangeSerializer_getInstance());
       else if (index === 1)
-        newText = ob.lw(descriptor, index);
+        newText = ob.ow(descriptor, index);
     }
-    ob.cw(descriptor);
+    ob.fw(descriptor);
     if (range == null || newText == null) {
       var tmp1_subject = range;
       var error = tmp1_subject == null && newText == null ? 'Invalid EditText serialized data. Missing: "range" and "new_text" values' : tmp1_subject == null ? 'Invalid EditText serialized data. Missing: "range" value' : 'Invalid EditText serialized data. Missing: "new_text" value';
-      throw SerializationException.dt(error);
+      throw SerializationException.gt(error);
     }
     return new TextEditImpl(range, newText);
   }
-  u52(encoder, value) {
-    var descriptor = this.lr();
-    var ob = encoder.bw(descriptor);
-    ob.tx(descriptor, 0, RangeSerializer_getInstance(), value.dg());
-    ob.rx(descriptor, 1, value.j52());
-    ob.cw(descriptor);
+  e55(encoder, value) {
+    var descriptor = this.or();
+    var ob = encoder.ew(descriptor);
+    ob.wx(descriptor, 0, RangeSerializer_getInstance(), value.gg());
+    ob.ux(descriptor, 1, value.t54());
+    ob.fw(descriptor);
   }
-  mr(encoder, value) {
-    return this.u52(encoder, (!(value == null) ? isInterface(value, TextEdit) : false) ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.e55(encoder, (!(value == null) ? isInterface(value, TextEdit) : false) ? value : THROW_CCE());
   }
 }
 //endregion
@@ -219,19 +219,19 @@ function TextEditSerializer$descriptor$delegate$lambda() {
   return buildClassSerialDescriptor('TextEdit', [], TextEditSerializer$descriptor$delegate$lambda$lambda);
 }
 function TextEditSerializer$descriptor$delegate$lambda$lambda($this$buildClassSerialDescriptor) {
-  $this$buildClassSerialDescriptor.wr('range', RangeSerializer_getInstance().lr());
+  $this$buildClassSerialDescriptor.zr('range', RangeSerializer_getInstance().or());
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName = 'new_text';
   var annotations = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().je(), arrayOf([]), false));
-  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).lr();
-  $this$buildClassSerialDescriptor.xu(elementName, descriptor, annotations, false);
+  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().me(), arrayOf([]), false));
+  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).or();
+  $this$buildClassSerialDescriptor.av(elementName, descriptor, annotations, false);
   return Unit_instance;
 }
 function TextEditSerializer$_get_descriptor_$ref_svr1dy() {
-  return (p0) => p0.lr();
+  return (p0) => p0.or();
 }
 var TextEditSerializer_instance;
 function TextEditSerializer_getInstance() {
@@ -242,7 +242,7 @@ function TextEditSerializer_getInstance() {
 //region block: post-declaration
 initMetadataForInterface(TextEdit, 'TextEdit', VOID, VOID, VOID, VOID, VOID, {0: TextEditSerializer_getInstance});
 initMetadataForCompanion(Companion);
-protoOf($serializer).m14 = typeParametersSerializers;
+protoOf($serializer).p14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(TextEditImpl, 'TextEditImpl', VOID, VOID, [TextEdit], VOID, VOID, {0: $serializer_getInstance});
 initMetadataForObject(TextEditSerializer, 'TextEditSerializer', VOID, VOID, [KSerializer]);

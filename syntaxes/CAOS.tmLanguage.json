@@ -37,6 +37,14 @@
     },
     {
       "include": "#literals"
+    },
+    {
+        "match": "{",
+        "name": "punctuation.section.block.begin.caos"
+    },
+    {
+        "match": "}",
+        "name": "punctuation.section.block.end.caos"
     }
   ],
   "repository": {

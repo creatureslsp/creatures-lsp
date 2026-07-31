@@ -157,7 +157,7 @@ var imul = Math.imul;
 //endregion
 //region block: pre-declaration
 class Companion {
-  k1e() {
+  n1e() {
     return $serializer_getInstance();
   }
 }
@@ -165,26 +165,26 @@ class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.completion.CaosCompletionData.CommandData', this, 4);
-    tmp0_serialDesc.w13('command', false);
-    tmp0_serialDesc.w13('returnTypeId', false);
-    tmp0_serialDesc.w13('firstToken', false);
-    tmp0_serialDesc.w13('ceOnly', false);
-    this.u55_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('command', false);
+    tmp0_serialDesc.z13('returnTypeId', false);
+    tmp0_serialDesc.z13('firstToken', false);
+    tmp0_serialDesc.z13('ceOnly', false);
+    this.e58_1 = tmp0_serialDesc;
   }
-  v55(encoder, value) {
-    var tmp0_desc = this.u55_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.rx(tmp0_desc, 0, value.w55_1);
-    tmp1_output.mx(tmp0_desc, 1, value.x55_1);
-    tmp1_output.mx(tmp0_desc, 2, value.y55_1);
-    tmp1_output.jx(tmp0_desc, 3, value.z55_1);
-    tmp1_output.cw(tmp0_desc);
+  f58(encoder, value) {
+    var tmp0_desc = this.e58_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    tmp1_output.ux(tmp0_desc, 0, value.g58_1);
+    tmp1_output.px(tmp0_desc, 1, value.h58_1);
+    tmp1_output.px(tmp0_desc, 2, value.i58_1);
+    tmp1_output.mx(tmp0_desc, 3, value.j58_1);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.v55(encoder, value instanceof CommandData ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.f58(encoder, value instanceof CommandData ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.u55_1;
+  qr(decoder) {
+    var tmp0_desc = this.e58_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -192,50 +192,50 @@ class $serializer {
     var tmp5_local1 = 0;
     var tmp6_local2 = 0;
     var tmp7_local3 = false;
-    var tmp8_input = decoder.bw(tmp0_desc);
-    if (tmp8_input.sw()) {
-      tmp4_local0 = tmp8_input.lw(tmp0_desc, 0);
+    var tmp8_input = decoder.ew(tmp0_desc);
+    if (tmp8_input.vw()) {
+      tmp4_local0 = tmp8_input.ow(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp8_input.gw(tmp0_desc, 1);
+      tmp5_local1 = tmp8_input.jw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp8_input.gw(tmp0_desc, 2);
+      tmp6_local2 = tmp8_input.jw(tmp0_desc, 2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp8_input.dw(tmp0_desc, 3);
+      tmp7_local3 = tmp8_input.gw(tmp0_desc, 3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp8_input.tw(tmp0_desc);
+        tmp2_index = tmp8_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp8_input.lw(tmp0_desc, 0);
+            tmp4_local0 = tmp8_input.ow(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp8_input.gw(tmp0_desc, 1);
+            tmp5_local1 = tmp8_input.jw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp8_input.gw(tmp0_desc, 2);
+            tmp6_local2 = tmp8_input.jw(tmp0_desc, 2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp8_input.dw(tmp0_desc, 3);
+            tmp7_local3 = tmp8_input.gw(tmp0_desc, 3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp8_input.cw(tmp0_desc);
-    return CommandData.a56(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
+    tmp8_input.fw(tmp0_desc);
+    return CommandData.k58(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
   }
-  lr() {
-    return this.u55_1;
+  or() {
+    return this.e58_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -243,7 +243,7 @@ class $serializer {
   }
 }
 class Companion_0 {
-  k1e() {
+  n1e() {
     return $serializer_getInstance_0();
   }
 }
@@ -251,68 +251,68 @@ class $serializer_0 {
   constructor() {
     $serializer_instance_0 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.completion.CaosCompletionData.VariableData', this, 3);
-    tmp0_serialDesc.w13('command', false);
-    tmp0_serialDesc.w13('prefix', false);
-    tmp0_serialDesc.w13('index', false);
-    this.b56_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('command', false);
+    tmp0_serialDesc.z13('prefix', false);
+    tmp0_serialDesc.z13('index', false);
+    this.l58_1 = tmp0_serialDesc;
   }
-  c56(encoder, value) {
-    var tmp0_desc = this.b56_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.rx(tmp0_desc, 0, value.d56_1);
-    tmp1_output.rx(tmp0_desc, 1, value.e56_1);
-    tmp1_output.mx(tmp0_desc, 2, value.f56_1);
-    tmp1_output.cw(tmp0_desc);
+  m58(encoder, value) {
+    var tmp0_desc = this.l58_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    tmp1_output.ux(tmp0_desc, 0, value.n58_1);
+    tmp1_output.ux(tmp0_desc, 1, value.o58_1);
+    tmp1_output.px(tmp0_desc, 2, value.p58_1);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.c56(encoder, value instanceof VariableData ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.m58(encoder, value instanceof VariableData ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.b56_1;
+  qr(decoder) {
+    var tmp0_desc = this.l58_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = null;
     var tmp5_local1 = null;
     var tmp6_local2 = 0;
-    var tmp7_input = decoder.bw(tmp0_desc);
-    if (tmp7_input.sw()) {
-      tmp4_local0 = tmp7_input.lw(tmp0_desc, 0);
+    var tmp7_input = decoder.ew(tmp0_desc);
+    if (tmp7_input.vw()) {
+      tmp4_local0 = tmp7_input.ow(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp7_input.lw(tmp0_desc, 1);
+      tmp5_local1 = tmp7_input.ow(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp7_input.gw(tmp0_desc, 2);
+      tmp6_local2 = tmp7_input.jw(tmp0_desc, 2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp7_input.tw(tmp0_desc);
+        tmp2_index = tmp7_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp7_input.lw(tmp0_desc, 0);
+            tmp4_local0 = tmp7_input.ow(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp7_input.lw(tmp0_desc, 1);
+            tmp5_local1 = tmp7_input.ow(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp7_input.gw(tmp0_desc, 2);
+            tmp6_local2 = tmp7_input.jw(tmp0_desc, 2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp7_input.cw(tmp0_desc);
-    return VariableData.g56(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, null);
+    tmp7_input.fw(tmp0_desc);
+    return VariableData.q58(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, null);
   }
-  lr() {
-    return this.b56_1;
+  or() {
+    return this.l58_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -324,27 +324,27 @@ class CaosCompletionData extends CompletionItemData {
     Companion_getInstance_2();
     super();
   }
-  static i56(seen0, serializationConstructorMarker) {
+  static s58(seen0, serializationConstructorMarker) {
     Companion_getInstance_2();
-    return this.p53(seen0, serializationConstructorMarker);
+    return this.z55(seen0, serializationConstructorMarker);
   }
 }
 class CommandData extends CaosCompletionData {
   constructor(command, returnTypeId, firstToken, ceOnly) {
     super();
-    this.w55_1 = command;
-    this.x55_1 = returnTypeId;
-    this.y55_1 = firstToken;
-    this.z55_1 = ceOnly;
+    this.g58_1 = command;
+    this.h58_1 = returnTypeId;
+    this.i58_1 = firstToken;
+    this.j58_1 = ceOnly;
   }
   toString() {
-    return 'CommandData(command=' + this.w55_1 + ', returnTypeId=' + this.x55_1 + ', firstToken=' + this.y55_1 + ', ceOnly=' + this.z55_1 + ')';
+    return 'CommandData(command=' + this.g58_1 + ', returnTypeId=' + this.h58_1 + ', firstToken=' + this.i58_1 + ', ceOnly=' + this.j58_1 + ')';
   }
   hashCode() {
-    var result = getStringHashCode(this.w55_1);
-    result = imul(result, 31) + this.x55_1 | 0;
-    result = imul(result, 31) + this.y55_1 | 0;
-    result = imul(result, 31) + getBooleanHashCode(this.z55_1) | 0;
+    var result = getStringHashCode(this.g58_1);
+    result = imul(result, 31) + this.h58_1 | 0;
+    result = imul(result, 31) + this.i58_1 | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.j58_1) | 0;
     return result;
   }
   equals(other) {
@@ -352,42 +352,42 @@ class CommandData extends CaosCompletionData {
       return true;
     if (!(other instanceof CommandData))
       return false;
-    if (!(this.w55_1 === other.w55_1))
+    if (!(this.g58_1 === other.g58_1))
       return false;
-    if (!(this.x55_1 === other.x55_1))
+    if (!(this.h58_1 === other.h58_1))
       return false;
-    if (!(this.y55_1 === other.y55_1))
+    if (!(this.i58_1 === other.i58_1))
       return false;
-    if (!(this.z55_1 === other.z55_1))
+    if (!(this.j58_1 === other.j58_1))
       return false;
     return true;
   }
-  static a56(seen0, command, returnTypeId, firstToken, ceOnly, serializationConstructorMarker) {
+  static k58(seen0, command, returnTypeId, firstToken, ceOnly, serializationConstructorMarker) {
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance().u55_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance().e58_1);
     }
-    var $this = this.i56(seen0, serializationConstructorMarker);
-    $this.w55_1 = command;
-    $this.x55_1 = returnTypeId;
-    $this.y55_1 = firstToken;
-    $this.z55_1 = ceOnly;
+    var $this = this.s58(seen0, serializationConstructorMarker);
+    $this.g58_1 = command;
+    $this.h58_1 = returnTypeId;
+    $this.i58_1 = firstToken;
+    $this.j58_1 = ceOnly;
     return $this;
   }
 }
 class VariableData extends CaosCompletionData {
   constructor(command, prefix, index) {
     super();
-    this.d56_1 = command;
-    this.e56_1 = prefix;
-    this.f56_1 = index;
+    this.n58_1 = command;
+    this.o58_1 = prefix;
+    this.p58_1 = index;
   }
   toString() {
-    return 'VariableData(command=' + this.d56_1 + ', prefix=' + this.e56_1 + ', index=' + this.f56_1 + ')';
+    return 'VariableData(command=' + this.n58_1 + ', prefix=' + this.o58_1 + ', index=' + this.p58_1 + ')';
   }
   hashCode() {
-    var result = getStringHashCode(this.d56_1);
-    result = imul(result, 31) + getStringHashCode(this.e56_1) | 0;
-    result = imul(result, 31) + this.f56_1 | 0;
+    var result = getStringHashCode(this.n58_1);
+    result = imul(result, 31) + getStringHashCode(this.o58_1) | 0;
+    result = imul(result, 31) + this.p58_1 | 0;
     return result;
   }
   equals(other) {
@@ -395,22 +395,22 @@ class VariableData extends CaosCompletionData {
       return true;
     if (!(other instanceof VariableData))
       return false;
-    if (!(this.d56_1 === other.d56_1))
+    if (!(this.n58_1 === other.n58_1))
       return false;
-    if (!(this.e56_1 === other.e56_1))
+    if (!(this.o58_1 === other.o58_1))
       return false;
-    if (!(this.f56_1 === other.f56_1))
+    if (!(this.p58_1 === other.p58_1))
       return false;
     return true;
   }
-  static g56(seen0, command, prefix, index, serializationConstructorMarker) {
+  static q58(seen0, command, prefix, index, serializationConstructorMarker) {
     if (!(7 === (7 & seen0))) {
-      throwMissingFieldException(seen0, 7, $serializer_getInstance_0().b56_1);
+      throwMissingFieldException(seen0, 7, $serializer_getInstance_0().l58_1);
     }
-    var $this = this.i56(seen0, serializationConstructorMarker);
-    $this.d56_1 = command;
-    $this.e56_1 = prefix;
-    $this.f56_1 = index;
+    var $this = this.s58(seen0, serializationConstructorMarker);
+    $this.n58_1 = command;
+    $this.o58_1 = prefix;
+    $this.p58_1 = index;
     return $this;
   }
 }
@@ -419,13 +419,13 @@ class Companion_1 {
     Companion_instance_1 = this;
     var tmp = this;
     var tmp_0 = LazyThreadSafetyMode_PUBLICATION_getInstance();
-    tmp.h56_1 = lazy(tmp_0, CaosCompletionData$Companion$_anonymous__e5jxjb);
+    tmp.r58_1 = lazy(tmp_0, CaosCompletionData$Companion$_anonymous__e5jxjb);
   }
-  k1e() {
+  n1e() {
     return _get_$cachedSerializer__te6jhj(this);
   }
-  y14(typeParamsSerializers) {
-    return this.k1e();
+  b15(typeParamsSerializers) {
+    return this.n1e();
   }
 }
 class CompletionOptionsImpl {
@@ -435,41 +435,41 @@ class CompletionOptionsImpl {
     directory = directory === VOID ? null : directory;
     getFiles = getFiles === VOID ? null : getFiles;
     getStringCompletions = getStringCompletions === VOID ? null : getStringCompletions;
-    this.j56_1 = thisFileName;
-    this.k56_1 = incomplete;
-    this.l56_1 = directory;
-    this.m56_1 = getFiles;
-    this.n56_1 = getStringCompletions;
+    this.t58_1 = thisFileName;
+    this.u58_1 = incomplete;
+    this.v58_1 = directory;
+    this.w58_1 = getFiles;
+    this.x58_1 = getStringCompletions;
     delete this.thisFileName;
     delete this.incomplete;
     delete this.directory;
     delete this.getFiles;
     delete this.getStringCompletions;
   }
-  o56() {
-    return this.j56_1;
+  y58() {
+    return this.t58_1;
   }
-  p56() {
-    return this.k56_1;
+  z58() {
+    return this.u58_1;
   }
-  q56() {
-    return this.l56_1;
+  a59() {
+    return this.v58_1;
   }
-  r56() {
-    return this.m56_1;
+  b59() {
+    return this.w58_1;
   }
-  s56() {
-    return this.n56_1;
+  c59() {
+    return this.x58_1;
   }
   toString() {
-    return 'CompletionOptionsImpl(thisFileName=' + this.j56_1 + ', incomplete=' + this.k56_1 + ', directory=' + this.l56_1 + ', getFiles=' + toString(this.m56_1) + ', getStringCompletions=' + toString(this.n56_1) + ')';
+    return 'CompletionOptionsImpl(thisFileName=' + this.t58_1 + ', incomplete=' + this.u58_1 + ', directory=' + this.v58_1 + ', getFiles=' + toString(this.w58_1) + ', getStringCompletions=' + toString(this.x58_1) + ')';
   }
   hashCode() {
-    var result = this.j56_1 == null ? 0 : getStringHashCode(this.j56_1);
-    result = imul(result, 31) + getBooleanHashCode(this.k56_1) | 0;
-    result = imul(result, 31) + (this.l56_1 == null ? 0 : getStringHashCode(this.l56_1)) | 0;
-    result = imul(result, 31) + (this.m56_1 == null ? 0 : hashCode(this.m56_1)) | 0;
-    result = imul(result, 31) + (this.n56_1 == null ? 0 : hashCode(this.n56_1)) | 0;
+    var result = this.t58_1 == null ? 0 : getStringHashCode(this.t58_1);
+    result = imul(result, 31) + getBooleanHashCode(this.u58_1) | 0;
+    result = imul(result, 31) + (this.v58_1 == null ? 0 : getStringHashCode(this.v58_1)) | 0;
+    result = imul(result, 31) + (this.w58_1 == null ? 0 : hashCode(this.w58_1)) | 0;
+    result = imul(result, 31) + (this.x58_1 == null ? 0 : hashCode(this.x58_1)) | 0;
     return result;
   }
   equals(other) {
@@ -477,51 +477,51 @@ class CompletionOptionsImpl {
       return true;
     if (!(other instanceof CompletionOptionsImpl))
       return false;
-    if (!(this.j56_1 == other.j56_1))
+    if (!(this.t58_1 == other.t58_1))
       return false;
-    if (!(this.k56_1 === other.k56_1))
+    if (!(this.u58_1 === other.u58_1))
       return false;
-    if (!(this.l56_1 == other.l56_1))
+    if (!(this.v58_1 == other.v58_1))
       return false;
-    if (!equals(this.m56_1, other.m56_1))
+    if (!equals(this.w58_1, other.w58_1))
       return false;
-    if (!equals(this.n56_1, other.n56_1))
+    if (!equals(this.x58_1, other.x58_1))
       return false;
     return true;
   }
   get thisFileName() {
-    return this.o56();
+    return this.y58();
   }
   get incomplete() {
-    return this.p56();
+    return this.z58();
   }
   get directory() {
-    return this.q56();
+    return this.a59();
   }
   get getFiles() {
-    return this.r56();
+    return this.b59();
   }
   get getStringCompletions() {
-    return this.s56();
+    return this.c59();
   }
 }
 class Caos2CobTag {
   constructor(tags, required, variant, type) {
     required = required === VOID ? false : required;
     variant = variant === VOID ? null : variant;
-    this.t56_1 = tags;
-    this.u56_1 = required;
-    this.v56_1 = variant;
-    this.w56_1 = type;
+    this.d59_1 = tags;
+    this.e59_1 = required;
+    this.f59_1 = variant;
+    this.g59_1 = type;
   }
   toString() {
-    return 'Caos2CobTag(tags=' + toString_0(this.t56_1) + ', required=' + this.u56_1 + ', variant=' + this.v56_1 + ', type=' + this.w56_1.toString() + ')';
+    return 'Caos2CobTag(tags=' + toString_0(this.d59_1) + ', required=' + this.e59_1 + ', variant=' + this.f59_1 + ', type=' + this.g59_1.toString() + ')';
   }
   hashCode() {
-    var result = hashCode(this.t56_1);
-    result = imul(result, 31) + getBooleanHashCode(this.u56_1) | 0;
-    result = imul(result, 31) + (this.v56_1 == null ? 0 : getStringHashCode(this.v56_1)) | 0;
-    result = imul(result, 31) + this.w56_1.hashCode() | 0;
+    var result = hashCode(this.d59_1);
+    result = imul(result, 31) + getBooleanHashCode(this.e59_1) | 0;
+    result = imul(result, 31) + (this.f59_1 == null ? 0 : getStringHashCode(this.f59_1)) | 0;
+    result = imul(result, 31) + this.g59_1.hashCode() | 0;
     return result;
   }
   equals(other) {
@@ -529,13 +529,13 @@ class Caos2CobTag {
       return true;
     if (!(other instanceof Caos2CobTag))
       return false;
-    if (!equals(this.t56_1, other.t56_1))
+    if (!equals(this.d59_1, other.d59_1))
       return false;
-    if (!(this.u56_1 === other.u56_1))
+    if (!(this.e59_1 === other.e59_1))
       return false;
-    if (!(this.v56_1 == other.v56_1))
+    if (!(this.f59_1 == other.f59_1))
       return false;
-    if (!this.w56_1.equals(other.w56_1))
+    if (!this.g59_1.equals(other.g59_1))
       return false;
     return true;
   }
@@ -543,23 +543,23 @@ class Caos2CobTag {
 class Caos2ValueType extends Enum {}
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.x56_1 = function_0;
+    this.h59_1 = function_0;
   }
-  wg(a, b) {
-    return this.x56_1(a, b);
+  zg(a, b) {
+    return this.h59_1(a, b);
   }
   compare(a, b) {
-    return this.wg(a, b);
+    return this.zg(a, b);
   }
-  f4() {
-    return this.x56_1;
+  m4() {
+    return this.h59_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.f4(), other.f4());
+        tmp_0 = equals(this.m4(), other.m4());
       } else {
         tmp_0 = false;
       }
@@ -570,7 +570,7 @@ class sam$kotlin_Comparator$0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.f4());
+    return hashCode(this.m4());
   }
 }
 //endregion
@@ -595,7 +595,7 @@ function $serializer_getInstance_0() {
   return $serializer_instance_0;
 }
 function _get_$cachedSerializer__te6jhj($this) {
-  return $this.h56_1.k3();
+  return $this.r58_1.r3();
 }
 function CaosCompletionData$Companion$_anonymous__e5jxjb() {
   var tmp = getKClass(CaosCompletionData);
@@ -611,7 +611,7 @@ function CaosCompletionData$Companion$_anonymous__e5jxjb() {
   // Inline function 'kotlin.js.unsafeCast' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$6 = [];
-  return SealedClassSerializer.ss('com.bedalton.creatures.caos.completion.CaosCompletionData', tmp, tmp_0, tmp_1, tmp$ret$6);
+  return SealedClassSerializer.vs('com.bedalton.creatures.caos.completion.CaosCompletionData', tmp, tmp_0, tmp_1, tmp$ret$6);
 }
 var Companion_instance_1;
 function Companion_getInstance_2() {
@@ -754,7 +754,7 @@ function caosCompletionItemDataDefaultSerializer(_this__u8e3s4, getSerializer) {
   getSerializer = tmp;
   _init_properties_CaosCompletionSerializersModuleBuilder_kt__hlm8bw();
   var tmp_0 = getKClass(CompletionItemData);
-  _this__u8e3s4.n1d(tmp_0, caosCompletionItemDataDefaultSerializer$lambda_0(getSerializer));
+  _this__u8e3s4.q1d(tmp_0, caosCompletionItemDataDefaultSerializer$lambda_0(getSerializer));
   return _this__u8e3s4;
 }
 function caosCompletionItemDataPolymorphic(_this__u8e3s4, init) {
@@ -775,16 +775,16 @@ function caosCompletionItemDataPolymorphic(_this__u8e3s4, init) {
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_0 = serializer(createKType(getKClass(CommandData), arrayOf([]), false));
   var tmp$ret$3 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-  builder.v1c(clazz, tmp$ret$3);
+  builder.y1c(clazz, tmp$ret$3);
   // Inline function 'kotlinx.serialization.modules.subclass' call
   var clazz_0 = getKClass(VariableData);
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_1 = serializer(createKType(getKClass(VariableData), arrayOf([]), false));
   var tmp$ret$6 = isInterface(this_1, KSerializer) ? this_1 : THROW_CCE();
-  builder.v1c(clazz_0, tmp$ret$6);
+  builder.y1c(clazz_0, tmp$ret$6);
   init(builder);
-  builder.x1c(_this__u8e3s4);
+  builder.a1d(_this__u8e3s4);
   return _this__u8e3s4;
 }
 function initCaosCompletionSerializersModule$lambda(it) {
@@ -871,11 +871,11 @@ function caosCompletionItemDataDefaultSerializer$lambda_0($getSerializer) {
   return (item) => {
     var tmp;
     if (item instanceof CommandData) {
-      var tmp_0 = Companion_instance.k1e();
+      var tmp_0 = Companion_instance.n1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       if (item instanceof VariableData) {
-        var tmp_1 = Companion_instance_0.k1e();
+        var tmp_1 = Companion_instance_0.n1e();
         tmp = isInterface(tmp_1, SerializationStrategy) ? tmp_1 : THROW_CCE();
       } else {
         tmp = $getSerializer(item);
@@ -897,8 +897,8 @@ function _init_properties_CaosCompletionSerializersModuleBuilder_kt__hlm8bw() {
     // Inline function 'kotlinx.serialization.modules.SerializersModule' call
     var builder_0 = new SerializersModuleBuilder();
     initCaosCompletionSerializersModule(builder_0);
-    builder_0.v11();
-    caosCompletionSerializersModule = builder.v11();
+    builder_0.y11();
+    caosCompletionSerializersModule = builder.y11();
   }
 }
 function get_VAR_TYPES_REGEX() {
@@ -953,7 +953,7 @@ function get_replaceRegex() {
 var replaceRegex;
 function getDumbCompletionItems(variant, commands, completionSettings) {
   _init_properties_CompletionCommand_kt__lflw0t();
-  var tmp0_safe_receiver = get_dumbModeCache().r3(variant);
+  var tmp0_safe_receiver = get_dumbModeCache().y3(variant);
   if (tmp0_safe_receiver == null)
     null;
   else {
@@ -963,18 +963,18 @@ function getDumbCompletionItems(variant, commands, completionSettings) {
   // Inline function 'kotlin.collections.map' call
   var this_0 = plus(plus(toList(commands.commands), commands.rvalues), commands.lvalues);
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
-  var _iterator__ex2g4s = this_0.w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var destination = ArrayList.f2(collectionSizeOrDefault(this_0, 10));
+  var _iterator__ex2g4s = this_0.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     var tmp$ret$4 = commandToCompletionItem(item);
-    destination.z1(tmp$ret$4);
+    destination.g2(tmp$ret$4);
   }
   var all = destination;
   // Inline function 'kotlin.also' call
   var this_1 = postProcessCommandCompletions(all, completionSettings);
   // Inline function 'kotlin.collections.set' call
-  get_dumbModeCache().l3(variant, all);
+  get_dumbModeCache().s3(variant, all);
   return this_1;
 }
 function getCommandCompletions(completionSettings, variant, commands, data) {
@@ -1001,34 +1001,34 @@ function postProcessCommandCompletions(raw, settings) {
     } else {
       // Inline function 'kotlin.collections.map' call
       // Inline function 'kotlin.collections.mapTo' call
-      var destination = ArrayList.y1(collectionSizeOrDefault(raw, 10));
-      var _iterator__ex2g4s = raw.w();
-      while (_iterator__ex2g4s.x()) {
-        var item = _iterator__ex2g4s.y();
+      var destination = ArrayList.f2(collectionSizeOrDefault(raw, 10));
+      var _iterator__ex2g4s = raw.d1();
+      while (_iterator__ex2g4s.e1()) {
+        var item = _iterator__ex2g4s.f1();
         var tmp$ret$2;
         $l$block: {
-          var tmp0_elvis_lhs = item.e53_1;
+          var tmp0_elvis_lhs = item.o55_1;
           var tmp_0;
           if (tmp0_elvis_lhs == null) {
-            var tmp_1 = item.j53_1;
+            var tmp_1 = item.t55_1;
             var tmp1_safe_receiver = tmp_1 instanceof CommandData ? tmp_1 : null;
-            tmp_0 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.w55_1;
+            tmp_0 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.g58_1;
           } else {
             tmp_0 = tmp0_elvis_lhs;
           }
           var tmp2_elvis_lhs = tmp_0;
           var tmp_2;
           if (tmp2_elvis_lhs == null) {
-            tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, null);
+            tmp$ret$2 = item.w55(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, null);
             break $l$block;
           } else {
             tmp_2 = tmp2_elvis_lhs;
           }
           var replacement = tmp_2;
-          var tmp3_safe_receiver = item.h53_1;
-          tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, VOID, VOID, replacement, VOID, VOID, tmp3_safe_receiver == null ? null : tmp3_safe_receiver.q52(VOID, replacement), VOID, null);
+          var tmp3_safe_receiver = item.r55_1;
+          tmp$ret$2 = item.w55(VOID, VOID, VOID, VOID, VOID, VOID, VOID, replacement, VOID, VOID, tmp3_safe_receiver == null ? null : tmp3_safe_receiver.a55(VOID, replacement), VOID, null);
         }
-        destination.z1(tmp$ret$2);
+        destination.g2(tmp$ret$2);
       }
       tmp = destination;
     }
@@ -1038,7 +1038,7 @@ function postProcessCommandCompletions(raw, settings) {
 function getCommandCompletionsForCommandType(variant, commands, commandType, previousTokens, returnType, settings) {
   _init_properties_CompletionCommand_kt__lflw0t();
   var out = getMultiTokenCommands(variant, commands, commandType, previousTokens);
-  if (previousTokens.u() || out.u()) {
+  if (previousTokens.b1() || out.b1()) {
     out = plus_0(out, getSingleTokenCommands(variant, commands, commandType));
   }
   var tmp;
@@ -1053,17 +1053,17 @@ function getCommandCompletionsForCommandType(variant, commands, commandType, pre
       var this_0 = out;
       // Inline function 'kotlin.collections.mapTo' call
 
-      var destination = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
-      var _iterator__ex2g4s = this_0.w();
-      while (_iterator__ex2g4s.x()) {
-        var item = _iterator__ex2g4s.y();
-        var tmp_0 = item.j53_1;
+      var destination = ArrayList.f2(collectionSizeOrDefault(this_0, 10));
+      var _iterator__ex2g4s = this_0.d1();
+      while (_iterator__ex2g4s.e1()) {
+        var item = _iterator__ex2g4s.f1();
+        var tmp_0 = item.t55_1;
         var tmp0_safe_receiver = tmp_0 instanceof CommandData ? tmp_0 : null;
-        var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.x55_1;
+        var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.h58_1;
         var returnTypeId = tmp1_elvis_lhs == null ? -1 : tmp1_elvis_lhs;
         var prefix = isSimilarType(returnTypeId, returnType) ? 'a_' : 'b_';
-        var tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, prefix + item.c53_1);
-        destination.z1(tmp$ret$2);
+        var tmp$ret$2 = item.w55(VOID, VOID, VOID, VOID, VOID, prefix + item.m55_1);
+        destination.g2(tmp$ret$2);
       }
 
       tmp = destination;
@@ -1076,28 +1076,28 @@ function postProcessPlaceholderCompletions(raw) {
   _init_properties_CompletionCommand_kt__lflw0t();
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(collectionSizeOrDefault(raw, 10));
-  var _iterator__ex2g4s = raw.w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var destination = ArrayList.f2(collectionSizeOrDefault(raw, 10));
+  var _iterator__ex2g4s = raw.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     var tmp$ret$2;
     $l$block: {
-      var tmp = item.j53_1;
+      var tmp = item.t55_1;
       var tmp0_safe_receiver = tmp instanceof CommandData ? tmp : null;
-      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.w55_1;
-      var tmp2_elvis_lhs = tmp1_elvis_lhs == null ? item.e53_1 : tmp1_elvis_lhs;
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.g58_1;
+      var tmp2_elvis_lhs = tmp1_elvis_lhs == null ? item.o55_1 : tmp1_elvis_lhs;
       var tmp_0;
       if (tmp2_elvis_lhs == null) {
-        tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, null);
+        tmp$ret$2 = item.w55(VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, VOID, null);
         break $l$block;
       } else {
         tmp_0 = tmp2_elvis_lhs;
       }
       var replacement = tmp_0;
-      var tmp3_safe_receiver = item.h53_1;
-      tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, VOID, VOID, replacement, VOID, VOID, tmp3_safe_receiver == null ? null : tmp3_safe_receiver.q52(VOID, replacement), VOID, null);
+      var tmp3_safe_receiver = item.r55_1;
+      tmp$ret$2 = item.w55(VOID, VOID, VOID, VOID, VOID, VOID, VOID, replacement, VOID, VOID, tmp3_safe_receiver == null ? null : tmp3_safe_receiver.a55(VOID, replacement), VOID, null);
     }
-    destination.z1(tmp$ret$2);
+    destination.g2(tmp$ret$2);
   }
   return destination;
 }
@@ -1107,14 +1107,14 @@ function postProcessParameterHintCompletions(raw, settings) {
   var minParams = tmp0_elvis_lhs == null ? 2 : tmp0_elvis_lhs;
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(collectionSizeOrDefault(raw, 10));
-  var _iterator__ex2g4s = raw.w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var destination = ArrayList.f2(collectionSizeOrDefault(raw, 10));
+  var _iterator__ex2g4s = raw.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     var tmp$ret$2;
     $l$block: {
-      var replacement = item.e53_1;
-      if (!(replacement == null) && split(replacement, charArrayOf([_Char___init__impl__6a9atx(36)])).b2() > minParams) {
+      var replacement = item.o55_1;
+      if (!(replacement == null) && split(replacement, charArrayOf([_Char___init__impl__6a9atx(36)])).i2() > minParams) {
         var tokens = split(replacement, charArrayOf([_Char___init__impl__6a9atx(32)]));
         replacement = joinToString(tokens, ' ', VOID, VOID, VOID, VOID, postProcessParameterHintCompletions$lambda);
       }
@@ -1123,10 +1123,10 @@ function postProcessParameterHintCompletions(raw, settings) {
         break $l$block;
       }
       var tmp = replacement;
-      var tmp0_safe_receiver = item.h53_1;
-      tmp$ret$2 = item.m53(VOID, VOID, VOID, VOID, VOID, VOID, VOID, tmp, VOID, VOID, tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q52(VOID, replacement), VOID, null);
+      var tmp0_safe_receiver = item.r55_1;
+      tmp$ret$2 = item.w55(VOID, VOID, VOID, VOID, VOID, VOID, VOID, tmp, VOID, VOID, tmp0_safe_receiver == null ? null : tmp0_safe_receiver.a55(VOID, replacement), VOID, null);
     }
-    destination.z1(tmp$ret$2);
+    destination.g2(tmp$ret$2);
   }
   return destination;
 }
@@ -1134,42 +1134,42 @@ function getMultiTokenCommands(variant, commands, commandType, previousTokens) {
   _init_properties_CompletionCommand_kt__lflw0t();
   var cacheKey = variant + ':' + commandType;
   var cache = selectCache(commandType, get_multiTokenCommandsCache(), get_multiTokenRvaluesCache(), get_multiTokenLvaluesCache());
-  if (!cache.p3(variant)) {
+  if (!cache.w3(variant)) {
     var commandsOfType = selectCommands(commandType, commands);
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
+    var destination = ArrayList.b2();
     var inductionVariable = 0;
     var last_0 = commandsOfType.length;
     while (inductionVariable < last_0) {
       var element = commandsOfType[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       if (contains(element.command, _Char___init__impl__6a9atx(32))) {
-        destination.z1(element);
+        destination.g2(element);
       }
     }
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_0 = ArrayList.y1(collectionSizeOrDefault(destination, 10));
-    var _iterator__ex2g4s = destination.w();
-    while (_iterator__ex2g4s.x()) {
-      var item = _iterator__ex2g4s.y();
+    var destination_0 = ArrayList.f2(collectionSizeOrDefault(destination, 10));
+    var _iterator__ex2g4s = destination.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var item = _iterator__ex2g4s.f1();
       var tmp$ret$5 = commandToCompletionItem(item);
-      destination_0.z1(tmp$ret$5);
+      destination_0.g2(tmp$ret$5);
     }
     // Inline function 'kotlin.collections.set' call
-    cache.l3(variant, destination_0);
+    cache.s3(variant, destination_0);
   }
-  if (previousTokens.u())
-    return ensureNotNull(cache.r3(variant));
+  if (previousTokens.b1())
+    return ensureNotNull(cache.y3(variant));
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_1 = ArrayList.y1(collectionSizeOrDefault(previousTokens, 10));
-  var _iterator__ex2g4s_0 = previousTokens.w();
-  while (_iterator__ex2g4s_0.x()) {
-    var item_0 = _iterator__ex2g4s_0.y();
+  var destination_1 = ArrayList.f2(collectionSizeOrDefault(previousTokens, 10));
+  var _iterator__ex2g4s_0 = previousTokens.d1();
+  while (_iterator__ex2g4s_0.e1()) {
+    var item_0 = _iterator__ex2g4s_0.f1();
     var tmp$ret$9 = item_0.token;
-    destination_1.z1(tmp$ret$9);
+    destination_1.g2(tmp$ret$9);
   }
   var prevIntTokens = destination_1;
   var prefixTokens = getMultiTokenPrefixTokens(cacheKey, commands, commandType);
@@ -1181,10 +1181,10 @@ function getMultiTokenCommands(variant, commands, commandType, previousTokens) {
     tmp = tmp0_elvis_lhs;
   }
   var lastToken = tmp;
-  if (!prefixTokens.g2(lastToken))
+  if (!prefixTokens.n2(lastToken))
     return emptyList();
   var lastIndex = get_lastIndex(previousTokens);
-  var startTokenRange = previousTokens.d2(lastIndex).b1q_1;
+  var startTokenRange = previousTokens.k2(lastIndex).c1q_1;
   var tmp_0;
   // Inline function 'kotlin.text.uppercase' call
   // Inline function 'kotlin.js.asDynamic' call
@@ -1197,46 +1197,46 @@ function getMultiTokenCommands(variant, commands, commandType, previousTokens) {
   }
   if (tmp_0) {
     var ddeToken = token('dde:');
-    var ddeIndex = prevIntTokens.k2(ddeToken);
+    var ddeIndex = prevIntTokens.r2(ddeToken);
     if (ddeIndex >= 0 && (!(ddeIndex === lastIndex) || (ddeIndex + 1 | 0) === lastIndex)) {
-      startTokenRange = previousTokens.d2(ddeIndex).b1q_1;
+      startTokenRange = previousTokens.k2(ddeIndex).c1q_1;
     }
   }
   // Inline function 'kotlin.text.uppercase' call
   // Inline function 'kotlin.js.asDynamic' call
   var tokenStr = token_0(lastToken).toUpperCase();
   // Inline function 'kotlin.collections.filter' call
-  var tmp0 = ensureNotNull(cache.r3(variant));
+  var tmp0 = ensureNotNull(cache.y3(variant));
   // Inline function 'kotlin.collections.filterTo' call
-  var destination_2 = ArrayList.u1();
-  var _iterator__ex2g4s_1 = tmp0.w();
-  while (_iterator__ex2g4s_1.x()) {
-    var element_0 = _iterator__ex2g4s_1.y();
-    if (contains_0(element_0.x52_1, tokenStr)) {
-      destination_2.z1(element_0);
+  var destination_2 = ArrayList.b2();
+  var _iterator__ex2g4s_1 = tmp0.d1();
+  while (_iterator__ex2g4s_1.e1()) {
+    var element_0 = _iterator__ex2g4s_1.f1();
+    if (contains_0(element_0.h55_1, tokenStr)) {
+      destination_2.g2(element_0);
     }
   }
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_3 = ArrayList.y1(collectionSizeOrDefault(destination_2, 10));
-  var _iterator__ex2g4s_2 = destination_2.w();
-  while (_iterator__ex2g4s_2.x()) {
-    var item_1 = _iterator__ex2g4s_2.y();
+  var destination_3 = ArrayList.f2(collectionSizeOrDefault(destination_2, 10));
+  var _iterator__ex2g4s_2 = destination_2.d1();
+  while (_iterator__ex2g4s_2.e1()) {
+    var item_1 = _iterator__ex2g4s_2.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
-    var filterText = item_1.x52_1.toLowerCase();
-    var tmp_1 = new RangeImpl(startTokenRange.h1(), last(previousTokens).b1q_1.f1e());
-    var tmp0_elvis_lhs_0 = item_1.e53_1;
-    var tmp1_textEdit = new TextEditImpl(tmp_1, tmp0_elvis_lhs_0 == null ? item_1.x52_1 : tmp0_elvis_lhs_0);
-    var tmp$ret$21 = item_1.m53(VOID, VOID, VOID, VOID, VOID, VOID, filterText, null, VOID, VOID, tmp1_textEdit);
-    destination_3.z1(tmp$ret$21);
+    var filterText = item_1.h55_1.toLowerCase();
+    var tmp_1 = new RangeImpl(startTokenRange.o1(), last(previousTokens).c1q_1.i1e());
+    var tmp0_elvis_lhs_0 = item_1.o55_1;
+    var tmp1_textEdit = new TextEditImpl(tmp_1, tmp0_elvis_lhs_0 == null ? item_1.h55_1 : tmp0_elvis_lhs_0);
+    var tmp$ret$21 = item_1.w55(VOID, VOID, VOID, VOID, VOID, VOID, filterText, null, VOID, VOID, tmp1_textEdit);
+    destination_3.g2(tmp$ret$21);
   }
   return destination_3;
 }
 function getSingleTokenCommands(variant, commands, commandType) {
   _init_properties_CompletionCommand_kt__lflw0t();
   var cache = selectCache(commandType, get_singleTokenCommandsCache(), get_singleTokenRvaluesCache(), get_singleTokenLvaluesCache());
-  var tmp0_safe_receiver = cache.r3(variant);
+  var tmp0_safe_receiver = cache.y3(variant);
   if (tmp0_safe_receiver == null)
     null;
   else {
@@ -1246,28 +1246,28 @@ function getSingleTokenCommands(variant, commands, commandType) {
   var commandsOfType = selectCommands(commandType, commands);
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
-  var destination = ArrayList.u1();
+  var destination = ArrayList.b2();
   var inductionVariable = 0;
   var last = commandsOfType.length;
   while (inductionVariable < last) {
     var element = commandsOfType[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
-    if (!contains(element.command, _Char___init__impl__6a9atx(32)) && !get_VAR_TYPES_REGEX().vf(element.command)) {
-      destination.z1(element);
+    if (!contains(element.command, _Char___init__impl__6a9atx(32)) && !get_VAR_TYPES_REGEX().yf(element.command)) {
+      destination.g2(element);
     }
   }
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_0 = ArrayList.y1(collectionSizeOrDefault(destination, 10));
-  var _iterator__ex2g4s = destination.w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var destination_0 = ArrayList.f2(collectionSizeOrDefault(destination, 10));
+  var _iterator__ex2g4s = destination.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     var tmp$ret$7 = commandToCompletionItem(item);
-    destination_0.z1(tmp$ret$7);
+    destination_0.g2(tmp$ret$7);
   }
   var items = destination_0;
   // Inline function 'kotlin.collections.set' call
-  cache.l3(variant, items);
+  cache.s3(variant, items);
   return items;
 }
 function selectCache(commandType, command, rvalue, lvalue) {
@@ -1284,7 +1284,7 @@ function selectCache(commandType, command, rvalue, lvalue) {
       tmp = lvalue;
       break;
     default:
-      throw IllegalArgumentException.m1('Unknown commandType: ' + commandType);
+      throw IllegalArgumentException.t1('Unknown commandType: ' + commandType);
   }
   return tmp;
 }
@@ -1302,13 +1302,13 @@ function selectCommands(commandType, commands) {
       tmp = commands.lvalues;
       break;
     default:
-      throw IllegalArgumentException.m1('Unknown commandType: ' + commandType);
+      throw IllegalArgumentException.t1('Unknown commandType: ' + commandType);
   }
   return tmp;
 }
 function getMultiTokenPrefixTokens(cacheKey, commands, commandType) {
   _init_properties_CompletionCommand_kt__lflw0t();
-  var tmp0_safe_receiver = get_prefixTokenCache().r3(cacheKey);
+  var tmp0_safe_receiver = get_prefixTokenCache().y3(cacheKey);
   if (tmp0_safe_receiver == null)
     null;
   else {
@@ -1317,37 +1317,37 @@ function getMultiTokenPrefixTokens(cacheKey, commands, commandType) {
   }
   var commandsOfType = selectCommands(commandType, commands);
   // Inline function 'kotlin.collections.mutableListOf' call
-  var out = ArrayList.u1();
+  var out = ArrayList.b2();
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
-  var destination = ArrayList.u1();
+  var destination = ArrayList.b2();
   var inductionVariable = 0;
   var last = commandsOfType.length;
   while (inductionVariable < last) {
     var element = commandsOfType[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
     if (contains(element.command, _Char___init__impl__6a9atx(32))) {
-      destination.z1(element);
+      destination.g2(element);
     }
   }
-  var _iterator__ex2g4s = destination.w();
-  while (_iterator__ex2g4s.x()) {
-    var command = _iterator__ex2g4s.y();
+  var _iterator__ex2g4s = destination.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var command = _iterator__ex2g4s.f1();
     var tmp0 = command.command;
     // Inline function 'kotlin.text.toRegex' call
     // Inline function 'kotlin.text.replace' call
-    var tmp$ret$7 = Regex.uf('\\s\\s+').bg(tmp0, ' ');
+    var tmp$ret$7 = Regex.xf('\\s\\s+').eg(tmp0, ' ');
     var split_0 = split(tmp$ret$7, charArrayOf([_Char___init__impl__6a9atx(32)]));
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
-    var tmp$ret$8 = split_0.d2(0).toLowerCase();
+    var tmp$ret$8 = split_0.k2(0).toLowerCase();
     // Inline function 'kotlin.collections.plusAssign' call
     var element_0 = token(tmp$ret$8);
-    out.z1(element_0);
+    out.g2(element_0);
   }
   // Inline function 'kotlin.also' call
   // Inline function 'kotlin.collections.set' call
-  get_prefixTokenCache().l3(cacheKey, out);
+  get_prefixTokenCache().s3(cacheKey, out);
   return out;
 }
 function postProcessParameterHintCompletions$lambda(tok) {
@@ -1355,30 +1355,30 @@ function postProcessParameterHintCompletions$lambda(tok) {
   var tmp2 = get_replaceRegex();
   // Inline function 'kotlin.text.replace' call
   var replacement = '${$1:$2}';
-  return tmp2.bg(tok, replacement);
+  return tmp2.eg(tok, replacement);
 }
 var properties_initialized_CompletionCommand_kt_1iemg1;
 function _init_properties_CompletionCommand_kt__lflw0t() {
   if (!properties_initialized_CompletionCommand_kt_1iemg1) {
     properties_initialized_CompletionCommand_kt_1iemg1 = true;
-    VAR_TYPES_REGEX = Regex.uf('([Vv][Aa][Rr]|[Oo][Bb][Vv])[xX]|([Vv][Aa]|[OoMm][Vv])[Xx][Xx]');
+    VAR_TYPES_REGEX = Regex.xf('([Vv][Aa][Rr]|[Oo][Bb][Vv])[xX]|([Vv][Aa]|[OoMm][Vv])[Xx][Xx]');
     // Inline function 'kotlin.collections.mutableMapOf' call
-    dumbModeCache = LinkedHashMap.mb();
+    dumbModeCache = LinkedHashMap.tb();
     // Inline function 'kotlin.collections.mutableMapOf' call
-    singleTokenCommandsCache = LinkedHashMap.mb();
+    singleTokenCommandsCache = LinkedHashMap.tb();
     // Inline function 'kotlin.collections.mutableMapOf' call
-    singleTokenRvaluesCache = LinkedHashMap.mb();
+    singleTokenRvaluesCache = LinkedHashMap.tb();
     // Inline function 'kotlin.collections.mutableMapOf' call
-    singleTokenLvaluesCache = LinkedHashMap.mb();
+    singleTokenLvaluesCache = LinkedHashMap.tb();
     // Inline function 'kotlin.collections.mutableMapOf' call
-    multiTokenCommandsCache = LinkedHashMap.mb();
+    multiTokenCommandsCache = LinkedHashMap.tb();
     // Inline function 'kotlin.collections.mutableMapOf' call
-    multiTokenRvaluesCache = LinkedHashMap.mb();
+    multiTokenRvaluesCache = LinkedHashMap.tb();
     // Inline function 'kotlin.collections.mutableMapOf' call
-    multiTokenLvaluesCache = LinkedHashMap.mb();
+    multiTokenLvaluesCache = LinkedHashMap.tb();
     // Inline function 'kotlin.collections.mutableMapOf' call
-    prefixTokenCache = LinkedHashMap.mb();
-    replaceRegex = Regex.uf('\\$\\{(\\d+)\\s*:[^:]+?:([{\\[]?[^}]+[\\])]?)}');
+    prefixTokenCache = LinkedHashMap.tb();
+    replaceRegex = Regex.xf('\\$\\{(\\d+)\\s*:[^:]+?:([{\\[]?[^}]+[\\])]?)}');
   }
 }
 function getFilenameCompletionPaths(directory, filesInProject, extensions) {
@@ -1388,11 +1388,11 @@ function getFilenameCompletionPaths(directory, filesInProject, extensions) {
   // Inline function 'kotlin.collections.mapNotNull' call
   var tmp0 = filterByExtension(tmp, extensions == null ? null : toList(extensions));
   // Inline function 'kotlin.collections.mapNotNullTo' call
-  var destination = ArrayList.u1();
+  var destination = ArrayList.b2();
   // Inline function 'kotlin.collections.forEach' call
-  var _iterator__ex2g4s = tmp0.w();
-  while (_iterator__ex2g4s.x()) {
-    var element = _iterator__ex2g4s.y();
+  var _iterator__ex2g4s = tmp0.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var element = _iterator__ex2g4s.f1();
     var tmp0_safe_receiver = relativePath(dir, element);
     var tmp_0;
     if (tmp0_safe_receiver == null) {
@@ -1413,7 +1413,7 @@ function getFilenameCompletionPaths(directory, filesInProject, extensions) {
       null;
     else {
       // Inline function 'kotlin.let' call
-      destination.z1(tmp0_safe_receiver_0);
+      destination.g2(tmp0_safe_receiver_0);
     }
   }
   return destination;
@@ -1438,11 +1438,11 @@ function findCobTag(tag) {
   var tmp$ret$3;
   $l$block: {
     // Inline function 'kotlin.collections.firstOrNull' call
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
-      var regex = element.ki();
-      if (regex.vf(lower)) {
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
+      var regex = element.ni();
+      if (regex.yf(lower)) {
         tmp$ret$3 = element;
         break $l$block;
       }
@@ -1454,7 +1454,7 @@ function findCobTag(tag) {
 }
 function tagFinders$lambda(t) {
   _init_properties_Caos2CobTag_kt__x4reqq();
-  return '^(' + replace(Companion_getInstance().pf(t), '\\ ', '\\\\s+') + ')$';
+  return '^(' + replace(Companion_getInstance().sf(t), '\\ ', '\\\\s+') + ')$';
 }
 var properties_initialized_Caos2CobTag_kt_76096s;
 function _init_properties_Caos2CobTag_kt__x4reqq() {
@@ -1464,13 +1464,13 @@ function _init_properties_Caos2CobTag_kt__x4reqq() {
     // Inline function 'kotlin.collections.map' call
     var this_0 = get_CAOS2COB_TAGS();
     // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
-    var _iterator__ex2g4s = this_0.w();
-    while (_iterator__ex2g4s.x()) {
-      var item = _iterator__ex2g4s.y();
-      var pattern = joinToString(item.t56_1, '|', VOID, VOID, VOID, VOID, tagFinders$lambda);
-      var tmp$ret$2 = to(Regex.tf(pattern, RegexOption_IGNORE_CASE_getInstance()), item);
-      destination.z1(tmp$ret$2);
+    var destination = ArrayList.f2(collectionSizeOrDefault(this_0, 10));
+    var _iterator__ex2g4s = this_0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var item = _iterator__ex2g4s.f1();
+      var pattern = joinToString(item.d59_1, '|', VOID, VOID, VOID, VOID, tagFinders$lambda);
+      var tmp$ret$2 = to(Regex.wf(pattern, RegexOption_IGNORE_CASE_getInstance()), item);
+      destination.g2(tmp$ret$2);
     }
     tagFinders = destination;
   }
@@ -1498,18 +1498,18 @@ var EQUIVALENCE_GROUPS;
 function getC3DSTagCompletions(usedTags) {
   _init_properties_Caos2PrayDefinitions_kt__7ls7nu();
   var excluded = toMutableList(usedTags);
-  var _iterator__ex2g4s = usedTags.w();
-  while (_iterator__ex2g4s.x()) {
-    var tag = _iterator__ex2g4s.y();
+  var _iterator__ex2g4s = usedTags.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var tag = _iterator__ex2g4s.f1();
     // Inline function 'kotlin.collections.find' call
     var tmp0 = get_EQUIVALENCE_GROUPS();
     var tmp$ret$1;
     $l$block: {
       // Inline function 'kotlin.collections.firstOrNull' call
-      var _iterator__ex2g4s_0 = tmp0.w();
-      while (_iterator__ex2g4s_0.x()) {
-        var element = _iterator__ex2g4s_0.y();
-        if (element.g2(tag)) {
+      var _iterator__ex2g4s_0 = tmp0.d1();
+      while (_iterator__ex2g4s_0.e1()) {
+        var element = _iterator__ex2g4s_0.f1();
+        if (element.n2(tag)) {
           tmp$ret$1 = element;
           break $l$block;
         }
@@ -1524,28 +1524,28 @@ function getC3DSTagCompletions(usedTags) {
   }
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(collectionSizeOrDefault(excluded, 10));
-  var _iterator__ex2g4s_1 = excluded.w();
-  while (_iterator__ex2g4s_1.x()) {
-    var item = _iterator__ex2g4s_1.y();
+  var destination = ArrayList.f2(collectionSizeOrDefault(excluded, 10));
+  var _iterator__ex2g4s_1 = excluded.d1();
+  while (_iterator__ex2g4s_1.e1()) {
+    var item = _iterator__ex2g4s_1.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$6 = item.toLowerCase();
-    destination.z1(tmp$ret$6);
+    destination.g2(tmp$ret$6);
   }
   var excludedLower = toSet(destination);
   // Inline function 'kotlin.collections.filter' call
   var tmp0_0 = get_LONG_AND_SHORT_TAGS();
   // Inline function 'kotlin.collections.filterTo' call
-  var destination_0 = ArrayList.u1();
-  var _iterator__ex2g4s_2 = tmp0_0.w();
-  while (_iterator__ex2g4s_2.x()) {
-    var element_0 = _iterator__ex2g4s_2.y();
+  var destination_0 = ArrayList.b2();
+  var _iterator__ex2g4s_2 = tmp0_0.d1();
+  while (_iterator__ex2g4s_2.e1()) {
+    var element_0 = _iterator__ex2g4s_2.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$12 = element_0.toLowerCase();
-    if (!excludedLower.g2(tmp$ret$12)) {
-      destination_0.z1(element_0);
+    if (!excludedLower.n2(tmp$ret$12)) {
+      destination_0.g2(element_0);
     }
   }
   return destination_0;
@@ -1623,36 +1623,36 @@ function getCaos2PrayCompletions(variant, allComments, item, line, character, op
   var isTag = !(item.tag == null) && item.command == null;
   var tmp;
   if (item.eq == null) {
-    var tmp_0 = Regex.tf('([a-zA-Z]{2}|[a-zA-Z]{4})-Name|(pray|cob)[- ]?file|link|attach|inline|depends?', RegexOption_IGNORE_CASE_getInstance());
+    var tmp_0 = Regex.wf('([a-zA-Z]{2}|[a-zA-Z]{4})-Name|(pray|cob)[- ]?file|link|attach|inline|depends?', RegexOption_IGNORE_CASE_getInstance());
     var tmp0_elvis_lhs = item.tag;
     var tmp1_elvis_lhs = tmp0_elvis_lhs == null ? item.command : tmp0_elvis_lhs;
-    tmp = !tmp_0.wf(tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs);
+    tmp = !tmp_0.zf(tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs);
   } else {
     tmp = false;
   }
   var isUndetermined = tmp;
-  var inCommandOrTag = inRange(item.token.c1n_1, line, character, VOID, true);
-  var tmp_1 = listOf_0(item.token.c1n_1);
+  var inCommandOrTag = inRange(item.token.d1n_1, line, character, VOID, true);
+  var tmp_1 = listOf_0(item.token.d1n_1);
   // Inline function 'kotlin.collections.map' call
   var this_0 = item.values;
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(this_0.length);
+  var destination = ArrayList.f2(this_0.length);
   var inductionVariable = 0;
   var last = this_0.length;
   while (inductionVariable < last) {
     var item_0 = this_0[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
-    var tmp$ret$2 = item_0.d1e();
-    destination.z1(tmp$ret$2);
+    var tmp$ret$2 = item_0.g1e();
+    destination.g2(tmp$ret$2);
   }
   var ranges = plus_0(tmp_1, destination);
   // Inline function 'kotlin.collections.find' call
   var tmp$ret$4;
   $l$block: {
     // Inline function 'kotlin.collections.firstOrNull' call
-    var _iterator__ex2g4s = ranges.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
+    var _iterator__ex2g4s = ranges.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
       if (inRange(element, line, character, VOID, true)) {
         tmp$ret$4 = element;
         break $l$block;
@@ -1663,12 +1663,12 @@ function getCaos2PrayCompletions(variant, allComments, item, line, character, op
   var tmp2_elvis_lhs = tmp$ret$4;
   var tmp3_elvis_lhs = tmp2_elvis_lhs == null ? firstOrNull(ranges) : tmp2_elvis_lhs;
   var rawRange = tmp3_elvis_lhs == null ? new RangeWithIndexImpl(new PositionImpl(line, character), new PositionImpl(line, character), 0, 0, null) : tmp3_elvis_lhs;
-  var range = new RangeImpl(new PositionImpl(rawRange.h1().e1e(), rawRange.h1().i1e() + 1 | 0), new PositionImpl(rawRange.f1e().e1e(), rawRange.f1e().i1e() + 1 | 0));
+  var range = new RangeImpl(new PositionImpl(rawRange.o1().h1e(), rawRange.o1().l1e() + 1 | 0), new PositionImpl(rawRange.i1e().h1e(), rawRange.i1e().l1e() + 1 | 0));
   // Inline function 'kotlin.collections.mutableListOf' call
-  var out = ArrayList.u1();
+  var out = ArrayList.b2();
   if (isTag || isUndetermined) {
     if (inCommandOrTag) {
-      out.c2(getCaos2TagCompletions(variant, allComments, !(item.eq == null), range));
+      out.j2(getCaos2TagCompletions(variant, allComments, !(item.eq == null), range));
     } else if (!isUndetermined) {
       var tmp_2 = options.thisFileName;
       var tmp4_elvis_lhs = options.getFiles;
@@ -1680,14 +1680,14 @@ function getCaos2PrayCompletions(variant, allComments, item, line, character, op
       }
       var tmp_4 = tmp_3;
       var tmp5_elvis_lhs = options.directory;
-      out.c2(getCaos2TagValueCompletions(tmp_2, variant, item, allComments, line, character, tmp_4, tmp5_elvis_lhs == null ? '' : tmp5_elvis_lhs));
+      out.j2(getCaos2TagValueCompletions(tmp_2, variant, item, allComments, line, character, tmp_4, tmp5_elvis_lhs == null ? '' : tmp5_elvis_lhs));
     }
   }
   if (isCommand || isUndetermined) {
     if (inCommandOrTag) {
       var tmp6_elvis_lhs = item.command;
       var tmp7_elvis_lhs = tmp6_elvis_lhs == null ? item.tag : tmp6_elvis_lhs;
-      out.c2(getCaos2CommandCompletions(variant, allComments, tmp7_elvis_lhs == null ? '' : tmp7_elvis_lhs, range));
+      out.j2(getCaos2CommandCompletions(variant, allComments, tmp7_elvis_lhs == null ? '' : tmp7_elvis_lhs, range));
     } else {
       var tmp_5 = options.thisFileName;
       var tmp8_elvis_lhs = options.getFiles;
@@ -1699,7 +1699,7 @@ function getCaos2PrayCompletions(variant, allComments, item, line, character, op
       }
       var tmp_7 = tmp_6;
       var tmp9_elvis_lhs = options.directory;
-      out.c2(getCaos2TagValueCompletions(tmp_5, variant, item, allComments, line, character, tmp_7, tmp9_elvis_lhs == null ? '' : tmp9_elvis_lhs));
+      out.j2(getCaos2TagValueCompletions(tmp_5, variant, item, allComments, line, character, tmp_7, tmp9_elvis_lhs == null ? '' : tmp9_elvis_lhs));
     }
   }
   return out;
@@ -1728,7 +1728,7 @@ function getC1TagValueCompletions(thisFileName, tag, command, directory, getFile
     tmp_0 = tmp1_elvis_lhs;
   }
   var tagData = tmp_0;
-  var type = tagData.w56_1;
+  var type = tagData.g59_1;
   var tmp_1;
   if (type.equals(Caos2ValueType_CAOS_getInstance())) {
     tmp_1 = true;
@@ -1762,14 +1762,14 @@ function getC1TagValueCompletions(thisFileName, tag, command, directory, getFile
     // Inline function 'kotlin.collections.filter' call
     var tmp0 = getFilenameCompletionPaths(directory, getFiles(tmp$ret$8));
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
+    var destination = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
       if (!(element.toLowerCase() === thisLower)) {
-        destination.z1(element);
+        destination.g2(element);
       }
     }
     return destination;
@@ -1792,7 +1792,7 @@ function getC2TagValueCompletions(thisFileName, tag, command, directory, getFile
     tmp = findCobTag(tag);
   }
   var tagData = tmp;
-  var type = tagData == null ? null : tagData.w56_1;
+  var type = tagData == null ? null : tagData.g59_1;
   var tmp_0;
   if (command == null) {
     tmp_0 = null;
@@ -1821,14 +1821,14 @@ function getC2TagValueCompletions(thisFileName, tag, command, directory, getFile
     // Inline function 'kotlin.collections.filter' call
     var tmp0 = getFilenameCompletionPaths(directory, getFiles(tmp$ret$8));
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
+    var destination = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
       if (!(element.toLowerCase() === thisLower)) {
-        destination.z1(element);
+        destination.g2(element);
       }
     }
     return destination;
@@ -1880,43 +1880,43 @@ function _init_properties_CompletionsCaos2CobTags_kt__jkcknw() {
     // Inline function 'kotlin.collections.filter' call
     var tmp0 = get_CAOS2COB_TAGS();
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element = _iterator__ex2g4s.y();
-      if (element.v56_1 == null || element.v56_1 === 'C1') {
-        destination.z1(element);
+    var destination = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element = _iterator__ex2g4s.f1();
+      if (element.f59_1 == null || element.f59_1 === 'C1') {
+        destination.g2(element);
       }
     }
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_0 = ArrayList.y1(collectionSizeOrDefault(destination, 10));
-    var _iterator__ex2g4s_0 = destination.w();
-    while (_iterator__ex2g4s_0.x()) {
-      var item = _iterator__ex2g4s_0.y();
-      var tmp$ret$5 = item.t56_1.d2(0);
-      destination_0.z1(tmp$ret$5);
+    var destination_0 = ArrayList.f2(collectionSizeOrDefault(destination, 10));
+    var _iterator__ex2g4s_0 = destination.d1();
+    while (_iterator__ex2g4s_0.e1()) {
+      var item = _iterator__ex2g4s_0.f1();
+      var tmp$ret$5 = item.d59_1.k2(0);
+      destination_0.g2(tmp$ret$5);
     }
     C1_TAGS = destination_0;
     // Inline function 'kotlin.collections.filter' call
     var tmp0_0 = get_CAOS2COB_TAGS();
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_1 = ArrayList.u1();
-    var _iterator__ex2g4s_1 = tmp0_0.w();
-    while (_iterator__ex2g4s_1.x()) {
-      var element_0 = _iterator__ex2g4s_1.y();
-      if (element_0.v56_1 == null || element_0.v56_1 === 'C2') {
-        destination_1.z1(element_0);
+    var destination_1 = ArrayList.b2();
+    var _iterator__ex2g4s_1 = tmp0_0.d1();
+    while (_iterator__ex2g4s_1.e1()) {
+      var element_0 = _iterator__ex2g4s_1.f1();
+      if (element_0.f59_1 == null || element_0.f59_1 === 'C2') {
+        destination_1.g2(element_0);
       }
     }
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_2 = ArrayList.y1(collectionSizeOrDefault(destination_1, 10));
-    var _iterator__ex2g4s_2 = destination_1.w();
-    while (_iterator__ex2g4s_2.x()) {
-      var item_0 = _iterator__ex2g4s_2.y();
-      var tmp$ret$5_0 = item_0.t56_1.d2(0);
-      destination_2.z1(tmp$ret$5_0);
+    var destination_2 = ArrayList.f2(collectionSizeOrDefault(destination_1, 10));
+    var _iterator__ex2g4s_2 = destination_1.d1();
+    while (_iterator__ex2g4s_2.e1()) {
+      var item_0 = _iterator__ex2g4s_2.f1();
+      var tmp$ret$5_0 = item_0.d59_1.k2(0);
+      destination_2.g2(tmp$ret$5_0);
     }
     C2_TAGS = destination_2;
   }
@@ -1924,17 +1924,17 @@ function _init_properties_CompletionsCaos2CobTags_kt__jkcknw() {
 function getCaos2CommandCompletions(variant, allComments, token, range) {
   // Inline function 'kotlin.collections.mapNotNull' call
   // Inline function 'kotlin.collections.mapNotNullTo' call
-  var destination = ArrayList.u1();
+  var destination = ArrayList.b2();
   // Inline function 'kotlin.collections.forEach' call
-  var _iterator__ex2g4s = allComments.w();
-  while (_iterator__ex2g4s.x()) {
-    var element = _iterator__ex2g4s.y();
+  var _iterator__ex2g4s = allComments.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var element = _iterator__ex2g4s.f1();
     var tmp0_safe_receiver = element.command;
     if (tmp0_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
-      destination.z1(tmp0_safe_receiver);
+      destination.g2(tmp0_safe_receiver);
     }
   }
   var commandsSoFar = destination;
@@ -1946,7 +1946,7 @@ function getCaos2CommandCompletions(variant, allComments, token, range) {
   } else {
     var tmp_1 = tmp0_safe_receiver_0;
     // Inline function 'kotlin.let' call
-    var it = (tmp_1 == null ? null : new Char(tmp_1)).v2_1;
+    var it = (tmp_1 == null ? null : new Char(tmp_1)).c3_1;
     tmp = _Char___init__impl__6a9atx(97) <= it ? it <= _Char___init__impl__6a9atx(122) : false;
   }
   var tmp1_elvis_lhs = tmp;
@@ -1968,81 +1968,81 @@ function getCaos2CommandCompletions(variant, allComments, token, range) {
   // Inline function 'kotlin.collections.map' call
   var this_0 = commands;
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_0 = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
-  var _iterator__ex2g4s_0 = this_0.w();
-  while (_iterator__ex2g4s_0.x()) {
-    var item = _iterator__ex2g4s_0.y();
+  var destination_0 = ArrayList.f2(collectionSizeOrDefault(this_0, 10));
+  var _iterator__ex2g4s_0 = this_0.d1();
+  while (_iterator__ex2g4s_0.e1()) {
+    var item = _iterator__ex2g4s_0.f1();
     var tmp$ret$13 = createSimpleCompletionItem(item, range, 2);
-    destination_0.z1(tmp$ret$13);
+    destination_0.g2(tmp$ret$13);
   }
   return destination_0;
 }
 function getC1CommandCompletions(commandsSoFar, lowercase) {
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(collectionSizeOrDefault(commandsSoFar, 10));
-  var _iterator__ex2g4s = commandsSoFar.w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var destination = ArrayList.f2(collectionSizeOrDefault(commandsSoFar, 10));
+  var _iterator__ex2g4s = commandsSoFar.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$2 = item.toLowerCase();
-    destination.z1(tmp$ret$2);
+    destination.g2(tmp$ret$2);
   }
   var soFarLower = destination;
   // Inline function 'kotlin.collections.mutableListOf' call
-  var out = ArrayList.u1();
-  if (!soFarLower.g2('cob-file')) {
+  var out = ArrayList.b2();
+  if (!soFarLower.n2('cob-file')) {
     // Inline function 'kotlin.collections.plusAssign' call
     var element = 'Cob-File';
-    out.z1(element);
+    out.g2(element);
   }
-  if (!soFarLower.g2('c1-name')) {
+  if (!soFarLower.n2('c1-name')) {
     // Inline function 'kotlin.collections.plusAssign' call
-    out.z1('C1-Name');
+    out.g2('C1-Name');
   }
   // Inline function 'kotlin.collections.plusAssign' call
   var element_0 = lowercase ? 'link' : 'Link';
-  out.z1(element_0);
+  out.g2(element_0);
   return out;
 }
 function getC2CommandCompletions(commandsSoFar, lowercase) {
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(collectionSizeOrDefault(commandsSoFar, 10));
-  var _iterator__ex2g4s = commandsSoFar.w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var destination = ArrayList.f2(collectionSizeOrDefault(commandsSoFar, 10));
+  var _iterator__ex2g4s = commandsSoFar.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$2 = item.toLowerCase();
-    destination.z1(tmp$ret$2);
+    destination.g2(tmp$ret$2);
   }
   var soFarLower = destination;
   // Inline function 'kotlin.collections.mutableListOf' call
-  var out = ArrayList.u1();
-  if (!soFarLower.g2('cob-file')) {
+  var out = ArrayList.b2();
+  if (!soFarLower.n2('cob-file')) {
     // Inline function 'kotlin.collections.plusAssign' call
     var element = 'Cob-File';
-    out.z1(element);
+    out.g2(element);
   }
-  if (!soFarLower.g2('c2-name')) {
+  if (!soFarLower.n2('c2-name')) {
     // Inline function 'kotlin.collections.plusAssign' call
-    out.z1('C2-Name');
+    out.g2('C2-Name');
   }
   var fileCommands = listOf(['Attach', 'Depends', 'Inline', 'Link']);
   var tmp;
   if (lowercase) {
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_0 = ArrayList.y1(collectionSizeOrDefault(fileCommands, 10));
-    var _iterator__ex2g4s_0 = fileCommands.w();
-    while (_iterator__ex2g4s_0.x()) {
-      var item_0 = _iterator__ex2g4s_0.y();
+    var destination_0 = ArrayList.f2(collectionSizeOrDefault(fileCommands, 10));
+    var _iterator__ex2g4s_0 = fileCommands.d1();
+    while (_iterator__ex2g4s_0.e1()) {
+      var item_0 = _iterator__ex2g4s_0.f1();
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp$ret$10 = item_0.toLowerCase();
-      destination_0.z1(tmp$ret$10);
+      destination_0.g2(tmp$ret$10);
     }
     tmp = destination_0;
   } else {
@@ -2056,29 +2056,29 @@ function getC2CommandCompletions(commandsSoFar, lowercase) {
 function getC3DSCommandCompletions(commandsSoFar, lowercase) {
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(collectionSizeOrDefault(commandsSoFar, 10));
-  var _iterator__ex2g4s = commandsSoFar.w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var destination = ArrayList.f2(collectionSizeOrDefault(commandsSoFar, 10));
+  var _iterator__ex2g4s = commandsSoFar.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$2 = item.toLowerCase();
-    destination.z1(tmp$ret$2);
+    destination.g2(tmp$ret$2);
   }
   var soFarLower = destination;
   // Inline function 'kotlin.collections.mutableListOf' call
-  var out = ArrayList.u1();
-  if (!soFarLower.g2('pray-file')) {
+  var out = ArrayList.b2();
+  if (!soFarLower.n2('pray-file')) {
     // Inline function 'kotlin.collections.plusAssign' call
     var element = 'Pray-File';
-    out.z1(element);
+    out.g2(element);
   }
-  if (!soFarLower.g2('c3-name') && !soFarLower.g2('agnt-name')) {
+  if (!soFarLower.n2('c3-name') && !soFarLower.n2('agnt-name')) {
     // Inline function 'kotlin.collections.plusAssign' call
     var elements = listOf(['C3-Name', 'AGNT-Name']);
     addAll(out, elements);
   }
-  if (!soFarLower.g2('dsag-name')) {
+  if (!soFarLower.n2('dsag-name')) {
     // Inline function 'kotlin.collections.plusAssign' call
     var elements_0 = listOf(['DS-Name', 'DSAG-Name']);
     addAll(out, elements_0);
@@ -2088,14 +2088,14 @@ function getC3DSCommandCompletions(commandsSoFar, lowercase) {
   if (lowercase) {
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_0 = ArrayList.y1(collectionSizeOrDefault(fileCommands, 10));
-    var _iterator__ex2g4s_0 = fileCommands.w();
-    while (_iterator__ex2g4s_0.x()) {
-      var item_0 = _iterator__ex2g4s_0.y();
+    var destination_0 = ArrayList.f2(collectionSizeOrDefault(fileCommands, 10));
+    var _iterator__ex2g4s_0 = fileCommands.d1();
+    while (_iterator__ex2g4s_0.e1()) {
+      var item_0 = _iterator__ex2g4s_0.f1();
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp$ret$11 = item_0.toLowerCase();
-      destination_0.z1(tmp$ret$11);
+      destination_0.g2(tmp$ret$11);
     }
     tmp = destination_0;
   } else {
@@ -2152,14 +2152,14 @@ function getCommandValueCompletions(thisFileName, command, directory, previousCo
     // Inline function 'kotlin.collections.map' call
     var this_0 = getCommandValues(previousCommands, ['LINK']);
     // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
-    var _iterator__ex2g4s = this_0.w();
-    while (_iterator__ex2g4s.x()) {
-      var item = _iterator__ex2g4s.y();
+    var destination = ArrayList.f2(collectionSizeOrDefault(this_0, 10));
+    var _iterator__ex2g4s = this_0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var item = _iterator__ex2g4s.f1();
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp$ret$5 = item.toLowerCase();
-      destination.z1(tmp$ret$5);
+      destination.g2(tmp$ret$5);
     }
     var tmp = destination;
     var tmp_0;
@@ -2183,15 +2183,15 @@ function getCommandValueCompletions(thisFileName, command, directory, previousCo
     // Inline function 'kotlin.collections.filter' call
     var tmp0 = getFilenameCompletionPaths(directory, getFiles(tmp$ret$13));
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_0 = ArrayList.u1();
-    var _iterator__ex2g4s_0 = tmp0.w();
-    while (_iterator__ex2g4s_0.x()) {
-      var element = _iterator__ex2g4s_0.y();
+    var destination_0 = ArrayList.b2();
+    var _iterator__ex2g4s_0 = tmp0.d1();
+    while (_iterator__ex2g4s_0.e1()) {
+      var element = _iterator__ex2g4s_0.f1();
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp$ret$19 = element.toLowerCase();
-      if (!alreadyLinked.g2(tmp$ret$19)) {
-        destination_0.z1(element);
+      if (!alreadyLinked.n2(tmp$ret$19)) {
+        destination_0.g2(element);
       }
     }
     return destination_0;
@@ -2203,7 +2203,7 @@ function getCommandValueCompletions(thisFileName, command, directory, previousCo
   if (command === 'DEPEND') {
     // Inline function 'kotlin.collections.mapNotNull' call
     // Inline function 'kotlin.collections.mapNotNullTo' call
-    var destination_1 = ArrayList.u1();
+    var destination_1 = ArrayList.b2();
     // Inline function 'kotlin.collections.forEach' call
     var inductionVariable = 0;
     var last = files.length;
@@ -2224,7 +2224,7 @@ function getCommandValueCompletions(thisFileName, command, directory, previousCo
         null;
       else {
         // Inline function 'kotlin.let' call
-        destination_1.z1(tmp0_safe_receiver_0);
+        destination_1.g2(tmp0_safe_receiver_0);
       }
     }
     tmp_1 = destination_1;
@@ -2235,34 +2235,34 @@ function getCommandValueCompletions(thisFileName, command, directory, previousCo
   // Inline function 'kotlin.collections.map' call
   var this_1 = getCommandValues(previousCommands, [command]);
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_2 = ArrayList.y1(collectionSizeOrDefault(this_1, 10));
-  var _iterator__ex2g4s_1 = this_1.w();
-  while (_iterator__ex2g4s_1.x()) {
-    var item_0 = _iterator__ex2g4s_1.y();
+  var destination_2 = ArrayList.f2(collectionSizeOrDefault(this_1, 10));
+  var _iterator__ex2g4s_1 = this_1.d1();
+  while (_iterator__ex2g4s_1.e1()) {
+    var item_0 = _iterator__ex2g4s_1.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$32 = item_0.toLowerCase();
-    destination_2.z1(tmp$ret$32);
+    destination_2.g2(tmp$ret$32);
   }
   var previous = toSet(destination_2);
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
-  var destination_3 = ArrayList.u1();
-  var _iterator__ex2g4s_2 = paths.w();
-  while (_iterator__ex2g4s_2.x()) {
-    var element_1 = _iterator__ex2g4s_2.y();
+  var destination_3 = ArrayList.b2();
+  var _iterator__ex2g4s_2 = paths.d1();
+  while (_iterator__ex2g4s_2.e1()) {
+    var element_1 = _iterator__ex2g4s_2.f1();
     var tmp_3;
     // Inline function 'kotlin.text.isNotBlank' call
     if (!isBlank(element_1)) {
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp$ret$39 = element_1.toLowerCase();
-      tmp_3 = !previous.g2(tmp$ret$39);
+      tmp_3 = !previous.n2(tmp$ret$39);
     } else {
       tmp_3 = false;
     }
     if (tmp_3) {
-      destination_3.z1(element_1);
+      destination_3.g2(element_1);
     }
   }
   return destination_3;
@@ -2270,10 +2270,10 @@ function getCommandValueCompletions(thisFileName, command, directory, previousCo
 function getTagValueCompletions(tag, commands, getFiles) {
   _init_properties_CompletionsCaos2PrayValues_kt__ja0mln();
   var additionalFiles = getCommandValues(commands, ['ATTACH', 'INLINE', 'DEPEND']);
-  if (get_requiresGenetics().wf(tag)) {
+  if (get_requiresGenetics().zf(tag)) {
     return getGeneticsFile(additionalFiles, getFiles);
   }
-  if (get_requiresSpriteRegex().wf(tag)) {
+  if (get_requiresSpriteRegex().zf(tag)) {
     return getSpriteTagValueCompletions(tag, additionalFiles, getFiles);
   }
   return emptyList();
@@ -2282,7 +2282,7 @@ function getCommandValues(commands, commandKinds) {
   _init_properties_CompletionsCaos2PrayValues_kt__ja0mln();
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(commandKinds.length);
+  var destination = ArrayList.f2(commandKinds.length);
   var inductionVariable = 0;
   var last = commandKinds.length;
   while (inductionVariable < last) {
@@ -2291,15 +2291,15 @@ function getCommandValues(commands, commandKinds) {
     // Inline function 'kotlin.text.uppercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$2 = item.toUpperCase();
-    destination.z1(tmp$ret$2);
+    destination.g2(tmp$ret$2);
   }
   var kinds = toSet(destination);
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
-  var destination_0 = ArrayList.u1();
-  var _iterator__ex2g4s = commands.w();
-  while (_iterator__ex2g4s.x()) {
-    var element = _iterator__ex2g4s.y();
+  var destination_0 = ArrayList.b2();
+  var _iterator__ex2g4s = commands.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var element = _iterator__ex2g4s.f1();
     var tmp0_safe_receiver = element.command;
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -2310,16 +2310,16 @@ function getCommandValues(commands, commandKinds) {
       tmp = tmp0_safe_receiver.toUpperCase();
     }
     var tmp1_elvis_lhs = tmp;
-    if (kinds.g2(tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs)) {
-      destination_0.z1(element);
+    if (kinds.n2(tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs)) {
+      destination_0.g2(element);
     }
   }
   var matching = destination_0;
   // Inline function 'kotlin.collections.mutableListOf' call
-  var out = ArrayList.u1();
-  var _iterator__ex2g4s_0 = matching.w();
-  $l$loop: while (_iterator__ex2g4s_0.x()) {
-    var cmd = _iterator__ex2g4s_0.y();
+  var out = ArrayList.b2();
+  var _iterator__ex2g4s_0 = matching.d1();
+  $l$loop: while (_iterator__ex2g4s_0.e1()) {
+    var cmd = _iterator__ex2g4s_0.f1();
     var tmp0_safe_receiver_0 = cmd.command;
     var tmp_0;
     if (tmp0_safe_receiver_0 == null) {
@@ -2335,20 +2335,20 @@ function getCommandValues(commands, commandKinds) {
         continue $l$loop;
       var item_0 = cmd.values.length > 1 ? cmd.values[1] : cmd.values[0];
       // Inline function 'kotlin.collections.plusAssign' call
-      var element_0 = stripSurroundingQuotes(item_0.j1f());
-      out.z1(element_0);
+      var element_0 = stripSurroundingQuotes(item_0.m1f());
+      out.g2(element_0);
     } else {
       // Inline function 'kotlin.collections.map' call
       var this_0 = cmd.values;
       // Inline function 'kotlin.collections.mapTo' call
-      var destination_1 = ArrayList.y1(this_0.length);
+      var destination_1 = ArrayList.f2(this_0.length);
       var inductionVariable_0 = 0;
       var last_0 = this_0.length;
       while (inductionVariable_0 < last_0) {
         var item_1 = this_0[inductionVariable_0];
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var tmp$ret$17 = stripSurroundingQuotes(item_1.j1f());
-        destination_1.z1(tmp$ret$17);
+        var tmp$ret$17 = stripSurroundingQuotes(item_1.m1f());
+        destination_1.g2(tmp$ret$17);
       }
       // Inline function 'kotlin.collections.plusAssign' call
       addAll(out, destination_1);
@@ -2359,7 +2359,7 @@ function getCommandValues(commands, commandKinds) {
 function getGeneticsFile(additionalFiles, getFiles) {
   _init_properties_CompletionsCaos2PrayValues_kt__ja0mln();
   // Inline function 'kotlin.collections.mutableListOf' call
-  var out = ArrayList.u1();
+  var out = ArrayList.b2();
   // Inline function 'kotlin.arrayOf' call
   // Inline function 'kotlin.js.unsafeCast' call
   // Inline function 'kotlin.js.asDynamic' call
@@ -2389,28 +2389,28 @@ function getGeneticsFile(additionalFiles, getFiles) {
       tmp_0 = tmp1_elvis_lhs;
     }
     var lastComponent = tmp_0;
-    var _iterator__ex2g4s = components.w();
-    while (_iterator__ex2g4s.x()) {
-      var component = _iterator__ex2g4s.y();
+    var _iterator__ex2g4s = components.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var component = _iterator__ex2g4s.f1();
       path = path + ('.' + component);
       var wildcardPath = substring(path, 1) + '.*';
-      if (!out.g2(wildcardPath)) {
+      if (!out.n2(wildcardPath)) {
         // Inline function 'kotlin.collections.plusAssign' call
-        out.z1(wildcardPath);
+        out.g2(wildcardPath);
       }
     }
     path = path + ('.' + lastComponent);
-    if (!out.g2(path)) {
+    if (!out.n2(path)) {
       // Inline function 'kotlin.collections.plusAssign' call
       var element = path;
-      out.z1(element);
+      out.g2(element);
     }
   }
   return out;
 }
 function getSpriteTagValueCompletions(tag, inlinedOrDepended, getFiles) {
   _init_properties_CompletionsCaos2PrayValues_kt__ja0mln();
-  var requiresExtension = !get_requiresFileWithoutExtensionRegex().wf(tag);
+  var requiresExtension = !get_requiresFileWithoutExtensionRegex().zf(tag);
   var tmp;
   if (requiresExtension) {
     tmp = getFileName$ref();
@@ -2425,10 +2425,10 @@ function getSpriteTagValueCompletions(tag, inlinedOrDepended, getFiles) {
   var fileNames = getAllFileNames(tmp$ret$0, inlinedOrDepended, getFiles);
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
-  var destination = ArrayList.u1();
-  var _iterator__ex2g4s = inlinedOrDepended.w();
-  while (_iterator__ex2g4s.x()) {
-    var element = _iterator__ex2g4s.y();
+  var destination = ArrayList.b2();
+  var _iterator__ex2g4s = inlinedOrDepended.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var element = _iterator__ex2g4s.f1();
     var tmp0_safe_receiver = getExtension(element);
     var tmp_0;
     if (tmp0_safe_receiver == null) {
@@ -2440,22 +2440,22 @@ function getSpriteTagValueCompletions(tag, inlinedOrDepended, getFiles) {
     }
     var ext = tmp_0;
     if (ext === 'c16' || ext === 's16') {
-      destination.z1(element);
+      destination.g2(element);
     }
   }
   // Inline function 'kotlin.collections.mapNotNull' call
   // Inline function 'kotlin.collections.mapNotNullTo' call
-  var destination_0 = ArrayList.u1();
+  var destination_0 = ArrayList.b2();
   // Inline function 'kotlin.collections.forEach' call
-  var _iterator__ex2g4s_0 = destination.w();
-  while (_iterator__ex2g4s_0.x()) {
-    var element_0 = _iterator__ex2g4s_0.y();
+  var _iterator__ex2g4s_0 = destination.d1();
+  while (_iterator__ex2g4s_0.e1()) {
+    var element_0 = _iterator__ex2g4s_0.f1();
     var tmp0_safe_receiver_0 = getFileNameFunc(element_0);
     if (tmp0_safe_receiver_0 == null)
       null;
     else {
       // Inline function 'kotlin.let' call
-      destination_0.z1(tmp0_safe_receiver_0);
+      destination_0.g2(tmp0_safe_receiver_0);
     }
   }
   var fromInlined = destination_0;
@@ -2463,17 +2463,17 @@ function getSpriteTagValueCompletions(tag, inlinedOrDepended, getFiles) {
   if (!requiresExtension) {
     // Inline function 'kotlin.collections.mapNotNull' call
     // Inline function 'kotlin.collections.mapNotNullTo' call
-    var destination_1 = ArrayList.u1();
+    var destination_1 = ArrayList.b2();
     // Inline function 'kotlin.collections.forEach' call
-    var _iterator__ex2g4s_1 = fileNames.w();
-    while (_iterator__ex2g4s_1.x()) {
-      var element_1 = _iterator__ex2g4s_1.y();
+    var _iterator__ex2g4s_1 = fileNames.d1();
+    while (_iterator__ex2g4s_1.e1()) {
+      var element_1 = _iterator__ex2g4s_1.f1();
       var tmp0_safe_receiver_1 = getFileNameFunc(element_1);
       if (tmp0_safe_receiver_1 == null)
         null;
       else {
         // Inline function 'kotlin.let' call
-        destination_1.z1(tmp0_safe_receiver_1);
+        destination_1.g2(tmp0_safe_receiver_1);
       }
     }
     tmp_1 = destination_1;
@@ -2487,17 +2487,17 @@ function getAllFileNames(extensions, inlinedOrDepended, getFiles) {
   _init_properties_CompletionsCaos2PrayValues_kt__ja0mln();
   // Inline function 'kotlin.collections.mapNotNull' call
   // Inline function 'kotlin.collections.mapNotNullTo' call
-  var destination = ArrayList.u1();
+  var destination = ArrayList.b2();
   // Inline function 'kotlin.collections.forEach' call
-  var _iterator__ex2g4s = inlinedOrDepended.w();
-  while (_iterator__ex2g4s.x()) {
-    var element = _iterator__ex2g4s.y();
+  var _iterator__ex2g4s = inlinedOrDepended.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var element = _iterator__ex2g4s.f1();
     var tmp0_safe_receiver = getFileName(element);
     if (tmp0_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
-      destination.z1(tmp0_safe_receiver);
+      destination.g2(tmp0_safe_receiver);
     }
   }
   var all = toMutableList(destination);
@@ -2509,9 +2509,9 @@ function getAllFileNames(extensions, inlinedOrDepended, getFiles) {
     inductionVariable = inductionVariable + 1 | 0;
     var tmp0_elvis_lhs = getFileName(file);
     var name = tmp0_elvis_lhs == null ? file : tmp0_elvis_lhs;
-    if (!all.g2(name)) {
+    if (!all.n2(name)) {
       // Inline function 'kotlin.collections.plusAssign' call
-      all.z1(name);
+      all.g2(name);
     }
   }
   return all;
@@ -2530,9 +2530,9 @@ var properties_initialized_CompletionsCaos2PrayValues_kt_ye1jyv;
 function _init_properties_CompletionsCaos2PrayValues_kt__ja0mln() {
   if (!properties_initialized_CompletionsCaos2PrayValues_kt_ye1jyv) {
     properties_initialized_CompletionsCaos2PrayValues_kt_ye1jyv = true;
-    requiresFileWithoutExtensionRegex = Regex.tf('^(Egg\\s+Gallery\\s+male|Egg\\s+Gallery\\s+female|Agent\\s+Animation\\s+Gallery|Web\\s+Icon)$', RegexOption_IGNORE_CASE_getInstance());
-    requiresSpriteRegex = Regex.tf('^(Egg\\s+Glyph\\s+File|Egg\\s+Glyph\\s+File\\s+2|Agent\\s+Animation\\s+File|Web\\s+Icon|Agent\\s+Animation\\s+Gallery|Egg\\s+Gallery\\s+male|Egg\\s+Gallery\\s+female)$', RegexOption_IGNORE_CASE_getInstance());
-    requiresGenetics = Regex.tf('^(Genetics\\s+File|Mother\\s+Genetic\\s+File|Father\\s+Genetic\\s+File)$', RegexOption_IGNORE_CASE_getInstance());
+    requiresFileWithoutExtensionRegex = Regex.wf('^(Egg\\s+Gallery\\s+male|Egg\\s+Gallery\\s+female|Agent\\s+Animation\\s+Gallery|Web\\s+Icon)$', RegexOption_IGNORE_CASE_getInstance());
+    requiresSpriteRegex = Regex.wf('^(Egg\\s+Glyph\\s+File|Egg\\s+Glyph\\s+File\\s+2|Agent\\s+Animation\\s+File|Web\\s+Icon|Agent\\s+Animation\\s+Gallery|Egg\\s+Gallery\\s+male|Egg\\s+Gallery\\s+female)$', RegexOption_IGNORE_CASE_getInstance());
+    requiresGenetics = Regex.wf('^(Genetics\\s+File|Mother\\s+Genetic\\s+File|Father\\s+Genetic\\s+File)$', RegexOption_IGNORE_CASE_getInstance());
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -2542,11 +2542,11 @@ function _init_properties_CompletionsCaos2PrayValues_kt__ja0mln() {
 function getCaos2TagCompletions(variant, allComments, hasEQ, range) {
   // Inline function 'kotlin.collections.mapNotNull' call
   // Inline function 'kotlin.collections.mapNotNullTo' call
-  var destination = ArrayList.u1();
+  var destination = ArrayList.b2();
   // Inline function 'kotlin.collections.forEach' call
-  var _iterator__ex2g4s = allComments.w();
-  while (_iterator__ex2g4s.x()) {
-    var element = _iterator__ex2g4s.y();
+  var _iterator__ex2g4s = allComments.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var element = _iterator__ex2g4s.f1();
     var tmp0_safe_receiver = element.tag;
     var tmp;
     if (tmp0_safe_receiver == null) {
@@ -2560,7 +2560,7 @@ function getCaos2TagCompletions(variant, allComments, hasEQ, range) {
       null;
     else {
       // Inline function 'kotlin.let' call
-      destination.z1(tmp0_safe_receiver_0);
+      destination.g2(tmp0_safe_receiver_0);
     }
   }
   var tagsSoFar = destination;
@@ -2582,12 +2582,12 @@ function getCaos2TagCompletions(variant, allComments, hasEQ, range) {
   // Inline function 'kotlin.collections.map' call
   var this_0 = tags;
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_0 = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
-  var _iterator__ex2g4s_0 = this_0.w();
-  while (_iterator__ex2g4s_0.x()) {
-    var item = _iterator__ex2g4s_0.y();
+  var destination_0 = ArrayList.f2(collectionSizeOrDefault(this_0, 10));
+  var _iterator__ex2g4s_0 = this_0.d1();
+  while (_iterator__ex2g4s_0.e1()) {
+    var item = _iterator__ex2g4s_0.f1();
     var tmp$ret$12 = createSimpleCompletionItem(item, range, 5, suffix);
-    destination_0.z1(tmp$ret$12);
+    destination_0.g2(tmp$ret$12);
   }
   return destination_0;
 }
@@ -2602,7 +2602,7 @@ function getCaos2TagValueCompletions(thisFileName, variant, comment, allComments
     while (inductionVariable < last) {
       var element = tmp0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      if (inRange(element.d1e(), line, character, VOID, true)) {
+      if (inRange(element.g1e(), line, character, VOID, true)) {
         tmp$ret$1 = element;
         break $l$block;
       }
@@ -2610,9 +2610,9 @@ function getCaos2TagValueCompletions(thisFileName, variant, comment, allComments
     tmp$ret$1 = null;
   }
   var tmp0_safe_receiver = tmp$ret$1;
-  var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.d1e();
+  var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.g1e();
   var valueRange = tmp1_elvis_lhs == null ? new RangeWithIndexImpl(new PositionImpl(line, character), new PositionImpl(line, character), 0, 0, null) : tmp1_elvis_lhs;
-  var range = new RangeImpl(new PositionImpl(valueRange.h1().e1e(), valueRange.h1().i1e()), new PositionImpl(valueRange.f1e().e1e(), valueRange.f1e().i1e()));
+  var range = new RangeImpl(new PositionImpl(valueRange.o1().h1e(), valueRange.o1().l1e()), new PositionImpl(valueRange.i1e().h1e(), valueRange.i1e().l1e()));
   var tmp;
   if (!(comment.eq == null)) {
     // Inline function 'kotlin.collections.isNotEmpty' call
@@ -2653,12 +2653,12 @@ function getCaos2TagValueCompletions(thisFileName, variant, comment, allComments
 
       // Inline function 'kotlin.collections.filterTo' call
 
-      var destination = ArrayList.u1();
-      var _iterator__ex2g4s = allComments.w();
-      while (_iterator__ex2g4s.x()) {
-        var element_0 = _iterator__ex2g4s.y();
+      var destination = ArrayList.b2();
+      var _iterator__ex2g4s = allComments.d1();
+      while (_iterator__ex2g4s.e1()) {
+        var element_0 = _iterator__ex2g4s.f1();
         if (!(element_0.command == null)) {
-          destination.z1(element_0);
+          destination.g2(element_0);
         }
       }
 
@@ -2668,12 +2668,12 @@ function getCaos2TagValueCompletions(thisFileName, variant, comment, allComments
   var completions = tmp_2;
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_0 = ArrayList.y1(collectionSizeOrDefault(completions, 10));
-  var _iterator__ex2g4s_0 = completions.w();
-  while (_iterator__ex2g4s_0.x()) {
-    var item = _iterator__ex2g4s_0.y();
+  var destination_0 = ArrayList.f2(collectionSizeOrDefault(completions, 10));
+  var _iterator__ex2g4s_0 = completions.d1();
+  while (_iterator__ex2g4s_0.e1()) {
+    var item = _iterator__ex2g4s_0.f1();
     var tmp$ret$12 = createQuotedCompletionItem(item, range, 12);
-    destination_0.z1(tmp$ret$12);
+    destination_0.g2(tmp$ret$12);
   }
   return destination_0;
 }
@@ -2683,7 +2683,7 @@ function get_emptyCompletionList() {
   var tmp = KProperty0;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('emptyCompletionList', 0, tmp, _get_emptyCompletionList_$ref_pmhul5(), null);
-  return tmp0.k3();
+  return tmp0.r3();
 }
 var emptyCompletionList$delegate;
 function getCompletionItems(parseResult, line, character, options, settings, cursorOut) {
@@ -2701,14 +2701,14 @@ function getCompletionItems(parseResult, line, character, options, settings, cur
   else
     cursorOut(cursor);
   var tmp2_safe_receiver = cursor.command;
-  var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.i4u();
+  var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.f26();
   if (tmp3_safe_receiver == null)
     null;
   else {
     // Inline function 'kotlin.let' call
     if (tmp3_safe_receiver === get_GSUB() || tmp3_safe_receiver === get_SUBR()) {
       var subroutines = getSubroutineCompletions(parseResult, cursor, tmp3_safe_receiver === get_GSUB());
-      return CompletionList.w53(false, subroutines);
+      return CompletionList.g56(false, subroutines);
     }
   }
   var tmp;
@@ -2751,7 +2751,7 @@ function getCompletionItems(parseResult, line, character, options, settings, cur
         while (inductionVariable < last) {
           var element = tmp0[inductionVariable];
           inductionVariable = inductionVariable + 1 | 0;
-          if (inRange(element.w4x_1, line, adjustedCharacter)) {
+          if (inRange(element.d50_1, line, adjustedCharacter)) {
             tmp$ret$4 = element;
             break $l$block;
           }
@@ -2784,7 +2784,7 @@ function getCompletionItems(parseResult, line, character, options, settings, cur
   try {
     var bitflagsCompletions = getBitflagsOptionsProvider(cursor);
     if (!(bitflagsCompletions == null)) {
-      return CompletionList.w53(true, bitflagsCompletions);
+      return CompletionList.g56(true, bitflagsCompletions);
     }
   } catch ($p) {
     if ($p instanceof Error) {
@@ -2794,7 +2794,7 @@ function getCompletionItems(parseResult, line, character, options, settings, cur
       throw $p;
     }
   }
-  return CompletionList.w53(true, items);
+  return CompletionList.g56(true, items);
 }
 function getCompletionItemsWithCaosCursorData(variant, commands, positionData, options, settings, caos2Comments) {
   settings = settings === VOID ? null : settings;
@@ -2827,13 +2827,13 @@ function getCompletionItemsWithCaosCursorData(variant, commands, positionData, o
     return emptyList();
   }
   var closestItem = positionData.closestItem;
-  if (!(closestItem == null) && shouldCancelComplete(closestItem, positionData.e1e(), positionData.i1e())) {
+  if (!(closestItem == null) && shouldCancelComplete(closestItem, positionData.h1e(), positionData.l1e())) {
     return emptyList();
   }
   if (!(closestItem == null) && closestItem.actualType === -6) {
     var tmp_2;
     try {
-      tmp_2 = getCaos2PrayCompletions(variant, caos2Comments, closestItem instanceof Caos2Comment ? closestItem : THROW_CCE(), positionData.e1e(), positionData.i1e(), options);
+      tmp_2 = getCaos2PrayCompletions(variant, caos2Comments, closestItem instanceof Caos2Comment ? closestItem : THROW_CCE(), positionData.h1e(), positionData.l1e(), options);
     } catch ($p) {
       var tmp_3;
       if ($p instanceof Error) {
@@ -2846,7 +2846,7 @@ function getCompletionItemsWithCaosCursorData(variant, commands, positionData, o
     }
     return tmp_2;
   }
-  if (!(closestItem == null) && inQuotes(closestItem, positionData.e1e(), positionData.i1e() + 1 | 0)) {
+  if (!(closestItem == null) && inQuotes(closestItem, positionData.h1e(), positionData.l1e() + 1 | 0)) {
     return getValuesListCompletions(positionData, true);
   }
   var tmp_4;
@@ -2859,15 +2859,15 @@ function getCompletionItemsWithCaosCursorData(variant, commands, positionData, o
   // Inline function 'kotlin.collections.filter' call
   var tmp0 = raw;
   // Inline function 'kotlin.collections.filterTo' call
-  var destination = ArrayList.u1();
-  var _iterator__ex2g4s = tmp0.w();
-  while (_iterator__ex2g4s.x()) {
-    var element = _iterator__ex2g4s.y();
-    var tmp_5 = element.j53_1;
+  var destination = ArrayList.b2();
+  var _iterator__ex2g4s = tmp0.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var element = _iterator__ex2g4s.f1();
+    var tmp_5 = element.t55_1;
     var tmp0_safe_receiver_0 = tmp_5 instanceof CommandData ? tmp_5 : null;
-    var cmd = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.w55_1;
+    var cmd = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.g58_1;
     if (cmd == null || !startsWith(cmd, '_CD_')) {
-      destination.z1(element);
+      destination.g2(element);
     }
   }
   raw = destination;
@@ -2875,7 +2875,7 @@ function getCompletionItemsWithCaosCursorData(variant, commands, positionData, o
 }
 function emptyCompletionList$delegate$lambda() {
   _init_properties_getCompletionItems_kt__hvciby();
-  return CompletionList.w53(true, emptyList());
+  return CompletionList.g56(true, emptyList());
 }
 function _get_emptyCompletionList_$ref_pmhul5() {
   return () => get_emptyCompletionList();
@@ -2900,14 +2900,14 @@ function commandToCompletionItem(command, sortPrefix) {
   var parameters = sortedWith(this_0, tmp$ret$3);
   // Inline function 'kotlin.text.buildString' call
   // Inline function 'kotlin.apply' call
-  var this_1 = StringBuilder.s();
-  var iterator = parameters.w();
+  var this_1 = StringBuilder.z();
+  var iterator = parameters.d1();
   var index = 0;
-  while (iterator.x()) {
+  while (iterator.e1()) {
     var i = index;
     index = index + 1 | 0;
-    var param = iterator.y();
-    this_1.t(' ${' + (i + 1 | 0) + ':' + formatParameterSnippet(param) + '}');
+    var param = iterator.f1();
+    this_1.a1(' ${' + (i + 1 | 0) + ':' + formatParameterSnippet(param) + '}');
   }
   var args = this_1.toString();
   var tmp_0;
@@ -3013,13 +3013,13 @@ function inflect(text) {
   // Inline function 'kotlin.collections.mapNotNull' call
   var tmp0 = get_inflectReplacements();
   // Inline function 'kotlin.collections.mapNotNullTo' call
-  var destination = ArrayList.u1();
+  var destination = ArrayList.b2();
   // Inline function 'kotlin.collections.forEach' call
-  var _iterator__ex2g4s = tmp0.w();
-  while (_iterator__ex2g4s.x()) {
-    var element = _iterator__ex2g4s.y();
-    var search = element.ki();
-    var replace_0 = element.li();
+  var _iterator__ex2g4s = tmp0.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var element = _iterator__ex2g4s.f1();
+    var search = element.ni();
+    var replace_0 = element.oi();
     var replaced = replace(lower, search, replace_0);
     // Inline function 'kotlin.takeIf' call
     var tmp;
@@ -3040,7 +3040,7 @@ function inflect(text) {
       null;
     else {
       // Inline function 'kotlin.let' call
-      destination.z1(tmp0_safe_receiver);
+      destination.g2(tmp0_safe_receiver);
     }
   }
   var variants = destination;
@@ -3050,49 +3050,49 @@ function isSimilarType(aType, other) {
   _init_properties_CompletionUtils_kt__nahf9f();
   if (aType === other)
     return true;
-  if (get_anyTypes().g2(aType) || get_anyTypes().g2(other))
+  if (get_anyTypes().n2(aType) || get_anyTypes().n2(other))
     return true;
   if (isNumberTypeAlike(aType, other))
     return true;
-  if (get_stringTypes().g2(aType) && get_stringTypes().g2(other))
+  if (get_stringTypes().n2(aType) && get_stringTypes().n2(other))
     return true;
-  if (get_byteStringTypes().g2(aType) && get_byteStringTypes().g2(other))
+  if (get_byteStringTypes().n2(aType) && get_byteStringTypes().n2(other))
     return true;
-  return get_agentTypes().g2(aType) && get_agentTypes().g2(other);
+  return get_agentTypes().n2(aType) && get_agentTypes().n2(other);
 }
 function isNumberTypeAlike(a, b) {
   _init_properties_CompletionUtils_kt__nahf9f();
   if (a === 16 || a === 2)
-    return get_numberTypes().g2(b);
+    return get_numberTypes().n2(b);
   if (b === 16 || b === 2)
-    return get_numberTypes().g2(a);
+    return get_numberTypes().n2(a);
   return a === 1 && b === 1;
 }
 function arrayDifference(a, b) {
   _init_properties_CompletionUtils_kt__nahf9f();
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(collectionSizeOrDefault(b, 10));
-  var _iterator__ex2g4s = b.w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var destination = ArrayList.f2(collectionSizeOrDefault(b, 10));
+  var _iterator__ex2g4s = b.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$2 = item.toLowerCase();
-    destination.z1(tmp$ret$2);
+    destination.g2(tmp$ret$2);
   }
   var bLower = toSet(destination);
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
-  var destination_0 = ArrayList.u1();
-  var _iterator__ex2g4s_0 = a.w();
-  while (_iterator__ex2g4s_0.x()) {
-    var element = _iterator__ex2g4s_0.y();
+  var destination_0 = ArrayList.b2();
+  var _iterator__ex2g4s_0 = a.d1();
+  while (_iterator__ex2g4s_0.e1()) {
+    var element = _iterator__ex2g4s_0.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$8 = element.toLowerCase();
-    if (!bLower.g2(tmp$ret$8)) {
-      destination_0.z1(element);
+    if (!bLower.n2(tmp$ret$8)) {
+      destination_0.g2(element);
     }
   }
   return destination_0;
@@ -3167,32 +3167,32 @@ function getExtension(file) {
 function filterByExtension(files, extensions) {
   _init_properties_CompletionUtils_kt__nahf9f();
   // Inline function 'kotlin.collections.isNullOrEmpty' call
-  if (extensions == null || extensions.u())
+  if (extensions == null || extensions.b1())
     return files;
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(collectionSizeOrDefault(extensions, 10));
-  var _iterator__ex2g4s = extensions.w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
+  var destination = ArrayList.f2(collectionSizeOrDefault(extensions, 10));
+  var _iterator__ex2g4s = extensions.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$4 = item.toLowerCase();
     var tmp$ret$3 = trimStart(tmp$ret$4, charArrayOf([_Char___init__impl__6a9atx(46)]));
-    destination.z1(tmp$ret$3);
+    destination.g2(tmp$ret$3);
   }
   var exts = toSet(destination);
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
-  var destination_0 = ArrayList.u1();
-  var _iterator__ex2g4s_0 = files.w();
-  while (_iterator__ex2g4s_0.x()) {
-    var element = _iterator__ex2g4s_0.y();
+  var destination_0 = ArrayList.b2();
+  var _iterator__ex2g4s_0 = files.d1();
+  while (_iterator__ex2g4s_0.e1()) {
+    var element = _iterator__ex2g4s_0.f1();
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var ext = substringAfterLast(element, _Char___init__impl__6a9atx(46), '').toLowerCase();
-    if (exts.g2(ext)) {
-      destination_0.z1(element);
+    if (exts.n2(ext)) {
+      destination_0.g2(element);
     }
   }
   return destination_0;
@@ -3201,35 +3201,35 @@ function relativePath(from, to) {
   _init_properties_CompletionUtils_kt__nahf9f();
   var fromParts = split(trimEnd(replace_0(from, _Char___init__impl__6a9atx(92), _Char___init__impl__6a9atx(47)), charArrayOf([_Char___init__impl__6a9atx(47)])), charArrayOf([_Char___init__impl__6a9atx(47)]));
   var toParts = split(replace_0(to, _Char___init__impl__6a9atx(92), _Char___init__impl__6a9atx(47)), charArrayOf([_Char___init__impl__6a9atx(47)]));
-  if (fromParts.u() || toParts.u())
+  if (fromParts.b1() || toParts.b1())
     return null;
   var commonLength = 0;
   var inductionVariable = 0;
-  var last = fromParts.b2() - 1 | 0;
+  var last = fromParts.i2() - 1 | 0;
   if (inductionVariable <= last)
     $l$loop: do {
       var i = inductionVariable;
       inductionVariable = inductionVariable + 1 | 0;
-      if (i >= toParts.b2() || !(fromParts.d2(i) === toParts.d2(i)))
+      if (i >= toParts.i2() || !(fromParts.k2(i) === toParts.k2(i)))
         break $l$loop;
       commonLength = i + 1 | 0;
     }
      while (inductionVariable <= last);
-  var upCount = fromParts.b2() - commonLength | 0;
+  var upCount = fromParts.i2() - commonLength | 0;
   // Inline function 'kotlin.collections.List' call
   // Inline function 'kotlin.collections.MutableList' call
-  var list = ArrayList.y1(upCount);
+  var list = ArrayList.f2(upCount);
   // Inline function 'kotlin.repeat' call
   var inductionVariable_0 = 0;
   if (inductionVariable_0 < upCount)
     do {
       var index = inductionVariable_0;
       inductionVariable_0 = inductionVariable_0 + 1 | 0;
-      list.z1('..');
+      list.g2('..');
     }
      while (inductionVariable_0 < upCount);
   var parts = plus_0(list, drop(toParts, commonLength));
-  if (parts.u())
+  if (parts.b1())
     return null;
   return joinToString(parts, '/');
 }
@@ -3266,13 +3266,13 @@ function getBitflagsOptionsProvider(data) {
   if (!isValuesListBitflag(valuesList))
     return null;
   var tmp3_safe_receiver = data.closestItem;
-  var closestItemRange = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.d1e();
-  var tmp5_safe_receiver = closestItemRange == null ? null : closestItemRange.h1();
-  var tmp6_elvis_lhs = tmp5_safe_receiver == null ? null : tmp5_safe_receiver.e1e();
-  var tmp_1 = tmp6_elvis_lhs == null ? data.e1e() : tmp6_elvis_lhs;
-  var tmp8_safe_receiver = closestItemRange == null ? null : closestItemRange.h1();
-  var tmp9_elvis_lhs = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.i1e();
-  var start = new PositionImpl(tmp_1, tmp9_elvis_lhs == null ? data.i1e() : tmp9_elvis_lhs);
+  var closestItemRange = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.g1e();
+  var tmp5_safe_receiver = closestItemRange == null ? null : closestItemRange.o1();
+  var tmp6_elvis_lhs = tmp5_safe_receiver == null ? null : tmp5_safe_receiver.h1e();
+  var tmp_1 = tmp6_elvis_lhs == null ? data.h1e() : tmp6_elvis_lhs;
+  var tmp8_safe_receiver = closestItemRange == null ? null : closestItemRange.o1();
+  var tmp9_elvis_lhs = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.l1e();
+  var start = new PositionImpl(tmp_1, tmp9_elvis_lhs == null ? data.l1e() : tmp9_elvis_lhs);
   var range = new RangeImpl(start, start);
   var commandItem = new CompletionItem('Generate Bitflag Value for ' + valuesList.name, VOID, VOID, VOID, VOID, '0_ bit flag', VOID, '', VOID, VOID, new TextEditImpl(range, ''), new LspCommand('Generate Bitflag Value for ' + valuesList.name, 'caos.generateBitflagValue'));
   var out = mutableListOf([commandItem]);
@@ -3284,8 +3284,8 @@ function getBitflagsOptionsProvider(data) {
     inductionVariable = inductionVariable + 1 | 0;
     var completionItem = getValuesListValueCompletionItem(item);
     // Inline function 'kotlin.collections.plusAssign' call
-    var element = completionItem.m53(VOID, VOID, VOID, VOID, VOID, '1_' + completionItem.c53_1);
-    out.z1(element);
+    var element = completionItem.w55(VOID, VOID, VOID, VOID, VOID, '1_' + completionItem.m55_1);
+    out.g2(element);
   }
   return out;
 }
@@ -3332,7 +3332,7 @@ function get_variableCache() {
 var variableCache;
 function getIndexedVariableCompletions(variant, rvalues) {
   _init_properties_CompletionsIndexedVariables_kt__wyegl1();
-  var tmp0_safe_receiver = get_variableCache().r3(variant);
+  var tmp0_safe_receiver = get_variableCache().y3(variant);
   if (tmp0_safe_receiver == null)
     null;
   else {
@@ -3450,16 +3450,16 @@ function getIndexedVariableCompletions(variant, rvalues) {
   }
   var commandForPrefix = mapOf([to('var', varX), to('obv', obvX), to('va', vaXX), to('ov', ovXX), to('mv', mvXX)]);
   // Inline function 'kotlin.collections.mutableListOf' call
-  var out = ArrayList.u1();
-  var _iterator__ex2g4s = vars.w();
-  $l$loop: while (_iterator__ex2g4s.x()) {
-    var _destruct__k2r9zo = _iterator__ex2g4s.y();
-    var prefix = _destruct__k2r9zo.ki();
-    var maxIndex = _destruct__k2r9zo.li();
-    var descPriority = _destruct__k2r9zo.jp();
-    var description = descPriority.ki();
-    var priority = descPriority.li();
-    var tmp2_elvis_lhs = commandForPrefix.r3(prefix);
+  var out = ArrayList.b2();
+  var _iterator__ex2g4s = vars.d1();
+  $l$loop: while (_iterator__ex2g4s.e1()) {
+    var _destruct__k2r9zo = _iterator__ex2g4s.f1();
+    var prefix = _destruct__k2r9zo.ni();
+    var maxIndex = _destruct__k2r9zo.oi();
+    var descPriority = _destruct__k2r9zo.mp();
+    var description = descPriority.ni();
+    var priority = descPriority.oi();
+    var tmp2_elvis_lhs = commandForPrefix.y3(prefix);
     var tmp;
     if (tmp2_elvis_lhs == null) {
       continue $l$loop;
@@ -3471,7 +3471,7 @@ function getIndexedVariableCompletions(variant, rvalues) {
   }
   // Inline function 'kotlin.also' call
   // Inline function 'kotlin.collections.set' call
-  get_variableCache().l3(variant, out);
+  get_variableCache().s3(variant, out);
   return out;
 }
 function addVariablesOfType(completions, command, prefix, max, description, priority) {
@@ -3491,7 +3491,7 @@ function addVariablesOfType(completions, command, prefix, max, description, prio
       var tmp2_data = new VariableData(tmp$ret$0, prefix, i);
       // Inline function 'kotlin.collections.plusAssign' call
       var element = new CompletionItem(text, 6, VOID, description, VOID, tmp1_sortText, text, text, VOID, VOID, VOID, VOID, tmp2_data);
-      completions.z1(element);
+      completions.g2(element);
     }
      while (!(i === max));
 }
@@ -3500,7 +3500,7 @@ function _init_properties_CompletionsIndexedVariables_kt__wyegl1() {
   if (!properties_initialized_CompletionsIndexedVariables_kt_gs7r2l) {
     properties_initialized_CompletionsIndexedVariables_kt_gs7r2l = true;
     // Inline function 'kotlin.collections.mutableMapOf' call
-    variableCache = LinkedHashMap.mb();
+    variableCache = LinkedHashMap.tb();
   }
 }
 function getLvalueCompletions(variant, commands, completionSettings) {
@@ -3548,7 +3548,7 @@ function getSubroutineCompletions(parseResult, cursor, forGSUB) {
   var tmp;
   // Inline function 'kotlin.collections.isEmpty' call
   if (parseResult.scripts.length === 0) {
-    tmp = CaosParser_instance.p4x(parseResult);
+    tmp = CaosParser_instance.w4z(parseResult);
   } else {
     tmp = parseResult.scripts;
   }
@@ -3562,7 +3562,7 @@ function getSubroutineCompletions(parseResult, cursor, forGSUB) {
     while (inductionVariable < last) {
       var element = scripts[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      if (inRange(element.textRange, cursor.e1e(), cursor.i1e())) {
+      if (inRange(element.textRange, cursor.h1e(), cursor.l1e())) {
         tmp$ret$2 = element;
         break $l$block;
       }
@@ -3582,14 +3582,14 @@ function getSubroutineCompletions(parseResult, cursor, forGSUB) {
   // Inline function 'kotlin.collections.map' call
   var this_0 = getSubroutineItems(scriptItems, forGSUB ? get_SUBR() : get_GSUB());
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
-  var _iterator__ex2g4s = this_0.w();
-  while (_iterator__ex2g4s.x()) {
-    var item = _iterator__ex2g4s.y();
-    var tmp0_label = item.j1f();
-    var tmp2_insertText = item.j1f();
+  var destination = ArrayList.f2(collectionSizeOrDefault(this_0, 10));
+  var _iterator__ex2g4s = this_0.d1();
+  while (_iterator__ex2g4s.e1()) {
+    var item = _iterator__ex2g4s.f1();
+    var tmp0_label = item.m1f();
+    var tmp2_insertText = item.m1f();
     var tmp$ret$7 = new CompletionItem(tmp0_label, 12, VOID, VOID, false, VOID, VOID, tmp2_insertText, 1, 1);
-    destination.z1(tmp$ret$7);
+    destination.g2(tmp$ret$7);
   }
   return destination;
 }
@@ -3598,7 +3598,7 @@ function getSubroutineItems(items, afterToken) {
   _init_properties_CompletionsSubroutines_kt__7qjpvs();
   var subroutineNext = false;
   // Inline function 'kotlin.collections.mutableListOf' call
-  var out = ArrayList.u1();
+  var out = ArrayList.b2();
   var inductionVariable = 0;
   var last = items.length;
   while (inductionVariable < last) {
@@ -3607,12 +3607,12 @@ function getSubroutineItems(items, afterToken) {
     if (subroutineNext) {
       if (item.typeToken === TypeTokens_getInstance().TOKEN || item.typeToken === TypeTokens_getInstance().COMMAND_TOKEN) {
         // Inline function 'kotlin.collections.plusAssign' call
-        out.z1(item);
+        out.g2(item);
       }
       subroutineNext = false;
     } else {
       if (item instanceof CommandToken) {
-        if (item.c1q_1.length === 4 && item.token === afterToken) {
+        if (item.d1q_1.length === 4 && item.token === afterToken) {
           subroutineNext = true;
         }
       }
@@ -3662,21 +3662,21 @@ function getValuesListCompletions(data, inQuotes) {
   var values = tmp_1;
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.y1(values.length);
+  var destination = ArrayList.f2(values.length);
   var inductionVariable = 0;
   var last = values.length;
   while (inductionVariable < last) {
     var item = values[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
     var tmp$ret$2 = getValuesListValueCompletionItem(item, inQuotes);
-    destination.z1(tmp$ret$2);
+    destination.g2(tmp$ret$2);
   }
   return destination;
 }
 function getValuesListValueCompletionItem(value, inQuotes) {
   inQuotes = inQuotes === VOID ? false : inQuotes;
   _init_properties_CompletionsValuesListValues_kt__gb8ap3();
-  var isNumber = get_numbersRegex().vf(value.value);
+  var isNumber = get_numbersRegex().yf(value.value);
   // Inline function 'kotlin.text.lowercase' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$0 = value.name.toLowerCase();
@@ -3698,7 +3698,7 @@ var properties_initialized_CompletionsValuesListValues_kt_gvtnh3;
 function _init_properties_CompletionsValuesListValues_kt__gb8ap3() {
   if (!properties_initialized_CompletionsValuesListValues_kt_gvtnh3) {
     properties_initialized_CompletionsValuesListValues_kt_gvtnh3 = true;
-    numbersRegex = Regex.uf('[+-]?[0-9]*\\.[0-9]+|[+-]?[0-9]+');
+    numbersRegex = Regex.xf('[+-]?[0-9]*\\.[0-9]+|[+-]?[0-9]+');
   }
 }
 function get_json() {
@@ -3707,7 +3707,7 @@ function get_json() {
   var tmp = KProperty0;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('json', 0, tmp, _get_json_$ref_62276a(), null);
-  return tmp0.k3();
+  return tmp0.r3();
 }
 var json$delegate;
 function getCaosCompletionItems(variant, parseResult, line, character, options, settings, cursorOut) {
@@ -3734,25 +3734,25 @@ function getCaosCompletionItems(variant, parseResult, line, character, options, 
     tmp_0 = parseResult;
   } else {
     if (!(parseResult == null) ? typeof parseResult === 'string' : false) {
-      tmp_0 = CaosParser_instance.d4x(variant, parseResult, line, character);
+      tmp_0 = CaosParser_instance.k4z(variant, parseResult, line, character);
     } else {
       var tmp_1;
       if (Array.isArray(parseResult) == true) {
         // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
         var this_0 = get_json();
         // Inline function 'kotlinx.serialization.serializer' call
-        var this_1 = this_0.rw();
+        var this_1 = this_0.uw();
         // Inline function 'kotlinx.serialization.internal.cast' call
-        var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CaosParserItem), arrayOf([]), false))]), false));
+        var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CaosParserItem), arrayOf([]), false))]), false));
         var tmp$ret$3 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
         var parserItems = decodeFromDynamic(this_0, tmp$ret$3, parseResult);
         var tmp_2 = CaosParser_instance;
-        tmp_1 = tmp_2.o4x(variant, joinToString_0(parserItems, '', VOID, VOID, VOID, VOID, completeCaos_JsApi$lambda_0), parserItems);
+        tmp_1 = tmp_2.v4z(variant, joinToString_0(parserItems, '', VOID, VOID, VOID, VOID, completeCaos_JsApi$lambda_0), parserItems);
       } else {
         // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
         var this_3 = get_json();
         // Inline function 'kotlinx.serialization.serializer' call
-        var this_4 = this_3.rw();
+        var this_4 = this_3.uw();
         // Inline function 'kotlinx.serialization.internal.cast' call
         var this_5 = serializer_0(this_4, createKType(getKClass(ParseResult), arrayOf([]), false));
         var tmp$ret$6 = isInterface(this_5, KSerializer) ? this_5 : THROW_CCE();
@@ -3766,7 +3766,7 @@ function getCaosCompletionItems(variant, parseResult, line, character, options, 
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_6 = get_json();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_7 = this_6.rw();
+  var this_7 = this_6.uw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_8 = serializer_0(this_7, createKType(getKClass(CompletionList), arrayOf([]), false));
   var tmp$ret$9 = isInterface(this_8, KSerializer) ? this_8 : THROW_CCE();
@@ -3778,14 +3778,14 @@ function json$delegate$lambda() {
 }
 function json$delegate$lambda$lambda($this$Json) {
   _init_properties_completion_kt__ujxjz8();
-  $this$Json.w45_1 = true;
+  $this$Json.a4j_1 = true;
   var tmp = $this$Json;
   // Inline function 'kotlinx.serialization.modules.SerializersModule' call
   var builder = new SerializersModuleBuilder();
   initCaosCompletionSerializersModule(builder);
   caosCursorPolymorphic(builder);
   caosCursorDataDefaultSerializer(builder);
-  tmp.l46_1 = builder.v11();
+  tmp.p4j_1 = builder.y11();
   return Unit_instance;
 }
 function _get_json_$ref_62276a() {
@@ -3796,7 +3796,7 @@ function completeCaos_JsApi$lambda($it) {
     // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
     var this_0 = get_json();
     // Inline function 'kotlinx.serialization.serializer' call
-    var this_1 = this_0.rw();
+    var this_1 = this_0.uw();
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_2 = serializer_0(this_1, createKType(getKClass(CaosCursorData), arrayOf([]), false));
     var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -3804,7 +3804,7 @@ function completeCaos_JsApi$lambda($it) {
     // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
     var this_3 = get_json();
     // Inline function 'kotlinx.serialization.serializer' call
-    var this_4 = this_3.rw();
+    var this_4 = this_3.uw();
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_5 = serializer_0(this_4, createKType(getKClass(CommandCall), arrayOf([]), false));
     var tmp$ret$4 = isInterface(this_5, KSerializer) ? this_5 : THROW_CCE();
@@ -3813,23 +3813,23 @@ function completeCaos_JsApi$lambda($it) {
     // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
     var this_6 = get_json();
     // Inline function 'kotlinx.serialization.serializer' call
-    var this_7 = this_6.rw();
+    var this_7 = this_6.uw();
     // Inline function 'kotlinx.serialization.internal.cast' call
-    var this_8 = serializer_0(this_7, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CompletionItem), arrayOf([]), false))]), false));
+    var this_8 = serializer_0(this_7, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CompletionItem), arrayOf([]), false))]), false));
     var tmp$ret$7 = isInterface(this_8, KSerializer) ? this_8 : THROW_CCE();
     return decodeFromDynamic(this_6, tmp$ret$7, out);
   };
 }
 function completeCaos_JsApi$lambda_0(it) {
   _init_properties_completion_kt__ujxjz8();
-  return it.j1f();
+  return it.m1f();
 }
 function completeCaos_JsApi$lambda_1($cursorOut) {
   return (it) => {
     // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
     var this_0 = get_json();
     // Inline function 'kotlinx.serialization.serializer' call
-    var this_1 = this_0.rw();
+    var this_1 = this_0.uw();
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_2 = serializer_0(this_1, createKType(getKClass(CaosCursorData), arrayOf([]), true));
     var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -3851,10 +3851,10 @@ function _init_properties_completion_kt__ujxjz8() {
 }
 //region block: post-declaration
 initMetadataForCompanion(Companion);
-protoOf($serializer).m14 = typeParametersSerializers;
+protoOf($serializer).p14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForCompanion(Companion_0);
-protoOf($serializer_0).m14 = typeParametersSerializers;
+protoOf($serializer_0).p14 = typeParametersSerializers;
 initMetadataForObject($serializer_0, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CaosCompletionData, 'CaosCompletionData', VOID, VOID, VOID, VOID, VOID, {0: Companion_getInstance_2});
 initMetadataForClass(CommandData, 'CommandData', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance});

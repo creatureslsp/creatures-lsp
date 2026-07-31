@@ -44,64 +44,64 @@ class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.completion.CompletionItem', this, 12);
-    tmp0_serialDesc.w13('label', false);
-    tmp0_serialDesc.w13('kind', true);
-    tmp0_serialDesc.w13('detail', true);
-    tmp0_serialDesc.w13('documentation', true);
-    tmp0_serialDesc.w13('preselect', true);
-    tmp0_serialDesc.w13('sortText', true);
-    tmp0_serialDesc.w13('filterText', true);
-    tmp0_serialDesc.w13('insertText', true);
-    tmp0_serialDesc.w13('insertTextFormat', true);
-    tmp0_serialDesc.w13('insertTextMode', true);
-    tmp0_serialDesc.w13('textEdit', true);
-    tmp0_serialDesc.w13('command', true);
-    this.v52_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('label', false);
+    tmp0_serialDesc.z13('kind', true);
+    tmp0_serialDesc.z13('detail', true);
+    tmp0_serialDesc.z13('documentation', true);
+    tmp0_serialDesc.z13('preselect', true);
+    tmp0_serialDesc.z13('sortText', true);
+    tmp0_serialDesc.z13('filterText', true);
+    tmp0_serialDesc.z13('insertText', true);
+    tmp0_serialDesc.z13('insertTextFormat', true);
+    tmp0_serialDesc.z13('insertTextMode', true);
+    tmp0_serialDesc.z13('textEdit', true);
+    tmp0_serialDesc.z13('command', true);
+    this.f55_1 = tmp0_serialDesc;
   }
-  w52(encoder, value) {
-    var tmp0_desc = this.v52_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.rx(tmp0_desc, 0, value.x52_1);
-    if (tmp1_output.zx(tmp0_desc, 1) ? true : !(value.y52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 1, IntSerializer_getInstance(), value.y52_1);
+  g55(encoder, value) {
+    var tmp0_desc = this.f55_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    tmp1_output.ux(tmp0_desc, 0, value.h55_1);
+    if (tmp1_output.cy(tmp0_desc, 1) ? true : !(value.i55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 1, IntSerializer_getInstance(), value.i55_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 2) ? true : !(value.z52_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 2, StringSerializer_getInstance(), value.z52_1);
+    if (tmp1_output.cy(tmp0_desc, 2) ? true : !(value.j55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 2, StringSerializer_getInstance(), value.j55_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 3) ? true : !(value.a53_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 3, StringSerializer_getInstance(), value.a53_1);
+    if (tmp1_output.cy(tmp0_desc, 3) ? true : !(value.k55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 3, StringSerializer_getInstance(), value.k55_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.b53_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 4, BooleanSerializer_getInstance(), value.b53_1);
+    if (tmp1_output.cy(tmp0_desc, 4) ? true : !(value.l55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 4, BooleanSerializer_getInstance(), value.l55_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.c53_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 5, StringSerializer_getInstance(), value.c53_1);
+    if (tmp1_output.cy(tmp0_desc, 5) ? true : !(value.m55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 5, StringSerializer_getInstance(), value.m55_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 6) ? true : !(value.d53_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 6, StringSerializer_getInstance(), value.d53_1);
+    if (tmp1_output.cy(tmp0_desc, 6) ? true : !(value.n55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 6, StringSerializer_getInstance(), value.n55_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 7) ? true : !(value.e53_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 7, StringSerializer_getInstance(), value.e53_1);
+    if (tmp1_output.cy(tmp0_desc, 7) ? true : !(value.o55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 7, StringSerializer_getInstance(), value.o55_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 8) ? true : !(value.f53_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 8, IntSerializer_getInstance(), value.f53_1);
+    if (tmp1_output.cy(tmp0_desc, 8) ? true : !(value.p55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 8, IntSerializer_getInstance(), value.p55_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 9) ? true : !(value.g53_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 9, IntSerializer_getInstance(), value.g53_1);
+    if (tmp1_output.cy(tmp0_desc, 9) ? true : !(value.q55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 9, IntSerializer_getInstance(), value.q55_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 10) ? true : !(value.h53_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 10, $serializer_getInstance(), value.h53_1);
+    if (tmp1_output.cy(tmp0_desc, 10) ? true : !(value.r55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 10, $serializer_getInstance(), value.r55_1);
     }
-    if (tmp1_output.zx(tmp0_desc, 11) ? true : !(value.i53_1 == null)) {
-      tmp1_output.vx(tmp0_desc, 11, $serializer_getInstance_3(), value.i53_1);
+    if (tmp1_output.cy(tmp0_desc, 11) ? true : !(value.s55_1 == null)) {
+      tmp1_output.yx(tmp0_desc, 11, $serializer_getInstance_3(), value.s55_1);
     }
-    tmp1_output.cw(tmp0_desc);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.w52(encoder, value instanceof CompletionItem ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.g55(encoder, value instanceof CompletionItem ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.v52_1;
+  qr(decoder) {
+    var tmp0_desc = this.f55_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -117,98 +117,98 @@ class $serializer {
     var tmp13_local9 = null;
     var tmp14_local10 = null;
     var tmp15_local11 = null;
-    var tmp17_input = decoder.bw(tmp0_desc);
-    if (tmp17_input.sw()) {
-      tmp4_local0 = tmp17_input.lw(tmp0_desc, 0);
+    var tmp17_input = decoder.ew(tmp0_desc);
+    if (tmp17_input.vw()) {
+      tmp4_local0 = tmp17_input.ow(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp17_input.pw(tmp0_desc, 1, IntSerializer_getInstance(), tmp5_local1);
+      tmp5_local1 = tmp17_input.sw(tmp0_desc, 1, IntSerializer_getInstance(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp17_input.pw(tmp0_desc, 2, StringSerializer_getInstance(), tmp6_local2);
+      tmp6_local2 = tmp17_input.sw(tmp0_desc, 2, StringSerializer_getInstance(), tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp17_input.pw(tmp0_desc, 3, StringSerializer_getInstance(), tmp7_local3);
+      tmp7_local3 = tmp17_input.sw(tmp0_desc, 3, StringSerializer_getInstance(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp17_input.pw(tmp0_desc, 4, BooleanSerializer_getInstance(), tmp8_local4);
+      tmp8_local4 = tmp17_input.sw(tmp0_desc, 4, BooleanSerializer_getInstance(), tmp8_local4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp17_input.pw(tmp0_desc, 5, StringSerializer_getInstance(), tmp9_local5);
+      tmp9_local5 = tmp17_input.sw(tmp0_desc, 5, StringSerializer_getInstance(), tmp9_local5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp17_input.pw(tmp0_desc, 6, StringSerializer_getInstance(), tmp10_local6);
+      tmp10_local6 = tmp17_input.sw(tmp0_desc, 6, StringSerializer_getInstance(), tmp10_local6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
-      tmp11_local7 = tmp17_input.pw(tmp0_desc, 7, StringSerializer_getInstance(), tmp11_local7);
+      tmp11_local7 = tmp17_input.sw(tmp0_desc, 7, StringSerializer_getInstance(), tmp11_local7);
       tmp3_bitMask0 = tmp3_bitMask0 | 128;
-      tmp12_local8 = tmp17_input.pw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
+      tmp12_local8 = tmp17_input.sw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
       tmp3_bitMask0 = tmp3_bitMask0 | 256;
-      tmp13_local9 = tmp17_input.pw(tmp0_desc, 9, IntSerializer_getInstance(), tmp13_local9);
+      tmp13_local9 = tmp17_input.sw(tmp0_desc, 9, IntSerializer_getInstance(), tmp13_local9);
       tmp3_bitMask0 = tmp3_bitMask0 | 512;
-      tmp14_local10 = tmp17_input.pw(tmp0_desc, 10, $serializer_getInstance(), tmp14_local10);
+      tmp14_local10 = tmp17_input.sw(tmp0_desc, 10, $serializer_getInstance(), tmp14_local10);
       tmp3_bitMask0 = tmp3_bitMask0 | 1024;
-      tmp15_local11 = tmp17_input.pw(tmp0_desc, 11, $serializer_getInstance_3(), tmp15_local11);
+      tmp15_local11 = tmp17_input.sw(tmp0_desc, 11, $serializer_getInstance_3(), tmp15_local11);
       tmp3_bitMask0 = tmp3_bitMask0 | 2048;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp17_input.tw(tmp0_desc);
+        tmp2_index = tmp17_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp17_input.lw(tmp0_desc, 0);
+            tmp4_local0 = tmp17_input.ow(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp17_input.pw(tmp0_desc, 1, IntSerializer_getInstance(), tmp5_local1);
+            tmp5_local1 = tmp17_input.sw(tmp0_desc, 1, IntSerializer_getInstance(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp17_input.pw(tmp0_desc, 2, StringSerializer_getInstance(), tmp6_local2);
+            tmp6_local2 = tmp17_input.sw(tmp0_desc, 2, StringSerializer_getInstance(), tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp17_input.pw(tmp0_desc, 3, StringSerializer_getInstance(), tmp7_local3);
+            tmp7_local3 = tmp17_input.sw(tmp0_desc, 3, StringSerializer_getInstance(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp17_input.pw(tmp0_desc, 4, BooleanSerializer_getInstance(), tmp8_local4);
+            tmp8_local4 = tmp17_input.sw(tmp0_desc, 4, BooleanSerializer_getInstance(), tmp8_local4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp17_input.pw(tmp0_desc, 5, StringSerializer_getInstance(), tmp9_local5);
+            tmp9_local5 = tmp17_input.sw(tmp0_desc, 5, StringSerializer_getInstance(), tmp9_local5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp17_input.pw(tmp0_desc, 6, StringSerializer_getInstance(), tmp10_local6);
+            tmp10_local6 = tmp17_input.sw(tmp0_desc, 6, StringSerializer_getInstance(), tmp10_local6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           case 7:
-            tmp11_local7 = tmp17_input.pw(tmp0_desc, 7, StringSerializer_getInstance(), tmp11_local7);
+            tmp11_local7 = tmp17_input.sw(tmp0_desc, 7, StringSerializer_getInstance(), tmp11_local7);
             tmp3_bitMask0 = tmp3_bitMask0 | 128;
             break;
           case 8:
-            tmp12_local8 = tmp17_input.pw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
+            tmp12_local8 = tmp17_input.sw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
             tmp3_bitMask0 = tmp3_bitMask0 | 256;
             break;
           case 9:
-            tmp13_local9 = tmp17_input.pw(tmp0_desc, 9, IntSerializer_getInstance(), tmp13_local9);
+            tmp13_local9 = tmp17_input.sw(tmp0_desc, 9, IntSerializer_getInstance(), tmp13_local9);
             tmp3_bitMask0 = tmp3_bitMask0 | 512;
             break;
           case 10:
-            tmp14_local10 = tmp17_input.pw(tmp0_desc, 10, $serializer_getInstance(), tmp14_local10);
+            tmp14_local10 = tmp17_input.sw(tmp0_desc, 10, $serializer_getInstance(), tmp14_local10);
             tmp3_bitMask0 = tmp3_bitMask0 | 1024;
             break;
           case 11:
-            tmp15_local11 = tmp17_input.pw(tmp0_desc, 11, $serializer_getInstance_3(), tmp15_local11);
+            tmp15_local11 = tmp17_input.sw(tmp0_desc, 11, $serializer_getInstance_3(), tmp15_local11);
             tmp3_bitMask0 = tmp3_bitMask0 | 2048;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp17_input.cw(tmp0_desc);
-    return CompletionItem.k53(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, null);
+    tmp17_input.fw(tmp0_desc);
+    return CompletionItem.u55(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, null);
   }
-  lr() {
-    return this.v52_1;
+  or() {
+    return this.f55_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -229,56 +229,56 @@ class CompletionItem {
     textEdit = textEdit === VOID ? null : textEdit;
     command = command === VOID ? null : command;
     data = data === VOID ? null : data;
-    this.x52_1 = label;
-    this.y52_1 = kind;
-    this.z52_1 = detail;
-    this.a53_1 = documentation;
-    this.b53_1 = preselect;
-    this.c53_1 = sortText;
-    this.d53_1 = filterText;
-    this.e53_1 = insertText;
-    this.f53_1 = insertTextFormat;
-    this.g53_1 = insertTextMode;
-    this.h53_1 = textEdit;
-    this.i53_1 = command;
-    this.j53_1 = data;
+    this.h55_1 = label;
+    this.i55_1 = kind;
+    this.j55_1 = detail;
+    this.k55_1 = documentation;
+    this.l55_1 = preselect;
+    this.m55_1 = sortText;
+    this.n55_1 = filterText;
+    this.o55_1 = insertText;
+    this.p55_1 = insertTextFormat;
+    this.q55_1 = insertTextMode;
+    this.r55_1 = textEdit;
+    this.s55_1 = command;
+    this.t55_1 = data;
   }
-  l53(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data) {
+  v55(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data) {
     return new CompletionItem(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data);
   }
-  m53(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data, $super) {
-    label = label === VOID ? this.x52_1 : label;
-    kind = kind === VOID ? this.y52_1 : kind;
-    detail = detail === VOID ? this.z52_1 : detail;
-    documentation = documentation === VOID ? this.a53_1 : documentation;
-    preselect = preselect === VOID ? this.b53_1 : preselect;
-    sortText = sortText === VOID ? this.c53_1 : sortText;
-    filterText = filterText === VOID ? this.d53_1 : filterText;
-    insertText = insertText === VOID ? this.e53_1 : insertText;
-    insertTextFormat = insertTextFormat === VOID ? this.f53_1 : insertTextFormat;
-    insertTextMode = insertTextMode === VOID ? this.g53_1 : insertTextMode;
-    textEdit = textEdit === VOID ? this.h53_1 : textEdit;
-    command = command === VOID ? this.i53_1 : command;
-    data = data === VOID ? this.j53_1 : data;
-    return $super === VOID ? this.l53(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data) : $super.l53.call(this, label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data);
+  w55(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data, $super) {
+    label = label === VOID ? this.h55_1 : label;
+    kind = kind === VOID ? this.i55_1 : kind;
+    detail = detail === VOID ? this.j55_1 : detail;
+    documentation = documentation === VOID ? this.k55_1 : documentation;
+    preselect = preselect === VOID ? this.l55_1 : preselect;
+    sortText = sortText === VOID ? this.m55_1 : sortText;
+    filterText = filterText === VOID ? this.n55_1 : filterText;
+    insertText = insertText === VOID ? this.o55_1 : insertText;
+    insertTextFormat = insertTextFormat === VOID ? this.p55_1 : insertTextFormat;
+    insertTextMode = insertTextMode === VOID ? this.q55_1 : insertTextMode;
+    textEdit = textEdit === VOID ? this.r55_1 : textEdit;
+    command = command === VOID ? this.s55_1 : command;
+    data = data === VOID ? this.t55_1 : data;
+    return $super === VOID ? this.v55(label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data) : $super.v55.call(this, label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, data);
   }
   toString() {
-    return 'CompletionItem(label=' + this.x52_1 + ', kind=' + this.y52_1 + ', detail=' + this.z52_1 + ', documentation=' + this.a53_1 + ', preselect=' + this.b53_1 + ', sortText=' + this.c53_1 + ', filterText=' + this.d53_1 + ', insertText=' + this.e53_1 + ', insertTextFormat=' + this.f53_1 + ', insertTextMode=' + this.g53_1 + ', textEdit=' + toString(this.h53_1) + ', command=' + toString(this.i53_1) + ', data=' + toString(this.j53_1) + ')';
+    return 'CompletionItem(label=' + this.h55_1 + ', kind=' + this.i55_1 + ', detail=' + this.j55_1 + ', documentation=' + this.k55_1 + ', preselect=' + this.l55_1 + ', sortText=' + this.m55_1 + ', filterText=' + this.n55_1 + ', insertText=' + this.o55_1 + ', insertTextFormat=' + this.p55_1 + ', insertTextMode=' + this.q55_1 + ', textEdit=' + toString(this.r55_1) + ', command=' + toString(this.s55_1) + ', data=' + toString(this.t55_1) + ')';
   }
   hashCode() {
-    var result = getStringHashCode(this.x52_1);
-    result = imul(result, 31) + (this.y52_1 == null ? 0 : this.y52_1) | 0;
-    result = imul(result, 31) + (this.z52_1 == null ? 0 : getStringHashCode(this.z52_1)) | 0;
-    result = imul(result, 31) + (this.a53_1 == null ? 0 : getStringHashCode(this.a53_1)) | 0;
-    result = imul(result, 31) + (this.b53_1 == null ? 0 : getBooleanHashCode(this.b53_1)) | 0;
-    result = imul(result, 31) + (this.c53_1 == null ? 0 : getStringHashCode(this.c53_1)) | 0;
-    result = imul(result, 31) + (this.d53_1 == null ? 0 : getStringHashCode(this.d53_1)) | 0;
-    result = imul(result, 31) + (this.e53_1 == null ? 0 : getStringHashCode(this.e53_1)) | 0;
-    result = imul(result, 31) + (this.f53_1 == null ? 0 : this.f53_1) | 0;
-    result = imul(result, 31) + (this.g53_1 == null ? 0 : this.g53_1) | 0;
-    result = imul(result, 31) + (this.h53_1 == null ? 0 : this.h53_1.hashCode()) | 0;
-    result = imul(result, 31) + (this.i53_1 == null ? 0 : this.i53_1.hashCode()) | 0;
-    result = imul(result, 31) + (this.j53_1 == null ? 0 : hashCode(this.j53_1)) | 0;
+    var result = getStringHashCode(this.h55_1);
+    result = imul(result, 31) + (this.i55_1 == null ? 0 : this.i55_1) | 0;
+    result = imul(result, 31) + (this.j55_1 == null ? 0 : getStringHashCode(this.j55_1)) | 0;
+    result = imul(result, 31) + (this.k55_1 == null ? 0 : getStringHashCode(this.k55_1)) | 0;
+    result = imul(result, 31) + (this.l55_1 == null ? 0 : getBooleanHashCode(this.l55_1)) | 0;
+    result = imul(result, 31) + (this.m55_1 == null ? 0 : getStringHashCode(this.m55_1)) | 0;
+    result = imul(result, 31) + (this.n55_1 == null ? 0 : getStringHashCode(this.n55_1)) | 0;
+    result = imul(result, 31) + (this.o55_1 == null ? 0 : getStringHashCode(this.o55_1)) | 0;
+    result = imul(result, 31) + (this.p55_1 == null ? 0 : this.p55_1) | 0;
+    result = imul(result, 31) + (this.q55_1 == null ? 0 : this.q55_1) | 0;
+    result = imul(result, 31) + (this.r55_1 == null ? 0 : this.r55_1.hashCode()) | 0;
+    result = imul(result, 31) + (this.s55_1 == null ? 0 : this.s55_1.hashCode()) | 0;
+    result = imul(result, 31) + (this.t55_1 == null ? 0 : hashCode(this.t55_1)) | 0;
     return result;
   }
   equals(other) {
@@ -286,85 +286,85 @@ class CompletionItem {
       return true;
     if (!(other instanceof CompletionItem))
       return false;
-    if (!(this.x52_1 === other.x52_1))
+    if (!(this.h55_1 === other.h55_1))
       return false;
-    if (!(this.y52_1 == other.y52_1))
+    if (!(this.i55_1 == other.i55_1))
       return false;
-    if (!(this.z52_1 == other.z52_1))
+    if (!(this.j55_1 == other.j55_1))
       return false;
-    if (!(this.a53_1 == other.a53_1))
+    if (!(this.k55_1 == other.k55_1))
       return false;
-    if (!(this.b53_1 == other.b53_1))
+    if (!(this.l55_1 == other.l55_1))
       return false;
-    if (!(this.c53_1 == other.c53_1))
+    if (!(this.m55_1 == other.m55_1))
       return false;
-    if (!(this.d53_1 == other.d53_1))
+    if (!(this.n55_1 == other.n55_1))
       return false;
-    if (!(this.e53_1 == other.e53_1))
+    if (!(this.o55_1 == other.o55_1))
       return false;
-    if (!(this.f53_1 == other.f53_1))
+    if (!(this.p55_1 == other.p55_1))
       return false;
-    if (!(this.g53_1 == other.g53_1))
+    if (!(this.q55_1 == other.q55_1))
       return false;
-    if (!equals(this.h53_1, other.h53_1))
+    if (!equals(this.r55_1, other.r55_1))
       return false;
-    if (!equals(this.i53_1, other.i53_1))
+    if (!equals(this.s55_1, other.s55_1))
       return false;
-    if (!equals(this.j53_1, other.j53_1))
+    if (!equals(this.t55_1, other.t55_1))
       return false;
     return true;
   }
-  static k53(seen0, label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, serializationConstructorMarker) {
+  static u55(seen0, label, kind, detail, documentation, preselect, sortText, filterText, insertText, insertTextFormat, insertTextMode, textEdit, command, serializationConstructorMarker) {
     if (!(1 === (1 & seen0))) {
-      throwMissingFieldException(seen0, 1, $serializer_getInstance_0().v52_1);
+      throwMissingFieldException(seen0, 1, $serializer_getInstance_0().f55_1);
     }
     var $this = createThis(this);
-    $this.x52_1 = label;
+    $this.h55_1 = label;
     if (0 === (seen0 & 2))
-      $this.y52_1 = null;
+      $this.i55_1 = null;
     else
-      $this.y52_1 = kind;
+      $this.i55_1 = kind;
     if (0 === (seen0 & 4))
-      $this.z52_1 = null;
+      $this.j55_1 = null;
     else
-      $this.z52_1 = detail;
+      $this.j55_1 = detail;
     if (0 === (seen0 & 8))
-      $this.a53_1 = null;
+      $this.k55_1 = null;
     else
-      $this.a53_1 = documentation;
+      $this.k55_1 = documentation;
     if (0 === (seen0 & 16))
-      $this.b53_1 = null;
+      $this.l55_1 = null;
     else
-      $this.b53_1 = preselect;
+      $this.l55_1 = preselect;
     if (0 === (seen0 & 32))
-      $this.c53_1 = null;
+      $this.m55_1 = null;
     else
-      $this.c53_1 = sortText;
+      $this.m55_1 = sortText;
     if (0 === (seen0 & 64))
-      $this.d53_1 = null;
+      $this.n55_1 = null;
     else
-      $this.d53_1 = filterText;
+      $this.n55_1 = filterText;
     if (0 === (seen0 & 128))
-      $this.e53_1 = null;
+      $this.o55_1 = null;
     else
-      $this.e53_1 = insertText;
+      $this.o55_1 = insertText;
     if (0 === (seen0 & 256))
-      $this.f53_1 = null;
+      $this.p55_1 = null;
     else
-      $this.f53_1 = insertTextFormat;
+      $this.p55_1 = insertTextFormat;
     if (0 === (seen0 & 512))
-      $this.g53_1 = null;
+      $this.q55_1 = null;
     else
-      $this.g53_1 = insertTextMode;
+      $this.q55_1 = insertTextMode;
     if (0 === (seen0 & 1024))
-      $this.h53_1 = null;
+      $this.r55_1 = null;
     else
-      $this.h53_1 = textEdit;
+      $this.r55_1 = textEdit;
     if (0 === (seen0 & 2048))
-      $this.i53_1 = null;
+      $this.s55_1 = null;
     else
-      $this.i53_1 = command;
-    $this.j53_1 = null;
+      $this.s55_1 = command;
+    $this.t55_1 = null;
     return $this;
   }
 }
@@ -372,35 +372,35 @@ class Companion_0 {}
 class $serializer_0 {
   constructor() {
     $serializer_instance_0 = this;
-    this.n53_1 = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.completion.CompletionItemData', this, 0);
+    this.x55_1 = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.completion.CompletionItemData', this, 0);
   }
-  o53(encoder, value) {
-    var tmp0_desc = this.n53_1;
-    encoder.bw(tmp0_desc).cw(tmp0_desc);
+  y55(encoder, value) {
+    var tmp0_desc = this.x55_1;
+    encoder.ew(tmp0_desc).fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.o53(encoder, value instanceof CompletionItemData ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.y55(encoder, value instanceof CompletionItemData ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.n53_1;
+  qr(decoder) {
+    var tmp0_desc = this.x55_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
-    var tmp4_input = decoder.bw(tmp0_desc);
-    if (!tmp4_input.sw())
+    var tmp4_input = decoder.ew(tmp0_desc);
+    if (!tmp4_input.vw())
       while (tmp1_flag) {
-        tmp2_index = tmp4_input.tw(tmp0_desc);
+        tmp2_index = tmp4_input.ww(tmp0_desc);
         if (tmp2_index === -1)
           tmp1_flag = false;
         else
-          throw UnknownFieldException.et(tmp2_index);
+          throw UnknownFieldException.ht(tmp2_index);
       }
-    tmp4_input.cw(tmp0_desc);
-    return CompletionItemData.p53(0, null);
+    tmp4_input.fw(tmp0_desc);
+    return CompletionItemData.z55(0, null);
   }
-  lr() {
-    return this.n53_1;
+  or() {
+    return this.x55_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -408,9 +408,9 @@ class $serializer_0 {
   }
 }
 class CompletionItemData {
-  static p53(seen0, serializationConstructorMarker) {
+  static z55(seen0, serializationConstructorMarker) {
     if (!(0 === (0 & seen0))) {
-      throwMissingFieldException(seen0, 0, $serializer_getInstance_1().n53_1);
+      throwMissingFieldException(seen0, 0, $serializer_getInstance_1().x55_1);
     }
     return createThis(this);
   }
@@ -423,94 +423,94 @@ class Companion_1 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.q53_1 = [null, lazy(tmp_0, CompletionList$Companion$$childSerializers$_anonymous__ihib9s)];
+    tmp.a56_1 = [null, lazy(tmp_0, CompletionList$Companion$$childSerializers$_anonymous__ihib9s)];
   }
 }
 class $serializer_1 {
   constructor() {
     $serializer_instance_1 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.completion.CompletionList', this, 2);
-    tmp0_serialDesc.w13('isIncomplete', false);
-    tmp0_serialDesc.w13('items', false);
-    this.r53_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('isIncomplete', false);
+    tmp0_serialDesc.z13('items', false);
+    this.b56_1 = tmp0_serialDesc;
   }
-  s53(encoder, value) {
-    var tmp0_desc = this.r53_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_1().q53_1;
-    tmp1_output.jx(tmp0_desc, 0, value.isIncomplete);
-    tmp1_output.tx(tmp0_desc, 1, tmp2_cached[1].k3(), value.items);
-    tmp1_output.cw(tmp0_desc);
+  c56(encoder, value) {
+    var tmp0_desc = this.b56_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_1().a56_1;
+    tmp1_output.mx(tmp0_desc, 0, value.isIncomplete);
+    tmp1_output.wx(tmp0_desc, 1, tmp2_cached[1].r3(), value.items);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.s53(encoder, value instanceof CompletionList ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.c56(encoder, value instanceof CompletionList ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.r53_1;
+  qr(decoder) {
+    var tmp0_desc = this.b56_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = false;
     var tmp5_local1 = null;
-    var tmp6_input = decoder.bw(tmp0_desc);
-    var tmp7_cached = Companion_getInstance_1().q53_1;
-    if (tmp6_input.sw()) {
-      tmp4_local0 = tmp6_input.dw(tmp0_desc, 0);
+    var tmp6_input = decoder.ew(tmp0_desc);
+    var tmp7_cached = Companion_getInstance_1().a56_1;
+    if (tmp6_input.vw()) {
+      tmp4_local0 = tmp6_input.gw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp6_input.nw(tmp0_desc, 1, tmp7_cached[1].k3(), tmp5_local1);
+      tmp5_local1 = tmp6_input.qw(tmp0_desc, 1, tmp7_cached[1].r3(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp6_input.tw(tmp0_desc);
+        tmp2_index = tmp6_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp6_input.dw(tmp0_desc, 0);
+            tmp4_local0 = tmp6_input.gw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp6_input.nw(tmp0_desc, 1, tmp7_cached[1].k3(), tmp5_local1);
+            tmp5_local1 = tmp6_input.qw(tmp0_desc, 1, tmp7_cached[1].r3(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp6_input.cw(tmp0_desc);
-    return CompletionList.t53(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    tmp6_input.fw(tmp0_desc);
+    return CompletionList.d56(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
-  lr() {
-    return this.r53_1;
+  or() {
+    return this.b56_1;
   }
-  l14() {
-    var tmp0_cached = Companion_getInstance_1().q53_1;
+  o14() {
+    var tmp0_cached = Companion_getInstance_1().a56_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [BooleanSerializer_getInstance(), tmp0_cached[1].k3()];
+    return [BooleanSerializer_getInstance(), tmp0_cached[1].r3()];
   }
 }
 class CompletionList {
-  static u53(isIncomplete, items) {
+  static e56(isIncomplete, items) {
     Companion_getInstance_1();
     var $this = createThis(this);
     $this.isIncomplete = isIncomplete;
     $this.items = items;
     return $this;
   }
-  v53() {
+  f56() {
     return this.isIncomplete;
   }
-  t1s() {
+  e1t() {
     return this.items;
   }
-  static w53(isIncomplete, items) {
+  static g56(isIncomplete, items) {
     Companion_getInstance_1();
     // Inline function 'kotlin.collections.toTypedArray' call
     var tmp$ret$0 = copyToArray(items);
-    return this.u53(isIncomplete, tmp$ret$0);
+    return this.e56(isIncomplete, tmp$ret$0);
   }
   equals(other) {
     if (this === other)
@@ -533,10 +533,10 @@ class CompletionList {
   toString() {
     return 'CompletionList(isIncomplete=' + this.isIncomplete + ', items=' + toString_0(this.items) + ')';
   }
-  static t53(seen0, isIncomplete, items, serializationConstructorMarker) {
+  static d56(seen0, isIncomplete, items, serializationConstructorMarker) {
     Companion_getInstance_1();
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance_2().r53_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance_2().b56_1);
     }
     var $this = createThis(this);
     $this.isIncomplete = isIncomplete;
@@ -549,59 +549,59 @@ class $serializer_2 {
   constructor() {
     $serializer_instance_2 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.completion.LspCommand', this, 2);
-    tmp0_serialDesc.w13('title', false);
-    tmp0_serialDesc.w13('command', false);
-    this.x53_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('title', false);
+    tmp0_serialDesc.z13('command', false);
+    this.h56_1 = tmp0_serialDesc;
   }
-  y53(encoder, value) {
-    var tmp0_desc = this.x53_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    tmp1_output.rx(tmp0_desc, 0, value.title);
-    tmp1_output.rx(tmp0_desc, 1, value.command);
-    tmp1_output.cw(tmp0_desc);
+  i56(encoder, value) {
+    var tmp0_desc = this.h56_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    tmp1_output.ux(tmp0_desc, 0, value.title);
+    tmp1_output.ux(tmp0_desc, 1, value.command);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.y53(encoder, value instanceof LspCommand ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.i56(encoder, value instanceof LspCommand ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.x53_1;
+  qr(decoder) {
+    var tmp0_desc = this.h56_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = null;
     var tmp5_local1 = null;
-    var tmp6_input = decoder.bw(tmp0_desc);
-    if (tmp6_input.sw()) {
-      tmp4_local0 = tmp6_input.lw(tmp0_desc, 0);
+    var tmp6_input = decoder.ew(tmp0_desc);
+    if (tmp6_input.vw()) {
+      tmp4_local0 = tmp6_input.ow(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp6_input.lw(tmp0_desc, 1);
+      tmp5_local1 = tmp6_input.ow(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp6_input.tw(tmp0_desc);
+        tmp2_index = tmp6_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp6_input.lw(tmp0_desc, 0);
+            tmp4_local0 = tmp6_input.ow(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp6_input.lw(tmp0_desc, 1);
+            tmp5_local1 = tmp6_input.ow(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp6_input.cw(tmp0_desc);
-    return LspCommand.z53(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    tmp6_input.fw(tmp0_desc);
+    return LspCommand.j56(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
-  lr() {
-    return this.x53_1;
+  or() {
+    return this.h56_1;
   }
-  l14() {
+  o14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -613,10 +613,10 @@ class LspCommand {
     this.title = title;
     this.command = command;
   }
-  a54() {
+  k56() {
     return this.title;
   }
-  g1s() {
+  p1s() {
     return this.command;
   }
   toString() {
@@ -638,9 +638,9 @@ class LspCommand {
       return false;
     return true;
   }
-  static z53(seen0, title, command, serializationConstructorMarker) {
+  static j56(seen0, title, command, serializationConstructorMarker) {
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance_3().x53_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance_3().h56_1);
     }
     var $this = createThis(this);
     $this.title = title;
@@ -696,19 +696,19 @@ function $serializer_getInstance_3() {
 }
 //region block: post-declaration
 initMetadataForCompanion(Companion);
-protoOf($serializer).m14 = typeParametersSerializers;
+protoOf($serializer).p14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CompletionItem, 'CompletionItem', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance_0});
 initMetadataForCompanion(Companion_0);
-protoOf($serializer_0).m14 = typeParametersSerializers;
+protoOf($serializer_0).p14 = typeParametersSerializers;
 initMetadataForObject($serializer_0, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CompletionItemData, 'CompletionItemData', CompletionItemData, VOID, VOID, VOID, VOID, {0: $serializer_getInstance_1});
 initMetadataForCompanion(Companion_1);
-protoOf($serializer_1).m14 = typeParametersSerializers;
+protoOf($serializer_1).p14 = typeParametersSerializers;
 initMetadataForObject($serializer_1, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CompletionList, 'CompletionList', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance_2});
 initMetadataForCompanion(Companion_2);
-protoOf($serializer_2).m14 = typeParametersSerializers;
+protoOf($serializer_2).p14 = typeParametersSerializers;
 initMetadataForObject($serializer_2, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(LspCommand, 'LspCommand', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance_3});
 //endregion

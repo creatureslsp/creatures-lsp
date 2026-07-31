@@ -69,111 +69,111 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.a68_1 = [tmp_1, lazy(tmp_2, CatalogueCursorData$Companion$$childSerializers$_anonymous__dulzi7_0), null];
+    tmp.p64_1 = [tmp_1, lazy(tmp_2, CatalogueCursorData$Companion$$childSerializers$_anonymous__dulzi7_0), null];
   }
 }
 class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.catalogue.cursor.CatalogueCursorData', this, 3);
-    tmp0_serialDesc.w13('item', false);
-    tmp0_serialDesc.w13('position', false);
-    tmp0_serialDesc.w13('positionString', true);
-    this.b68_1 = tmp0_serialDesc;
+    tmp0_serialDesc.z13('item', false);
+    tmp0_serialDesc.z13('position', false);
+    tmp0_serialDesc.z13('positionString', true);
+    this.q64_1 = tmp0_serialDesc;
   }
-  c68(encoder, value) {
-    var tmp0_desc = this.b68_1;
-    var tmp1_output = encoder.bw(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_1().a68_1;
-    tmp1_output.tx(tmp0_desc, 0, tmp2_cached[0].k3(), value.d68_1);
-    tmp1_output.tx(tmp0_desc, 1, tmp2_cached[1].k3(), value.e68_1);
+  r64(encoder, value) {
+    var tmp0_desc = this.q64_1;
+    var tmp1_output = encoder.ew(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_1().p64_1;
+    tmp1_output.wx(tmp0_desc, 0, tmp2_cached[0].r3(), value.s64_1);
+    tmp1_output.wx(tmp0_desc, 1, tmp2_cached[1].r3(), value.t64_1);
     var tmp;
-    if (tmp1_output.zx(tmp0_desc, 2)) {
+    if (tmp1_output.cy(tmp0_desc, 2)) {
       tmp = true;
     } else {
       // Inline function 'kotlin.text.uppercase' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp$ret$0 = value.e68_1.c1_1.toUpperCase();
-      tmp = !(value.f68_1 === tmp$ret$0);
+      var tmp$ret$0 = value.t64_1.j1_1.toUpperCase();
+      tmp = !(value.u64_1 === tmp$ret$0);
     }
     if (tmp) {
-      tmp1_output.rx(tmp0_desc, 2, value.f68_1);
+      tmp1_output.ux(tmp0_desc, 2, value.u64_1);
     }
-    tmp1_output.cw(tmp0_desc);
+    tmp1_output.fw(tmp0_desc);
   }
-  mr(encoder, value) {
-    return this.c68(encoder, value instanceof CatalogueCursorData ? value : THROW_CCE());
+  pr(encoder, value) {
+    return this.r64(encoder, value instanceof CatalogueCursorData ? value : THROW_CCE());
   }
-  nr(decoder) {
-    var tmp0_desc = this.b68_1;
+  qr(decoder) {
+    var tmp0_desc = this.q64_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = null;
     var tmp5_local1 = null;
     var tmp6_local2 = null;
-    var tmp7_input = decoder.bw(tmp0_desc);
-    var tmp8_cached = Companion_getInstance_1().a68_1;
-    if (tmp7_input.sw()) {
-      tmp4_local0 = tmp7_input.nw(tmp0_desc, 0, tmp8_cached[0].k3(), tmp4_local0);
+    var tmp7_input = decoder.ew(tmp0_desc);
+    var tmp8_cached = Companion_getInstance_1().p64_1;
+    if (tmp7_input.vw()) {
+      tmp4_local0 = tmp7_input.qw(tmp0_desc, 0, tmp8_cached[0].r3(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp7_input.nw(tmp0_desc, 1, tmp8_cached[1].k3(), tmp5_local1);
+      tmp5_local1 = tmp7_input.qw(tmp0_desc, 1, tmp8_cached[1].r3(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp7_input.lw(tmp0_desc, 2);
+      tmp6_local2 = tmp7_input.ow(tmp0_desc, 2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp7_input.tw(tmp0_desc);
+        tmp2_index = tmp7_input.ww(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp7_input.nw(tmp0_desc, 0, tmp8_cached[0].k3(), tmp4_local0);
+            tmp4_local0 = tmp7_input.qw(tmp0_desc, 0, tmp8_cached[0].r3(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp7_input.nw(tmp0_desc, 1, tmp8_cached[1].k3(), tmp5_local1);
+            tmp5_local1 = tmp7_input.qw(tmp0_desc, 1, tmp8_cached[1].r3(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp7_input.lw(tmp0_desc, 2);
+            tmp6_local2 = tmp7_input.ow(tmp0_desc, 2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           default:
-            throw UnknownFieldException.et(tmp2_index);
+            throw UnknownFieldException.ht(tmp2_index);
         }
       }
-    tmp7_input.cw(tmp0_desc);
-    return CatalogueCursorData.g68(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, null);
+    tmp7_input.fw(tmp0_desc);
+    return CatalogueCursorData.v64(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, null);
   }
-  lr() {
-    return this.b68_1;
+  or() {
+    return this.q64_1;
   }
-  l14() {
-    var tmp0_cached = Companion_getInstance_1().a68_1;
+  o14() {
+    var tmp0_cached = Companion_getInstance_1().p64_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [tmp0_cached[0].k3(), tmp0_cached[1].k3(), StringSerializer_getInstance()];
+    return [tmp0_cached[0].r3(), tmp0_cached[1].r3(), StringSerializer_getInstance()];
   }
 }
 class CatalogueCursorData {
   constructor(item, position) {
     Companion_getInstance_1();
-    this.d68_1 = item;
-    this.e68_1 = position;
+    this.s64_1 = item;
+    this.t64_1 = position;
     var tmp = this;
     // Inline function 'kotlin.text.uppercase' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.f68_1 = this.e68_1.c1_1.toUpperCase();
+    tmp.u64_1 = this.t64_1.j1_1.toUpperCase();
   }
   toString() {
-    return 'CatalogueCursorData(item=' + toString(this.d68_1) + ', position=' + this.e68_1.toString() + ')';
+    return 'CatalogueCursorData(item=' + toString(this.s64_1) + ', position=' + this.t64_1.toString() + ')';
   }
   hashCode() {
-    var result = hashCode(this.d68_1);
-    result = imul(result, 31) + this.e68_1.hashCode() | 0;
+    var result = hashCode(this.s64_1);
+    result = imul(result, 31) + this.t64_1.hashCode() | 0;
     return result;
   }
   equals(other) {
@@ -181,36 +181,36 @@ class CatalogueCursorData {
       return true;
     if (!(other instanceof CatalogueCursorData))
       return false;
-    if (!equals(this.d68_1, other.d68_1))
+    if (!equals(this.s64_1, other.s64_1))
       return false;
-    if (!this.e68_1.equals(other.e68_1))
+    if (!this.t64_1.equals(other.t64_1))
       return false;
     return true;
   }
-  static g68(seen0, item, position, positionString, serializationConstructorMarker) {
+  static v64(seen0, item, position, positionString, serializationConstructorMarker) {
     Companion_getInstance_1();
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance().b68_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance().q64_1);
     }
     var $this = createThis(this);
-    $this.d68_1 = item;
-    $this.e68_1 = position;
+    $this.s64_1 = item;
+    $this.t64_1 = position;
     if (0 === (seen0 & 4)) {
       var tmp = $this;
       // Inline function 'kotlin.text.uppercase' call
       // Inline function 'kotlin.js.asDynamic' call
-      tmp.f68_1 = $this.e68_1.c1_1.toUpperCase();
+      tmp.u64_1 = $this.t64_1.j1_1.toUpperCase();
     } else
-      $this.f68_1 = positionString;
+      $this.u64_1 = positionString;
     return $this;
   }
 }
 //endregion
 function CatalogueCursorData$Companion$$childSerializers$_anonymous__dulzi7() {
-  return Companion_getInstance().k1e();
+  return Companion_getInstance().n1e();
 }
 function CatalogueCursorData$Companion$$childSerializers$_anonymous__dulzi7_0() {
-  return Companion_getInstance_0().k1e();
+  return Companion_getInstance_0().n1e();
 }
 var Companion_instance;
 function Companion_getInstance_1() {
@@ -235,14 +235,14 @@ function getCatalogueCursorPosition(parseResult, lineNumber, column, includeAfte
   var items = tmp;
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
-  var destination = ArrayList.u1();
+  var destination = ArrayList.b2();
   var inductionVariable = 0;
   var last = items.length;
   while (inductionVariable < last) {
     var element = items[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
-    if (inRange(element.d1e(), lineNumber, column, VOID, true) || inRange(element.d1e(), lineNumber, column - 1 | 0, VOID, true)) {
-      destination.z1(element);
+    if (inRange(element.g1e(), lineNumber, column, VOID, true) || inRange(element.g1e(), lineNumber, column - 1 | 0, VOID, true)) {
+      destination.g2(element);
     }
   }
   var nearby = destination;
@@ -250,17 +250,17 @@ function getCatalogueCursorPosition(parseResult, lineNumber, column, includeAfte
     // Inline function 'kotlin.collections.filter' call
     var tmp0 = nearby;
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_0 = ArrayList.u1();
-    var _iterator__ex2g4s = tmp0.w();
-    while (_iterator__ex2g4s.x()) {
-      var element_0 = _iterator__ex2g4s.y();
+    var destination_0 = ArrayList.b2();
+    var _iterator__ex2g4s = tmp0.d1();
+    while (_iterator__ex2g4s.e1()) {
+      var element_0 = _iterator__ex2g4s.f1();
       if (!getRelativeCursorPosition(element_0, lineNumber, column).equals(CursorPosition_AFTER_getInstance())) {
-        destination_0.z1(element_0);
+        destination_0.g2(element_0);
       }
     }
     nearby = destination_0;
   }
-  if (nearby.u()) {
+  if (nearby.b1()) {
     return null;
   }
   var tmp1_elvis_lhs = singleOrNull(nearby);
@@ -270,27 +270,27 @@ function getCatalogueCursorPosition(parseResult, lineNumber, column, includeAfte
     var tmp$ret$6;
     $l$block_0: {
       // Inline function 'kotlin.collections.minByOrNull' call
-      var iterator = tmp0_0.w();
-      if (!iterator.x()) {
+      var iterator = tmp0_0.d1();
+      if (!iterator.e1()) {
         tmp$ret$6 = null;
         break $l$block_0;
       }
-      var minElem = iterator.y();
-      if (!iterator.x()) {
+      var minElem = iterator.f1();
+      if (!iterator.e1()) {
         tmp$ret$6 = minElem;
         break $l$block_0;
       }
       var it = minElem;
-      var minValue = getDistanceAbsoluteAsInt(it.d1e(), lineNumber, column);
+      var minValue = getDistanceAbsoluteAsInt(it.g1e(), lineNumber, column);
       do {
-        var e = iterator.y();
-        var v = getDistanceAbsoluteAsInt(e.d1e(), lineNumber, column);
+        var e = iterator.f1();
+        var v = getDistanceAbsoluteAsInt(e.g1e(), lineNumber, column);
         if (compareTo(minValue, v) > 0) {
           minElem = e;
           minValue = v;
         }
       }
-       while (iterator.x());
+       while (iterator.e1());
       tmp$ret$6 = minElem;
     }
     tmp_0 = tmp$ret$6;
@@ -310,7 +310,7 @@ function getCatalogueCursorPosition(parseResult, lineNumber, column, includeAfte
 }
 function getDistanceAbsoluteAsInt(range, lineNumber, column) {
   var distance = getAbsoluteDistanceFromNearestEdge(range, lineNumber, column);
-  return distance.j54_1 << 16 | distance.k54_1;
+  return distance.t56_1 << 16 | distance.u56_1;
 }
 function getCatalogueCursor(text, line, character, includeAfter) {
   includeAfter = includeAfter === VOID ? false : includeAfter;
@@ -326,7 +326,7 @@ function getCatalogueCursor(text, line, character, includeAfter) {
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_catalogueJson();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.rw();
+  var this_1 = this_0.uw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer(this_1, createKType(getKClass(CatalogueCursorData), arrayOf([]), true));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -346,7 +346,7 @@ function fromDynamic(dynamic) {
     // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
     var this_0 = get_catalogueJson();
     // Inline function 'kotlinx.serialization.serializer' call
-    var this_1 = this_0.rw();
+    var this_1 = this_0.uw();
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_2 = serializer(this_1, createKType(getKClass(CatalogueParseResult), arrayOf([]), false));
     var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -356,12 +356,12 @@ function fromDynamic(dynamic) {
     // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
     var this_3 = get_catalogueJson();
     // Inline function 'kotlinx.serialization.serializer' call
-    var this_4 = this_3.rw();
+    var this_4 = this_3.uw();
     // Inline function 'kotlinx.serialization.internal.cast' call
-    var this_5 = serializer(this_4, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CatalogueParserItem), arrayOf([]), false))]), false));
+    var this_5 = serializer(this_4, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CatalogueParserItem), arrayOf([]), false))]), false));
     var tmp$ret$4 = isInterface(this_5, KSerializer) ? this_5 : THROW_CCE();
     var items = decodeFromDynamic(this_3, tmp$ret$4, dynamic);
-    return (new CatalogueRawItemWalker(items)).u67();
+    return (new CatalogueRawItemWalker(items)).j64();
   }
   var jsonString = JSON.stringify(dynamic);
   if (jsonString.length > 1200) {
@@ -372,7 +372,7 @@ function fromDynamic(dynamic) {
 }
 //region block: post-declaration
 initMetadataForCompanion(Companion);
-protoOf($serializer).m14 = typeParametersSerializers;
+protoOf($serializer).p14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CatalogueCursorData, 'CatalogueCursorData', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance});
 //endregion

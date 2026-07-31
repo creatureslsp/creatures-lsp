@@ -48,23 +48,24 @@ import type {
 } from "vscode-languageserver-types";
 
 import {getCommands} from "./commands.js";
-import type {
-    AutocompleteHint,
-    BinaryVal,
-    ByteString,
-    C1eStringVal,
-    C2eStringVal,
-    Caos2Comment,
-    CharVal,
-    CommandToken,
-    DdePictVal,
-    EqJoinVal,
-    EqOpVal,
-    FloatVal,
-    IndexedVarVal,
-    IntVal,
-    TokenVal,
-    CaosParserItem
+import {
+    type AutocompleteHint,
+    type BinaryVal,
+    type ByteString,
+    type C1eStringVal,
+    type C2eStringVal,
+    type Caos2Comment,
+    type CharVal,
+    type CommandToken,
+    type DdePictVal,
+    type EqJoinVal,
+    type EqOpVal,
+    type FloatVal,
+    type IndexedVarVal,
+    type IntVal,
+    type TokenVal,
+    type CaosParserItem,
+    type ListBrace,
 } from "@creatureslsp/caos-kt/caos-core";
 import {
     type ICaosContextListener,
@@ -297,6 +298,9 @@ export class SemanticTokensWalker implements ICaosContextListener {
     }
     
     onComment(_token: CaosParserItem): void {
+    }
+    
+    onListBrace(_token: ListBrace): void {
     }
 }
 

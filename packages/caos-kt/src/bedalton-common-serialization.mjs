@@ -27,25 +27,25 @@ import {
 //region block: pre-declaration
 //endregion
 function decodeNullableIntElement(_this__u8e3s4, descriptor, index) {
-  return _this__u8e3s4.ow(descriptor, index, get_nullableIntSerializer());
+  return _this__u8e3s4.rw(descriptor, index, get_nullableIntSerializer());
 }
 function decodeNullableStringElement(_this__u8e3s4, descriptor, index) {
-  return _this__u8e3s4.ow(descriptor, index, get_nullableStringSerializer());
+  return _this__u8e3s4.rw(descriptor, index, get_nullableStringSerializer());
 }
 function decodeNullableBooleanElement(_this__u8e3s4, descriptor, index) {
-  return _this__u8e3s4.ow(descriptor, index, get_nullableBooleanSerializer());
+  return _this__u8e3s4.rw(descriptor, index, get_nullableBooleanSerializer());
 }
 function encodeNullableIntElement(_this__u8e3s4, descriptor, index, value) {
-  _this__u8e3s4.tx(descriptor, index, get_nullableIntSerializer(), value);
+  _this__u8e3s4.wx(descriptor, index, get_nullableIntSerializer(), value);
 }
 function encodeNullableStringElement(_this__u8e3s4, descriptor, index, value) {
-  _this__u8e3s4.tx(descriptor, index, get_nullableStringSerializer(), value);
+  _this__u8e3s4.wx(descriptor, index, get_nullableStringSerializer(), value);
 }
 function encodeStringArrayElement(_this__u8e3s4, descriptor, index, value) {
-  _this__u8e3s4.tx(descriptor, index, get_stringArraySerializer(), value);
+  _this__u8e3s4.wx(descriptor, index, get_stringArraySerializer(), value);
 }
 function encodeNullableBooleanElement(_this__u8e3s4, descriptor, index, value) {
-  _this__u8e3s4.tx(descriptor, index, get_nullableBooleanSerializer(), value);
+  _this__u8e3s4.wx(descriptor, index, get_nullableBooleanSerializer(), value);
 }
 function get_nullableStringSerializer() {
   _init_properties_nullableSerializers_serializers_kt__uyqu7();
@@ -84,10 +84,10 @@ function _init_properties_nullableSerializers_serializers_kt__uyqu7() {
     nullableStringListSerializer = get_nullable(ListSerializer(serializer(StringCompanionObject_instance)));
     // Inline function 'kotlinx.serialization.builtins.ArraySerializer' call
     var elementSerializer = serializer(StringCompanionObject_instance);
-    stringArraySerializer = ArraySerializer(PrimitiveClasses_getInstance().je(), elementSerializer);
+    stringArraySerializer = ArraySerializer(PrimitiveClasses_getInstance().me(), elementSerializer);
     // Inline function 'kotlinx.serialization.builtins.ArraySerializer' call
     var elementSerializer_0 = serializer(StringCompanionObject_instance);
-    var tmp$ret$0 = ArraySerializer(PrimitiveClasses_getInstance().je(), elementSerializer_0);
+    var tmp$ret$0 = ArraySerializer(PrimitiveClasses_getInstance().me(), elementSerializer_0);
     nullableStringArraySerializer = get_nullable(tmp$ret$0);
     nullableBooleanSerializer = get_nullable(serializer_0(BooleanCompanionObject_instance));
     nullableByteSerializer = get_nullable(serializer_1(ByteCompanionObject_instance));
