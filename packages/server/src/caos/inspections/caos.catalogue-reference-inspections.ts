@@ -22,7 +22,6 @@ export const registerCaosCatalogueReferenceInspections = (): void => {
 
 const caosCatalogueReadInspection: CommandInspection = (context: CaosInspectionData, commandCall: CommandCall, errors: Diagnostic[]): Nullable<boolean> => {
     if (commandCall.arguments.length < 2) {
-        console.log("Not enough arguments for read command; Found: " + commandCall.arguments.length);
         return;
     }
     
