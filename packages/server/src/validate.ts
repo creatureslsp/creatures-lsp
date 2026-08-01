@@ -122,7 +122,7 @@ async function _validateDocument(documentOrUri: CreaturesDocument<any> | UriLike
         caosInitLib();
         diagnostics = getCaosDocumentValidationErrors(document, documentVersion, range);
     } else if (isCatalogueDocument(document)) {
-        diagnostics = getCatalogueDocumentValidationErrors(document, documentVersion, range);
+        diagnostics = await getCatalogueDocumentValidationErrors(document, documentVersion, range);
     } else {
         Log.w(`validateDocument: IsNot Creatures Document; Found: ${document?.languageId}`);
         return;

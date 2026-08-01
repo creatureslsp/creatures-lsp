@@ -4,7 +4,7 @@ import type {GameVariant} from "@creatureslsp/caos";
 import type {CommandToken} from "@creatureslsp/caos/core";
 import type {CommandCall} from "@creatureslsp/caos/parser";
 import type {Diagnostic} from "vscode-languageserver/node.js";
-import {InspectionData} from "./InspectionData.js";
+import {CaosInspectionData} from "./CaosInspectionData.js";
 import {toVsRange} from "@creatureslsp/extension-util";
 import {initializeCaosInspections} from "./inspections.register.js";
 import {Log} from "../../ConnLogger.js";
@@ -53,7 +53,7 @@ export const collectCaosInspectionErrors = (
     }
     
     let errors: Diagnostic[] = [];
-    const context = new InspectionData(workspaceUri, documentURI, variant, text, range);
+    const context = new CaosInspectionData(workspaceUri, documentURI, variant, text, range);
     for (const commandCall of context.commandCalls) {
         _runInspections(context, commandCall, errors);
     }
@@ -86,12 +86,11 @@ const makeTokenFilter = (_tokens: number[]): validateTokens => {
 
 
 
-const _runInspections: CommandInspection  = (context: InspectionData, commandCall: CommandCall, errors: Diagnostic[]): boolean => {
+const _runInspections: CommandInspection  = (context: CaosInspectionData, commandCall: CommandCall, errors: Diagnostic[]): boolean => {
     const tokens = (commandCall.tokens as CommandToken[]).map(token => token.token);
     if (tokens.length === 1) {
         const inspections = singleTokenInspections[tokens[0]];
         if (inspections) {
-            Log.i("Running " + inspections.length + " inspections for token " + tok(tokens[0]));
             for (const inspection of inspections) {
                 if (inspection(context, commandCall, errors) === false) {
                     return false
@@ -102,7 +101,6 @@ const _runInspections: CommandInspection  = (context: InspectionData, commandCal
         const inspections = multiTokenInspections[tokens[0]];
         const commandString = tokens.map(i => tok(i)).join(" ");
         if (inspections) {
-            Log.i("Running " + inspections.length + " inspections for token " + commandString);
             for (const [check, inspection] of inspections) {
                 if (check(tokens)) {
                     if (inspection(context, commandCall, errors) === false) {

@@ -6,10 +6,15 @@ import type {CatalogueEntry, CatalogueParserItem} from "@creatureslsp/catalogue/
 import {getCatalogueRange} from "@creatureslsp/catalogue";
 
 
+type IndexedCatalogueEntry = {
+    entry: CatalogueEntry;
+    documentUri: DocumentUri;
+}
+
 class CatalogueIndex {
     
     private readonly keys: string[] = [];
-    private readonly entries: { [tag: string]: CatalogueEntry[] } = {};
+    private readonly entries: { [tag: string]: IndexedCatalogueEntry[] } = {};
     private readonly locations: { [name: string]: IndexedItemLocation[] } = {};
     
     /**
@@ -51,24 +56,42 @@ class CatalogueIndex {
             this.pushUsage(documentUri, parserNameItem)
         }
         if (typeof this.entries[catalogueName] !== "undefined") {
-            this.entries[catalogueName].push(entry);
+            this.entries[catalogueName].push({entry, documentUri});
         } else {
             this.entries[catalogueName] = [
-                entry
+                {entry, documentUri},
             ];
         }
     }
     
     
-    getAllCatalogueNames(): string[] {
-        return [...this.keys];
+    getAllCatalogueNames(documentUri: Nullable<DocumentUri> = null): string[] {
+        const keys = [...this.keys];
+        if (!documentUri) {
+            return keys;
+        }
+        documentUri = documentUri.toLowerCase();
+        return keys.filter(name => {
+            return this.locations.hasOwnProperty(name)
+                ? this.locations[name]
+                    .find((location) => location.documentUri.toLowerCase() === documentUri) != null
+                : false;
+        });
     }
     
     
-    getCatalogueEntry(catalogueName: string): CatalogueEntry[] {
-        return typeof this.entries[catalogueName] !== "undefined"
-            ? this.entries[catalogueName]
-            : [];
+    getCatalogueEntry(catalogueName: string, documentUri: Nullable<DocumentUri> = null): CatalogueEntry[] {
+        if (typeof this.entries[catalogueName] === "undefined") {
+            return [];
+        }
+        let entries = this.entries[catalogueName];
+        if (documentUri) {
+            documentUri = documentUri.toLowerCase();
+            entries = entries.filter(e => {
+                return e.documentUri.toLowerCase() === documentUri;
+            });
+        }
+        return entries.map(e => e.entry);
     }
     
     /**
@@ -96,7 +119,7 @@ class CatalogueIndex {
                 const entries = [...(this.entries[tag] ?? [])];
                 const out = [];
                 for (const entry of entries) {
-                    if (!rangesIntersect(entry.textRange, range)) {
+                    if (!rangesIntersect(entry.entry.textRange, range)) {
                         out.push(entry)
                     }
                 }
@@ -240,9 +263,9 @@ export function getCatalogueLocations(workspaceUri: DocumentUri, key?: Nullable<
         .getUsages(key);
 }
 
-export function getCatalogueKeys(workspaceUri: DocumentUri): string[] {
+export function getCatalogueKeys(workspaceUri: DocumentUri, documentUri?: Nullable<DocumentUri>): string[] {
     return getWorkspaceCatalogueIndex(workspaceUri)
-        .getAllCatalogueNames();
+        .getAllCatalogueNames(documentUri);
 }
 
 export function clearCatalogueEntries(workspaceUri: DocumentUri, documentUri: DocumentUri, range?: Nullable<Range>) {
@@ -254,16 +277,27 @@ export function deleteCatalogueEntryWorkspaceIndex(workspaceUri: DocumentUri){
     delete indices[workspaceUri.toLowerCase()];
 }
 
-export function getCatalogueEntriesLocator(workspaceUri: DocumentUri): (tag: string) => CatalogueEntry[] {
+export function getCatalogueEntriesLocator(workspaceUri: DocumentUri, defaultDocumentUri?: Nullable<DocumentUri>): (tag: string, documentUri: Nullable<DocumentUri>) => CatalogueEntry[] {
     const index = getWorkspaceCatalogueIndex(workspaceUri)
-    return (tag: string) => {
-        return index.getCatalogueEntry(tag);
+    return (tag: string, documentUri?: Nullable<DocumentUri>) => {
+        return index.getCatalogueEntry(tag, documentUri ?? defaultDocumentUri);
     }
 }
 
-export function getCatalogueEntry(workspaceUri: DocumentUri, catalogueName: string): CatalogueEntry[] {
+export function getCatalogueNamesCollector(workspaceUri: DocumentUri, defaultDocumentUri?: Nullable<DocumentUri>): (filter?: ((name: string) => boolean)) => string[] {
+    const index = getWorkspaceCatalogueIndex(workspaceUri)
+    return (filter?: ((name: string) => boolean), documentUri?: Nullable<DocumentUri>) => {
+        let names = index.getAllCatalogueNames(documentUri ?? defaultDocumentUri);
+        if (!filter) {
+            return names;
+        }
+        return names.filter(filter);
+    }
+}
+
+export function getCatalogueEntry(workspaceUri: DocumentUri, catalogueName: string, documentUri: Nullable<DocumentUri>): CatalogueEntry[] {
     return getWorkspaceCatalogueIndex(workspaceUri)
-        .getCatalogueEntry(catalogueName)
+        .getCatalogueEntry(catalogueName, documentUri)
 }
 
 function getWorkspaceCatalogueIndex(workspaceUri: DocumentUri): CatalogueIndex {

@@ -5,18 +5,22 @@ import {type CatalogueError, validateCatalogue} from "@creatureslsp/catalogue/va
 import {DiagnosticSeverity} from "vscode-languageserver-types";
 import type {Nullable} from "../types.js";
 import type {Range} from "vscode-languageserver";
+import {collectCatalogueInspectionErrors} from "./inspections/catalogue.inspections.core.js";
+import {getWorkspaceUriForFile} from "../workspace-folders.js";
 
-export function getCatalogueDocumentValidationErrors(
+export async function getCatalogueDocumentValidationErrors(
     document: CatalogueDocument,
-    _version: Nullable<number>,
-    _range: Nullable<Range>,
-): Diagnostic[] {
+    version: Nullable<number>,
+    range: Nullable<Range>,
+): Promise<Diagnostic[]> {
     
     const {text, settings} = document;
     
     if (text.length < 1) {
         return [];
     }
+    
+    console.log("Validating catalogue document");
     
     const maxNumberOfProblems = settings.maxNumberOfProblems;
     
@@ -25,8 +29,17 @@ export function getCatalogueDocumentValidationErrors(
     if (maxNumberOfProblems != null && rawErrors.length > maxNumberOfProblems) {
         rawErrors = rawErrors.splice(maxNumberOfProblems);
     }
+    
+    const workspaceUri = getWorkspaceUriForFile(document.documentUri);
+    const inspectionErrors = await collectCatalogueInspectionErrors(
+        workspaceUri,
+        document.documentUri,
+        document.text,
+        version,
+        range,
+    )
 
-    return rawErrors
+    const errors: Diagnostic[] = rawErrors
         .map((error: CatalogueError) => {
             const textRange = error.textRange;
             const out: Diagnostic = {
@@ -36,4 +49,5 @@ export function getCatalogueDocumentValidationErrors(
             } satisfies Diagnostic;
             return out;
         });
+    return errors.concat(inspectionErrors);
 }

@@ -1,6 +1,6 @@
 import { getCatalogueEntriesLocator } from "../../indices/index.catalogue.entries.js";
 import { parseCaos } from "../caos.parse.js";
-export class InspectionData {
+export class CaosInspectionData {
     _workspaceURI;
     documentURI;
     range;

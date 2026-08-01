@@ -11,7 +11,7 @@ import type {
 import type {Diagnostic} from "vscode-languageserver/node.js";
 import type {CommandInspection} from "../../types.js";
 import {registerInspection} from "./inspections.core.js";
-import {InspectionData} from "./InspectionData.js";
+import {CaosInspectionData} from "./CaosInspectionData.js";
 import type {Nullable} from "@creatureslsp/caos";
 
 
@@ -20,7 +20,7 @@ export const registerCaosCatalogueReferenceInspections = (): void => {
     registerInspection([tok("read")], caosCatalogueReadInspection);
 }
 
-const caosCatalogueReadInspection: CommandInspection = (context: InspectionData, commandCall: CommandCall, errors: Diagnostic[]): Nullable<boolean> => {
+const caosCatalogueReadInspection: CommandInspection = (context: CaosInspectionData, commandCall: CommandCall, errors: Diagnostic[]): Nullable<boolean> => {
     if (commandCall.arguments.length < 2) {
         console.log("Not enough arguments for read command; Found: " + commandCall.arguments.length);
         return;

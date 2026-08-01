@@ -1,12 +1,14 @@
 import type {CommandCall} from "@creatureslsp/caos";
 import type {Diagnostic} from "vscode-languageserver/node";
-import type {InspectionData} from "./inspections/InspectionData";
 import type {Nullable} from "@creatureslsp/caos";
 import type {Range} from "vscode-languageserver";
+import type {CatalogueInspectionData} from "./catalogue/inspections/InspectionData.js";
+import type {CaosInspectionData} from "./caos/inspections/CaosInspectionData.js";
 
 declare type Nullable<T> = T | undefined | null;
 
-declare type CommandInspection = (context: InspectionData, commandCall: CommandCall, errors: Diagnostic[]) => Nullable<boolean>;
+declare type CommandInspection = (context: CaosInspectionData, commandCall: CommandCall, errors: Diagnostic[]) => Nullable<boolean>;
+declare type CatalogueInspection = (context: CatalogueInspectionData, errors: Diagnostic[]) => Promise<Nullable<boolean>>;
 
 declare type DocumentContentChange = {
     /**

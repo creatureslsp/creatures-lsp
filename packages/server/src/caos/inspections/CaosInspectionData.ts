@@ -3,14 +3,14 @@ import type { CatalogueEntry } from "@creatureslsp/catalogue/core";
 import {getCatalogueEntriesLocator} from "../../indices/index.catalogue.entries.js";
 import type {GameVariant} from "@creatureslsp/caos";
 import type {CaosParseResult, CommandCall} from "@creatureslsp/caos/parser";
-import type {Range} from "vscode-languageserver";
+import type {DocumentUri, Range} from "vscode-languageserver";
 import {parseCaos} from "../caos.parse.js";
 
-export class InspectionData {
+export class CaosInspectionData {
     private readonly _workspaceURI: string;
     readonly documentURI: string;
     readonly range: Nullable<Range>;
-    private _catalogueEntriesLocator: Nullable<(tag: string) => CatalogueEntry[]> = null;
+    private _catalogueEntriesLocator: Nullable<(tag: string, documentUri?: Nullable<DocumentUri>) => CatalogueEntry[]> = null;
     private _getParseResult: () => CaosParseResult;
     
     constructor(workspaceURI: string, documentURI: string, variant: GameVariant, text: string, range: Nullable<Range>) {
