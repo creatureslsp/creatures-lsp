@@ -64,52 +64,52 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.y5e_1 = [null, null, null, null, lazy(tmp_0, DocumentSymbolImpl$Companion$$childSerializers$_anonymous__ebl0p), null, null];
+    tmp.f5m_1 = [null, null, null, null, lazy(tmp_0, DocumentSymbolImpl$Companion$$childSerializers$_anonymous__ebl0p), null, null];
   }
 }
 class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.symbols.DocumentSymbolImpl', this, 7);
-    tmp0_serialDesc.z13('name', false);
-    tmp0_serialDesc.z13('kind', false);
-    tmp0_serialDesc.z13('range', false);
-    tmp0_serialDesc.z13('selectionRange', false);
-    tmp0_serialDesc.z13('children', false);
-    tmp0_serialDesc.z13('detail', true);
-    tmp0_serialDesc.z13('tags', true);
-    this.z5e_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('name', false);
+    tmp0_serialDesc.w13('kind', false);
+    tmp0_serialDesc.w13('range', false);
+    tmp0_serialDesc.w13('selectionRange', false);
+    tmp0_serialDesc.w13('children', false);
+    tmp0_serialDesc.w13('detail', true);
+    tmp0_serialDesc.w13('tags', true);
+    this.g5m_1 = tmp0_serialDesc;
   }
-  a5f(encoder, value) {
-    var tmp0_desc = this.z5e_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance().y5e_1;
-    tmp1_output.ux(tmp0_desc, 0, value.b5f_1);
-    tmp1_output.px(tmp0_desc, 1, value.c5f_1);
-    tmp1_output.wx(tmp0_desc, 2, RangeSerializer_getInstance(), value.d5f_1);
-    tmp1_output.wx(tmp0_desc, 3, RangeSerializer_getInstance(), value.e5f_1);
-    tmp1_output.wx(tmp0_desc, 4, tmp2_cached[4].r3(), value.f5f_1);
-    if (tmp1_output.cy(tmp0_desc, 5) ? true : !(value.g5f_1 == null)) {
-      tmp1_output.yx(tmp0_desc, 5, StringSerializer_getInstance(), value.g5f_1);
+  h5m(encoder, value) {
+    var tmp0_desc = this.g5m_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance().f5m_1;
+    tmp1_output.rx(tmp0_desc, 0, value.i5m_1);
+    tmp1_output.mx(tmp0_desc, 1, value.j5m_1);
+    tmp1_output.tx(tmp0_desc, 2, RangeSerializer_getInstance(), value.k5m_1);
+    tmp1_output.tx(tmp0_desc, 3, RangeSerializer_getInstance(), value.l5m_1);
+    tmp1_output.tx(tmp0_desc, 4, tmp2_cached[4].k3(), value.m5m_1);
+    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.n5m_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 5, StringSerializer_getInstance(), value.n5m_1);
     }
     var tmp;
-    if (tmp1_output.cy(tmp0_desc, 6)) {
+    if (tmp1_output.zx(tmp0_desc, 6)) {
       tmp = true;
     } else {
       // Inline function 'kotlin.intArrayOf' call
       var tmp$ret$0 = new Int32Array([]);
-      tmp = !equals(value.h5f_1, tmp$ret$0);
+      tmp = !equals(value.o5m_1, tmp$ret$0);
     }
     if (tmp) {
-      tmp1_output.wx(tmp0_desc, 6, IntArraySerializer_getInstance(), value.h5f_1);
+      tmp1_output.tx(tmp0_desc, 6, IntArraySerializer_getInstance(), value.o5m_1);
     }
-    tmp1_output.fw(tmp0_desc);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.a5f(encoder, value instanceof DocumentSymbolImpl ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.h5m(encoder, value instanceof DocumentSymbolImpl ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.z5e_1;
+  nr(decoder) {
+    var tmp0_desc = this.g5m_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -120,74 +120,74 @@ class $serializer {
     var tmp8_local4 = null;
     var tmp9_local5 = null;
     var tmp10_local6 = null;
-    var tmp11_input = decoder.ew(tmp0_desc);
-    var tmp12_cached = Companion_getInstance().y5e_1;
-    if (tmp11_input.vw()) {
-      tmp4_local0 = tmp11_input.ow(tmp0_desc, 0);
+    var tmp11_input = decoder.bw(tmp0_desc);
+    var tmp12_cached = Companion_getInstance().f5m_1;
+    if (tmp11_input.sw()) {
+      tmp4_local0 = tmp11_input.lw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp11_input.jw(tmp0_desc, 1);
+      tmp5_local1 = tmp11_input.gw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp11_input.qw(tmp0_desc, 2, RangeSerializer_getInstance(), tmp6_local2);
+      tmp6_local2 = tmp11_input.nw(tmp0_desc, 2, RangeSerializer_getInstance(), tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp11_input.qw(tmp0_desc, 3, RangeSerializer_getInstance(), tmp7_local3);
+      tmp7_local3 = tmp11_input.nw(tmp0_desc, 3, RangeSerializer_getInstance(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp11_input.qw(tmp0_desc, 4, tmp12_cached[4].r3(), tmp8_local4);
+      tmp8_local4 = tmp11_input.nw(tmp0_desc, 4, tmp12_cached[4].k3(), tmp8_local4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp11_input.sw(tmp0_desc, 5, StringSerializer_getInstance(), tmp9_local5);
+      tmp9_local5 = tmp11_input.pw(tmp0_desc, 5, StringSerializer_getInstance(), tmp9_local5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp11_input.qw(tmp0_desc, 6, IntArraySerializer_getInstance(), tmp10_local6);
+      tmp10_local6 = tmp11_input.nw(tmp0_desc, 6, IntArraySerializer_getInstance(), tmp10_local6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp11_input.ww(tmp0_desc);
+        tmp2_index = tmp11_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp11_input.ow(tmp0_desc, 0);
+            tmp4_local0 = tmp11_input.lw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp11_input.jw(tmp0_desc, 1);
+            tmp5_local1 = tmp11_input.gw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp11_input.qw(tmp0_desc, 2, RangeSerializer_getInstance(), tmp6_local2);
+            tmp6_local2 = tmp11_input.nw(tmp0_desc, 2, RangeSerializer_getInstance(), tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp11_input.qw(tmp0_desc, 3, RangeSerializer_getInstance(), tmp7_local3);
+            tmp7_local3 = tmp11_input.nw(tmp0_desc, 3, RangeSerializer_getInstance(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp11_input.qw(tmp0_desc, 4, tmp12_cached[4].r3(), tmp8_local4);
+            tmp8_local4 = tmp11_input.nw(tmp0_desc, 4, tmp12_cached[4].k3(), tmp8_local4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp11_input.sw(tmp0_desc, 5, StringSerializer_getInstance(), tmp9_local5);
+            tmp9_local5 = tmp11_input.pw(tmp0_desc, 5, StringSerializer_getInstance(), tmp9_local5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp11_input.qw(tmp0_desc, 6, IntArraySerializer_getInstance(), tmp10_local6);
+            tmp10_local6 = tmp11_input.nw(tmp0_desc, 6, IntArraySerializer_getInstance(), tmp10_local6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp11_input.fw(tmp0_desc);
-    return DocumentSymbolImpl.i5f(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
+    tmp11_input.cw(tmp0_desc);
+    return DocumentSymbolImpl.p5m(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
   }
-  or() {
-    return this.z5e_1;
+  lr() {
+    return this.g5m_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance().y5e_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance().f5m_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [StringSerializer_getInstance(), IntSerializer_getInstance(), RangeSerializer_getInstance(), RangeSerializer_getInstance(), tmp0_cached[4].r3(), get_nullable(StringSerializer_getInstance()), IntArraySerializer_getInstance()];
+    return [StringSerializer_getInstance(), IntSerializer_getInstance(), RangeSerializer_getInstance(), RangeSerializer_getInstance(), tmp0_cached[4].k3(), get_nullable(StringSerializer_getInstance()), IntArraySerializer_getInstance()];
   }
 }
 class DocumentSymbol {}
@@ -203,93 +203,93 @@ class DocumentSymbolImpl {
       tmp = tags;
     }
     tags = tmp;
-    this.b5f_1 = name;
-    this.c5f_1 = kind;
-    this.d5f_1 = range;
-    this.e5f_1 = selectionRange;
-    this.f5f_1 = children;
-    this.g5f_1 = detail;
-    this.h5f_1 = tags;
+    this.i5m_1 = name;
+    this.j5m_1 = kind;
+    this.k5m_1 = range;
+    this.l5m_1 = selectionRange;
+    this.m5m_1 = children;
+    this.n5m_1 = detail;
+    this.o5m_1 = tags;
   }
-  v() {
-    return this.b5f_1;
+  o() {
+    return this.i5m_1;
   }
-  lu() {
-    return this.c5f_1;
+  iu() {
+    return this.j5m_1;
   }
-  gg() {
-    return this.d5f_1;
+  dg() {
+    return this.k5m_1;
   }
-  j5f() {
-    return this.e5f_1;
+  q5m() {
+    return this.l5m_1;
   }
-  k5f() {
-    return this.f5f_1;
+  r5m() {
+    return this.m5m_1;
   }
-  l5f() {
-    return this.g5f_1;
+  s5m() {
+    return this.n5m_1;
   }
-  m5f() {
-    return this.h5f_1;
+  t5m() {
+    return this.o5m_1;
   }
   equals(other) {
     if (this === other)
       return true;
     if (!(other instanceof DocumentSymbolImpl))
       return false;
-    if (!(this.b5f_1 === other.b5f_1))
+    if (!(this.i5m_1 === other.i5m_1))
       return false;
-    if (!(this.c5f_1 === other.c5f_1))
+    if (!(this.j5m_1 === other.j5m_1))
       return false;
-    if (!equals(this.d5f_1, other.d5f_1))
+    if (!equals(this.k5m_1, other.k5m_1))
       return false;
-    if (!equals(this.e5f_1, other.e5f_1))
+    if (!equals(this.l5m_1, other.l5m_1))
       return false;
-    if (!contentEquals(this.f5f_1, other.f5f_1))
+    if (!contentEquals(this.m5m_1, other.m5m_1))
       return false;
-    if (!(this.g5f_1 == other.g5f_1))
+    if (!(this.n5m_1 == other.n5m_1))
       return false;
-    if (!contentEquals_0(this.h5f_1, other.h5f_1))
+    if (!contentEquals_0(this.o5m_1, other.o5m_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = getStringHashCode(this.b5f_1);
-    result = imul(31, result) + this.c5f_1 | 0;
-    result = imul(31, result) + hashCode(this.d5f_1) | 0;
-    result = imul(31, result) + hashCode(this.e5f_1) | 0;
-    result = imul(31, result) + contentHashCode(this.f5f_1) | 0;
+    var result = getStringHashCode(this.i5m_1);
+    result = imul(31, result) + this.j5m_1 | 0;
+    result = imul(31, result) + hashCode(this.k5m_1) | 0;
+    result = imul(31, result) + hashCode(this.l5m_1) | 0;
+    result = imul(31, result) + contentHashCode(this.m5m_1) | 0;
     var tmp = imul(31, result);
-    var tmp0_safe_receiver = this.g5f_1;
+    var tmp0_safe_receiver = this.n5m_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : getStringHashCode(tmp0_safe_receiver);
     result = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
-    result = imul(31, result) + contentHashCode_0(this.h5f_1) | 0;
+    result = imul(31, result) + contentHashCode_0(this.o5m_1) | 0;
     return result;
   }
   toString() {
-    return 'DocumentSymbolImpl(name=' + this.b5f_1 + ', kind=' + this.c5f_1 + ', range=' + toString(this.d5f_1) + ', selectionRange=' + toString(this.e5f_1) + ', children=' + toString(this.f5f_1) + ', detail=' + this.g5f_1 + ', tags=' + toString(this.h5f_1) + ')';
+    return 'DocumentSymbolImpl(name=' + this.i5m_1 + ', kind=' + this.j5m_1 + ', range=' + toString(this.k5m_1) + ', selectionRange=' + toString(this.l5m_1) + ', children=' + toString(this.m5m_1) + ', detail=' + this.n5m_1 + ', tags=' + toString(this.o5m_1) + ')';
   }
-  static i5f(seen0, name, kind, range, selectionRange, children, detail, tags, serializationConstructorMarker) {
+  static p5m(seen0, name, kind, range, selectionRange, children, detail, tags, serializationConstructorMarker) {
     Companion_getInstance();
     if (!(31 === (31 & seen0))) {
-      throwMissingFieldException(seen0, 31, $serializer_getInstance().z5e_1);
+      throwMissingFieldException(seen0, 31, $serializer_getInstance().g5m_1);
     }
     var $this = createThis(this);
-    $this.b5f_1 = name;
-    $this.c5f_1 = kind;
-    $this.d5f_1 = range;
-    $this.e5f_1 = selectionRange;
-    $this.f5f_1 = children;
+    $this.i5m_1 = name;
+    $this.j5m_1 = kind;
+    $this.k5m_1 = range;
+    $this.l5m_1 = selectionRange;
+    $this.m5m_1 = children;
     if (0 === (seen0 & 32))
-      $this.g5f_1 = null;
+      $this.n5m_1 = null;
     else
-      $this.g5f_1 = detail;
+      $this.n5m_1 = detail;
     if (0 === (seen0 & 64)) {
       var tmp = $this;
       // Inline function 'kotlin.intArrayOf' call
-      tmp.h5f_1 = new Int32Array([]);
+      tmp.o5m_1 = new Int32Array([]);
     } else
-      $this.h5f_1 = tags;
+      $this.o5m_1 = tags;
     return $this;
   }
 }
@@ -297,22 +297,22 @@ class DocumentSymbolSerializer {
   constructor() {
     DocumentSymbolSerializer_instance = this;
     var tmp = this;
-    tmp.n5f_1 = lazy_0(DocumentSymbolSerializer$childrenSerializer$delegate$lambda);
+    tmp.u5m_1 = lazy_0(DocumentSymbolSerializer$childrenSerializer$delegate$lambda);
     var tmp_0 = this;
-    tmp_0.o5f_1 = lazy_0(DocumentSymbolSerializer$intArraySerializer$delegate$lambda);
+    tmp_0.v5m_1 = lazy_0(DocumentSymbolSerializer$intArraySerializer$delegate$lambda);
     var tmp_1 = this;
-    tmp_1.p5f_1 = lazy_0(DocumentSymbolSerializer$descriptor$delegate$lambda);
+    tmp_1.w5m_1 = lazy_0(DocumentSymbolSerializer$descriptor$delegate$lambda);
   }
-  or() {
-    var tmp0 = this.p5f_1;
+  lr() {
+    var tmp0 = this.w5m_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, DocumentSymbolSerializer$_get_descriptor_$ref_817kp6(), null);
-    return tmp0.r3();
+    return tmp0.k3();
   }
-  qr(decoder) {
-    var structure = decoder.ew(this.or());
-    var index = structure.ww(this.or());
+  nr(decoder) {
+    var structure = decoder.bw(this.lr());
+    var index = structure.tw(this.lr());
     var name = null;
     var detail = null;
     var kind = null;
@@ -323,30 +323,30 @@ class DocumentSymbolSerializer {
     while (!(index === -1)) {
       switch (index) {
         case 0:
-          name = structure.ow(this.or(), index);
+          name = structure.lw(this.lr(), index);
           break;
         case 1:
-          detail = decodeNullableStringElement(structure, this.or(), index);
+          detail = decodeNullableStringElement(structure, this.lr(), index);
           break;
         case 2:
-          kind = structure.jw(this.or(), index);
+          kind = structure.gw(this.lr(), index);
           break;
         case 3:
-          tags = structure.rw(this.or(), index, _get_intArraySerializer__ivdakx(this));
+          tags = structure.ow(this.lr(), index, _get_intArraySerializer__ivdakx(this));
           break;
         case 4:
-          range = structure.rw(this.or(), index, RangeSerializer_getInstance());
+          range = structure.ow(this.lr(), index, RangeSerializer_getInstance());
           break;
         case 5:
-          selectionRange = structure.tw(this.or(), index, RangeSerializer_getInstance());
+          selectionRange = structure.qw(this.lr(), index, RangeSerializer_getInstance());
           break;
         case 6:
-          children = structure.tw(this.or(), index, _get_childrenSerializer__f1any2(this));
+          children = structure.qw(this.lr(), index, _get_childrenSerializer__f1any2(this));
           break;
       }
-      index = structure.ww(this.or());
+      index = structure.tw(this.lr());
     }
-    structure.fw(this.or());
+    structure.cw(this.lr());
     var tmp3_name = ensureNotNull(name);
     var tmp4_detail = detail;
     var tmp5_kind = ensureNotNull(kind);
@@ -373,19 +373,19 @@ class DocumentSymbolSerializer {
     var tmp_1 = new DocumentSymbolImpl(tmp3_name, tmp5_kind, tmp7_range, tmp8_selectionRange, tmp9_children, tmp4_detail, tmp6_tags);
     return isInterface(tmp_1, DocumentSymbol) ? tmp_1 : THROW_CCE();
   }
-  q5f(encoder, value) {
-    var structure = encoder.ew(this.or());
-    structure.ux(this.or(), 0, value.v());
-    structure.yx(this.or(), 1, get_nullable(serializer_0(StringCompanionObject_instance)), value.l5f());
-    structure.px(this.or(), 2, value.lu());
-    structure.wx(this.or(), 3, _get_intArraySerializer__ivdakx(this), value.m5f());
-    structure.wx(this.or(), 4, RangeSerializer_getInstance(), value.gg());
-    structure.yx(this.or(), 5, RangeSerializer_getInstance(), value.j5f());
-    structure.yx(this.or(), 5, _get_childrenSerializer__f1any2(this), value.k5f());
-    structure.fw(this.or());
+  x5m(encoder, value) {
+    var structure = encoder.bw(this.lr());
+    structure.rx(this.lr(), 0, value.o());
+    structure.vx(this.lr(), 1, get_nullable(serializer_0(StringCompanionObject_instance)), value.s5m());
+    structure.mx(this.lr(), 2, value.iu());
+    structure.tx(this.lr(), 3, _get_intArraySerializer__ivdakx(this), value.t5m());
+    structure.tx(this.lr(), 4, RangeSerializer_getInstance(), value.dg());
+    structure.vx(this.lr(), 5, RangeSerializer_getInstance(), value.q5m());
+    structure.vx(this.lr(), 5, _get_childrenSerializer__f1any2(this), value.r5m());
+    structure.cw(this.lr());
   }
-  pr(encoder, value) {
-    return this.q5f(encoder, (!(value == null) ? isInterface(value, DocumentSymbol) : false) ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.x5m(encoder, (!(value == null) ? isInterface(value, DocumentSymbol) : false) ? value : THROW_CCE());
   }
 }
 //endregion
@@ -405,18 +405,18 @@ function $serializer_getInstance() {
   return $serializer_instance;
 }
 function _get_childrenSerializer__f1any2($this) {
-  var tmp0 = $this.n5f_1;
+  var tmp0 = $this.u5m_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('childrenSerializer', 1, tmp, DocumentSymbolSerializer$_get_childrenSerializer_$ref_xvhaa0(), null);
-  return tmp0.r3();
+  return tmp0.k3();
 }
 function _get_intArraySerializer__ivdakx($this) {
-  var tmp0 = $this.o5f_1;
+  var tmp0 = $this.v5m_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('intArraySerializer', 1, tmp, DocumentSymbolSerializer$_get_intArraySerializer_$ref_mk2283(), null);
-  return tmp0.r3();
+  return tmp0.k3();
 }
 function DocumentSymbolSerializer$childrenSerializer$delegate$lambda() {
   return ArraySerializer(getKClass(DocumentSymbol), DocumentSymbolSerializer_getInstance());
@@ -438,44 +438,44 @@ function DocumentSymbolSerializer$descriptor$delegate$lambda$lambda($this$buildC
   var annotations = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().me(), arrayOf([]), false));
-  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av('name', descriptor, annotations, false);
+  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().je(), arrayOf([]), false));
+  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu('name', descriptor, annotations, false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var annotations_0 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().me(), arrayOf([]), false));
-  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av('detail', descriptor_0, annotations_0, true);
+  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().je(), arrayOf([]), false));
+  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu('detail', descriptor_0, annotations_0, true);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var annotations_1 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer(createKType(PrimitiveClasses_getInstance().he(), arrayOf([]), false));
-  var descriptor_1 = (isInterface(this_2, KSerializer) ? this_2 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av('kind', descriptor_1, annotations_1, false);
+  var this_2 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
+  var descriptor_1 = (isInterface(this_2, KSerializer) ? this_2 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu('kind', descriptor_1, annotations_1, false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var annotations_2 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_3 = serializer(createKType(PrimitiveClasses_getInstance().se(), arrayOf([]), false));
-  var descriptor_2 = (isInterface(this_3, KSerializer) ? this_3 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av('tags', descriptor_2, annotations_2, false);
-  $this$buildClassSerialDescriptor.av('range', RangeSerializer_getInstance().or(), emptyList(), false);
-  $this$buildClassSerialDescriptor.av('selectionRange', RangeSerializer_getInstance().or(), emptyList(), false);
+  var this_3 = serializer(createKType(PrimitiveClasses_getInstance().pe(), arrayOf([]), false));
+  var descriptor_2 = (isInterface(this_3, KSerializer) ? this_3 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu('tags', descriptor_2, annotations_2, false);
+  $this$buildClassSerialDescriptor.xu('range', RangeSerializer_getInstance().lr(), emptyList(), false);
+  $this$buildClassSerialDescriptor.xu('selectionRange', RangeSerializer_getInstance().lr(), emptyList(), false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName = 'children';
   var annotations_3 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_4 = serializer(createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(DocumentSymbol), arrayOf([]), false))]), false));
-  var descriptor_3 = (isInterface(this_4, KSerializer) ? this_4 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av(elementName, descriptor_3, annotations_3, true);
+  var this_4 = serializer(createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(DocumentSymbol), arrayOf([]), false))]), false));
+  var descriptor_3 = (isInterface(this_4, KSerializer) ? this_4 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName, descriptor_3, annotations_3, true);
   return Unit_instance;
 }
 function DocumentSymbolSerializer$_get_descriptor_$ref_817kp6() {
-  return (p0) => p0.or();
+  return (p0) => p0.lr();
 }
 var DocumentSymbolSerializer_instance;
 function DocumentSymbolSerializer_getInstance() {
@@ -485,7 +485,7 @@ function DocumentSymbolSerializer_getInstance() {
 }
 //region block: post-declaration
 initMetadataForCompanion(Companion);
-protoOf($serializer).p14 = typeParametersSerializers;
+protoOf($serializer).m14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForInterface(DocumentSymbol, 'DocumentSymbol', VOID, VOID, VOID, VOID, VOID, {0: DocumentSymbolSerializer_getInstance});
 initMetadataForClass(DocumentSymbolImpl, 'DocumentSymbolImpl', VOID, VOID, [DocumentSymbol], VOID, VOID, {0: $serializer_getInstance});

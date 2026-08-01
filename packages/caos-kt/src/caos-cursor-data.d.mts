@@ -78,6 +78,8 @@ export interface CaosCursorData extends Position {
     readonly inEqualityStatement: boolean;
 
     readonly containingCommandCall: CommandCall
+    
+    readonly inList: boolean;
 
 }
 

@@ -79,34 +79,34 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.w64_1 = [null, lazy(tmp_0, CatalogueError$Companion$$childSerializers$_anonymous__pu1vd7), null, null];
+    tmp.d6c_1 = [null, lazy(tmp_0, CatalogueError$Companion$$childSerializers$_anonymous__pu1vd7), null, null];
   }
 }
 class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.catalogue.validation.CatalogueError', this, 4);
-    tmp0_serialDesc.z13('textRange', false);
-    tmp0_serialDesc.z13('parserItem', false);
-    tmp0_serialDesc.z13('message', false);
-    tmp0_serialDesc.z13('errorType', false);
-    this.x64_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('textRange', false);
+    tmp0_serialDesc.w13('parserItem', false);
+    tmp0_serialDesc.w13('message', false);
+    tmp0_serialDesc.w13('errorType', false);
+    this.e6c_1 = tmp0_serialDesc;
   }
-  y64(encoder, value) {
-    var tmp0_desc = this.x64_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_0().w64_1;
-    tmp1_output.wx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.z64_1);
-    tmp1_output.yx(tmp0_desc, 1, tmp2_cached[1].r3(), value.a65_1);
-    tmp1_output.ux(tmp0_desc, 2, value.b65_1);
-    tmp1_output.px(tmp0_desc, 3, value.c65_1);
-    tmp1_output.fw(tmp0_desc);
+  f6c(encoder, value) {
+    var tmp0_desc = this.e6c_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_0().d6c_1;
+    tmp1_output.tx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.g6c_1);
+    tmp1_output.vx(tmp0_desc, 1, tmp2_cached[1].k3(), value.h6c_1);
+    tmp1_output.rx(tmp0_desc, 2, value.i6c_1);
+    tmp1_output.mx(tmp0_desc, 3, value.j6c_1);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.y64(encoder, value instanceof CatalogueError ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.f6c(encoder, value instanceof CatalogueError ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.x64_1;
+  nr(decoder) {
+    var tmp0_desc = this.e6c_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -114,74 +114,74 @@ class $serializer {
     var tmp5_local1 = null;
     var tmp6_local2 = null;
     var tmp7_local3 = 0;
-    var tmp8_input = decoder.ew(tmp0_desc);
-    var tmp9_cached = Companion_getInstance_0().w64_1;
-    if (tmp8_input.vw()) {
-      tmp4_local0 = tmp8_input.qw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
+    var tmp8_input = decoder.bw(tmp0_desc);
+    var tmp9_cached = Companion_getInstance_0().d6c_1;
+    if (tmp8_input.sw()) {
+      tmp4_local0 = tmp8_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp8_input.sw(tmp0_desc, 1, tmp9_cached[1].r3(), tmp5_local1);
+      tmp5_local1 = tmp8_input.pw(tmp0_desc, 1, tmp9_cached[1].k3(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp8_input.ow(tmp0_desc, 2);
+      tmp6_local2 = tmp8_input.lw(tmp0_desc, 2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp8_input.jw(tmp0_desc, 3);
+      tmp7_local3 = tmp8_input.gw(tmp0_desc, 3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp8_input.ww(tmp0_desc);
+        tmp2_index = tmp8_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp8_input.qw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
+            tmp4_local0 = tmp8_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp8_input.sw(tmp0_desc, 1, tmp9_cached[1].r3(), tmp5_local1);
+            tmp5_local1 = tmp8_input.pw(tmp0_desc, 1, tmp9_cached[1].k3(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp8_input.ow(tmp0_desc, 2);
+            tmp6_local2 = tmp8_input.lw(tmp0_desc, 2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp8_input.jw(tmp0_desc, 3);
+            tmp7_local3 = tmp8_input.gw(tmp0_desc, 3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp8_input.fw(tmp0_desc);
-    return CatalogueError.d65(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
+    tmp8_input.cw(tmp0_desc);
+    return CatalogueError.k6c(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
   }
-  or() {
-    return this.x64_1;
+  lr() {
+    return this.e6c_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance_0().w64_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance_0().d6c_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [RangeWithIndexSerializer_getInstance(), get_nullable(tmp0_cached[1].r3()), StringSerializer_getInstance(), IntSerializer_getInstance()];
+    return [RangeWithIndexSerializer_getInstance(), get_nullable(tmp0_cached[1].k3()), StringSerializer_getInstance(), IntSerializer_getInstance()];
   }
 }
 class CatalogueError {
   constructor(textRange, parserItem, message, errorType) {
     Companion_getInstance_0();
-    this.z64_1 = textRange;
-    this.a65_1 = parserItem;
-    this.b65_1 = message;
-    this.c65_1 = errorType;
+    this.g6c_1 = textRange;
+    this.h6c_1 = parserItem;
+    this.i6c_1 = message;
+    this.j6c_1 = errorType;
   }
   toString() {
-    return 'CatalogueError(textRange=' + toString(this.z64_1) + ', parserItem=' + toString_0(this.a65_1) + ', message=' + this.b65_1 + ', errorType=' + this.c65_1 + ')';
+    return 'CatalogueError(textRange=' + toString(this.g6c_1) + ', parserItem=' + toString_0(this.h6c_1) + ', message=' + this.i6c_1 + ', errorType=' + this.j6c_1 + ')';
   }
   hashCode() {
-    var result = hashCode(this.z64_1);
-    result = imul(result, 31) + (this.a65_1 == null ? 0 : hashCode(this.a65_1)) | 0;
-    result = imul(result, 31) + getStringHashCode(this.b65_1) | 0;
-    result = imul(result, 31) + this.c65_1 | 0;
+    var result = hashCode(this.g6c_1);
+    result = imul(result, 31) + (this.h6c_1 == null ? 0 : hashCode(this.h6c_1)) | 0;
+    result = imul(result, 31) + getStringHashCode(this.i6c_1) | 0;
+    result = imul(result, 31) + this.j6c_1 | 0;
     return result;
   }
   equals(other) {
@@ -189,26 +189,26 @@ class CatalogueError {
       return true;
     if (!(other instanceof CatalogueError))
       return false;
-    if (!equals(this.z64_1, other.z64_1))
+    if (!equals(this.g6c_1, other.g6c_1))
       return false;
-    if (!equals(this.a65_1, other.a65_1))
+    if (!equals(this.h6c_1, other.h6c_1))
       return false;
-    if (!(this.b65_1 === other.b65_1))
+    if (!(this.i6c_1 === other.i6c_1))
       return false;
-    if (!(this.c65_1 === other.c65_1))
+    if (!(this.j6c_1 === other.j6c_1))
       return false;
     return true;
   }
-  static d65(seen0, textRange, parserItem, message, errorType, serializationConstructorMarker) {
+  static k6c(seen0, textRange, parserItem, message, errorType, serializationConstructorMarker) {
     Companion_getInstance_0();
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance().x64_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance().e6c_1);
     }
     var $this = createThis(this);
-    $this.z64_1 = textRange;
-    $this.a65_1 = parserItem;
-    $this.b65_1 = message;
-    $this.c65_1 = errorType;
+    $this.g6c_1 = textRange;
+    $this.h6c_1 = parserItem;
+    $this.i6c_1 = message;
+    $this.j6c_1 = errorType;
     return $this;
   }
 }
@@ -223,50 +223,50 @@ class CatalogueErrorTypes {
     this.SINGLE_QUOTES = 7;
     this.INCOMPLETE_QUOTE = 8;
   }
-  e65() {
+  l6c() {
     return this.INVALID_OVERRIDE;
   }
-  f65() {
+  m6c() {
     return this.ARRAY_TAG_CONFLICT;
   }
-  g65() {
+  n6c() {
     return this.INVALID_ARRAY_COUNT;
   }
-  h65() {
+  o6c() {
     return this.NEEDS_QUOTES;
   }
-  i65() {
+  p6c() {
     return this.EXTRANEOUS_VALUE;
   }
-  j65() {
+  q6c() {
     return this.MUST_BE_UPPERCASE;
   }
-  k65() {
+  r6c() {
     return this.SINGLE_QUOTES;
   }
-  l65() {
+  s6c() {
     return this.INCOMPLETE_QUOTE;
   }
 }
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.m65_1 = function_0;
+    this.t6c_1 = function_0;
   }
-  zg(a, b) {
-    return this.m65_1(a, b);
+  wg(a, b) {
+    return this.t6c_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
-    return this.m65_1;
+  f4() {
+    return this.t6c_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -277,16 +277,16 @@ class sam$kotlin_Comparator$0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
 class CatalogueValidator {
-  n65(parseResult) {
-    return this.o65(parseResult.catalogueEntries, parseResult.looseItems, parseResult.parserItems);
+  u6c(parseResult) {
+    return this.v6c(parseResult.catalogueEntries, parseResult.looseItems, parseResult.parserItems);
   }
-  o65(entries, looseItems, parserItems) {
+  v6c(entries, looseItems, parserItems) {
     // Inline function 'kotlin.collections.mutableListOf' call
-    var out = ArrayList.b2();
+    var out = ArrayList.u1();
     addLooseItemErrors(this, looseItems, out);
     addEntryErrors(this, entries, out);
     // Inline function 'kotlin.collections.sortedBy' call
@@ -300,7 +300,7 @@ class CatalogueValidator {
 }
 //endregion
 function CatalogueError$Companion$$childSerializers$_anonymous__pu1vd7() {
-  return Companion_getInstance().n1e();
+  return Companion_getInstance().k1e();
 }
 var Companion_instance;
 function Companion_getInstance_0() {
@@ -330,8 +330,8 @@ function addLooseItemErrors($this, looseTokens, out) {
 function addLooseTokenError($this, item, out, message, errorType) {
   message = message === VOID ? 'Unexpected ' + getTypeName($this, item) : message;
   errorType = errorType === VOID ? 5 : errorType;
-  var error = new CatalogueError(item.g1e(), item, message, errorType);
-  out.g2(error);
+  var error = new CatalogueError(item.d1e(), item, message, errorType);
+  out.z1(error);
 }
 function addEntryErrors($this, entries, out) {
   var inductionVariable = 0;
@@ -415,14 +415,14 @@ function addCaseErrorIfAny($this, item, out) {
   if (item == null) {
     return Unit_instance;
   }
-  var tmp = item.m1f();
+  var tmp = item.j1f();
   // Inline function 'kotlin.text.uppercase' call
   // Inline function 'kotlin.js.asDynamic' call
-  if (tmp === item.m1f().toUpperCase()) {
+  if (tmp === item.j1f().toUpperCase()) {
     return Unit_instance;
   }
-  var error = new CatalogueError(item.g1e(), item, 'Keyword "' + item.m1f() + '" must be uppercase', 6);
-  out.g2(error);
+  var error = new CatalogueError(item.d1e(), item, 'Keyword "' + item.j1f() + '" must be uppercase', 6);
+  out.z1(error);
 }
 function addNeedsQuoteErrors($this, items, out) {
   var inductionVariable = 0;
@@ -433,8 +433,8 @@ function addNeedsQuoteErrors($this, items, out) {
     if (item.itemType === 5) {
       continue $l$loop;
     }
-    var error = new CatalogueError(item.g1e(), item, 'Values must be quoted', 4);
-    out.g2(error);
+    var error = new CatalogueError(item.d1e(), item, 'Values must be quoted', 4);
+    out.z1(error);
   }
 }
 function getTypeName($this, item) {
@@ -484,8 +484,8 @@ function getTypeName($this, item) {
 }
 function CatalogueValidator$validate$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = get_sortValue(a.z64_1);
-  var tmp$ret$2 = get_sortValue(b.z64_1);
+  var tmp = get_sortValue(a.g6c_1);
+  var tmp$ret$2 = get_sortValue(b.g6c_1);
   return compareValues(tmp, tmp$ret$2);
 }
 var CatalogueValidator_instance;
@@ -510,18 +510,18 @@ function validateCatalogue(catalogue) {
         // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
         var this_0 = get_catalogueJson();
         // Inline function 'kotlinx.serialization.serializer' call
-        var this_1 = this_0.uw();
+        var this_1 = this_0.rw();
         // Inline function 'kotlinx.serialization.internal.cast' call
         var this_2 = serializer(this_1, createKType(getKClass(CatalogueParseResult), arrayOf([]), false));
         var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
         tmp = decodeFromDynamic(this_0, tmp$ret$1, catalogue);
       } else {
-        throw Exception.lc('Unexpected catalogue parser data');
+        throw Exception.gc('Unexpected catalogue parser data');
       }
     }
   }
   var parseResult = tmp;
-  var errors = CatalogueValidator_instance.o65(parseResult.catalogueEntries, parseResult.looseItems, parseResult.parserItems);
+  var errors = CatalogueValidator_instance.v6c(parseResult.catalogueEntries, parseResult.looseItems, parseResult.parserItems);
   // Inline function 'kotlin.collections.isEmpty' call
   if (errors.length === 0) {
     // Inline function 'kotlin.emptyArray' call
@@ -530,9 +530,9 @@ function validateCatalogue(catalogue) {
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_3 = get_catalogueJson();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_4 = this_3.uw();
+  var this_4 = this_3.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_5 = serializer(this_4, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CatalogueError), arrayOf([]), false))]), false));
+  var this_5 = serializer(this_4, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CatalogueError), arrayOf([]), false))]), false));
   var tmp$ret$6 = isInterface(this_5, KSerializer) ? this_5 : THROW_CCE();
   var tmp_0 = encodeToDynamic(this_3, tmp$ret$6, errors);
   return (!(tmp_0 == null) ? isArray(tmp_0) : false) ? tmp_0 : THROW_CCE();
@@ -546,7 +546,7 @@ function _init_properties_validateCatalogue_kt__nsd1lr() {
 }
 //region block: post-declaration
 initMetadataForCompanion(Companion);
-protoOf($serializer).p14 = typeParametersSerializers;
+protoOf($serializer).m14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CatalogueError, 'CatalogueError', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance});
 initMetadataForObject(CatalogueErrorTypes, 'CatalogueErrorTypes');

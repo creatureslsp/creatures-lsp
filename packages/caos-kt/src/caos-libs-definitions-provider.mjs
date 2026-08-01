@@ -36,7 +36,7 @@ function get_caosLibsProtoSerializer() {
   var tmp = KProperty0;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('caosLibsProtoSerializer', 0, tmp, _get_caosLibsProtoSerializer_$ref_a8v4qe(), null);
-  return tmp0.r3();
+  return tmp0.k3();
 }
 var caosLibsProtoSerializer$delegate;
 function get_universalLib() {
@@ -66,7 +66,7 @@ function setCaosLibProvider(provider) {
 }
 function libProvider$lambda() {
   _init_properties_universalLib_kt__7v7mii();
-  throw CaosException.j1t('CAOS lib not yet provided. Use setCaosLibProvider() before trying to access the CAOS library.');
+  throw CaosException.g1t('CAOS lib not yet provided. Use setCaosLibProvider() before trying to access the CAOS library.');
 }
 function caosLibsProtoSerializer$delegate$lambda() {
   _init_properties_universalLib_kt__7v7mii();
@@ -80,7 +80,7 @@ function _get_caosLibsProtoSerializer_$ref_a8v4qe() {
   return () => get_caosLibsProtoSerializer();
 }
 function setProtoBufProvider$lambda($get) {
-  return () => get_caosLibsProtoSerializer().q1v(Companion_getInstance().n1e(), $get());
+  return () => get_caosLibsProtoSerializer().n1v(Companion_getInstance().k1e(), $get());
 }
 var properties_initialized_universalLib_kt_px3evw;
 function _init_properties_universalLib_kt__7v7mii() {

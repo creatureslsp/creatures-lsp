@@ -91,21 +91,21 @@ var imul = Math.imul;
 //endregion
 //region block: pre-declaration
 class Collections {
-  e27(collection) {
+  d27(collection) {
     var tmp0_elvis_lhs = minOrNull(collection);
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      throw NoSuchElementException.c6();
+      throw NoSuchElementException.v5();
     } else {
       tmp = tmp0_elvis_lhs;
     }
     return tmp;
   }
-  f27(collection) {
+  e27(collection) {
     var tmp0_elvis_lhs = maxOrNull(collection);
     var tmp;
     if (tmp0_elvis_lhs == null) {
-      throw NoSuchElementException.c6();
+      throw NoSuchElementException.v5();
     } else {
       tmp = tmp0_elvis_lhs;
     }
@@ -113,12 +113,12 @@ class Collections {
   }
 }
 class StdPrintStream {
-  g27(message) {
+  f27(message) {
     return println(message);
   }
 }
 class ErrPrintStream {
-  g27(message) {
+  f27(message) {
     // Inline function 'com.strumenta.antlrkotlin.runtime.platformPrintErrLn' call
     console.error(message);
     return Unit_instance;
@@ -127,93 +127,93 @@ class ErrPrintStream {
 class System {
   constructor() {
     System_instance = this;
-    this.h27_1 = StdPrintStream_instance;
-    this.i27_1 = ErrPrintStream_instance;
+    this.g27_1 = StdPrintStream_instance;
+    this.h27_1 = ErrPrintStream_instance;
   }
-  j27(name, defaultValue) {
+  i27(name, defaultValue) {
     var tmp0_elvis_lhs = platformGetEnv(name);
     return tmp0_elvis_lhs == null ? defaultValue : tmp0_elvis_lhs;
   }
 }
 class AbstractCharStreams {
-  k27(str, sourceName) {
+  j27(str, sourceName) {
     return new StringCharStream(str, sourceName);
   }
-  l27(str, sourceName, $super) {
+  k27(str, sourceName, $super) {
     sourceName = sourceName === VOID ? '<unknown>' : sourceName;
-    return $super === VOID ? this.k27(str, sourceName) : $super.k27.call(this, str, sourceName);
+    return $super === VOID ? this.j27(str, sourceName) : $super.j27.call(this, str, sourceName);
   }
 }
 class BaseErrorListener {
-  m27(recognizer, offendingSymbol, line, charPositionInLine, msg, e) {
+  l27(recognizer, offendingSymbol, line, charPositionInLine, msg, e) {
   }
-  n27(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs) {
+  m27(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs) {
   }
-  o27(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs) {
+  n27(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs) {
   }
-  p27(recognizer, dfa, startIndex, stopIndex, prediction, configs) {
+  o27(recognizer, dfa, startIndex, stopIndex, prediction, configs) {
   }
 }
 class BufferedTokenStream {
   constructor(tokenSource) {
-    this.q27_1 = ArrayList.f2(100);
-    this.r27_1 = -1;
-    this.s27_1 = false;
-    this.t27_1 = tokenSource;
+    this.p27_1 = ArrayList.y1(100);
+    this.q27_1 = -1;
+    this.r27_1 = false;
+    this.s27_1 = tokenSource;
+  }
+  t27() {
+    return this.s27_1;
   }
   u27() {
-    return this.t27_1;
+    return this.q27_1;
   }
   v27() {
-    return this.r27_1;
-  }
-  w27() {
     return 0;
   }
-  x27(marker) {
+  w27(marker) {
   }
-  y27(index) {
-    this.z27();
-    this.r27_1 = this.a28(index);
+  x27(index) {
+    this.y27();
+    this.q27_1 = this.z27(index);
+  }
+  a28() {
+    return this.p27_1.b2();
   }
   b28() {
-    return this.q27_1.i2();
-  }
-  c28() {
     var tmp;
-    if (this.r27_1 >= 0) {
+    if (this.q27_1 >= 0) {
       var tmp_0;
-      if (this.s27_1) {
-        tmp_0 = this.r27_1 < (this.q27_1.i2() - 1 | 0);
+      if (this.r27_1) {
+        tmp_0 = this.q27_1 < (this.p27_1.b2() - 1 | 0);
       } else {
-        tmp_0 = this.r27_1 < this.q27_1.i2();
+        tmp_0 = this.q27_1 < this.p27_1.b2();
       }
       tmp = tmp_0;
     } else {
       tmp = false;
     }
     var skipEofCheck = tmp;
-    if (!skipEofCheck && this.d28(1) === -1) {
-      throw IllegalStateException.s4('cannot consume EOF');
+    if (!skipEofCheck && this.c28(1) === -1) {
+      throw IllegalStateException.l4('cannot consume EOF');
     }
-    if (this.e28(this.r27_1 + 1 | 0)) {
-      this.r27_1 = this.a28(this.r27_1 + 1 | 0);
+    if (this.d28(this.q27_1 + 1 | 0)) {
+      this.q27_1 = this.z27(this.q27_1 + 1 | 0);
     }
   }
-  e28(i) {
+  d28(i) {
     // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
     if (!(i >= 0)) {
-      throw AssertionError.yc(null);
+      throw AssertionError.vc(null);
     }
-    var n = (i - this.q27_1.i2() | 0) + 1 | 0;
+    var n = (i - this.p27_1.b2() | 0) + 1 | 0;
     if (n > 0) {
-      var fetched = this.f28(n);
+      var fetched = this.e28(n);
       return fetched >= n;
     }
     return true;
   }
-  f28(n) {
-    if (this.s27_1) {
+  e28(n) {
+    if (this.r27_1) {
       return 0;
     }
     var inductionVariable = 0;
@@ -221,162 +221,162 @@ class BufferedTokenStream {
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var t = this.u27().g28();
+        var t = this.t27().f28();
         if (isInterface(t, WritableToken)) {
-          t.h28(this.q27_1.i2());
+          t.g28(this.p27_1.b2());
         }
-        this.q27_1.g2(t);
-        if (t.g1s() === -1) {
-          this.s27_1 = true;
+        this.p27_1.z1(t);
+        if (t.d1s() === -1) {
+          this.r27_1 = true;
           return i + 1 | 0;
         }
       }
        while (inductionVariable < n);
     return n;
   }
-  k2(index) {
-    if (index < 0 || index >= this.q27_1.i2()) {
-      throw IndexOutOfBoundsException.rc('token index ' + index + ' out of range 0..' + (this.q27_1.i2() - 1 | 0));
+  d2(index) {
+    if (index < 0 || index >= this.p27_1.b2()) {
+      throw IndexOutOfBoundsException.mc('token index ' + index + ' out of range 0..' + (this.p27_1.b2() - 1 | 0));
     }
-    return this.q27_1.k2(index);
+    return this.p27_1.d2(index);
   }
-  d28(i) {
-    return ensureNotNull(this.i28(i)).g1s();
+  c28(i) {
+    return ensureNotNull(this.h28(i)).d1s();
   }
-  j28(k) {
+  i28(k) {
     var tmp;
-    if ((this.r27_1 - k | 0) < 0) {
+    if ((this.q27_1 - k | 0) < 0) {
       tmp = null;
     } else {
-      tmp = this.q27_1.k2(this.r27_1 - k | 0);
+      tmp = this.p27_1.d2(this.q27_1 - k | 0);
     }
     return tmp;
   }
-  i28(k) {
-    this.z27();
+  h28(k) {
+    this.y27();
     if (k === 0) {
       return null;
     }
     if (k < 0) {
-      return this.j28(-k | 0);
+      return this.i28(-k | 0);
     }
-    var i = (this.r27_1 + k | 0) - 1 | 0;
-    this.e28(i);
+    var i = (this.q27_1 + k | 0) - 1 | 0;
+    this.d28(i);
     var tmp;
-    if (i >= this.q27_1.i2()) {
-      tmp = this.q27_1.k2(this.q27_1.i2() - 1 | 0);
+    if (i >= this.p27_1.b2()) {
+      tmp = this.p27_1.d2(this.p27_1.b2() - 1 | 0);
     } else {
-      tmp = this.q27_1.k2(i);
+      tmp = this.p27_1.d2(i);
     }
     return tmp;
   }
-  a28(i) {
+  z27(i) {
     return i;
   }
-  z27() {
-    if (this.r27_1 === -1) {
-      this.k28();
+  y27() {
+    if (this.q27_1 === -1) {
+      this.j28();
     }
   }
-  k28() {
-    this.e28(0);
-    this.r27_1 = this.a28(0);
+  j28() {
+    this.d28(0);
+    this.q27_1 = this.z27(0);
   }
-  l28(start, stop, types) {
-    this.z27();
-    if (start < 0 || stop >= this.q27_1.i2() || stop < 0 || start >= this.q27_1.i2()) {
-      throw IndexOutOfBoundsException.rc('start ' + start + ' or stop ' + stop + ' not in 0..' + (this.q27_1.i2() - 1 | 0));
+  k28(start, stop, types) {
+    this.y27();
+    if (start < 0 || stop >= this.p27_1.b2() || stop < 0 || start >= this.p27_1.b2()) {
+      throw IndexOutOfBoundsException.mc('start ' + start + ' or stop ' + stop + ' not in 0..' + (this.p27_1.b2() - 1 | 0));
     }
     if (start > stop) {
       return null;
     }
-    var filteredTokens = ArrayList.b2();
+    var filteredTokens = ArrayList.u1();
     var inductionVariable = start;
     if (inductionVariable <= stop)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var t = this.q27_1.k2(i);
-        if (types == null || types.n2(t.g1s())) {
-          filteredTokens.g2(t);
+        var t = this.p27_1.d2(i);
+        if (types == null || types.g2(t.d1s())) {
+          filteredTokens.z1(t);
         }
       }
        while (!(i === stop));
     // Inline function 'kotlin.collections.ifEmpty' call
     var tmp;
-    if (filteredTokens.b1()) {
+    if (filteredTokens.u()) {
       tmp = null;
     } else {
       tmp = filteredTokens;
     }
     return tmp;
   }
-  m28(start, stop, types, $super) {
+  l28(start, stop, types, $super) {
     types = types === VOID ? null : types;
-    return $super === VOID ? this.l28(start, stop, types) : $super.l28.call(this, start, stop, types);
+    return $super === VOID ? this.k28(start, stop, types) : $super.k28.call(this, start, stop, types);
   }
-  n28(i, channel) {
-    this.e28(i);
-    if (i >= this.b28()) {
-      return this.b28() - 1 | 0;
+  m28(i, channel) {
+    this.d28(i);
+    if (i >= this.a28()) {
+      return this.a28() - 1 | 0;
     }
-    var token = this.q27_1.k2(i);
+    var token = this.p27_1.d2(i);
     var ii = i;
-    while (!(token.o28() === channel)) {
-      if (token.g1s() === -1) {
+    while (!(token.n28() === channel)) {
+      if (token.d1s() === -1) {
         return ii;
       }
       ii = ii + 1 | 0;
-      this.e28(ii);
-      token = this.q27_1.k2(ii);
+      this.d28(ii);
+      token = this.p27_1.d2(ii);
     }
     return ii;
   }
-  p28(i, channel) {
-    this.e28(i);
-    if (i >= this.b28()) {
-      return this.b28() - 1 | 0;
+  o28(i, channel) {
+    this.d28(i);
+    if (i >= this.a28()) {
+      return this.a28() - 1 | 0;
     }
     var ii = i;
     while (ii >= 0) {
-      var token = this.q27_1.k2(ii);
-      if (token.g1s() === -1 || token.o28() === channel) {
+      var token = this.p27_1.d2(ii);
+      if (token.d1s() === -1 || token.n28() === channel) {
         return ii;
       }
       ii = ii - 1 | 0;
     }
     return ii;
   }
-  q28(interval) {
-    var start = interval.r28_1;
-    var stop = interval.s28_1;
+  p28(interval) {
+    var start = interval.q28_1;
+    var stop = interval.r28_1;
     if (start < 0 || stop < 0) {
       return '';
     }
-    this.e28(stop);
-    if (stop >= this.q27_1.i2()) {
-      stop = this.q27_1.i2() - 1 | 0;
+    this.d28(stop);
+    if (stop >= this.p27_1.b2()) {
+      stop = this.p27_1.b2() - 1 | 0;
     }
-    var buf = StringBuilder.z();
+    var buf = StringBuilder.s();
     var inductionVariable = start;
     var last = stop;
     if (inductionVariable <= last)
       $l$loop: do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var t = this.q27_1.k2(i);
-        if (t.g1s() === -1) {
+        var t = this.p27_1.d2(i);
+        if (t.d1s() === -1) {
           break $l$loop;
         }
-        buf.a1(t.m1f());
+        buf.t(t.j1f());
       }
        while (!(i === last));
     return buf.toString();
   }
-  t28(start, stop) {
+  s28(start, stop) {
     var tmp;
     if (!(start == null) && !(stop == null)) {
-      tmp = this.q28(Companion_getInstance_25().y28(start.u28(), stop.u28()));
+      tmp = this.p28(Companion_getInstance_25().x28(start.t28(), stop.t28()));
     } else {
       tmp = '';
     }
@@ -387,15 +387,15 @@ class CharStream {}
 class Companion {
   constructor() {
     Companion_instance = this;
-    this.z28_1 = new Pair(null, null);
+    this.y28_1 = new Pair(null, null);
   }
 }
 class Token {}
 function startPoint() {
-  return new Point(this.h1e(), this.m29());
+  return new Point(this.e1e(), this.l29());
 }
 function endPoint() {
-  var tmp0_elvis_lhs = this.m1f();
+  var tmp0_elvis_lhs = this.j1f();
   var tmp;
   if (tmp0_elvis_lhs == null) {
     return null;
@@ -403,66 +403,66 @@ function endPoint() {
     tmp = tmp0_elvis_lhs;
   }
   var text = tmp;
-  return (new Point(this.h1e(), this.m29())).r2l(text);
+  return (new Point(this.e1e(), this.l29())).q2l(text);
 }
 class WritableToken {}
 class CommonToken {
+  i29(_set____db54di) {
+    this.b29_1 = _set____db54di;
+  }
+  d1s() {
+    return this.b29_1;
+  }
   j29(_set____db54di) {
     this.c29_1 = _set____db54di;
   }
-  g1s() {
+  e1e() {
     return this.c29_1;
   }
   k29(_set____db54di) {
     this.d29_1 = _set____db54di;
   }
-  h1e() {
+  l29() {
     return this.d29_1;
   }
-  l29(_set____db54di) {
+  m29(_set____db54di) {
     this.e29_1 = _set____db54di;
   }
-  m29() {
+  n28() {
     return this.e29_1;
   }
-  n29(_set____db54di) {
+  g28(_set____db54di) {
     this.f29_1 = _set____db54di;
   }
-  o28() {
+  t28() {
     return this.f29_1;
   }
-  h28(_set____db54di) {
+  n29(_set____db54di) {
     this.g29_1 = _set____db54di;
   }
-  u28() {
+  g1e() {
     return this.g29_1;
   }
   o29(_set____db54di) {
     this.h29_1 = _set____db54di;
   }
-  j1e() {
+  p29() {
     return this.h29_1;
   }
-  p29(_set____db54di) {
-    this.i29_1 = _set____db54di;
+  t27() {
+    return this.z28_1.first;
   }
   q29() {
-    return this.i29_1;
+    return this.z28_1.second;
   }
-  u27() {
-    return this.a29_1.first;
+  r29(value) {
+    this.a29_1 = value;
   }
-  r29() {
-    return this.a29_1.second;
-  }
-  s29(value) {
-    this.b29_1 = value;
-  }
-  m1f() {
-    if (!(this.b29_1 == null)) {
-      return this.b29_1;
+  j1f() {
+    if (!(this.a29_1 == null)) {
+      return this.a29_1;
     }
-    var tmp0_elvis_lhs = this.r29();
+    var tmp0_elvis_lhs = this.q29();
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return null;
@@ -470,43 +470,43 @@ class CommonToken {
       tmp = tmp0_elvis_lhs;
     }
     var input = tmp;
-    var n = input.b28();
+    var n = input.a28();
     var tmp_0;
-    if (this.j1e() < n && this.q29() < n) {
-      tmp_0 = input.q28(Companion_getInstance_25().y28(this.j1e(), this.q29()));
+    if (this.g1e() < n && this.p29() < n) {
+      tmp_0 = input.p28(Companion_getInstance_25().x28(this.g1e(), this.p29()));
     } else {
       tmp_0 = '<EOF>';
     }
     return tmp_0;
   }
-  static t29(source, type, channel, startIndex, stopIndex) {
+  static s29(source, type, channel, startIndex, stopIndex) {
     Companion_getInstance();
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_CommonToken($this);
-    $this.a29_1 = source;
-    $this.j29(type);
-    $this.n29(channel);
-    $this.o29(startIndex);
-    $this.p29(stopIndex);
+    $this.z28_1 = source;
+    $this.i29(type);
+    $this.m29(channel);
+    $this.n29(startIndex);
+    $this.o29(stopIndex);
     var a = source.first;
     if (!(a == null)) {
-      $this.k29(a.h1e());
-      $this.l29(a.m29());
+      $this.j29(a.e1e());
+      $this.k29(a.l29());
     }
     return $this;
   }
   toString() {
-    return this.u29(null);
+    return this.t29(null);
   }
-  u29(r) {
+  t29(r) {
     var tmp;
-    if (this.o28() > 0) {
-      tmp = ',channel=' + this.o28();
+    if (this.n28() > 0) {
+      tmp = ',channel=' + this.n28();
     } else {
       tmp = '';
     }
     var channelStr = tmp;
-    var txt = this.m1f();
+    var txt = this.j1f();
     if (!(txt == null)) {
       txt = replace(txt, '\n', '\\n');
       txt = replace(txt, '\r', '\\r');
@@ -514,32 +514,32 @@ class CommonToken {
     } else {
       txt = '<no text>';
     }
-    var tmp1_safe_receiver = r == null ? null : r.x29();
-    var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.y29(this.g1s());
-    var typeString = tmp2_elvis_lhs == null ? this.g1s().toString() : tmp2_elvis_lhs;
-    return '[@' + this.u28() + ',' + this.j1e() + ':' + this.q29() + "='" + txt + "',<" + typeString + '>' + channelStr + ',' + this.h1e() + ':' + this.m29() + ']';
+    var tmp1_safe_receiver = r == null ? null : r.w29();
+    var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.x29(this.d1s());
+    var typeString = tmp2_elvis_lhs == null ? this.d1s().toString() : tmp2_elvis_lhs;
+    return '[@' + this.t28() + ',' + this.g1e() + ':' + this.p29() + "='" + txt + "',<" + typeString + '>' + channelStr + ',' + this.e1e() + ':' + this.l29() + ']';
   }
 }
 class Companion_0 {
   constructor() {
     Companion_instance_0 = this;
-    this.b2a_1 = new CommonTokenFactory();
+    this.a2a_1 = new CommonTokenFactory();
   }
 }
 class CommonTokenFactory {
   constructor(copyText) {
     Companion_getInstance_0();
     copyText = copyText === VOID ? false : copyText;
-    this.c2a_1 = copyText;
+    this.b2a_1 = copyText;
   }
-  d2a(source, type, text, channel, start, stop, line, charPositionInLine) {
-    var t = CommonToken.t29(source, type, channel, start, stop);
-    t.k29(line);
-    t.l29(charPositionInLine);
+  c2a(source, type, text, channel, start, stop, line, charPositionInLine) {
+    var t = CommonToken.s29(source, type, channel, start, stop);
+    t.j29(line);
+    t.k29(charPositionInLine);
     if (!(text == null)) {
-      t.s29(text);
-    } else if (this.c2a_1 && !(source.second == null)) {
-      t.s29(ensureNotNull(source.second).q28(Companion_getInstance_25().y28(start, stop)));
+      t.r29(text);
+    } else if (this.b2a_1 && !(source.second == null)) {
+      t.r29(ensureNotNull(source.second).p28(Companion_getInstance_25().x28(start, stop)));
     }
     return t;
   }
@@ -547,52 +547,52 @@ class CommonTokenFactory {
 class CommonTokenStream extends BufferedTokenStream {
   constructor(tokenSource) {
     super(tokenSource);
-    this.i2a_1 = 0;
+    this.h2a_1 = 0;
   }
-  a28(i) {
-    return this.n28(i, this.i2a_1);
+  z27(i) {
+    return this.m28(i, this.h2a_1);
   }
-  j28(k) {
-    if (k === 0 || (this.r27_1 - k | 0) < 0) {
+  i28(k) {
+    if (k === 0 || (this.q27_1 - k | 0) < 0) {
       return null;
     }
-    var i = this.r27_1;
+    var i = this.q27_1;
     var n = 1;
     while (n <= k && i > 0) {
-      i = this.p28(i - 1 | 0, this.i2a_1);
+      i = this.o28(i - 1 | 0, this.h2a_1);
       n = n + 1 | 0;
     }
     var tmp;
     if (i < 0) {
       tmp = null;
     } else {
-      tmp = this.q27_1.k2(i);
+      tmp = this.p27_1.d2(i);
     }
     return tmp;
   }
-  i28(k) {
-    this.z27();
+  h28(k) {
+    this.y27();
     if (k === 0) {
       return null;
     }
     if (k < 0) {
-      return this.j28(-k | 0);
+      return this.i28(-k | 0);
     }
-    var i = this.r27_1;
+    var i = this.q27_1;
     var n = 1;
     while (n < k) {
-      if (this.e28(i + 1 | 0)) {
-        i = this.n28(i + 1 | 0, this.i2a_1);
+      if (this.d28(i + 1 | 0)) {
+        i = this.m28(i + 1 | 0, this.h2a_1);
       }
       n = n + 1 | 0;
     }
-    return this.q27_1.k2(i);
+    return this.p27_1.d2(i);
   }
 }
 class Companion_1 {
   constructor() {
     Companion_instance_1 = this;
-    this.j2a_1 = new ConsoleErrorListener();
+    this.i2a_1 = new ConsoleErrorListener();
   }
 }
 class ConsoleErrorListener extends BaseErrorListener {
@@ -600,572 +600,572 @@ class ConsoleErrorListener extends BaseErrorListener {
     Companion_getInstance_1();
     super();
   }
-  m27(recognizer, offendingSymbol, line, charPositionInLine, msg, e) {
-    System_getInstance().i27_1.g27('line ' + line + ':' + charPositionInLine + ' ' + msg);
+  l27(recognizer, offendingSymbol, line, charPositionInLine, msg, e) {
+    System_getInstance().h27_1.f27('line ' + line + ':' + charPositionInLine + ' ' + msg);
   }
 }
 class DefaultErrorStrategy {
   constructor() {
-    this.k2a_1 = false;
-    this.l2a_1 = -1;
+    this.j2a_1 = false;
+    this.k2a_1 = -1;
+    this.l2a_1 = null;
     this.m2a_1 = null;
-    this.n2a_1 = null;
-    this.o2a_1 = 0;
+    this.n2a_1 = 0;
   }
-  p2a(recognizer) {
-    return this.q2a(recognizer);
-  }
-  r2a(recognizer) {
-    this.k2a_1 = true;
-  }
-  s2a(recognizer) {
-    return this.k2a_1;
+  o2a(recognizer) {
+    return this.p2a(recognizer);
   }
   q2a(recognizer) {
-    this.k2a_1 = false;
-    this.m2a_1 = null;
-    this.l2a_1 = -1;
+    this.j2a_1 = true;
   }
-  t2a(recognizer) {
-    return this.q2a(recognizer);
+  r2a(recognizer) {
+    return this.j2a_1;
   }
-  u2a(recognizer, e) {
-    if (this.s2a(recognizer)) {
+  p2a(recognizer) {
+    this.j2a_1 = false;
+    this.l2a_1 = null;
+    this.k2a_1 = -1;
+  }
+  s2a(recognizer) {
+    return this.p2a(recognizer);
+  }
+  t2a(recognizer, e) {
+    if (this.r2a(recognizer)) {
       return Unit_instance;
     }
-    this.r2a(recognizer);
+    this.q2a(recognizer);
     if (e instanceof NoViableAltException) {
-      this.s2b(recognizer, e);
+      this.r2b(recognizer, e);
     } else {
       if (e instanceof InputMismatchException) {
-        this.r2b(recognizer, e);
+        this.q2b(recognizer, e);
       } else {
         if (e instanceof FailedPredicateException) {
-          this.q2b(recognizer, e);
+          this.p2b(recognizer, e);
         } else {
-          System_getInstance().i27_1.g27('unknown recognition error type: ' + e.toString());
-          recognizer.p2b(ensureNotNull(e.a2b_1), ensureNotNull(e.message), e);
+          System_getInstance().h27_1.f27('unknown recognition error type: ' + e.toString());
+          recognizer.o2b(ensureNotNull(e.z2a_1), ensureNotNull(e.message), e);
         }
       }
     }
   }
-  t2b(recognizer, e) {
-    var lastErrorStatesTemp = this.m2a_1;
-    if (this.l2a_1 === recognizer.v2b().v27() && !(lastErrorStatesTemp == null) && lastErrorStatesTemp.yk(recognizer.w29_1)) {
-      recognizer.u2b();
+  s2b(recognizer, e) {
+    var lastErrorStatesTemp = this.l2a_1;
+    if (this.k2a_1 === recognizer.u2b().u27() && !(lastErrorStatesTemp == null) && lastErrorStatesTemp.vk(recognizer.v29_1)) {
+      recognizer.t2b();
     }
-    this.l2a_1 = recognizer.v2b().v27();
+    this.k2a_1 = recognizer.u2b().u27();
     if (lastErrorStatesTemp == null) {
-      lastErrorStatesTemp = IntervalSet.y2b();
-      this.m2a_1 = lastErrorStatesTemp;
+      lastErrorStatesTemp = IntervalSet.x2b();
+      this.l2a_1 = lastErrorStatesTemp;
     }
-    lastErrorStatesTemp.z2b(recognizer.w29_1);
-    var followSet = this.a2c(recognizer);
-    this.b2c(recognizer, followSet);
+    lastErrorStatesTemp.y2b(recognizer.v29_1);
+    var followSet = this.z2b(recognizer);
+    this.a2c(recognizer, followSet);
   }
-  c2c(recognizer) {
-    var s = recognizer.p2c().n2c_1.f2c_1.k2(recognizer.w29_1);
-    if (this.s2a(recognizer)) {
+  b2c(recognizer) {
+    var s = recognizer.o2c().m2c_1.e2c_1.d2(recognizer.v29_1);
+    if (this.r2a(recognizer)) {
       return Unit_instance;
     }
-    var tokens = recognizer.v2b();
-    var la = tokens.d28(1);
-    var nextTokens = recognizer.q2c().r2c(ensureNotNull(s));
-    if (nextTokens.yk(la)) {
-      this.n2a_1 = null;
-      this.o2a_1 = -1;
+    var tokens = recognizer.u2b();
+    var la = tokens.c28(1);
+    var nextTokens = recognizer.p2c().q2c(ensureNotNull(s));
+    if (nextTokens.vk(la)) {
+      this.m2a_1 = null;
+      this.n2a_1 = -1;
       return Unit_instance;
     }
-    if (nextTokens.yk(-2)) {
-      if (this.n2a_1 == null) {
-        this.n2a_1 = recognizer.j2b_1;
-        this.o2a_1 = recognizer.w29_1;
+    if (nextTokens.vk(-2)) {
+      if (this.m2a_1 == null) {
+        this.m2a_1 = recognizer.i2b_1;
+        this.n2a_1 = recognizer.v29_1;
       }
       return Unit_instance;
     }
-    switch (s.z2c()) {
+    switch (s.y2c()) {
       case 3:
       case 5:
       case 4:
       case 10:
-        if (!(this.a2d(recognizer) == null)) {
+        if (!(this.z2c(recognizer) == null)) {
           return Unit_instance;
         }
 
-        throw InputMismatchException.k2d(recognizer);
+        throw InputMismatchException.j2d(recognizer);
       case 11:
       case 9:
-        this.l2d(recognizer);
-        var expecting = recognizer.m2d();
-        var whatFollowsLoopIterationOrRule = expecting.n2d(this.a2c(recognizer));
-        this.b2c(recognizer, whatFollowsLoopIterationOrRule);
+        this.k2d(recognizer);
+        var expecting = recognizer.l2d();
+        var whatFollowsLoopIterationOrRule = expecting.m2d(this.z2b(recognizer));
+        this.a2c(recognizer, whatFollowsLoopIterationOrRule);
         break;
       default:
         break;
     }
   }
-  s2b(recognizer, e) {
-    var tokens = recognizer.v2b();
+  r2b(recognizer, e) {
+    var tokens = recognizer.u2b();
     var tmp;
-    if (ensureNotNull(e.w2d_1).g1s() === -1) {
+    if (ensureNotNull(e.v2d_1).d1s() === -1) {
       tmp = '<EOF>';
     } else {
-      tmp = ensureNotNull(tokens.t28(e.w2d_1, ensureNotNull(e.a2b_1)));
+      tmp = ensureNotNull(tokens.s28(e.v2d_1, ensureNotNull(e.z2a_1)));
     }
     var input = tmp;
-    var msg = 'no viable alternative at input ' + this.z2d(input);
-    recognizer.p2b(ensureNotNull(e.a2b_1), msg, e);
-  }
-  r2b(recognizer, e) {
-    var tokenErrorDisplay = this.a2e(e.a2b_1);
-    var expectedToken = ensureNotNull(e.m2d()).b2e(recognizer.x29());
-    var msg = 'mismatched input ' + tokenErrorDisplay + ' expecting ' + expectedToken;
-    recognizer.p2b(ensureNotNull(e.a2b_1), msg, e);
+    var msg = 'no viable alternative at input ' + this.y2d(input);
+    recognizer.o2b(ensureNotNull(e.z2a_1), msg, e);
   }
   q2b(recognizer, e) {
-    var ruleName = recognizer.c2e()[ensureNotNull(recognizer.j2b_1).i2e()];
-    var msg = 'rule ' + ruleName + ' ' + e.message;
-    recognizer.p2b(ensureNotNull(e.a2b_1), msg, e);
+    var tokenErrorDisplay = this.z2d(e.z2a_1);
+    var expectedToken = ensureNotNull(e.l2d()).a2e(recognizer.w29());
+    var msg = 'mismatched input ' + tokenErrorDisplay + ' expecting ' + expectedToken;
+    recognizer.o2b(ensureNotNull(e.z2a_1), msg, e);
   }
-  l2d(recognizer) {
-    if (this.s2a(recognizer)) {
+  p2b(recognizer, e) {
+    var ruleName = recognizer.b2e()[ensureNotNull(recognizer.i2b_1).h2e()];
+    var msg = 'rule ' + ruleName + ' ' + e.message;
+    recognizer.o2b(ensureNotNull(e.z2a_1), msg, e);
+  }
+  k2d(recognizer) {
+    if (this.r2a(recognizer)) {
       return Unit_instance;
     }
-    this.r2a(recognizer);
-    var t = ensureNotNull(recognizer.j2e());
-    var tokenName = this.a2e(t);
-    var expecting = this.k2e(recognizer);
-    var msg = 'extraneous input ' + tokenName + ' expecting ' + expecting.b2e(recognizer.x29());
-    recognizer.p2b(t, msg, null);
+    this.q2a(recognizer);
+    var t = ensureNotNull(recognizer.i2e());
+    var tokenName = this.z2d(t);
+    var expecting = this.j2e(recognizer);
+    var msg = 'extraneous input ' + tokenName + ' expecting ' + expecting.a2e(recognizer.w29());
+    recognizer.o2b(t, msg, null);
+  }
+  k2e(recognizer) {
+    if (this.r2a(recognizer)) {
+      return Unit_instance;
+    }
+    this.q2a(recognizer);
+    var t = ensureNotNull(recognizer.i2e());
+    var expecting = this.j2e(recognizer);
+    var msg = 'missing ' + expecting.a2e(recognizer.w29()) + ' at ' + this.z2d(t);
+    recognizer.o2b(t, msg, null);
   }
   l2e(recognizer) {
-    if (this.s2a(recognizer)) {
-      return Unit_instance;
-    }
-    this.r2a(recognizer);
-    var t = ensureNotNull(recognizer.j2e());
-    var expecting = this.k2e(recognizer);
-    var msg = 'missing ' + expecting.b2e(recognizer.x29()) + ' at ' + this.a2e(t);
-    recognizer.p2b(t, msg, null);
-  }
-  m2e(recognizer) {
-    var matchedSymbol = this.a2d(recognizer);
+    var matchedSymbol = this.z2c(recognizer);
     if (!(matchedSymbol == null)) {
-      recognizer.u2b();
+      recognizer.t2b();
       return matchedSymbol;
     }
-    if (this.o2e(recognizer)) {
-      return this.n2e(recognizer);
+    if (this.n2e(recognizer)) {
+      return this.m2e(recognizer);
     }
     var tmp;
-    if (this.n2a_1 == null) {
-      tmp = InputMismatchException.k2d(recognizer);
+    if (this.m2a_1 == null) {
+      tmp = InputMismatchException.j2d(recognizer);
     } else {
-      tmp = InputMismatchException.p2e(recognizer, this.o2a_1, ensureNotNull(this.n2a_1));
+      tmp = InputMismatchException.o2e(recognizer, this.n2a_1, ensureNotNull(this.m2a_1));
     }
     var e = tmp;
     throw e;
   }
-  o2e(recognizer) {
-    var currentSymbolType = recognizer.v2b().d28(1);
-    var currentState = recognizer.p2c().n2c_1.f2c_1.k2(recognizer.w29_1);
-    var next = ensureNotNull(currentState).s2e(0).q2e_1;
-    var atn = recognizer.p2c().n2c_1;
-    var expectingAtLL2 = atn.t2e(next, recognizer.j2b_1);
-    if (expectingAtLL2.yk(currentSymbolType)) {
-      this.l2e(recognizer);
+  n2e(recognizer) {
+    var currentSymbolType = recognizer.u2b().c28(1);
+    var currentState = recognizer.o2c().m2c_1.e2c_1.d2(recognizer.v29_1);
+    var next = ensureNotNull(currentState).r2e(0).p2e_1;
+    var atn = recognizer.o2c().m2c_1;
+    var expectingAtLL2 = atn.s2e(next, recognizer.i2b_1);
+    if (expectingAtLL2.vk(currentSymbolType)) {
+      this.k2e(recognizer);
       return true;
     }
     return false;
   }
-  a2d(recognizer) {
-    var nextTokenType = recognizer.v2b().d28(2);
-    var expecting = this.k2e(recognizer);
-    if (expecting.yk(nextTokenType)) {
-      this.l2d(recognizer);
-      recognizer.u2b();
-      var matchedSymbol = recognizer.j2e();
-      this.t2a(recognizer);
+  z2c(recognizer) {
+    var nextTokenType = recognizer.u2b().c28(2);
+    var expecting = this.j2e(recognizer);
+    if (expecting.vk(nextTokenType)) {
+      this.k2d(recognizer);
+      recognizer.t2b();
+      var matchedSymbol = recognizer.i2e();
+      this.s2a(recognizer);
       return matchedSymbol;
     }
     return null;
   }
-  n2e(recognizer) {
-    var currentSymbol = recognizer.j2e();
-    var expecting = this.k2e(recognizer);
+  m2e(recognizer) {
+    var currentSymbol = recognizer.i2e();
+    var expecting = this.j2e(recognizer);
     var expectedTokenType = 0;
-    if (!expecting.v2e()) {
-      expectedTokenType = expecting.u2e();
+    if (!expecting.u2e()) {
+      expectedTokenType = expecting.t2e();
     }
     var tmp;
     if (expectedTokenType === -1) {
       tmp = '<missing EOF>';
     } else {
-      tmp = '<missing ' + recognizer.x29().y29(expectedTokenType) + '>';
+      tmp = '<missing ' + recognizer.w29().x29(expectedTokenType) + '>';
     }
     var tokenText = tmp;
     var current = currentSymbol;
-    var lookback = recognizer.v2b().i28(-1);
-    if (ensureNotNull(current).g1s() === -1 && !(lookback == null)) {
+    var lookback = recognizer.u2b().h28(-1);
+    if (ensureNotNull(current).d1s() === -1 && !(lookback == null)) {
       current = lookback;
     }
-    return recognizer.w2e().d2a(new Pair(current.u27(), current.r29()), expectedTokenType, tokenText, 0, -1, -1, current.h1e(), current.m29());
+    return recognizer.v2e().c2a(new Pair(current.t27(), current.q29()), expectedTokenType, tokenText, 0, -1, -1, current.e1e(), current.l29());
   }
-  k2e(recognizer) {
-    return recognizer.m2d();
+  j2e(recognizer) {
+    return recognizer.l2d();
   }
-  a2e(t) {
+  z2d(t) {
     if (t == null) {
       return '<no token>';
     }
-    var s = this.x2e(t);
+    var s = this.w2e(t);
     if (s == null) {
       var tmp;
-      if (this.y2e(t) === -1) {
+      if (this.x2e(t) === -1) {
         tmp = '<EOF>';
       } else {
-        tmp = '<' + this.y2e(t) + '>';
+        tmp = '<' + this.x2e(t) + '>';
       }
       s = tmp;
     }
-    return this.z2d(s);
+    return this.y2d(s);
+  }
+  w2e(symbol) {
+    return symbol.j1f();
   }
   x2e(symbol) {
-    return symbol.m1f();
+    return symbol.d1s();
   }
-  y2e(symbol) {
-    return symbol.g1s();
-  }
-  z2d(s) {
+  y2d(s) {
     var ss = s;
     ss = replace(ss, '\n', '\\n');
     ss = replace(ss, '\r', '\\r');
     ss = replace(ss, '\t', '\\t');
     return "'" + ss + "'";
   }
-  a2c(recognizer) {
-    var atn = recognizer.p2c().n2c_1;
-    var ctx = recognizer.j2b_1;
-    var recoverSet = IntervalSet.y2b();
-    while (!(ctx == null) && ctx.e2e_1 >= 0) {
-      var invokingState = atn.f2c_1.k2(ctx.e2e_1);
-      var tmp = ensureNotNull(invokingState).s2e(0);
+  z2b(recognizer) {
+    var atn = recognizer.o2c().m2c_1;
+    var ctx = recognizer.i2b_1;
+    var recoverSet = IntervalSet.x2b();
+    while (!(ctx == null) && ctx.d2e_1 >= 0) {
+      var invokingState = atn.e2c_1.d2(ctx.d2e_1);
+      var tmp = ensureNotNull(invokingState).r2e(0);
       var rt = tmp instanceof RuleTransition ? tmp : THROW_CCE();
-      var follow = atn.r2c(rt.d2f_1);
-      recoverSet.g2f(follow);
-      ctx = ctx.h2f();
+      var follow = atn.q2c(rt.c2f_1);
+      recoverSet.f2f(follow);
+      ctx = ctx.g2f();
     }
-    recoverSet.i2f(-2);
+    recoverSet.h2f(-2);
     return recoverSet;
   }
-  b2c(recognizer, set) {
-    var ttype = recognizer.v2b().d28(1);
-    while (!(ttype === -1) && !set.yk(ttype)) {
-      recognizer.u2b();
-      ttype = recognizer.v2b().d28(1);
+  a2c(recognizer, set) {
+    var ttype = recognizer.u2b().c28(1);
+    while (!(ttype === -1) && !set.vk(ttype)) {
+      recognizer.t2b();
+      ttype = recognizer.u2b().c28(1);
     }
   }
 }
 class DummyTokenStream {
-  u27() {
-    throw UnsupportedOperationException.x7();
-  }
-  c28() {
-    throw UnsupportedOperationException.x7();
-  }
-  d28(i) {
-    throw UnsupportedOperationException.x7();
-  }
-  w27() {
-    throw UnsupportedOperationException.x7();
-  }
-  x27(marker) {
-    throw UnsupportedOperationException.x7();
-  }
-  v27() {
-    throw UnsupportedOperationException.x7();
-  }
-  y27(index) {
+  t27() {
+    throw UnsupportedOperationException.q7();
   }
   b28() {
+    throw UnsupportedOperationException.q7();
+  }
+  c28(i) {
+    throw UnsupportedOperationException.q7();
+  }
+  v27() {
+    throw UnsupportedOperationException.q7();
+  }
+  w27(marker) {
+    throw UnsupportedOperationException.q7();
+  }
+  u27() {
+    throw UnsupportedOperationException.q7();
+  }
+  x27(index) {
+  }
+  a28() {
     return 0;
   }
-  i28(k) {
-    throw UnsupportedOperationException.x7();
+  h28(k) {
+    throw UnsupportedOperationException.q7();
   }
-  k2(index) {
-    throw UnsupportedOperationException.x7();
+  d2(index) {
+    throw UnsupportedOperationException.q7();
   }
-  q28(interval) {
-    throw UnsupportedOperationException.x7();
+  p28(interval) {
+    throw UnsupportedOperationException.q7();
   }
-  t28(start, stop) {
-    throw UnsupportedOperationException.x7();
+  s28(start, stop) {
+    throw UnsupportedOperationException.q7();
   }
 }
 class EmptyStackException extends RuntimeException {
-  static m2f(message, cause) {
+  static l2f(message, cause) {
     message = message === VOID ? null : message;
     cause = cause === VOID ? null : cause;
-    var $this = this.ic(message, cause);
-    captureStack($this, $this.l2f_1);
+    var $this = this.dc(message, cause);
+    captureStack($this, $this.k2f_1);
     return $this;
   }
 }
 class RecognitionException extends RuntimeException {
-  static n2f(recognizer, inputStream, ctx, message) {
+  static m2f(recognizer, inputStream, ctx, message) {
     message = message === VOID ? null : message;
-    var $this = this.ia(message);
-    captureStack($this, $this.c2b_1);
-    $this.x2a_1 = recognizer;
-    $this.y2a_1 = inputStream;
-    $this.z2a_1 = ctx;
-    $this.a2b_1 = null;
-    $this.b2b_1 = -1;
-    if (!($this.x2a_1 == null)) {
-      $this.b2b_1 = $this.x2a_1.w29_1;
+    var $this = this.ba(message);
+    captureStack($this, $this.b2b_1);
+    $this.w2a_1 = recognizer;
+    $this.x2a_1 = inputStream;
+    $this.y2a_1 = ctx;
+    $this.z2a_1 = null;
+    $this.a2b_1 = -1;
+    if (!($this.w2a_1 == null)) {
+      $this.a2b_1 = $this.w2a_1.v29_1;
     }
     return $this;
   }
-  r29() {
-    return this.y2a_1;
+  q29() {
+    return this.x2a_1;
   }
-  m2d() {
-    var tmp0_safe_receiver = this.x2a_1;
-    var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q2c();
-    return tmp1_safe_receiver == null ? null : tmp1_safe_receiver.u2i(this.b2b_1, this.z2a_1);
+  l2d() {
+    var tmp0_safe_receiver = this.w2a_1;
+    var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.p2c();
+    return tmp1_safe_receiver == null ? null : tmp1_safe_receiver.t2i(this.a2b_1, this.y2a_1);
   }
 }
 class FailedPredicateException extends RecognitionException {}
 class InputMismatchException extends RecognitionException {
-  static k2d(recognizer) {
-    var $this = this.n2f(recognizer, recognizer.v2b(), ensureNotNull(recognizer.j2b_1));
+  static j2d(recognizer) {
+    var $this = this.m2f(recognizer, recognizer.u2b(), ensureNotNull(recognizer.i2b_1));
     init_org_antlr_v4_kotlinruntime_InputMismatchException($this);
-    $this.a2b_1 = recognizer.j2e();
+    $this.z2a_1 = recognizer.i2e();
     return $this;
   }
-  static p2e(recognizer, state, ctx) {
-    var $this = this.n2f(recognizer, recognizer.v2b(), ctx);
+  static o2e(recognizer, state, ctx) {
+    var $this = this.m2f(recognizer, recognizer.u2b(), ctx);
     init_org_antlr_v4_kotlinruntime_InputMismatchException($this);
-    $this.b2b_1 = state;
-    $this.a2b_1 = recognizer.j2e();
+    $this.a2b_1 = state;
+    $this.z2a_1 = recognizer.i2e();
     return $this;
   }
 }
 class Companion_2 {
   constructor() {
-    this.o2f_1 = 0;
-    this.p2f_1 = -2;
-    this.q2f_1 = -3;
-    this.r2f_1 = 0;
-    this.s2f_1 = 1;
-    this.t2f_1 = 0;
-    this.u2f_1 = 1114111;
+    this.n2f_1 = 0;
+    this.o2f_1 = -2;
+    this.p2f_1 = -3;
+    this.q2f_1 = 0;
+    this.r2f_1 = 1;
+    this.s2f_1 = 0;
+    this.t2f_1 = 1114111;
   }
 }
 class Recognizer {
   constructor() {
     Companion_getInstance_4();
-    this.v29_1 = ArrayList.c2(listOf(Companion_getInstance_1().j2a_1));
-    this.w29_1 = -1;
+    this.u29_1 = ArrayList.v1(listOf(Companion_getInstance_1().i2a_1));
+    this.v29_1 = -1;
   }
-  x29() {
-    return Companion_getInstance_5().g2l(this.b2h());
+  w29() {
+    return Companion_getInstance_5().f2l(this.a2h());
   }
-  z2h() {
-    return this.v29_1;
+  y2h() {
+    return this.u29_1;
   }
-  x2h() {
-    return new ProxyErrorListener(this.z2h());
+  w2h() {
+    return new ProxyErrorListener(this.y2h());
   }
-  a2i(listener) {
-    this.v29_1.g2(listener);
+  z2h(listener) {
+    this.u29_1.z1(listener);
   }
-  b2i(_localctx, ruleIndex, predIndex) {
+  a2i(_localctx, ruleIndex, predIndex) {
     return true;
   }
-  c2i(localctx, precedence) {
+  b2i(localctx, precedence) {
     return true;
   }
-  d2i(_localctx, ruleIndex, actionIndex) {
+  c2i(_localctx, ruleIndex, actionIndex) {
   }
 }
 class Lexer extends Recognizer {
   constructor(input) {
     super();
-    this.x2f_1 = input;
-    this.y2f_1 = new Pair(this, input);
-    this.z2f_1 = Companion_getInstance_0().b2a_1;
-    this.a2g_1 = null;
-    this.b2g_1 = -1;
+    this.w2f_1 = input;
+    this.x2f_1 = new Pair(this, input);
+    this.y2f_1 = Companion_getInstance_0().a2a_1;
+    this.z2f_1 = null;
+    this.a2g_1 = -1;
+    this.b2g_1 = 0;
     this.c2g_1 = 0;
-    this.d2g_1 = 0;
-    this.e2g_1 = false;
+    this.d2g_1 = false;
+    this.e2g_1 = 0;
     this.f2g_1 = 0;
-    this.g2g_1 = 0;
-    this.h2g_1 = IntegerStack.p2g();
-    this.i2g_1 = 0;
-    this.j2g_1 = null;
+    this.g2g_1 = IntegerStack.o2g();
+    this.h2g_1 = 0;
+    this.i2g_1 = null;
     var tmp = this;
     // Inline function 'kotlin.emptyArray' call
-    tmp.k2g_1 = [];
+    tmp.j2g_1 = [];
     var tmp_0 = this;
     // Inline function 'kotlin.emptyArray' call
-    tmp_0.l2g_1 = [];
+    tmp_0.k2g_1 = [];
     var tmp_1 = this;
     // Inline function 'kotlin.emptyArray' call
-    tmp_1.m2g_1 = [];
+    tmp_1.l2g_1 = [];
   }
-  w2e() {
+  v2e() {
+    return this.y2f_1;
+  }
+  p2g(_set____db54di) {
+    this.z2f_1 = _set____db54di;
+  }
+  g1s() {
     return this.z2f_1;
   }
-  q2g(_set____db54di) {
-    this.a2g_1 = _set____db54di;
+  e1e() {
+    return this.o2c().v2g_1;
   }
-  j1s() {
-    return this.a2g_1;
+  l29() {
+    return this.o2c().w2g_1;
   }
-  h1e() {
-    return this.p2c().w2g_1;
-  }
-  m29() {
-    return this.p2c().x2g_1;
+  z2g() {
+    return this.w2f_1.u27();
   }
   a2h() {
-    return this.x2f_1.v27();
+    return this.l2g_1;
   }
   b2h() {
-    return this.m2g_1;
-  }
-  c2h() {
-    var tokens = ArrayList.b2();
-    var t = this.g28();
-    while (!(t.g1s() === -1)) {
-      tokens.g2(t);
-      t = this.g28();
+    var tokens = ArrayList.u1();
+    var t = this.f28();
+    while (!(t.d1s() === -1)) {
+      tokens.z1(t);
+      t = this.f28();
     }
     return tokens;
   }
-  d2h() {
-    this.x2f_1.y27(0);
-    this.q2g(null);
-    this.g2g_1 = 0;
+  c2h() {
+    this.w2f_1.x27(0);
+    this.p2g(null);
     this.f2g_1 = 0;
-    this.b2g_1 = -1;
-    this.d2g_1 = -1;
+    this.e2g_1 = 0;
+    this.a2g_1 = -1;
     this.c2g_1 = -1;
-    this.j2g_1 = null;
-    this.e2g_1 = false;
-    this.i2g_1 = 0;
-    this.h2g_1.b4();
-    var tmp0_safe_receiver = this.p2c();
+    this.b2g_1 = -1;
+    this.i2g_1 = null;
+    this.d2g_1 = false;
+    this.h2g_1 = 0;
+    this.g2g_1.u3();
+    var tmp0_safe_receiver = this.o2c();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.d2h();
+      tmp0_safe_receiver.c2h();
     }
   }
-  g28() {
-    var tokenStartMarker = this.x2f_1.w27();
+  f28() {
+    var tokenStartMarker = this.w2f_1.v27();
     try {
       outer: while (true) {
-        if (this.e2g_1) {
-          this.g2h();
-          return ensureNotNull(this.j1s());
+        if (this.d2g_1) {
+          this.f2h();
+          return ensureNotNull(this.g1s());
         }
-        this.q2g(null);
-        this.f2g_1 = 0;
-        this.b2g_1 = this.x2f_1.v27();
-        this.d2g_1 = this.p2c().x2g_1;
-        this.c2g_1 = this.p2c().w2g_1;
-        this.j2g_1 = null;
+        this.p2g(null);
+        this.e2g_1 = 0;
+        this.a2g_1 = this.w2f_1.u27();
+        this.c2g_1 = this.o2c().w2g_1;
+        this.b2g_1 = this.o2c().v2g_1;
+        this.i2g_1 = null;
         do {
-          this.g2g_1 = 0;
+          this.f2g_1 = 0;
           var ttype;
           try {
-            ttype = this.p2c().h2h(this.x2f_1, this.i2g_1);
+            ttype = this.o2c().g2h(this.w2f_1, this.h2g_1);
           } catch ($p) {
             if ($p instanceof LexerNoViableAltException) {
               var e = $p;
+              this.h2h(e);
               this.i2h(e);
-              this.j2h(e);
               ttype = -3;
             } else {
               throw $p;
             }
           }
-          if (this.x2f_1.d28(1) === -1) {
-            this.e2g_1 = true;
+          if (this.w2f_1.c28(1) === -1) {
+            this.d2g_1 = true;
           }
-          if (this.g2g_1 === 0) {
-            this.g2g_1 = ttype;
+          if (this.f2g_1 === 0) {
+            this.f2g_1 = ttype;
           }
-          if (this.g2g_1 === -3) {
+          if (this.f2g_1 === -3) {
             continue outer;
           }
         }
-         while (this.g2g_1 === -2);
-        if (this.j1s() == null) {
-          this.k2h();
+         while (this.f2g_1 === -2);
+        if (this.g1s() == null) {
+          this.j2h();
         }
-        return ensureNotNull(this.j1s());
+        return ensureNotNull(this.g1s());
       }
     }finally {
-      this.x2f_1.x27(tokenStartMarker);
+      this.w2f_1.w27(tokenStartMarker);
     }
-  }
-  l2h() {
-    this.g2g_1 = -3;
-  }
-  m2h() {
-    this.g2g_1 = -2;
-  }
-  n2h(m) {
-    this.i2g_1 = m;
-  }
-  o2h(m) {
-    if (false) {
-      System_getInstance().h27_1.g27('pushMode ' + m);
-    }
-    this.h2g_1.p2h(this.i2g_1);
-    this.n2h(m);
-  }
-  q2h() {
-    if (this.h2g_1.r2h()) {
-      throw EmptyStackException.m2f();
-    }
-    if (false) {
-      System_getInstance().h27_1.g27('popMode back to ' + this.h2g_1.s2h());
-    }
-    this.n2h(this.h2g_1.t2h());
-    return this.i2g_1;
-  }
-  u2h(token) {
-    this.q2g(token);
   }
   k2h() {
-    var t = this.w2e().d2a(this.y2f_1, this.g2g_1, this.j2g_1, this.f2g_1, this.b2g_1, this.a2h() - 1 | 0, this.c2g_1, this.d2g_1);
-    this.u2h(t);
+    this.f2g_1 = -3;
+  }
+  l2h() {
+    this.f2g_1 = -2;
+  }
+  m2h(m) {
+    this.h2g_1 = m;
+  }
+  n2h(m) {
+    if (false) {
+      System_getInstance().g27_1.f27('pushMode ' + m);
+    }
+    this.g2g_1.o2h(this.h2g_1);
+    this.m2h(m);
+  }
+  p2h() {
+    if (this.g2g_1.q2h()) {
+      throw EmptyStackException.l2f();
+    }
+    if (false) {
+      System_getInstance().g27_1.f27('popMode back to ' + this.g2g_1.r2h());
+    }
+    this.m2h(this.g2g_1.s2h());
+    return this.h2g_1;
+  }
+  t2h(token) {
+    this.p2g(token);
+  }
+  j2h() {
+    var t = this.v2e().c2a(this.x2f_1, this.f2g_1, this.i2g_1, this.e2g_1, this.a2g_1, this.z2g() - 1 | 0, this.b2g_1, this.c2g_1);
+    this.t2h(t);
     return t;
   }
-  g2h() {
-    var cPos = this.m29();
-    var eof = this.w2e().d2a(this.y2f_1, -1, null, 0, this.x2f_1.v27(), this.x2f_1.v27() - 1 | 0, this.h1e(), cPos);
-    this.u2h(eof);
+  f2h() {
+    var cPos = this.l29();
+    var eof = this.v2e().c2a(this.x2f_1, -1, null, 0, this.w2f_1.u27(), this.w2f_1.u27() - 1 | 0, this.e1e(), cPos);
+    this.t2h(eof);
     return eof;
   }
-  j2h(e) {
-    if (!(this.x2f_1.d28(1) === -1)) {
-      this.p2c().v2h(this.x2f_1);
+  i2h(e) {
+    if (!(this.w2f_1.c28(1) === -1)) {
+      this.o2c().u2h(this.w2f_1);
     }
   }
-  i2h(e) {
-    var text = this.x2f_1.q28(Companion_getInstance_25().y28(this.b2g_1, this.x2f_1.v27()));
-    var msg = "token recognition error at: '" + this.w2h(text) + "'";
-    this.x2h().m27(this, null, this.c2g_1, this.d2g_1, msg, e);
+  h2h(e) {
+    var text = this.w2f_1.p28(Companion_getInstance_25().x28(this.a2g_1, this.w2f_1.u27()));
+    var msg = "token recognition error at: '" + this.v2h(text) + "'";
+    this.w2h().l27(this, null, this.b2g_1, this.c2g_1, msg, e);
   }
-  w2h(s) {
-    var buf = StringBuilder.z();
+  v2h(s) {
+    var buf = StringBuilder.s();
     var inductionVariable = 0;
     var last = s.length;
     while (inductionVariable < last) {
@@ -1173,11 +1173,11 @@ class Lexer extends Recognizer {
       inductionVariable = inductionVariable + 1 | 0;
       // Inline function 'kotlin.code' call
       var tmp$ret$0 = Char__toInt_impl_vasixd(c);
-      buf.a1(this.y2h(tmp$ret$0));
+      buf.t(this.x2h(tmp$ret$0));
     }
     return buf.toString();
   }
-  y2h(c) {
+  x2h(c) {
     var tmp;
     if (c === -1) {
       tmp = '<EOF>';
@@ -1206,420 +1206,420 @@ class Lexer extends Recognizer {
   }
 }
 class LexerNoViableAltException extends RecognitionException {
-  static p2i(lexer, input, startIndex, deadEndConfigs) {
-    var $this = this.n2f(lexer, input, null);
-    captureStack($this, $this.o2i_1);
-    $this.m2i_1 = startIndex;
-    $this.n2i_1 = deadEndConfigs;
+  static o2i(lexer, input, startIndex, deadEndConfigs) {
+    var $this = this.m2f(lexer, input, null);
+    captureStack($this, $this.n2i_1);
+    $this.l2i_1 = startIndex;
+    $this.m2i_1 = deadEndConfigs;
     return $this;
   }
-  r29() {
-    var tmp = super.r29();
+  q29() {
+    var tmp = super.q29();
     return isInterface(tmp, CharStream) ? tmp : THROW_CCE();
   }
   toString() {
     var symbol = '';
-    if (this.m2i_1 >= 0 && this.m2i_1 < this.r29().b28()) {
-      symbol = this.r29().q28(Companion_getInstance_25().y28(this.m2i_1, this.m2i_1));
-      symbol = Utils_instance.q2i(symbol, false);
+    if (this.l2i_1 >= 0 && this.l2i_1 < this.q29().a28()) {
+      symbol = this.q29().p28(Companion_getInstance_25().x28(this.l2i_1, this.l2i_1));
+      symbol = Utils_instance.p2i(symbol, false);
     }
-    return '' + getKClassFromExpression(this).x() + "('" + symbol + "')";
+    return '' + getKClassFromExpression(this).q() + "('" + symbol + "')";
   }
 }
 class NoViableAltException extends RecognitionException {
-  static r2i(recognizer, input, startToken, offendingToken, deadEndConfigs, ctx) {
-    input = input === VOID ? recognizer.v2b() : input;
-    startToken = startToken === VOID ? recognizer.j2e() : startToken;
-    offendingToken = offendingToken === VOID ? recognizer.j2e() : offendingToken;
+  static q2i(recognizer, input, startToken, offendingToken, deadEndConfigs, ctx) {
+    input = input === VOID ? recognizer.u2b() : input;
+    startToken = startToken === VOID ? recognizer.i2e() : startToken;
+    offendingToken = offendingToken === VOID ? recognizer.i2e() : offendingToken;
     deadEndConfigs = deadEndConfigs === VOID ? null : deadEndConfigs;
-    ctx = ctx === VOID ? ensureNotNull(recognizer.j2b_1) : ctx;
-    var $this = this.n2f(recognizer, input, ctx);
-    captureStack($this, $this.y2d_1);
-    $this.w2d_1 = startToken;
-    $this.x2d_1 = deadEndConfigs;
-    $this.a2b_1 = offendingToken;
+    ctx = ctx === VOID ? ensureNotNull(recognizer.i2b_1) : ctx;
+    var $this = this.m2f(recognizer, input, ctx);
+    captureStack($this, $this.x2d_1);
+    $this.v2d_1 = startToken;
+    $this.w2d_1 = deadEndConfigs;
+    $this.z2a_1 = offendingToken;
     return $this;
   }
 }
 class Parser extends Recognizer {
   constructor(input) {
     super();
-    this.f2b_1 = null;
-    this.g2b_1 = new DefaultErrorStrategy();
-    this.h2b_1 = input;
+    this.e2b_1 = null;
+    this.f2b_1 = new DefaultErrorStrategy();
+    this.g2b_1 = input;
     var tmp = this;
     // Inline function 'kotlin.also' call
-    var this_0 = IntegerStack.p2g();
-    this_0.p2h(0);
-    tmp.i2b_1 = this_0;
-    this.j2b_1 = null;
-    this.k2b_1 = true;
-    this.l2b_1 = null;
-    this.m2b_1 = ArrayList.b2();
-    this.n2b_1 = 0;
-    this.o2b_1 = false;
-    this.s2i(input);
+    var this_0 = IntegerStack.o2g();
+    this_0.o2h(0);
+    tmp.h2b_1 = this_0;
+    this.i2b_1 = null;
+    this.j2b_1 = true;
+    this.k2b_1 = null;
+    this.l2b_1 = ArrayList.u1();
+    this.m2b_1 = 0;
+    this.n2b_1 = false;
+    this.r2i(input);
   }
-  w2e() {
-    return this.h2b_1.u27().w2e();
+  v2e() {
+    return this.g2b_1.t27().v2e();
   }
-  s2i(value) {
-    this.h2b_1 = DummyTokenStream_instance;
-    this.d2h();
-    this.h2b_1 = value;
+  r2i(value) {
+    this.g2b_1 = DummyTokenStream_instance;
+    this.c2h();
+    this.g2b_1 = value;
   }
-  v2b() {
-    return this.h2b_1;
+  u2b() {
+    return this.g2b_1;
   }
-  j2e() {
-    return this.h2b_1.i28(1);
+  i2e() {
+    return this.g2b_1.h28(1);
   }
-  t2i() {
+  s2i() {
     var tmp;
-    if (this.i2b_1.r2h()) {
+    if (this.h2b_1.q2h()) {
       tmp = -1;
     } else {
-      tmp = this.i2b_1.s2h();
+      tmp = this.h2b_1.r2h();
     }
     return tmp;
   }
-  m2d() {
-    return this.q2c().u2i(this.w29_1, this.j2b_1);
+  l2d() {
+    return this.p2c().t2i(this.v29_1, this.i2b_1);
   }
-  d2h() {
-    this.v2b().y27(0);
-    this.g2b_1.p2a(this);
-    this.j2b_1 = null;
-    this.n2b_1 = 0;
-    this.o2b_1 = false;
-    this.i2b_1.b4();
-    this.i2b_1.p2h(0);
-    var tmp0_safe_receiver = this.p2c();
+  c2h() {
+    this.u2b().x27(0);
+    this.f2b_1.o2a(this);
+    this.i2b_1 = null;
+    this.m2b_1 = 0;
+    this.n2b_1 = false;
+    this.h2b_1.u3();
+    this.h2b_1.o2h(0);
+    var tmp0_safe_receiver = this.o2c();
     if (tmp0_safe_receiver == null)
       null;
     else {
-      tmp0_safe_receiver.d2h();
+      tmp0_safe_receiver.c2h();
     }
   }
-  f2j(ttype) {
-    var t = this.j2e();
-    if (ensureNotNull(t).g1s() === ttype) {
+  e2j(ttype) {
+    var t = this.i2e();
+    if (ensureNotNull(t).d1s() === ttype) {
       if (ttype === -1) {
-        this.o2b_1 = true;
+        this.n2b_1 = true;
       }
-      this.g2b_1.t2a(this);
-      this.u2b();
+      this.f2b_1.s2a(this);
+      this.t2b();
     } else {
-      t = this.g2b_1.m2e(this);
-      if (this.k2b_1 && t.u28() === -1) {
-        ensureNotNull(this.j2b_1).q2j(this.g2j(this.j2b_1, t));
+      t = this.f2b_1.l2e(this);
+      if (this.j2b_1 && t.t28() === -1) {
+        ensureNotNull(this.i2b_1).p2j(this.f2j(this.i2b_1, t));
       }
     }
     return t;
   }
-  r2j() {
-    var _iterator__ex2g4s = this.m2b_1.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var listener = _iterator__ex2g4s.f1();
-      listener.s2j(ensureNotNull(this.j2b_1));
-      ensureNotNull(this.j2b_1).t2j(listener);
+  q2j() {
+    var _iterator__ex2g4s = this.l2b_1.w();
+    while (_iterator__ex2g4s.x()) {
+      var listener = _iterator__ex2g4s.y();
+      listener.r2j(ensureNotNull(this.i2b_1));
+      ensureNotNull(this.i2b_1).s2j(listener);
     }
   }
-  u2j() {
-    var _iterator__ex2g4s = asReversed(this.m2b_1).d1();
-    while (_iterator__ex2g4s.e1()) {
-      var listener = _iterator__ex2g4s.f1();
-      ensureNotNull(this.j2b_1).v2j(listener);
-      listener.w2j(ensureNotNull(this.j2b_1));
+  t2j() {
+    var _iterator__ex2g4s = asReversed(this.l2b_1).w();
+    while (_iterator__ex2g4s.x()) {
+      var listener = _iterator__ex2g4s.y();
+      ensureNotNull(this.i2b_1).u2j(listener);
+      listener.v2j(ensureNotNull(this.i2b_1));
     }
   }
-  p2b(offendingToken, msg, e) {
-    this.n2b_1 = this.n2b_1 + 1 | 0;
-    var line = offendingToken.h1e();
-    var charPositionInLine = offendingToken.m29();
-    var listener = this.x2h();
-    listener.m27(this, offendingToken, line, charPositionInLine, msg, e);
+  o2b(offendingToken, msg, e) {
+    this.m2b_1 = this.m2b_1 + 1 | 0;
+    var line = offendingToken.e1e();
+    var charPositionInLine = offendingToken.l29();
+    var listener = this.w2h();
+    listener.l27(this, offendingToken, line, charPositionInLine, msg, e);
   }
-  u2b() {
-    var o = this.j2e();
-    if (!(ensureNotNull(o).g1s() === -1)) {
-      this.v2b().c28();
+  t2b() {
+    var o = this.i2e();
+    if (!(ensureNotNull(o).d1s() === -1)) {
+      this.u2b().b28();
     }
     var tmp;
-    if (this.k2b_1) {
+    if (this.j2b_1) {
       tmp = true;
     } else {
       // Inline function 'kotlin.collections.isNotEmpty' call
-      tmp = !this.m2b_1.b1();
+      tmp = !this.l2b_1.u();
     }
     if (tmp) {
-      if (this.g2b_1.s2a(this)) {
-        var node = ensureNotNull(this.j2b_1).q2j(this.g2j(this.j2b_1, o));
-        var _iterator__ex2g4s = this.m2b_1.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var listener = _iterator__ex2g4s.f1();
-          listener.a2k(node);
+      if (this.f2b_1.r2a(this)) {
+        var node = ensureNotNull(this.i2b_1).p2j(this.f2j(this.i2b_1, o));
+        var _iterator__ex2g4s = this.l2b_1.w();
+        while (_iterator__ex2g4s.x()) {
+          var listener = _iterator__ex2g4s.y();
+          listener.z2j(node);
         }
       } else {
-        var node_0 = ensureNotNull(this.j2b_1).y2j(this.x2j(this.j2b_1, o));
-        var _iterator__ex2g4s_0 = this.m2b_1.d1();
-        while (_iterator__ex2g4s_0.e1()) {
-          var listener_0 = _iterator__ex2g4s_0.f1();
-          listener_0.z2j(node_0);
+        var node_0 = ensureNotNull(this.i2b_1).x2j(this.w2j(this.i2b_1, o));
+        var _iterator__ex2g4s_0 = this.l2b_1.w();
+        while (_iterator__ex2g4s_0.x()) {
+          var listener_0 = _iterator__ex2g4s_0.y();
+          listener_0.y2j(node_0);
         }
       }
     }
     return o;
   }
-  x2j(parent, t) {
+  w2j(parent, t) {
     return new TerminalNodeImpl(t);
   }
-  g2j(parent, t) {
+  f2j(parent, t) {
     return new ErrorNodeImpl(t);
   }
-  b2k() {
-    var parent = ensureNotNull(this.j2b_1).h2f();
+  a2k() {
+    var parent = ensureNotNull(this.i2b_1).g2f();
     if (parent == null)
       null;
     else
-      parent.c2k(ensureNotNull(this.j2b_1));
+      parent.b2k(ensureNotNull(this.i2b_1));
   }
-  d2k(localctx, state, ruleIndex) {
-    this.w29_1 = state;
-    this.j2b_1 = localctx;
-    ensureNotNull(this.j2b_1).n2j_1 = this.h2b_1.i28(1);
-    if (this.k2b_1) {
-      this.b2k();
+  c2k(localctx, state, ruleIndex) {
+    this.v29_1 = state;
+    this.i2b_1 = localctx;
+    ensureNotNull(this.i2b_1).m2j_1 = this.g2b_1.h28(1);
+    if (this.j2b_1) {
+      this.a2k();
     }
-    this.r2j();
+    this.q2j();
   }
-  e2k() {
-    if (this.o2b_1) {
-      ensureNotNull(this.j2b_1).o2j_1 = this.h2b_1.i28(1);
+  d2k() {
+    if (this.n2b_1) {
+      ensureNotNull(this.i2b_1).n2j_1 = this.g2b_1.h28(1);
     } else {
-      ensureNotNull(this.j2b_1).o2j_1 = this.h2b_1.i28(-1);
+      ensureNotNull(this.i2b_1).n2j_1 = this.g2b_1.h28(-1);
     }
-    this.u2j();
-    this.w29_1 = ensureNotNull(this.j2b_1).e2e_1;
-    this.j2b_1 = ensureNotNull(this.j2b_1).h2f();
+    this.t2j();
+    this.v29_1 = ensureNotNull(this.i2b_1).d2e_1;
+    this.i2b_1 = ensureNotNull(this.i2b_1).g2f();
   }
-  f2k(localctx, altNum) {
-    localctx.g2k(altNum);
-    if (this.k2b_1 && !(this.j2b_1 === localctx)) {
-      var parent = ensureNotNull(this.j2b_1).h2f();
+  e2k(localctx, altNum) {
+    localctx.f2k(altNum);
+    if (this.j2b_1 && !(this.i2b_1 === localctx)) {
+      var parent = ensureNotNull(this.i2b_1).g2f();
       if (!(parent == null)) {
-        parent.h2k();
-        parent.c2k(localctx);
+        parent.g2k();
+        parent.b2k(localctx);
       }
     }
-    this.j2b_1 = localctx;
+    this.i2b_1 = localctx;
   }
-  c2i(localctx, precedence) {
-    return precedence >= this.i2b_1.s2h();
+  b2i(localctx, precedence) {
+    return precedence >= this.h2b_1.r2h();
   }
-  i2k(ctx) {
+  h2k(ctx) {
     var p = ctx;
-    var ruleNames = this.c2e();
-    var stack = ArrayList.b2();
+    var ruleNames = this.b2e();
+    var stack = ArrayList.u1();
     while (!(p == null)) {
-      var ruleIndex = p.i2e();
+      var ruleIndex = p.h2e();
       if (ruleIndex < 0) {
-        stack.g2('n/a');
+        stack.z1('n/a');
       } else {
-        stack.g2(ruleNames[ruleIndex]);
+        stack.z1(ruleNames[ruleIndex]);
       }
-      p = p.h2f();
+      p = p.g2f();
     }
     return stack;
   }
-  j2k(ctx, $super) {
-    ctx = ctx === VOID ? this.j2b_1 : ctx;
-    return $super === VOID ? this.i2k(ctx) : $super.i2k.call(this, ctx);
+  i2k(ctx, $super) {
+    ctx = ctx === VOID ? this.i2b_1 : ctx;
+    return $super === VOID ? this.h2k(ctx) : $super.h2k.call(this, ctx);
   }
 }
 class Companion_3 {
   constructor() {
     Companion_instance_3 = this;
-    this.k2k_1 = ParserRuleContext.l2k();
+    this.j2k_1 = ParserRuleContext.k2k();
   }
 }
 class ParseTree {}
 class RuleNode {}
 class RuleContext {
-  r2h() {
-    return this.e2e_1 === -1;
+  q2h() {
+    return this.d2e_1 === -1;
   }
-  o2k() {
+  n2k() {
     return this;
   }
-  m1f() {
-    if (this.n2k() === 0) {
+  j1f() {
+    if (this.m2k() === 0) {
       return '';
     }
-    var builder = StringBuilder.z();
+    var builder = StringBuilder.s();
     var inductionVariable = 0;
-    var last = this.n2k();
+    var last = this.m2k();
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        builder.a1(ensureNotNull(this.u2k(i)).m1f());
+        builder.t(ensureNotNull(this.t2k(i)).j1f());
       }
        while (inductionVariable < last);
     return builder.toString();
   }
-  i2e() {
+  h2e() {
+    return this.f2e_1;
+  }
+  f2k(value) {
+  }
+  m2k() {
     return this.g2e_1;
   }
-  g2k(value) {
-  }
-  n2k() {
-    return this.h2e_1;
-  }
-  static p2k() {
+  static o2k() {
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_RuleContext($this);
     return $this;
   }
-  static r2k(parent, invokingState) {
+  static q2k(parent, invokingState) {
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_RuleContext($this);
-    $this.d2e_1 = parent;
-    $this.e2e_1 = invokingState;
+    $this.c2e_1 = parent;
+    $this.d2e_1 = invokingState;
     return $this;
   }
-  h2f() {
-    return this.d2e_1;
+  g2f() {
+    return this.c2e_1;
   }
-  s2k(value) {
-    this.d2e_1 = value;
+  r2k(value) {
+    this.c2e_1 = value;
   }
-  u2k(i) {
+  t2k(i) {
     return null;
   }
   toString() {
-    return this.z2k(null, null);
+    return this.y2k(null, null);
   }
-  z2k(ruleNames, stop) {
-    var buf = StringBuilder.z();
+  y2k(ruleNames, stop) {
+    var buf = StringBuilder.s();
     var p = this;
-    buf.a1('[');
+    buf.t('[');
     while (!(p == null) && !(p === stop)) {
       if (ruleNames == null) {
-        if (!p.r2h()) {
-          buf.df(p.e2e_1);
+        if (!p.q2h()) {
+          buf.af(p.d2e_1);
         }
       } else {
-        var ruleIndex = p.i2e();
+        var ruleIndex = p.h2e();
         var tmp;
-        if (ruleIndex >= 0 && ruleIndex < ruleNames.i2()) {
-          tmp = ruleNames.k2(ruleIndex);
+        if (ruleIndex >= 0 && ruleIndex < ruleNames.b2()) {
+          tmp = ruleNames.d2(ruleIndex);
         } else {
           tmp = ruleIndex.toString();
         }
         var ruleName = tmp;
-        buf.a1(ruleName);
+        buf.t(ruleName);
       }
-      if (!(p.d2e_1 == null) && (!(ruleNames == null) || !ensureNotNull(p.d2e_1).r2h())) {
-        buf.a1(' ');
+      if (!(p.c2e_1 == null) && (!(ruleNames == null) || !ensureNotNull(p.c2e_1).q2h())) {
+        buf.t(' ');
       }
-      p = p.d2e_1;
+      p = p.c2e_1;
     }
-    buf.a1(']');
+    buf.t(']');
     return buf.toString();
   }
 }
 class ParserRuleContext extends RuleContext {
-  m2k() {
-    var start = this.n2j_1;
-    var stop = this.o2j_1;
+  l2k() {
+    var start = this.m2j_1;
+    var stop = this.n2j_1;
     if (!(start == null) && !(stop == null)) {
-      var endPoint = stop.a2a();
+      var endPoint = stop.z29();
       if (!(endPoint == null)) {
-        return new Position(start.z29(), endPoint);
+        return new Position(start.y29(), endPoint);
       }
     }
     return null;
   }
-  n2k() {
-    var tmp0_safe_receiver = this.m2j_1;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.i2();
+  m2k() {
+    var tmp0_safe_receiver = this.l2j_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.b2();
     return tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
   }
-  o2k() {
+  n2k() {
     return this;
   }
-  static l2k() {
+  static k2k() {
     Companion_getInstance_3();
-    var $this = this.p2k();
+    var $this = this.o2k();
     init_org_antlr_v4_kotlinruntime_ParserRuleContext($this);
     return $this;
   }
-  static q2k(parent, invokingStateNumber) {
+  static p2k(parent, invokingStateNumber) {
     Companion_getInstance_3();
-    var $this = this.r2k(parent, invokingStateNumber);
+    var $this = this.q2k(parent, invokingStateNumber);
     init_org_antlr_v4_kotlinruntime_ParserRuleContext($this);
     return $this;
   }
-  h2f() {
-    var tmp = this.d2e_1;
+  g2f() {
+    var tmp = this.c2e_1;
     return (tmp == null ? true : tmp instanceof ParserRuleContext) ? tmp : THROW_CCE();
   }
-  s2k(value) {
+  r2k(value) {
     var tmp = this;
-    tmp.d2e_1 = (value == null ? true : value instanceof ParserRuleContext) ? value : THROW_CCE();
+    tmp.c2e_1 = (value == null ? true : value instanceof ParserRuleContext) ? value : THROW_CCE();
   }
-  t2j(listener) {
+  s2j(listener) {
   }
-  v2j(listener) {
+  u2j(listener) {
   }
-  t2k(t) {
-    var childrenTemp = this.m2j_1;
+  s2k(t) {
+    var childrenTemp = this.l2j_1;
     if (childrenTemp == null) {
-      childrenTemp = ArrayList.b2();
-      this.m2j_1 = childrenTemp;
+      childrenTemp = ArrayList.u1();
+      this.l2j_1 = childrenTemp;
     }
-    childrenTemp.g2(t);
+    childrenTemp.z1(t);
     return t;
   }
-  c2k(ruleInvocation) {
-    return this.t2k(ruleInvocation);
+  b2k(ruleInvocation) {
+    return this.s2k(ruleInvocation);
   }
-  y2j(t) {
-    t.s2k(this);
-    return this.t2k(t);
+  x2j(t) {
+    t.r2k(this);
+    return this.s2k(t);
   }
-  q2j(errorNode) {
-    errorNode.s2k(this);
-    return this.t2k(errorNode);
+  p2j(errorNode) {
+    errorNode.r2k(this);
+    return this.s2k(errorNode);
   }
-  h2k() {
-    var tempChildren = this.m2j_1;
+  g2k() {
+    var tempChildren = this.l2j_1;
     if (tempChildren == null)
       null;
     else
-      tempChildren.e4(tempChildren.i2() - 1 | 0);
+      tempChildren.x3(tempChildren.b2() - 1 | 0);
   }
-  u2k(i) {
-    var tempChildren = this.m2j_1;
+  t2k(i) {
+    var tempChildren = this.l2j_1;
     var tmp;
-    if (!(tempChildren == null) && i >= 0 && i < tempChildren.i2()) {
-      tmp = tempChildren.k2(i);
+    if (!(tempChildren == null) && i >= 0 && i < tempChildren.b2()) {
+      tmp = tempChildren.d2(i);
     } else {
       tmp = null;
     }
     return tmp;
   }
-  v2k(ctxType, i) {
-    var tempChildren = this.m2j_1;
-    if (tempChildren == null || i < 0 || i >= tempChildren.i2()) {
+  u2k(ctxType, i) {
+    var tempChildren = this.l2j_1;
+    if (tempChildren == null || i < 0 || i >= tempChildren.b2()) {
       return null;
     }
     var j = -1;
-    var _iterator__ex2g4s = tempChildren.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var o = _iterator__ex2g4s.f1();
-      if (ctxType.nd(o)) {
+    var _iterator__ex2g4s = tempChildren.w();
+    while (_iterator__ex2g4s.x()) {
+      var o = _iterator__ex2g4s.y();
+      if (ctxType.kd(o)) {
         j = j + 1 | 0;
         if (j === i) {
           return isInterface(o, ParseTree) ? o : THROW_CCE();
@@ -1628,18 +1628,18 @@ class ParserRuleContext extends RuleContext {
     }
     return null;
   }
-  w2k(ttype, i) {
-    var tempChildren = this.m2j_1;
-    if (tempChildren == null || i < 0 || i >= tempChildren.i2()) {
+  v2k(ttype, i) {
+    var tempChildren = this.l2j_1;
+    if (tempChildren == null || i < 0 || i >= tempChildren.b2()) {
       return null;
     }
     var j = -1;
-    var _iterator__ex2g4s = tempChildren.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var o = _iterator__ex2g4s.f1();
+    var _iterator__ex2g4s = tempChildren.w();
+    while (_iterator__ex2g4s.x()) {
+      var o = _iterator__ex2g4s.y();
       if (isInterface(o, TerminalNode)) {
-        var symbol = o.x2k();
-        if (symbol.g1s() === ttype) {
+        var symbol = o.w2k();
+        if (symbol.d1s() === ttype) {
           j = j + 1 | 0;
           if (j === i) {
             return o;
@@ -1649,69 +1649,69 @@ class ParserRuleContext extends RuleContext {
     }
     return null;
   }
-  y2k(ctxType, i) {
-    return this.v2k(ctxType, i);
+  x2k(ctxType, i) {
+    return this.u2k(ctxType, i);
   }
 }
 class ProxyErrorListener {
   constructor(delegates) {
-    this.a2l_1 = delegates;
+    this.z2k_1 = delegates;
   }
-  m27(recognizer, offendingSymbol, line, charPositionInLine, msg, e) {
-    var _iterator__ex2g4s = this.a2l_1.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var listener = _iterator__ex2g4s.f1();
-      listener.m27(recognizer, offendingSymbol, line, charPositionInLine, msg, e);
+  l27(recognizer, offendingSymbol, line, charPositionInLine, msg, e) {
+    var _iterator__ex2g4s = this.z2k_1.w();
+    while (_iterator__ex2g4s.x()) {
+      var listener = _iterator__ex2g4s.y();
+      listener.l27(recognizer, offendingSymbol, line, charPositionInLine, msg, e);
     }
   }
-  n27(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs) {
-    var _iterator__ex2g4s = this.a2l_1.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var listener = _iterator__ex2g4s.f1();
-      listener.n27(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs);
+  m27(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs) {
+    var _iterator__ex2g4s = this.z2k_1.w();
+    while (_iterator__ex2g4s.x()) {
+      var listener = _iterator__ex2g4s.y();
+      listener.m27(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs);
     }
   }
-  o27(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs) {
-    var _iterator__ex2g4s = this.a2l_1.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var listener = _iterator__ex2g4s.f1();
-      listener.o27(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs);
+  n27(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs) {
+    var _iterator__ex2g4s = this.z2k_1.w();
+    while (_iterator__ex2g4s.x()) {
+      var listener = _iterator__ex2g4s.y();
+      listener.n27(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs);
     }
   }
-  p27(recognizer, dfa, startIndex, stopIndex, prediction, configs) {
-    var _iterator__ex2g4s = this.a2l_1.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var listener = _iterator__ex2g4s.f1();
-      listener.p27(recognizer, dfa, startIndex, stopIndex, prediction, configs);
+  o27(recognizer, dfa, startIndex, stopIndex, prediction, configs) {
+    var _iterator__ex2g4s = this.z2k_1.w();
+    while (_iterator__ex2g4s.x()) {
+      var listener = _iterator__ex2g4s.y();
+      listener.o27(recognizer, dfa, startIndex, stopIndex, prediction, configs);
     }
   }
 }
 class Companion_4 {
   constructor() {
     Companion_instance_4 = this;
-    this.b2l_1 = -1;
-    this.c2l_1 = HashMap.f8();
-    this.d2l_1 = HashMap.f8();
+    this.a2l_1 = -1;
+    this.b2l_1 = HashMap.y7();
+    this.c2l_1 = HashMap.y7();
   }
 }
 class RuntimeMetaData {
   constructor() {
-    this.h2l_1 = '4.13.1';
+    this.g2l_1 = '4.13.1';
   }
-  i2l(generatingToolVersion, compileTimeVersion) {
+  h2l(generatingToolVersion, compileTimeVersion) {
     var runtimeConflictsWithGeneratingTool = false;
     if (!(generatingToolVersion == null)) {
-      runtimeConflictsWithGeneratingTool = (!('4.13.1' === generatingToolVersion) && !(this.j2l('4.13.1') === this.j2l(generatingToolVersion)));
+      runtimeConflictsWithGeneratingTool = (!('4.13.1' === generatingToolVersion) && !(this.i2l('4.13.1') === this.i2l(generatingToolVersion)));
     }
-    var runtimeConflictsWithCompileTimeTool = !('4.13.1' === compileTimeVersion) && !(this.j2l('4.13.1') === this.j2l(compileTimeVersion));
+    var runtimeConflictsWithCompileTimeTool = !('4.13.1' === compileTimeVersion) && !(this.i2l('4.13.1') === this.i2l(compileTimeVersion));
     if (runtimeConflictsWithGeneratingTool) {
-      System_getInstance().i27_1.g27('ANTLR Tool version ' + generatingToolVersion + ' used for code generation does not match the current runtime version 4.13.1');
+      System_getInstance().h27_1.f27('ANTLR Tool version ' + generatingToolVersion + ' used for code generation does not match the current runtime version 4.13.1');
     }
     if (runtimeConflictsWithCompileTimeTool) {
-      System_getInstance().i27_1.g27('ANTLR Runtime version ' + compileTimeVersion + ' used for parser compilation does not match the current runtime version 4.13.1');
+      System_getInstance().h27_1.f27('ANTLR Runtime version ' + compileTimeVersion + ' used for parser compilation does not match the current runtime version 4.13.1');
     }
   }
-  j2l(version) {
+  i2l(version) {
     var firstDot = indexOf(version, _Char___init__impl__6a9atx(46));
     var tmp;
     if (firstDot >= 0) {
@@ -1738,59 +1738,59 @@ class RuntimeMetaData {
 class StringCharStream {
   constructor(source, sourceName) {
     sourceName = sourceName === VOID ? '<unknown>' : sourceName;
-    this.k2l_1 = source;
-    this.l2l_1 = sourceName;
-    this.o2l_1 = 0;
-    var _destruct__k2r9zo = codePointIndicesFast(this.k2l_1);
-    var codePointIndices = _destruct__k2r9zo.ni();
-    var size = _destruct__k2r9zo.oi();
-    this.m2l_1 = codePointIndices;
-    this.n2l_1 = size;
-  }
-  c28() {
-    if ((this.n2l_1 - this.o2l_1 | 0) === 0) {
-      // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
-      if (!(this.d28(1) === -1)) {
-        throw AssertionError.yc(null);
-      }
-      throw IllegalStateException.s4('cannot consume EOF');
-    }
-    this.o2l_1 = this.o2l_1 + 1 | 0;
-  }
-  v27() {
-    return this.o2l_1;
+    this.j2l_1 = source;
+    this.k2l_1 = sourceName;
+    this.n2l_1 = 0;
+    var _destruct__k2r9zo = codePointIndicesFast(this.j2l_1);
+    var codePointIndices = _destruct__k2r9zo.ki();
+    var size = _destruct__k2r9zo.li();
+    this.l2l_1 = codePointIndices;
+    this.m2l_1 = size;
   }
   b28() {
+    if ((this.m2l_1 - this.n2l_1 | 0) === 0) {
+      // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
+      if (!(this.c28(1) === -1)) {
+        throw AssertionError.vc(null);
+      }
+      throw IllegalStateException.l4('cannot consume EOF');
+    }
+    this.n2l_1 = this.n2l_1 + 1 | 0;
+  }
+  u27() {
     return this.n2l_1;
   }
-  w27() {
+  a28() {
+    return this.m2l_1;
+  }
+  v27() {
     return -1;
   }
-  x27(marker) {
+  w27(marker) {
   }
-  y27(index) {
-    this.o2l_1 = index;
+  x27(index) {
+    this.n2l_1 = index;
   }
   toString() {
-    return this.q28(Companion_getInstance_25().y28(0, this.n2l_1 - 1 | 0));
+    return this.p28(Companion_getInstance_25().x28(0, this.m2l_1 - 1 | 0));
   }
-  q28(interval) {
-    if (interval.r28_1 >= this.n2l_1 || interval.s28_1 < 0) {
+  p28(interval) {
+    if (interval.q28_1 >= this.m2l_1 || interval.r28_1 < 0) {
       return '';
     }
-    var start = this.m2l_1[interval.r28_1];
-    var bPlus1 = interval.s28_1 + 1 | 0;
+    var start = this.l2l_1[interval.q28_1];
+    var bPlus1 = interval.r28_1 + 1 | 0;
     var tmp;
-    if (bPlus1 < this.n2l_1) {
-      tmp = this.m2l_1[bPlus1];
+    if (bPlus1 < this.m2l_1) {
+      tmp = this.l2l_1[bPlus1];
     } else {
-      tmp = this.k2l_1.length;
+      tmp = this.j2l_1.length;
     }
     var stop = tmp;
-    return substring(this.k2l_1, start, stop);
+    return substring(this.j2l_1, start, stop);
   }
-  d28(i) {
-    return i < 0 ? codePoint(this, this.o2l_1 + i | 0) : i > 0 ? codePoint(this, (this.o2l_1 + i | 0) - 1 | 0) : 0;
+  c28(i) {
+    return i < 0 ? codePoint(this, this.n2l_1 + i | 0) : i > 0 ? codePoint(this, (this.n2l_1 + i | 0) - 1 | 0) : 0;
   }
 }
 class Companion_5 {
@@ -1798,10 +1798,10 @@ class Companion_5 {
     Companion_instance_5 = this;
     var tmp = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp.e2l_1 = Array(0);
-    this.f2l_1 = new VocabularyImpl(this.e2l_1, this.e2l_1, this.e2l_1);
+    tmp.d2l_1 = Array(0);
+    this.e2l_1 = new VocabularyImpl(this.d2l_1, this.d2l_1, this.d2l_1);
   }
-  g2l(tokenNames) {
+  f2l(tokenNames) {
     // Inline function 'kotlin.collections.isNullOrEmpty' call
     var tmp;
     if (tokenNames == null) {
@@ -1811,7 +1811,7 @@ class Companion_5 {
       tmp = tokenNames.length === 0;
     }
     if (tmp) {
-      return this.f2l_1;
+      return this.e2l_1;
     }
     var literalNames = copyOf(tokenNames, tokenNames.length);
     var symbolicNames = copyOf(tokenNames, tokenNames.length);
@@ -1845,93 +1845,93 @@ class VocabularyImpl {
     Companion_getInstance_5();
     displayNames = displayNames === VOID ? null : displayNames;
     var tmp = this;
-    tmp.s2l_1 = literalNames == null ? Companion_getInstance_5().e2l_1 : literalNames;
+    tmp.r2l_1 = literalNames == null ? Companion_getInstance_5().d2l_1 : literalNames;
     var tmp_0 = this;
-    tmp_0.t2l_1 = symbolicNames == null ? Companion_getInstance_5().e2l_1 : symbolicNames;
+    tmp_0.s2l_1 = symbolicNames == null ? Companion_getInstance_5().d2l_1 : symbolicNames;
     var tmp_1 = this;
-    tmp_1.u2l_1 = displayNames == null ? Companion_getInstance_5().e2l_1 : displayNames;
+    tmp_1.t2l_1 = displayNames == null ? Companion_getInstance_5().d2l_1 : displayNames;
     var tmp_2 = this;
-    var tmp0 = this.u2l_1.length;
-    var tmp0_0 = this.s2l_1.length;
+    var tmp0 = this.t2l_1.length;
+    var tmp0_0 = this.r2l_1.length;
     // Inline function 'kotlin.math.max' call
-    var b = this.t2l_1.length;
+    var b = this.s2l_1.length;
     // Inline function 'kotlin.math.max' call
     var b_0 = Math.max(tmp0_0, b);
-    tmp_2.v2l_1 = Math.max(tmp0, b_0) - 1 | 0;
+    tmp_2.u2l_1 = Math.max(tmp0, b_0) - 1 | 0;
   }
-  w2l(tokenType) {
+  v2l(tokenType) {
     var tmp;
-    if (0 <= tokenType ? tokenType <= (this.s2l_1.length - 1 | 0) : false) {
-      tmp = this.s2l_1[tokenType];
+    if (0 <= tokenType ? tokenType <= (this.r2l_1.length - 1 | 0) : false) {
+      tmp = this.r2l_1[tokenType];
     } else {
       tmp = null;
     }
     return tmp;
   }
-  x2l(tokenType) {
-    if (0 <= tokenType ? tokenType <= (this.t2l_1.length - 1 | 0) : false) {
-      return this.t2l_1[tokenType];
+  w2l(tokenType) {
+    if (0 <= tokenType ? tokenType <= (this.s2l_1.length - 1 | 0) : false) {
+      return this.s2l_1[tokenType];
     }
     return tokenType === -1 ? 'EOF' : null;
   }
-  y29(tokenType) {
-    if (0 <= tokenType ? tokenType <= (this.u2l_1.length - 1 | 0) : false) {
-      var displayName = this.u2l_1[tokenType];
+  x29(tokenType) {
+    if (0 <= tokenType ? tokenType <= (this.t2l_1.length - 1 | 0) : false) {
+      var displayName = this.t2l_1[tokenType];
       if (!(displayName == null)) {
         return displayName;
       }
     }
-    var literalName = this.w2l(tokenType);
+    var literalName = this.v2l(tokenType);
     if (!(literalName == null)) {
       return literalName;
     }
-    var symbolicName = this.x2l(tokenType);
+    var symbolicName = this.w2l(tokenType);
     return symbolicName == null ? tokenType.toString() : symbolicName;
   }
 }
 class Companion_6 {
   constructor() {
     Companion_instance_6 = this;
-    this.y2l_1 = Regex.xf('\r\n|\r|\n');
+    this.x2l_1 = Regex.uf('\r\n|\r|\n');
   }
 }
 class Point {
   constructor(line, column) {
     Companion_getInstance_6();
-    this.p2l_1 = line;
-    this.q2l_1 = column;
+    this.o2l_1 = line;
+    this.p2l_1 = column;
     // Inline function 'kotlin.require' call
-    if (!(this.p2l_1 >= 1)) {
-      var message = 'Line should be equal or greater than 1, but was ' + this.p2l_1;
-      throw IllegalArgumentException.t1(toString_0(message));
+    if (!(this.o2l_1 >= 1)) {
+      var message = 'Line should be equal or greater than 1, but was ' + this.o2l_1;
+      throw IllegalArgumentException.m1(toString_0(message));
     }
     // Inline function 'kotlin.require' call
-    if (!(this.q2l_1 >= 0)) {
-      var message_0 = 'Column should be equal or greater than 0, but was ' + this.q2l_1;
-      throw IllegalArgumentException.t1(toString_0(message_0));
+    if (!(this.p2l_1 >= 0)) {
+      var message_0 = 'Column should be equal or greater than 0, but was ' + this.p2l_1;
+      throw IllegalArgumentException.m1(toString_0(message_0));
     }
   }
   toString() {
-    return 'line ' + this.p2l_1 + ' : column ' + this.q2l_1;
+    return 'line ' + this.o2l_1 + ' : column ' + this.p2l_1;
   }
-  z2l(other) {
-    return this.p2l_1 < other.p2l_1 || (this.p2l_1 === other.p2l_1 && this.q2l_1 < other.q2l_1);
+  y2l(other) {
+    return this.o2l_1 < other.o2l_1 || (this.o2l_1 === other.o2l_1 && this.p2l_1 < other.p2l_1);
   }
-  r2l(text) {
-    var matches = Companion_getInstance_6().y2l_1.cg(text);
-    var line = this.p2l_1 + count(matches) | 0;
+  q2l(text) {
+    var matches = Companion_getInstance_6().x2l_1.zf(text);
+    var line = this.o2l_1 + count(matches) | 0;
     var tmp;
     if (none(matches)) {
-      tmp = this.q2l_1 + text.length | 0;
+      tmp = this.p2l_1 + text.length | 0;
     } else {
-      tmp = (text.length - last(matches).gg().x2_1 | 0) - 1 | 0;
+      tmp = (text.length - last(matches).dg().q2_1 | 0) - 1 | 0;
     }
     var col = tmp;
     return new Point(line, col);
   }
   hashCode() {
-    var result = this.p2l_1;
-    result = imul(result, 31) + this.q2l_1 | 0;
+    var result = this.o2l_1;
+    result = imul(result, 31) + this.p2l_1 | 0;
     return result;
   }
   equals(other) {
@@ -1940,29 +1940,29 @@ class Point {
     if (!(other instanceof Point))
       return false;
     var tmp0_other_with_cast = other instanceof Point ? other : THROW_CCE();
-    if (!(this.p2l_1 === tmp0_other_with_cast.p2l_1))
+    if (!(this.o2l_1 === tmp0_other_with_cast.o2l_1))
       return false;
-    if (!(this.q2l_1 === tmp0_other_with_cast.q2l_1))
+    if (!(this.p2l_1 === tmp0_other_with_cast.p2l_1))
       return false;
     return true;
   }
 }
 class Position {
   constructor(start, end) {
-    this.a2m_1 = start;
-    this.b2m_1 = end;
+    this.z2l_1 = start;
+    this.a2m_1 = end;
     // Inline function 'kotlin.require' call
-    if (!(this.a2m_1.z2l(this.b2m_1) || this.a2m_1.equals(this.b2m_1))) {
-      var message = 'End should follows start or be the same as start (start: ' + this.a2m_1.toString() + ', end: ' + this.b2m_1.toString() + ')';
-      throw IllegalArgumentException.t1(toString_0(message));
+    if (!(this.z2l_1.y2l(this.a2m_1) || this.z2l_1.equals(this.a2m_1))) {
+      var message = 'End should follows start or be the same as start (start: ' + this.z2l_1.toString() + ', end: ' + this.a2m_1.toString() + ')';
+      throw IllegalArgumentException.m1(toString_0(message));
     }
   }
   toString() {
-    return 'Position(start=' + this.a2m_1.toString() + ', end=' + this.b2m_1.toString() + ')';
+    return 'Position(start=' + this.z2l_1.toString() + ', end=' + this.a2m_1.toString() + ')';
   }
   hashCode() {
-    var result = this.a2m_1.hashCode();
-    result = imul(result, 31) + this.b2m_1.hashCode() | 0;
+    var result = this.z2l_1.hashCode();
+    result = imul(result, 31) + this.a2m_1.hashCode() | 0;
     return result;
   }
   equals(other) {
@@ -1971,236 +1971,236 @@ class Position {
     if (!(other instanceof Position))
       return false;
     var tmp0_other_with_cast = other instanceof Position ? other : THROW_CCE();
-    if (!this.a2m_1.equals(tmp0_other_with_cast.a2m_1))
+    if (!this.z2l_1.equals(tmp0_other_with_cast.z2l_1))
       return false;
-    if (!this.b2m_1.equals(tmp0_other_with_cast.b2m_1))
+    if (!this.a2m_1.equals(tmp0_other_with_cast.a2m_1))
       return false;
     return true;
   }
 }
 class Companion_7 {
   constructor() {
-    this.c2m_1 = 0;
+    this.b2m_1 = 0;
   }
 }
 class ATN {
   constructor(grammarType, maxTokenType) {
-    this.d2c_1 = grammarType;
-    this.e2c_1 = maxTokenType;
-    this.f2c_1 = ArrayList.b2();
-    this.g2c_1 = ArrayList.b2();
+    this.c2c_1 = grammarType;
+    this.d2c_1 = maxTokenType;
+    this.e2c_1 = ArrayList.u1();
+    this.f2c_1 = ArrayList.u1();
+    this.g2c_1 = null;
     this.h2c_1 = null;
-    this.i2c_1 = null;
-    this.j2c_1 = LinkedHashMap.tb();
+    this.i2c_1 = LinkedHashMap.mb();
+    this.j2c_1 = null;
     this.k2c_1 = null;
-    this.l2c_1 = null;
-    this.m2c_1 = ArrayList.b2();
+    this.l2c_1 = ArrayList.u1();
   }
-  d2m() {
-    return this.g2c_1.i2();
+  c2m() {
+    return this.f2c_1.b2();
   }
-  t2e(s, ctx) {
+  s2e(s, ctx) {
     var anal = new LL1Analyzer(this);
-    return anal.f2m(s, ctx);
+    return anal.e2m(s, ctx);
   }
-  r2c(s) {
-    var nextTokenWithinRule = s.x2c_1;
+  q2c(s) {
+    var nextTokenWithinRule = s.w2c_1;
     if (!(nextTokenWithinRule == null)) {
       return nextTokenWithinRule;
     }
-    nextTokenWithinRule = this.t2e(s, null);
-    nextTokenWithinRule.g2m(true);
-    s.x2c_1 = nextTokenWithinRule;
+    nextTokenWithinRule = this.s2e(s, null);
+    nextTokenWithinRule.f2m(true);
+    s.w2c_1 = nextTokenWithinRule;
     return nextTokenWithinRule;
   }
-  h2m(state) {
+  g2m(state) {
     if (!(state == null)) {
-      state.s2c_1 = this;
-      state.t2c_1 = this.f2c_1.i2();
+      state.r2c_1 = this;
+      state.s2c_1 = this.e2c_1.b2();
     }
-    this.f2c_1.g2(state);
+    this.e2c_1.z1(state);
   }
-  i2m(s) {
-    this.g2c_1.g2(s);
-    s.q2m_1 = this.g2c_1.i2() - 1 | 0;
-    return s.q2m_1;
+  h2m(s) {
+    this.f2c_1.z1(s);
+    s.p2m_1 = this.f2c_1.b2() - 1 | 0;
+    return s.p2m_1;
   }
-  s2m(decision) {
+  r2m(decision) {
     var tmp;
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!this.g2c_1.b1()) {
-      tmp = this.g2c_1.k2(decision);
+    if (!this.f2c_1.u()) {
+      tmp = this.f2c_1.d2(decision);
     } else {
       tmp = null;
     }
     return tmp;
   }
-  u2i(stateNumber, context) {
-    if (stateNumber < 0 || stateNumber >= this.f2c_1.i2()) {
-      throw IllegalArgumentException.t1('Invalid state number.');
+  t2i(stateNumber, context) {
+    if (stateNumber < 0 || stateNumber >= this.e2c_1.b2()) {
+      throw IllegalArgumentException.m1('Invalid state number.');
     }
     var ctx = context;
-    var s = this.f2c_1.k2(stateNumber);
-    var following = this.r2c(ensureNotNull(s));
-    if (!following.yk(-2)) {
+    var s = this.e2c_1.d2(stateNumber);
+    var following = this.q2c(ensureNotNull(s));
+    if (!following.vk(-2)) {
       return following;
     }
-    var expected = IntervalSet.y2b();
-    expected.g2f(following);
-    expected.i2f(-2);
-    while (!(ctx == null) && ctx.e2e_1 >= 0 && following.yk(-2)) {
-      var invokingState = this.f2c_1.k2(ctx.e2e_1);
-      var tmp = ensureNotNull(invokingState).s2e(0);
+    var expected = IntervalSet.x2b();
+    expected.f2f(following);
+    expected.h2f(-2);
+    while (!(ctx == null) && ctx.d2e_1 >= 0 && following.vk(-2)) {
+      var invokingState = this.e2c_1.d2(ctx.d2e_1);
+      var tmp = ensureNotNull(invokingState).r2e(0);
       var rt = tmp instanceof RuleTransition ? tmp : THROW_CCE();
-      following = this.r2c(rt.d2f_1);
-      expected.g2f(following);
-      expected.i2f(-2);
-      ctx = ctx.h2f();
+      following = this.q2c(rt.c2f_1);
+      expected.f2f(following);
+      expected.h2f(-2);
+      ctx = ctx.g2f();
     }
-    if (following.yk(-2)) {
-      expected.z2b(-1);
+    if (following.vk(-2)) {
+      expected.y2b(-1);
     }
     return expected;
   }
 }
 class Companion_8 {
   constructor() {
-    this.t2m_1 = 1073741824;
+    this.s2m_1 = 1073741824;
   }
 }
 class ATNConfig {
-  z2m() {
-    return this.x2m_1 & -1073741825;
+  y2m() {
+    return this.w2m_1 & -1073741825;
   }
-  a2n(value) {
+  z2m(value) {
     var tmp;
     if (value) {
-      this.x2m_1 = this.x2m_1 | 1073741824;
+      this.w2m_1 = this.w2m_1 | 1073741824;
       tmp = Unit_instance;
     } else {
-      this.x2m_1 = this.x2m_1 & -1073741825;
+      this.w2m_1 = this.w2m_1 & -1073741825;
       tmp = Unit_instance;
     }
     return tmp;
   }
-  b2n() {
-    return !((this.x2m_1 & 1073741824) === 0);
+  a2n() {
+    return !((this.w2m_1 & 1073741824) === 0);
   }
-  static c2n(state, alt, context, semanticContext) {
+  static b2n(state, alt, context, semanticContext) {
     semanticContext = semanticContext === VOID ? Empty_getInstance() : semanticContext;
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_atn_ATNConfig($this);
-    $this.u2m_1 = state;
-    $this.v2m_1 = alt;
-    $this.w2m_1 = context;
-    $this.y2m_1 = semanticContext;
+    $this.t2m_1 = state;
+    $this.u2m_1 = alt;
+    $this.v2m_1 = context;
+    $this.x2m_1 = semanticContext;
     return $this;
   }
-  static d2n(c, state, semanticContext) {
-    return this.e2n(c, state, c.w2m_1, semanticContext);
+  static c2n(c, state, semanticContext) {
+    return this.d2n(c, state, c.v2m_1, semanticContext);
   }
-  static f2n(c, semanticContext) {
-    return this.e2n(c, c.u2m_1, c.w2m_1, semanticContext);
+  static e2n(c, semanticContext) {
+    return this.d2n(c, c.t2m_1, c.v2m_1, semanticContext);
   }
-  static e2n(c, state, context, semanticContext) {
-    context = context === VOID ? c.w2m_1 : context;
-    semanticContext = semanticContext === VOID ? c.y2m_1 : semanticContext;
+  static d2n(c, state, context, semanticContext) {
+    context = context === VOID ? c.v2m_1 : context;
+    semanticContext = semanticContext === VOID ? c.x2m_1 : semanticContext;
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_atn_ATNConfig($this);
-    $this.u2m_1 = state;
-    $this.v2m_1 = c.v2m_1;
-    $this.w2m_1 = context;
-    $this.y2m_1 = semanticContext;
-    $this.x2m_1 = c.x2m_1;
+    $this.t2m_1 = state;
+    $this.u2m_1 = c.u2m_1;
+    $this.v2m_1 = context;
+    $this.x2m_1 = semanticContext;
+    $this.w2m_1 = c.w2m_1;
     return $this;
   }
   equals(other) {
     var tmp;
     if (other instanceof ATNConfig) {
-      tmp = this.g2n(other);
+      tmp = this.f2n(other);
     } else {
       tmp = false;
     }
     return tmp;
   }
-  g2n(other) {
+  f2n(other) {
     if (this === other) {
       return true;
     }
     if (other == null) {
       return false;
     }
-    return this.u2m_1.t2c_1 === other.u2m_1.t2c_1 && this.v2m_1 === other.v2m_1 && equals(this.w2m_1, other.w2m_1) && equals(this.y2m_1, other.y2m_1) && this.b2n() === other.b2n();
+    return this.t2m_1.s2c_1 === other.t2m_1.s2c_1 && this.u2m_1 === other.u2m_1 && equals(this.v2m_1, other.v2m_1) && equals(this.x2m_1, other.x2m_1) && this.a2n() === other.a2n();
   }
   hashCode() {
-    var hashCode = MurmurHash_instance.i2n(7);
-    hashCode = MurmurHash_instance.j2n(hashCode, this.u2m_1.t2c_1);
+    var hashCode = MurmurHash_instance.h2n(7);
+    hashCode = MurmurHash_instance.i2n(hashCode, this.t2m_1.s2c_1);
+    hashCode = MurmurHash_instance.i2n(hashCode, this.u2m_1);
     hashCode = MurmurHash_instance.j2n(hashCode, this.v2m_1);
-    hashCode = MurmurHash_instance.k2n(hashCode, this.w2m_1);
-    hashCode = MurmurHash_instance.k2n(hashCode, this.y2m_1);
-    hashCode = MurmurHash_instance.l2n(hashCode, 4);
+    hashCode = MurmurHash_instance.j2n(hashCode, this.x2m_1);
+    hashCode = MurmurHash_instance.k2n(hashCode, 4);
     return hashCode;
   }
   toString() {
-    return this.m2n(null, true);
+    return this.l2n(null, true);
   }
-  m2n(recog, showAlt) {
-    var buf = StringBuilder.z();
-    buf.a1('(');
-    buf.g1(this.u2m_1);
+  l2n(recog, showAlt) {
+    var buf = StringBuilder.s();
+    buf.t('(');
+    buf.z(this.t2m_1);
     if (showAlt) {
-      buf.a1(',');
-      buf.df(this.v2m_1);
+      buf.t(',');
+      buf.af(this.u2m_1);
     }
-    if (!(this.w2m_1 == null)) {
-      buf.a1(',[');
-      buf.a1(toString_0(ensureNotNull(this.w2m_1)));
-      buf.a1(']');
+    if (!(this.v2m_1 == null)) {
+      buf.t(',[');
+      buf.t(toString_0(ensureNotNull(this.v2m_1)));
+      buf.t(']');
     }
-    if (!(this.y2m_1 === Empty_getInstance())) {
-      buf.a1(',');
-      buf.g1(this.y2m_1);
+    if (!(this.x2m_1 === Empty_getInstance())) {
+      buf.t(',');
+      buf.z(this.x2m_1);
     }
-    if (this.z2m() > 0) {
-      buf.a1(',up=');
-      buf.df(this.z2m());
+    if (this.y2m() > 0) {
+      buf.t(',up=');
+      buf.af(this.y2m());
     }
-    buf.a1(')');
+    buf.t(')');
     return buf.toString();
   }
 }
 class Array2DHashSet {
   constructor(comparator, initialCapacity, initialBucketCapacity) {
-    comparator = comparator === VOID ? Companion_getInstance_27().l2x_1 : comparator;
+    comparator = comparator === VOID ? Companion_getInstance_27().k2x_1 : comparator;
     initialCapacity = initialCapacity === VOID ? 16 : initialCapacity;
     initialBucketCapacity = initialBucketCapacity === VOID ? 8 : initialBucketCapacity;
-    this.x2n_1 = comparator;
-    this.y2n_1 = initialCapacity;
-    this.z2n_1 = initialBucketCapacity;
-    this.b2o_1 = 0;
-    this.c2o_1 = 1;
-    this.d2o_1 = 0;
-    this.a2o_1 = this.v2n(this.y2n_1);
+    this.w2n_1 = comparator;
+    this.x2n_1 = initialCapacity;
+    this.y2n_1 = initialBucketCapacity;
+    this.a2o_1 = 0;
+    this.b2o_1 = 1;
+    this.c2o_1 = 0;
+    this.z2n_1 = this.u2n(this.x2n_1);
     var tmp = this;
     // Inline function 'kotlin.math.floor' call
-    var x = this.y2n_1 * 0.75;
+    var x = this.x2n_1 * 0.75;
     var tmp$ret$0 = Math.floor(x);
-    tmp.d2o_1 = numberToInt(tmp$ret$0);
+    tmp.c2o_1 = numberToInt(tmp$ret$0);
+  }
+  d2o(o) {
+    if (this.a2o_1 > this.c2o_1) {
+      this.h2o();
+    }
+    return this.e2o(o);
   }
   e2o(o) {
-    if (this.b2o_1 > this.d2o_1) {
-      this.i2o();
-    }
-    return this.f2o(o);
-  }
-  f2o(o) {
-    var b = this.h2o(o);
-    var bucket = this.a2o_1[b];
+    var b = this.g2o(o);
+    var bucket = this.z2n_1[b];
     if (bucket == null) {
-      bucket = this.w2n(this.z2n_1);
+      bucket = this.v2n(this.y2n_1);
       bucket[0] = o;
-      this.a2o_1[b] = bucket;
-      this.b2o_1 = this.b2o_1 + 1 | 0;
+      this.z2n_1[b] = bucket;
+      this.a2o_1 = this.a2o_1 + 1 | 0;
       return o;
     }
     var inductionVariable = 0;
@@ -2212,27 +2212,27 @@ class Array2DHashSet {
         var existing = bucket[i];
         if (existing == null) {
           bucket[i] = o;
-          this.b2o_1 = this.b2o_1 + 1 | 0;
+          this.a2o_1 = this.a2o_1 + 1 | 0;
           return o;
         }
-        if (this.x2n_1.r2o(existing, o)) {
+        if (this.w2n_1.q2o(existing, o)) {
           return existing;
         }
       }
        while (inductionVariable <= last);
     var oldLength = bucket.length;
     bucket = copyOf(bucket, imul(bucket.length, 2));
-    this.a2o_1[b] = bucket;
+    this.z2n_1[b] = bucket;
     bucket[oldLength] = o;
-    this.b2o_1 = this.b2o_1 + 1 | 0;
+    this.a2o_1 = this.a2o_1 + 1 | 0;
     return o;
   }
-  g2o(o) {
+  f2o(o) {
     if (o == null) {
       return o;
     }
-    var b = this.h2o(o);
-    var tmp0_elvis_lhs = this.a2o_1[b];
+    var b = this.g2o(o);
+    var tmp0_elvis_lhs = this.z2n_1[b];
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return null;
@@ -2248,19 +2248,19 @@ class Array2DHashSet {
       if (e == null) {
         return null;
       }
-      if (this.x2n_1.r2o(e, o)) {
+      if (this.w2n_1.q2o(e, o)) {
         return e;
       }
     }
     return null;
   }
-  h2o(o) {
-    var hash = this.x2n_1.p2o(o);
-    return hash & (this.a2o_1.length - 1 | 0);
+  g2o(o) {
+    var hash = this.w2n_1.o2o(o);
+    return hash & (this.z2n_1.length - 1 | 0);
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    var indexedObject = this.a2o_1;
+    var hash = MurmurHash_instance.c2z();
+    var indexedObject = this.z2n_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     $l$loop: while (inductionVariable < last) {
@@ -2270,15 +2270,15 @@ class Array2DHashSet {
         continue $l$loop;
       }
       var _iterator__ex2g4s = arrayIterator(bucket);
-      $l$loop_0: while (_iterator__ex2g4s.e1()) {
-        var o = _iterator__ex2g4s.f1();
+      $l$loop_0: while (_iterator__ex2g4s.x()) {
+        var o = _iterator__ex2g4s.y();
         if (o == null) {
           break $l$loop_0;
         }
-        hash = MurmurHash_instance.j2n(hash, this.x2n_1.p2o(o));
+        hash = MurmurHash_instance.i2n(hash, this.w2n_1.o2o(o));
       }
     }
-    hash = MurmurHash_instance.l2n(hash, this.i2());
+    hash = MurmurHash_instance.k2n(hash, this.b2());
     return hash;
   }
   equals(other) {
@@ -2289,23 +2289,23 @@ class Array2DHashSet {
       return false;
     }
     var tmp;
-    if (other.i2() === this.i2()) {
+    if (other.b2() === this.b2()) {
       // Inline function 'kotlin.collections.containsAll' call
-      tmp = this.o3(other);
+      tmp = this.h3(other);
     } else {
       tmp = false;
     }
     return tmp;
   }
-  i2o() {
-    var old = this.a2o_1;
-    this.c2o_1 = this.c2o_1 + 4 | 0;
-    var newCapacity = imul(this.a2o_1.length, 2);
-    var newTable = this.v2n(newCapacity);
+  h2o() {
+    var old = this.z2n_1;
+    this.b2o_1 = this.b2o_1 + 4 | 0;
+    var newCapacity = imul(this.z2n_1.length, 2);
+    var newTable = this.u2n(newCapacity);
     var newBucketLengths = new Int32Array(newTable.length);
-    this.a2o_1 = newTable;
-    this.d2o_1 = numberToInt(newCapacity * 0.75);
-    var oldSize = this.i2();
+    this.z2n_1 = newTable;
+    this.c2o_1 = numberToInt(newCapacity * 0.75);
+    var oldSize = this.b2();
     var inductionVariable = 0;
     var last = old.length;
     $l$loop: while (inductionVariable < last) {
@@ -2315,16 +2315,16 @@ class Array2DHashSet {
         continue $l$loop;
       }
       var _iterator__ex2g4s = arrayIterator(bucket);
-      $l$loop_0: while (_iterator__ex2g4s.e1()) {
-        var o = _iterator__ex2g4s.f1();
+      $l$loop_0: while (_iterator__ex2g4s.x()) {
+        var o = _iterator__ex2g4s.y();
         if (o == null) {
           break $l$loop_0;
         }
-        var b = this.h2o(o);
+        var b = this.g2o(o);
         var bucketLength = newBucketLengths[b];
         var newBucket;
         if (bucketLength === 0) {
-          newBucket = this.w2n(this.z2n_1);
+          newBucket = this.v2n(this.y2n_1);
           newTable[b] = newBucket;
         } else {
           newBucket = ensureNotNull(newTable[b]);
@@ -2338,47 +2338,47 @@ class Array2DHashSet {
       }
     }
     // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
-    if (!(this.b2o_1 === oldSize)) {
-      throw AssertionError.yc(null);
+    if (!(this.a2o_1 === oldSize)) {
+      throw AssertionError.vc(null);
     }
   }
-  j2o(element) {
-    var existing = this.e2o(element);
+  i2o(element) {
+    var existing = this.d2o(element);
     return existing === element;
   }
-  g2(element) {
+  z1(element) {
+    return this.i2o(element);
+  }
+  b2() {
+    return this.a2o_1;
+  }
+  u() {
+    return this.a2o_1 === 0;
+  }
+  gi(element) {
     return this.j2o(element);
   }
-  i2() {
-    return this.b2o_1;
-  }
-  b1() {
-    return this.b2o_1 === 0;
-  }
-  ji(element) {
-    return this.k2o(element);
-  }
-  n2(element) {
+  g2(element) {
     if (!true)
       return false;
-    return this.ji(element);
+    return this.gi(element);
   }
-  k2o(obj) {
+  j2o(obj) {
     var tmp;
     if (obj == null) {
       tmp = false;
     } else {
-      tmp = !(this.g2o(obj) == null);
+      tmp = !(this.f2o(obj) == null);
     }
     return tmp;
   }
-  d1() {
-    return new SetIterator(this, this.t7());
+  w() {
+    return new SetIterator(this, this.m7());
   }
-  t7() {
-    var a = this.w2n(this.i2());
+  m7() {
+    var a = this.v2n(this.b2());
     var i = 0;
-    var indexedObject = this.a2o_1;
+    var indexedObject = this.z2n_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     $l$loop: while (inductionVariable < last) {
@@ -2388,8 +2388,8 @@ class Array2DHashSet {
         continue $l$loop;
       }
       var _iterator__ex2g4s = arrayIterator(bucket);
-      $l$loop_0: while (_iterator__ex2g4s.e1()) {
-        var o = _iterator__ex2g4s.f1();
+      $l$loop_0: while (_iterator__ex2g4s.x()) {
+        var o = _iterator__ex2g4s.y();
         if (o == null) {
           break $l$loop_0;
         }
@@ -2400,15 +2400,15 @@ class Array2DHashSet {
     }
     return isArray(a) ? a : THROW_CCE();
   }
-  l2o(element) {
-    return this.m2o(this.u2n(element));
+  k2o(element) {
+    return this.l2o(this.t2n(element));
   }
-  m2o(obj) {
+  l2o(obj) {
     if (obj == null) {
       return false;
     }
-    var b = this.h2o(obj);
-    var tmp0_elvis_lhs = this.a2o_1[b];
+    var b = this.g2o(obj);
+    var tmp0_elvis_lhs = this.z2n_1[b];
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return false;
@@ -2430,22 +2430,22 @@ class Array2DHashSet {
           tmp_0 = tmp1_elvis_lhs;
         }
         var e = tmp_0;
-        if (this.x2n_1.r2o(e, obj)) {
+        if (this.w2n_1.q2o(e, obj)) {
           var tmp6 = i + 1 | 0;
           // Inline function 'kotlin.collections.copyInto' call
           var endIndex = bucket.length;
           arrayCopy(bucket, bucket, i, tmp6, endIndex);
           bucket[bucket.length - 1 | 0] = null;
-          this.b2o_1 = this.b2o_1 - 1 | 0;
+          this.a2o_1 = this.a2o_1 - 1 | 0;
           return true;
         }
       }
        while (inductionVariable <= last);
     return false;
   }
-  ki(elements) {
+  hi(elements) {
     if (elements instanceof Array2DHashSet) {
-      var indexedObject = this.a2o_1;
+      var indexedObject = this.z2n_1;
       var inductionVariable = 0;
       var last = indexedObject.length;
       $l$loop: while (inductionVariable < last) {
@@ -2455,53 +2455,53 @@ class Array2DHashSet {
           continue $l$loop;
         }
         var _iterator__ex2g4s = arrayIterator(bucket);
-        $l$loop_0: while (_iterator__ex2g4s.e1()) {
-          var o = _iterator__ex2g4s.f1();
+        $l$loop_0: while (_iterator__ex2g4s.x()) {
+          var o = _iterator__ex2g4s.y();
           if (o == null) {
             break $l$loop_0;
           }
-          if (!this.k2o(this.u2n(o))) {
+          if (!this.j2o(this.t2n(o))) {
             return false;
           }
         }
       }
     } else {
-      var _iterator__ex2g4s_0 = elements.d1();
-      while (_iterator__ex2g4s_0.e1()) {
-        var o_0 = _iterator__ex2g4s_0.f1();
-        if (!(o_0 == null) && !this.k2o(this.u2n(o_0))) {
+      var _iterator__ex2g4s_0 = elements.w();
+      while (_iterator__ex2g4s_0.x()) {
+        var o_0 = _iterator__ex2g4s_0.y();
+        if (!(o_0 == null) && !this.j2o(this.t2n(o_0))) {
           return false;
         }
       }
     }
     return true;
   }
-  o3(elements) {
-    return this.ki(elements);
+  h3(elements) {
+    return this.hi(elements);
   }
-  n2o(elements) {
+  m2o(elements) {
     var changed = false;
-    var _iterator__ex2g4s = elements.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var o = _iterator__ex2g4s.f1();
-      var existing = this.e2o(o);
+    var _iterator__ex2g4s = elements.w();
+    while (_iterator__ex2g4s.x()) {
+      var o = _iterator__ex2g4s.y();
+      var existing = this.d2o(o);
       if (!(existing === o)) {
         changed = true;
       }
     }
     return changed;
   }
-  j2(elements) {
-    return this.n2o(elements);
+  c2(elements) {
+    return this.m2o(elements);
   }
   toString() {
-    if (this.i2() === 0) {
+    if (this.b2() === 0) {
       return '{}';
     }
-    var buf = StringBuilder.z();
-    buf.a1('{');
+    var buf = StringBuilder.s();
+    buf.t('{');
     var first = true;
-    var indexedObject = this.a2o_1;
+    var indexedObject = this.z2n_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     $l$loop: while (inductionVariable < last) {
@@ -2510,31 +2510,31 @@ class Array2DHashSet {
       if (bucket == null)
         continue $l$loop;
       var _iterator__ex2g4s = arrayIterator(bucket);
-      $l$loop_0: while (_iterator__ex2g4s.e1()) {
-        var o = _iterator__ex2g4s.f1();
+      $l$loop_0: while (_iterator__ex2g4s.x()) {
+        var o = _iterator__ex2g4s.y();
         if (o == null) {
           break $l$loop_0;
         }
         if (first) {
           first = false;
         } else {
-          buf.a1(', ');
+          buf.t(', ');
         }
-        buf.a1(toString_0(o));
+        buf.t(toString_0(o));
       }
     }
-    buf.a1('}');
+    buf.t('}');
     return buf.toString();
   }
-  u2n(o) {
+  t2n(o) {
     return o;
   }
-  v2n(capacity) {
+  u2n(capacity) {
     // Inline function 'kotlin.arrayOfNulls' call
     var tmp = Array(capacity);
     return isArray(tmp) ? tmp : THROW_CCE();
   }
-  w2n(capacity) {
+  v2n(capacity) {
     // Inline function 'kotlin.arrayOfNulls' call
     var tmp = Array(capacity);
     return isArray(tmp) ? tmp : THROW_CCE();
@@ -2546,7 +2546,7 @@ class AbstractConfigHashSet extends Array2DHashSet {
     initialBucketCapacity = initialBucketCapacity === VOID ? 2 : initialBucketCapacity;
     super(comparator, initialCapacity, initialBucketCapacity);
   }
-  u2n(o) {
+  t2n(o) {
     var tmp;
     if (!(o instanceof ATNConfig)) {
       tmp = null;
@@ -2555,11 +2555,11 @@ class AbstractConfigHashSet extends Array2DHashSet {
     }
     return tmp;
   }
-  v2n(capacity) {
+  u2n(capacity) {
     // Inline function 'kotlin.arrayOfNulls' call
     return Array(capacity);
   }
-  w2n(capacity) {
+  v2n(capacity) {
     // Inline function 'kotlin.arrayOfNulls' call
     return Array(capacity);
   }
@@ -2576,117 +2576,117 @@ class ConfigEqualityComparator extends AbstractEqualityComparator {
     super();
     ConfigEqualityComparator_instance = this;
   }
-  o2o(obj) {
+  n2o(obj) {
     var hashCode_0 = 7;
-    hashCode_0 = imul(31, hashCode_0) + obj.u2m_1.t2c_1 | 0;
-    hashCode_0 = imul(31, hashCode_0) + obj.v2m_1 | 0;
-    hashCode_0 = imul(31, hashCode_0) + hashCode(obj.y2m_1) | 0;
+    hashCode_0 = imul(31, hashCode_0) + obj.t2m_1.s2c_1 | 0;
+    hashCode_0 = imul(31, hashCode_0) + obj.u2m_1 | 0;
+    hashCode_0 = imul(31, hashCode_0) + hashCode(obj.x2m_1) | 0;
     return hashCode_0;
   }
-  p2o(obj) {
-    return this.o2o(obj instanceof ATNConfig ? obj : THROW_CCE());
+  o2o(obj) {
+    return this.n2o(obj instanceof ATNConfig ? obj : THROW_CCE());
   }
-  q2o(a, b) {
+  p2o(a, b) {
     if (a === b) {
       return true;
     }
     if (a == null || b == null) {
       return false;
     }
-    return a.u2m_1.t2c_1 === b.u2m_1.t2c_1 && a.v2m_1 === b.v2m_1 && equals(a.y2m_1, b.y2m_1);
+    return a.t2m_1.s2c_1 === b.t2m_1.s2c_1 && a.u2m_1 === b.u2m_1 && equals(a.x2m_1, b.x2m_1);
   }
-  r2o(a, b) {
+  q2o(a, b) {
     var tmp = (a == null ? true : a instanceof ATNConfig) ? a : THROW_CCE();
-    return this.q2o(tmp, (b == null ? true : b instanceof ATNConfig) ? b : THROW_CCE());
+    return this.p2o(tmp, (b == null ? true : b instanceof ATNConfig) ? b : THROW_CCE());
   }
 }
 class ATNConfigSet {
   constructor(fullCtx) {
     fullCtx = fullCtx === VOID ? true : fullCtx;
-    this.s2o_1 = fullCtx;
-    this.t2o_1 = new ConfigHashSet();
-    this.u2o_1 = ArrayList.f2(7);
-    this.v2o_1 = 0;
-    this.w2o_1 = null;
+    this.r2o_1 = fullCtx;
+    this.s2o_1 = new ConfigHashSet();
+    this.t2o_1 = ArrayList.y1(7);
+    this.u2o_1 = 0;
+    this.v2o_1 = null;
+    this.w2o_1 = false;
     this.x2o_1 = false;
-    this.y2o_1 = false;
-    this.z2o_1 = -1;
-    this.a2p_1 = false;
+    this.y2o_1 = -1;
+    this.z2o_1 = false;
   }
-  b2p() {
-    var alts = BitSet.d2p();
-    var _iterator__ex2g4s = this.u2o_1.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var config = _iterator__ex2g4s.f1();
-      alts.e2p(config.v2m_1);
+  a2p() {
+    var alts = BitSet.c2p();
+    var _iterator__ex2g4s = this.t2o_1.w();
+    while (_iterator__ex2g4s.x()) {
+      var config = _iterator__ex2g4s.y();
+      alts.d2p(config.u2m_1);
     }
     return alts;
   }
-  g2m(value) {
-    this.a2p_1 = value;
-    this.t2o_1 = null;
+  f2m(value) {
+    this.z2o_1 = value;
+    this.s2o_1 = null;
   }
-  f2p(element) {
-    return this.g2p(element, null);
+  e2p(element) {
+    return this.f2p(element, null);
   }
-  g2(element) {
-    return this.f2p(element instanceof ATNConfig ? element : THROW_CCE());
+  z1(element) {
+    return this.e2p(element instanceof ATNConfig ? element : THROW_CCE());
   }
-  g2p(config, mergeCache) {
-    if (this.a2p_1) {
-      throw IllegalStateException.s4('This set is readonly');
+  f2p(config, mergeCache) {
+    if (this.z2o_1) {
+      throw IllegalStateException.l4('This set is readonly');
     }
-    if (!(config.y2m_1 === Empty_getInstance())) {
+    if (!(config.x2m_1 === Empty_getInstance())) {
+      this.w2o_1 = true;
+    }
+    if (config.y2m() > 0) {
       this.x2o_1 = true;
     }
-    if (config.z2m() > 0) {
-      this.y2o_1 = true;
-    }
-    var existing = ensureNotNull(this.t2o_1).e2o(config);
+    var existing = ensureNotNull(this.s2o_1).d2o(config);
     if (existing === config) {
-      this.z2o_1 = -1;
-      this.u2o_1.g2(config);
+      this.y2o_1 = -1;
+      this.t2o_1.z1(config);
       return true;
     }
-    var rootIsWildcard = !this.s2o_1;
-    var merged = Companion_instance_17.k2p(existing.w2m_1, config.w2m_1, rootIsWildcard, mergeCache);
+    var rootIsWildcard = !this.r2o_1;
+    var merged = Companion_instance_17.j2p(existing.v2m_1, config.v2m_1, rootIsWildcard, mergeCache);
     var tmp = existing;
-    var tmp0 = existing.x2m_1;
+    var tmp0 = existing.w2m_1;
     // Inline function 'kotlin.math.max' call
-    var b = config.x2m_1;
-    tmp.x2m_1 = Math.max(tmp0, b);
-    if (config.b2n()) {
-      existing.a2n(true);
+    var b = config.w2m_1;
+    tmp.w2m_1 = Math.max(tmp0, b);
+    if (config.a2n()) {
+      existing.z2m(true);
     }
-    existing.w2m_1 = merged;
+    existing.v2m_1 = merged;
     return true;
   }
-  l2p() {
-    return this.u2o_1;
+  k2p() {
+    return this.t2o_1;
   }
-  m2p(interpreter) {
-    if (this.a2p_1) {
-      throw IllegalStateException.s4('This set is readonly');
+  l2p(interpreter) {
+    if (this.z2o_1) {
+      throw IllegalStateException.l4('This set is readonly');
     }
-    if (ensureNotNull(this.t2o_1).b1()) {
+    if (ensureNotNull(this.s2o_1).u()) {
       return Unit_instance;
     }
-    var _iterator__ex2g4s = this.u2o_1.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var config = _iterator__ex2g4s.f1();
-      config.w2m_1 = interpreter.n2p(ensureNotNull(config.w2m_1));
+    var _iterator__ex2g4s = this.t2o_1.w();
+    while (_iterator__ex2g4s.x()) {
+      var config = _iterator__ex2g4s.y();
+      config.v2m_1 = interpreter.m2p(ensureNotNull(config.v2m_1));
     }
   }
-  o2p(elements) {
-    var _iterator__ex2g4s = elements.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
-      this.f2p(c);
+  n2p(elements) {
+    var _iterator__ex2g4s = elements.w();
+    while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
+      this.e2p(c);
     }
     return false;
   }
-  j2(elements) {
-    return this.o2p(elements);
+  c2(elements) {
+    return this.n2p(elements);
   }
   equals(other) {
     if (other === this) {
@@ -2695,62 +2695,62 @@ class ATNConfigSet {
     if (!(other instanceof ATNConfigSet)) {
       return false;
     }
-    return equals(this.u2o_1, other.u2o_1) && this.s2o_1 === other.s2o_1 && this.v2o_1 === other.v2o_1 && this.w2o_1 === other.w2o_1 && this.x2o_1 === other.x2o_1 && this.y2o_1 === other.y2o_1;
+    return equals(this.t2o_1, other.t2o_1) && this.r2o_1 === other.r2o_1 && this.u2o_1 === other.u2o_1 && this.v2o_1 === other.v2o_1 && this.w2o_1 === other.w2o_1 && this.x2o_1 === other.x2o_1;
   }
   hashCode() {
-    if (this.a2p_1) {
-      if (this.z2o_1 === -1) {
-        this.z2o_1 = hashCode(this.u2o_1);
+    if (this.z2o_1) {
+      if (this.y2o_1 === -1) {
+        this.y2o_1 = hashCode(this.t2o_1);
       }
-      return this.z2o_1;
+      return this.y2o_1;
     }
-    return hashCode(this.u2o_1);
+    return hashCode(this.t2o_1);
   }
-  i2() {
-    return this.u2o_1.i2();
+  b2() {
+    return this.t2o_1.b2();
   }
-  b1() {
-    return this.u2o_1.b1();
+  u() {
+    return this.t2o_1.u();
   }
-  p2p(element) {
-    if (this.t2o_1 == null) {
-      throw UnsupportedOperationException.s9('This method is not implemented for readonly sets.');
+  o2p(element) {
+    if (this.s2o_1 == null) {
+      throw UnsupportedOperationException.l9('This method is not implemented for readonly sets.');
     }
-    return ensureNotNull(this.t2o_1).ji(element);
+    return ensureNotNull(this.s2o_1).gi(element);
   }
-  n2(element) {
+  g2(element) {
     if (!(element instanceof ATNConfig))
       return false;
-    return this.p2p(element instanceof ATNConfig ? element : THROW_CCE());
+    return this.o2p(element instanceof ATNConfig ? element : THROW_CCE());
   }
-  d1() {
-    return this.u2o_1.d1();
+  w() {
+    return this.t2o_1.w();
   }
   toString() {
-    var buf = StringBuilder.z();
-    buf.a1(toString_0(this.l2p()));
+    var buf = StringBuilder.s();
+    buf.t(toString_0(this.k2p()));
+    if (this.w2o_1) {
+      buf.t(',hasSemanticContext=');
+      buf.ze(this.w2o_1);
+    }
+    if (!(this.u2o_1 === 0)) {
+      buf.t(',uniqueAlt=');
+      buf.af(this.u2o_1);
+    }
+    if (!(this.v2o_1 == null)) {
+      buf.t(',conflictingAlts=');
+      buf.z(this.v2o_1);
+    }
     if (this.x2o_1) {
-      buf.a1(',hasSemanticContext=');
-      buf.cf(this.x2o_1);
-    }
-    if (!(this.v2o_1 === 0)) {
-      buf.a1(',uniqueAlt=');
-      buf.df(this.v2o_1);
-    }
-    if (!(this.w2o_1 == null)) {
-      buf.a1(',conflictingAlts=');
-      buf.g1(this.w2o_1);
-    }
-    if (this.y2o_1) {
-      buf.a1(',dipsIntoOuterContext');
+      buf.t(',dipsIntoOuterContext');
     }
     return buf.toString();
   }
-  q2p(elements) {
-    throw UnsupportedOperationException.x7();
+  p2p(elements) {
+    throw UnsupportedOperationException.q7();
   }
-  o3(elements) {
-    return this.q2p(elements);
+  h3(elements) {
+    return this.p2p(elements);
   }
 }
 class Companion_9 {
@@ -2758,62 +2758,62 @@ class Companion_9 {
     Companion_instance_9 = this;
     var tmp = this;
     // Inline function 'kotlin.also' call
-    var this_0 = ATNDeserializationOptions.u2p();
-    this_0.v2p();
-    tmp.w2p_1 = this_0;
+    var this_0 = ATNDeserializationOptions.t2p();
+    this_0.u2p();
+    tmp.v2p_1 = this_0;
   }
 }
 class ATNDeserializationOptions {
+  w2p() {
+    return this.r2p_1;
+  }
   x2p() {
     return this.s2p_1;
   }
-  y2p() {
-    return this.t2p_1;
-  }
-  static u2p() {
+  static t2p() {
     Companion_getInstance_9();
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_atn_ATNDeserializationOptions($this);
-    $this.s2p_1 = true;
-    $this.t2p_1 = false;
+    $this.r2p_1 = true;
+    $this.s2p_1 = false;
     return $this;
   }
-  v2p() {
-    this.r2p_1 = true;
+  u2p() {
+    this.q2p_1 = true;
   }
 }
 class Companion_10 {
   constructor() {
-    this.z2p_1 = 4;
+    this.y2p_1 = 4;
   }
 }
 class ATNDeserializer {
   constructor(deserializationOptions) {
-    deserializationOptions = deserializationOptions === VOID ? Companion_getInstance_9().w2p_1 : deserializationOptions;
-    this.b2q_1 = deserializationOptions;
+    deserializationOptions = deserializationOptions === VOID ? Companion_getInstance_9().v2p_1 : deserializationOptions;
+    this.a2q_1 = deserializationOptions;
   }
-  c2q(data) {
-    return this.e2q(this.d2q(data));
+  b2q(data) {
+    return this.d2q(this.c2q(data));
   }
-  e2q(data) {
+  d2q(data) {
     var p = {_v: 0};
     var _unary__edvuaz = p._v;
     p._v = _unary__edvuaz + 1 | 0;
     var version = data[_unary__edvuaz];
     if (!(version === 4)) {
       var reason = 'Could not deserialize ATN with version ' + version + ' (expected 4).';
-      throw UnsupportedOperationException.s9(reason);
+      throw UnsupportedOperationException.l9(reason);
     }
     var tmp = get_entries();
     var _unary__edvuaz_0 = p._v;
     p._v = _unary__edvuaz_0 + 1 | 0;
-    var grammarType = tmp.k2(data[_unary__edvuaz_0]);
+    var grammarType = tmp.d2(data[_unary__edvuaz_0]);
     var _unary__edvuaz_1 = p._v;
     p._v = _unary__edvuaz_1 + 1 | 0;
     var maxTokenType = data[_unary__edvuaz_1];
     var atn = new ATN(grammarType, maxTokenType);
-    var loopBackStateNumbers = ArrayList.b2();
-    var endStateNumbers = ArrayList.b2();
+    var loopBackStateNumbers = ArrayList.u1();
+    var endStateNumbers = ArrayList.u1();
     var _unary__edvuaz_2 = p._v;
     p._v = _unary__edvuaz_2 + 1 | 0;
     var nStates = data[_unary__edvuaz_2];
@@ -2826,40 +2826,40 @@ class ATNDeserializer {
         p._v = _unary__edvuaz_3 + 1 | 0;
         var sType = data[_unary__edvuaz_3];
         if (sType === 0) {
-          atn.h2m(null);
+          atn.g2m(null);
           continue $l$loop;
         }
         var _unary__edvuaz_4 = p._v;
         p._v = _unary__edvuaz_4 + 1 | 0;
         var ruleIndex = data[_unary__edvuaz_4];
-        var s = this.f2q(sType, ruleIndex);
+        var s = this.e2q(sType, ruleIndex);
         if (sType === 12) {
           var _unary__edvuaz_5 = p._v;
           p._v = _unary__edvuaz_5 + 1 | 0;
           var loopBackStateNumber = data[_unary__edvuaz_5];
-          loopBackStateNumbers.g2(new Pair(s instanceof LoopEndState ? s : THROW_CCE(), loopBackStateNumber));
+          loopBackStateNumbers.z1(new Pair(s instanceof LoopEndState ? s : THROW_CCE(), loopBackStateNumber));
         } else {
           if (s instanceof BlockStartState) {
             var _unary__edvuaz_6 = p._v;
             p._v = _unary__edvuaz_6 + 1 | 0;
             var endStateNumber = data[_unary__edvuaz_6];
-            endStateNumbers.g2(new Pair(s, endStateNumber));
+            endStateNumbers.z1(new Pair(s, endStateNumber));
           }
         }
-        atn.h2m(s);
+        atn.g2m(s);
       }
        while (inductionVariable < nStates);
-    var _iterator__ex2g4s = loopBackStateNumbers.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var pair = _iterator__ex2g4s.f1();
-      pair.first.n2q_1 = atn.f2c_1.k2(pair.second);
+    var _iterator__ex2g4s = loopBackStateNumbers.w();
+    while (_iterator__ex2g4s.x()) {
+      var pair = _iterator__ex2g4s.y();
+      pair.first.m2q_1 = atn.e2c_1.d2(pair.second);
     }
-    var _iterator__ex2g4s_0 = endStateNumbers.d1();
-    while (_iterator__ex2g4s_0.e1()) {
-      var pair_0 = _iterator__ex2g4s_0.f1();
+    var _iterator__ex2g4s_0 = endStateNumbers.w();
+    while (_iterator__ex2g4s_0.x()) {
+      var pair_0 = _iterator__ex2g4s_0.y();
       var tmp_0 = pair_0.first;
-      var tmp_1 = atn.f2c_1.k2(pair_0.second);
-      tmp_0.y2q_1 = tmp_1 instanceof BlockEndState ? tmp_1 : THROW_CCE();
+      var tmp_1 = atn.e2c_1.d2(pair_0.second);
+      tmp_0.x2q_1 = tmp_1 instanceof BlockEndState ? tmp_1 : THROW_CCE();
     }
     var _unary__edvuaz_7 = p._v;
     p._v = _unary__edvuaz_7 + 1 | 0;
@@ -2872,8 +2872,8 @@ class ATNDeserializer {
         var _unary__edvuaz_8 = p._v;
         p._v = _unary__edvuaz_8 + 1 | 0;
         var stateNumber = data[_unary__edvuaz_8];
-        var tmp_2 = atn.f2c_1.k2(stateNumber);
-        (tmp_2 instanceof DecisionState ? tmp_2 : THROW_CCE()).r2m_1 = true;
+        var tmp_2 = atn.e2c_1.d2(stateNumber);
+        (tmp_2 instanceof DecisionState ? tmp_2 : THROW_CCE()).q2m_1 = true;
       }
        while (inductionVariable_0 < numNonGreedyStates);
     var _unary__edvuaz_9 = p._v;
@@ -2887,15 +2887,15 @@ class ATNDeserializer {
         var _unary__edvuaz_10 = p._v;
         p._v = _unary__edvuaz_10 + 1 | 0;
         var stateNumber_0 = data[_unary__edvuaz_10];
-        var tmp_3 = atn.f2c_1.k2(stateNumber_0);
-        (tmp_3 instanceof RuleStartState ? tmp_3 : THROW_CCE()).h2r_1 = true;
+        var tmp_3 = atn.e2c_1.d2(stateNumber_0);
+        (tmp_3 instanceof RuleStartState ? tmp_3 : THROW_CCE()).g2r_1 = true;
       }
        while (inductionVariable_1 < numPrecedenceStates);
     var _unary__edvuaz_11 = p._v;
     p._v = _unary__edvuaz_11 + 1 | 0;
     var nRules = data[_unary__edvuaz_11];
-    if (atn.d2c_1.equals(ATNType_LEXER_getInstance())) {
-      atn.k2c_1 = new Int32Array(nRules);
+    if (atn.c2c_1.equals(ATNType_LEXER_getInstance())) {
+      atn.j2c_1 = new Int32Array(nRules);
     }
     var tmp_4 = atn;
     var tmp_5 = 0;
@@ -2906,29 +2906,29 @@ class ATNDeserializer {
       var _unary__edvuaz_12 = p._v;
       p._v = _unary__edvuaz_12 + 1 | 0;
       var s_0 = data[_unary__edvuaz_12];
-      var tmp_8 = atn.f2c_1.k2(s_0);
+      var tmp_8 = atn.e2c_1.d2(s_0);
       var startState = tmp_8 instanceof RuleStartState ? tmp_8 : THROW_CCE();
-      if (atn.d2c_1.equals(ATNType_LEXER_getInstance())) {
+      if (atn.c2c_1.equals(ATNType_LEXER_getInstance())) {
         var _unary__edvuaz_13 = p._v;
         p._v = _unary__edvuaz_13 + 1 | 0;
         var tokenType = data[_unary__edvuaz_13];
-        ensureNotNull(atn.k2c_1)[tmp_7] = tokenType;
+        ensureNotNull(atn.j2c_1)[tmp_7] = tokenType;
       }
       tmp_6[tmp_7] = startState;
       tmp_5 = tmp_5 + 1 | 0;
     }
-    tmp_4.h2c_1 = tmp_6;
+    tmp_4.g2c_1 = tmp_6;
     var tmp_9 = atn;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp_9.i2c_1 = Array(nRules);
-    var _iterator__ex2g4s_1 = atn.f2c_1.d1();
-    $l$loop_0: while (_iterator__ex2g4s_1.e1()) {
-      var state = _iterator__ex2g4s_1.f1();
+    tmp_9.h2c_1 = Array(nRules);
+    var _iterator__ex2g4s_1 = atn.e2c_1.w();
+    $l$loop_0: while (_iterator__ex2g4s_1.x()) {
+      var state = _iterator__ex2g4s_1.y();
       if (!(state instanceof RuleStopState)) {
         continue $l$loop_0;
       }
-      ensureNotNull(atn.i2c_1)[state.u2c_1] = state;
-      ensureNotNull(atn.h2c_1)[state.u2c_1].g2r_1 = state;
+      ensureNotNull(atn.h2c_1)[state.t2c_1] = state;
+      ensureNotNull(atn.g2c_1)[state.t2c_1].f2r_1 = state;
     }
     var _unary__edvuaz_14 = p._v;
     p._v = _unary__edvuaz_14 + 1 | 0;
@@ -2941,11 +2941,11 @@ class ATNDeserializer {
         var _unary__edvuaz_15 = p._v;
         p._v = _unary__edvuaz_15 + 1 | 0;
         var s_1 = data[_unary__edvuaz_15];
-        var tmp_10 = atn.f2c_1.k2(s_1);
-        atn.m2c_1.g2(tmp_10 instanceof TokensStartState ? tmp_10 : THROW_CCE());
+        var tmp_10 = atn.e2c_1.d2(s_1);
+        atn.l2c_1.z1(tmp_10 instanceof TokensStartState ? tmp_10 : THROW_CCE());
       }
        while (inductionVariable_2 < nModes);
-    var sets = ArrayList.b2();
+    var sets = ArrayList.u1();
     p._v = deserializeSets(this, data, p._v, sets);
     var _unary__edvuaz_16 = p._v;
     p._v = _unary__edvuaz_16 + 1 | 0;
@@ -2961,22 +2961,22 @@ class ATNDeserializer {
         var arg1 = data[p._v + 3 | 0];
         var arg2 = data[p._v + 4 | 0];
         var arg3 = data[p._v + 5 | 0];
-        var trans = this.j2r(atn, ttype, src, trg, arg1, arg2, arg3, sets);
-        var srcState = atn.f2c_1.k2(src);
-        ensureNotNull(srcState).k2r(trans);
+        var trans = this.i2r(atn, ttype, src, trg, arg1, arg2, arg3, sets);
+        var srcState = atn.e2c_1.d2(src);
+        ensureNotNull(srcState).j2r(trans);
         p._v = p._v + 6 | 0;
       }
        while (inductionVariable_3 < nEdges);
-    var _iterator__ex2g4s_2 = atn.f2c_1.d1();
-    while (_iterator__ex2g4s_2.e1()) {
-      var state_0 = _iterator__ex2g4s_2.f1();
+    var _iterator__ex2g4s_2 = atn.e2c_1.w();
+    while (_iterator__ex2g4s_2.x()) {
+      var state_0 = _iterator__ex2g4s_2.y();
       var inductionVariable_4 = 0;
-      var last = ensureNotNull(state_0).l2r();
+      var last = ensureNotNull(state_0).k2r();
       if (inductionVariable_4 < last)
         $l$loop_1: do {
           var i_4 = inductionVariable_4;
           inductionVariable_4 = inductionVariable_4 + 1 | 0;
-          var tmp_11 = state_0.s2e(i_4);
+          var tmp_11 = state_0.r2e(i_4);
           var tmp0_elvis_lhs = tmp_11 instanceof RuleTransition ? tmp_11 : null;
           var tmp_12;
           if (tmp0_elvis_lhs == null) {
@@ -2986,57 +2986,57 @@ class ATNDeserializer {
           }
           var t = tmp_12;
           var outermostPrecedenceReturn = -1;
-          if (ensureNotNull(atn.h2c_1)[t.q2e_1.u2c_1].h2r_1) {
-            if (t.c2f_1 === 0) {
-              outermostPrecedenceReturn = t.q2e_1.u2c_1;
+          if (ensureNotNull(atn.g2c_1)[t.p2e_1.t2c_1].g2r_1) {
+            if (t.b2f_1 === 0) {
+              outermostPrecedenceReturn = t.p2e_1.t2c_1;
             }
           }
-          var returnTransition = new EpsilonTransition(t.d2f_1, outermostPrecedenceReturn);
-          ensureNotNull(ensureNotNull(atn.i2c_1)[t.q2e_1.u2c_1]).k2r(returnTransition);
+          var returnTransition = new EpsilonTransition(t.c2f_1, outermostPrecedenceReturn);
+          ensureNotNull(ensureNotNull(atn.h2c_1)[t.p2e_1.t2c_1]).j2r(returnTransition);
         }
          while (inductionVariable_4 < last);
     }
-    var _iterator__ex2g4s_3 = atn.f2c_1.d1();
-    while (_iterator__ex2g4s_3.e1()) {
-      var state_1 = _iterator__ex2g4s_3.f1();
+    var _iterator__ex2g4s_3 = atn.e2c_1.w();
+    while (_iterator__ex2g4s_3.x()) {
+      var state_1 = _iterator__ex2g4s_3.y();
       if (state_1 instanceof BlockStartState) {
-        var tmp1_elvis_lhs = state_1.y2q_1;
+        var tmp1_elvis_lhs = state_1.x2q_1;
         var tmp_13;
         if (tmp1_elvis_lhs == null) {
-          throw IllegalStateException.fc();
+          throw IllegalStateException.ac();
         } else {
           tmp_13 = tmp1_elvis_lhs;
         }
         var endState = tmp_13;
-        if (!(endState.t2r_1 == null)) {
-          throw IllegalStateException.fc();
+        if (!(endState.s2r_1 == null)) {
+          throw IllegalStateException.ac();
         }
-        endState.t2r_1 = state_1;
+        endState.s2r_1 = state_1;
       }
       if (state_1 instanceof PlusLoopbackState) {
         var inductionVariable_5 = 0;
-        var last_0 = state_1.l2r();
+        var last_0 = state_1.k2r();
         if (inductionVariable_5 < last_0)
           do {
             var i_5 = inductionVariable_5;
             inductionVariable_5 = inductionVariable_5 + 1 | 0;
-            var target = state_1.s2e(i_5).q2e_1;
+            var target = state_1.r2e(i_5).p2e_1;
             if (target instanceof PlusBlockStartState) {
-              target.r2s_1 = state_1;
+              target.q2s_1 = state_1;
             }
           }
            while (inductionVariable_5 < last_0);
       } else {
         if (state_1 instanceof StarLoopbackState) {
           var inductionVariable_6 = 0;
-          var last_1 = state_1.l2r();
+          var last_1 = state_1.k2r();
           if (inductionVariable_6 < last_1)
             do {
               var i_6 = inductionVariable_6;
               inductionVariable_6 = inductionVariable_6 + 1 | 0;
-              var target_0 = state_1.s2e(i_6).q2e_1;
+              var target_0 = state_1.r2e(i_6).p2e_1;
               if (target_0 instanceof StarLoopEntryState) {
-                target_0.e2s_1 = state_1;
+                target_0.d2s_1 = state_1;
               }
             }
              while (inductionVariable_6 < last_1);
@@ -3054,13 +3054,13 @@ class ATNDeserializer {
         var _unary__edvuaz_18 = p._v;
         p._v = _unary__edvuaz_18 + 1 | 0;
         var s_2 = data[_unary__edvuaz_18];
-        var tmp_14 = atn.f2c_1.k2(s_2);
+        var tmp_14 = atn.e2c_1.d2(s_2);
         var decState = tmp_14 instanceof DecisionState ? tmp_14 : THROW_CCE();
-        atn.g2c_1.g2(decState);
-        decState.q2m_1 = i_7 - 1 | 0;
+        atn.f2c_1.z1(decState);
+        decState.p2m_1 = i_7 - 1 | 0;
       }
        while (!(i_7 === nDecisions));
-    if (atn.d2c_1.equals(ATNType_LEXER_getInstance())) {
+    if (atn.c2c_1.equals(ATNType_LEXER_getInstance())) {
       var tmp_15 = atn;
       var tmp_16 = 0;
       var _unary__edvuaz_19 = p._v;
@@ -3073,68 +3073,68 @@ class ATNDeserializer {
         var tmp_20 = get_entries_0();
         var _unary__edvuaz_20 = p._v;
         p._v = _unary__edvuaz_20 + 1 | 0;
-        var actionType = tmp_20.k2(data[_unary__edvuaz_20]);
+        var actionType = tmp_20.d2(data[_unary__edvuaz_20]);
         var _unary__edvuaz_21 = p._v;
         p._v = _unary__edvuaz_21 + 1 | 0;
         var data1 = data[_unary__edvuaz_21];
         var _unary__edvuaz_22 = p._v;
         p._v = _unary__edvuaz_22 + 1 | 0;
         var data2 = data[_unary__edvuaz_22];
-        tmp_18[tmp_19] = this.t2s(actionType, data1, data2);
+        tmp_18[tmp_19] = this.s2s(actionType, data1, data2);
         tmp_16 = tmp_16 + 1 | 0;
       }
-      tmp_15.l2c_1 = tmp_18;
+      tmp_15.k2c_1 = tmp_18;
     }
-    this.u2s(atn);
-    if (this.b2q_1.x2p()) {
-      this.v2s(atn);
+    this.t2s(atn);
+    if (this.a2q_1.w2p()) {
+      this.u2s(atn);
     }
-    if (this.b2q_1.y2p() && atn.d2c_1.equals(ATNType_PARSER_getInstance())) {
-      atn.k2c_1 = new Int32Array(ensureNotNull(atn.h2c_1).length);
+    if (this.a2q_1.x2p() && atn.c2c_1.equals(ATNType_PARSER_getInstance())) {
+      atn.j2c_1 = new Int32Array(ensureNotNull(atn.g2c_1).length);
       var inductionVariable_8 = 0;
-      var last_2 = ensureNotNull(atn.h2c_1).length - 1 | 0;
+      var last_2 = ensureNotNull(atn.g2c_1).length - 1 | 0;
       if (inductionVariable_8 <= last_2)
         do {
           var i_8 = inductionVariable_8;
           inductionVariable_8 = inductionVariable_8 + 1 | 0;
-          ensureNotNull(atn.k2c_1)[i_8] = (atn.e2c_1 + i_8 | 0) + 1 | 0;
+          ensureNotNull(atn.j2c_1)[i_8] = (atn.d2c_1 + i_8 | 0) + 1 | 0;
         }
          while (inductionVariable_8 <= last_2);
       var inductionVariable_9 = 0;
-      var last_3 = ensureNotNull(atn.h2c_1).length - 1 | 0;
+      var last_3 = ensureNotNull(atn.g2c_1).length - 1 | 0;
       if (inductionVariable_9 <= last_3)
         do {
           var i_9 = inductionVariable_9;
           inductionVariable_9 = inductionVariable_9 + 1 | 0;
           var bypassStart = new BasicBlockStartState();
-          bypassStart.u2c_1 = i_9;
-          atn.h2m(bypassStart);
+          bypassStart.t2c_1 = i_9;
+          atn.g2m(bypassStart);
           var bypassStop = new BlockEndState();
-          bypassStop.u2c_1 = i_9;
-          atn.h2m(bypassStop);
-          bypassStart.y2q_1 = bypassStop;
-          atn.i2m(bypassStart);
-          bypassStop.t2r_1 = bypassStart;
+          bypassStop.t2c_1 = i_9;
+          atn.g2m(bypassStop);
+          bypassStart.x2q_1 = bypassStop;
+          atn.h2m(bypassStart);
+          bypassStop.s2r_1 = bypassStart;
           var endState_0;
           var excludeTransition = null;
-          if (ensureNotNull(atn.h2c_1)[i_9].h2r_1) {
+          if (ensureNotNull(atn.g2c_1)[i_9].g2r_1) {
             endState_0 = null;
-            var _iterator__ex2g4s_4 = atn.f2c_1.d1();
-            $l$loop_5: while (_iterator__ex2g4s_4.e1()) {
-              var state_2 = _iterator__ex2g4s_4.f1();
-              if (!(ensureNotNull(state_2).u2c_1 === i_9)) {
+            var _iterator__ex2g4s_4 = atn.e2c_1.w();
+            $l$loop_5: while (_iterator__ex2g4s_4.x()) {
+              var state_2 = _iterator__ex2g4s_4.y();
+              if (!(ensureNotNull(state_2).t2c_1 === i_9)) {
                 continue $l$loop_5;
               }
               if (!(state_2 instanceof StarLoopEntryState)) {
                 continue $l$loop_5;
               }
-              var maybeLoopEndState = state_2.s2e(state_2.l2r() - 1 | 0).q2e_1;
+              var maybeLoopEndState = state_2.r2e(state_2.k2r() - 1 | 0).p2e_1;
               if (!(maybeLoopEndState instanceof LoopEndState)) {
                 continue $l$loop_5;
               }
               var tmp_21;
-              if (maybeLoopEndState.v2c_1) {
-                var tmp_22 = maybeLoopEndState.s2e(0).q2e_1;
+              if (maybeLoopEndState.u2c_1) {
+                var tmp_22 = maybeLoopEndState.r2e(0).p2e_1;
                 tmp_21 = tmp_22 instanceof RuleStopState;
               } else {
                 tmp_21 = false;
@@ -3145,145 +3145,145 @@ class ATNDeserializer {
               }
             }
             if (endState_0 == null) {
-              throw UnsupportedOperationException.s9("Couldn't identify final state of the precedence rule prefix section.");
+              throw UnsupportedOperationException.l9("Couldn't identify final state of the precedence rule prefix section.");
             }
-            excludeTransition = ensureNotNull((endState_0 instanceof StarLoopEntryState ? endState_0 : THROW_CCE()).e2s_1).s2e(0);
+            excludeTransition = ensureNotNull((endState_0 instanceof StarLoopEntryState ? endState_0 : THROW_CCE()).d2s_1).r2e(0);
           } else {
-            endState_0 = ensureNotNull(atn.i2c_1)[i_9];
+            endState_0 = ensureNotNull(atn.h2c_1)[i_9];
           }
-          var _iterator__ex2g4s_5 = atn.f2c_1.d1();
-          while (_iterator__ex2g4s_5.e1()) {
-            var state_3 = _iterator__ex2g4s_5.f1();
-            var _iterator__ex2g4s_6 = ensureNotNull(state_3).w2c_1.d1();
-            $l$loop_6: while (_iterator__ex2g4s_6.e1()) {
-              var transition = _iterator__ex2g4s_6.f1();
+          var _iterator__ex2g4s_5 = atn.e2c_1.w();
+          while (_iterator__ex2g4s_5.x()) {
+            var state_3 = _iterator__ex2g4s_5.y();
+            var _iterator__ex2g4s_6 = ensureNotNull(state_3).v2c_1.w();
+            $l$loop_6: while (_iterator__ex2g4s_6.x()) {
+              var transition = _iterator__ex2g4s_6.y();
               if (transition === excludeTransition) {
                 continue $l$loop_6;
               }
-              if (transition.q2e_1 === endState_0) {
-                transition.q2e_1 = bypassStop;
+              if (transition.p2e_1 === endState_0) {
+                transition.p2e_1 = bypassStop;
               }
             }
           }
-          while (ensureNotNull(atn.h2c_1)[i_9].l2r() > 0) {
-            var transition_0 = ensureNotNull(atn.h2c_1)[i_9].w2s(ensureNotNull(atn.h2c_1)[i_9].l2r() - 1 | 0);
-            bypassStart.k2r(transition_0);
+          while (ensureNotNull(atn.g2c_1)[i_9].k2r() > 0) {
+            var transition_0 = ensureNotNull(atn.g2c_1)[i_9].v2s(ensureNotNull(atn.g2c_1)[i_9].k2r() - 1 | 0);
+            bypassStart.j2r(transition_0);
           }
-          ensureNotNull(atn.h2c_1)[i_9].k2r(new EpsilonTransition(bypassStart));
-          bypassStop.k2r(new EpsilonTransition(ensureNotNull(endState_0)));
+          ensureNotNull(atn.g2c_1)[i_9].j2r(new EpsilonTransition(bypassStart));
+          bypassStop.j2r(new EpsilonTransition(ensureNotNull(endState_0)));
           var matchState = new BasicState();
-          atn.h2m(matchState);
-          matchState.k2r(new AtomTransition(bypassStop, ensureNotNull(atn.k2c_1)[i_9]));
-          bypassStart.k2r(new EpsilonTransition(matchState));
+          atn.g2m(matchState);
+          matchState.j2r(new AtomTransition(bypassStop, ensureNotNull(atn.j2c_1)[i_9]));
+          bypassStart.j2r(new EpsilonTransition(matchState));
         }
          while (inductionVariable_9 <= last_3);
-      if (this.b2q_1.x2p()) {
-        this.v2s(atn);
+      if (this.a2q_1.w2p()) {
+        this.u2s(atn);
       }
     }
     return atn;
   }
-  u2s(atn) {
-    var _iterator__ex2g4s = atn.f2c_1.d1();
-    $l$loop: while (_iterator__ex2g4s.e1()) {
-      var state = _iterator__ex2g4s.f1();
+  t2s(atn) {
+    var _iterator__ex2g4s = atn.e2c_1.w();
+    $l$loop: while (_iterator__ex2g4s.x()) {
+      var state = _iterator__ex2g4s.y();
       if (!(state instanceof StarLoopEntryState)) {
         continue $l$loop;
       }
-      if (ensureNotNull(atn.h2c_1)[state.u2c_1].h2r_1) {
-        var maybeLoopEndState = state.s2e(state.l2r() - 1 | 0).q2e_1;
+      if (ensureNotNull(atn.g2c_1)[state.t2c_1].g2r_1) {
+        var maybeLoopEndState = state.r2e(state.k2r() - 1 | 0).p2e_1;
         if (maybeLoopEndState instanceof LoopEndState) {
           var tmp;
-          if (maybeLoopEndState.v2c_1) {
-            var tmp_0 = maybeLoopEndState.s2e(0).q2e_1;
+          if (maybeLoopEndState.u2c_1) {
+            var tmp_0 = maybeLoopEndState.r2e(0).p2e_1;
             tmp = tmp_0 instanceof RuleStopState;
           } else {
             tmp = false;
           }
           if (tmp) {
-            state.f2s_1 = true;
+            state.e2s_1 = true;
           }
         }
       }
     }
   }
-  v2s(atn) {
-    var _iterator__ex2g4s = atn.f2c_1.d1();
-    $l$loop: while (_iterator__ex2g4s.e1()) {
-      var state = _iterator__ex2g4s.f1();
+  u2s(atn) {
+    var _iterator__ex2g4s = atn.e2c_1.w();
+    $l$loop: while (_iterator__ex2g4s.x()) {
+      var state = _iterator__ex2g4s.y();
       if (state == null) {
         continue $l$loop;
       }
-      this.y2s(state.x2s() || state.l2r() <= 1);
+      this.x2s(state.w2s() || state.k2r() <= 1);
       if (state instanceof PlusBlockStartState) {
-        this.y2s(!(state.r2s_1 == null));
+        this.x2s(!(state.q2s_1 == null));
       }
       if (state instanceof StarLoopEntryState) {
-        this.y2s(!(state.e2s_1 == null));
-        this.y2s(state.l2r() === 2);
-        var tmp0_subject = state.s2e(0).q2e_1;
+        this.x2s(!(state.d2s_1 == null));
+        this.x2s(state.k2r() === 2);
+        var tmp0_subject = state.r2e(0).p2e_1;
         if (tmp0_subject instanceof StarBlockStartState) {
-          var tmp = state.s2e(1).q2e_1;
-          this.y2s(tmp instanceof LoopEndState);
-          this.y2s(!state.r2m_1);
+          var tmp = state.r2e(1).p2e_1;
+          this.x2s(tmp instanceof LoopEndState);
+          this.x2s(!state.q2m_1);
         } else {
           if (tmp0_subject instanceof LoopEndState) {
-            var tmp_0 = state.s2e(1).q2e_1;
-            this.y2s(tmp_0 instanceof StarBlockStartState);
-            this.y2s(state.r2m_1);
+            var tmp_0 = state.r2e(1).p2e_1;
+            this.x2s(tmp_0 instanceof StarBlockStartState);
+            this.x2s(state.q2m_1);
           } else {
-            throw IllegalStateException.fc();
+            throw IllegalStateException.ac();
           }
         }
       }
       if (state instanceof StarLoopbackState) {
-        this.y2s(state.l2r() === 1);
-        var tmp_1 = state.s2e(0).q2e_1;
-        this.y2s(tmp_1 instanceof StarLoopEntryState);
+        this.x2s(state.k2r() === 1);
+        var tmp_1 = state.r2e(0).p2e_1;
+        this.x2s(tmp_1 instanceof StarLoopEntryState);
       }
       if (state instanceof LoopEndState) {
-        this.y2s(!(state.n2q_1 == null));
+        this.x2s(!(state.m2q_1 == null));
       }
       if (state instanceof RuleStartState) {
-        this.y2s(!(state.g2r_1 == null));
+        this.x2s(!(state.f2r_1 == null));
       }
       if (state instanceof BlockStartState) {
-        this.y2s(!(state.y2q_1 == null));
+        this.x2s(!(state.x2q_1 == null));
       }
       if (state instanceof BlockEndState) {
-        this.y2s(!(state.t2r_1 == null));
+        this.x2s(!(state.s2r_1 == null));
       }
       if (state instanceof DecisionState) {
-        this.y2s(state.l2r() <= 1 || state.q2m_1 >= 0);
+        this.x2s(state.k2r() <= 1 || state.p2m_1 >= 0);
       } else {
         var tmp_2;
-        if (state.l2r() <= 1) {
+        if (state.k2r() <= 1) {
           tmp_2 = true;
         } else {
           tmp_2 = state instanceof RuleStopState;
         }
-        this.y2s(tmp_2);
+        this.x2s(tmp_2);
       }
     }
   }
-  z2s(condition, message) {
+  y2s(condition, message) {
     if (!condition) {
-      throw IllegalStateException.s4(message);
+      throw IllegalStateException.l4(message);
     }
   }
-  y2s(condition, message, $super) {
+  x2s(condition, message, $super) {
     message = message === VOID ? null : message;
     var tmp;
     if ($super === VOID) {
-      this.z2s(condition, message);
+      this.y2s(condition, message);
       tmp = Unit_instance;
     } else {
-      tmp = $super.z2s.call(this, condition, message);
+      tmp = $super.y2s.call(this, condition, message);
     }
     return tmp;
   }
-  j2r(atn, type, src, trg, arg1, arg2, arg3, sets) {
-    var target = ensureNotNull(atn.f2c_1.k2(trg));
+  i2r(atn, type, src, trg, arg1, arg2, arg3, sets) {
+    var target = ensureNotNull(atn.e2c_1.d2(trg));
     var tmp;
     switch (type) {
       case 1:
@@ -3300,7 +3300,7 @@ class ATNDeserializer {
         tmp = tmp_0;
         break;
       case 3:
-        var tmp_1 = atn.f2c_1.k2(arg1);
+        var tmp_1 = atn.e2c_1.d2(arg1);
         tmp = new RuleTransition(tmp_1 instanceof RuleStartState ? tmp_1 : THROW_CCE(), arg2, arg3, target);
         break;
       case 4:
@@ -3323,20 +3323,20 @@ class ATNDeserializer {
         tmp = new ActionTransition(target, arg1, arg2, !(arg3 === 0));
         break;
       case 7:
-        tmp = new SetTransition(target, sets.k2(arg1));
+        tmp = new SetTransition(target, sets.d2(arg1));
         break;
       case 8:
-        tmp = new NotSetTransition(target, sets.k2(arg1));
+        tmp = new NotSetTransition(target, sets.d2(arg1));
         break;
       case 9:
         tmp = new WildcardTransition(target);
         break;
       default:
-        throw IllegalArgumentException.t1('The specified transition type is not valid.');
+        throw IllegalArgumentException.m1('The specified transition type is not valid.');
     }
     return tmp;
   }
-  f2q(type, ruleIndex) {
+  e2q(type, ruleIndex) {
     var tmp;
     switch (type) {
       case 0:
@@ -3378,15 +3378,15 @@ class ATNDeserializer {
         tmp = new LoopEndState();
         break;
       default:
-        throw IllegalArgumentException.t1('The specified state type ' + type + ' is not valid.');
+        throw IllegalArgumentException.m1('The specified state type ' + type + ' is not valid.');
     }
     var s = tmp;
-    s.u2c_1 = ruleIndex;
+    s.t2c_1 = ruleIndex;
     return s;
   }
-  t2s(type, data1, data2) {
+  s2s(type, data1, data2) {
     var tmp;
-    switch (type.k1_1) {
+    switch (type.d1_1) {
       case 0:
         tmp = new LexerChannelAction(data1);
         break;
@@ -3417,7 +3417,7 @@ class ATNDeserializer {
     }
     return tmp;
   }
-  a2t(data16, trimToSize) {
+  z2s(data16, trimToSize) {
     var data = new Int32Array(data16.length);
     var i = 0;
     var i2 = 0;
@@ -3462,9 +3462,9 @@ class ATNDeserializer {
     }
     return data;
   }
-  d2q(data16, trimToSize, $super) {
+  c2q(data16, trimToSize, $super) {
     trimToSize = trimToSize === VOID ? false : trimToSize;
-    return $super === VOID ? this.a2t(data16, trimToSize) : $super.a2t.call(this, data16, trimToSize);
+    return $super === VOID ? this.z2s(data16, trimToSize) : $super.z2s.call(this, data16, trimToSize);
   }
 }
 class Companion_11 {
@@ -3472,128 +3472,128 @@ class Companion_11 {
     Companion_instance_11 = this;
     var tmp = this;
     // Inline function 'kotlin.also' call
-    var this_0 = DFAState.j2t(new ATNConfigSet());
-    this_0.b2t_1 = 2147483647;
-    tmp.k2t_1 = this_0;
+    var this_0 = DFAState.i2t(new ATNConfigSet());
+    this_0.a2t_1 = 2147483647;
+    tmp.j2t_1 = this_0;
   }
 }
 class ATNSimulator {
   constructor(atn, sharedContextCache) {
     Companion_getInstance_11();
-    this.n2c_1 = atn;
-    this.o2c_1 = sharedContextCache;
+    this.m2c_1 = atn;
+    this.n2c_1 = sharedContextCache;
   }
-  n2p(context) {
-    if (this.o2c_1 == null) {
+  m2p(context) {
+    if (this.n2c_1 == null) {
       return context;
     }
     // Inline function 'com.strumenta.antlrkotlin.runtime.synchronized' call
-    this.o2c_1;
+    this.n2c_1;
     var visited = new IdentityHashMap();
-    return Companion_instance_17.l2t(context, this.o2c_1, visited);
+    return Companion_instance_17.k2t(context, this.n2c_1, visited);
   }
 }
 class Companion_12 {
   constructor() {
     Companion_instance_12 = this;
-    this.m2t_1 = 4;
-    this.n2t_1 = 0;
-    this.o2t_1 = 1;
-    this.p2t_1 = 2;
-    this.q2t_1 = 3;
-    this.r2t_1 = 4;
-    this.s2t_1 = 5;
-    this.t2t_1 = 6;
-    this.u2t_1 = 7;
-    this.v2t_1 = 8;
-    this.w2t_1 = 9;
-    this.x2t_1 = 10;
-    this.y2t_1 = 11;
-    this.z2t_1 = 12;
+    this.l2t_1 = 4;
+    this.m2t_1 = 0;
+    this.n2t_1 = 1;
+    this.o2t_1 = 2;
+    this.p2t_1 = 3;
+    this.q2t_1 = 4;
+    this.r2t_1 = 5;
+    this.s2t_1 = 6;
+    this.t2t_1 = 7;
+    this.u2t_1 = 8;
+    this.v2t_1 = 9;
+    this.w2t_1 = 10;
+    this.x2t_1 = 11;
+    this.y2t_1 = 12;
     var tmp = this;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.a2u_1 = ['INVALID', 'BASIC', 'RULE_START', 'BLOCK_START', 'PLUS_BLOCK_START', 'STAR_BLOCK_START', 'TOKEN_START', 'RULE_STOP', 'BLOCK_END', 'STAR_LOOP_BACK', 'STAR_LOOP_ENTRY', 'PLUS_LOOP_BACK', 'LOOP_END'];
-    this.b2u_1 = -1;
+    tmp.z2t_1 = ['INVALID', 'BASIC', 'RULE_START', 'BLOCK_START', 'PLUS_BLOCK_START', 'STAR_BLOCK_START', 'TOKEN_START', 'RULE_STOP', 'BLOCK_END', 'STAR_LOOP_BACK', 'STAR_LOOP_ENTRY', 'PLUS_LOOP_BACK', 'LOOP_END'];
+    this.a2u_1 = -1;
   }
 }
 class ATNState {
   constructor() {
     Companion_getInstance_12();
-    this.s2c_1 = null;
-    this.t2c_1 = -1;
-    this.u2c_1 = 0;
-    this.v2c_1 = false;
-    this.w2c_1 = ArrayList.f2(4);
-    this.x2c_1 = null;
-    this.y2c_1 = false;
+    this.r2c_1 = null;
+    this.s2c_1 = -1;
+    this.t2c_1 = 0;
+    this.u2c_1 = false;
+    this.v2c_1 = ArrayList.y1(4);
+    this.w2c_1 = null;
+    this.x2c_1 = false;
   }
-  l2r() {
-    return this.w2c_1.i2();
+  k2r() {
+    return this.v2c_1.b2();
   }
   hashCode() {
-    return this.t2c_1;
+    return this.s2c_1;
   }
   equals(other) {
     var tmp;
     if (other instanceof ATNState) {
-      tmp = this.t2c_1 === other.t2c_1;
+      tmp = this.s2c_1 === other.s2c_1;
     } else {
       tmp = false;
     }
     return tmp;
   }
   toString() {
-    return this.t2c_1.toString();
+    return this.s2c_1.toString();
   }
-  k2r(e) {
-    return this.c2u(this.w2c_1.i2(), e);
+  j2r(e) {
+    return this.b2u(this.v2c_1.b2(), e);
   }
-  c2u(index, e) {
-    if (this.w2c_1.b1()) {
-      this.v2c_1 = e.d2u();
-    } else if (!(this.v2c_1 === e.d2u())) {
-      System_getInstance().i27_1.g27('ATN state ' + this.t2c_1 + ' has both epsilon and non-epsilon transitions.');
-      this.v2c_1 = false;
+  b2u(index, e) {
+    if (this.v2c_1.u()) {
+      this.u2c_1 = e.c2u();
+    } else if (!(this.u2c_1 === e.c2u())) {
+      System_getInstance().h27_1.f27('ATN state ' + this.s2c_1 + ' has both epsilon and non-epsilon transitions.');
+      this.u2c_1 = false;
     }
     var alreadyPresent = false;
-    var _iterator__ex2g4s = this.w2c_1.d1();
-    $l$loop_0: while (_iterator__ex2g4s.e1()) {
-      var t = _iterator__ex2g4s.f1();
-      if (t.q2e_1.t2c_1 === e.q2e_1.t2c_1) {
+    var _iterator__ex2g4s = this.v2c_1.w();
+    $l$loop_0: while (_iterator__ex2g4s.x()) {
+      var t = _iterator__ex2g4s.y();
+      if (t.p2e_1.s2c_1 === e.p2e_1.s2c_1) {
         if (!(t.getLabel() == null) && !(e.getLabel() == null) && ensureNotNull(t.getLabel()).equals(e.getLabel())) {
           alreadyPresent = true;
           break $l$loop_0;
-        } else if (t.d2u() && e.d2u()) {
+        } else if (t.c2u() && e.c2u()) {
           alreadyPresent = true;
           break $l$loop_0;
         }
       }
     }
     if (!alreadyPresent) {
-      this.w2c_1.d4(index, e);
+      this.v2c_1.w3(index, e);
     }
   }
-  s2e(i) {
-    return this.w2c_1.k2(i);
+  r2e(i) {
+    return this.v2c_1.d2(i);
   }
-  w2s(index) {
-    return this.w2c_1.e4(index);
+  v2s(index) {
+    return this.v2c_1.x3(index);
   }
-  x2s() {
-    return this.v2c_1;
+  w2s() {
+    return this.u2c_1;
   }
 }
 class ATNType extends Enum {}
 class Transition {
   constructor(target) {
     Companion_getInstance_21();
-    this.q2e_1 = target;
-    this.r2e_1 = false;
+    this.p2e_1 = target;
+    this.q2e_1 = false;
   }
-  d2u() {
-    return this.r2e_1;
+  c2u() {
+    return this.q2e_1;
   }
   getLabel() {
     return null;
@@ -3605,87 +3605,87 @@ class ActionTransition extends Transition {
     actionIndex = actionIndex === VOID ? -1 : actionIndex;
     isCtxDependent = isCtxDependent === VOID ? false : isCtxDependent;
     super(target);
-    this.i2u_1 = ruleIndex;
-    this.j2u_1 = actionIndex;
-    this.k2u_1 = isCtxDependent;
-    this.l2u_1 = 6;
-    this.m2u_1 = true;
-  }
-  e2u() {
-    return this.l2u_1;
+    this.h2u_1 = ruleIndex;
+    this.i2u_1 = actionIndex;
+    this.j2u_1 = isCtxDependent;
+    this.k2u_1 = 6;
+    this.l2u_1 = true;
   }
   d2u() {
-    return this.m2u_1;
+    return this.k2u_1;
   }
-  f2u(symbol, minVocabSymbol, maxVocabSymbol) {
+  c2u() {
+    return this.l2u_1;
+  }
+  e2u(symbol, minVocabSymbol, maxVocabSymbol) {
     return false;
   }
   toString() {
-    return 'action_' + this.i2u_1 + ':' + this.j2u_1;
+    return 'action_' + this.h2u_1 + ':' + this.i2u_1;
   }
 }
 class PredictionContext {
-  static v2u(cachedHashCode) {
+  static u2u(cachedHashCode) {
     var $this = createThis(this);
-    $this.t2u_1 = cachedHashCode;
+    $this.s2u_1 = cachedHashCode;
     var tmp = $this;
-    var _unary__edvuaz = Companion_instance_17.j2p_1;
-    Companion_instance_17.j2p_1 = _unary__edvuaz + 1 | 0;
-    tmp.u2u_1 = _unary__edvuaz;
+    var _unary__edvuaz = Companion_instance_17.i2p_1;
+    Companion_instance_17.i2p_1 = _unary__edvuaz + 1 | 0;
+    tmp.t2u_1 = _unary__edvuaz;
     return $this;
   }
-  r2h() {
+  q2h() {
     return this === EmptyPredictionContext_getInstance();
   }
-  d2v() {
-    return this.c2v(this.b28() - 1 | 0) === 2147483647;
+  c2v() {
+    return this.b2v(this.a28() - 1 | 0) === 2147483647;
   }
-  e2v(recog) {
+  d2v(recog) {
     return toString_0(this);
   }
   hashCode() {
-    return this.t2u_1;
+    return this.s2u_1;
   }
 }
 class ArrayPredictionContext extends PredictionContext {
-  static r2u(parents, returnStates) {
-    var $this = this.v2u(Companion_instance_17.s2u(parents, returnStates));
-    $this.p2u_1 = parents;
-    $this.q2u_1 = returnStates;
+  static q2u(parents, returnStates) {
+    var $this = this.u2u(Companion_instance_17.r2u(parents, returnStates));
+    $this.o2u_1 = parents;
+    $this.p2u_1 = returnStates;
+    // Inline function 'kotlin.collections.isNotEmpty' call
+    // Inline function 'kotlin.collections.isEmpty' call
+    // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
+    if (!!($this.o2u_1.length === 0)) {
+      throw AssertionError.vc(null);
+    }
     // Inline function 'kotlin.collections.isNotEmpty' call
     // Inline function 'kotlin.collections.isEmpty' call
     // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
     if (!!($this.p2u_1.length === 0)) {
-      throw AssertionError.yc(null);
-    }
-    // Inline function 'kotlin.collections.isNotEmpty' call
-    // Inline function 'kotlin.collections.isEmpty' call
-    // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
-    if (!!($this.q2u_1.length === 0)) {
-      throw AssertionError.yc(null);
+      throw AssertionError.vc(null);
     }
     return $this;
   }
-  r2h() {
-    return this.q2u_1[0] === 2147483647;
+  q2h() {
+    return this.p2u_1[0] === 2147483647;
   }
-  static w2u(a) {
+  static v2u(a) {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    var tmp = [a.z2u_1];
+    var tmp = [a.y2u_1];
     // Inline function 'kotlin.intArrayOf' call
-    var tmp$ret$3 = new Int32Array([a.a2v_1]);
-    return this.r2u(tmp, tmp$ret$3);
+    var tmp$ret$3 = new Int32Array([a.z2u_1]);
+    return this.q2u(tmp, tmp$ret$3);
   }
-  b28() {
-    return this.q2u_1.length;
+  a28() {
+    return this.p2u_1.length;
+  }
+  a2v(index) {
+    return this.o2u_1[index];
   }
   b2v(index) {
     return this.p2u_1[index];
-  }
-  c2v(index) {
-    return this.q2u_1[index];
   }
   equals(other) {
     if (this === other) {
@@ -3697,130 +3697,130 @@ class ArrayPredictionContext extends PredictionContext {
     if (!(this.hashCode() === other.hashCode())) {
       return false;
     }
-    return contentEquals(this.q2u_1, other.q2u_1) && contentEquals_0(this.p2u_1, other.p2u_1);
+    return contentEquals(this.p2u_1, other.p2u_1) && contentEquals_0(this.o2u_1, other.o2u_1);
   }
   toString() {
-    if (this.r2h()) {
+    if (this.q2h()) {
       return '[]';
     }
-    var buf = StringBuilder.z();
-    buf.a1('[');
+    var buf = StringBuilder.s();
+    buf.t('[');
     var inductionVariable = 0;
-    var last = this.q2u_1.length - 1 | 0;
+    var last = this.p2u_1.length - 1 | 0;
     if (inductionVariable <= last)
       $l$loop: do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         if (i > 0) {
-          buf.a1(', ');
+          buf.t(', ');
         }
-        if (this.q2u_1[i] === 2147483647) {
-          buf.a1('$');
+        if (this.p2u_1[i] === 2147483647) {
+          buf.t('$');
           continue $l$loop;
         }
-        buf.df(this.q2u_1[i]);
-        if (!(this.p2u_1[i] == null)) {
-          buf.a1(' ');
-          buf.a1(toString_1(this.p2u_1[i]));
+        buf.af(this.p2u_1[i]);
+        if (!(this.o2u_1[i] == null)) {
+          buf.t(' ');
+          buf.t(toString_1(this.o2u_1[i]));
         } else {
-          buf.a1('null');
+          buf.t('null');
         }
       }
        while (inductionVariable <= last);
-    buf.a1(']');
+    buf.t(']');
     return buf.toString();
   }
 }
 class AtomTransition extends Transition {
   constructor(target, label) {
     super(target);
-    this.h2v_1 = label;
-    this.i2v_1 = 5;
+    this.g2v_1 = label;
+    this.h2v_1 = 5;
   }
-  e2u() {
-    return this.i2v_1;
+  d2u() {
+    return this.h2v_1;
   }
-  j2v() {
-    return Companion_getInstance_26().m2v(this.h2v_1);
+  i2v() {
+    return Companion_getInstance_26().l2v(this.g2v_1);
   }
   getLabel() {
-    return this.j2v();
+    return this.i2v();
   }
-  f2u(symbol, minVocabSymbol, maxVocabSymbol) {
-    return this.h2v_1 === symbol;
+  e2u(symbol, minVocabSymbol, maxVocabSymbol) {
+    return this.g2v_1 === symbol;
   }
   toString() {
-    return this.h2v_1.toString();
+    return this.g2v_1.toString();
   }
 }
 class DecisionState extends ATNState {
   constructor() {
     super();
-    this.q2m_1 = -1;
-    this.r2m_1 = false;
+    this.p2m_1 = -1;
+    this.q2m_1 = false;
   }
 }
 class BlockStartState extends DecisionState {
   constructor() {
     super();
-    this.y2q_1 = null;
+    this.x2q_1 = null;
   }
 }
 class BasicBlockStartState extends BlockStartState {
   constructor() {
     super();
-    this.x2v_1 = 3;
+    this.w2v_1 = 3;
   }
-  z2c() {
-    return this.x2v_1;
+  y2c() {
+    return this.w2v_1;
   }
 }
 class BasicState extends ATNState {
   constructor() {
     super();
-    this.f2w_1 = 1;
+    this.e2w_1 = 1;
   }
-  z2c() {
-    return this.f2w_1;
+  y2c() {
+    return this.e2w_1;
   }
 }
 class BlockEndState extends ATNState {
   constructor() {
     super();
-    this.t2r_1 = null;
-    this.u2r_1 = 8;
+    this.s2r_1 = null;
+    this.t2r_1 = 8;
   }
-  z2c() {
-    return this.u2r_1;
+  y2c() {
+    return this.t2r_1;
   }
 }
 class SingletonPredictionContext extends PredictionContext {
-  static m2w(parent, returnState) {
-    var $this = this.v2u(!(parent == null) ? Companion_instance_17.v33(parent, returnState) : Companion_instance_17.u33());
-    $this.z2u_1 = parent;
-    $this.a2v_1 = returnState;
+  static l2w(parent, returnState) {
+    var $this = this.u2u(!(parent == null) ? Companion_instance_17.u33(parent, returnState) : Companion_instance_17.t33());
+    $this.y2u_1 = parent;
+    $this.z2u_1 = returnState;
     // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
-    if (!!($this.a2v_1 === -1)) {
-      throw AssertionError.yc(null);
+    if (!!($this.z2u_1 === -1)) {
+      throw AssertionError.vc(null);
     }
     return $this;
   }
-  b28() {
+  a28() {
     return 1;
+  }
+  a2v(index) {
+    // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
+    if (!(index === 0)) {
+      throw AssertionError.vc(null);
+    }
+    return this.y2u_1;
   }
   b2v(index) {
     // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
     if (!(index === 0)) {
-      throw AssertionError.yc(null);
+      throw AssertionError.vc(null);
     }
     return this.z2u_1;
-  }
-  c2v(index) {
-    // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
-    if (!(index === 0)) {
-      throw AssertionError.yc(null);
-    }
-    return this.a2v_1;
   }
   equals(other) {
     if (this === other) {
@@ -3832,46 +3832,46 @@ class SingletonPredictionContext extends PredictionContext {
     if (!(this.hashCode() === other.hashCode())) {
       return false;
     }
-    return this.a2v_1 === other.a2v_1 && (!(this.z2u_1 == null) && equals(this.z2u_1, other.z2u_1));
+    return this.z2u_1 === other.z2u_1 && (!(this.y2u_1 == null) && equals(this.y2u_1, other.y2u_1));
   }
   toString() {
-    var tmp0_safe_receiver = this.z2u_1;
+    var tmp0_safe_receiver = this.y2u_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : toString_0(tmp0_safe_receiver);
     var up = tmp1_elvis_lhs == null ? '' : tmp1_elvis_lhs;
     var tmp;
     // Inline function 'kotlin.text.isEmpty' call
     if (charSequenceLength(up) === 0) {
       var tmp_0;
-      if (this.a2v_1 === 2147483647) {
+      if (this.z2u_1 === 2147483647) {
         tmp_0 = '$';
       } else {
-        tmp_0 = this.a2v_1.toString();
+        tmp_0 = this.z2u_1.toString();
       }
       tmp = tmp_0;
     } else {
-      tmp = '' + this.a2v_1 + ' ' + up;
+      tmp = '' + this.z2u_1 + ' ' + up;
     }
     return tmp;
   }
 }
 class EmptyPredictionContext extends SingletonPredictionContext {
-  static l2w() {
+  static k2w() {
     EmptyPredictionContext_instance = null;
-    var $this = this.m2w(null, 2147483647);
+    var $this = this.l2w(null, 2147483647);
     EmptyPredictionContext_instance = $this;
-    $this.k2w_1 = true;
+    $this.j2w_1 = true;
     return $this;
   }
-  r2h() {
-    return this.k2w_1;
+  q2h() {
+    return this.j2w_1;
   }
-  b28() {
+  a28() {
     return 1;
   }
-  b2v(index) {
+  a2v(index) {
     return null;
   }
-  c2v(index) {
+  b2v(index) {
     return 2147483647;
   }
   equals(other) {
@@ -3885,17 +3885,17 @@ class EpsilonTransition extends Transition {
   constructor(target, outermostPrecedenceReturn) {
     outermostPrecedenceReturn = outermostPrecedenceReturn === VOID ? -1 : outermostPrecedenceReturn;
     super(target);
-    this.p2w_1 = 1;
-    this.q2w_1 = true;
-    this.r2w_1 = outermostPrecedenceReturn;
-  }
-  e2u() {
-    return this.p2w_1;
+    this.o2w_1 = 1;
+    this.p2w_1 = true;
+    this.q2w_1 = outermostPrecedenceReturn;
   }
   d2u() {
-    return this.q2w_1;
+    return this.o2w_1;
   }
-  f2u(symbol, minVocabSymbol, maxVocabSymbol) {
+  c2u() {
+    return this.p2w_1;
+  }
+  e2u(symbol, minVocabSymbol, maxVocabSymbol) {
     return false;
   }
   toString() {
@@ -3904,111 +3904,111 @@ class EpsilonTransition extends Transition {
 }
 class Companion_13 {
   constructor() {
-    this.s2w_1 = 0;
+    this.r2w_1 = 0;
   }
 }
 class LL1Analyzer {
   constructor(atn) {
-    this.e2m_1 = atn;
+    this.d2m_1 = atn;
   }
-  f2m(s, ctx) {
-    return this.t2w(s, null, ctx);
+  e2m(s, ctx) {
+    return this.s2w(s, null, ctx);
   }
-  t2w(s, stopState, ctx) {
-    var r = IntervalSet.y2b();
+  s2w(s, stopState, ctx) {
+    var r = IntervalSet.x2b();
     var seeThruPreds = true;
     var tmp;
     if (!(ctx == null)) {
-      tmp = Companion_instance_17.u2w(ensureNotNull(s.s2c_1), ctx);
+      tmp = Companion_instance_17.t2w(ensureNotNull(s.r2c_1), ctx);
     } else {
       tmp = null;
     }
     var lookContext = tmp;
-    this.v2w(s, stopState, lookContext, r, HashSet.v9(), BitSet.d2p(), seeThruPreds, true);
+    this.u2w(s, stopState, lookContext, r, HashSet.o9(), BitSet.c2p(), seeThruPreds, true);
     return r;
   }
-  v2w(s, stopState, ctx, look, lookBusy, calledRuleStack, seeThruPreds, addEOF) {
-    var c = ATNConfig.c2n(s, 0, ctx);
-    if (!lookBusy.g2(c)) {
+  u2w(s, stopState, ctx, look, lookBusy, calledRuleStack, seeThruPreds, addEOF) {
+    var c = ATNConfig.b2n(s, 0, ctx);
+    if (!lookBusy.z1(c)) {
       return Unit_instance;
     }
     if (s === stopState) {
       if (ctx == null) {
-        look.z2b(-2);
+        look.y2b(-2);
         return Unit_instance;
-      } else if (ctx.r2h() && addEOF) {
-        look.z2b(-1);
+      } else if (ctx.q2h() && addEOF) {
+        look.y2b(-1);
         return Unit_instance;
       }
     }
     if (s instanceof RuleStopState) {
       if (ctx == null) {
-        look.z2b(-2);
+        look.y2b(-2);
         return Unit_instance;
-      } else if (ctx.r2h() && addEOF) {
-        look.z2b(-1);
+      } else if (ctx.q2h() && addEOF) {
+        look.y2b(-1);
         return Unit_instance;
       }
       if (!(ctx === EmptyPredictionContext_getInstance())) {
-        var removed = calledRuleStack.k2(s.u2c_1);
+        var removed = calledRuleStack.d2(s.t2c_1);
         try {
-          calledRuleStack.w2w(s.u2c_1);
+          calledRuleStack.v2w(s.t2c_1);
           var inductionVariable = 0;
-          var last = ctx.b28();
+          var last = ctx.a28();
           if (inductionVariable < last)
             do {
               var i = inductionVariable;
               inductionVariable = inductionVariable + 1 | 0;
-              var returnState = this.e2m_1.f2c_1.k2(ctx.c2v(i));
-              this.v2w(ensureNotNull(returnState), stopState, ctx.b2v(i), look, lookBusy, calledRuleStack, seeThruPreds, addEOF);
+              var returnState = this.d2m_1.e2c_1.d2(ctx.b2v(i));
+              this.u2w(ensureNotNull(returnState), stopState, ctx.a2v(i), look, lookBusy, calledRuleStack, seeThruPreds, addEOF);
             }
              while (inductionVariable < last);
         }finally {
           if (removed) {
-            calledRuleStack.e2p(s.u2c_1);
+            calledRuleStack.d2p(s.t2c_1);
           }
         }
         return Unit_instance;
       }
     }
-    var n = s.l2r();
+    var n = s.k2r();
     var inductionVariable_0 = 0;
     if (inductionVariable_0 < n)
       $l$loop: do {
         var i_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var t = s.s2e(i_0);
+        var t = s.r2e(i_0);
         if (t instanceof RuleTransition) {
-          if (calledRuleStack.k2(t.q2e_1.u2c_1)) {
+          if (calledRuleStack.d2(t.p2e_1.t2c_1)) {
             continue $l$loop;
           }
-          var newContext = Companion_instance_20.y2w(ctx, t.d2f_1.t2c_1);
+          var newContext = Companion_instance_20.x2w(ctx, t.c2f_1.s2c_1);
           try {
-            calledRuleStack.e2p(t.q2e_1.u2c_1);
-            this.v2w(t.q2e_1, stopState, newContext, look, lookBusy, calledRuleStack, seeThruPreds, addEOF);
+            calledRuleStack.d2p(t.p2e_1.t2c_1);
+            this.u2w(t.p2e_1, stopState, newContext, look, lookBusy, calledRuleStack, seeThruPreds, addEOF);
           }finally {
-            calledRuleStack.w2w(t.q2e_1.u2c_1);
+            calledRuleStack.v2w(t.p2e_1.t2c_1);
           }
         } else {
           if (t instanceof AbstractPredicateTransition) {
             if (seeThruPreds) {
-              this.v2w(t.q2e_1, stopState, ctx, look, lookBusy, calledRuleStack, seeThruPreds, addEOF);
+              this.u2w(t.p2e_1, stopState, ctx, look, lookBusy, calledRuleStack, seeThruPreds, addEOF);
             } else {
-              look.z2b(0);
+              look.y2b(0);
             }
           } else {
-            if (t.d2u()) {
-              this.v2w(t.q2e_1, stopState, ctx, look, lookBusy, calledRuleStack, seeThruPreds, addEOF);
+            if (t.c2u()) {
+              this.u2w(t.p2e_1, stopState, ctx, look, lookBusy, calledRuleStack, seeThruPreds, addEOF);
             } else {
               if (t instanceof WildcardTransition) {
-                look.g2f(Companion_getInstance_26().y28(1, this.e2m_1.e2c_1));
+                look.f2f(Companion_getInstance_26().x28(1, this.d2m_1.d2c_1));
               } else {
                 var set = t.getLabel();
                 if (!(set == null)) {
                   if (t instanceof NotSetTransition) {
-                    set = set.x2w(Companion_getInstance_26().y28(1, this.e2m_1.e2c_1));
+                    set = set.w2w(Companion_getInstance_26().x28(1, this.d2m_1.d2c_1));
                   }
-                  look.g2f(set);
+                  look.f2f(set);
                 }
               }
             }
@@ -4019,215 +4019,215 @@ class LL1Analyzer {
   }
 }
 class LexerATNConfig extends ATNConfig {
-  static g2x(state, alt, context) {
-    var $this = this.c2n(state, alt, context, Empty_getInstance());
+  static f2x(state, alt, context) {
+    var $this = this.b2n(state, alt, context, Empty_getInstance());
     init_org_antlr_v4_kotlinruntime_atn_LexerATNConfig($this);
-    $this.e2x_1 = false;
-    $this.f2x_1 = null;
+    $this.d2x_1 = false;
+    $this.e2x_1 = null;
     return $this;
   }
-  static h2x(c, state) {
-    var $this = this.e2n(c, state, c.w2m_1, c.y2m_1);
+  static g2x(c, state) {
+    var $this = this.d2n(c, state, c.v2m_1, c.x2m_1);
     init_org_antlr_v4_kotlinruntime_atn_LexerATNConfig($this);
-    $this.f2x_1 = c.f2x_1;
-    $this.e2x_1 = checkNonGreedyDecision($this, c, state);
+    $this.e2x_1 = c.e2x_1;
+    $this.d2x_1 = checkNonGreedyDecision($this, c, state);
     return $this;
   }
-  static i2x(c, state, lexerActionExecutor) {
-    var $this = this.e2n(c, state, c.w2m_1, c.y2m_1);
+  static h2x(c, state, lexerActionExecutor) {
+    var $this = this.d2n(c, state, c.v2m_1, c.x2m_1);
     init_org_antlr_v4_kotlinruntime_atn_LexerATNConfig($this);
-    $this.f2x_1 = lexerActionExecutor;
-    $this.e2x_1 = checkNonGreedyDecision($this, c, state);
+    $this.e2x_1 = lexerActionExecutor;
+    $this.d2x_1 = checkNonGreedyDecision($this, c, state);
     return $this;
   }
-  static j2x(c, state, context) {
-    var $this = this.e2n(c, state, context, c.y2m_1);
+  static i2x(c, state, context) {
+    var $this = this.d2n(c, state, context, c.x2m_1);
     init_org_antlr_v4_kotlinruntime_atn_LexerATNConfig($this);
-    $this.f2x_1 = c.f2x_1;
-    $this.e2x_1 = checkNonGreedyDecision($this, c, state);
+    $this.e2x_1 = c.e2x_1;
+    $this.d2x_1 = checkNonGreedyDecision($this, c, state);
     return $this;
   }
-  k2x() {
-    return this.e2x_1;
+  j2x() {
+    return this.d2x_1;
   }
   hashCode() {
-    var hashCode = MurmurHash_instance.i2n(7);
-    hashCode = MurmurHash_instance.j2n(hashCode, this.u2m_1.t2c_1);
+    var hashCode = MurmurHash_instance.h2n(7);
+    hashCode = MurmurHash_instance.i2n(hashCode, this.t2m_1.s2c_1);
+    hashCode = MurmurHash_instance.i2n(hashCode, this.u2m_1);
     hashCode = MurmurHash_instance.j2n(hashCode, this.v2m_1);
-    hashCode = MurmurHash_instance.k2n(hashCode, this.w2m_1);
-    hashCode = MurmurHash_instance.k2n(hashCode, this.y2m_1);
-    hashCode = MurmurHash_instance.j2n(hashCode, this.e2x_1 ? 1 : 0);
-    hashCode = MurmurHash_instance.k2n(hashCode, this.f2x_1);
-    hashCode = MurmurHash_instance.l2n(hashCode, 6);
+    hashCode = MurmurHash_instance.j2n(hashCode, this.x2m_1);
+    hashCode = MurmurHash_instance.i2n(hashCode, this.d2x_1 ? 1 : 0);
+    hashCode = MurmurHash_instance.j2n(hashCode, this.e2x_1);
+    hashCode = MurmurHash_instance.k2n(hashCode, 6);
     return hashCode;
   }
-  g2n(other) {
+  f2n(other) {
     if (this === other) {
       return true;
     }
     if (!(other instanceof LexerATNConfig)) {
       return false;
     }
-    if (!(this.e2x_1 === other.e2x_1)) {
+    if (!(this.d2x_1 === other.d2x_1)) {
       return false;
     }
-    if (!Companion_getInstance_27().l2x_1.r2o(this.f2x_1, other.f2x_1)) {
+    if (!Companion_getInstance_27().k2x_1.q2o(this.e2x_1, other.e2x_1)) {
       return false;
     }
-    return super.g2n(other);
+    return super.f2n(other);
   }
 }
 class Companion_14 {
   constructor() {
+    this.l2x_1 = false;
     this.m2x_1 = false;
-    this.n2x_1 = false;
-    this.o2x_1 = 0;
-    this.p2x_1 = 127;
+    this.n2x_1 = 0;
+    this.o2x_1 = 127;
   }
 }
 class SimState {
   constructor() {
-    this.q2x_1 = -1;
-    this.r2x_1 = 0;
-    this.s2x_1 = -1;
-    this.t2x_1 = null;
+    this.p2x_1 = -1;
+    this.q2x_1 = 0;
+    this.r2x_1 = -1;
+    this.s2x_1 = null;
   }
-  d2h() {
-    this.q2x_1 = -1;
-    this.r2x_1 = 0;
-    this.s2x_1 = -1;
-    this.t2x_1 = null;
+  c2h() {
+    this.p2x_1 = -1;
+    this.q2x_1 = 0;
+    this.r2x_1 = -1;
+    this.s2x_1 = null;
   }
 }
 class LexerATNSimulator extends ATNSimulator {
   constructor(recog, atn, decisionToDFA, sharedContextCache) {
     super(atn, sharedContextCache);
-    this.t2g_1 = recog;
-    this.u2g_1 = decisionToDFA;
-    this.v2g_1 = -1;
-    this.w2g_1 = 1;
+    this.s2g_1 = recog;
+    this.t2g_1 = decisionToDFA;
+    this.u2g_1 = -1;
+    this.v2g_1 = 1;
+    this.w2g_1 = 0;
     this.x2g_1 = 0;
-    this.y2g_1 = 0;
-    this.z2g_1 = new SimState();
+    this.y2g_1 = new SimState();
   }
-  h2h(input, mode) {
-    this.y2g_1 = mode;
-    var mark = input.w27();
+  g2h(input, mode) {
+    this.x2g_1 = mode;
+    var mark = input.v27();
     try {
-      this.v2g_1 = input.v27();
-      this.z2g_1.d2h();
-      var dfa = this.u2g_1[mode];
+      this.u2g_1 = input.u27();
+      this.y2g_1.c2h();
+      var dfa = this.t2g_1[mode];
       var tmp;
-      if (dfa.x2x_1 == null) {
-        tmp = this.a2y(input);
+      if (dfa.w2x_1 == null) {
+        tmp = this.z2x(input);
       } else {
-        var tmp_0 = dfa.x2x_1;
-        tmp = this.z2x(input, tmp_0 instanceof DFAState ? tmp_0 : THROW_CCE());
+        var tmp_0 = dfa.w2x_1;
+        tmp = this.y2x(input, tmp_0 instanceof DFAState ? tmp_0 : THROW_CCE());
       }
       return tmp;
     }finally {
-      input.x27(mark);
+      input.w27(mark);
     }
   }
-  d2h() {
-    this.z2g_1.d2h();
-    this.v2g_1 = -1;
-    this.w2g_1 = 1;
+  c2h() {
+    this.y2g_1.c2h();
+    this.u2g_1 = -1;
+    this.v2g_1 = 1;
+    this.w2g_1 = 0;
     this.x2g_1 = 0;
-    this.y2g_1 = 0;
   }
-  a2y(input) {
-    var startState = this.n2c_1.m2c_1.k2(this.y2g_1);
+  z2x(input) {
+    var startState = this.m2c_1.l2c_1.d2(this.x2g_1);
     if (false) {
-      System_getInstance().h27_1.g27('matchATN mode ' + this.y2g_1 + ' start: ' + startState.toString());
+      System_getInstance().g27_1.f27('matchATN mode ' + this.x2g_1 + ' start: ' + startState.toString());
     }
-    var oldMode = this.y2g_1;
-    var s0Closure = this.b2y(input, startState);
-    var suppressEdge = s0Closure.x2o_1;
-    s0Closure.x2o_1 = false;
-    var next = this.c2y(s0Closure);
+    var oldMode = this.x2g_1;
+    var s0Closure = this.a2y(input, startState);
+    var suppressEdge = s0Closure.w2o_1;
+    s0Closure.w2o_1 = false;
+    var next = this.b2y(s0Closure);
     if (!suppressEdge) {
-      this.u2g_1[this.y2g_1].x2x_1 = next;
+      this.t2g_1[this.x2g_1].w2x_1 = next;
     }
-    var predict = this.z2x(input, next);
+    var predict = this.y2x(input, next);
     if (false) {
-      System_getInstance().h27_1.g27('DFA after matchATN: ' + this.u2g_1[oldMode].d2y());
+      System_getInstance().g27_1.f27('DFA after matchATN: ' + this.t2g_1[oldMode].c2y());
     }
     return predict;
   }
-  z2x(input, ds0) {
+  y2x(input, ds0) {
     if (false) {
-      System_getInstance().h27_1.g27('start state closure=' + ds0.c2t_1.toString());
+      System_getInstance().g27_1.f27('start state closure=' + ds0.b2t_1.toString());
     }
-    if (ds0.e2t_1) {
-      this.e2y(this.z2g_1, input, ds0);
+    if (ds0.d2t_1) {
+      this.d2y(this.y2g_1, input, ds0);
     }
-    var t = input.d28(1);
+    var t = input.c28(1);
     var s = ds0;
     $l$loop_0: while (true) {
       if (false) {
-        System_getInstance().h27_1.g27('execATN loop starting closure: ' + s.c2t_1.toString());
+        System_getInstance().g27_1.f27('execATN loop starting closure: ' + s.b2t_1.toString());
       }
-      var tmp0_elvis_lhs = this.f2y(s, t);
-      var target = tmp0_elvis_lhs == null ? this.g2y(input, s, t) : tmp0_elvis_lhs;
-      if (target === Companion_getInstance_11().k2t_1) {
+      var tmp0_elvis_lhs = this.e2y(s, t);
+      var target = tmp0_elvis_lhs == null ? this.f2y(input, s, t) : tmp0_elvis_lhs;
+      if (target === Companion_getInstance_11().j2t_1) {
         break $l$loop_0;
       }
       if (!(t === -1)) {
-        this.v2h(input);
+        this.u2h(input);
       }
-      if (target.e2t_1) {
-        this.e2y(this.z2g_1, input, target);
+      if (target.d2t_1) {
+        this.d2y(this.y2g_1, input, target);
         if (t === -1) {
           break $l$loop_0;
         }
       }
-      t = input.d28(1);
+      t = input.c28(1);
       s = target;
     }
-    return this.h2y(this.z2g_1, input, s.c2t_1, t);
+    return this.g2y(this.y2g_1, input, s.b2t_1, t);
   }
-  f2y(s, t) {
-    if (s.d2t_1 == null || t < 0 || t > 127) {
+  e2y(s, t) {
+    if (s.c2t_1 == null || t < 0 || t > 127) {
       return null;
     }
-    var target = ensureNotNull(s.d2t_1)[t - 0 | 0];
+    var target = ensureNotNull(s.c2t_1)[t - 0 | 0];
     if (false && !(target == null)) {
-      System_getInstance().h27_1.g27('reuse state ' + s.b2t_1 + ' edge to ' + target.b2t_1);
+      System_getInstance().g27_1.f27('reuse state ' + s.a2t_1 + ' edge to ' + target.a2t_1);
     }
     return target;
   }
-  g2y(input, s, t) {
+  f2y(input, s, t) {
     var reach = new OrderedATNConfigSet();
-    this.i2y(input, s.c2t_1, reach, t);
-    if (reach.b1()) {
-      if (!reach.x2o_1) {
-        this.j2y(s, t, Companion_getInstance_11().k2t_1);
+    this.h2y(input, s.b2t_1, reach, t);
+    if (reach.u()) {
+      if (!reach.w2o_1) {
+        this.i2y(s, t, Companion_getInstance_11().j2t_1);
       }
-      return Companion_getInstance_11().k2t_1;
+      return Companion_getInstance_11().j2t_1;
     }
-    return this.k2y(s, t, reach);
+    return this.j2y(s, t, reach);
   }
-  h2y(prevAccept, input, reach, t) {
-    if (!(prevAccept.t2x_1 == null)) {
-      var lexerActionExecutor = ensureNotNull(prevAccept.t2x_1).g2t_1;
-      this.l2y(input, lexerActionExecutor, this.v2g_1, prevAccept.q2x_1, prevAccept.r2x_1, prevAccept.s2x_1);
-      return ensureNotNull(prevAccept.t2x_1).f2t_1;
+  g2y(prevAccept, input, reach, t) {
+    if (!(prevAccept.s2x_1 == null)) {
+      var lexerActionExecutor = ensureNotNull(prevAccept.s2x_1).f2t_1;
+      this.k2y(input, lexerActionExecutor, this.u2g_1, prevAccept.p2x_1, prevAccept.q2x_1, prevAccept.r2x_1);
+      return ensureNotNull(prevAccept.s2x_1).e2t_1;
     }
-    if (t === -1 && input.v27() === this.v2g_1) {
+    if (t === -1 && input.u27() === this.u2g_1) {
       return -1;
     }
-    throw LexerNoViableAltException.p2i(ensureNotNull(this.t2g_1), input, this.v2g_1, reach);
+    throw LexerNoViableAltException.o2i(ensureNotNull(this.s2g_1), input, this.u2g_1, reach);
   }
-  i2y(input, closure, reach, t) {
+  h2y(input, closure, reach, t) {
     var skipAlt = 0;
-    var _iterator__ex2g4s = closure.d1();
-    $l$loop: while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
-      var currentAltReachedAcceptState = c.v2m_1 === skipAlt;
+    var _iterator__ex2g4s = closure.w();
+    $l$loop: while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
+      var currentAltReachedAcceptState = c.u2m_1 === skipAlt;
       var tmp;
       if (currentAltReachedAcceptState) {
-        tmp = (c instanceof LexerATNConfig ? c : THROW_CCE()).k2x();
+        tmp = (c instanceof LexerATNConfig ? c : THROW_CCE()).j2x();
       } else {
         tmp = false;
       }
@@ -4235,24 +4235,24 @@ class LexerATNSimulator extends ATNSimulator {
         continue $l$loop;
       }
       if (false) {
-        System_getInstance().h27_1.g27('testing ' + this.m2y(t) + ' at ' + c.m2n(this.t2g_1, true));
+        System_getInstance().g27_1.f27('testing ' + this.l2y(t) + ' at ' + c.l2n(this.s2g_1, true));
       }
-      var n = c.u2m_1.l2r();
+      var n = c.t2m_1.k2r();
       var inductionVariable = 0;
       if (inductionVariable < n)
         $l$loop_0: do {
           var ti = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var trans = c.u2m_1.s2e(ti);
-          var target = this.n2y(trans, t);
+          var trans = c.t2m_1.r2e(ti);
+          var target = this.m2y(trans, t);
           if (!(target == null)) {
-            var lexerActionExecutor = (c instanceof LexerATNConfig ? c : THROW_CCE()).f2x_1;
+            var lexerActionExecutor = (c instanceof LexerATNConfig ? c : THROW_CCE()).e2x_1;
             if (!(lexerActionExecutor == null)) {
-              lexerActionExecutor = lexerActionExecutor.q2y(input.v27() - this.v2g_1 | 0);
+              lexerActionExecutor = lexerActionExecutor.p2y(input.u27() - this.u2g_1 | 0);
             }
             var treatEofAsEpsilon = t === -1;
-            if (this.r2y(input, LexerATNConfig.i2x(c, target, lexerActionExecutor), reach, currentAltReachedAcceptState, true, treatEofAsEpsilon)) {
-              skipAlt = c.v2m_1;
+            if (this.q2y(input, LexerATNConfig.h2x(c, target, lexerActionExecutor), reach, currentAltReachedAcceptState, true, treatEofAsEpsilon)) {
+              skipAlt = c.u2m_1;
               break $l$loop_0;
             }
           }
@@ -4260,145 +4260,145 @@ class LexerATNSimulator extends ATNSimulator {
          while (inductionVariable < n);
     }
   }
-  l2y(input, lexerActionExecutor, startIndex, index, line, charPos) {
+  k2y(input, lexerActionExecutor, startIndex, index, line, charPos) {
     if (false) {
-      System_getInstance().h27_1.g27('ACTION ' + toString_1(lexerActionExecutor));
+      System_getInstance().g27_1.f27('ACTION ' + toString_1(lexerActionExecutor));
     }
-    input.y27(index);
-    this.w2g_1 = line;
-    this.x2g_1 = charPos;
-    if (!(lexerActionExecutor == null) && !(this.t2g_1 == null)) {
-      lexerActionExecutor.s2y(this.t2g_1, input, startIndex);
+    input.x27(index);
+    this.v2g_1 = line;
+    this.w2g_1 = charPos;
+    if (!(lexerActionExecutor == null) && !(this.s2g_1 == null)) {
+      lexerActionExecutor.r2y(this.s2g_1, input, startIndex);
     }
   }
-  n2y(trans, t) {
+  m2y(trans, t) {
     var tmp;
-    if (trans.f2u(t, 0, 1114111)) {
-      tmp = trans.q2e_1;
+    if (trans.e2u(t, 0, 1114111)) {
+      tmp = trans.p2e_1;
     } else {
       tmp = null;
     }
     return tmp;
   }
-  b2y(input, p) {
+  a2y(input, p) {
     var initialContext = EmptyPredictionContext_getInstance();
     var configs = new OrderedATNConfigSet();
     var inductionVariable = 0;
-    var last = p.l2r();
+    var last = p.k2r();
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var target = p.s2e(i).q2e_1;
-        var c = LexerATNConfig.g2x(target, i + 1 | 0, initialContext);
-        this.r2y(input, c, configs, false, false, false);
+        var target = p.r2e(i).p2e_1;
+        var c = LexerATNConfig.f2x(target, i + 1 | 0, initialContext);
+        this.q2y(input, c, configs, false, false, false);
       }
        while (inductionVariable < last);
     return configs;
   }
-  r2y(input, config, configs, currentAltReachedAcceptState, speculative, treatEofAsEpsilon) {
+  q2y(input, config, configs, currentAltReachedAcceptState, speculative, treatEofAsEpsilon) {
     var tempCurrentAltReachedAcceptState = currentAltReachedAcceptState;
     if (false) {
-      System_getInstance().h27_1.g27('closure(' + config.m2n(this.t2g_1, true) + ')');
+      System_getInstance().g27_1.f27('closure(' + config.l2n(this.s2g_1, true) + ')');
     }
-    var tmp = config.u2m_1;
+    var tmp = config.t2m_1;
     if (tmp instanceof RuleStopState) {
       if (false) {
-        if (!(this.t2g_1 == null)) {
-          System_getInstance().h27_1.g27('closure at ' + this.t2g_1.c2e()[config.u2m_1.u2c_1] + ' rule stop ' + config.toString());
+        if (!(this.s2g_1 == null)) {
+          System_getInstance().g27_1.f27('closure at ' + this.s2g_1.b2e()[config.t2m_1.t2c_1] + ' rule stop ' + config.toString());
         } else {
-          System_getInstance().h27_1.g27('closure at rule stop ' + config.toString());
+          System_getInstance().g27_1.f27('closure at rule stop ' + config.toString());
         }
       }
-      if (config.w2m_1 == null || ensureNotNull(config.w2m_1).d2v()) {
-        if (config.w2m_1 == null || ensureNotNull(config.w2m_1).r2h()) {
-          configs.f2p(config);
+      if (config.v2m_1 == null || ensureNotNull(config.v2m_1).c2v()) {
+        if (config.v2m_1 == null || ensureNotNull(config.v2m_1).q2h()) {
+          configs.e2p(config);
           return true;
         }
-        configs.f2p(LexerATNConfig.j2x(config, config.u2m_1, EmptyPredictionContext_getInstance()));
+        configs.e2p(LexerATNConfig.i2x(config, config.t2m_1, EmptyPredictionContext_getInstance()));
         tempCurrentAltReachedAcceptState = true;
       }
-      if (!(config.w2m_1 == null) && !ensureNotNull(config.w2m_1).r2h()) {
+      if (!(config.v2m_1 == null) && !ensureNotNull(config.v2m_1).q2h()) {
         var inductionVariable = 0;
-        var last = ensureNotNull(config.w2m_1).b28();
+        var last = ensureNotNull(config.v2m_1).a28();
         if (inductionVariable < last)
           do {
             var i = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
-            if (!(ensureNotNull(config.w2m_1).c2v(i) === 2147483647)) {
-              var newContext = ensureNotNull(config.w2m_1).b2v(i);
-              var returnState = this.n2c_1.f2c_1.k2(ensureNotNull(config.w2m_1).c2v(i));
-              var c = LexerATNConfig.j2x(config, ensureNotNull(returnState), ensureNotNull(newContext));
-              tempCurrentAltReachedAcceptState = this.r2y(input, c, configs, tempCurrentAltReachedAcceptState, speculative, treatEofAsEpsilon);
+            if (!(ensureNotNull(config.v2m_1).b2v(i) === 2147483647)) {
+              var newContext = ensureNotNull(config.v2m_1).a2v(i);
+              var returnState = this.m2c_1.e2c_1.d2(ensureNotNull(config.v2m_1).b2v(i));
+              var c = LexerATNConfig.i2x(config, ensureNotNull(returnState), ensureNotNull(newContext));
+              tempCurrentAltReachedAcceptState = this.q2y(input, c, configs, tempCurrentAltReachedAcceptState, speculative, treatEofAsEpsilon);
             }
           }
            while (inductionVariable < last);
       }
       return tempCurrentAltReachedAcceptState;
     }
-    if (!config.u2m_1.x2s()) {
-      if (!tempCurrentAltReachedAcceptState || !config.k2x()) {
-        configs.f2p(config);
+    if (!config.t2m_1.w2s()) {
+      if (!tempCurrentAltReachedAcceptState || !config.j2x()) {
+        configs.e2p(config);
       }
     }
-    var p = config.u2m_1;
+    var p = config.t2m_1;
     var inductionVariable_0 = 0;
-    var last_0 = p.l2r();
+    var last_0 = p.k2r();
     if (inductionVariable_0 < last_0)
       do {
         var i_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var t = p.s2e(i_0);
-        var c_0 = this.t2y(input, config, t, configs, speculative, treatEofAsEpsilon);
+        var t = p.r2e(i_0);
+        var c_0 = this.s2y(input, config, t, configs, speculative, treatEofAsEpsilon);
         if (!(c_0 == null)) {
-          tempCurrentAltReachedAcceptState = this.r2y(input, c_0, configs, tempCurrentAltReachedAcceptState, speculative, treatEofAsEpsilon);
+          tempCurrentAltReachedAcceptState = this.q2y(input, c_0, configs, tempCurrentAltReachedAcceptState, speculative, treatEofAsEpsilon);
         }
       }
        while (inductionVariable_0 < last_0);
     return tempCurrentAltReachedAcceptState;
   }
-  t2y(input, config, t, configs, speculative, treatEofAsEpsilon) {
+  s2y(input, config, t, configs, speculative, treatEofAsEpsilon) {
     var c = null;
-    switch (t.e2u()) {
+    switch (t.d2u()) {
       case 3:
         var ruleTransition = t instanceof RuleTransition ? t : THROW_CCE();
-        var newContext = Companion_instance_20.y2w(config.w2m_1, ruleTransition.d2f_1.t2c_1);
-        c = LexerATNConfig.j2x(config, t.q2e_1, newContext);
+        var newContext = Companion_instance_20.x2w(config.v2m_1, ruleTransition.c2f_1.s2c_1);
+        c = LexerATNConfig.i2x(config, t.p2e_1, newContext);
         break;
       case 10:
-        throw UnsupportedOperationException.s9('Precedence predicates are not supported in lexers.');
+        throw UnsupportedOperationException.l9('Precedence predicates are not supported in lexers.');
       case 4:
         var pt = t instanceof PredicateTransition ? t : THROW_CCE();
         if (false) {
-          System_getInstance().h27_1.g27('EVAL rule ' + pt.w2y_1 + ':' + pt.x2y_1);
+          System_getInstance().g27_1.f27('EVAL rule ' + pt.v2y_1 + ':' + pt.w2y_1);
         }
 
-        configs.x2o_1 = true;
-        if (this.b2z(input, pt.w2y_1, pt.x2y_1, speculative)) {
-          c = LexerATNConfig.h2x(config, t.q2e_1);
+        configs.w2o_1 = true;
+        if (this.a2z(input, pt.v2y_1, pt.w2y_1, speculative)) {
+          c = LexerATNConfig.g2x(config, t.p2e_1);
         }
 
         break;
       case 6:
-        if (config.w2m_1 == null || ensureNotNull(config.w2m_1).d2v()) {
+        if (config.v2m_1 == null || ensureNotNull(config.v2m_1).c2v()) {
           var tmp = Companion_instance_15;
-          var tmp_0 = ensureNotNull(this.n2c_1.l2c_1);
-          var lexerActionExecutor = tmp.c2z(config.f2x_1, tmp_0[(t instanceof ActionTransition ? t : THROW_CCE()).j2u_1]);
-          c = LexerATNConfig.i2x(config, t.q2e_1, lexerActionExecutor);
+          var tmp_0 = ensureNotNull(this.m2c_1.k2c_1);
+          var lexerActionExecutor = tmp.b2z(config.e2x_1, tmp_0[(t instanceof ActionTransition ? t : THROW_CCE()).i2u_1]);
+          c = LexerATNConfig.h2x(config, t.p2e_1, lexerActionExecutor);
         } else {
-          c = LexerATNConfig.h2x(config, t.q2e_1);
+          c = LexerATNConfig.g2x(config, t.p2e_1);
         }
 
         break;
       case 1:
-        c = LexerATNConfig.h2x(config, t.q2e_1);
+        c = LexerATNConfig.g2x(config, t.p2e_1);
         break;
       case 5:
       case 2:
       case 7:
         if (treatEofAsEpsilon) {
-          if (t.f2u(-1, 0, 1114111)) {
-            c = LexerATNConfig.h2x(config, t.q2e_1);
+          if (t.e2u(-1, 0, 1114111)) {
+            c = LexerATNConfig.g2x(config, t.p2e_1);
           }
         }
 
@@ -4406,105 +4406,105 @@ class LexerATNSimulator extends ATNSimulator {
     }
     return c;
   }
-  b2z(input, ruleIndex, predIndex, speculative) {
-    if (this.t2g_1 == null) {
+  a2z(input, ruleIndex, predIndex, speculative) {
+    if (this.s2g_1 == null) {
       return true;
     }
     if (!speculative) {
-      return this.t2g_1.b2i(null, ruleIndex, predIndex);
+      return this.s2g_1.a2i(null, ruleIndex, predIndex);
     }
-    var savedCharPositionInLine = this.x2g_1;
-    var savedLine = this.w2g_1;
-    var index = input.v27();
-    var marker = input.w27();
+    var savedCharPositionInLine = this.w2g_1;
+    var savedLine = this.v2g_1;
+    var index = input.u27();
+    var marker = input.v27();
     try {
-      this.v2h(input);
-      return this.t2g_1.b2i(null, ruleIndex, predIndex);
+      this.u2h(input);
+      return this.s2g_1.a2i(null, ruleIndex, predIndex);
     }finally {
-      this.x2g_1 = savedCharPositionInLine;
-      this.w2g_1 = savedLine;
-      input.y27(index);
-      input.x27(marker);
+      this.w2g_1 = savedCharPositionInLine;
+      this.v2g_1 = savedLine;
+      input.x27(index);
+      input.w27(marker);
     }
   }
-  e2y(settings, input, dfaState) {
-    settings.q2x_1 = input.v27();
+  d2y(settings, input, dfaState) {
+    settings.p2x_1 = input.u27();
+    settings.q2x_1 = this.v2g_1;
     settings.r2x_1 = this.w2g_1;
-    settings.s2x_1 = this.x2g_1;
-    settings.t2x_1 = dfaState;
+    settings.s2x_1 = dfaState;
   }
-  k2y(from, t, q) {
-    var suppressEdge = q.x2o_1;
-    q.x2o_1 = false;
-    var to = this.c2y(q);
+  j2y(from, t, q) {
+    var suppressEdge = q.w2o_1;
+    q.w2o_1 = false;
+    var to = this.b2y(q);
     if (suppressEdge) {
       return to;
     }
-    this.j2y(from, t, to);
+    this.i2y(from, t, to);
     return to;
   }
-  j2y(p, t, q) {
+  i2y(p, t, q) {
     if (t < 0 || t > 127) {
       return Unit_instance;
     }
     if (false) {
-      System_getInstance().h27_1.g27('EDGE ' + p.toString() + ' -> ' + q.toString() + ' upon ' + toString(numberToChar(t)));
+      System_getInstance().g27_1.f27('EDGE ' + p.toString() + ' -> ' + q.toString() + ' upon ' + toString(numberToChar(t)));
     }
     // Inline function 'com.strumenta.antlrkotlin.runtime.synchronized' call
-    if (p.d2t_1 == null) {
+    if (p.c2t_1 == null) {
       var tmp = p;
       // Inline function 'kotlin.arrayOfNulls' call
-      tmp.d2t_1 = Array(128);
+      tmp.c2t_1 = Array(128);
     }
-    ensureNotNull(p.d2t_1)[t - 0 | 0] = q;
+    ensureNotNull(p.c2t_1)[t - 0 | 0] = q;
   }
-  c2y(configs) {
+  b2y(configs) {
     // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
-    if (!!configs.x2o_1) {
-      throw AssertionError.yc(null);
+    if (!!configs.w2o_1) {
+      throw AssertionError.vc(null);
     }
-    var proposed = DFAState.j2t(configs);
+    var proposed = DFAState.i2t(configs);
     var firstConfigWithRuleStopState = null;
-    var _iterator__ex2g4s = configs.d1();
-    $l$loop: while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
-      var tmp = c.u2m_1;
+    var _iterator__ex2g4s = configs.w();
+    $l$loop: while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
+      var tmp = c.t2m_1;
       if (tmp instanceof RuleStopState) {
         firstConfigWithRuleStopState = c;
         break $l$loop;
       }
     }
     if (!(firstConfigWithRuleStopState == null)) {
-      proposed.e2t_1 = true;
+      proposed.d2t_1 = true;
       var tmp_0 = proposed;
-      tmp_0.g2t_1 = (firstConfigWithRuleStopState instanceof LexerATNConfig ? firstConfigWithRuleStopState : THROW_CCE()).f2x_1;
-      proposed.f2t_1 = ensureNotNull(this.n2c_1.k2c_1)[firstConfigWithRuleStopState.u2m_1.u2c_1];
+      tmp_0.f2t_1 = (firstConfigWithRuleStopState instanceof LexerATNConfig ? firstConfigWithRuleStopState : THROW_CCE()).e2x_1;
+      proposed.e2t_1 = ensureNotNull(this.m2c_1.j2c_1)[firstConfigWithRuleStopState.t2m_1.t2c_1];
     }
-    var dfa = this.u2g_1[this.y2g_1];
+    var dfa = this.t2g_1[this.x2g_1];
     // Inline function 'com.strumenta.antlrkotlin.runtime.synchronized' call
-    dfa.w2x_1;
-    var existing = dfa.w2x_1.y3(proposed);
+    dfa.v2x_1;
+    var existing = dfa.v2x_1.r3(proposed);
     if (!(existing == null)) {
       return existing;
     }
-    proposed.b2t_1 = dfa.w2x_1.i2();
-    configs.g2m(true);
-    proposed.c2t_1 = configs;
+    proposed.a2t_1 = dfa.v2x_1.b2();
+    configs.f2m(true);
+    proposed.b2t_1 = configs;
     // Inline function 'kotlin.collections.set' call
-    dfa.w2x_1.s3(proposed, proposed);
+    dfa.v2x_1.l3(proposed, proposed);
     return proposed;
   }
-  v2h(input) {
-    var curChar = input.d28(1);
+  u2h(input) {
+    var curChar = input.c28(1);
     if (numberToChar(curChar) === _Char___init__impl__6a9atx(10)) {
-      this.w2g_1 = this.w2g_1 + 1 | 0;
-      this.x2g_1 = 0;
+      this.v2g_1 = this.v2g_1 + 1 | 0;
+      this.w2g_1 = 0;
     } else {
-      this.x2g_1 = this.x2g_1 + 1 | 0;
+      this.w2g_1 = this.w2g_1 + 1 | 0;
     }
-    input.c28();
+    input.b28();
   }
-  m2y(t) {
+  l2y(t) {
     var tmp;
     if (t === -1) {
       tmp = 'EOF';
@@ -4515,7 +4515,7 @@ class LexerATNSimulator extends ATNSimulator {
   }
 }
 class Companion_15 {
-  c2z(lexerActionExecutor, lexerAction) {
+  b2z(lexerActionExecutor, lexerAction) {
     if (lexerActionExecutor == null) {
       // Inline function 'kotlin.arrayOf' call
       // Inline function 'kotlin.js.unsafeCast' call
@@ -4523,36 +4523,36 @@ class Companion_15 {
       var tmp$ret$0 = [lexerAction];
       return new LexerActionExecutor(tmp$ret$0);
     }
-    var lexerActions = copyOf(lexerActionExecutor.o2y_1, lexerActionExecutor.o2y_1.length + 1 | 0);
+    var lexerActions = copyOf(lexerActionExecutor.n2y_1, lexerActionExecutor.n2y_1.length + 1 | 0);
     lexerActions[get_lastIndex(lexerActions)] = lexerAction;
     return new LexerActionExecutor(isArray(lexerActions) ? lexerActions : THROW_CCE());
   }
 }
 class LexerActionExecutor {
   constructor(lexerActions) {
-    this.o2y_1 = lexerActions;
-    var hash = MurmurHash_instance.d2z();
-    var indexedObject = this.o2y_1;
+    this.n2y_1 = lexerActions;
+    var hash = MurmurHash_instance.c2z();
+    var indexedObject = this.n2y_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     while (inductionVariable < last) {
       var lexerAction = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      hash = MurmurHash_instance.k2n(hash, lexerAction);
+      hash = MurmurHash_instance.j2n(hash, lexerAction);
     }
-    this.p2y_1 = MurmurHash_instance.l2n(hash, this.o2y_1.length);
+    this.o2y_1 = MurmurHash_instance.k2n(hash, this.n2y_1.length);
   }
-  q2y(offset) {
+  p2y(offset) {
     var updatedLexerActions = null;
     var inductionVariable = 0;
-    var last = this.o2y_1.length - 1 | 0;
+    var last = this.n2y_1.length - 1 | 0;
     if (inductionVariable <= last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         var tmp;
-        if (this.o2y_1[i].e2z()) {
-          var tmp_0 = this.o2y_1[i];
+        if (this.n2y_1[i].d2z()) {
+          var tmp_0 = this.n2y_1[i];
           tmp = !(tmp_0 instanceof LexerIndexedCustomAction);
         } else {
           tmp = false;
@@ -4561,9 +4561,9 @@ class LexerActionExecutor {
           if (updatedLexerActions == null) {
             // Inline function 'kotlin.collections.copyOf' call
             // Inline function 'kotlin.js.asDynamic' call
-            updatedLexerActions = this.o2y_1.slice();
+            updatedLexerActions = this.n2y_1.slice();
           }
-          updatedLexerActions[i] = new LexerIndexedCustomAction(offset, this.o2y_1[i]);
+          updatedLexerActions[i] = new LexerIndexedCustomAction(offset, this.n2y_1[i]);
         }
       }
        while (inductionVariable <= last);
@@ -4575,11 +4575,11 @@ class LexerActionExecutor {
     }
     return tmp_1;
   }
-  s2y(lexer, input, startIndex) {
+  r2y(lexer, input, startIndex) {
     var requiresSeek = false;
-    var stopIndex = input.v27();
+    var stopIndex = input.u27();
     try {
-      var indexedObject = this.o2y_1;
+      var indexedObject = this.n2y_1;
       var inductionVariable = 0;
       var last = indexedObject.length;
       while (inductionVariable < last) {
@@ -4587,26 +4587,26 @@ class LexerActionExecutor {
         inductionVariable = inductionVariable + 1 | 0;
         var mutableLexerAction = lexerAction;
         if (mutableLexerAction instanceof LexerIndexedCustomAction) {
-          var offset = mutableLexerAction.f2z_1;
-          input.y27(startIndex + offset | 0);
-          mutableLexerAction = mutableLexerAction.g2z_1;
+          var offset = mutableLexerAction.e2z_1;
+          input.x27(startIndex + offset | 0);
+          mutableLexerAction = mutableLexerAction.f2z_1;
           requiresSeek = !((startIndex + offset | 0) === stopIndex);
         } else {
-          if (mutableLexerAction.e2z()) {
-            input.y27(stopIndex);
+          if (mutableLexerAction.d2z()) {
+            input.x27(stopIndex);
             requiresSeek = false;
           }
         }
-        mutableLexerAction.i2z(lexer);
+        mutableLexerAction.h2z(lexer);
       }
     }finally {
       if (requiresSeek) {
-        input.y27(stopIndex);
+        input.x27(stopIndex);
       }
     }
   }
   hashCode() {
-    return this.p2y_1;
+    return this.o2y_1;
   }
   equals(other) {
     if (other === this) {
@@ -4615,27 +4615,27 @@ class LexerActionExecutor {
     if (!(other instanceof LexerActionExecutor)) {
       return false;
     }
-    return this.p2y_1 === other.p2y_1 && contentEquals_0(this.o2y_1, other.o2y_1);
+    return this.o2y_1 === other.o2y_1 && contentEquals_0(this.n2y_1, other.n2y_1);
   }
 }
 class LexerActionType extends Enum {}
 class LexerChannelAction {
   constructor(channel) {
-    this.j2z_1 = channel;
-    this.k2z_1 = LexerActionType_CHANNEL_getInstance();
-    this.l2z_1 = false;
+    this.i2z_1 = channel;
+    this.j2z_1 = LexerActionType_CHANNEL_getInstance();
+    this.k2z_1 = false;
   }
-  e2z() {
-    return this.l2z_1;
+  d2z() {
+    return this.k2z_1;
   }
-  i2z(lexer) {
-    lexer.f2g_1 = this.j2z_1;
+  h2z(lexer) {
+    lexer.e2g_1 = this.i2z_1;
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    hash = MurmurHash_instance.j2n(hash, this.k2z_1.k1_1);
-    hash = MurmurHash_instance.j2n(hash, this.j2z_1);
-    return MurmurHash_instance.l2n(hash, 2);
+    var hash = MurmurHash_instance.c2z();
+    hash = MurmurHash_instance.i2n(hash, this.j2z_1.d1_1);
+    hash = MurmurHash_instance.i2n(hash, this.i2z_1);
+    return MurmurHash_instance.k2n(hash, 2);
   }
   equals(other) {
     if (other === this) {
@@ -4644,34 +4644,34 @@ class LexerChannelAction {
     if (!(other instanceof LexerChannelAction)) {
       return false;
     }
-    return this.j2z_1 === other.j2z_1;
+    return this.i2z_1 === other.i2z_1;
   }
   toString() {
-    return 'channel(' + this.j2z_1 + ')';
+    return 'channel(' + this.i2z_1 + ')';
   }
 }
 class LexerCustomAction {
   constructor(ruleIndex, actionIndex) {
-    this.m2z_1 = ruleIndex;
-    this.n2z_1 = actionIndex;
-    this.o2z_1 = LexerActionType_CUSTOM_getInstance();
-    this.p2z_1 = true;
+    this.l2z_1 = ruleIndex;
+    this.m2z_1 = actionIndex;
+    this.n2z_1 = LexerActionType_CUSTOM_getInstance();
+    this.o2z_1 = true;
   }
-  q2z() {
+  p2z() {
+    return this.n2z_1;
+  }
+  d2z() {
     return this.o2z_1;
   }
-  e2z() {
-    return this.p2z_1;
-  }
-  i2z(lexer) {
-    return lexer.d2i(null, this.m2z_1, this.n2z_1);
+  h2z(lexer) {
+    return lexer.c2i(null, this.l2z_1, this.m2z_1);
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    hash = MurmurHash_instance.j2n(hash, this.q2z().k1_1);
-    hash = MurmurHash_instance.j2n(hash, this.m2z_1);
-    hash = MurmurHash_instance.j2n(hash, this.n2z_1);
-    return MurmurHash_instance.l2n(hash, 3);
+    var hash = MurmurHash_instance.c2z();
+    hash = MurmurHash_instance.i2n(hash, this.p2z().d1_1);
+    hash = MurmurHash_instance.i2n(hash, this.l2z_1);
+    hash = MurmurHash_instance.i2n(hash, this.m2z_1);
+    return MurmurHash_instance.k2n(hash, 3);
   }
   equals(other) {
     if (other === this) {
@@ -4680,26 +4680,26 @@ class LexerCustomAction {
     if (!(other instanceof LexerCustomAction)) {
       return false;
     }
-    return this.m2z_1 === other.m2z_1 && this.n2z_1 === other.n2z_1;
+    return this.l2z_1 === other.l2z_1 && this.m2z_1 === other.m2z_1;
   }
 }
 class LexerIndexedCustomAction {
   constructor(offset, action) {
-    this.f2z_1 = offset;
-    this.g2z_1 = action;
-    this.h2z_1 = true;
+    this.e2z_1 = offset;
+    this.f2z_1 = action;
+    this.g2z_1 = true;
   }
-  e2z() {
-    return this.h2z_1;
+  d2z() {
+    return this.g2z_1;
   }
-  i2z(lexer) {
-    return this.g2z_1.i2z(lexer);
+  h2z(lexer) {
+    return this.f2z_1.h2z(lexer);
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
+    var hash = MurmurHash_instance.c2z();
+    hash = MurmurHash_instance.i2n(hash, this.e2z_1);
     hash = MurmurHash_instance.j2n(hash, this.f2z_1);
-    hash = MurmurHash_instance.k2n(hash, this.g2z_1);
-    return MurmurHash_instance.l2n(hash, 2);
+    return MurmurHash_instance.k2n(hash, 2);
   }
   equals(other) {
     if (other === this) {
@@ -4708,26 +4708,26 @@ class LexerIndexedCustomAction {
     if (!(other instanceof LexerIndexedCustomAction)) {
       return false;
     }
-    return this.f2z_1 === other.f2z_1 && equals(this.g2z_1, other.g2z_1);
+    return this.e2z_1 === other.e2z_1 && equals(this.f2z_1, other.f2z_1);
   }
 }
 class LexerModeAction {
   constructor(mode) {
-    this.r2z_1 = mode;
-    this.s2z_1 = LexerActionType_MODE_getInstance();
-    this.t2z_1 = false;
+    this.q2z_1 = mode;
+    this.r2z_1 = LexerActionType_MODE_getInstance();
+    this.s2z_1 = false;
   }
-  e2z() {
-    return this.t2z_1;
+  d2z() {
+    return this.s2z_1;
   }
-  i2z(lexer) {
-    return lexer.n2h(this.r2z_1);
+  h2z(lexer) {
+    return lexer.m2h(this.q2z_1);
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    hash = MurmurHash_instance.j2n(hash, this.s2z_1.k1_1);
-    hash = MurmurHash_instance.j2n(hash, this.r2z_1);
-    return MurmurHash_instance.l2n(hash, 2);
+    var hash = MurmurHash_instance.c2z();
+    hash = MurmurHash_instance.i2n(hash, this.r2z_1.d1_1);
+    hash = MurmurHash_instance.i2n(hash, this.q2z_1);
+    return MurmurHash_instance.k2n(hash, 2);
   }
   equals(other) {
     if (other === this) {
@@ -4736,28 +4736,28 @@ class LexerModeAction {
     if (!(other instanceof LexerModeAction)) {
       return false;
     }
-    return this.r2z_1 === other.r2z_1;
+    return this.q2z_1 === other.q2z_1;
   }
   toString() {
-    return 'mode(' + this.r2z_1 + ')';
+    return 'mode(' + this.q2z_1 + ')';
   }
 }
 class LexerMoreAction {
   constructor() {
     LexerMoreAction_instance = this;
-    this.u2z_1 = LexerActionType_MORE_getInstance();
-    this.v2z_1 = false;
+    this.t2z_1 = LexerActionType_MORE_getInstance();
+    this.u2z_1 = false;
   }
-  e2z() {
-    return this.v2z_1;
+  d2z() {
+    return this.u2z_1;
   }
-  i2z(lexer) {
-    return lexer.m2h();
+  h2z(lexer) {
+    return lexer.l2h();
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    hash = MurmurHash_instance.j2n(hash, this.u2z_1.k1_1);
-    return MurmurHash_instance.l2n(hash, 1);
+    var hash = MurmurHash_instance.c2z();
+    hash = MurmurHash_instance.i2n(hash, this.t2z_1.d1_1);
+    return MurmurHash_instance.k2n(hash, 1);
   }
   equals(other) {
     return other === this;
@@ -4769,19 +4769,19 @@ class LexerMoreAction {
 class LexerPopModeAction {
   constructor() {
     LexerPopModeAction_instance = this;
-    this.w2z_1 = LexerActionType_POP_MODE_getInstance();
-    this.x2z_1 = false;
+    this.v2z_1 = LexerActionType_POP_MODE_getInstance();
+    this.w2z_1 = false;
   }
-  e2z() {
-    return this.x2z_1;
+  d2z() {
+    return this.w2z_1;
   }
-  i2z(lexer) {
-    lexer.q2h();
+  h2z(lexer) {
+    lexer.p2h();
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    hash = MurmurHash_instance.j2n(hash, this.w2z_1.k1_1);
-    return MurmurHash_instance.l2n(hash, 1);
+    var hash = MurmurHash_instance.c2z();
+    hash = MurmurHash_instance.i2n(hash, this.v2z_1.d1_1);
+    return MurmurHash_instance.k2n(hash, 1);
   }
   equals(other) {
     return other === this;
@@ -4792,21 +4792,21 @@ class LexerPopModeAction {
 }
 class LexerPushModeAction {
   constructor(mode) {
-    this.y2z_1 = mode;
-    this.z2z_1 = LexerActionType_PUSH_MODE_getInstance();
-    this.a30_1 = false;
+    this.x2z_1 = mode;
+    this.y2z_1 = LexerActionType_PUSH_MODE_getInstance();
+    this.z2z_1 = false;
   }
-  e2z() {
-    return this.a30_1;
+  d2z() {
+    return this.z2z_1;
   }
-  i2z(lexer) {
-    return lexer.o2h(this.y2z_1);
+  h2z(lexer) {
+    return lexer.n2h(this.x2z_1);
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    hash = MurmurHash_instance.j2n(hash, this.z2z_1.k1_1);
-    hash = MurmurHash_instance.j2n(hash, this.y2z_1);
-    return MurmurHash_instance.l2n(hash, 2);
+    var hash = MurmurHash_instance.c2z();
+    hash = MurmurHash_instance.i2n(hash, this.y2z_1.d1_1);
+    hash = MurmurHash_instance.i2n(hash, this.x2z_1);
+    return MurmurHash_instance.k2n(hash, 2);
   }
   equals(other) {
     if (other === this) {
@@ -4815,28 +4815,28 @@ class LexerPushModeAction {
     if (!(other instanceof LexerPushModeAction)) {
       return false;
     }
-    return this.y2z_1 === other.y2z_1;
+    return this.x2z_1 === other.x2z_1;
   }
   toString() {
-    return 'pushMode(' + this.y2z_1 + ')';
+    return 'pushMode(' + this.x2z_1 + ')';
   }
 }
 class LexerSkipAction {
   constructor() {
     LexerSkipAction_instance = this;
-    this.b30_1 = LexerActionType_SKIP_getInstance();
-    this.c30_1 = false;
+    this.a30_1 = LexerActionType_SKIP_getInstance();
+    this.b30_1 = false;
   }
-  e2z() {
-    return this.c30_1;
+  d2z() {
+    return this.b30_1;
   }
-  i2z(lexer) {
-    return lexer.l2h();
+  h2z(lexer) {
+    return lexer.k2h();
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    hash = MurmurHash_instance.j2n(hash, this.b30_1.k1_1);
-    return MurmurHash_instance.l2n(hash, 1);
+    var hash = MurmurHash_instance.c2z();
+    hash = MurmurHash_instance.i2n(hash, this.a30_1.d1_1);
+    return MurmurHash_instance.k2n(hash, 1);
   }
   equals(other) {
     return other === this;
@@ -4847,21 +4847,21 @@ class LexerSkipAction {
 }
 class LexerTypeAction {
   constructor(type) {
-    this.d30_1 = type;
-    this.e30_1 = LexerActionType_TYPE_getInstance();
-    this.f30_1 = false;
+    this.c30_1 = type;
+    this.d30_1 = LexerActionType_TYPE_getInstance();
+    this.e30_1 = false;
   }
-  e2z() {
-    return this.f30_1;
+  d2z() {
+    return this.e30_1;
   }
-  i2z(lexer) {
-    lexer.g2g_1 = this.d30_1;
+  h2z(lexer) {
+    lexer.f2g_1 = this.c30_1;
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    hash = MurmurHash_instance.j2n(hash, this.e30_1.k1_1);
-    hash = MurmurHash_instance.j2n(hash, this.d30_1);
-    return MurmurHash_instance.l2n(hash, 2);
+    var hash = MurmurHash_instance.c2z();
+    hash = MurmurHash_instance.i2n(hash, this.d30_1.d1_1);
+    hash = MurmurHash_instance.i2n(hash, this.c30_1);
+    return MurmurHash_instance.k2n(hash, 2);
   }
   equals(other) {
     if (other === this) {
@@ -4870,55 +4870,55 @@ class LexerTypeAction {
     if (!(other instanceof LexerTypeAction)) {
       return false;
     }
-    return this.d30_1 === other.d30_1;
+    return this.c30_1 === other.c30_1;
   }
   toString() {
-    return 'type(' + this.d30_1 + ')';
+    return 'type(' + this.c30_1 + ')';
   }
 }
 class LoopEndState extends ATNState {
   constructor() {
     super();
-    this.n2q_1 = null;
-    this.o2q_1 = 12;
+    this.m2q_1 = null;
+    this.n2q_1 = 12;
   }
-  z2c() {
-    return this.o2q_1;
+  y2c() {
+    return this.n2q_1;
   }
 }
 class SetTransition extends Transition {
   constructor(target, set) {
     super(target);
     var tmp = this;
-    tmp.n30_1 = set == null ? Companion_getInstance_26().m2v(0) : set;
-    this.o30_1 = 7;
+    tmp.m30_1 = set == null ? Companion_getInstance_26().l2v(0) : set;
+    this.n30_1 = 7;
   }
-  e2u() {
-    return this.o30_1;
-  }
-  j2v() {
+  d2u() {
     return this.n30_1;
   }
-  getLabel() {
-    return this.j2v();
+  i2v() {
+    return this.m30_1;
   }
-  f2u(symbol, minVocabSymbol, maxVocabSymbol) {
-    return this.n30_1.yk(symbol);
+  getLabel() {
+    return this.i2v();
+  }
+  e2u(symbol, minVocabSymbol, maxVocabSymbol) {
+    return this.m30_1.vk(symbol);
   }
   toString() {
-    return this.n30_1.toString();
+    return this.m30_1.toString();
   }
 }
 class NotSetTransition extends SetTransition {
   constructor(target, set) {
     super(target, set);
-    this.k30_1 = 8;
+    this.j30_1 = 8;
   }
-  e2u() {
-    return this.k30_1;
+  d2u() {
+    return this.j30_1;
   }
-  f2u(symbol, minVocabSymbol, maxVocabSymbol) {
-    return (minVocabSymbol <= symbol ? symbol <= maxVocabSymbol : false) && !super.f2u(symbol, minVocabSymbol, maxVocabSymbol);
+  e2u(symbol, minVocabSymbol, maxVocabSymbol) {
+    return (minVocabSymbol <= symbol ? symbol <= maxVocabSymbol : false) && !super.e2u(symbol, minVocabSymbol, maxVocabSymbol);
   }
   toString() {
     return '~' + super.toString();
@@ -4926,32 +4926,32 @@ class NotSetTransition extends SetTransition {
 }
 class LexerConfigHashSet extends AbstractConfigHashSet {
   constructor() {
-    super(Companion_getInstance_27().l2x_1);
+    super(Companion_getInstance_27().k2x_1);
   }
 }
 class OrderedATNConfigSet extends ATNConfigSet {
   constructor() {
     super();
-    this.t2o_1 = new LexerConfigHashSet();
+    this.s2o_1 = new LexerConfigHashSet();
   }
 }
 class Companion_16 {
   constructor() {
     Companion_instance_16 = this;
+    this.o30_1 = false;
     this.p30_1 = false;
     this.q30_1 = false;
     this.r30_1 = false;
-    this.s30_1 = false;
-    this.t30_1 = toBoolean(getSafeEnv(this, 'TURN_OFF_LR_LOOP_ENTRY_BRANCH_OPT', 'false'));
+    this.s30_1 = toBoolean(getSafeEnv(this, 'TURN_OFF_LR_LOOP_ENTRY_BRANCH_OPT', 'false'));
   }
-  u30(configs) {
+  t30(configs) {
     var alt = 0;
-    var _iterator__ex2g4s = configs.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
+    var _iterator__ex2g4s = configs.w();
+    while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
       if (alt === 0) {
-        alt = c.v2m_1;
-      } else if (!(c.v2m_1 === alt)) {
+        alt = c.u2m_1;
+      } else if (!(c.u2m_1 === alt)) {
         return 0;
       }
     }
@@ -4962,380 +4962,380 @@ class ParserATNSimulator extends ATNSimulator {
   constructor(parser, atn, decisionToDFA, sharedContextCache) {
     Companion_getInstance_16();
     super(atn, sharedContextCache);
-    this.x2i_1 = parser;
-    this.y2i_1 = decisionToDFA;
-    this.z2i_1 = PredictionMode_LL_getInstance();
+    this.w2i_1 = parser;
+    this.x2i_1 = decisionToDFA;
+    this.y2i_1 = PredictionMode_LL_getInstance();
+    this.z2i_1 = null;
     this.a2j_1 = null;
-    this.b2j_1 = null;
-    this.c2j_1 = 0;
+    this.b2j_1 = 0;
+    this.c2j_1 = null;
     this.d2j_1 = null;
-    this.e2j_1 = null;
   }
-  d2h() {
+  c2h() {
   }
-  v30(input, decision, outerContext) {
+  u30(input, decision, outerContext) {
     var tempOuterContext = outerContext;
-    if (Companion_getInstance_16().p30_1 || Companion_getInstance_16().q30_1) {
-      System_getInstance().h27_1.g27('adaptivePredict decision ' + decision + (' exec LA(1)==' + this.w30(input)) + (' line ' + ensureNotNull(input.i28(1)).h1e() + ':' + ensureNotNull(input.i28(1)).m29()));
+    if (Companion_getInstance_16().o30_1 || Companion_getInstance_16().p30_1) {
+      System_getInstance().g27_1.f27('adaptivePredict decision ' + decision + (' exec LA(1)==' + this.v30(input)) + (' line ' + ensureNotNull(input.h28(1)).e1e() + ':' + ensureNotNull(input.h28(1)).l29()));
     }
-    this.b2j_1 = input;
-    this.c2j_1 = input.v27();
-    this.d2j_1 = tempOuterContext;
-    var dfa = this.y2i_1[decision];
-    this.e2j_1 = dfa;
-    var m = input.w27();
-    var index = this.c2j_1;
+    this.a2j_1 = input;
+    this.b2j_1 = input.u27();
+    this.c2j_1 = tempOuterContext;
+    var dfa = this.x2i_1[decision];
+    this.d2j_1 = dfa;
+    var m = input.v27();
+    var index = this.b2j_1;
     try {
       var tmp;
-      if (dfa.y2x_1) {
-        tmp = dfa.x30(this.x2i_1.t2i());
+      if (dfa.x2x_1) {
+        tmp = dfa.w30(this.w2i_1.s2i());
       } else {
-        tmp = dfa.x2x_1;
+        tmp = dfa.w2x_1;
       }
       var s0 = tmp;
       if (s0 == null) {
         if (tempOuterContext == null) {
-          tempOuterContext = Companion_getInstance_3().k2k_1;
+          tempOuterContext = Companion_getInstance_3().j2k_1;
         }
         var fullCtx = false;
-        var s0Closure = this.y30(dfa.u2x_1, Companion_getInstance_3().k2k_1, fullCtx);
-        if (dfa.y2x_1) {
-          ensureNotNull(dfa.x2x_1).c2t_1 = s0Closure;
-          s0Closure = this.a31(s0Closure);
-          s0 = this.z30(dfa, DFAState.j2t(s0Closure));
-          dfa.b31(this.x2i_1.t2i(), s0);
+        var s0Closure = this.x30(dfa.t2x_1, Companion_getInstance_3().j2k_1, fullCtx);
+        if (dfa.x2x_1) {
+          ensureNotNull(dfa.w2x_1).b2t_1 = s0Closure;
+          s0Closure = this.z30(s0Closure);
+          s0 = this.y30(dfa, DFAState.i2t(s0Closure));
+          dfa.a31(this.w2i_1.s2i(), s0);
         } else {
-          s0 = this.z30(dfa, DFAState.j2t(s0Closure));
-          dfa.x2x_1 = s0;
+          s0 = this.y30(dfa, DFAState.i2t(s0Closure));
+          dfa.w2x_1 = s0;
         }
       }
-      var alt = this.c31(dfa, s0, input, index, ensureNotNull(tempOuterContext));
-      if (Companion_getInstance_16().p30_1) {
-        System_getInstance().h27_1.g27('DFA after predictATN: ' + dfa.b2e(this.x2i_1.x29()));
+      var alt = this.b31(dfa, s0, input, index, ensureNotNull(tempOuterContext));
+      if (Companion_getInstance_16().o30_1) {
+        System_getInstance().g27_1.f27('DFA after predictATN: ' + dfa.a2e(this.w2i_1.w29()));
       }
       return alt;
     }finally {
-      this.a2j_1 = null;
-      this.e2j_1 = null;
-      input.y27(index);
-      input.x27(m);
+      this.z2i_1 = null;
+      this.d2j_1 = null;
+      input.x27(index);
+      input.w27(m);
     }
   }
-  c31(dfa, s0, input, startIndex, outerContext) {
-    if (Companion_getInstance_16().p30_1 || Companion_getInstance_16().q30_1) {
-      System_getInstance().h27_1.g27('execATN decision ' + dfa.v2x_1 + (', DFA state ' + s0.toString()) + (', LA(1)==' + this.w30(input)) + (', line ' + ensureNotNull(input.i28(1)).h1e() + ':' + ensureNotNull(input.i28(1)).m29()));
+  b31(dfa, s0, input, startIndex, outerContext) {
+    if (Companion_getInstance_16().o30_1 || Companion_getInstance_16().p30_1) {
+      System_getInstance().g27_1.f27('execATN decision ' + dfa.u2x_1 + (', DFA state ' + s0.toString()) + (', LA(1)==' + this.v30(input)) + (', line ' + ensureNotNull(input.h28(1)).e1e() + ':' + ensureNotNull(input.h28(1)).l29()));
     }
     var previousD = s0;
-    var t = input.d28(1);
+    var t = input.c28(1);
     while (true) {
-      var tmp0_elvis_lhs = this.f2y(previousD, t);
-      var D = tmp0_elvis_lhs == null ? this.d31(dfa, previousD, t) : tmp0_elvis_lhs;
-      if (D === Companion_getInstance_11().k2t_1) {
-        var e = this.e31(input, outerContext, previousD.c2t_1, startIndex);
-        input.y27(startIndex);
-        var alt = this.f31(previousD.c2t_1, outerContext);
+      var tmp0_elvis_lhs = this.e2y(previousD, t);
+      var D = tmp0_elvis_lhs == null ? this.c31(dfa, previousD, t) : tmp0_elvis_lhs;
+      if (D === Companion_getInstance_11().j2t_1) {
+        var e = this.d31(input, outerContext, previousD.b2t_1, startIndex);
+        input.x27(startIndex);
+        var alt = this.e31(previousD.b2t_1, outerContext);
         if (!(alt === 0)) {
           return alt;
         }
         throw e;
       }
-      if (ensureNotNull(D).h2t_1 && !this.z2i_1.equals(PredictionMode_SLL_getInstance())) {
-        var conflictingAlts = D.c2t_1.w2o_1;
-        if (!(D.i2t_1 == null)) {
-          if (Companion_getInstance_16().p30_1) {
-            System_getInstance().h27_1.g27('DFA state has preds in DFA sim LL failover');
+      if (ensureNotNull(D).g2t_1 && !this.y2i_1.equals(PredictionMode_SLL_getInstance())) {
+        var conflictingAlts = D.b2t_1.v2o_1;
+        if (!(D.h2t_1 == null)) {
+          if (Companion_getInstance_16().o30_1) {
+            System_getInstance().g27_1.f27('DFA state has preds in DFA sim LL failover');
           }
-          var conflictIndex = input.v27();
+          var conflictIndex = input.u27();
           if (!(conflictIndex === startIndex)) {
-            input.y27(startIndex);
+            input.x27(startIndex);
           }
-          conflictingAlts = this.g31(ensureNotNull(D.i2t_1), outerContext, true);
-          if (conflictingAlts.i31() === 1) {
-            if (Companion_getInstance_16().p30_1) {
-              System_getInstance().h27_1.g27('Full LL avoided');
+          conflictingAlts = this.f31(ensureNotNull(D.h2t_1), outerContext, true);
+          if (conflictingAlts.h31() === 1) {
+            if (Companion_getInstance_16().o30_1) {
+              System_getInstance().g27_1.f27('Full LL avoided');
             }
-            return conflictingAlts.h31(0);
+            return conflictingAlts.g31(0);
           }
           if (!(conflictIndex === startIndex)) {
-            input.y27(conflictIndex);
+            input.x27(conflictIndex);
           }
         }
-        if (Companion_getInstance_16().r30_1) {
-          System_getInstance().h27_1.g27('ctx sensitive state ' + outerContext.toString() + ' in ' + toString_1(D));
+        if (Companion_getInstance_16().q30_1) {
+          System_getInstance().g27_1.f27('ctx sensitive state ' + outerContext.toString() + ' in ' + toString_1(D));
         }
         var fullCtx = true;
-        var s0Closure = this.y30(dfa.u2x_1, outerContext, fullCtx);
-        this.j31(dfa, ensureNotNull(conflictingAlts), D.c2t_1, startIndex, input.v27());
-        return this.k31(dfa, D, s0Closure, input, startIndex, outerContext);
+        var s0Closure = this.x30(dfa.t2x_1, outerContext, fullCtx);
+        this.i31(dfa, ensureNotNull(conflictingAlts), D.b2t_1, startIndex, input.u27());
+        return this.j31(dfa, D, s0Closure, input, startIndex, outerContext);
       }
-      if (D.e2t_1) {
-        if (D.i2t_1 == null) {
-          return D.f2t_1;
+      if (D.d2t_1) {
+        if (D.h2t_1 == null) {
+          return D.e2t_1;
         }
-        var stopIndex = input.v27();
-        input.y27(startIndex);
-        var alts = this.g31(ensureNotNull(D.i2t_1), outerContext, true);
-        switch (alts.i31()) {
+        var stopIndex = input.u27();
+        input.x27(startIndex);
+        var alts = this.f31(ensureNotNull(D.h2t_1), outerContext, true);
+        switch (alts.h31()) {
           case 0:
-            throw this.e31(input, outerContext, D.c2t_1, startIndex);
+            throw this.d31(input, outerContext, D.b2t_1, startIndex);
           case 1:
-            return alts.h31(0);
+            return alts.g31(0);
           default:
-            this.l31(dfa, D, startIndex, stopIndex, false, alts, D.c2t_1);
-            return alts.h31(0);
+            this.k31(dfa, D, startIndex, stopIndex, false, alts, D.b2t_1);
+            return alts.g31(0);
         }
       }
       previousD = D;
       if (!(t === -1)) {
-        input.c28();
-        t = input.d28(1);
+        input.b28();
+        t = input.c28(1);
       }
     }
   }
-  f2y(previousD, t) {
-    var edges = previousD.d2t_1;
+  e2y(previousD, t) {
+    var edges = previousD.c2t_1;
     if (edges == null || (t + 1 | 0) < 0 || (t + 1 | 0) >= edges.length) {
       return null;
     }
     return edges[t + 1 | 0];
   }
-  d31(dfa, previousD, t) {
-    var reach = this.m31(previousD.c2t_1, t, false);
+  c31(dfa, previousD, t) {
+    var reach = this.l31(previousD.b2t_1, t, false);
     if (reach == null) {
-      this.n31(dfa, previousD, t, Companion_getInstance_11().k2t_1);
-      return Companion_getInstance_11().k2t_1;
+      this.m31(dfa, previousD, t, Companion_getInstance_11().j2t_1);
+      return Companion_getInstance_11().j2t_1;
     }
-    var D = DFAState.j2t(reach);
-    var predictedAlt = Companion_getInstance_16().u30(reach);
-    if (Companion_getInstance_16().p30_1) {
-      var altSubSets = Companion_instance_18.o31(reach);
-      System_getInstance().h27_1.g27('SLL altSubSets=' + toString_0(altSubSets) + (', configs=' + toString_1(reach)) + (', predict=' + predictedAlt) + (', allSubsetsConflict=' + Companion_instance_18.p31(altSubSets)) + (', conflictingAlts=' + this.q31(reach).toString()));
+    var D = DFAState.i2t(reach);
+    var predictedAlt = Companion_getInstance_16().t30(reach);
+    if (Companion_getInstance_16().o30_1) {
+      var altSubSets = Companion_instance_18.n31(reach);
+      System_getInstance().g27_1.f27('SLL altSubSets=' + toString_0(altSubSets) + (', configs=' + toString_1(reach)) + (', predict=' + predictedAlt) + (', allSubsetsConflict=' + Companion_instance_18.o31(altSubSets)) + (', conflictingAlts=' + this.p31(reach).toString()));
     }
     if (!(predictedAlt === 0)) {
-      D.e2t_1 = true;
-      D.c2t_1.v2o_1 = predictedAlt;
-      D.f2t_1 = predictedAlt;
-    } else if (Companion_instance_18.r31(this.z2i_1, reach)) {
-      D.c2t_1.w2o_1 = this.q31(reach);
-      D.h2t_1 = true;
-      D.e2t_1 = true;
-      D.f2t_1 = ensureNotNull(D.c2t_1.w2o_1).h31(0);
+      D.d2t_1 = true;
+      D.b2t_1.u2o_1 = predictedAlt;
+      D.e2t_1 = predictedAlt;
+    } else if (Companion_instance_18.q31(this.y2i_1, reach)) {
+      D.b2t_1.v2o_1 = this.p31(reach);
+      D.g2t_1 = true;
+      D.d2t_1 = true;
+      D.e2t_1 = ensureNotNull(D.b2t_1.v2o_1).g31(0);
     }
-    if (D.e2t_1 && D.c2t_1.x2o_1) {
-      this.s31(D, ensureNotNull(this.n2c_1.s2m(dfa.v2x_1)));
-      if (!(D.i2t_1 == null)) {
-        D.f2t_1 = 0;
+    if (D.d2t_1 && D.b2t_1.w2o_1) {
+      this.r31(D, ensureNotNull(this.m2c_1.r2m(dfa.u2x_1)));
+      if (!(D.h2t_1 == null)) {
+        D.e2t_1 = 0;
       }
     }
-    return this.n31(dfa, previousD, t, D);
+    return this.m31(dfa, previousD, t, D);
   }
-  s31(dfaState, decisionState) {
-    var nAlts = decisionState.l2r();
-    var altsToCollectPredsFrom = this.t31(dfaState.c2t_1);
-    var altToPred = this.u31(altsToCollectPredsFrom, dfaState.c2t_1, nAlts);
+  r31(dfaState, decisionState) {
+    var nAlts = decisionState.k2r();
+    var altsToCollectPredsFrom = this.s31(dfaState.b2t_1);
+    var altToPred = this.t31(altsToCollectPredsFrom, dfaState.b2t_1, nAlts);
     if (!(altToPred == null)) {
-      dfaState.i2t_1 = this.v31(altsToCollectPredsFrom, altToPred);
-      dfaState.f2t_1 = 0;
+      dfaState.h2t_1 = this.u31(altsToCollectPredsFrom, altToPred);
+      dfaState.e2t_1 = 0;
     } else {
-      dfaState.f2t_1 = altsToCollectPredsFrom.h31(0);
+      dfaState.e2t_1 = altsToCollectPredsFrom.g31(0);
     }
   }
-  k31(dfa, D, s0, input, startIndex, outerContext) {
-    if (Companion_getInstance_16().p30_1 || Companion_getInstance_16().q30_1) {
-      System_getInstance().h27_1.g27('execATNWithFullContext ' + s0.toString());
+  j31(dfa, D, s0, input, startIndex, outerContext) {
+    if (Companion_getInstance_16().o30_1 || Companion_getInstance_16().p30_1) {
+      System_getInstance().g27_1.f27('execATNWithFullContext ' + s0.toString());
     }
     var fullCtx = true;
     var foundExactAmbig = false;
     var reach;
     var previous = s0;
-    input.y27(startIndex);
-    var t = input.d28(1);
+    input.x27(startIndex);
+    var t = input.c28(1);
     var predictedAlt;
     $l$loop_1: while (true) {
-      reach = this.m31(previous, t, fullCtx);
+      reach = this.l31(previous, t, fullCtx);
       if (reach == null) {
-        var e = this.e31(input, outerContext, previous, startIndex);
-        input.y27(startIndex);
-        var alt = this.f31(previous, outerContext);
+        var e = this.d31(input, outerContext, previous, startIndex);
+        input.x27(startIndex);
+        var alt = this.e31(previous, outerContext);
         if (!(alt === 0)) {
           return alt;
         }
         throw e;
       }
-      var altSubSets = Companion_instance_18.o31(reach);
-      if (Companion_getInstance_16().p30_1) {
-        System_getInstance().h27_1.g27('LL altSubSets=' + toString_0(altSubSets) + (', predict=' + Companion_instance_18.w31(altSubSets)) + (', resolvesToJustOneViableAlt=' + Companion_instance_18.x31(altSubSets)));
+      var altSubSets = Companion_instance_18.n31(reach);
+      if (Companion_getInstance_16().o30_1) {
+        System_getInstance().g27_1.f27('LL altSubSets=' + toString_0(altSubSets) + (', predict=' + Companion_instance_18.v31(altSubSets)) + (', resolvesToJustOneViableAlt=' + Companion_instance_18.w31(altSubSets)));
       }
-      reach.v2o_1 = Companion_getInstance_16().u30(reach);
-      if (!(reach.v2o_1 === 0)) {
-        predictedAlt = reach.v2o_1;
+      reach.u2o_1 = Companion_getInstance_16().t30(reach);
+      if (!(reach.u2o_1 === 0)) {
+        predictedAlt = reach.u2o_1;
         break $l$loop_1;
       }
-      if (!this.z2i_1.equals(PredictionMode_LL_EXACT_AMBIG_DETECTION_getInstance())) {
-        predictedAlt = Companion_instance_18.x31(altSubSets);
+      if (!this.y2i_1.equals(PredictionMode_LL_EXACT_AMBIG_DETECTION_getInstance())) {
+        predictedAlt = Companion_instance_18.w31(altSubSets);
         if (!(predictedAlt === 0)) {
           break $l$loop_1;
         }
       } else {
-        if (Companion_instance_18.p31(altSubSets) && Companion_instance_18.z31(altSubSets)) {
+        if (Companion_instance_18.o31(altSubSets) && Companion_instance_18.y31(altSubSets)) {
           foundExactAmbig = true;
-          predictedAlt = Companion_instance_18.y31(altSubSets);
+          predictedAlt = Companion_instance_18.x31(altSubSets);
           break $l$loop_1;
         }
       }
       previous = reach;
       if (!(t === -1)) {
-        input.c28();
-        t = input.d28(1);
+        input.b28();
+        t = input.c28(1);
       }
     }
-    if (!(ensureNotNull(reach).v2o_1 === 0)) {
-      this.a32(dfa, predictedAlt, reach, startIndex, input.v27());
+    if (!(ensureNotNull(reach).u2o_1 === 0)) {
+      this.z31(dfa, predictedAlt, reach, startIndex, input.u27());
       return predictedAlt;
     }
-    this.l31(dfa, D, startIndex, input.v27(), foundExactAmbig, reach.b2p(), reach);
+    this.k31(dfa, D, startIndex, input.u27(), foundExactAmbig, reach.a2p(), reach);
     return predictedAlt;
   }
-  m31(closure, t, fullCtx) {
-    if (Companion_getInstance_16().p30_1) {
-      System_getInstance().h27_1.g27('in computeReachSet, starting closure: ' + closure.toString());
+  l31(closure, t, fullCtx) {
+    if (Companion_getInstance_16().o30_1) {
+      System_getInstance().g27_1.f27('in computeReachSet, starting closure: ' + closure.toString());
     }
-    if (this.a2j_1 == null) {
-      this.a2j_1 = new DoubleKeyMap();
+    if (this.z2i_1 == null) {
+      this.z2i_1 = new DoubleKeyMap();
     }
     var intermediate = new ATNConfigSet(fullCtx);
     var skippedStopStates = null;
-    var _iterator__ex2g4s = closure.d1();
-    $l$loop: while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
-      if (Companion_getInstance_16().p30_1) {
-        System_getInstance().h27_1.g27('testing ' + this.m2y(t) + ' at ' + c.toString());
+    var _iterator__ex2g4s = closure.w();
+    $l$loop: while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
+      if (Companion_getInstance_16().o30_1) {
+        System_getInstance().g27_1.f27('testing ' + this.l2y(t) + ' at ' + c.toString());
       }
-      var tmp = c.u2m_1;
+      var tmp = c.t2m_1;
       if (tmp instanceof RuleStopState) {
         // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
-        if (!ensureNotNull(c.w2m_1).r2h()) {
-          throw AssertionError.yc(null);
+        if (!ensureNotNull(c.v2m_1).q2h()) {
+          throw AssertionError.vc(null);
         }
         if (fullCtx || t === -1) {
           if (skippedStopStates == null) {
-            skippedStopStates = ArrayList.b2();
+            skippedStopStates = ArrayList.u1();
           }
-          skippedStopStates.g2(c);
+          skippedStopStates.z1(c);
         }
         continue $l$loop;
       }
-      var n = c.u2m_1.l2r();
+      var n = c.t2m_1.k2r();
       var inductionVariable = 0;
       if (inductionVariable < n)
         do {
           var ti = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var trans = c.u2m_1.s2e(ti);
-          var target = this.n2y(trans, t);
+          var trans = c.t2m_1.r2e(ti);
+          var target = this.m2y(trans, t);
           if (!(target == null)) {
-            intermediate.g2p(ATNConfig.e2n(c, target), this.a2j_1);
+            intermediate.f2p(ATNConfig.d2n(c, target), this.z2i_1);
           }
         }
          while (inductionVariable < n);
     }
     var reach = null;
     if (skippedStopStates == null && !(t === -1)) {
-      if (intermediate.i2() === 1) {
+      if (intermediate.b2() === 1) {
         reach = intermediate;
-      } else if (!(Companion_getInstance_16().u30(intermediate) === 0)) {
+      } else if (!(Companion_getInstance_16().t30(intermediate) === 0)) {
         reach = intermediate;
       }
     }
     if (reach == null) {
       reach = new ATNConfigSet(fullCtx);
-      var closureBusy = HashSet.v9();
+      var closureBusy = HashSet.o9();
       var treatEofAsEpsilon = t === -1;
-      var _iterator__ex2g4s_0 = intermediate.d1();
-      while (_iterator__ex2g4s_0.e1()) {
-        var c_0 = _iterator__ex2g4s_0.f1();
-        this.b32(c_0, reach, closureBusy, false, fullCtx, treatEofAsEpsilon);
+      var _iterator__ex2g4s_0 = intermediate.w();
+      while (_iterator__ex2g4s_0.x()) {
+        var c_0 = _iterator__ex2g4s_0.y();
+        this.a32(c_0, reach, closureBusy, false, fullCtx, treatEofAsEpsilon);
       }
     }
     if (t === -1) {
-      reach = this.c32(reach, reach === intermediate);
+      reach = this.b32(reach, reach === intermediate);
     }
-    if (!(skippedStopStates == null) && (!fullCtx || !Companion_instance_18.d32(reach))) {
+    if (!(skippedStopStates == null) && (!fullCtx || !Companion_instance_18.c32(reach))) {
       // Inline function 'kotlin.collections.isNotEmpty' call
       // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
-      if (!!skippedStopStates.b1()) {
-        throw AssertionError.yc(null);
+      if (!!skippedStopStates.u()) {
+        throw AssertionError.vc(null);
       }
-      var _iterator__ex2g4s_1 = skippedStopStates.d1();
-      while (_iterator__ex2g4s_1.e1()) {
-        var c_1 = _iterator__ex2g4s_1.f1();
-        reach.g2p(c_1, this.a2j_1);
+      var _iterator__ex2g4s_1 = skippedStopStates.w();
+      while (_iterator__ex2g4s_1.x()) {
+        var c_1 = _iterator__ex2g4s_1.y();
+        reach.f2p(c_1, this.z2i_1);
       }
     }
-    if (Companion_getInstance_16().q30_1) {
-      System_getInstance().h27_1.g27('computeReachSet ' + closure.toString() + ' -> ' + toString_1(reach));
+    if (Companion_getInstance_16().p30_1) {
+      System_getInstance().g27_1.f27('computeReachSet ' + closure.toString() + ' -> ' + toString_1(reach));
     }
     var tmp_0;
-    if (reach.b1()) {
+    if (reach.u()) {
       tmp_0 = null;
     } else {
       tmp_0 = reach;
     }
     return tmp_0;
   }
-  c32(configs, lookToEndOfRule) {
-    if (Companion_instance_18.e32(configs)) {
+  b32(configs, lookToEndOfRule) {
+    if (Companion_instance_18.d32(configs)) {
       return configs;
     }
-    var result = new ATNConfigSet(configs.s2o_1);
-    var _iterator__ex2g4s = configs.d1();
-    $l$loop: while (_iterator__ex2g4s.e1()) {
-      var config = _iterator__ex2g4s.f1();
-      var tmp = config.u2m_1;
+    var result = new ATNConfigSet(configs.r2o_1);
+    var _iterator__ex2g4s = configs.w();
+    $l$loop: while (_iterator__ex2g4s.x()) {
+      var config = _iterator__ex2g4s.y();
+      var tmp = config.t2m_1;
       if (tmp instanceof RuleStopState) {
-        result.g2p(config, this.a2j_1);
+        result.f2p(config, this.z2i_1);
         continue $l$loop;
       }
-      if (lookToEndOfRule && config.u2m_1.x2s()) {
-        var nextTokens = this.n2c_1.r2c(config.u2m_1);
-        if (nextTokens.yk(-2)) {
-          var endOfRuleState = ensureNotNull(this.n2c_1.i2c_1)[config.u2m_1.u2c_1];
-          result.g2p(ATNConfig.e2n(config, ensureNotNull(endOfRuleState)), this.a2j_1);
+      if (lookToEndOfRule && config.t2m_1.w2s()) {
+        var nextTokens = this.m2c_1.q2c(config.t2m_1);
+        if (nextTokens.vk(-2)) {
+          var endOfRuleState = ensureNotNull(this.m2c_1.h2c_1)[config.t2m_1.t2c_1];
+          result.f2p(ATNConfig.d2n(config, ensureNotNull(endOfRuleState)), this.z2i_1);
         }
       }
     }
     return result;
   }
-  y30(p, ctx, fullCtx) {
-    var initialContext = Companion_instance_17.u2w(this.n2c_1, ctx);
+  x30(p, ctx, fullCtx) {
+    var initialContext = Companion_instance_17.t2w(this.m2c_1, ctx);
     var configs = new ATNConfigSet(fullCtx);
-    if (Companion_getInstance_16().q30_1) {
-      System_getInstance().h27_1.g27('computeStartState from ATN state ' + p.toString() + ' initialContext=' + initialContext.e2v(this.x2i_1));
+    if (Companion_getInstance_16().p30_1) {
+      System_getInstance().g27_1.f27('computeStartState from ATN state ' + p.toString() + ' initialContext=' + initialContext.d2v(this.w2i_1));
     }
     var inductionVariable = 0;
-    var last = p.l2r();
+    var last = p.k2r();
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var target = p.s2e(i).q2e_1;
-        var c = ATNConfig.c2n(target, i + 1 | 0, initialContext);
-        var closureBusy = HashSet.v9();
-        this.b32(c, configs, closureBusy, true, fullCtx, false);
+        var target = p.r2e(i).p2e_1;
+        var c = ATNConfig.b2n(target, i + 1 | 0, initialContext);
+        var closureBusy = HashSet.o9();
+        this.a32(c, configs, closureBusy, true, fullCtx, false);
       }
        while (inductionVariable < last);
     return configs;
   }
-  a31(configs) {
-    var statesFromAlt1 = HashMap.f8();
-    var configSet = new ATNConfigSet(configs.s2o_1);
-    var _iterator__ex2g4s = configs.d1();
-    $l$loop_0: while (_iterator__ex2g4s.e1()) {
-      var config = _iterator__ex2g4s.f1();
-      if (!(config.v2m_1 === 1)) {
+  z30(configs) {
+    var statesFromAlt1 = HashMap.y7();
+    var configSet = new ATNConfigSet(configs.r2o_1);
+    var _iterator__ex2g4s = configs.w();
+    $l$loop_0: while (_iterator__ex2g4s.x()) {
+      var config = _iterator__ex2g4s.y();
+      if (!(config.u2m_1 === 1)) {
         continue $l$loop_0;
       }
-      var tmp0_elvis_lhs = config.y2m_1.f32(this.x2i_1, ensureNotNull(this.d2j_1));
+      var tmp0_elvis_lhs = config.x2m_1.e32(this.w2i_1, ensureNotNull(this.c2j_1));
       var tmp;
       if (tmp0_elvis_lhs == null) {
         continue $l$loop_0;
@@ -5343,50 +5343,50 @@ class ParserATNSimulator extends ATNSimulator {
         tmp = tmp0_elvis_lhs;
       }
       var updatedContext = tmp;
-      var tmp2 = config.u2m_1.t2c_1;
+      var tmp2 = config.t2m_1.s2c_1;
       // Inline function 'kotlin.collections.set' call
-      var value = ensureNotNull(config.w2m_1);
-      statesFromAlt1.s3(tmp2, value);
-      if (!(updatedContext === config.y2m_1)) {
-        configSet.g2p(ATNConfig.f2n(config, updatedContext), this.a2j_1);
+      var value = ensureNotNull(config.v2m_1);
+      statesFromAlt1.l3(tmp2, value);
+      if (!(updatedContext === config.x2m_1)) {
+        configSet.f2p(ATNConfig.e2n(config, updatedContext), this.z2i_1);
       } else {
-        configSet.g2p(config, this.a2j_1);
+        configSet.f2p(config, this.z2i_1);
       }
     }
-    var _iterator__ex2g4s_0 = configs.d1();
-    $l$loop_2: while (_iterator__ex2g4s_0.e1()) {
-      var config_0 = _iterator__ex2g4s_0.f1();
-      if (config_0.v2m_1 === 1) {
+    var _iterator__ex2g4s_0 = configs.w();
+    $l$loop_2: while (_iterator__ex2g4s_0.x()) {
+      var config_0 = _iterator__ex2g4s_0.y();
+      if (config_0.u2m_1 === 1) {
         continue $l$loop_2;
       }
-      if (!config_0.b2n()) {
-        var context = statesFromAlt1.y3(config_0.u2m_1.t2c_1);
-        if (!(context == null) && equals(context, config_0.w2m_1)) {
+      if (!config_0.a2n()) {
+        var context = statesFromAlt1.r3(config_0.t2m_1.s2c_1);
+        if (!(context == null) && equals(context, config_0.v2m_1)) {
           continue $l$loop_2;
         }
       }
-      configSet.g2p(config_0, this.a2j_1);
+      configSet.f2p(config_0, this.z2i_1);
     }
     return configSet;
   }
-  n2y(trans, ttype) {
+  m2y(trans, ttype) {
     var tmp;
-    if (trans.f2u(ttype, 0, this.n2c_1.e2c_1)) {
-      tmp = trans.q2e_1;
+    if (trans.e2u(ttype, 0, this.m2c_1.d2c_1)) {
+      tmp = trans.p2e_1;
     } else {
       tmp = null;
     }
     return tmp;
   }
-  u31(ambigAlts, configs, nAlts) {
+  t31(ambigAlts, configs, nAlts) {
     // Inline function 'kotlin.arrayOfNulls' call
     var size = nAlts + 1 | 0;
     var altToPred = Array(size);
-    var _iterator__ex2g4s = configs.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
-      if (ambigAlts.k2(c.v2m_1)) {
-        altToPred[c.v2m_1] = Companion_instance_19.g32(altToPred[c.v2m_1], c.y2m_1);
+    var _iterator__ex2g4s = configs.w();
+    while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
+      if (ambigAlts.d2(c.u2m_1)) {
+        altToPred[c.u2m_1] = Companion_instance_19.f32(altToPred[c.u2m_1], c.x2m_1);
       }
     }
     var nPredAlts = 0;
@@ -5403,18 +5403,18 @@ class ParserATNSimulator extends ATNSimulator {
       }
        while (!(i === nAlts));
     if (nPredAlts === 0) {
-      if (Companion_getInstance_16().p30_1) {
-        System_getInstance().h27_1.g27('getPredsForAmbigAlts result null');
+      if (Companion_getInstance_16().o30_1) {
+        System_getInstance().g27_1.f27('getPredsForAmbigAlts result null');
       }
       return null;
     }
-    if (Companion_getInstance_16().p30_1) {
-      System_getInstance().h27_1.g27('getPredsForAmbigAlts result ' + joinToString(altToPred));
+    if (Companion_getInstance_16().o30_1) {
+      System_getInstance().g27_1.f27('getPredsForAmbigAlts result ' + joinToString(altToPred));
     }
     return altToPred;
   }
-  v31(ambigAlts, altToPred) {
-    var pairs = ArrayList.b2();
+  u31(ambigAlts, altToPred) {
+    var pairs = ArrayList.u1();
     var containsPredicate = false;
     var inductionVariable = 1;
     var last = altToPred.length;
@@ -5425,10 +5425,10 @@ class ParserATNSimulator extends ATNSimulator {
         var pred = altToPred[i];
         // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
         if (!!(pred == null)) {
-          throw AssertionError.yc(null);
+          throw AssertionError.vc(null);
         }
-        if (!(ambigAlts == null) && ambigAlts.k2(i)) {
-          pairs.g2(new PredPrediction(pred, i));
+        if (!(ambigAlts == null) && ambigAlts.d2(i)) {
+          pairs.z1(new PredPrediction(pred, i));
         }
         if (!(pred === Empty_getInstance())) {
           containsPredicate = true;
@@ -5441,92 +5441,92 @@ class ParserATNSimulator extends ATNSimulator {
     // Inline function 'kotlin.collections.toTypedArray' call
     return copyToArray(pairs);
   }
-  f31(configs, outerContext) {
-    var sets = this.h32(configs, outerContext);
+  e31(configs, outerContext) {
+    var sets = this.g32(configs, outerContext);
     var semValidConfigs = sets.first;
     var semInvalidConfigs = sets.second;
-    var alt = this.i32(semValidConfigs);
+    var alt = this.h32(semValidConfigs);
     if (!(alt === 0)) {
       return alt;
     }
-    if (semInvalidConfigs.i2() > 0) {
-      alt = this.i32(semInvalidConfigs);
+    if (semInvalidConfigs.b2() > 0) {
+      alt = this.h32(semInvalidConfigs);
       if (!(alt === 0)) {
         return alt;
       }
     }
     return 0;
   }
-  i32(configs) {
-    var alts = IntervalSet.y2b();
-    var _iterator__ex2g4s = configs.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
+  h32(configs) {
+    var alts = IntervalSet.x2b();
+    var _iterator__ex2g4s = configs.w();
+    while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
       var tmp;
-      if (c.z2m() > 0) {
+      if (c.y2m() > 0) {
         tmp = true;
       } else {
         var tmp_0;
-        var tmp_1 = c.u2m_1;
+        var tmp_1 = c.t2m_1;
         if (tmp_1 instanceof RuleStopState) {
-          tmp_0 = ensureNotNull(c.w2m_1).d2v();
+          tmp_0 = ensureNotNull(c.v2m_1).c2v();
         } else {
           tmp_0 = false;
         }
         tmp = tmp_0;
       }
       if (tmp) {
-        alts.z2b(c.v2m_1);
+        alts.y2b(c.u2m_1);
       }
     }
-    if (alts.b28() === 0) {
+    if (alts.a28() === 0) {
       return 0;
     }
-    return alts.u2e();
+    return alts.t2e();
   }
-  h32(configs, outerContext) {
-    var succeeded = new ATNConfigSet(configs.s2o_1);
-    var failed = new ATNConfigSet(configs.s2o_1);
-    var _iterator__ex2g4s = configs.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
-      if (!(c.y2m_1 === Empty_getInstance())) {
-        var predicateEvaluationResult = this.j32(c.y2m_1, outerContext, c.v2m_1, configs.s2o_1);
+  g32(configs, outerContext) {
+    var succeeded = new ATNConfigSet(configs.r2o_1);
+    var failed = new ATNConfigSet(configs.r2o_1);
+    var _iterator__ex2g4s = configs.w();
+    while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
+      if (!(c.x2m_1 === Empty_getInstance())) {
+        var predicateEvaluationResult = this.i32(c.x2m_1, outerContext, c.u2m_1, configs.r2o_1);
         if (predicateEvaluationResult) {
-          succeeded.f2p(c);
+          succeeded.e2p(c);
         } else {
-          failed.f2p(c);
+          failed.e2p(c);
         }
       } else {
-        succeeded.f2p(c);
+        succeeded.e2p(c);
       }
     }
     return new Pair(succeeded, failed);
   }
-  g31(predPredictions, outerContext, complete) {
-    var predictions = BitSet.d2p();
+  f31(predPredictions, outerContext, complete) {
+    var predictions = BitSet.c2p();
     var inductionVariable = 0;
     var last = predPredictions.length;
     $l$loop_1: while (inductionVariable < last) {
       var pair = predPredictions[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      if (pair.k32_1 === Empty_getInstance()) {
-        predictions.e2p(pair.l32_1);
+      if (pair.j32_1 === Empty_getInstance()) {
+        predictions.d2p(pair.k32_1);
         if (!complete) {
           break $l$loop_1;
         }
         continue $l$loop_1;
       }
       var fullCtx = false;
-      var predicateEvaluationResult = this.j32(pair.k32_1, outerContext, pair.l32_1, fullCtx);
-      if (Companion_getInstance_16().p30_1 || Companion_getInstance_16().r30_1) {
-        System_getInstance().h27_1.g27('eval pred ' + pair.toString() + '=' + predicateEvaluationResult);
+      var predicateEvaluationResult = this.i32(pair.j32_1, outerContext, pair.k32_1, fullCtx);
+      if (Companion_getInstance_16().o30_1 || Companion_getInstance_16().q30_1) {
+        System_getInstance().g27_1.f27('eval pred ' + pair.toString() + '=' + predicateEvaluationResult);
       }
       if (predicateEvaluationResult) {
-        if (Companion_getInstance_16().p30_1 || Companion_getInstance_16().r30_1) {
-          System_getInstance().h27_1.g27('PREDICT ' + pair.l32_1);
+        if (Companion_getInstance_16().o30_1 || Companion_getInstance_16().q30_1) {
+          System_getInstance().g27_1.f27('PREDICT ' + pair.k32_1);
         }
-        predictions.e2p(pair.l32_1);
+        predictions.d2p(pair.k32_1);
         if (!complete) {
           break $l$loop_1;
         }
@@ -5534,79 +5534,79 @@ class ParserATNSimulator extends ATNSimulator {
     }
     return predictions;
   }
-  j32(pred, parserCallStack, alt, fullCtx) {
-    return pred.m32(this.x2i_1, parserCallStack);
+  i32(pred, parserCallStack, alt, fullCtx) {
+    return pred.l32(this.w2i_1, parserCallStack);
   }
-  b32(config, configs, closureBusy, collectPredicates, fullCtx, treatEofAsEpsilon) {
+  a32(config, configs, closureBusy, collectPredicates, fullCtx, treatEofAsEpsilon) {
     var initialDepth = 0;
-    this.n32(config, configs, closureBusy, collectPredicates, fullCtx, initialDepth, treatEofAsEpsilon);
+    this.m32(config, configs, closureBusy, collectPredicates, fullCtx, initialDepth, treatEofAsEpsilon);
     // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
-    if (!(!fullCtx || !configs.y2o_1)) {
-      throw AssertionError.yc(null);
+    if (!(!fullCtx || !configs.x2o_1)) {
+      throw AssertionError.vc(null);
     }
   }
-  n32(config, configs, closureBusy, collectPredicates, fullCtx, depth, treatEofAsEpsilon) {
-    if (Companion_getInstance_16().q30_1) {
-      System_getInstance().h27_1.g27('closure(' + config.m2n(this.x2i_1, true) + ')');
+  m32(config, configs, closureBusy, collectPredicates, fullCtx, depth, treatEofAsEpsilon) {
+    if (Companion_getInstance_16().p30_1) {
+      System_getInstance().g27_1.f27('closure(' + config.l2n(this.w2i_1, true) + ')');
     }
-    var tmp = config.u2m_1;
+    var tmp = config.t2m_1;
     if (tmp instanceof RuleStopState) {
-      if (!ensureNotNull(config.w2m_1).r2h()) {
+      if (!ensureNotNull(config.v2m_1).q2h()) {
         var inductionVariable = 0;
-        var last = ensureNotNull(config.w2m_1).b28();
+        var last = ensureNotNull(config.v2m_1).a28();
         if (inductionVariable < last)
           $l$loop_0: do {
             var i = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
-            if (ensureNotNull(config.w2m_1).c2v(i) === 2147483647) {
+            if (ensureNotNull(config.v2m_1).b2v(i) === 2147483647) {
               if (fullCtx) {
-                configs.g2p(ATNConfig.e2n(config, config.u2m_1, EmptyPredictionContext_getInstance()), this.a2j_1);
+                configs.f2p(ATNConfig.d2n(config, config.t2m_1, EmptyPredictionContext_getInstance()), this.z2i_1);
                 continue $l$loop_0;
               }
-              if (Companion_getInstance_16().p30_1) {
-                System_getInstance().h27_1.g27('FALLING off rule ' + this.o32(config.u2m_1.u2c_1));
+              if (Companion_getInstance_16().o30_1) {
+                System_getInstance().g27_1.f27('FALLING off rule ' + this.n32(config.t2m_1.t2c_1));
               }
-              this.p32(config, configs, closureBusy, collectPredicates, fullCtx, depth, treatEofAsEpsilon);
+              this.o32(config, configs, closureBusy, collectPredicates, fullCtx, depth, treatEofAsEpsilon);
               continue $l$loop_0;
             }
-            var returnState = this.n2c_1.f2c_1.k2(ensureNotNull(config.w2m_1).c2v(i));
-            var newContext = ensureNotNull(config.w2m_1).b2v(i);
-            var c = ATNConfig.c2n(ensureNotNull(returnState), config.v2m_1, ensureNotNull(newContext), config.y2m_1);
-            c.x2m_1 = config.x2m_1;
+            var returnState = this.m2c_1.e2c_1.d2(ensureNotNull(config.v2m_1).b2v(i));
+            var newContext = ensureNotNull(config.v2m_1).a2v(i);
+            var c = ATNConfig.b2n(ensureNotNull(returnState), config.u2m_1, ensureNotNull(newContext), config.x2m_1);
+            c.w2m_1 = config.w2m_1;
             // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
             if (!(depth > -2147483648)) {
-              throw AssertionError.yc(null);
+              throw AssertionError.vc(null);
             }
-            this.n32(c, configs, closureBusy, collectPredicates, fullCtx, depth - 1 | 0, treatEofAsEpsilon);
+            this.m32(c, configs, closureBusy, collectPredicates, fullCtx, depth - 1 | 0, treatEofAsEpsilon);
           }
            while (inductionVariable < last);
         return Unit_instance;
       } else if (fullCtx) {
-        configs.g2p(config, this.a2j_1);
+        configs.f2p(config, this.z2i_1);
         return Unit_instance;
       } else {
-        if (Companion_getInstance_16().p30_1) {
-          System_getInstance().h27_1.g27('FALLING off rule ' + this.o32(config.u2m_1.u2c_1));
+        if (Companion_getInstance_16().o30_1) {
+          System_getInstance().g27_1.f27('FALLING off rule ' + this.n32(config.t2m_1.t2c_1));
         }
       }
     }
-    this.p32(config, configs, closureBusy, collectPredicates, fullCtx, depth, treatEofAsEpsilon);
+    this.o32(config, configs, closureBusy, collectPredicates, fullCtx, depth, treatEofAsEpsilon);
   }
-  p32(config, configs, closureBusy, collectPredicates, fullCtx, depth, treatEofAsEpsilon) {
-    var p = config.u2m_1;
-    if (!p.x2s()) {
-      configs.g2p(config, this.a2j_1);
+  o32(config, configs, closureBusy, collectPredicates, fullCtx, depth, treatEofAsEpsilon) {
+    var p = config.t2m_1;
+    if (!p.w2s()) {
+      configs.f2p(config, this.z2i_1);
     }
     var inductionVariable = 0;
-    var last = p.l2r();
+    var last = p.k2r();
     if (inductionVariable < last)
       $l$loop_1: do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        if (i === 0 && this.q32(config)) {
+        if (i === 0 && this.p32(config)) {
           continue $l$loop_1;
         }
-        var t = p.s2e(i);
+        var t = p.r2e(i);
         var tmp;
         if (!(t instanceof ActionTransition)) {
           tmp = collectPredicates;
@@ -5614,36 +5614,36 @@ class ParserATNSimulator extends ATNSimulator {
           tmp = false;
         }
         var continueCollecting = tmp;
-        var c = this.r32(config, t, continueCollecting, depth === 0, fullCtx, treatEofAsEpsilon);
+        var c = this.q32(config, t, continueCollecting, depth === 0, fullCtx, treatEofAsEpsilon);
         if (!(c == null)) {
           var newDepth = depth;
-          var tmp_0 = config.u2m_1;
+          var tmp_0 = config.t2m_1;
           if (tmp_0 instanceof RuleStopState) {
             // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
             if (!!fullCtx) {
-              throw AssertionError.yc(null);
+              throw AssertionError.vc(null);
             }
-            if (!(this.e2j_1 == null) && ensureNotNull(this.e2j_1).y2x_1) {
-              var outermostPrecedenceReturn = (t instanceof EpsilonTransition ? t : THROW_CCE()).r2w_1;
-              if (outermostPrecedenceReturn === ensureNotNull(this.e2j_1).u2x_1.u2c_1) {
-                c.a2n(true);
+            if (!(this.d2j_1 == null) && ensureNotNull(this.d2j_1).x2x_1) {
+              var outermostPrecedenceReturn = (t instanceof EpsilonTransition ? t : THROW_CCE()).q2w_1;
+              if (outermostPrecedenceReturn === ensureNotNull(this.d2j_1).t2x_1.t2c_1) {
+                c.z2m(true);
               }
             }
-            c.x2m_1 = c.x2m_1 + 1 | 0;
-            if (!closureBusy.g2(c)) {
+            c.w2m_1 = c.w2m_1 + 1 | 0;
+            if (!closureBusy.z1(c)) {
               continue $l$loop_1;
             }
-            configs.y2o_1 = true;
+            configs.x2o_1 = true;
             // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
             if (!(newDepth > -2147483648)) {
-              throw AssertionError.yc(null);
+              throw AssertionError.vc(null);
             }
             newDepth = newDepth - 1 | 0;
-            if (Companion_getInstance_16().p30_1) {
-              System_getInstance().h27_1.g27('dips into outer ctx: ' + toString_1(c));
+            if (Companion_getInstance_16().o30_1) {
+              System_getInstance().g27_1.f27('dips into outer ctx: ' + toString_1(c));
             }
           } else {
-            if (!t.d2u() && !closureBusy.g2(c)) {
+            if (!t.c2u() && !closureBusy.z1(c)) {
               continue $l$loop_1;
             }
             if (t instanceof RuleTransition) {
@@ -5652,66 +5652,66 @@ class ParserATNSimulator extends ATNSimulator {
               }
             }
           }
-          this.n32(c, configs, closureBusy, continueCollecting, fullCtx, newDepth, treatEofAsEpsilon);
+          this.m32(c, configs, closureBusy, continueCollecting, fullCtx, newDepth, treatEofAsEpsilon);
         }
       }
        while (inductionVariable < last);
   }
-  q32(config) {
-    if (Companion_getInstance_16().t30_1) {
+  p32(config) {
+    if (Companion_getInstance_16().s30_1) {
       return false;
     }
-    var p = config.u2m_1;
+    var p = config.t2m_1;
     var tmp;
     var tmp_0;
     var tmp_1;
-    if (!(p.z2c() === 10)) {
+    if (!(p.y2c() === 10)) {
       tmp_1 = true;
     } else {
-      tmp_1 = !(p instanceof StarLoopEntryState ? p : THROW_CCE()).f2s_1;
+      tmp_1 = !(p instanceof StarLoopEntryState ? p : THROW_CCE()).e2s_1;
     }
     if (tmp_1) {
       tmp_0 = true;
     } else {
-      tmp_0 = ensureNotNull(config.w2m_1).r2h();
+      tmp_0 = ensureNotNull(config.v2m_1).q2h();
     }
     if (tmp_0) {
       tmp = true;
     } else {
-      tmp = ensureNotNull(config.w2m_1).d2v();
+      tmp = ensureNotNull(config.v2m_1).c2v();
     }
     if (tmp) {
       return false;
     }
-    var numCtxs = ensureNotNull(config.w2m_1).b28();
+    var numCtxs = ensureNotNull(config.v2m_1).a28();
     var inductionVariable = 0;
     if (inductionVariable < numCtxs)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var returnState = this.n2c_1.f2c_1.k2(ensureNotNull(config.w2m_1).c2v(i));
-        if (!(ensureNotNull(returnState).u2c_1 === p.u2c_1)) {
+        var returnState = this.m2c_1.e2c_1.d2(ensureNotNull(config.v2m_1).b2v(i));
+        if (!(ensureNotNull(returnState).t2c_1 === p.t2c_1)) {
           return false;
         }
       }
        while (inductionVariable < numCtxs);
-    var tmp_2 = p.s2e(0).q2e_1;
+    var tmp_2 = p.r2e(0).p2e_1;
     var decisionStartState = tmp_2 instanceof BlockStartState ? tmp_2 : THROW_CCE();
-    var blockEndStateNum = ensureNotNull(decisionStartState.y2q_1).t2c_1;
-    var tmp_3 = this.n2c_1.f2c_1.k2(blockEndStateNum);
+    var blockEndStateNum = ensureNotNull(decisionStartState.x2q_1).s2c_1;
+    var tmp_3 = this.m2c_1.e2c_1.d2(blockEndStateNum);
     var blockEndState = tmp_3 instanceof BlockEndState ? tmp_3 : THROW_CCE();
     var inductionVariable_0 = 0;
     if (inductionVariable_0 < numCtxs)
       $l$loop_2: do {
         var i_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        var returnStateNumber = ensureNotNull(config.w2m_1).c2v(i_0);
-        var returnState_0 = this.n2c_1.f2c_1.k2(returnStateNumber);
-        if (!(ensureNotNull(returnState_0).l2r() === 1) || !returnState_0.s2e(0).d2u()) {
+        var returnStateNumber = ensureNotNull(config.v2m_1).b2v(i_0);
+        var returnState_0 = this.m2c_1.e2c_1.d2(returnStateNumber);
+        if (!(ensureNotNull(returnState_0).k2r() === 1) || !returnState_0.r2e(0).c2u()) {
           return false;
         }
-        var returnStateTarget = returnState_0.s2e(0).q2e_1;
-        if (returnState_0.z2c() === 8 && returnStateTarget === p) {
+        var returnStateTarget = returnState_0.r2e(0).p2e_1;
+        if (returnState_0.y2c() === 8 && returnStateTarget === p) {
           continue $l$loop_2;
         }
         if (returnState_0 === blockEndState) {
@@ -5720,7 +5720,7 @@ class ParserATNSimulator extends ATNSimulator {
         if (returnStateTarget === blockEndState) {
           continue $l$loop_2;
         }
-        if (returnStateTarget.z2c() === 8 && returnStateTarget.l2r() === 1 && returnStateTarget.s2e(0).d2u() && returnStateTarget.s2e(0).q2e_1 === p) {
+        if (returnStateTarget.y2c() === 8 && returnStateTarget.k2r() === 1 && returnStateTarget.r2e(0).c2u() && returnStateTarget.r2e(0).p2e_1 === p) {
           continue $l$loop_2;
         }
         return false;
@@ -5728,30 +5728,30 @@ class ParserATNSimulator extends ATNSimulator {
        while (inductionVariable_0 < numCtxs);
     return true;
   }
-  o32(index) {
+  n32(index) {
     if (index >= 0) {
-      return this.x2i_1.c2e()[index];
+      return this.w2i_1.b2e()[index];
     }
     return '<rule ' + index + '>';
   }
-  r32(config, t, collectPredicates, inContext, fullCtx, treatEofAsEpsilon) {
-    switch (t.e2u()) {
+  q32(config, t, collectPredicates, inContext, fullCtx, treatEofAsEpsilon) {
+    switch (t.d2u()) {
       case 3:
-        return this.s32(config, t instanceof RuleTransition ? t : THROW_CCE());
+        return this.r32(config, t instanceof RuleTransition ? t : THROW_CCE());
       case 10:
-        return this.t32(config, t instanceof PrecedencePredicateTransition ? t : THROW_CCE(), collectPredicates, inContext, fullCtx);
+        return this.s32(config, t instanceof PrecedencePredicateTransition ? t : THROW_CCE(), collectPredicates, inContext, fullCtx);
       case 4:
-        return this.u32(config, t instanceof PredicateTransition ? t : THROW_CCE(), collectPredicates, inContext, fullCtx);
+        return this.t32(config, t instanceof PredicateTransition ? t : THROW_CCE(), collectPredicates, inContext, fullCtx);
       case 6:
-        return this.v32(config, t instanceof ActionTransition ? t : THROW_CCE());
+        return this.u32(config, t instanceof ActionTransition ? t : THROW_CCE());
       case 1:
-        return ATNConfig.e2n(config, t.q2e_1);
+        return ATNConfig.d2n(config, t.p2e_1);
       case 5:
       case 2:
       case 7:
         if (treatEofAsEpsilon) {
-          if (t.f2u(-1, 0, 1)) {
-            return ATNConfig.e2n(config, t.q2e_1);
+          if (t.e2u(-1, 0, 1)) {
+            return ATNConfig.d2n(config, t.p2e_1);
           }
         }
 
@@ -5760,297 +5760,297 @@ class ParserATNSimulator extends ATNSimulator {
         return null;
     }
   }
-  v32(config, t) {
-    if (Companion_getInstance_16().p30_1) {
-      System_getInstance().h27_1.g27('ACTION edge ' + t.i2u_1 + ':' + t.j2u_1);
+  u32(config, t) {
+    if (Companion_getInstance_16().o30_1) {
+      System_getInstance().g27_1.f27('ACTION edge ' + t.h2u_1 + ':' + t.i2u_1);
     }
-    return ATNConfig.e2n(config, t.q2e_1);
+    return ATNConfig.d2n(config, t.p2e_1);
   }
-  t32(config, pt, collectPredicates, inContext, fullCtx) {
-    if (Companion_getInstance_16().p30_1) {
-      System_getInstance().h27_1.g27('PRED (collectPredicates=' + collectPredicates + ') ' + pt.y32_1 + '>=_p, ctx dependent=true');
-      System_getInstance().h27_1.g27('context surrounding pred is ' + toString_0(this.x2i_1.j2k()));
+  s32(config, pt, collectPredicates, inContext, fullCtx) {
+    if (Companion_getInstance_16().o30_1) {
+      System_getInstance().g27_1.f27('PRED (collectPredicates=' + collectPredicates + ') ' + pt.x32_1 + '>=_p, ctx dependent=true');
+      System_getInstance().g27_1.f27('context surrounding pred is ' + toString_0(this.w2i_1.i2k()));
     }
     var c = null;
     if (collectPredicates && inContext) {
       if (fullCtx) {
-        var currentPosition = ensureNotNull(this.b2j_1).v27();
-        ensureNotNull(this.b2j_1).y27(this.c2j_1);
-        var predSucceeds = this.j32(pt.b33(), ensureNotNull(this.d2j_1), config.v2m_1, fullCtx);
-        ensureNotNull(this.b2j_1).y27(currentPosition);
+        var currentPosition = ensureNotNull(this.a2j_1).u27();
+        ensureNotNull(this.a2j_1).x27(this.b2j_1);
+        var predSucceeds = this.i32(pt.a33(), ensureNotNull(this.c2j_1), config.u2m_1, fullCtx);
+        ensureNotNull(this.a2j_1).x27(currentPosition);
         if (predSucceeds) {
-          c = ATNConfig.e2n(config, pt.q2e_1);
+          c = ATNConfig.d2n(config, pt.p2e_1);
         }
       } else {
-        var newSemCtx = Companion_instance_19.c33(config.y2m_1, pt.b33());
-        c = ATNConfig.d2n(config, pt.q2e_1, ensureNotNull(newSemCtx));
+        var newSemCtx = Companion_instance_19.b33(config.x2m_1, pt.a33());
+        c = ATNConfig.c2n(config, pt.p2e_1, ensureNotNull(newSemCtx));
       }
     } else {
-      c = ATNConfig.e2n(config, pt.q2e_1);
+      c = ATNConfig.d2n(config, pt.p2e_1);
     }
-    if (Companion_getInstance_16().p30_1) {
-      System_getInstance().h27_1.g27('config from pred transition=' + toString_1(c));
+    if (Companion_getInstance_16().o30_1) {
+      System_getInstance().g27_1.f27('config from pred transition=' + toString_1(c));
     }
     return c;
   }
-  u32(config, pt, collectPredicates, inContext, fullCtx) {
-    if (Companion_getInstance_16().p30_1) {
-      System_getInstance().h27_1.g27('PRED (collectPredicates=' + collectPredicates + ')' + (' ' + pt.w2y_1 + ':' + pt.x2y_1) + (', ctx dependent=' + pt.y2y_1));
-      System_getInstance().h27_1.g27('context surrounding pred is ' + toString_0(this.x2i_1.j2k()));
+  t32(config, pt, collectPredicates, inContext, fullCtx) {
+    if (Companion_getInstance_16().o30_1) {
+      System_getInstance().g27_1.f27('PRED (collectPredicates=' + collectPredicates + ')' + (' ' + pt.v2y_1 + ':' + pt.w2y_1) + (', ctx dependent=' + pt.x2y_1));
+      System_getInstance().g27_1.f27('context surrounding pred is ' + toString_0(this.w2i_1.i2k()));
     }
     var c = null;
-    if (collectPredicates && (!pt.y2y_1 || (pt.y2y_1 && inContext))) {
+    if (collectPredicates && (!pt.x2y_1 || (pt.x2y_1 && inContext))) {
       if (fullCtx) {
-        var currentPosition = ensureNotNull(this.b2j_1).v27();
-        ensureNotNull(this.b2j_1).y27(this.c2j_1);
-        var predSucceeds = this.j32(pt.b33(), ensureNotNull(this.d2j_1), config.v2m_1, fullCtx);
-        ensureNotNull(this.b2j_1).y27(currentPosition);
+        var currentPosition = ensureNotNull(this.a2j_1).u27();
+        ensureNotNull(this.a2j_1).x27(this.b2j_1);
+        var predSucceeds = this.i32(pt.a33(), ensureNotNull(this.c2j_1), config.u2m_1, fullCtx);
+        ensureNotNull(this.a2j_1).x27(currentPosition);
         if (predSucceeds) {
-          c = ATNConfig.e2n(config, pt.q2e_1);
+          c = ATNConfig.d2n(config, pt.p2e_1);
         }
       } else {
-        var newSemCtx = Companion_instance_19.c33(config.y2m_1, pt.b33());
-        c = ATNConfig.d2n(config, pt.q2e_1, ensureNotNull(newSemCtx));
+        var newSemCtx = Companion_instance_19.b33(config.x2m_1, pt.a33());
+        c = ATNConfig.c2n(config, pt.p2e_1, ensureNotNull(newSemCtx));
       }
     } else {
-      c = ATNConfig.e2n(config, pt.q2e_1);
+      c = ATNConfig.d2n(config, pt.p2e_1);
     }
-    if (Companion_getInstance_16().p30_1) {
-      System_getInstance().h27_1.g27('config from pred transition=' + toString_1(c));
+    if (Companion_getInstance_16().o30_1) {
+      System_getInstance().g27_1.f27('config from pred transition=' + toString_1(c));
     }
     return c;
   }
-  s32(config, t) {
-    if (Companion_getInstance_16().p30_1) {
-      System_getInstance().h27_1.g27('CALL rule ' + this.o32(t.q2e_1.u2c_1) + ', ctx=' + toString_1(config.w2m_1));
+  r32(config, t) {
+    if (Companion_getInstance_16().o30_1) {
+      System_getInstance().g27_1.f27('CALL rule ' + this.n32(t.p2e_1.t2c_1) + ', ctx=' + toString_1(config.v2m_1));
     }
-    var returnState = t.d2f_1;
-    var newContext = Companion_instance_20.y2w(config.w2m_1, returnState.t2c_1);
-    return ATNConfig.e2n(config, t.q2e_1, newContext);
+    var returnState = t.c2f_1;
+    var newContext = Companion_instance_20.x2w(config.v2m_1, returnState.s2c_1);
+    return ATNConfig.d2n(config, t.p2e_1, newContext);
   }
-  q31(configs) {
-    var altSets = Companion_instance_18.o31(configs);
-    return Companion_instance_18.d33(altSets);
+  p31(configs) {
+    var altSets = Companion_instance_18.n31(configs);
+    return Companion_instance_18.c33(altSets);
   }
-  t31(configs) {
+  s31(configs) {
     var conflictingAlts;
-    if (!(configs.v2o_1 === 0)) {
-      conflictingAlts = BitSet.d2p();
-      conflictingAlts.e2p(configs.v2o_1);
+    if (!(configs.u2o_1 === 0)) {
+      conflictingAlts = BitSet.c2p();
+      conflictingAlts.d2p(configs.u2o_1);
     } else {
-      conflictingAlts = ensureNotNull(configs.w2o_1);
+      conflictingAlts = ensureNotNull(configs.v2o_1);
     }
     return conflictingAlts;
   }
-  m2y(t) {
+  l2y(t) {
     if (t === -1) {
       return 'EOF';
     }
-    var vocabulary = this.x2i_1.x29();
-    var displayName = vocabulary.y29(t);
+    var vocabulary = this.w2i_1.w29();
+    var displayName = vocabulary.x29(t);
     if (displayName === t.toString()) {
       return displayName;
     }
     return displayName + '<' + t + '>';
   }
-  w30(input) {
-    return this.m2y(input.d28(1));
+  v30(input) {
+    return this.l2y(input.c28(1));
   }
-  e31(input, outerContext, configs, startIndex) {
-    return NoViableAltException.r2i(this.x2i_1, input, input.k2(startIndex), input.i28(1), configs, outerContext);
+  d31(input, outerContext, configs, startIndex) {
+    return NoViableAltException.q2i(this.w2i_1, input, input.d2(startIndex), input.h28(1), configs, outerContext);
   }
-  n31(dfa, from, t, to) {
-    if (Companion_getInstance_16().p30_1) {
-      System_getInstance().h27_1.g27('EDGE ' + toString_1(from) + ' -> ' + toString_1(to) + ' upon ' + this.m2y(t));
+  m31(dfa, from, t, to) {
+    if (Companion_getInstance_16().o30_1) {
+      System_getInstance().g27_1.f27('EDGE ' + toString_1(from) + ' -> ' + toString_1(to) + ' upon ' + this.l2y(t));
     }
     if (to == null) {
       return null;
     }
-    var tto = this.z30(dfa, to);
-    if (from == null || t < -1 || t > this.n2c_1.e2c_1) {
+    var tto = this.y30(dfa, to);
+    if (from == null || t < -1 || t > this.m2c_1.d2c_1) {
       return tto;
     }
     // Inline function 'com.strumenta.antlrkotlin.runtime.synchronized' call
-    if (from.d2t_1 == null) {
+    if (from.c2t_1 == null) {
       var tmp = from;
       // Inline function 'kotlin.arrayOfNulls' call
-      var size = (this.n2c_1.e2c_1 + 1 | 0) + 1 | 0;
-      tmp.d2t_1 = Array(size);
+      var size = (this.m2c_1.d2c_1 + 1 | 0) + 1 | 0;
+      tmp.c2t_1 = Array(size);
     }
-    ensureNotNull(from.d2t_1)[t + 1 | 0] = tto;
-    if (Companion_getInstance_16().p30_1) {
-      System_getInstance().h27_1.g27('DFA=\n' + dfa.b2e(this.x2i_1.x29()));
+    ensureNotNull(from.c2t_1)[t + 1 | 0] = tto;
+    if (Companion_getInstance_16().o30_1) {
+      System_getInstance().g27_1.f27('DFA=\n' + dfa.a2e(this.w2i_1.w29()));
     }
     return tto;
   }
-  z30(dfa, D) {
-    if (D === Companion_getInstance_11().k2t_1) {
+  y30(dfa, D) {
+    if (D === Companion_getInstance_11().j2t_1) {
       return D;
     }
     // Inline function 'com.strumenta.antlrkotlin.runtime.synchronized' call
-    dfa.w2x_1;
-    var existing = dfa.w2x_1.y3(D);
+    dfa.v2x_1;
+    var existing = dfa.v2x_1.r3(D);
     if (!(existing == null)) {
-      if (Companion_getInstance_16().q30_1) {
-        System_getInstance().h27_1.g27('addDFAState ' + D.toString() + ' exists');
+      if (Companion_getInstance_16().p30_1) {
+        System_getInstance().g27_1.f27('addDFAState ' + D.toString() + ' exists');
       }
       return existing;
     }
-    D.b2t_1 = dfa.w2x_1.i2();
-    if (!D.c2t_1.a2p_1) {
-      D.c2t_1.m2p(this);
-      D.c2t_1.g2m(true);
+    D.a2t_1 = dfa.v2x_1.b2();
+    if (!D.b2t_1.z2o_1) {
+      D.b2t_1.l2p(this);
+      D.b2t_1.f2m(true);
     }
-    if (Companion_getInstance_16().q30_1) {
-      System_getInstance().h27_1.g27('addDFAState new ' + D.toString());
+    if (Companion_getInstance_16().p30_1) {
+      System_getInstance().g27_1.f27('addDFAState new ' + D.toString());
     }
     // Inline function 'kotlin.collections.set' call
-    dfa.w2x_1.s3(D, D);
+    dfa.v2x_1.l3(D, D);
     return D;
   }
-  j31(dfa, conflictingAlts, configs, startIndex, stopIndex) {
-    if (Companion_getInstance_16().p30_1 || Companion_getInstance_16().s30_1) {
-      var interval = Companion_getInstance_25().y28(startIndex, stopIndex);
-      System_getInstance().h27_1.g27('reportAttemptingFullContext' + (' decision=' + dfa.v2x_1 + ':' + configs.toString()) + (', input=' + this.x2i_1.v2b().q28(interval)));
+  i31(dfa, conflictingAlts, configs, startIndex, stopIndex) {
+    if (Companion_getInstance_16().o30_1 || Companion_getInstance_16().r30_1) {
+      var interval = Companion_getInstance_25().x28(startIndex, stopIndex);
+      System_getInstance().g27_1.f27('reportAttemptingFullContext' + (' decision=' + dfa.u2x_1 + ':' + configs.toString()) + (', input=' + this.w2i_1.u2b().p28(interval)));
     }
-    this.x2i_1.x2h().o27(this.x2i_1, dfa, startIndex, stopIndex, conflictingAlts, configs);
+    this.w2i_1.w2h().n27(this.w2i_1, dfa, startIndex, stopIndex, conflictingAlts, configs);
   }
-  a32(dfa, prediction, configs, startIndex, stopIndex) {
-    if (Companion_getInstance_16().p30_1 || Companion_getInstance_16().s30_1) {
-      var interval = Companion_getInstance_25().y28(startIndex, stopIndex);
-      System_getInstance().h27_1.g27('reportContextSensitivity' + (' decision=' + dfa.v2x_1 + ':' + configs.toString()) + (', input=' + this.x2i_1.v2b().q28(interval)));
+  z31(dfa, prediction, configs, startIndex, stopIndex) {
+    if (Companion_getInstance_16().o30_1 || Companion_getInstance_16().r30_1) {
+      var interval = Companion_getInstance_25().x28(startIndex, stopIndex);
+      System_getInstance().g27_1.f27('reportContextSensitivity' + (' decision=' + dfa.u2x_1 + ':' + configs.toString()) + (', input=' + this.w2i_1.u2b().p28(interval)));
     }
-    this.x2i_1.x2h().p27(this.x2i_1, dfa, startIndex, stopIndex, prediction, configs);
+    this.w2i_1.w2h().o27(this.w2i_1, dfa, startIndex, stopIndex, prediction, configs);
   }
-  l31(dfa, D, startIndex, stopIndex, exact, ambigAlts, configs) {
-    if (Companion_getInstance_16().p30_1 || Companion_getInstance_16().s30_1) {
-      var interval = Companion_getInstance_25().y28(startIndex, stopIndex);
-      System_getInstance().h27_1.g27('reportAmbiguity ' + ambigAlts.toString() + ':' + configs.toString() + ', input=' + this.x2i_1.v2b().q28(interval));
+  k31(dfa, D, startIndex, stopIndex, exact, ambigAlts, configs) {
+    if (Companion_getInstance_16().o30_1 || Companion_getInstance_16().r30_1) {
+      var interval = Companion_getInstance_25().x28(startIndex, stopIndex);
+      System_getInstance().g27_1.f27('reportAmbiguity ' + ambigAlts.toString() + ':' + configs.toString() + ', input=' + this.w2i_1.u2b().p28(interval));
     }
-    this.x2i_1.x2h().n27(this.x2i_1, dfa, startIndex, stopIndex, exact, ambigAlts, configs);
+    this.w2i_1.w2h().m27(this.w2i_1, dfa, startIndex, stopIndex, exact, ambigAlts, configs);
   }
 }
 class PlusBlockStartState extends BlockStartState {
   constructor() {
     super();
-    this.r2s_1 = null;
-    this.s2s_1 = 4;
+    this.q2s_1 = null;
+    this.r2s_1 = 4;
   }
-  z2c() {
-    return this.s2s_1;
+  y2c() {
+    return this.r2s_1;
   }
 }
 class PlusLoopbackState extends DecisionState {
   constructor() {
     super();
-    this.n33_1 = 11;
+    this.m33_1 = 11;
   }
-  z2c() {
-    return this.n33_1;
+  y2c() {
+    return this.m33_1;
   }
 }
 class PrecedencePredicateTransition extends AbstractPredicateTransition {
   constructor(target, precedence) {
     super(target);
-    this.y32_1 = precedence;
-    this.z32_1 = 10;
-    this.a33_1 = true;
-  }
-  e2u() {
-    return this.z32_1;
+    this.x32_1 = precedence;
+    this.y32_1 = 10;
+    this.z32_1 = true;
   }
   d2u() {
-    return this.a33_1;
+    return this.y32_1;
   }
-  b33() {
-    return PrecedencePredicate.p33(this.y32_1);
+  c2u() {
+    return this.z32_1;
   }
-  f2u(symbol, minVocabSymbol, maxVocabSymbol) {
+  a33() {
+    return PrecedencePredicate.o33(this.x32_1);
+  }
+  e2u(symbol, minVocabSymbol, maxVocabSymbol) {
     return false;
   }
   toString() {
-    return '' + this.y32_1 + ' >= _p';
+    return '' + this.x32_1 + ' >= _p';
   }
 }
 class PredicateTransition extends AbstractPredicateTransition {
   constructor(target, ruleIndex, predIndex, isCtxDependent) {
     super(target);
-    this.w2y_1 = ruleIndex;
-    this.x2y_1 = predIndex;
-    this.y2y_1 = isCtxDependent;
-    this.z2y_1 = 4;
-    this.a2z_1 = true;
-  }
-  e2u() {
-    return this.z2y_1;
+    this.v2y_1 = ruleIndex;
+    this.w2y_1 = predIndex;
+    this.x2y_1 = isCtxDependent;
+    this.y2y_1 = 4;
+    this.z2y_1 = true;
   }
   d2u() {
-    return this.a2z_1;
+    return this.y2y_1;
   }
-  b33() {
-    return Predicate.t33(this.w2y_1, this.x2y_1, this.y2y_1);
+  c2u() {
+    return this.z2y_1;
   }
-  f2u(symbol, minVocabSymbol, maxVocabSymbol) {
+  a33() {
+    return Predicate.s33(this.v2y_1, this.w2y_1, this.x2y_1);
+  }
+  e2u(symbol, minVocabSymbol, maxVocabSymbol) {
     return false;
   }
   toString() {
-    return 'pred_' + this.w2y_1 + ':' + this.x2y_1;
+    return 'pred_' + this.v2y_1 + ':' + this.w2y_1;
   }
 }
 class Companion_17 {
   constructor() {
-    this.h2p_1 = 1;
-    this.i2p_1 = 2147483647;
-    this.j2p_1 = 0;
+    this.g2p_1 = 1;
+    this.h2p_1 = 2147483647;
+    this.i2p_1 = 0;
   }
-  u2w(atn, outerContext) {
-    var tempOuterContext = outerContext == null ? Companion_getInstance_3().k2k_1 : outerContext;
-    if (tempOuterContext.h2f() == null || tempOuterContext === Companion_getInstance_3().k2k_1) {
+  t2w(atn, outerContext) {
+    var tempOuterContext = outerContext == null ? Companion_getInstance_3().j2k_1 : outerContext;
+    if (tempOuterContext.g2f() == null || tempOuterContext === Companion_getInstance_3().j2k_1) {
       return EmptyPredictionContext_getInstance();
     }
-    var parent = this.u2w(atn, tempOuterContext.h2f());
-    var state = atn.f2c_1.k2(tempOuterContext.e2e_1);
-    var tmp = ensureNotNull(state).s2e(0);
+    var parent = this.t2w(atn, tempOuterContext.g2f());
+    var state = atn.e2c_1.d2(tempOuterContext.d2e_1);
+    var tmp = ensureNotNull(state).r2e(0);
     var transition = tmp instanceof RuleTransition ? tmp : THROW_CCE();
-    return Companion_instance_20.y2w(parent, transition.d2f_1.t2c_1);
+    return Companion_instance_20.x2w(parent, transition.c2f_1.s2c_1);
   }
-  u33() {
-    var hash = MurmurHash_instance.i2n(1);
-    hash = MurmurHash_instance.l2n(hash, 0);
+  t33() {
+    var hash = MurmurHash_instance.h2n(1);
+    hash = MurmurHash_instance.k2n(hash, 0);
     return hash;
   }
-  v33(parent, returnState) {
-    var hash = MurmurHash_instance.i2n(1);
-    hash = MurmurHash_instance.k2n(hash, parent);
-    hash = MurmurHash_instance.j2n(hash, returnState);
-    hash = MurmurHash_instance.l2n(hash, 2);
+  u33(parent, returnState) {
+    var hash = MurmurHash_instance.h2n(1);
+    hash = MurmurHash_instance.j2n(hash, parent);
+    hash = MurmurHash_instance.i2n(hash, returnState);
+    hash = MurmurHash_instance.k2n(hash, 2);
     return hash;
   }
-  s2u(parents, returnStates) {
-    var hash = MurmurHash_instance.i2n(1);
+  r2u(parents, returnStates) {
+    var hash = MurmurHash_instance.h2n(1);
     var inductionVariable = 0;
     var last = parents.length;
     while (inductionVariable < last) {
       var parent = parents[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      hash = MurmurHash_instance.k2n(hash, parent);
+      hash = MurmurHash_instance.j2n(hash, parent);
     }
     var inductionVariable_0 = 0;
     var last_0 = returnStates.length;
     while (inductionVariable_0 < last_0) {
       var returnState = returnStates[inductionVariable_0];
       inductionVariable_0 = inductionVariable_0 + 1 | 0;
-      hash = MurmurHash_instance.j2n(hash, returnState);
+      hash = MurmurHash_instance.i2n(hash, returnState);
     }
-    hash = MurmurHash_instance.l2n(hash, imul(2, parents.length));
+    hash = MurmurHash_instance.k2n(hash, imul(2, parents.length));
     return hash;
   }
-  k2p(a, b, rootIsWildcard, mergeCache) {
+  j2p(a, b, rootIsWildcard, mergeCache) {
     var aa = a;
     var bb = b;
     // Inline function 'com.strumenta.antlrkotlin.runtime.assert' call
     if (!(!(aa == null) && !(bb == null))) {
-      throw AssertionError.yc(null);
+      throw AssertionError.vc(null);
     }
     if (a === b || equals(aa, bb)) {
       return aa;
@@ -6062,7 +6062,7 @@ class Companion_17 {
       tmp = false;
     }
     if (tmp) {
-      return this.w33(aa, bb, rootIsWildcard, mergeCache);
+      return this.v33(aa, bb, rootIsWildcard, mergeCache);
     }
     if (rootIsWildcard) {
       if (aa instanceof EmptyPredictionContext) {
@@ -6073,92 +6073,92 @@ class Companion_17 {
       }
     }
     if (aa instanceof SingletonPredictionContext) {
-      aa = ArrayPredictionContext.w2u(aa);
+      aa = ArrayPredictionContext.v2u(aa);
     }
     if (bb instanceof SingletonPredictionContext) {
-      bb = ArrayPredictionContext.w2u(bb);
+      bb = ArrayPredictionContext.v2u(bb);
     }
     var tmp_0 = aa instanceof ArrayPredictionContext ? aa : THROW_CCE();
-    return this.x33(tmp_0, bb instanceof ArrayPredictionContext ? bb : THROW_CCE(), rootIsWildcard, mergeCache);
+    return this.w33(tmp_0, bb instanceof ArrayPredictionContext ? bb : THROW_CCE(), rootIsWildcard, mergeCache);
   }
-  w33(a, b, rootIsWildcard, mergeCache) {
+  v33(a, b, rootIsWildcard, mergeCache) {
     if (!(mergeCache == null)) {
-      var previous = mergeCache.z33(a, b);
+      var previous = mergeCache.y33(a, b);
       if (!(previous == null)) {
         return previous;
       }
-      previous = mergeCache.z33(b, a);
+      previous = mergeCache.y33(b, a);
       if (!(previous == null)) {
         return previous;
       }
     }
-    var rootMerge = this.a34(a, b, rootIsWildcard);
+    var rootMerge = this.z33(a, b, rootIsWildcard);
     if (!(rootMerge == null)) {
       if (mergeCache == null)
         null;
       else
-        mergeCache.b34(a, b, rootMerge);
+        mergeCache.a34(a, b, rootMerge);
       return rootMerge;
     }
-    if (a.a2v_1 === b.a2v_1) {
-      var parent = this.k2p(a.z2u_1, b.z2u_1, rootIsWildcard, mergeCache);
-      if (parent === a.z2u_1) {
+    if (a.z2u_1 === b.z2u_1) {
+      var parent = this.j2p(a.y2u_1, b.y2u_1, rootIsWildcard, mergeCache);
+      if (parent === a.y2u_1) {
         return a;
       }
-      if (parent === b.z2u_1) {
+      if (parent === b.y2u_1) {
         return b;
       }
-      var a_ = Companion_instance_20.y2w(parent, a.a2v_1);
+      var a_ = Companion_instance_20.x2w(parent, a.z2u_1);
       if (mergeCache == null)
         null;
       else
-        mergeCache.b34(a, b, a_);
+        mergeCache.a34(a, b, a_);
       return a_;
     }
     var singleParent = null;
-    if (a === b || (!(a.z2u_1 == null) && equals(a.z2u_1, b.z2u_1))) {
-      singleParent = a.z2u_1;
+    if (a === b || (!(a.y2u_1 == null) && equals(a.y2u_1, b.y2u_1))) {
+      singleParent = a.y2u_1;
     }
     if (!(singleParent == null)) {
       // Inline function 'kotlin.intArrayOf' call
-      var payloads = new Int32Array([a.a2v_1, b.a2v_1]);
-      if (a.a2v_1 > b.a2v_1) {
-        payloads[0] = b.a2v_1;
-        payloads[1] = a.a2v_1;
+      var payloads = new Int32Array([a.z2u_1, b.z2u_1]);
+      if (a.z2u_1 > b.z2u_1) {
+        payloads[0] = b.z2u_1;
+        payloads[1] = a.z2u_1;
       }
       // Inline function 'kotlin.arrayOf' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
       var parents = [singleParent, singleParent];
-      var a__0 = ArrayPredictionContext.r2u(parents, payloads);
+      var a__0 = ArrayPredictionContext.q2u(parents, payloads);
       if (mergeCache == null)
         null;
       else
-        mergeCache.b34(a, b, a__0);
+        mergeCache.a34(a, b, a__0);
       return a__0;
     }
     // Inline function 'kotlin.intArrayOf' call
-    var payloads_0 = new Int32Array([a.a2v_1, b.a2v_1]);
+    var payloads_0 = new Int32Array([a.z2u_1, b.z2u_1]);
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    var parents_0 = [a.z2u_1, b.z2u_1];
-    if (a.a2v_1 > b.a2v_1) {
-      payloads_0[0] = b.a2v_1;
-      payloads_0[1] = a.a2v_1;
+    var parents_0 = [a.y2u_1, b.y2u_1];
+    if (a.z2u_1 > b.z2u_1) {
+      payloads_0[0] = b.z2u_1;
+      payloads_0[1] = a.z2u_1;
       // Inline function 'kotlin.arrayOf' call
       // Inline function 'kotlin.js.unsafeCast' call
       // Inline function 'kotlin.js.asDynamic' call
-      parents_0 = [b.z2u_1, a.z2u_1];
+      parents_0 = [b.y2u_1, a.y2u_1];
     }
-    var a__1 = ArrayPredictionContext.r2u(parents_0, payloads_0);
+    var a__1 = ArrayPredictionContext.q2u(parents_0, payloads_0);
     if (mergeCache == null)
       null;
     else
-      mergeCache.b34(a, b, a__1);
+      mergeCache.a34(a, b, a__1);
     return a__1;
   }
-  a34(a, b, rootIsWildcard) {
+  z33(a, b, rootIsWildcard) {
     if (rootIsWildcard) {
       if (a === EmptyPredictionContext_getInstance()) {
         return EmptyPredictionContext_getInstance();
@@ -6172,38 +6172,38 @@ class Companion_17 {
       }
       if (a === EmptyPredictionContext_getInstance()) {
         // Inline function 'kotlin.intArrayOf' call
-        var payloads = new Int32Array([b.a2v_1, 2147483647]);
+        var payloads = new Int32Array([b.z2u_1, 2147483647]);
         // Inline function 'kotlin.arrayOf' call
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
-        var parents = [b.z2u_1, null];
-        return ArrayPredictionContext.r2u(parents, payloads);
+        var parents = [b.y2u_1, null];
+        return ArrayPredictionContext.q2u(parents, payloads);
       }
       if (b === EmptyPredictionContext_getInstance()) {
         // Inline function 'kotlin.intArrayOf' call
-        var payloads_0 = new Int32Array([a.a2v_1, 2147483647]);
+        var payloads_0 = new Int32Array([a.z2u_1, 2147483647]);
         // Inline function 'kotlin.arrayOf' call
         // Inline function 'kotlin.js.unsafeCast' call
         // Inline function 'kotlin.js.asDynamic' call
-        var parents_0 = [a.z2u_1, null];
-        return ArrayPredictionContext.r2u(parents_0, payloads_0);
+        var parents_0 = [a.y2u_1, null];
+        return ArrayPredictionContext.q2u(parents_0, payloads_0);
       }
     }
     return null;
   }
-  x33(a, b, rootIsWildcard, mergeCache) {
+  w33(a, b, rootIsWildcard, mergeCache) {
     if (!(mergeCache == null)) {
-      var previous = mergeCache.z33(a, b);
+      var previous = mergeCache.y33(a, b);
       if (!(previous == null)) {
-        if (Companion_getInstance_16().q30_1) {
-          System_getInstance().h27_1.g27('mergeArrays a=' + a.toString() + ',b=' + b.toString() + ' -> previous');
+        if (Companion_getInstance_16().p30_1) {
+          System_getInstance().g27_1.f27('mergeArrays a=' + a.toString() + ',b=' + b.toString() + ' -> previous');
         }
         return previous;
       }
-      previous = mergeCache.z33(b, a);
+      previous = mergeCache.y33(b, a);
       if (!(previous == null)) {
-        if (Companion_getInstance_16().q30_1) {
-          System_getInstance().h27_1.g27('mergeArrays a=' + a.toString() + ',b=' + b.toString() + ' -> previous');
+        if (Companion_getInstance_16().p30_1) {
+          System_getInstance().g27_1.f27('mergeArrays a=' + a.toString() + ',b=' + b.toString() + ' -> previous');
         }
         return previous;
       }
@@ -6211,83 +6211,83 @@ class Companion_17 {
     var i = 0;
     var j = 0;
     var k = 0;
-    var mergedReturnStates = new Int32Array(a.q2u_1.length + b.q2u_1.length | 0);
+    var mergedReturnStates = new Int32Array(a.p2u_1.length + b.p2u_1.length | 0);
     // Inline function 'kotlin.arrayOfNulls' call
-    var size = a.q2u_1.length + b.q2u_1.length | 0;
+    var size = a.p2u_1.length + b.p2u_1.length | 0;
     var mergedParents = Array(size);
-    while (i < a.q2u_1.length && j < b.q2u_1.length) {
-      var aParent = a.p2u_1[i];
-      var bParent = b.p2u_1[j];
-      if (a.q2u_1[i] === b.q2u_1[j]) {
-        var payload = a.q2u_1[i];
+    while (i < a.p2u_1.length && j < b.p2u_1.length) {
+      var aParent = a.o2u_1[i];
+      var bParent = b.o2u_1[j];
+      if (a.p2u_1[i] === b.p2u_1[j]) {
+        var payload = a.p2u_1[i];
         var both = payload === 2147483647 && aParent == null && bParent == null;
         var ax_ax = !(aParent == null) && !(bParent == null) && equals(aParent, bParent);
         if (both || ax_ax) {
           mergedParents[k] = aParent;
           mergedReturnStates[k] = payload;
         } else {
-          var mergedParent = this.k2p(aParent, bParent, rootIsWildcard, mergeCache);
+          var mergedParent = this.j2p(aParent, bParent, rootIsWildcard, mergeCache);
           mergedParents[k] = mergedParent;
           mergedReturnStates[k] = payload;
         }
         i = i + 1 | 0;
         j = j + 1 | 0;
-      } else if (a.q2u_1[i] < b.q2u_1[j]) {
+      } else if (a.p2u_1[i] < b.p2u_1[j]) {
         mergedParents[k] = aParent;
-        mergedReturnStates[k] = a.q2u_1[i];
+        mergedReturnStates[k] = a.p2u_1[i];
         i = i + 1 | 0;
       } else {
         mergedParents[k] = bParent;
-        mergedReturnStates[k] = b.q2u_1[j];
+        mergedReturnStates[k] = b.p2u_1[j];
         j = j + 1 | 0;
       }
       k = k + 1 | 0;
     }
-    if (i < a.q2u_1.length) {
+    if (i < a.p2u_1.length) {
       var inductionVariable = i;
-      var last = a.q2u_1.length;
+      var last = a.p2u_1.length;
       if (inductionVariable < last)
         do {
           var p = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          mergedParents[k] = a.p2u_1[p];
-          mergedReturnStates[k] = a.q2u_1[p];
+          mergedParents[k] = a.o2u_1[p];
+          mergedReturnStates[k] = a.p2u_1[p];
           k = k + 1 | 0;
         }
          while (inductionVariable < last);
     } else {
       var inductionVariable_0 = j;
-      var last_0 = b.q2u_1.length;
+      var last_0 = b.p2u_1.length;
       if (inductionVariable_0 < last_0)
         do {
           var p_0 = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
-          mergedParents[k] = b.p2u_1[p_0];
-          mergedReturnStates[k] = b.q2u_1[p_0];
+          mergedParents[k] = b.o2u_1[p_0];
+          mergedReturnStates[k] = b.p2u_1[p_0];
           k = k + 1 | 0;
         }
          while (inductionVariable_0 < last_0);
     }
     if (k < mergedParents.length) {
       if (k === 1) {
-        var a_ = Companion_instance_20.y2w(mergedParents[0], mergedReturnStates[0]);
+        var a_ = Companion_instance_20.x2w(mergedParents[0], mergedReturnStates[0]);
         if (mergeCache == null)
           null;
         else
-          mergeCache.b34(a, b, a_);
+          mergeCache.a34(a, b, a_);
         return a_;
       }
       mergedParents = copyOf(mergedParents, k);
       mergedReturnStates = copyOf_0(mergedReturnStates, k);
     }
-    var M = ArrayPredictionContext.r2u(mergedParents, mergedReturnStates);
+    var M = ArrayPredictionContext.q2u(mergedParents, mergedReturnStates);
     if (M.equals(a)) {
       if (mergeCache == null)
         null;
       else
-        mergeCache.b34(a, b, a);
-      if (Companion_getInstance_16().q30_1) {
-        System_getInstance().h27_1.g27('mergeArrays a=' + a.toString() + ',b=' + b.toString() + ' -> a');
+        mergeCache.a34(a, b, a);
+      if (Companion_getInstance_16().p30_1) {
+        System_getInstance().g27_1.f27('mergeArrays a=' + a.toString() + ',b=' + b.toString() + ' -> a');
       }
       return a;
     }
@@ -6295,24 +6295,24 @@ class Companion_17 {
       if (mergeCache == null)
         null;
       else
-        mergeCache.b34(a, b, b);
-      if (Companion_getInstance_16().q30_1) {
-        System_getInstance().h27_1.g27('mergeArrays a=' + a.toString() + ',b=' + b.toString() + ' -> b');
+        mergeCache.a34(a, b, b);
+      if (Companion_getInstance_16().p30_1) {
+        System_getInstance().g27_1.f27('mergeArrays a=' + a.toString() + ',b=' + b.toString() + ' -> b');
       }
       return b;
     }
-    this.c34(mergedParents);
+    this.b34(mergedParents);
     if (mergeCache == null)
       null;
     else
-      mergeCache.b34(a, b, M);
-    if (Companion_getInstance_16().q30_1) {
-      System_getInstance().h27_1.g27('mergeArrays a=' + a.toString() + ',b=' + b.toString() + ' -> ' + M.toString());
+      mergeCache.a34(a, b, M);
+    if (Companion_getInstance_16().p30_1) {
+      System_getInstance().g27_1.f27('mergeArrays a=' + a.toString() + ',b=' + b.toString() + ' -> ' + M.toString());
     }
     return M;
   }
-  c34(parents) {
-    var uniqueParents = HashMap.f8();
+  b34(parents) {
+    var uniqueParents = HashMap.y7();
     var inductionVariable = 0;
     var last = parents.length - 1 | 0;
     if (inductionVariable <= last)
@@ -6320,9 +6320,9 @@ class Companion_17 {
         var p = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
         var parent = parents[p];
-        if (!uniqueParents.w3(parent)) {
+        if (!uniqueParents.p3(parent)) {
           // Inline function 'kotlin.collections.set' call
-          uniqueParents.s3(parent, parent);
+          uniqueParents.l3(parent, parent);
         }
       }
        while (inductionVariable <= last);
@@ -6332,28 +6332,28 @@ class Companion_17 {
       do {
         var p_0 = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        parents[p_0] = uniqueParents.y3(parents[p_0]);
+        parents[p_0] = uniqueParents.r3(parents[p_0]);
       }
        while (inductionVariable_0 <= last_0);
   }
-  l2t(context, contextCache, visited) {
-    if (context.r2h()) {
+  k2t(context, contextCache, visited) {
+    if (context.q2h()) {
       return context;
     }
-    var existing = visited.y3(context);
+    var existing = visited.r3(context);
     if (!(existing == null)) {
       return existing;
     }
-    existing = contextCache.e34(context);
+    existing = contextCache.d34(context);
     if (!(existing == null)) {
       // Inline function 'kotlin.collections.set' call
       var value = existing;
-      visited.s3(context, value);
+      visited.l3(context, value);
       return existing;
     }
     var changed = false;
     // Inline function 'kotlin.arrayOfNulls' call
-    var size = context.b28();
+    var size = context.a28();
     var parents = Array(size);
     var inductionVariable = 0;
     var last = parents.length - 1 | 0;
@@ -6361,19 +6361,19 @@ class Companion_17 {
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var parent = this.l2t(ensureNotNull(context.b2v(i)), contextCache, visited);
-        if (changed || !(parent === context.b2v(i))) {
+        var parent = this.k2t(ensureNotNull(context.a2v(i)), contextCache, visited);
+        if (changed || !(parent === context.a2v(i))) {
           if (!changed) {
             // Inline function 'kotlin.arrayOfNulls' call
-            var size_0 = context.b28();
+            var size_0 = context.a28();
             parents = Array(size_0);
             var inductionVariable_0 = 0;
-            var last_0 = context.b28();
+            var last_0 = context.a28();
             if (inductionVariable_0 < last_0)
               do {
                 var j = inductionVariable_0;
                 inductionVariable_0 = inductionVariable_0 + 1 | 0;
-                parents[j] = context.b2v(j);
+                parents[j] = context.a2v(j);
               }
                while (inductionVariable_0 < last_0);
             changed = true;
@@ -6383,9 +6383,9 @@ class Companion_17 {
       }
        while (inductionVariable <= last);
     if (!changed) {
-      contextCache.f34(context);
+      contextCache.e34(context);
       // Inline function 'kotlin.collections.set' call
-      visited.s3(context, context);
+      visited.l3(context, context);
       return context;
     }
     var tmp;
@@ -6394,92 +6394,92 @@ class Companion_17 {
       tmp = EmptyPredictionContext_getInstance();
     } else {
       if (parents.length === 1) {
-        tmp = Companion_instance_20.y2w(parents[0], context.c2v(0));
+        tmp = Companion_instance_20.x2w(parents[0], context.b2v(0));
       } else {
         var arrayPredictionContext = context instanceof ArrayPredictionContext ? context : THROW_CCE();
-        tmp = ArrayPredictionContext.r2u(parents, arrayPredictionContext.q2u_1);
+        tmp = ArrayPredictionContext.q2u(parents, arrayPredictionContext.p2u_1);
       }
     }
     var updated = tmp;
-    contextCache.f34(updated);
+    contextCache.e34(updated);
     // Inline function 'kotlin.collections.set' call
-    visited.s3(updated, updated);
+    visited.l3(updated, updated);
     // Inline function 'kotlin.collections.set' call
-    visited.s3(context, updated);
+    visited.l3(context, updated);
     return updated;
   }
 }
 class PredictionContextCache {
   constructor() {
-    this.d34_1 = HashMap.f8();
+    this.c34_1 = HashMap.y7();
   }
-  f34(ctx) {
+  e34(ctx) {
     if (ctx === EmptyPredictionContext_getInstance()) {
       return EmptyPredictionContext_getInstance();
     }
-    var existing = this.d34_1.y3(ctx);
+    var existing = this.c34_1.r3(ctx);
     if (!(existing == null)) {
       return existing;
     }
     // Inline function 'kotlin.collections.set' call
-    this.d34_1.s3(ctx, ctx);
+    this.c34_1.l3(ctx, ctx);
     return ctx;
   }
-  e34(ctx) {
-    return this.d34_1.y3(ctx);
+  d34(ctx) {
+    return this.c34_1.r3(ctx);
   }
 }
 class FlexibleHashMap {
   constructor(comparator, initialCapacity, initialBucketCapacity) {
-    comparator = comparator === VOID ? Companion_getInstance_27().l2x_1 : comparator;
+    comparator = comparator === VOID ? Companion_getInstance_27().k2x_1 : comparator;
     initialCapacity = initialCapacity === VOID ? 16 : initialCapacity;
     initialBucketCapacity = initialBucketCapacity === VOID ? 8 : initialBucketCapacity;
-    this.g34_1 = comparator;
-    this.h34_1 = initialCapacity;
-    this.i34_1 = initialBucketCapacity;
-    this.k34_1 = 0;
-    this.l34_1 = 1;
-    this.m34_1 = 0;
-    this.j34_1 = createEntryListArray(Companion_instance_23, this.i34_1);
+    this.f34_1 = comparator;
+    this.g34_1 = initialCapacity;
+    this.h34_1 = initialBucketCapacity;
+    this.j34_1 = 0;
+    this.k34_1 = 1;
+    this.l34_1 = 0;
+    this.i34_1 = createEntryListArray(Companion_instance_23, this.h34_1);
     var tmp = this;
     // Inline function 'kotlin.math.floor' call
-    var x = this.h34_1 * 0.75;
+    var x = this.g34_1 * 0.75;
     var tmp$ret$0 = Math.floor(x);
-    tmp.m34_1 = numberToInt(tmp$ret$0);
+    tmp.l34_1 = numberToInt(tmp$ret$0);
   }
-  i2() {
-    return this.k34_1;
+  b2() {
+    return this.j34_1;
   }
-  u3() {
-    throw UnsupportedOperationException.x7();
+  n3() {
+    throw UnsupportedOperationException.q7();
   }
-  v3() {
-    var a = ArrayList.f2(this.i2());
-    var indexedObject = this.j34_1;
+  o3() {
+    var a = ArrayList.y1(this.b2());
+    var indexedObject = this.i34_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     while (inductionVariable < last) {
       var bucket = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       if (!(bucket == null)) {
-        var _iterator__ex2g4s = bucket.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var entry = _iterator__ex2g4s.f1();
-          a.g2(ensureNotNull(entry).b38_1);
+        var _iterator__ex2g4s = bucket.w();
+        while (_iterator__ex2g4s.x()) {
+          var entry = _iterator__ex2g4s.y();
+          a.z1(ensureNotNull(entry).a38_1);
         }
       }
     }
     return a;
   }
-  t2() {
-    throw UnsupportedOperationException.x7();
+  m2() {
+    throw UnsupportedOperationException.q7();
   }
-  y3(key) {
+  r3(key) {
     if (key == null) {
       return null;
     }
-    var b = this.n34(key);
-    var tmp0_elvis_lhs = this.j34_1[b];
+    var b = this.m34(key);
+    var tmp0_elvis_lhs = this.i34_1[b];
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return null;
@@ -6487,60 +6487,60 @@ class FlexibleHashMap {
       tmp = tmp0_elvis_lhs;
     }
     var bucket = tmp;
-    var _iterator__ex2g4s = bucket.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var e = _iterator__ex2g4s.f1();
-      if (this.g34_1.r2o(e == null ? null : e.a38_1, key)) {
-        return e == null ? null : e.b38_1;
+    var _iterator__ex2g4s = bucket.w();
+    while (_iterator__ex2g4s.x()) {
+      var e = _iterator__ex2g4s.y();
+      if (this.f34_1.q2o(e == null ? null : e.z37_1, key)) {
+        return e == null ? null : e.a38_1;
       }
     }
     return null;
   }
-  s3(key, value) {
+  l3(key, value) {
     if (key == null) {
       return null;
     }
-    if (this.k34_1 > this.m34_1) {
-      this.i2o();
+    if (this.j34_1 > this.l34_1) {
+      this.h2o();
     }
-    var b = this.n34(key);
-    var existingBucket = this.j34_1[b];
+    var b = this.m34(key);
+    var existingBucket = this.i34_1[b];
     var tmp;
     if (!(existingBucket == null)) {
       tmp = existingBucket;
     } else {
-      var list = ArrayList.b2();
-      this.j34_1[b] = list;
+      var list = ArrayList.u1();
+      this.i34_1[b] = list;
       tmp = list;
     }
     var bucket = tmp;
-    var _iterator__ex2g4s = bucket.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var e = _iterator__ex2g4s.f1();
-      if (this.g34_1.r2o(e == null ? null : e.a38_1, key)) {
-        var prev = e == null ? null : e.b38_1;
+    var _iterator__ex2g4s = bucket.w();
+    while (_iterator__ex2g4s.x()) {
+      var e = _iterator__ex2g4s.y();
+      if (this.f34_1.q2o(e == null ? null : e.z37_1, key)) {
+        var prev = e == null ? null : e.a38_1;
         if (e == null)
           null;
         else {
-          e.b38_1 = value;
+          e.a38_1 = value;
         }
-        this.k34_1 = this.k34_1 + 1 | 0;
+        this.j34_1 = this.j34_1 + 1 | 0;
         return prev;
       }
     }
-    bucket.g2(new Entry(key, value));
-    this.k34_1 = this.k34_1 + 1 | 0;
+    bucket.z1(new Entry(key, value));
+    this.j34_1 = this.j34_1 + 1 | 0;
     return null;
   }
-  t3(key) {
-    throw UnsupportedOperationException.x7();
+  m3(key) {
+    throw UnsupportedOperationException.q7();
   }
-  w3(key) {
-    return !(this.y3(key) == null);
+  p3(key) {
+    return !(this.r3(key) == null);
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    var indexedObject = this.j34_1;
+    var hash = MurmurHash_instance.c2z();
+    var indexedObject = this.i34_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     $l$loop: while (inductionVariable < last) {
@@ -6549,33 +6549,33 @@ class FlexibleHashMap {
       if (bucket == null) {
         continue $l$loop;
       }
-      var _iterator__ex2g4s = bucket.d1();
-      $l$loop_0: while (_iterator__ex2g4s.e1()) {
-        var e = _iterator__ex2g4s.f1();
+      var _iterator__ex2g4s = bucket.w();
+      $l$loop_0: while (_iterator__ex2g4s.x()) {
+        var e = _iterator__ex2g4s.y();
         if (e == null) {
           break $l$loop_0;
         }
-        hash = MurmurHash_instance.j2n(hash, this.g34_1.p2o(e.a38_1));
+        hash = MurmurHash_instance.i2n(hash, this.f34_1.o2o(e.z37_1));
       }
     }
-    hash = MurmurHash_instance.l2n(hash, this.i2());
+    hash = MurmurHash_instance.k2n(hash, this.b2());
     return hash;
   }
   equals(other) {
-    throw UnsupportedOperationException.x7();
+    throw UnsupportedOperationException.q7();
   }
-  n34(key) {
-    var hash = this.g34_1.p2o(key);
-    return hash & (this.j34_1.length - 1 | 0);
+  m34(key) {
+    var hash = this.f34_1.o2o(key);
+    return hash & (this.i34_1.length - 1 | 0);
   }
-  i2o() {
-    var old = this.j34_1;
-    this.l34_1 = this.l34_1 + 4 | 0;
-    var newCapacity = imul(this.j34_1.length, 2);
+  h2o() {
+    var old = this.i34_1;
+    this.k34_1 = this.k34_1 + 4 | 0;
+    var newCapacity = imul(this.i34_1.length, 2);
     var newTable = createEntryListArray(Companion_instance_23, newCapacity);
-    this.j34_1 = newTable;
-    this.m34_1 = numberToInt(newCapacity * 0.75);
-    var oldSize = this.i2();
+    this.i34_1 = newTable;
+    this.l34_1 = numberToInt(newCapacity * 0.75);
+    var oldSize = this.b2();
     var inductionVariable = 0;
     var last = old.length;
     $l$loop: while (inductionVariable < last) {
@@ -6584,28 +6584,28 @@ class FlexibleHashMap {
       if (bucket == null) {
         continue $l$loop;
       }
-      var _iterator__ex2g4s = bucket.d1();
-      $l$loop_0: while (_iterator__ex2g4s.e1()) {
-        var e = _iterator__ex2g4s.f1();
+      var _iterator__ex2g4s = bucket.w();
+      $l$loop_0: while (_iterator__ex2g4s.x()) {
+        var e = _iterator__ex2g4s.y();
         if (e == null) {
           break $l$loop_0;
         }
-        this.s3(e.a38_1, e.b38_1);
+        this.l3(e.z37_1, e.a38_1);
       }
     }
-    this.k34_1 = oldSize;
+    this.j34_1 = oldSize;
   }
-  b1() {
-    return this.k34_1 === 0;
+  u() {
+    return this.j34_1 === 0;
   }
   toString() {
-    if (this.i2() === 0) {
+    if (this.b2() === 0) {
       return '{}';
     }
     var first = true;
-    var buf = StringBuilder.z();
-    buf.a1('{');
-    var indexedObject = this.j34_1;
+    var buf = StringBuilder.s();
+    buf.t('{');
+    var indexedObject = this.i34_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     $l$loop: while (inductionVariable < last) {
@@ -6614,21 +6614,21 @@ class FlexibleHashMap {
       if (bucket == null) {
         continue $l$loop;
       }
-      var _iterator__ex2g4s = bucket.d1();
-      $l$loop_0: while (_iterator__ex2g4s.e1()) {
-        var e = _iterator__ex2g4s.f1();
+      var _iterator__ex2g4s = bucket.w();
+      $l$loop_0: while (_iterator__ex2g4s.x()) {
+        var e = _iterator__ex2g4s.y();
         if (e == null) {
           break $l$loop_0;
         }
         if (first) {
           first = false;
         } else {
-          buf.a1(', ');
+          buf.t(', ');
         }
-        buf.a1(e.toString());
+        buf.t(e.toString());
       }
     }
-    buf.a1('}');
+    buf.t('}');
     return buf.toString();
   }
 }
@@ -6643,272 +6643,272 @@ class AltAndContextConfigEqualityComparator extends AbstractEqualityComparator {
     super();
     AltAndContextConfigEqualityComparator_instance = this;
   }
-  o2o(obj) {
-    var hashCode = MurmurHash_instance.i2n(7);
-    hashCode = MurmurHash_instance.j2n(hashCode, obj.u2m_1.t2c_1);
-    hashCode = MurmurHash_instance.k2n(hashCode, obj.w2m_1);
-    hashCode = MurmurHash_instance.l2n(hashCode, 2);
+  n2o(obj) {
+    var hashCode = MurmurHash_instance.h2n(7);
+    hashCode = MurmurHash_instance.i2n(hashCode, obj.t2m_1.s2c_1);
+    hashCode = MurmurHash_instance.j2n(hashCode, obj.v2m_1);
+    hashCode = MurmurHash_instance.k2n(hashCode, 2);
     return hashCode;
   }
-  p2o(obj) {
-    return this.o2o(obj instanceof ATNConfig ? obj : THROW_CCE());
+  o2o(obj) {
+    return this.n2o(obj instanceof ATNConfig ? obj : THROW_CCE());
   }
-  q2o(a, b) {
+  p2o(a, b) {
     if (a === b) {
       return true;
     }
     if (a == null || b == null) {
       return false;
     }
-    return a.u2m_1.t2c_1 === b.u2m_1.t2c_1 && equals(a.w2m_1, b.w2m_1);
+    return a.t2m_1.s2c_1 === b.t2m_1.s2c_1 && equals(a.v2m_1, b.v2m_1);
   }
-  r2o(a, b) {
+  q2o(a, b) {
     var tmp = (a == null ? true : a instanceof ATNConfig) ? a : THROW_CCE();
-    return this.q2o(tmp, (b == null ? true : b instanceof ATNConfig) ? b : THROW_CCE());
+    return this.p2o(tmp, (b == null ? true : b instanceof ATNConfig) ? b : THROW_CCE());
   }
 }
 class Companion_18 {
-  r31(mode, configs) {
+  q31(mode, configs) {
     var tempConfig = configs;
-    if (this.e32(tempConfig)) {
+    if (this.d32(tempConfig)) {
       return true;
     }
     if (mode.equals(PredictionMode_SLL_getInstance())) {
-      if (tempConfig.x2o_1) {
+      if (tempConfig.w2o_1) {
         var dup = new ATNConfigSet();
-        var _iterator__ex2g4s = tempConfig.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var c = _iterator__ex2g4s.f1();
+        var _iterator__ex2g4s = tempConfig.w();
+        while (_iterator__ex2g4s.x()) {
+          var c = _iterator__ex2g4s.y();
           var tempC = c;
-          tempC = ATNConfig.f2n(tempC, Empty_getInstance());
-          dup.f2p(tempC);
+          tempC = ATNConfig.e2n(tempC, Empty_getInstance());
+          dup.e2p(tempC);
         }
         tempConfig = dup;
       }
     }
-    var altSets = this.o31(tempConfig);
-    return this.o34(altSets) && !this.p34(tempConfig);
+    var altSets = this.n31(tempConfig);
+    return this.n34(altSets) && !this.o34(tempConfig);
   }
-  d32(configs) {
-    var _iterator__ex2g4s = configs.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
-      var tmp = c.u2m_1;
+  c32(configs) {
+    var _iterator__ex2g4s = configs.w();
+    while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
+      var tmp = c.t2m_1;
       if (tmp instanceof RuleStopState) {
         return true;
       }
     }
     return false;
   }
-  e32(configs) {
-    var _iterator__ex2g4s = configs.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var config = _iterator__ex2g4s.f1();
-      var tmp = config.u2m_1;
+  d32(configs) {
+    var _iterator__ex2g4s = configs.w();
+    while (_iterator__ex2g4s.x()) {
+      var config = _iterator__ex2g4s.y();
+      var tmp = config.t2m_1;
       if (!(tmp instanceof RuleStopState)) {
         return false;
       }
     }
     return true;
   }
-  x31(altSets) {
-    return this.y31(altSets);
-  }
-  p31(altSets) {
-    return !this.q34(altSets);
-  }
-  q34(altSets) {
-    var _iterator__ex2g4s = altSets.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var alts = _iterator__ex2g4s.f1();
-      if (alts.i31() === 1) {
-        return true;
-      }
-    }
-    return false;
-  }
-  o34(altSets) {
-    var _iterator__ex2g4s = altSets.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var alts = _iterator__ex2g4s.f1();
-      if (alts.i31() > 1) {
-        return true;
-      }
-    }
-    return false;
-  }
-  z31(altSets) {
-    var it = altSets.d1();
-    var first = it.f1();
-    while (it.e1()) {
-      var next = it.f1();
-      if (!next.equals(first)) {
-        return false;
-      }
-    }
-    return true;
-  }
   w31(altSets) {
-    var all = this.d33(altSets);
-    if (all.i31() === 1) {
-      return all.h31(0);
-    }
-    return 0;
+    return this.x31(altSets);
   }
-  d33(altSets) {
-    var all = BitSet.d2p();
-    var _iterator__ex2g4s = altSets.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var alts = _iterator__ex2g4s.f1();
-      all.r34(alts);
-    }
-    return all;
+  o31(altSets) {
+    return !this.p34(altSets);
   }
-  o31(configs) {
-    var configToAlts = new AltAndContextMap();
-    var _iterator__ex2g4s = configs.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
-      var alts = configToAlts.y3(c);
-      if (alts == null) {
-        alts = BitSet.d2p();
-        // Inline function 'kotlin.collections.set' call
-        var value = alts;
-        configToAlts.s3(c, value);
+  p34(altSets) {
+    var _iterator__ex2g4s = altSets.w();
+    while (_iterator__ex2g4s.x()) {
+      var alts = _iterator__ex2g4s.y();
+      if (alts.h31() === 1) {
+        return true;
       }
-      alts.e2p(c.v2m_1);
     }
-    return configToAlts.v3();
+    return false;
   }
-  s34(configs) {
-    var m = HashMap.f8();
-    var _iterator__ex2g4s = configs.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var c = _iterator__ex2g4s.f1();
-      var alts = m.y3(c.u2m_1);
-      if (alts == null) {
-        alts = BitSet.d2p();
-        var tmp2 = c.u2m_1;
-        // Inline function 'kotlin.collections.set' call
-        var value = alts;
-        m.s3(tmp2, value);
-      }
-      alts.e2p(c.v2m_1);
-    }
-    return m;
-  }
-  p34(configs) {
-    var x = this.s34(configs);
-    var _iterator__ex2g4s = x.v3().d1();
-    while (_iterator__ex2g4s.e1()) {
-      var alts = _iterator__ex2g4s.f1();
-      if (alts.i31() === 1) {
+  n34(altSets) {
+    var _iterator__ex2g4s = altSets.w();
+    while (_iterator__ex2g4s.x()) {
+      var alts = _iterator__ex2g4s.y();
+      if (alts.h31() > 1) {
         return true;
       }
     }
     return false;
   }
   y31(altSets) {
-    var viableAlts = BitSet.d2p();
-    var _iterator__ex2g4s = altSets.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var alts = _iterator__ex2g4s.f1();
-      var minAlt = alts.h31(0);
-      viableAlts.e2p(minAlt);
-      if (viableAlts.i31() > 1) {
+    var it = altSets.w();
+    var first = it.y();
+    while (it.x()) {
+      var next = it.y();
+      if (!next.equals(first)) {
+        return false;
+      }
+    }
+    return true;
+  }
+  v31(altSets) {
+    var all = this.c33(altSets);
+    if (all.h31() === 1) {
+      return all.g31(0);
+    }
+    return 0;
+  }
+  c33(altSets) {
+    var all = BitSet.c2p();
+    var _iterator__ex2g4s = altSets.w();
+    while (_iterator__ex2g4s.x()) {
+      var alts = _iterator__ex2g4s.y();
+      all.q34(alts);
+    }
+    return all;
+  }
+  n31(configs) {
+    var configToAlts = new AltAndContextMap();
+    var _iterator__ex2g4s = configs.w();
+    while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
+      var alts = configToAlts.r3(c);
+      if (alts == null) {
+        alts = BitSet.c2p();
+        // Inline function 'kotlin.collections.set' call
+        var value = alts;
+        configToAlts.l3(c, value);
+      }
+      alts.d2p(c.u2m_1);
+    }
+    return configToAlts.o3();
+  }
+  r34(configs) {
+    var m = HashMap.y7();
+    var _iterator__ex2g4s = configs.w();
+    while (_iterator__ex2g4s.x()) {
+      var c = _iterator__ex2g4s.y();
+      var alts = m.r3(c.t2m_1);
+      if (alts == null) {
+        alts = BitSet.c2p();
+        var tmp2 = c.t2m_1;
+        // Inline function 'kotlin.collections.set' call
+        var value = alts;
+        m.l3(tmp2, value);
+      }
+      alts.d2p(c.u2m_1);
+    }
+    return m;
+  }
+  o34(configs) {
+    var x = this.r34(configs);
+    var _iterator__ex2g4s = x.o3().w();
+    while (_iterator__ex2g4s.x()) {
+      var alts = _iterator__ex2g4s.y();
+      if (alts.h31() === 1) {
+        return true;
+      }
+    }
+    return false;
+  }
+  x31(altSets) {
+    var viableAlts = BitSet.c2p();
+    var _iterator__ex2g4s = altSets.w();
+    while (_iterator__ex2g4s.x()) {
+      var alts = _iterator__ex2g4s.y();
+      var minAlt = alts.g31(0);
+      viableAlts.d2p(minAlt);
+      if (viableAlts.h31() > 1) {
         return 0;
       }
     }
-    return viableAlts.h31(0);
+    return viableAlts.g31(0);
   }
 }
 class PredictionMode extends Enum {}
 class RangeTransition extends Transition {
   constructor(target, from, to) {
     super(target);
-    this.v34_1 = from;
-    this.w34_1 = to;
-    this.x34_1 = 2;
+    this.u34_1 = from;
+    this.v34_1 = to;
+    this.w34_1 = 2;
   }
-  e2u() {
-    return this.x34_1;
+  d2u() {
+    return this.w34_1;
   }
-  j2v() {
-    return Companion_getInstance_26().y28(this.v34_1, this.w34_1);
+  i2v() {
+    return Companion_getInstance_26().x28(this.u34_1, this.v34_1);
   }
   getLabel() {
-    return this.j2v();
+    return this.i2v();
   }
-  f2u(symbol, minVocabSymbol, maxVocabSymbol) {
-    var containsLower = this.v34_1;
-    return symbol <= this.w34_1 ? containsLower <= symbol : false;
+  e2u(symbol, minVocabSymbol, maxVocabSymbol) {
+    var containsLower = this.u34_1;
+    return symbol <= this.v34_1 ? containsLower <= symbol : false;
   }
   toString() {
-    var buf = StringBuilder.ze("'");
+    var buf = StringBuilder.we("'");
+    appendCodePoint(buf, this.u34_1);
+    buf.t("'..'");
     appendCodePoint(buf, this.v34_1);
-    buf.a1("'..'");
-    appendCodePoint(buf, this.w34_1);
-    buf.a1("'");
+    buf.t("'");
     return buf.toString();
   }
 }
 class RuleStartState extends ATNState {
   constructor() {
     super();
-    this.g2r_1 = null;
-    this.h2r_1 = false;
-    this.i2r_1 = 2;
+    this.f2r_1 = null;
+    this.g2r_1 = false;
+    this.h2r_1 = 2;
   }
-  z2c() {
-    return this.i2r_1;
+  y2c() {
+    return this.h2r_1;
   }
 }
 class RuleStopState extends ATNState {
   constructor() {
     super();
-    this.f35_1 = 7;
+    this.e35_1 = 7;
   }
-  z2c() {
-    return this.f35_1;
+  y2c() {
+    return this.e35_1;
   }
 }
 class RuleTransition extends Transition {
   constructor(ruleStart, ruleIndex, precedence, followState) {
     super(ruleStart);
-    this.b2f_1 = ruleIndex;
-    this.c2f_1 = precedence;
-    this.d2f_1 = followState;
-    this.e2f_1 = 3;
-    this.f2f_1 = true;
-  }
-  e2u() {
-    return this.e2f_1;
+    this.a2f_1 = ruleIndex;
+    this.b2f_1 = precedence;
+    this.c2f_1 = followState;
+    this.d2f_1 = 3;
+    this.e2f_1 = true;
   }
   d2u() {
-    return this.f2f_1;
+    return this.d2f_1;
   }
-  f2u(symbol, minVocabSymbol, maxVocabSymbol) {
+  c2u() {
+    return this.e2f_1;
+  }
+  e2u(symbol, minVocabSymbol, maxVocabSymbol) {
     return false;
   }
 }
 class Companion_19 {
-  c33(a, b) {
+  b33(a, b) {
     if (a == null || a === Empty_getInstance()) {
       return b;
     }
     if (b == null || b === Empty_getInstance()) {
       return a;
     }
-    var result = AND.h35(a, b);
+    var result = AND.g35(a, b);
     var tmp;
-    if (result.g35_1.length === 1) {
-      tmp = result.g35_1[0];
+    if (result.f35_1.length === 1) {
+      tmp = result.f35_1[0];
     } else {
       tmp = result;
     }
     return tmp;
   }
-  g32(a, b) {
+  f32(a, b) {
     if (a == null) {
       return b;
     }
@@ -6918,10 +6918,10 @@ class Companion_19 {
     if (a === Empty_getInstance() || b === Empty_getInstance()) {
       return Empty_getInstance();
     }
-    var result = OR.j35(a, b);
+    var result = OR.i35(a, b);
     var tmp;
-    if (result.i35_1.length === 1) {
-      tmp = result.i35_1[0];
+    if (result.h35_1.length === 1) {
+      tmp = result.h35_1[0];
     } else {
       tmp = result;
     }
@@ -6929,57 +6929,57 @@ class Companion_19 {
   }
 }
 class SemanticContext {
-  static l35() {
+  static k35() {
     return createThis(this);
   }
-  f32(parser, parserCallStack) {
+  e32(parser, parserCallStack) {
     return this;
   }
 }
 class Empty extends SemanticContext {
-  static k35() {
+  static j35() {
     Empty_instance = null;
-    var $this = this.l35();
+    var $this = this.k35();
     Empty_instance = $this;
     return $this;
   }
-  m32(parser, parserCallStack) {
+  l32(parser, parserCallStack) {
     return false;
   }
 }
 class Predicate extends SemanticContext {
-  static m35() {
-    var $this = this.l35();
+  static l35() {
+    var $this = this.k35();
     init_org_antlr_v4_kotlinruntime_atn_SemanticContext_Predicate($this);
+    $this.p33_1 = -1;
     $this.q33_1 = -1;
-    $this.r33_1 = -1;
-    $this.s33_1 = false;
+    $this.r33_1 = false;
     return $this;
   }
-  static t33(ruleIndex, predIndex, isCtxDependent) {
-    var $this = this.l35();
+  static s33(ruleIndex, predIndex, isCtxDependent) {
+    var $this = this.k35();
     init_org_antlr_v4_kotlinruntime_atn_SemanticContext_Predicate($this);
-    $this.q33_1 = ruleIndex;
-    $this.r33_1 = predIndex;
-    $this.s33_1 = isCtxDependent;
+    $this.p33_1 = ruleIndex;
+    $this.q33_1 = predIndex;
+    $this.r33_1 = isCtxDependent;
     return $this;
   }
-  m32(parser, parserCallStack) {
+  l32(parser, parserCallStack) {
     var tmp;
-    if (this.s33_1) {
+    if (this.r33_1) {
       tmp = parserCallStack;
     } else {
       tmp = null;
     }
     var localctx = tmp;
-    return parser.b2i(localctx, this.q33_1, this.r33_1);
+    return parser.a2i(localctx, this.p33_1, this.q33_1);
   }
   hashCode() {
-    var hashCode = MurmurHash_instance.d2z();
-    hashCode = MurmurHash_instance.j2n(hashCode, this.q33_1);
-    hashCode = MurmurHash_instance.j2n(hashCode, this.r33_1);
-    hashCode = MurmurHash_instance.j2n(hashCode, this.s33_1 ? 1 : 0);
-    hashCode = MurmurHash_instance.l2n(hashCode, 3);
+    var hashCode = MurmurHash_instance.c2z();
+    hashCode = MurmurHash_instance.i2n(hashCode, this.p33_1);
+    hashCode = MurmurHash_instance.i2n(hashCode, this.q33_1);
+    hashCode = MurmurHash_instance.i2n(hashCode, this.r33_1 ? 1 : 0);
+    hashCode = MurmurHash_instance.k2n(hashCode, 3);
     return hashCode;
   }
   equals(other) {
@@ -6989,40 +6989,40 @@ class Predicate extends SemanticContext {
     if (this === other) {
       return true;
     }
-    return this.q33_1 === other.q33_1 && this.r33_1 === other.r33_1 && this.s33_1 === other.s33_1;
+    return this.p33_1 === other.p33_1 && this.q33_1 === other.q33_1 && this.r33_1 === other.r33_1;
   }
   toString() {
-    return '{' + this.q33_1 + ':' + this.r33_1 + '}?';
+    return '{' + this.p33_1 + ':' + this.q33_1 + '}?';
   }
 }
 class PrecedencePredicate extends SemanticContext {
-  static p33(precedence) {
+  static o33(precedence) {
     precedence = precedence === VOID ? 0 : precedence;
-    var $this = this.l35();
-    $this.o33_1 = precedence;
+    var $this = this.k35();
+    $this.n33_1 = precedence;
     return $this;
   }
-  m32(parser, parserCallStack) {
-    return parser.c2i(parserCallStack, this.o33_1);
+  l32(parser, parserCallStack) {
+    return parser.b2i(parserCallStack, this.n33_1);
   }
-  f32(parser, parserCallStack) {
+  e32(parser, parserCallStack) {
     var tmp;
-    if (parser.c2i(parserCallStack, this.o33_1)) {
+    if (parser.b2i(parserCallStack, this.n33_1)) {
       tmp = Empty_getInstance();
     } else {
       tmp = null;
     }
     return tmp;
   }
-  n35(other) {
-    return this.o33_1 - other.o33_1 | 0;
+  m35(other) {
+    return this.n33_1 - other.n33_1 | 0;
   }
   d(other) {
-    return this.n35(other instanceof PrecedencePredicate ? other : THROW_CCE());
+    return this.m35(other instanceof PrecedencePredicate ? other : THROW_CCE());
   }
   hashCode() {
     var hashCode = 1;
-    hashCode = imul(31, hashCode) + this.o33_1 | 0;
+    hashCode = imul(31, hashCode) + this.n33_1 | 0;
     return hashCode;
   }
   equals(other) {
@@ -7032,40 +7032,40 @@ class PrecedencePredicate extends SemanticContext {
     if (this === other) {
       return true;
     }
-    return this.o33_1 === other.o33_1;
+    return this.n33_1 === other.n33_1;
   }
   toString() {
-    return '{' + this.o33_1 + '>=prec}?';
+    return '{' + this.n33_1 + '>=prec}?';
   }
 }
 class Operator extends SemanticContext {
-  static o35() {
-    return this.l35();
+  static n35() {
+    return this.k35();
   }
 }
 class AND extends Operator {
-  static h35(a, b) {
-    var $this = this.o35();
-    var operands = LinkedHashSet.l2();
+  static g35(a, b) {
+    var $this = this.n35();
+    var operands = LinkedHashSet.e2();
     if (a instanceof AND) {
-      operands.j2(asList(a.g35_1));
+      operands.c2(asList(a.f35_1));
     } else {
-      operands.g2(a);
+      operands.z1(a);
     }
     if (b instanceof AND) {
-      operands.j2(asList(b.g35_1));
+      operands.c2(asList(b.f35_1));
     } else {
-      operands.g2(b);
+      operands.z1(b);
     }
     var precedencePredicates = filterPrecedencePredicates(Companion_instance_19, operands);
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!precedencePredicates.b1()) {
-      var reduced = Collections_instance.e27(precedencePredicates);
-      operands.g2(reduced);
+    if (!precedencePredicates.u()) {
+      var reduced = Collections_instance.d27(precedencePredicates);
+      operands.z1(reduced);
     }
     var tmp = $this;
     // Inline function 'kotlin.collections.toTypedArray' call
-    tmp.g35_1 = copyToArray(operands);
+    tmp.f35_1 = copyToArray(operands);
     return $this;
   }
   equals(other) {
@@ -7075,88 +7075,88 @@ class AND extends Operator {
     if (!(other instanceof AND)) {
       return false;
     }
-    return contentEquals_0(this.g35_1, other.g35_1);
+    return contentEquals_0(this.f35_1, other.f35_1);
   }
   hashCode() {
     var fqn = 'org.antlr.v4.kotlinruntime.atn.SemanticContext.AND';
     var seed = imul(31, getStringHashCode(fqn)) + getKClass(AND).hashCode() | 0;
-    return MurmurHash_instance.p35(this.g35_1, seed);
+    return MurmurHash_instance.o35(this.f35_1, seed);
   }
-  m32(parser, parserCallStack) {
-    var indexedObject = this.g35_1;
+  l32(parser, parserCallStack) {
+    var indexedObject = this.f35_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     while (inductionVariable < last) {
       var operand = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      if (!operand.m32(parser, parserCallStack)) {
+      if (!operand.l32(parser, parserCallStack)) {
         return false;
       }
     }
     return true;
   }
-  f32(parser, parserCallStack) {
+  e32(parser, parserCallStack) {
     var differs = false;
-    var operands = ArrayList.b2();
-    var indexedObject = this.g35_1;
+    var operands = ArrayList.u1();
+    var indexedObject = this.f35_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     while (inductionVariable < last) {
       var context = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      var evaluated = context.f32(parser, parserCallStack);
+      var evaluated = context.e32(parser, parserCallStack);
       differs = !!(differs | !(evaluated === context));
       if (evaluated == null) {
         return null;
       } else if (!(evaluated === Empty_getInstance())) {
-        operands.g2(evaluated);
+        operands.z1(evaluated);
       }
     }
     if (!differs) {
       return this;
     }
-    if (operands.b1()) {
+    if (operands.u()) {
       return Empty_getInstance();
     }
-    var result = operands.k2(0);
+    var result = operands.d2(0);
     var inductionVariable_0 = 1;
-    var last_0 = operands.i2();
+    var last_0 = operands.b2();
     if (inductionVariable_0 < last_0)
       do {
         var i = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        result = Companion_instance_19.c33(result, operands.k2(i));
+        result = Companion_instance_19.b33(result, operands.d2(i));
       }
        while (inductionVariable_0 < last_0);
     return result;
   }
   toString() {
-    return joinToString(this.g35_1, '&&');
+    return joinToString(this.f35_1, '&&');
   }
 }
 class OR extends Operator {
-  static j35(a, b) {
-    var $this = this.o35();
-    var operands = LinkedHashSet.l2();
+  static i35(a, b) {
+    var $this = this.n35();
+    var operands = LinkedHashSet.e2();
     if (a instanceof OR) {
-      operands.j2(asList(a.i35_1));
+      operands.c2(asList(a.h35_1));
     } else {
-      operands.g2(a);
+      operands.z1(a);
     }
     if (b instanceof OR) {
-      operands.j2(asList(b.i35_1));
+      operands.c2(asList(b.h35_1));
     } else {
-      operands.g2(b);
+      operands.z1(b);
     }
     var precedencePredicates = filterPrecedencePredicates(Companion_instance_19, operands);
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!precedencePredicates.b1()) {
-      var reduced = Collections_instance.f27(precedencePredicates);
-      operands.g2(reduced);
+    if (!precedencePredicates.u()) {
+      var reduced = Collections_instance.e27(precedencePredicates);
+      operands.z1(reduced);
     }
     var tmp = $this;
     // Inline function 'kotlin.collections.toTypedArray' call
-    tmp.i35_1 = copyToArray(operands);
+    tmp.h35_1 = copyToArray(operands);
     return $this;
   }
   equals(other) {
@@ -7166,72 +7166,72 @@ class OR extends Operator {
     if (!(other instanceof OR)) {
       return false;
     }
-    return contentEquals_0(this.i35_1, other.i35_1);
+    return contentEquals_0(this.h35_1, other.h35_1);
   }
   hashCode() {
     var fqn = 'org.antlr.v4.kotlinruntime.atn.SemanticContext.OR';
     var seed = imul(31, getStringHashCode(fqn)) + getKClass(OR).hashCode() | 0;
-    return MurmurHash_instance.p35(this.i35_1, seed);
+    return MurmurHash_instance.o35(this.h35_1, seed);
   }
-  m32(parser, parserCallStack) {
-    var indexedObject = this.i35_1;
+  l32(parser, parserCallStack) {
+    var indexedObject = this.h35_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     while (inductionVariable < last) {
       var operand = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      if (operand.m32(parser, parserCallStack)) {
+      if (operand.l32(parser, parserCallStack)) {
         return true;
       }
     }
     return false;
   }
-  f32(parser, parserCallStack) {
+  e32(parser, parserCallStack) {
     var differs = false;
-    var operands = ArrayList.b2();
-    var indexedObject = this.i35_1;
+    var operands = ArrayList.u1();
+    var indexedObject = this.h35_1;
     var inductionVariable = 0;
     var last = indexedObject.length;
     while (inductionVariable < last) {
       var context = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      var evaluated = context.f32(parser, parserCallStack);
+      var evaluated = context.e32(parser, parserCallStack);
       differs = !!(differs | !(evaluated === context));
       if (evaluated === Empty_getInstance()) {
         return Empty_getInstance();
       } else if (!(evaluated == null)) {
-        operands.g2(evaluated);
+        operands.z1(evaluated);
       }
     }
     if (!differs) {
       return this;
     }
-    if (operands.b1()) {
+    if (operands.u()) {
       return null;
     }
-    var result = operands.k2(0);
+    var result = operands.d2(0);
     var inductionVariable_0 = 1;
-    var last_0 = operands.i2();
+    var last_0 = operands.b2();
     if (inductionVariable_0 < last_0)
       do {
         var i = inductionVariable_0;
         inductionVariable_0 = inductionVariable_0 + 1 | 0;
-        result = Companion_instance_19.g32(result, operands.k2(i));
+        result = Companion_instance_19.f32(result, operands.d2(i));
       }
        while (inductionVariable_0 < last_0);
     return result;
   }
   toString() {
-    return joinToString(this.i35_1, '||');
+    return joinToString(this.h35_1, '||');
   }
 }
 class Companion_20 {
-  y2w(parent, returnState) {
+  x2w(parent, returnState) {
     var tmp;
     if (returnState === 2147483647 && parent == null) {
       tmp = EmptyPredictionContext_getInstance();
     } else {
-      tmp = SingletonPredictionContext.m2w(parent, returnState);
+      tmp = SingletonPredictionContext.l2w(parent, returnState);
     }
     return tmp;
   }
@@ -7239,70 +7239,70 @@ class Companion_20 {
 class StarBlockStartState extends BlockStartState {
   constructor() {
     super();
-    this.a36_1 = 5;
+    this.z35_1 = 5;
   }
-  z2c() {
-    return this.a36_1;
+  y2c() {
+    return this.z35_1;
   }
 }
 class StarLoopEntryState extends DecisionState {
   constructor() {
     super();
-    this.e2s_1 = null;
-    this.f2s_1 = false;
-    this.g2s_1 = 10;
+    this.d2s_1 = null;
+    this.e2s_1 = false;
+    this.f2s_1 = 10;
   }
-  z2c() {
-    return this.g2s_1;
+  y2c() {
+    return this.f2s_1;
   }
 }
 class StarLoopbackState extends ATNState {
   constructor() {
     super();
-    this.i36_1 = 9;
+    this.h36_1 = 9;
   }
-  z2c() {
-    return this.i36_1;
+  y2c() {
+    return this.h36_1;
   }
 }
 class TokensStartState extends DecisionState {
   constructor() {
     super();
-    this.s36_1 = 6;
+    this.r36_1 = 6;
   }
-  z2c() {
-    return this.s36_1;
+  y2c() {
+    return this.r36_1;
   }
 }
 class Companion_21 {
   constructor() {
     Companion_instance_21 = this;
-    this.t36_1 = 1;
-    this.u36_1 = 2;
-    this.v36_1 = 3;
-    this.w36_1 = 4;
-    this.x36_1 = 5;
-    this.y36_1 = 6;
-    this.z36_1 = 7;
-    this.a37_1 = 8;
-    this.b37_1 = 9;
-    this.c37_1 = 10;
+    this.s36_1 = 1;
+    this.t36_1 = 2;
+    this.u36_1 = 3;
+    this.v36_1 = 4;
+    this.w36_1 = 5;
+    this.x36_1 = 6;
+    this.y36_1 = 7;
+    this.z36_1 = 8;
+    this.a37_1 = 9;
+    this.b37_1 = 10;
     var tmp = this;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.d37_1 = ['INVALID', 'EPSILON', 'RANGE', 'RULE', 'PREDICATE', 'ATOM', 'ACTION', 'SET', 'NOT_SET', 'WILDCARD', 'PRECEDENCE'];
+    tmp.c37_1 = ['INVALID', 'EPSILON', 'RANGE', 'RULE', 'PREDICATE', 'ATOM', 'ACTION', 'SET', 'NOT_SET', 'WILDCARD', 'PRECEDENCE'];
   }
 }
 class WildcardTransition extends Transition {
   constructor(target) {
     super(target);
-    this.g37_1 = 9;
+    this.f37_1 = 9;
   }
-  e2u() {
-    return this.g37_1;
+  d2u() {
+    return this.f37_1;
   }
-  f2u(symbol, minVocabSymbol, maxVocabSymbol) {
+  e2u(symbol, minVocabSymbol, maxVocabSymbol) {
     return minVocabSymbol <= symbol ? symbol <= maxVocabSymbol : false;
   }
   toString() {
@@ -7311,23 +7311,23 @@ class WildcardTransition extends Transition {
 }
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.h37_1 = function_0;
+    this.g37_1 = function_0;
   }
-  zg(a, b) {
-    return this.h37_1(a, b);
+  wg(a, b) {
+    return this.g37_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
-    return this.h37_1;
+  f4() {
+    return this.g37_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -7338,37 +7338,37 @@ class sam$kotlin_Comparator$0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
 class DFA {
   constructor(atnStartState, decision) {
     decision = decision === VOID ? 0 : decision;
-    this.u2x_1 = atnStartState;
-    this.v2x_1 = decision;
-    this.w2x_1 = HashMap.f8();
-    this.x2x_1 = null;
+    this.t2x_1 = atnStartState;
+    this.u2x_1 = decision;
+    this.v2x_1 = HashMap.y7();
+    this.w2x_1 = null;
     var isPrecedenceDfa = false;
-    var tmp = this.u2x_1;
+    var tmp = this.t2x_1;
     if (tmp instanceof StarLoopEntryState) {
-      if (this.u2x_1.f2s_1) {
+      if (this.t2x_1.e2s_1) {
         isPrecedenceDfa = true;
-        var precedenceState = DFAState.j2t(new ATNConfigSet());
+        var precedenceState = DFAState.i2t(new ATNConfigSet());
         var tmp_0 = precedenceState;
         // Inline function 'kotlin.arrayOfNulls' call
-        tmp_0.d2t_1 = Array(0);
-        precedenceState.e2t_1 = false;
-        precedenceState.h2t_1 = false;
-        this.x2x_1 = precedenceState;
+        tmp_0.c2t_1 = Array(0);
+        precedenceState.d2t_1 = false;
+        precedenceState.g2t_1 = false;
+        this.w2x_1 = precedenceState;
       }
     }
-    this.y2x_1 = isPrecedenceDfa;
+    this.x2x_1 = isPrecedenceDfa;
   }
-  x30(precedence) {
-    if (!this.y2x_1) {
-      throw IllegalStateException.s4('Only precedence DFAs may contain a precedence start state.');
+  w30(precedence) {
+    if (!this.x2x_1) {
+      throw IllegalStateException.l4('Only precedence DFAs may contain a precedence start state.');
     }
-    var edges = ensureNotNull(ensureNotNull(this.x2x_1).d2t_1);
+    var edges = ensureNotNull(ensureNotNull(this.w2x_1).c2t_1);
     var tmp;
     if (precedence < 0 || precedence >= edges.length) {
       tmp = null;
@@ -7377,24 +7377,24 @@ class DFA {
     }
     return tmp;
   }
-  b31(precedence, startState) {
-    if (!this.y2x_1) {
-      throw IllegalStateException.s4('Only precedence DFAs may contain a precedence start state.');
+  a31(precedence, startState) {
+    if (!this.x2x_1) {
+      throw IllegalStateException.l4('Only precedence DFAs may contain a precedence start state.');
     }
     if (precedence < 0) {
       return Unit_instance;
     }
-    var s0 = ensureNotNull(this.x2x_1);
+    var s0 = ensureNotNull(this.w2x_1);
     // Inline function 'com.strumenta.antlrkotlin.runtime.synchronized' call
-    if (precedence >= ensureNotNull(s0.d2t_1).length) {
-      s0.d2t_1 = copyOf(ensureNotNull(s0.d2t_1), precedence + 1 | 0);
+    if (precedence >= ensureNotNull(s0.c2t_1).length) {
+      s0.c2t_1 = copyOf(ensureNotNull(s0.c2t_1), precedence + 1 | 0);
     }
-    ensureNotNull(s0.d2t_1)[precedence] = startState;
+    ensureNotNull(s0.c2t_1)[precedence] = startState;
   }
-  i37() {
-    var result = ArrayList.c2(this.w2x_1.u3());
+  h37() {
+    var result = ArrayList.v1(this.v2x_1.n3());
     // Inline function 'kotlin.collections.sortBy' call
-    if (result.i2() > 1) {
+    if (result.b2() > 1) {
       // Inline function 'kotlin.comparisons.compareBy' call
       var tmp = DFA$getStates$lambda;
       var tmp$ret$1 = new sam$kotlin_Comparator$0(tmp);
@@ -7403,17 +7403,17 @@ class DFA {
     return result;
   }
   toString() {
-    return this.b2e(Companion_getInstance_5().f2l_1);
+    return this.a2e(Companion_getInstance_5().e2l_1);
   }
-  b2e(vocabulary) {
-    if (this.x2x_1 == null) {
+  a2e(vocabulary) {
+    if (this.w2x_1 == null) {
       return '';
     }
     var serializer = new DFASerializer(this, vocabulary);
     return serializer.toString();
   }
-  d2y() {
-    if (this.x2x_1 == null) {
+  c2y() {
+    if (this.w2x_1 == null) {
       return '';
     }
     var serializer = new LexerDFASerializer(this);
@@ -7422,20 +7422,20 @@ class DFA {
 }
 class DFASerializer {
   constructor(dfa, vocabulary) {
-    this.j37_1 = dfa;
-    this.k37_1 = vocabulary;
+    this.i37_1 = dfa;
+    this.j37_1 = vocabulary;
   }
   toString() {
-    if (this.j37_1.x2x_1 == null) {
+    if (this.i37_1.w2x_1 == null) {
       return 'null';
     }
-    var buf = StringBuilder.z();
-    var states = this.j37_1.i37();
-    var _iterator__ex2g4s = states.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var s = _iterator__ex2g4s.f1();
+    var buf = StringBuilder.s();
+    var states = this.i37_1.h37();
+    var _iterator__ex2g4s = states.w();
+    while (_iterator__ex2g4s.x()) {
+      var s = _iterator__ex2g4s.y();
       var n = 0;
-      var edges = s.d2t_1;
+      var edges = s.c2t_1;
       if (!(edges == null)) {
         n = edges.length;
       }
@@ -7446,13 +7446,13 @@ class DFASerializer {
           var i = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
           var t = ensureNotNull(edges)[i];
-          if (!(t == null) && !(t.b2t_1 === 2147483647)) {
-            buf.a1(this.l37(s));
-            buf.a1('-');
-            buf.a1(this.m37(i));
-            buf.a1('->');
-            buf.a1(this.l37(t));
-            buf.a1('\n');
+          if (!(t == null) && !(t.a2t_1 === 2147483647)) {
+            buf.t(this.k37(s));
+            buf.t('-');
+            buf.t(this.l37(i));
+            buf.t('->');
+            buf.t(this.k37(t));
+            buf.t('\n');
           }
         }
          while (inductionVariable < last);
@@ -7468,20 +7468,20 @@ class DFASerializer {
     }
     return tmp;
   }
-  m37(i) {
-    return this.k37_1.y29(i - 1 | 0);
+  l37(i) {
+    return this.j37_1.x29(i - 1 | 0);
   }
-  l37(s) {
-    var n = s.b2t_1;
-    var baseStateStr = (s.e2t_1 ? ':' : '') + 's' + n + (s.h2t_1 ? '^' : '');
+  k37(s) {
+    var n = s.a2t_1;
+    var baseStateStr = (s.d2t_1 ? ':' : '') + 's' + n + (s.g2t_1 ? '^' : '');
     var tmp;
-    if (s.e2t_1) {
-      var predicates = s.i2t_1;
+    if (s.d2t_1) {
+      var predicates = s.h2t_1;
       var tmp_0;
       if (!(predicates == null)) {
         tmp_0 = baseStateStr + '=>' + joinToString(predicates);
       } else {
-        tmp_0 = baseStateStr + '=>' + s.f2t_1;
+        tmp_0 = baseStateStr + '=>' + s.e2t_1;
       }
       tmp = tmp_0;
     } else {
@@ -7492,29 +7492,29 @@ class DFASerializer {
 }
 class PredPrediction {
   constructor(pred, alt) {
-    this.k32_1 = pred;
-    this.l32_1 = alt;
+    this.j32_1 = pred;
+    this.k32_1 = alt;
   }
   toString() {
-    return '(' + toString_0(this.k32_1) + ', ' + this.l32_1 + ')';
+    return '(' + toString_0(this.j32_1) + ', ' + this.k32_1 + ')';
   }
 }
 class DFAState {
-  static n37() {
+  static m37() {
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_dfa_DFAState($this);
     return $this;
   }
-  static j2t(configs) {
+  static i2t(configs) {
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_dfa_DFAState($this);
-    $this.c2t_1 = configs;
+    $this.b2t_1 = configs;
     return $this;
   }
   hashCode() {
-    var hash = MurmurHash_instance.i2n(7);
-    hash = MurmurHash_instance.j2n(hash, this.c2t_1.hashCode());
-    hash = MurmurHash_instance.l2n(hash, 1);
+    var hash = MurmurHash_instance.h2n(7);
+    hash = MurmurHash_instance.i2n(hash, this.b2t_1.hashCode());
+    hash = MurmurHash_instance.k2n(hash, 1);
     return hash;
   }
   equals(other) {
@@ -7524,20 +7524,20 @@ class DFAState {
     if (!(other instanceof DFAState)) {
       return false;
     }
-    return this.c2t_1.equals(other.c2t_1);
+    return this.b2t_1.equals(other.b2t_1);
   }
   toString() {
-    var buf = StringBuilder.z();
-    buf.df(this.b2t_1);
-    buf.a1(':');
-    buf.g1(this.c2t_1);
-    if (this.e2t_1) {
-      buf.a1('=>');
-      var predicates = this.i2t_1;
+    var buf = StringBuilder.s();
+    buf.af(this.a2t_1);
+    buf.t(':');
+    buf.z(this.b2t_1);
+    if (this.d2t_1) {
+      buf.t('=>');
+      var predicates = this.h2t_1;
       if (!(predicates == null)) {
-        buf.a1(joinToString(predicates));
+        buf.t(joinToString(predicates));
       } else {
-        buf.df(this.f2t_1);
+        buf.af(this.e2t_1);
       }
     }
     return buf.toString();
@@ -7545,72 +7545,72 @@ class DFAState {
 }
 class LexerDFASerializer extends DFASerializer {
   constructor(dfa) {
-    super(dfa, Companion_getInstance_5().f2l_1);
+    super(dfa, Companion_getInstance_5().e2l_1);
   }
-  m37(i) {
-    var buf = StringBuilder.z();
-    buf.a1("'");
+  l37(i) {
+    var buf = StringBuilder.s();
+    buf.t("'");
     appendCodePoint(buf, i);
-    buf.a1("'");
+    buf.t("'");
     return buf.toString();
   }
 }
 class Companion_22 {
   constructor() {
-    this.q37_1 = 16;
-    this.r37_1 = 8;
-    this.s37_1 = 0.75;
+    this.p37_1 = 16;
+    this.q37_1 = 8;
+    this.r37_1 = 0.75;
   }
 }
 class SetIterator {
   constructor($outer, data) {
-    this.w37_1 = $outer;
-    this.t37_1 = data;
-    this.u37_1 = 0;
-    this.v37_1 = true;
+    this.v37_1 = $outer;
+    this.s37_1 = data;
+    this.t37_1 = 0;
+    this.u37_1 = true;
   }
-  e1() {
-    return this.u37_1 < this.t37_1.length;
+  x() {
+    return this.t37_1 < this.s37_1.length;
   }
-  f1() {
-    if (!this.e1()) {
-      throw NoSuchElementException.c6();
+  y() {
+    if (!this.x()) {
+      throw NoSuchElementException.v5();
     }
-    this.v37_1 = false;
-    var _unary__edvuaz = this.u37_1;
-    this.u37_1 = _unary__edvuaz + 1 | 0;
-    return this.t37_1[_unary__edvuaz];
+    this.u37_1 = false;
+    var _unary__edvuaz = this.t37_1;
+    this.t37_1 = _unary__edvuaz + 1 | 0;
+    return this.s37_1[_unary__edvuaz];
   }
-  y5() {
-    if (this.v37_1) {
-      throw IllegalStateException.fc();
+  r5() {
+    if (this.u37_1) {
+      throw IllegalStateException.ac();
     }
-    this.w37_1.l2o(this.t37_1[this.u37_1 - 1 | 0]);
-    this.v37_1 = true;
+    this.v37_1.k2o(this.s37_1[this.t37_1 - 1 | 0]);
+    this.u37_1 = true;
   }
 }
 class DoubleKeyMap {
   constructor() {
-    this.y33_1 = LinkedHashMap.tb();
+    this.x33_1 = LinkedHashMap.mb();
   }
-  b34(k1, k2, v) {
-    var data2 = this.y33_1.y3(k1);
+  a34(k1, k2, v) {
+    var data2 = this.x33_1.r3(k1);
     var prev = null;
     if (data2 == null) {
-      data2 = LinkedHashMap.tb();
-      var tmp0 = this.y33_1;
+      data2 = LinkedHashMap.mb();
+      var tmp0 = this.x33_1;
       // Inline function 'kotlin.collections.set' call
       var value = data2;
-      tmp0.s3(k1, value);
+      tmp0.l3(k1, value);
     } else {
-      prev = data2.y3(k2);
+      prev = data2.r3(k2);
     }
     // Inline function 'kotlin.collections.set' call
-    data2.s3(k2, v);
+    data2.l3(k2, v);
     return prev;
   }
-  z33(k1, k2) {
-    var tmp0_elvis_lhs = this.y33_1.y3(k1);
+  y33(k1, k2) {
+    var tmp0_elvis_lhs = this.x33_1.r3(k1);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return null;
@@ -7618,27 +7618,27 @@ class DoubleKeyMap {
       tmp = tmp0_elvis_lhs;
     }
     var data2 = tmp;
-    return data2.y3(k2);
+    return data2.r3(k2);
   }
 }
 class Companion_23 {
   constructor() {
-    this.x37_1 = 16;
-    this.y37_1 = 8;
-    this.z37_1 = 0.75;
+    this.w37_1 = 16;
+    this.x37_1 = 8;
+    this.y37_1 = 0.75;
   }
 }
 class Entry {
   constructor(key, value) {
-    this.a38_1 = key;
-    this.b38_1 = value;
+    this.z37_1 = key;
+    this.a38_1 = value;
   }
   toString() {
-    return toString_1(this.a38_1) + ':' + toString_1(this.b38_1);
+    return toString_1(this.z37_1) + ':' + toString_1(this.a38_1);
   }
   hashCode() {
-    var result = this.a38_1 == null ? 0 : hashCode(this.a38_1);
-    result = imul(result, 31) + (this.b38_1 == null ? 0 : hashCode(this.b38_1)) | 0;
+    var result = this.z37_1 == null ? 0 : hashCode(this.z37_1);
+    result = imul(result, 31) + (this.a38_1 == null ? 0 : hashCode(this.a38_1)) | 0;
     return result;
   }
   equals(other) {
@@ -7647,9 +7647,9 @@ class Entry {
     if (!(other instanceof Entry))
       return false;
     var tmp0_other_with_cast = other instanceof Entry ? other : THROW_CCE();
-    if (!equals(this.a38_1, tmp0_other_with_cast.a38_1))
+    if (!equals(this.z37_1, tmp0_other_with_cast.z37_1))
       return false;
-    if (!equals(this.b38_1, tmp0_other_with_cast.b38_1))
+    if (!equals(this.a38_1, tmp0_other_with_cast.a38_1))
       return false;
     return true;
   }
@@ -7657,65 +7657,65 @@ class Entry {
 class Companion_24 {
   constructor() {
     Companion_instance_24 = this;
-    this.c38_1 = new Int32Array(0);
-    this.d38_1 = 4;
-    this.e38_1 = 2147483639;
+    this.b38_1 = new Int32Array(0);
+    this.c38_1 = 4;
+    this.d38_1 = 2147483639;
   }
 }
 class IntegerList {
-  r2h() {
-    return this.f2h_1 === 0;
+  q2h() {
+    return this.e2h_1 === 0;
   }
-  static f38() {
+  static e38() {
     Companion_getInstance_24();
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_misc_IntegerList($this);
-    $this.e2h_1 = Companion_getInstance_24().c38_1;
+    $this.d2h_1 = Companion_getInstance_24().b38_1;
     return $this;
   }
-  z2b(value) {
-    if (this.e2h_1.length === this.f2h_1) {
-      ensureCapacity(this, this.f2h_1 + 1 | 0);
+  y2b(value) {
+    if (this.d2h_1.length === this.e2h_1) {
+      ensureCapacity(this, this.e2h_1 + 1 | 0);
     }
-    this.e2h_1[this.f2h_1] = value;
-    this.f2h_1 = this.f2h_1 + 1 | 0;
+    this.d2h_1[this.e2h_1] = value;
+    this.e2h_1 = this.e2h_1 + 1 | 0;
   }
-  k2(index) {
-    if (index < 0 || index >= this.f2h_1) {
-      throw IndexOutOfBoundsException.qc();
+  d2(index) {
+    if (index < 0 || index >= this.e2h_1) {
+      throw IndexOutOfBoundsException.lc();
     }
-    return this.e2h_1[index];
+    return this.d2h_1[index];
   }
-  e4(index) {
-    var value = this.k2(index);
+  x3(index) {
+    var value = this.d2(index);
     var inductionVariable = 0;
-    var last = (this.f2h_1 - index | 0) - 1 | 0;
+    var last = (this.e2h_1 - index | 0) - 1 | 0;
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        this.e2h_1[index + i | 0] = this.e2h_1[(index + i | 0) + 1 | 0];
+        this.d2h_1[index + i | 0] = this.d2h_1[(index + i | 0) + 1 | 0];
       }
        while (inductionVariable < last);
-    this.e2h_1[this.f2h_1 - 1 | 0] = 0;
-    this.f2h_1 = this.f2h_1 - 1 | 0;
+    this.d2h_1[this.e2h_1 - 1 | 0] = 0;
+    this.e2h_1 = this.e2h_1 - 1 | 0;
     return value;
   }
-  b28() {
-    return this.f2h_1;
+  a28() {
+    return this.e2h_1;
   }
-  b4() {
-    fill(this.e2h_1, 0);
-    this.f2h_1 = 0;
+  u3() {
+    fill(this.d2h_1, 0);
+    this.e2h_1 = 0;
   }
-  t7() {
+  m7() {
     var tmp;
-    if (this.f2h_1 === 0) {
-      tmp = Companion_getInstance_24().c38_1;
+    if (this.e2h_1 === 0) {
+      tmp = Companion_getInstance_24().b38_1;
     } else {
       // Inline function 'kotlin.collections.copyOf' call
       // Inline function 'kotlin.js.asDynamic' call
-      tmp = this.e2h_1.slice();
+      tmp = this.d2h_1.slice();
     }
     return tmp;
   }
@@ -7727,18 +7727,18 @@ class IntegerList {
     if (!(other instanceof IntegerList)) {
       tmp = true;
     } else {
-      tmp = !(this.f2h_1 === other.f2h_1);
+      tmp = !(this.e2h_1 === other.e2h_1);
     }
     if (tmp) {
       return false;
     }
     var inductionVariable = 0;
-    var last = this.f2h_1;
+    var last = this.e2h_1;
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        if (!(this.e2h_1[i] === other.e2h_1[i])) {
+        if (!(this.d2h_1[i] === other.d2h_1[i])) {
           return false;
         }
       }
@@ -7748,53 +7748,53 @@ class IntegerList {
   hashCode() {
     var hashCode = 1;
     var inductionVariable = 0;
-    var last = this.f2h_1;
+    var last = this.e2h_1;
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        hashCode = imul(31, hashCode) + this.e2h_1[i] | 0;
+        hashCode = imul(31, hashCode) + this.d2h_1[i] | 0;
       }
        while (inductionVariable < last);
     return hashCode;
   }
   toString() {
-    return joinToString_0(this.t7());
+    return joinToString_0(this.m7());
   }
 }
 class IntegerStack extends IntegerList {
-  static p2g() {
-    var $this = this.f38();
+  static o2g() {
+    var $this = this.e38();
     init_org_antlr_v4_kotlinruntime_misc_IntegerStack($this);
     return $this;
   }
-  p2h(value) {
-    return this.z2b(value);
-  }
-  t2h() {
-    return this.e4(this.b28() - 1 | 0);
+  o2h(value) {
+    return this.y2b(value);
   }
   s2h() {
-    return this.k2(this.b28() - 1 | 0);
+    return this.x3(this.a28() - 1 | 0);
+  }
+  r2h() {
+    return this.d2(this.a28() - 1 | 0);
   }
 }
 class Companion_25 {
   constructor() {
     Companion_instance_25 = this;
-    this.v28_1 = 1000;
-    this.w28_1 = new Interval(-1, -2);
+    this.u28_1 = 1000;
+    this.v28_1 = new Interval(-1, -2);
     var tmp = this;
     // Inline function 'kotlin.arrayOfNulls' call
-    tmp.x28_1 = Array(1001);
+    tmp.w28_1 = Array(1001);
   }
-  y28(a, b) {
+  x28(a, b) {
     if (!(a === b) || a < 0 || a > 1000) {
       return new Interval(a, b);
     }
-    var interval = this.x28_1[a];
+    var interval = this.w28_1[a];
     if (interval == null) {
       interval = new Interval(a, a);
-      this.x28_1[a] = interval;
+      this.w28_1[a] = interval;
     }
     return interval;
   }
@@ -7802,43 +7802,43 @@ class Companion_25 {
 class Interval {
   constructor(a, b) {
     Companion_getInstance_25();
-    this.r28_1 = a;
-    this.s28_1 = b;
+    this.q28_1 = a;
+    this.r28_1 = b;
+  }
+  f38(other) {
+    return this.q28_1 < other.q28_1 && this.r28_1 < other.q28_1;
   }
   g38(other) {
-    return this.r28_1 < other.r28_1 && this.s28_1 < other.r28_1;
+    return this.q28_1 > other.r28_1;
   }
   h38(other) {
-    return this.r28_1 > other.s28_1;
+    return this.f38(other) || this.g38(other);
   }
   i38(other) {
-    return this.g38(other) || this.h38(other);
+    return this.q28_1 === (other.r28_1 + 1 | 0) || this.r28_1 === (other.q28_1 - 1 | 0);
   }
   j38(other) {
-    return this.r28_1 === (other.s28_1 + 1 | 0) || this.s28_1 === (other.r28_1 - 1 | 0);
-  }
-  k38(other) {
     var tmp = Companion_getInstance_25();
-    var tmp0 = this.r28_1;
+    var tmp0 = this.q28_1;
     // Inline function 'kotlin.math.min' call
-    var b = other.r28_1;
+    var b = other.q28_1;
     var tmp_0 = Math.min(tmp0, b);
-    var tmp0_0 = this.s28_1;
+    var tmp0_0 = this.r28_1;
     // Inline function 'kotlin.math.max' call
-    var b_0 = other.s28_1;
+    var b_0 = other.r28_1;
     var tmp$ret$1 = Math.max(tmp0_0, b_0);
-    return tmp.y28(tmp_0, tmp$ret$1);
+    return tmp.x28(tmp_0, tmp$ret$1);
   }
   equals(other) {
     var tmp;
     var tmp_0;
     if (other instanceof Interval) {
-      tmp_0 = this.r28_1 === other.r28_1;
+      tmp_0 = this.q28_1 === other.q28_1;
     } else {
       tmp_0 = false;
     }
     if (tmp_0) {
-      tmp = this.s28_1 === other.s28_1;
+      tmp = this.r28_1 === other.r28_1;
     } else {
       tmp = false;
     }
@@ -7846,12 +7846,12 @@ class Interval {
   }
   hashCode() {
     var hash = 23;
+    hash = imul(hash, 31) + this.q28_1 | 0;
     hash = imul(hash, 31) + this.r28_1 | 0;
-    hash = imul(hash, 31) + this.s28_1 | 0;
     return hash;
   }
   toString() {
-    return '' + this.r28_1 + '..' + this.s28_1;
+    return '' + this.q28_1 + '..' + this.r28_1;
   }
 }
 class Companion_26 {
@@ -7859,73 +7859,73 @@ class Companion_26 {
     Companion_instance_26 = this;
     var tmp = this;
     // Inline function 'kotlin.also' call
-    var this_0 = this.y28(0, 1114111);
-    this_0.g2m(true);
-    tmp.k2v_1 = this_0;
+    var this_0 = this.x28(0, 1114111);
+    this_0.f2m(true);
+    tmp.j2v_1 = this_0;
     var tmp_0 = this;
     // Inline function 'kotlin.also' call
-    var this_1 = IntervalSet.y2b();
-    this_1.g2m(true);
-    tmp_0.l2v_1 = this_1;
+    var this_1 = IntervalSet.x2b();
+    this_1.f2m(true);
+    tmp_0.k2v_1 = this_1;
   }
-  m2v(a) {
-    var s = IntervalSet.y2b();
-    s.z2b(a);
+  l2v(a) {
+    var s = IntervalSet.x2b();
+    s.y2b(a);
     return s;
   }
-  y28(a, b) {
-    var s = IntervalSet.y2b();
-    s.a2q(a, b);
+  x28(a, b) {
+    var s = IntervalSet.x2b();
+    s.z2p(a, b);
     return s;
   }
-  l38(left, right) {
-    if (left.v2e()) {
-      return IntervalSet.y2b();
+  k38(left, right) {
+    if (left.u2e()) {
+      return IntervalSet.x2b();
     }
-    var result = IntervalSet.m38(left);
-    if (right.v2e()) {
+    var result = IntervalSet.l38(left);
+    if (right.u2e()) {
       return result;
     }
     var resultI = 0;
     var rightI = 0;
-    $l$loop_4: while (resultI < result.w2b_1.i2() && rightI < right.w2b_1.i2()) {
-      var resultInterval = result.w2b_1.k2(resultI);
-      var rightInterval = right.w2b_1.k2(rightI);
-      if (rightInterval.s28_1 < resultInterval.r28_1) {
+    $l$loop_4: while (resultI < result.v2b_1.b2() && rightI < right.v2b_1.b2()) {
+      var resultInterval = result.v2b_1.d2(resultI);
+      var rightInterval = right.v2b_1.d2(rightI);
+      if (rightInterval.r28_1 < resultInterval.q28_1) {
         rightI = rightI + 1 | 0;
         continue $l$loop_4;
       }
-      if (rightInterval.r28_1 > resultInterval.s28_1) {
+      if (rightInterval.q28_1 > resultInterval.r28_1) {
         resultI = resultI + 1 | 0;
         continue $l$loop_4;
       }
       var beforeCurrent = null;
       var afterCurrent = null;
-      if (rightInterval.r28_1 > resultInterval.r28_1) {
-        beforeCurrent = new Interval(resultInterval.r28_1, rightInterval.r28_1 - 1 | 0);
+      if (rightInterval.q28_1 > resultInterval.q28_1) {
+        beforeCurrent = new Interval(resultInterval.q28_1, rightInterval.q28_1 - 1 | 0);
       }
-      if (rightInterval.s28_1 < resultInterval.s28_1) {
-        afterCurrent = new Interval(rightInterval.s28_1 + 1 | 0, resultInterval.s28_1);
+      if (rightInterval.r28_1 < resultInterval.r28_1) {
+        afterCurrent = new Interval(rightInterval.r28_1 + 1 | 0, resultInterval.r28_1);
       }
       if (!(beforeCurrent == null)) {
         if (!(afterCurrent == null)) {
-          result.w2b_1.c4(resultI, beforeCurrent);
-          result.w2b_1.d4(resultI + 1 | 0, afterCurrent);
+          result.v2b_1.v3(resultI, beforeCurrent);
+          result.v2b_1.w3(resultI + 1 | 0, afterCurrent);
           resultI = resultI + 1 | 0;
           rightI = rightI + 1 | 0;
           continue $l$loop_4;
         } else {
-          result.w2b_1.c4(resultI, beforeCurrent);
+          result.v2b_1.v3(resultI, beforeCurrent);
           resultI = resultI + 1 | 0;
           continue $l$loop_4;
         }
       } else {
         if (!(afterCurrent == null)) {
-          result.w2b_1.c4(resultI, afterCurrent);
+          result.v2b_1.v3(resultI, afterCurrent);
           rightI = rightI + 1 | 0;
           continue $l$loop_4;
         } else {
-          result.w2b_1.e4(resultI);
+          result.v2b_1.x3(resultI);
           continue $l$loop_4;
         }
       }
@@ -7934,105 +7934,105 @@ class Companion_26 {
   }
 }
 class IntervalSet {
-  v2e() {
-    return this.w2b_1.i2() === 0;
-  }
   u2e() {
-    if (this.v2e()) {
-      throw RuntimeException.ia('set is empty');
-    }
-    return this.w2b_1.k2(0).r28_1;
+    return this.v2b_1.b2() === 0;
   }
-  g2m(value) {
-    if (this.x2b_1 && !value) {
-      throw IllegalStateException.s4("can't alter readonly IntervalSet");
+  t2e() {
+    if (this.u2e()) {
+      throw RuntimeException.ba('set is empty');
     }
-    this.x2b_1 = value;
+    return this.v2b_1.d2(0).q28_1;
   }
-  static y2b() {
+  f2m(value) {
+    if (this.w2b_1 && !value) {
+      throw IllegalStateException.l4("can't alter readonly IntervalSet");
+    }
+    this.w2b_1 = value;
+  }
+  static x2b() {
     Companion_getInstance_26();
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_misc_IntervalSet($this);
-    $this.w2b_1 = ArrayList.f2(16);
+    $this.v2b_1 = ArrayList.y1(16);
     return $this;
   }
-  static m38(set) {
+  static l38(set) {
     Companion_getInstance_26();
     var $this = createThis(this);
     init_org_antlr_v4_kotlinruntime_misc_IntervalSet($this);
-    $this.w2b_1 = ArrayList.f2(set.w2b_1.i2());
-    $this.g2f(set);
+    $this.v2b_1 = ArrayList.y1(set.v2b_1.b2());
+    $this.f2f(set);
     return $this;
   }
-  z2b(el) {
-    return this.a2q(el, el);
+  y2b(el) {
+    return this.z2p(el, el);
   }
-  a2q(a, b) {
-    return add(this, Companion_getInstance_25().y28(a, b));
+  z2p(a, b) {
+    return add(this, Companion_getInstance_25().x28(a, b));
   }
-  g2f(set) {
+  f2f(set) {
     if (set instanceof IntervalSet) {
-      var setIntervals = set.w2b_1;
+      var setIntervals = set.v2b_1;
       var inductionVariable = 0;
-      var last = setIntervals.i2();
+      var last = setIntervals.b2();
       if (inductionVariable < last)
         do {
           var i = inductionVariable;
           inductionVariable = inductionVariable + 1 | 0;
-          var I = setIntervals.k2(i);
-          this.a2q(I.r28_1, I.s28_1);
+          var I = setIntervals.d2(i);
+          this.z2p(I.q28_1, I.r28_1);
         }
          while (inductionVariable < last);
     } else {
-      var _iterator__ex2g4s = set.n38().d1();
-      while (_iterator__ex2g4s.e1()) {
-        var value = _iterator__ex2g4s.f1();
-        this.z2b(value);
+      var _iterator__ex2g4s = set.m38().w();
+      while (_iterator__ex2g4s.x()) {
+        var value = _iterator__ex2g4s.y();
+        this.y2b(value);
       }
     }
     return this;
   }
-  x2w(elements) {
-    if (elements.v2e()) {
-      return IntervalSet.y2b();
+  w2w(elements) {
+    if (elements.u2e()) {
+      return IntervalSet.x2b();
     }
     var tmp;
     if (elements instanceof IntervalSet) {
       tmp = elements;
     } else {
-      var temp = IntervalSet.y2b();
-      temp.g2f(elements);
+      var temp = IntervalSet.x2b();
+      temp.f2f(elements);
       tmp = temp;
     }
     var vocabularyIS = tmp;
-    return vocabularyIS.o38(this);
+    return vocabularyIS.n38(this);
   }
-  o38(a) {
-    if (a.v2e()) {
-      return IntervalSet.m38(this);
+  n38(a) {
+    if (a.u2e()) {
+      return IntervalSet.l38(this);
     }
     if (a instanceof IntervalSet) {
-      return Companion_getInstance_26().l38(this, a);
+      return Companion_getInstance_26().k38(this, a);
     }
-    var other = IntervalSet.y2b();
-    other.g2f(a);
-    return Companion_getInstance_26().l38(this, other);
+    var other = IntervalSet.x2b();
+    other.f2f(a);
+    return Companion_getInstance_26().k38(this, other);
   }
-  n2d(a) {
-    var o = IntervalSet.y2b();
-    o.g2f(this);
-    o.g2f(a);
+  m2d(a) {
+    var o = IntervalSet.x2b();
+    o.f2f(this);
+    o.f2f(a);
     return o;
   }
-  yk(el) {
-    var n = this.w2b_1.i2();
+  vk(el) {
+    var n = this.v2b_1.b2();
     var l = 0;
     var r = n - 1 | 0;
     while (l <= r) {
       var m = (l + r | 0) / 2 | 0;
-      var I = this.w2b_1.k2(m);
-      var a = I.r28_1;
-      var b = I.s28_1;
+      var I = this.v2b_1.d2(m);
+      var a = I.q28_1;
+      var b = I.r28_1;
       if (b < el) {
         l = m + 1 | 0;
       } else if (a > el) {
@@ -8044,94 +8044,94 @@ class IntervalSet {
     return false;
   }
   hashCode() {
-    var hash = MurmurHash_instance.d2z();
-    var _iterator__ex2g4s = this.w2b_1.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var I = _iterator__ex2g4s.f1();
-      hash = MurmurHash_instance.j2n(hash, I.r28_1);
-      hash = MurmurHash_instance.j2n(hash, I.s28_1);
+    var hash = MurmurHash_instance.c2z();
+    var _iterator__ex2g4s = this.v2b_1.w();
+    while (_iterator__ex2g4s.x()) {
+      var I = _iterator__ex2g4s.y();
+      hash = MurmurHash_instance.i2n(hash, I.q28_1);
+      hash = MurmurHash_instance.i2n(hash, I.r28_1);
     }
-    hash = MurmurHash_instance.l2n(hash, imul(this.w2b_1.i2(), 2));
+    hash = MurmurHash_instance.k2n(hash, imul(this.v2b_1.b2(), 2));
     return hash;
   }
   equals(other) {
     var tmp;
     if (other instanceof IntervalSet) {
-      tmp = equals(this.w2b_1, other.w2b_1);
+      tmp = equals(this.v2b_1, other.v2b_1);
     } else {
       tmp = false;
     }
     return tmp;
   }
   toString() {
-    return this.p38(false);
+    return this.o38(false);
   }
-  p38(elemAreChar) {
-    if (this.w2b_1.b1()) {
+  o38(elemAreChar) {
+    if (this.v2b_1.u()) {
       return '{}';
     }
-    var buf = StringBuilder.lb(64);
-    if (this.b28() > 1) {
-      buf.a1('{');
+    var buf = StringBuilder.eb(64);
+    if (this.a28() > 1) {
+      buf.t('{');
     }
-    var n = this.w2b_1.i2();
+    var n = this.v2b_1.b2();
     var index = 0;
     while (index < n) {
       var _unary__edvuaz = index;
       index = _unary__edvuaz + 1 | 0;
-      var I = this.w2b_1.k2(_unary__edvuaz);
-      var a = I.r28_1;
-      var b = I.s28_1;
+      var I = this.v2b_1.d2(_unary__edvuaz);
+      var a = I.q28_1;
+      var b = I.r28_1;
       if (a === b) {
         if (a === -1) {
-          buf.a1('<EOF>');
+          buf.t('<EOF>');
         } else if (elemAreChar) {
-          buf.a1("'");
+          buf.t("'");
           appendCodePoint(buf, a);
-          buf.a1("'");
+          buf.t("'");
         } else {
-          buf.df(a);
+          buf.af(a);
         }
       } else {
         if (elemAreChar) {
-          buf.a1("'");
+          buf.t("'");
           appendCodePoint(buf, a);
-          buf.a1("'..'");
+          buf.t("'..'");
           appendCodePoint(buf, b);
-          buf.a1("'");
+          buf.t("'");
         } else {
-          buf.df(a);
-          buf.a1('..');
-          buf.df(b);
+          buf.af(a);
+          buf.t('..');
+          buf.af(b);
         }
       }
       if (index < n) {
-        buf.a1(', ');
+        buf.t(', ');
       }
     }
-    if (this.b28() > 1) {
-      buf.a1('}');
+    if (this.a28() > 1) {
+      buf.t('}');
     }
     return buf.toString();
   }
-  b2e(vocabulary) {
-    if (this.w2b_1.b1()) {
+  a2e(vocabulary) {
+    if (this.v2b_1.u()) {
       return '{}';
     }
-    var buf = StringBuilder.lb(64);
-    if (this.b28() > 1) {
-      buf.a1('{');
+    var buf = StringBuilder.eb(64);
+    if (this.a28() > 1) {
+      buf.t('{');
     }
-    var n = this.w2b_1.i2();
+    var n = this.v2b_1.b2();
     var index = 0;
     while (index < n) {
       var _unary__edvuaz = index;
       index = _unary__edvuaz + 1 | 0;
-      var I = this.w2b_1.k2(_unary__edvuaz);
-      var a = I.r28_1;
-      var b = I.s28_1;
+      var I = this.v2b_1.d2(_unary__edvuaz);
+      var a = I.q28_1;
+      var b = I.r28_1;
       if (a === b) {
-        buf.a1(elementName(this, vocabulary, a));
+        buf.t(elementName(this, vocabulary, a));
       } else {
         var inductionVariable = a;
         if (inductionVariable <= b)
@@ -8139,26 +8139,26 @@ class IntervalSet {
             var p = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
             if (p > a) {
-              buf.a1(', ');
+              buf.t(', ');
             }
-            buf.a1(elementName(this, vocabulary, p));
+            buf.t(elementName(this, vocabulary, p));
           }
            while (!(p === b));
       }
       if (index < n) {
-        buf.a1(', ');
+        buf.t(', ');
       }
     }
-    if (this.b28() > 1) {
-      buf.a1('}');
+    if (this.a28() > 1) {
+      buf.t('}');
     }
     return buf.toString();
   }
-  b28() {
-    var numIntervals = this.w2b_1.i2();
+  a28() {
+    var numIntervals = this.v2b_1.b2();
     if (numIntervals === 1) {
-      var firstInterval = this.w2b_1.k2(0);
-      return (firstInterval.s28_1 - firstInterval.r28_1 | 0) + 1 | 0;
+      var firstInterval = this.v2b_1.d2(0);
+      return (firstInterval.r28_1 - firstInterval.q28_1 | 0) + 1 | 0;
     }
     var n = 0;
     var inductionVariable = 0;
@@ -8166,67 +8166,67 @@ class IntervalSet {
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var I = this.w2b_1.k2(i);
-        n = n + ((I.s28_1 - I.r28_1 | 0) + 1 | 0) | 0;
+        var I = this.v2b_1.d2(i);
+        n = n + ((I.r28_1 - I.q28_1 | 0) + 1 | 0) | 0;
       }
        while (inductionVariable < numIntervals);
     return n;
   }
-  n38() {
-    var values = ArrayList.f2(32);
-    var n = this.w2b_1.i2();
+  m38() {
+    var values = ArrayList.y1(32);
+    var n = this.v2b_1.b2();
     var inductionVariable = 0;
     if (inductionVariable < n)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var I = this.w2b_1.k2(i);
-        var a = I.r28_1;
-        var b = I.s28_1;
+        var I = this.v2b_1.d2(i);
+        var a = I.q28_1;
+        var b = I.r28_1;
         var inductionVariable_0 = a;
         if (inductionVariable_0 <= b)
           do {
             var v = inductionVariable_0;
             inductionVariable_0 = inductionVariable_0 + 1 | 0;
-            values.g2(v);
+            values.z1(v);
           }
            while (!(v === b));
       }
        while (inductionVariable < n);
     return values;
   }
-  i2f(el) {
-    if (this.x2b_1) {
-      throw IllegalStateException.s4("can't alter readonly IntervalSet");
+  h2f(el) {
+    if (this.w2b_1) {
+      throw IllegalStateException.l4("can't alter readonly IntervalSet");
     }
-    var n = this.w2b_1.i2();
+    var n = this.v2b_1.b2();
     var inductionVariable = 0;
     if (inductionVariable < n)
       $l$loop_2: do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var I = this.w2b_1.k2(i);
-        var a = I.r28_1;
-        var b = I.s28_1;
+        var I = this.v2b_1.d2(i);
+        var a = I.q28_1;
+        var b = I.r28_1;
         if (el < a) {
           break $l$loop_2;
         }
         if (el === a && el === b) {
-          this.w2b_1.e4(i);
+          this.v2b_1.x3(i);
           break $l$loop_2;
         }
         if (el === a) {
-          I.r28_1 = I.r28_1 + 1 | 0;
+          I.q28_1 = I.q28_1 + 1 | 0;
           break $l$loop_2;
         }
         if (el === b) {
-          I.s28_1 = I.s28_1 - 1 | 0;
+          I.r28_1 = I.r28_1 - 1 | 0;
           break $l$loop_2;
         }
         if (el < b) {
-          var oldB = I.s28_1;
-          I.s28_1 = el - 1 | 0;
-          this.a2q(el + 1 | 0, oldB);
+          var oldB = I.r28_1;
+          I.r28_1 = el - 1 | 0;
+          this.z2p(el + 1 | 0, oldB);
         }
       }
        while (inductionVariable < n);
@@ -8234,16 +8234,16 @@ class IntervalSet {
 }
 class MurmurHash {
   constructor() {
-    this.h2n_1 = 0;
+    this.g2n_1 = 0;
   }
-  i2n(seed) {
+  h2n(seed) {
     return seed;
   }
-  d2z(seed, $super) {
+  c2z(seed, $super) {
     seed = seed === VOID ? 0 : seed;
-    return $super === VOID ? this.i2n(seed) : $super.i2n.call(this, seed);
+    return $super === VOID ? this.h2n(seed) : $super.h2n.call(this, seed);
   }
-  j2n(hash, value) {
+  i2n(hash, value) {
     var tempHash = hash;
     var c1 = -862048943;
     var c2 = 461845907;
@@ -8260,11 +8260,11 @@ class MurmurHash {
     tempHash = imul(tempHash, m) + n | 0;
     return tempHash;
   }
-  k2n(hash, value) {
+  j2n(hash, value) {
     var tmp1_elvis_lhs = value == null ? null : hashCode(value);
-    return this.j2n(hash, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs);
+    return this.i2n(hash, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs);
   }
-  l2n(hash, numberOfWords) {
+  k2n(hash, numberOfWords) {
     var tempHash = hash;
     tempHash = tempHash ^ imul(numberOfWords, 4);
     tempHash = tempHash ^ (tempHash >>> 16 | 0);
@@ -8274,23 +8274,23 @@ class MurmurHash {
     tempHash = tempHash ^ (tempHash >>> 16 | 0);
     return tempHash;
   }
-  p35(data, seed) {
-    var hash = this.i2n(seed);
+  o35(data, seed) {
+    var hash = this.h2n(seed);
     var inductionVariable = 0;
     var last = data.length;
     while (inductionVariable < last) {
       var value = data[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      hash = this.k2n(hash, value);
+      hash = this.j2n(hash, value);
     }
-    hash = this.l2n(hash, data.length);
+    hash = this.k2n(hash, data.length);
     return hash;
   }
 }
 class Companion_27 {
   constructor() {
     Companion_instance_27 = this;
-    this.l2x_1 = new ObjectEqualityComparator();
+    this.k2x_1 = new ObjectEqualityComparator();
   }
 }
 class ObjectEqualityComparator extends AbstractEqualityComparator {
@@ -8298,17 +8298,17 @@ class ObjectEqualityComparator extends AbstractEqualityComparator {
     Companion_getInstance_27();
     super();
   }
-  p2o(obj) {
+  o2o(obj) {
     var tmp1_elvis_lhs = obj == null ? null : hashCode(obj);
     return tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
   }
-  r2o(a, b) {
+  q2o(a, b) {
     return a == null && b == null || equals(a, b);
   }
 }
 class Utils {
-  q2i(s, escapeSpaces) {
-    var buf = StringBuilder.z();
+  p2i(s, escapeSpaces) {
+    var buf = StringBuilder.s();
     var indexedObject = toCharArray(s);
     var inductionVariable = 0;
     var last = indexedObject.length;
@@ -8316,15 +8316,15 @@ class Utils {
       var c = indexedObject[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       if (c === _Char___init__impl__6a9atx(32) && escapeSpaces)
-        buf.a1('\xB7');
+        buf.t('\xB7');
       else if (c === _Char___init__impl__6a9atx(9))
-        buf.a1('\\t');
+        buf.t('\\t');
       else if (c === _Char___init__impl__6a9atx(10))
-        buf.a1('\\n');
+        buf.t('\\n');
       else if (c === _Char___init__impl__6a9atx(13))
-        buf.a1('\\r');
+        buf.t('\\r');
       else
-        buf.c1(c);
+        buf.v(c);
     }
     return buf.toString();
   }
@@ -8333,31 +8333,31 @@ class TerminalNode {}
 class ErrorNode {}
 class TerminalNodeImpl {
   constructor(symbol) {
-    this.q38_1 = symbol;
-    this.r38_1 = null;
-    this.s38_1 = 0;
+    this.p38_1 = symbol;
+    this.q38_1 = null;
+    this.r38_1 = 0;
   }
-  x2k() {
-    return this.q38_1;
+  w2k() {
+    return this.p38_1;
   }
-  n2k() {
-    return this.s38_1;
+  m2k() {
+    return this.r38_1;
   }
-  m1f() {
-    return ensureNotNull(this.x2k().m1f());
+  j1f() {
+    return ensureNotNull(this.w2k().j1f());
   }
-  s2k(value) {
-    this.r38_1 = value;
+  r2k(value) {
+    this.q38_1 = value;
   }
-  u2k(i) {
+  t2k(i) {
     return null;
   }
   toString() {
     var tmp;
-    if (this.x2k().g1s() === -1) {
+    if (this.w2k().d1s() === -1) {
       tmp = '<EOF>';
     } else {
-      tmp = ensureNotNull(this.x2k().m1f());
+      tmp = ensureNotNull(this.w2k().j1f());
     }
     return tmp;
   }
@@ -8366,47 +8366,47 @@ class ErrorNodeImpl extends TerminalNodeImpl {}
 class Companion_28 {
   constructor() {
     Companion_instance_28 = this;
-    this.t38_1 = new ParseTreeWalker();
+    this.s38_1 = new ParseTreeWalker();
   }
 }
 class ParseTreeWalker {
   constructor() {
     Companion_getInstance_28();
   }
-  u38(listener, t) {
+  t38(listener, t) {
     if (isInterface(t, ErrorNode)) {
-      listener.a2k(t);
+      listener.z2j(t);
       return Unit_instance;
     } else {
       if (isInterface(t, TerminalNode)) {
-        listener.z2j(t);
+        listener.y2j(t);
         return Unit_instance;
       }
     }
     var r = isInterface(t, RuleNode) ? t : THROW_CCE();
-    this.v38(listener, r);
-    var n = r.n2k();
+    this.u38(listener, r);
+    var n = r.m2k();
     var inductionVariable = 0;
     if (inductionVariable < n)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        this.u38(listener, ensureNotNull(r.u2k(i)));
+        this.t38(listener, ensureNotNull(r.t2k(i)));
       }
        while (inductionVariable < n);
-    this.w38(listener, r);
+    this.v38(listener, r);
+  }
+  u38(listener, r) {
+    var tmp = r.n2k();
+    var ctx = tmp instanceof ParserRuleContext ? tmp : THROW_CCE();
+    listener.r2j(ctx);
+    ctx.s2j(listener);
   }
   v38(listener, r) {
-    var tmp = r.o2k();
+    var tmp = r.n2k();
     var ctx = tmp instanceof ParserRuleContext ? tmp : THROW_CCE();
-    listener.s2j(ctx);
-    ctx.t2j(listener);
-  }
-  w38(listener, r) {
-    var tmp = r.o2k();
-    var ctx = tmp instanceof ParserRuleContext ? tmp : THROW_CCE();
-    ctx.v2j(listener);
-    listener.w2j(ctx);
+    ctx.u2j(listener);
+    listener.v2j(ctx);
   }
 }
 class CharStreams extends AbstractCharStreams {
@@ -8417,87 +8417,87 @@ class CharStreams extends AbstractCharStreams {
   }
 }
 class BitSet {
-  static x38(size) {
+  static w38(size) {
     var $this = createThis(this);
     var tmp = $this;
     // Inline function 'com.strumenta.antlrkotlin.runtime.newArray' call
-    tmp.c2p_1 = Array(size);
+    tmp.b2p_1 = Array(size);
     // Inline function 'kotlin.require' call
     if (!(size >= 0)) {
       var message = 'The initial bitset size must be equal or greater than 0';
-      throw IllegalArgumentException.t1(toString_0(message));
+      throw IllegalArgumentException.m1(toString_0(message));
     }
     return $this;
   }
-  static d2p() {
-    return this.x38(64);
+  static c2p() {
+    return this.w38(64);
   }
-  e2p(bitIndex) {
+  d2p(bitIndex) {
     if (bitIndex < 0) {
-      throw IndexOutOfBoundsException.rc('bitIndex < 0: ' + bitIndex);
+      throw IndexOutOfBoundsException.mc('bitIndex < 0: ' + bitIndex);
     }
-    this.c2p_1[bitIndex] = true;
+    this.b2p_1[bitIndex] = true;
   }
-  w2w(bitIndex) {
+  v2w(bitIndex) {
     if (bitIndex < 0) {
-      throw IndexOutOfBoundsException.rc('bitIndex < 0: ' + bitIndex);
+      throw IndexOutOfBoundsException.mc('bitIndex < 0: ' + bitIndex);
     }
-    delete(this.c2p_1[bitIndex]);
+    delete(this.b2p_1[bitIndex]);
   }
-  k2(bitIndex) {
+  d2(bitIndex) {
     if (bitIndex < 0) {
-      throw IndexOutOfBoundsException.rc('bitIndex < 0: ' + bitIndex);
+      throw IndexOutOfBoundsException.mc('bitIndex < 0: ' + bitIndex);
     }
-    if (bitIndex >= this.c2p_1.length) {
+    if (bitIndex >= this.b2p_1.length) {
       return false;
     }
-    return this.c2p_1[bitIndex] === true;
+    return this.b2p_1[bitIndex] === true;
   }
-  i31() {
+  h31() {
     var c = 0;
     var inductionVariable = 0;
-    var last = this.c2p_1.length - 1 | 0;
+    var last = this.b2p_1.length - 1 | 0;
     if (inductionVariable <= last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        if (this.c2p_1[i] === true) {
+        if (this.b2p_1[i] === true) {
           c = c + 1 | 0;
         }
       }
        while (inductionVariable <= last);
     return c;
   }
-  h31(startIndex) {
+  g31(startIndex) {
     if (startIndex < 0) {
-      throw IndexOutOfBoundsException.rc('fromIndex < 0: ' + startIndex);
+      throw IndexOutOfBoundsException.mc('fromIndex < 0: ' + startIndex);
     }
-    if (startIndex >= this.c2p_1.length) {
+    if (startIndex >= this.b2p_1.length) {
       return -1;
     }
     var inductionVariable = startIndex;
-    var last = this.c2p_1.length;
+    var last = this.b2p_1.length;
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        if (this.c2p_1[i] === true) {
+        if (this.b2p_1[i] === true) {
           return i;
         }
       }
        while (inductionVariable < last);
     return -1;
   }
-  r34(another) {
+  q34(another) {
     var inductionVariable = 0;
-    var last = another.c2p_1.length;
+    var last = another.b2p_1.length;
     if (inductionVariable < last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        var result = this.c2p_1[i] === true || another.c2p_1[i] === true;
+        var result = this.b2p_1[i] === true || another.b2p_1[i] === true;
         if (result) {
-          this.c2p_1[i] = true;
+          this.b2p_1[i] = true;
         }
       }
        while (inductionVariable < last);
@@ -8509,7 +8509,7 @@ class BitSet {
     } else {
       var tmp_0;
       if (other instanceof BitSet) {
-        tmp_0 = contentEquals_1(this, this.c2p_1, other.c2p_1);
+        tmp_0 = contentEquals_1(this, this.b2p_1, other.b2p_1);
       } else {
         tmp_0 = false;
       }
@@ -8519,174 +8519,174 @@ class BitSet {
   }
   hashCode() {
     var fqn = 'com.strumenta.antlrkotlin.runtime.BitSet';
-    var hashCode = MurmurHash_instance.i2n(getStringHashCode(fqn));
+    var hashCode = MurmurHash_instance.h2n(getStringHashCode(fqn));
     var on = 0;
     var inductionVariable = 0;
-    var last = this.c2p_1.length - 1 | 0;
+    var last = this.b2p_1.length - 1 | 0;
     if (inductionVariable <= last)
       do {
         var i = inductionVariable;
         inductionVariable = inductionVariable + 1 | 0;
-        if (this.c2p_1[i] === true) {
-          hashCode = MurmurHash_instance.j2n(hashCode, i);
+        if (this.b2p_1[i] === true) {
+          hashCode = MurmurHash_instance.i2n(hashCode, i);
           on = on + 1 | 0;
         }
       }
        while (inductionVariable <= last);
-    return MurmurHash_instance.l2n(hashCode, on);
+    return MurmurHash_instance.k2n(hashCode, on);
   }
   toString() {
-    var sb = StringBuilder.z();
+    var sb = StringBuilder.s();
     var first = true;
-    sb.a1('{');
-    var index = this.h31(0);
+    sb.t('{');
+    var index = this.g31(0);
     while (!(index === -1)) {
       if (!first) {
-        sb.a1(', ');
+        sb.t(', ');
       } else {
         first = false;
       }
-      sb.df(index);
-      index = this.h31(index + 1 | 0);
+      sb.af(index);
+      index = this.g31(index + 1 | 0);
     }
-    sb.a1('}');
+    sb.t('}');
     return sb.toString();
   }
 }
 class IdentityEntry {
   constructor($outer, key, value) {
-    this.b39_1 = $outer;
-    this.z38_1 = key;
-    this.a39_1 = value;
+    this.a39_1 = $outer;
+    this.y38_1 = key;
+    this.z38_1 = value;
   }
-  q3() {
+  j3() {
+    return this.y38_1;
+  }
+  k3() {
     return this.z38_1;
-  }
-  r3() {
-    return this.a39_1;
   }
 }
 class IdentityEntriesView$iterator$1 {
   constructor($iterator, this$0) {
-    this.d39_1 = $iterator;
-    this.e39_1 = this$0;
-    this.c39_1 = null;
+    this.c39_1 = $iterator;
+    this.d39_1 = this$0;
+    this.b39_1 = null;
   }
-  e1() {
-    return this.d39_1.e1();
+  x() {
+    return this.c39_1.x();
   }
-  f1() {
-    var _destruct__k2r9zo = this.d39_1.f1();
+  y() {
+    var _destruct__k2r9zo = this.c39_1.y();
     var key = component1(_destruct__k2r9zo);
     var value = component2(_destruct__k2r9zo);
-    var entry = new IdentityEntry(this.e39_1, key, value);
-    this.c39_1 = entry;
+    var entry = new IdentityEntry(this.d39_1, key, value);
+    this.b39_1 = entry;
     return entry;
   }
-  y5() {
+  r5() {
     // Inline function 'kotlin.checkNotNull' call
-    var tmp0 = this.c39_1;
+    var tmp0 = this.b39_1;
     var tmp$ret$1;
     $l$block: {
       // Inline function 'kotlin.checkNotNull' call
       if (tmp0 == null) {
         var message = 'Required value was null.';
-        throw IllegalStateException.s4(toString_0(message));
+        throw IllegalStateException.l4(toString_0(message));
       } else {
         tmp$ret$1 = tmp0;
         break $l$block;
       }
     }
     var lastEntry = tmp$ret$1;
-    remove(this.e39_1, lastEntry.z38_1, lastEntry.a39_1);
+    remove(this.d39_1, lastEntry.y38_1, lastEntry.z38_1);
   }
 }
 class IdentityEntriesView extends AbstractMutableSet {
-  static f39(jsMap) {
-    var $this = this.o7();
-    $this.y38_1 = jsMap;
+  static e39(jsMap) {
+    var $this = this.h7();
+    $this.x38_1 = jsMap;
     return $this;
   }
-  i2() {
-    return this.y38_1.size;
+  b2() {
+    return this.x38_1.size;
   }
-  b1() {
-    return this.y38_1.size === 0;
+  u() {
+    return this.x38_1.size === 0;
+  }
+  f39(element) {
+    throw UnsupportedOperationException.l9('Adding is not supported on entries');
+  }
+  z1(element) {
+    return this.f39((!(element == null) ? isInterface(element, MutableEntry) : false) ? element : THROW_CCE());
   }
   g39(element) {
-    throw UnsupportedOperationException.s9('Adding is not supported on entries');
+    // Inline function 'com.strumenta.antlrkotlin.runtime.undefinedToNull' call
+    var value = element.j3();
+    var k = value === undefined ? null : value;
+    return this.x38_1.has(k) && this.x38_1.get(k) === element.k3();
   }
   g2(element) {
-    return this.g39((!(element == null) ? isInterface(element, MutableEntry) : false) ? element : THROW_CCE());
-  }
-  h39(element) {
-    // Inline function 'com.strumenta.antlrkotlin.runtime.undefinedToNull' call
-    var value = element.q3();
-    var k = value === undefined ? null : value;
-    return this.y38_1.has(k) && this.y38_1.get(k) === element.r3();
-  }
-  n2(element) {
     if (!(!(element == null) ? isInterface(element, MutableEntry) : false))
       return false;
-    return this.h39((!(element == null) ? isInterface(element, MutableEntry) : false) ? element : THROW_CCE());
+    return this.g39((!(element == null) ? isInterface(element, MutableEntry) : false) ? element : THROW_CCE());
   }
-  d1() {
-    var iterator_0 = toKotlinIterator(iterator(this.y38_1));
+  w() {
+    var iterator_0 = toKotlinIterator(iterator(this.x38_1));
     return new IdentityEntriesView$iterator$1(iterator_0, this);
   }
 }
 class IdentityHashMap {
   constructor() {
-    this.i39_1 = new Map();
+    this.h39_1 = new Map();
   }
-  i2() {
-    return this.i39_1.size;
+  b2() {
+    return this.h39_1.size;
   }
-  u3() {
-    return IdentityKeysView.k39(this);
+  n3() {
+    return IdentityKeysView.j39(this);
   }
-  v3() {
-    return IdentityValuesView.m39(this);
+  o3() {
+    return IdentityValuesView.l39(this);
   }
-  t2() {
-    return IdentityEntriesView.f39(this.i39_1);
+  m2() {
+    return IdentityEntriesView.e39(this.h39_1);
   }
-  b1() {
-    return this.i39_1.size === 0;
+  u() {
+    return this.h39_1.size === 0;
   }
-  y3(key) {
+  r3(key) {
     // Inline function 'com.strumenta.antlrkotlin.runtime.undefinedToNull' call
     var k = key === undefined ? null : key;
     // Inline function 'com.strumenta.antlrkotlin.runtime.undefinedToNull' call
-    var value = this.i39_1.get(k);
+    var value = this.h39_1.get(k);
     return value === undefined ? null : value;
   }
-  s3(key, value) {
+  l3(key, value) {
     // Inline function 'com.strumenta.antlrkotlin.runtime.undefinedToNull' call
     var k = key === undefined ? null : key;
-    var previousValue = this.i39_1.get(k);
-    this.i39_1.set(k, value);
+    var previousValue = this.h39_1.get(k);
+    this.h39_1.set(k, value);
     // Inline function 'com.strumenta.antlrkotlin.runtime.undefinedToNull' call
     return previousValue === undefined ? null : previousValue;
   }
-  t3(key) {
+  m3(key) {
     // Inline function 'com.strumenta.antlrkotlin.runtime.undefinedToNull' call
     var k = key === undefined ? null : key;
-    var removedValue = this.i39_1.get(k);
-    this.i39_1.delete(k);
+    var removedValue = this.h39_1.get(k);
+    this.h39_1.delete(k);
     // Inline function 'com.strumenta.antlrkotlin.runtime.undefinedToNull' call
     return removedValue === undefined ? null : removedValue;
   }
-  w3(key) {
+  p3(key) {
     // Inline function 'com.strumenta.antlrkotlin.runtime.undefinedToNull' call
     var k = key === undefined ? null : key;
-    return this.i39_1.has(k);
+    return this.h39_1.has(k);
   }
-  x3(value) {
+  q3(value) {
     // Inline function 'kotlin.collections.iterator' call
-    var _iterator__ex2g4s = toKotlinIterator(this.i39_1.values());
-    while (_iterator__ex2g4s.e1()) {
-      var v = _iterator__ex2g4s.f1();
+    var _iterator__ex2g4s = toKotlinIterator(this.h39_1.values());
+    while (_iterator__ex2g4s.x()) {
+      var v = _iterator__ex2g4s.y();
       if (v === value) {
         return true;
       }
@@ -8696,114 +8696,114 @@ class IdentityHashMap {
 }
 class IdentityKeysView$iterator$1 {
   constructor($entriesIterator) {
-    this.n39_1 = $entriesIterator;
+    this.m39_1 = $entriesIterator;
   }
-  e1() {
-    return this.n39_1.e1();
+  x() {
+    return this.m39_1.x();
   }
-  f1() {
-    return this.n39_1.f1().q3();
+  y() {
+    return this.m39_1.y().j3();
   }
-  y5() {
-    return this.n39_1.y5();
+  r5() {
+    return this.m39_1.r5();
   }
 }
 class IdentityKeysView extends AbstractMutableSet {
-  static k39(map) {
-    var $this = this.o7();
-    $this.j39_1 = map;
+  static j39(map) {
+    var $this = this.h7();
+    $this.i39_1 = map;
     return $this;
   }
-  i2() {
-    return this.j39_1.i2();
+  b2() {
+    return this.i39_1.b2();
   }
-  b1() {
-    return this.j39_1.b1();
+  u() {
+    return this.i39_1.u();
   }
-  w8(element) {
-    return this.j39_1.w3(element);
-  }
-  n2(element) {
-    if (!true)
-      return false;
-    return this.w8(element);
-  }
-  r9(element) {
-    throw UnsupportedOperationException.s9('Adding is not supported on keys');
+  p8(element) {
+    return this.i39_1.p3(element);
   }
   g2(element) {
-    return this.r9(element);
+    if (!true)
+      return false;
+    return this.p8(element);
   }
-  d1() {
-    var entriesIterator = this.j39_1.t2().d1();
+  k9(element) {
+    throw UnsupportedOperationException.l9('Adding is not supported on keys');
+  }
+  z1(element) {
+    return this.k9(element);
+  }
+  w() {
+    var entriesIterator = this.i39_1.m2().w();
     return new IdentityKeysView$iterator$1(entriesIterator);
   }
 }
 class IdentityValuesView$iterator$1 {
   constructor($entriesIterator) {
-    this.o39_1 = $entriesIterator;
+    this.n39_1 = $entriesIterator;
   }
-  e1() {
-    return this.o39_1.e1();
+  x() {
+    return this.n39_1.x();
   }
-  f1() {
-    return this.o39_1.f1().r3();
+  y() {
+    return this.n39_1.y().k3();
   }
-  y5() {
-    return this.o39_1.y5();
+  r5() {
+    return this.n39_1.r5();
   }
 }
 class IdentityValuesView extends AbstractMutableCollection {
-  static m39(map) {
-    var $this = this.v5();
-    $this.l39_1 = map;
+  static l39(map) {
+    var $this = this.o5();
+    $this.k39_1 = map;
     return $this;
   }
-  i2() {
-    return this.l39_1.i2();
+  b2() {
+    return this.k39_1.b2();
   }
-  b1() {
-    return this.l39_1.b1();
+  u() {
+    return this.k39_1.u();
   }
-  g9(element) {
-    throw UnsupportedOperationException.s9('Adding is not supported on values');
+  z8(element) {
+    throw UnsupportedOperationException.l9('Adding is not supported on values');
+  }
+  z1(element) {
+    return this.z8(element);
+  }
+  y8(element) {
+    return this.k39_1.q3(element);
   }
   g2(element) {
-    return this.g9(element);
-  }
-  f9(element) {
-    return this.l39_1.x3(element);
-  }
-  n2(element) {
     if (!true)
       return false;
-    return this.f9(element);
+    return this.y8(element);
   }
-  d1() {
-    var entriesIterator = this.l39_1.t2().d1();
+  w() {
+    var entriesIterator = this.k39_1.m2().w();
     return new IdentityValuesView$iterator$1(entriesIterator);
   }
 }
 class KotlinIterator {
   constructor(jsIterator) {
-    this.p39_1 = jsIterator;
-    this.q39_1 = null;
+    this.o39_1 = jsIterator;
+    this.p39_1 = null;
   }
-  e1() {
-    if (this.q39_1 == null) {
-      this.q39_1 = this.p39_1.next();
+  x() {
+    if (this.p39_1 == null) {
+      this.p39_1 = this.o39_1.next();
     }
-    var tmp0_safe_receiver = this.q39_1;
+    var tmp0_safe_receiver = this.p39_1;
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.done;
     var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : !tmp1_safe_receiver;
     return tmp2_elvis_lhs == null ? false : tmp2_elvis_lhs;
   }
-  f1() {
-    var tmp0_elvis_lhs = this.q39_1;
-    var value = tmp0_elvis_lhs == null ? this.p39_1.next() : tmp0_elvis_lhs;
-    this.q39_1 = null;
+  y() {
+    var tmp0_elvis_lhs = this.p39_1;
+    var value = tmp0_elvis_lhs == null ? this.o39_1.next() : tmp0_elvis_lhs;
+    this.p39_1 = null;
     if (value.done) {
-      throw NoSuchElementException.c6();
+      throw NoSuchElementException.v5();
     }
     return value.value;
   }
@@ -8841,12 +8841,12 @@ function System_getInstance() {
 }
 function appendCodePoint(_this__u8e3s4, codePoint) {
   if (isBmpCodePoint(codePoint)) {
-    _this__u8e3s4.c1(numberToChar(codePoint));
+    _this__u8e3s4.v(numberToChar(codePoint));
   } else if (isValidCodePoint(codePoint)) {
-    _this__u8e3s4.c1(highSurrogate(codePoint));
-    _this__u8e3s4.c1(lowSurrogate(codePoint));
+    _this__u8e3s4.v(highSurrogate(codePoint));
+    _this__u8e3s4.v(lowSurrogate(codePoint));
   } else {
-    throw IllegalArgumentException.t1('Not a valid Unicode code point: ' + toHex(codePoint));
+    throw IllegalArgumentException.m1('Not a valid Unicode code point: ' + toHex(codePoint));
   }
   return _this__u8e3s4;
 }
@@ -8866,12 +8866,12 @@ function _init_properties_Int_ext_kt__26f69c() {
     // Inline function 'kotlin.text.HexFormat' call
     // Inline function 'kotlin.apply' call
     var this_0 = new Builder();
-    this_0.jm_1 = true;
+    this_0.gm_1 = true;
     // Inline function 'kotlin.text.Builder.number' call
-    var $this$number = this_0.mm();
-    $this$number.xl('0x');
-    $this$number.ul_1 = true;
-    hexFormat = this_0.yl();
+    var $this$number = this_0.jm();
+    $this$number.ul('0x');
+    $this$number.rl_1 = true;
+    hexFormat = this_0.vl();
   }
 }
 function codePointIndicesFast(str) {
@@ -8915,14 +8915,14 @@ function Companion_getInstance() {
 }
 function init_org_antlr_v4_kotlinruntime_CommonToken(_this__u8e3s4) {
   Companion_getInstance();
-  _this__u8e3s4.b29_1 = null;
+  _this__u8e3s4.a29_1 = null;
+  _this__u8e3s4.b29_1 = 0;
   _this__u8e3s4.c29_1 = 0;
-  _this__u8e3s4.d29_1 = 0;
-  _this__u8e3s4.e29_1 = -1;
-  _this__u8e3s4.f29_1 = 0;
-  _this__u8e3s4.g29_1 = -1;
+  _this__u8e3s4.d29_1 = -1;
+  _this__u8e3s4.e29_1 = 0;
+  _this__u8e3s4.f29_1 = -1;
+  _this__u8e3s4.g29_1 = 0;
   _this__u8e3s4.h29_1 = 0;
-  _this__u8e3s4.i29_1 = 0;
 }
 var Companion_instance_0;
 function Companion_getInstance_0() {
@@ -8941,7 +8941,7 @@ function DummyTokenStream_getInstance() {
   return DummyTokenStream_instance;
 }
 function init_org_antlr_v4_kotlinruntime_InputMismatchException(_this__u8e3s4) {
-  captureStack(_this__u8e3s4, _this__u8e3s4.j2d_1);
+  captureStack(_this__u8e3s4, _this__u8e3s4.i2d_1);
 }
 var Companion_instance_2;
 function Companion_getInstance_2() {
@@ -8955,10 +8955,10 @@ function Companion_getInstance_3() {
 }
 function init_org_antlr_v4_kotlinruntime_ParserRuleContext(_this__u8e3s4) {
   Companion_getInstance_3();
+  _this__u8e3s4.l2j_1 = null;
   _this__u8e3s4.m2j_1 = null;
   _this__u8e3s4.n2j_1 = null;
   _this__u8e3s4.o2j_1 = null;
-  _this__u8e3s4.p2j_1 = null;
 }
 var Companion_instance_4;
 function Companion_getInstance_4() {
@@ -8967,26 +8967,26 @@ function Companion_getInstance_4() {
   return Companion_instance_4;
 }
 function init_org_antlr_v4_kotlinruntime_RuleContext(_this__u8e3s4) {
-  _this__u8e3s4.d2e_1 = null;
-  _this__u8e3s4.e2e_1 = -1;
-  _this__u8e3s4.f2e_1 = Companion_getInstance_25().w28_1;
-  _this__u8e3s4.g2e_1 = -1;
-  _this__u8e3s4.h2e_1 = 0;
+  _this__u8e3s4.c2e_1 = null;
+  _this__u8e3s4.d2e_1 = -1;
+  _this__u8e3s4.e2e_1 = Companion_getInstance_25().v28_1;
+  _this__u8e3s4.f2e_1 = -1;
+  _this__u8e3s4.g2e_1 = 0;
 }
 var RuntimeMetaData_instance;
 function RuntimeMetaData_getInstance() {
   return RuntimeMetaData_instance;
 }
 function codePoint($this, index) {
-  if (!(0 <= index ? index < $this.n2l_1 : false)) {
+  if (!(0 <= index ? index < $this.m2l_1 : false)) {
     return -1;
   }
-  var char = charCodeAt($this.k2l_1, $this.m2l_1[index]);
+  var char = charCodeAt($this.j2l_1, $this.l2l_1[index]);
   if (isHighSurrogate(char)) {
-    var containsUpper = $this.n2l_1;
+    var containsUpper = $this.m2l_1;
     var containsArg = index + 1 | 0;
     if (0 <= containsArg ? containsArg < containsUpper : false) {
-      var low = charCodeAt($this.k2l_1, $this.m2l_1[index] + 1 | 0);
+      var low = charCodeAt($this.j2l_1, $this.l2l_1[index] + 1 | 0);
       return toCodePoint($this, char, low);
     }
     return -1;
@@ -9021,8 +9021,8 @@ function Companion_getInstance_8() {
   return Companion_instance_8;
 }
 function init_org_antlr_v4_kotlinruntime_atn_ATNConfig(_this__u8e3s4) {
-  _this__u8e3s4.w2m_1 = null;
-  _this__u8e3s4.x2m_1 = 0;
+  _this__u8e3s4.v2m_1 = null;
+  _this__u8e3s4.w2m_1 = 0;
 }
 var ConfigEqualityComparator_instance;
 function ConfigEqualityComparator_getInstance() {
@@ -9038,9 +9038,9 @@ function Companion_getInstance_9() {
 }
 function init_org_antlr_v4_kotlinruntime_atn_ATNDeserializationOptions(_this__u8e3s4) {
   Companion_getInstance_9();
+  _this__u8e3s4.q2p_1 = false;
   _this__u8e3s4.r2p_1 = false;
   _this__u8e3s4.s2p_1 = false;
-  _this__u8e3s4.t2p_1 = false;
 }
 var Companion_instance_10;
 function Companion_getInstance_10() {
@@ -9058,13 +9058,13 @@ function deserializeSets($this, data, p, sets) {
       inductionVariable = inductionVariable + 1 | 0;
       var nIntervals = data[pp];
       pp = pp + 1 | 0;
-      var set = IntervalSet.y2b();
-      sets.g2(set);
+      var set = IntervalSet.x2b();
+      sets.z1(set);
       var _unary__edvuaz_0 = pp;
       pp = _unary__edvuaz_0 + 1 | 0;
       var containsEof = !(data[_unary__edvuaz_0] === 0);
       if (containsEof) {
-        set.z2b(-1);
+        set.y2b(-1);
       }
       var inductionVariable_0 = 0;
       if (inductionVariable_0 < nIntervals)
@@ -9077,7 +9077,7 @@ function deserializeSets($this, data, p, sets) {
           var _unary__edvuaz_2 = pp;
           pp = _unary__edvuaz_2 + 1 | 0;
           var b = data[_unary__edvuaz_2];
-          set.a2q(a, b);
+          set.z2p(a, b);
         }
          while (inductionVariable_0 < nIntervals);
     }
@@ -9126,7 +9126,7 @@ function ATNType_PARSER_getInstance() {
 var EmptyPredictionContext_instance;
 function EmptyPredictionContext_getInstance() {
   if (EmptyPredictionContext_instance === VOID)
-    EmptyPredictionContext.l2w();
+    EmptyPredictionContext.k2w();
   return EmptyPredictionContext_instance;
 }
 var Companion_instance_13;
@@ -9135,12 +9135,12 @@ function Companion_getInstance_13() {
 }
 function checkNonGreedyDecision($this, source, target) {
   var tmp;
-  if (source.e2x_1) {
+  if (source.d2x_1) {
     tmp = true;
   } else {
     var tmp_0;
     if (target instanceof DecisionState) {
-      tmp_0 = target.r2m_1;
+      tmp_0 = target.q2m_1;
     } else {
       tmp_0 = false;
     }
@@ -9243,12 +9243,12 @@ function getSafeEnv($this, envName, defaultValue) {
   defaultValue = defaultValue === VOID ? null : defaultValue;
   var tmp;
   try {
-    tmp = System_getInstance().j27(envName, defaultValue);
+    tmp = System_getInstance().i27(envName, defaultValue);
   } catch ($p) {
     var tmp_0;
     if ($p instanceof Exception) {
       var e = $p;
-      System_getInstance().i27_1.g27(e.toString());
+      System_getInstance().h27_1.f27(e.toString());
       tmp_0 = null;
     } else {
       throw $p;
@@ -9303,13 +9303,13 @@ function PredictionMode_LL_EXACT_AMBIG_DETECTION_getInstance() {
   return PredictionMode_LL_EXACT_AMBIG_DETECTION_instance;
 }
 function filterPrecedencePredicates($this, collection) {
-  var result = ArrayList.b2();
-  var iterator = collection.d1();
-  while (iterator.e1()) {
-    var context = iterator.f1();
+  var result = ArrayList.u1();
+  var iterator = collection.w();
+  while (iterator.x()) {
+    var context = iterator.y();
     if (context instanceof PrecedencePredicate) {
-      result.g2(context);
-      iterator.y5();
+      result.z1(context);
+      iterator.r5();
     }
   }
   return result;
@@ -9323,7 +9323,7 @@ function Companion_getInstance_19() {
 var Empty_instance;
 function Empty_getInstance() {
   if (Empty_instance === VOID)
-    Empty.k35();
+    Empty.j35();
   return Empty_instance;
 }
 var Companion_instance_20;
@@ -9338,19 +9338,19 @@ function Companion_getInstance_21() {
 }
 function DFA$getStates$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = a.b2t_1;
-  var tmp$ret$2 = b.b2t_1;
+  var tmp = a.a2t_1;
+  var tmp$ret$2 = b.a2t_1;
   return compareValues(tmp, tmp$ret$2);
 }
 function init_org_antlr_v4_kotlinruntime_dfa_DFAState(_this__u8e3s4) {
-  _this__u8e3s4.b2t_1 = -1;
-  _this__u8e3s4.c2t_1 = new ATNConfigSet();
-  _this__u8e3s4.d2t_1 = null;
-  _this__u8e3s4.e2t_1 = false;
-  _this__u8e3s4.f2t_1 = 0;
-  _this__u8e3s4.g2t_1 = null;
-  _this__u8e3s4.h2t_1 = false;
-  _this__u8e3s4.i2t_1 = null;
+  _this__u8e3s4.a2t_1 = -1;
+  _this__u8e3s4.b2t_1 = new ATNConfigSet();
+  _this__u8e3s4.c2t_1 = null;
+  _this__u8e3s4.d2t_1 = false;
+  _this__u8e3s4.e2t_1 = 0;
+  _this__u8e3s4.f2t_1 = null;
+  _this__u8e3s4.g2t_1 = false;
+  _this__u8e3s4.h2t_1 = null;
 }
 var Companion_instance_22;
 function Companion_getInstance_22() {
@@ -9372,14 +9372,14 @@ function Companion_getInstance_24() {
 }
 function ensureCapacity($this, capacity) {
   if (capacity < 0 || capacity > 2147483639) {
-    throw RuntimeException.ec();
+    throw RuntimeException.xb();
   }
   var tmp;
   // Inline function 'kotlin.collections.isEmpty' call
-  if ($this.e2h_1.length === 0) {
+  if ($this.d2h_1.length === 0) {
     tmp = 4;
   } else {
-    tmp = $this.e2h_1.length;
+    tmp = $this.d2h_1.length;
   }
   var newLength = tmp;
   while (newLength < capacity) {
@@ -9388,11 +9388,11 @@ function ensureCapacity($this, capacity) {
       newLength = 2147483639;
     }
   }
-  $this.e2h_1 = copyOf_0($this.e2h_1, newLength);
+  $this.d2h_1 = copyOf_0($this.d2h_1, newLength);
 }
 function init_org_antlr_v4_kotlinruntime_misc_IntegerList(_this__u8e3s4) {
   Companion_getInstance_24();
-  _this__u8e3s4.f2h_1 = 0;
+  _this__u8e3s4.e2h_1 = 0;
 }
 function init_org_antlr_v4_kotlinruntime_misc_IntegerStack(_this__u8e3s4) {
 }
@@ -9409,40 +9409,40 @@ function Companion_getInstance_26() {
   return Companion_instance_26;
 }
 function add($this, addition) {
-  if ($this.x2b_1) {
-    throw IllegalStateException.s4("can't alter readonly IntervalSet");
+  if ($this.w2b_1) {
+    throw IllegalStateException.l4("can't alter readonly IntervalSet");
   }
-  if (addition.s28_1 < addition.r28_1) {
+  if (addition.r28_1 < addition.q28_1) {
     return Unit_instance;
   }
-  var iter = $this.w2b_1.f4();
-  while (iter.e1()) {
-    var r = iter.f1();
+  var iter = $this.v2b_1.y3();
+  while (iter.x()) {
+    var r = iter.y();
     if (addition.equals(r)) {
       return Unit_instance;
     }
-    if (addition.j38(r) || !addition.i38(r)) {
-      var bigger = addition.k38(r);
-      iter.o6(bigger);
-      $l$loop: while (iter.e1()) {
-        var next = iter.f1();
-        if (!bigger.j38(next) && bigger.i38(next)) {
+    if (addition.i38(r) || !addition.h38(r)) {
+      var bigger = addition.j38(r);
+      iter.h6(bigger);
+      $l$loop: while (iter.x()) {
+        var next = iter.y();
+        if (!bigger.i38(next) && bigger.h38(next)) {
           break $l$loop;
         }
-        iter.y5();
-        iter.k6();
-        iter.o6(bigger.k38(next));
-        iter.f1();
+        iter.r5();
+        iter.d6();
+        iter.h6(bigger.j38(next));
+        iter.y();
       }
       return Unit_instance;
     }
-    if (addition.g38(r)) {
-      iter.k6();
-      iter.m6(addition);
+    if (addition.f38(r)) {
+      iter.d6();
+      iter.f6(addition);
       return Unit_instance;
     }
   }
-  $this.w2b_1.g2(addition);
+  $this.v2b_1.z1(addition);
 }
 function elementName($this, vocabulary, a) {
   switch (a) {
@@ -9451,12 +9451,12 @@ function elementName($this, vocabulary, a) {
     case -2:
       return '<EPSILON>';
     default:
-      return vocabulary.y29(a);
+      return vocabulary.x29(a);
   }
 }
 function init_org_antlr_v4_kotlinruntime_misc_IntervalSet(_this__u8e3s4) {
   Companion_getInstance_26();
-  _this__u8e3s4.x2b_1 = false;
+  _this__u8e3s4.w2b_1 = false;
 }
 var MurmurHash_instance;
 function MurmurHash_getInstance() {
@@ -9517,15 +9517,15 @@ function platformGetEnv(name) {
     // Inline function 'kotlin.js.unsafeCast' call
     return process.env[name];
   }
-  System_getInstance().h27_1.g27('Environment variables are not supported in the browser');
+  System_getInstance().g27_1.f27('Environment variables are not supported in the browser');
   return null;
 }
 function remove($this, key, value) {
   // Inline function 'com.strumenta.antlrkotlin.runtime.undefinedToNull' call
   var k = key === undefined ? null : key;
-  if ($this.y38_1.has(k)) {
-    if ($this.y38_1.get(k) === value) {
-      return $this.y38_1.delete(k);
+  if ($this.x38_1.has(k)) {
+    if ($this.x38_1.get(k) === value) {
+      return $this.x38_1.delete(k);
     }
   }
   return false;
@@ -9562,8 +9562,8 @@ initMetadataForInterface(CharStream, 'CharStream');
 initMetadataForCompanion(Companion);
 initMetadataForInterface(Token, 'Token');
 initMetadataForInterface(WritableToken, 'WritableToken', VOID, VOID, [Token]);
-protoOf(CommonToken).z29 = startPoint;
-protoOf(CommonToken).a2a = endPoint;
+protoOf(CommonToken).y29 = startPoint;
+protoOf(CommonToken).z29 = endPoint;
 initMetadataForClass(CommonToken, 'CommonToken', VOID, VOID, [WritableToken]);
 initMetadataForCompanion(Companion_0);
 initMetadataForClass(CommonTokenFactory, 'CommonTokenFactory', CommonTokenFactory);
@@ -9572,7 +9572,7 @@ initMetadataForCompanion(Companion_1);
 initMetadataForClass(ConsoleErrorListener, 'ConsoleErrorListener', ConsoleErrorListener);
 initMetadataForClass(DefaultErrorStrategy, 'DefaultErrorStrategy', DefaultErrorStrategy);
 initMetadataForObject(DummyTokenStream, 'DummyTokenStream');
-initMetadataForClass(EmptyStackException, 'EmptyStackException', EmptyStackException.m2f);
+initMetadataForClass(EmptyStackException, 'EmptyStackException', EmptyStackException.l2f);
 initMetadataForClass(RecognitionException, 'RecognitionException');
 initMetadataForClass(FailedPredicateException, 'FailedPredicateException');
 initMetadataForClass(InputMismatchException, 'InputMismatchException');
@@ -9585,8 +9585,8 @@ initMetadataForClass(Parser, 'Parser');
 initMetadataForCompanion(Companion_3);
 initMetadataForInterface(ParseTree, 'ParseTree');
 initMetadataForInterface(RuleNode, 'RuleNode', VOID, VOID, [ParseTree]);
-initMetadataForClass(RuleContext, 'RuleContext', RuleContext.p2k, VOID, [RuleNode]);
-initMetadataForClass(ParserRuleContext, 'ParserRuleContext', ParserRuleContext.l2k);
+initMetadataForClass(RuleContext, 'RuleContext', RuleContext.o2k, VOID, [RuleNode]);
+initMetadataForClass(ParserRuleContext, 'ParserRuleContext', ParserRuleContext.k2k);
 initMetadataForClass(ProxyErrorListener, 'ProxyErrorListener');
 initMetadataForCompanion(Companion_4);
 initMetadataForObject(RuntimeMetaData, 'RuntimeMetaData');
@@ -9607,7 +9607,7 @@ initMetadataForClass(AbstractEqualityComparator, 'AbstractEqualityComparator');
 initMetadataForObject(ConfigEqualityComparator, 'ConfigEqualityComparator');
 initMetadataForClass(ATNConfigSet, 'ATNConfigSet', ATNConfigSet, VOID, [KtMutableSet]);
 initMetadataForCompanion(Companion_9);
-initMetadataForClass(ATNDeserializationOptions, 'ATNDeserializationOptions', ATNDeserializationOptions.u2p);
+initMetadataForClass(ATNDeserializationOptions, 'ATNDeserializationOptions', ATNDeserializationOptions.t2p);
 initMetadataForCompanion(Companion_10);
 initMetadataForClass(ATNDeserializer, 'ATNDeserializer', ATNDeserializer);
 initMetadataForCompanion(Companion_11);
@@ -9672,8 +9672,8 @@ initMetadataForClass(RuleTransition, 'RuleTransition');
 initMetadataForCompanion(Companion_19);
 initMetadataForClass(SemanticContext, 'SemanticContext');
 initMetadataForObject(Empty, 'Empty');
-initMetadataForClass(Predicate, 'Predicate', Predicate.m35);
-initMetadataForClass(PrecedencePredicate, 'PrecedencePredicate', PrecedencePredicate.p33, VOID, [Comparable]);
+initMetadataForClass(Predicate, 'Predicate', Predicate.l35);
+initMetadataForClass(PrecedencePredicate, 'PrecedencePredicate', PrecedencePredicate.o33, VOID, [Comparable]);
 initMetadataForClass(Operator, 'Operator');
 initMetadataForClass(AND, 'AND');
 initMetadataForClass(OR, 'OR');
@@ -9688,7 +9688,7 @@ initMetadataForClass(sam$kotlin_Comparator$0, 'sam$kotlin_Comparator$0', VOID, V
 initMetadataForClass(DFA, 'DFA');
 initMetadataForClass(DFASerializer, 'DFASerializer');
 initMetadataForClass(PredPrediction, 'PredPrediction');
-initMetadataForClass(DFAState, 'DFAState', DFAState.n37);
+initMetadataForClass(DFAState, 'DFAState', DFAState.m37);
 initMetadataForClass(LexerDFASerializer, 'LexerDFASerializer');
 initMetadataForCompanion(Companion_22);
 initMetadataForClass(SetIterator, 'SetIterator');
@@ -9696,12 +9696,12 @@ initMetadataForClass(DoubleKeyMap, 'DoubleKeyMap', DoubleKeyMap);
 initMetadataForCompanion(Companion_23);
 initMetadataForClass(Entry, 'Entry');
 initMetadataForCompanion(Companion_24);
-initMetadataForClass(IntegerList, 'IntegerList', IntegerList.f38);
-initMetadataForClass(IntegerStack, 'IntegerStack', IntegerStack.p2g);
+initMetadataForClass(IntegerList, 'IntegerList', IntegerList.e38);
+initMetadataForClass(IntegerStack, 'IntegerStack', IntegerStack.o2g);
 initMetadataForCompanion(Companion_25);
 initMetadataForClass(Interval, 'Interval');
 initMetadataForCompanion(Companion_26);
-initMetadataForClass(IntervalSet, 'IntervalSet', IntervalSet.y2b);
+initMetadataForClass(IntervalSet, 'IntervalSet', IntervalSet.x2b);
 initMetadataForObject(MurmurHash, 'MurmurHash');
 initMetadataForCompanion(Companion_27);
 initMetadataForClass(ObjectEqualityComparator, 'ObjectEqualityComparator', ObjectEqualityComparator);
@@ -9713,7 +9713,7 @@ initMetadataForClass(ErrorNodeImpl, 'ErrorNodeImpl', VOID, VOID, [ErrorNode]);
 initMetadataForCompanion(Companion_28);
 initMetadataForClass(ParseTreeWalker, 'ParseTreeWalker', ParseTreeWalker);
 initMetadataForObject(CharStreams, 'CharStreams');
-initMetadataForClass(BitSet, 'BitSet', BitSet.d2p);
+initMetadataForClass(BitSet, 'BitSet', BitSet.c2p);
 initMetadataForClass(IdentityEntry, 'IdentityEntry', VOID, VOID, [MutableEntry]);
 initMetadataForClass(IdentityEntriesView$iterator$1);
 initMetadataForClass(IdentityEntriesView, 'IdentityEntriesView');

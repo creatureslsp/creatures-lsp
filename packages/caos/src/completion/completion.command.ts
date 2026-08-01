@@ -55,10 +55,11 @@ export function getCommandCompletions(
         line: data.line,
         character: data.character
     };
-    const firstParameter = data.closestParameter
-    // If parameter is null, then this is possibly a command, so complete with command and not r/l values
     
-    if (firstParameter == null && !data.inEqualityStatement) {
+    const firstParameter = data.closestParameter
+    
+    // If parameter is null, then this is possibly a command, so complete with command and not r/l values
+    if (firstParameter == null && !data.inEqualityStatement && !data.inList) {
         return getCommandCompletionsForCommandType(
             variant,
             commands,

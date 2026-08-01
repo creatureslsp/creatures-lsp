@@ -83,6 +83,7 @@ import {
   ValueType_HEXADECIMAL_getInstancee1d0uqk8vvvj as ValueType_HEXADECIMAL_getInstance,
   Spaceswpw95f7xynx5 as Spaces,
   get_isCaos21f5ts23vabudh as get_isCaos2,
+  assertValidVariantj6a091z2jtqp as assertValidVariant,
 } from './caos-core.mjs';
 import { Suggestiont49xplgtw8za as Suggestion } from './common-lsp-validation.mjs';
 import { WhitespaceParseTreeItem1a7wvmsr6fprs as WhitespaceParseTreeItem } from './common-ast-parseritems.mjs';
@@ -123,7 +124,7 @@ import { encodeToDynamicsae9c2u7066d as encodeToDynamic } from './kotlinx-serial
 //endregion
 //region block: pre-declaration
 class ErrorFormatter {
-  e5b(command, variantString) {
+  d5d(command, variantString) {
     var tmp;
     if (isBlank(variantString)) {
       // Inline function 'kotlin.text.uppercase' call
@@ -140,31 +141,31 @@ class ErrorFormatter {
     }
     return tmp;
   }
-  f5b(command, expected, actualType) {
+  e5d(command, expected, actualType) {
     var tmp0_subject = charCodeAt(expected.type, 0);
     var an = tmp0_subject === _Char___init__impl__6a9atx(97) || tmp0_subject === _Char___init__impl__6a9atx(101) || (tmp0_subject === _Char___init__impl__6a9atx(105) || (tmp0_subject === _Char___init__impl__6a9atx(111) || tmp0_subject === _Char___init__impl__6a9atx(117))) ? 'an' : 'a';
     return 'Parameter(' + (expected.index + 1 | 0) + ") '" + expected.name + "' should be " + an + ' ' + expected.type + '; Found ' + actualType + ' (in ' + command + ')';
   }
-  g5b(variableType, variants) {
+  f5d(variableType, variants) {
     // Inline function 'kotlin.text.uppercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$0 = trimEnd(variableType, charArrayOf([_Char___init__impl__6a9atx(120), _Char___init__impl__6a9atx(88)])).toUpperCase();
     var formattedVarType = padEnd(tmp$ret$0, 4, _Char___init__impl__6a9atx(120));
     return formattedVarType + ' variables are only available in [' + variants + '] variants';
   }
-  h5b(variants) {
+  g5d(variants) {
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList.f2(variants.length);
+    var destination = ArrayList.y1(variants.length);
     var inductionVariable = 0;
     var last = variants.length;
     while (inductionVariable < last) {
       var item = variants[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       var tmp$ret$2 = item === 'DS:CE' || item === 'CE' ? 'DS' : item;
-      destination.g2(tmp$ret$2);
+      destination.z1(tmp$ret$2);
     }
-    var numVariants = distinct(destination).i2();
+    var numVariants = distinct(destination).b2();
     var tmp;
     if (numVariants === 1) {
       tmp = first(variants);
@@ -282,7 +283,7 @@ class VariableValidator {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$0 = ['C1', 'C2'];
-    tmp.i5b_1 = tmp_0.g5b('VARx', tmp_1.h5b(tmp$ret$0));
+    tmp.h5d_1 = tmp_0.f5d('VARx', tmp_1.g5d(tmp$ret$0));
     var tmp_2 = this;
     var tmp_3 = ErrorFormatter_instance;
     var tmp_4 = ErrorFormatter_instance;
@@ -290,7 +291,7 @@ class VariableValidator {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$3 = ['C2', 'CV', 'C3', 'DS', 'SM'];
-    tmp_2.j5b_1 = tmp_3.g5b('VAxx', tmp_4.h5b(tmp$ret$3));
+    tmp_2.i5d_1 = tmp_3.f5d('VAxx', tmp_4.g5d(tmp$ret$3));
     var tmp_5 = this;
     var tmp_6 = ErrorFormatter_instance;
     var tmp_7 = ErrorFormatter_instance;
@@ -298,8 +299,8 @@ class VariableValidator {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$6 = ['C2', 'CV', 'C3', 'DS', 'SM'];
-    tmp_5.k5b_1 = tmp_6.g5b('OVxx', tmp_7.h5b(tmp$ret$6));
-    this.l5b_1 = 'C1 supports only OBV0-OBV2 object variables';
+    tmp_5.j5d_1 = tmp_6.f5d('OVxx', tmp_7.g5d(tmp$ret$6));
+    this.k5d_1 = 'C1 supports only OBV0-OBV2 object variables';
     var tmp_8 = this;
     var tmp_9 = ErrorFormatter_instance;
     var tmp_10 = ErrorFormatter_instance;
@@ -307,7 +308,7 @@ class VariableValidator {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$9 = ['C1', 'C2'];
-    tmp_8.m5b_1 = tmp_9.g5b('OBVx', tmp_10.h5b(tmp$ret$9));
+    tmp_8.l5d_1 = tmp_9.f5d('OBVx', tmp_10.g5d(tmp$ret$9));
     var tmp_11 = this;
     var tmp_12 = ErrorFormatter_instance;
     var tmp_13 = ErrorFormatter_instance;
@@ -315,34 +316,34 @@ class VariableValidator {
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$12 = ['CV', 'C3', 'DS', 'SM'];
-    tmp_11.n5b_1 = tmp_12.g5b('MVxx', tmp_13.h5b(tmp$ret$12));
+    tmp_11.m5d_1 = tmp_12.f5d('MVxx', tmp_13.g5d(tmp$ret$12));
     var tmp_14 = this;
-    tmp_14.o5b_1 = VariableValidator$C1$lambda;
+    tmp_14.n5d_1 = VariableValidator$C1$lambda;
     var tmp_15 = this;
-    tmp_15.p5b_1 = VariableValidator$C2$lambda;
+    tmp_15.o5d_1 = VariableValidator$C2$lambda;
     var tmp_16 = this;
-    tmp_16.q5b_1 = VariableValidator$C2e$lambda;
+    tmp_16.p5d_1 = VariableValidator$C2e$lambda;
   }
 }
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.r5b_1 = function_0;
+    this.q5d_1 = function_0;
   }
-  zg(a, b) {
-    return this.r5b_1(a, b);
+  wg(a, b) {
+    return this.q5d_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
-    return this.r5b_1;
+  f4() {
+    return this.q5d_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -353,28 +354,28 @@ class sam$kotlin_Comparator$0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
 class sam$kotlin_Comparator$0_0 {
   constructor(function_0) {
-    this.s5b_1 = function_0;
+    this.r5d_1 = function_0;
   }
-  zg(a, b) {
-    return this.s5b_1(a, b);
+  wg(a, b) {
+    return this.r5d_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
-    return this.s5b_1;
+  f4() {
+    return this.r5d_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -385,28 +386,28 @@ class sam$kotlin_Comparator$0_0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
 class sam$kotlin_Comparator$0_1 {
   constructor(function_0) {
-    this.t5b_1 = function_0;
+    this.s5d_1 = function_0;
   }
-  zg(a, b) {
-    return this.t5b_1(a, b);
+  wg(a, b) {
+    return this.s5d_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
-    return this.t5b_1;
+  f4() {
+    return this.s5d_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -417,28 +418,28 @@ class sam$kotlin_Comparator$0_1 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
 class sam$kotlin_Comparator$0_2 {
   constructor(function_0) {
-    this.u5b_1 = function_0;
+    this.t5d_1 = function_0;
   }
-  zg(a, b) {
-    return this.u5b_1(a, b);
+  wg(a, b) {
+    return this.t5d_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
-    return this.u5b_1;
+  f4() {
+    return this.t5d_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -449,7 +450,7 @@ class sam$kotlin_Comparator$0_2 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
 //endregion
@@ -479,17 +480,17 @@ function inspectMvto(variant, call, errors, suggestions) {
   }
   // Inline function 'kotlin.text.lowercase' call
   // Inline function 'kotlin.js.asDynamic' call
-  if (!(arguments_0[0].m1f().toLowerCase() === 'posx')) {
+  if (!(arguments_0[0].j1f().toLowerCase() === 'posx')) {
     return Unit_instance;
   }
   // Inline function 'kotlin.text.lowercase' call
   // Inline function 'kotlin.js.asDynamic' call
-  if (!(arguments_0[1].m1f().toLowerCase() === 'posy')) {
+  if (!(arguments_0[1].j1f().toLowerCase() === 'posy')) {
     return Unit_instance;
   }
-  var error = new ErrorVal(call.d50_1, "Setting agent's position to agent's same self position", 9, call.l50_1, VOID, TypeTokens_getInstance().WARNING);
+  var error = new ErrorVal(call.e50_1, "Setting agent's position to agent's same self position", 9, call.m50_1, VOID, TypeTokens_getInstance().WARNING);
   var suggestion_0 = suggestion(suggestions, inspectMvto$lambda);
-  errors.g2(new Tuple(error, suggestion_0));
+  errors.z1(new Tuple(error, suggestion_0));
 }
 function inspectMvto$lambda() {
   _init_properties_LogicInspections_kt__ycsyzj();
@@ -509,16 +510,16 @@ function VariableValidator$C1$lambda(group, index) {
       tmp = null;
       break;
     case 'VAxx':
-      tmp = VariableValidator_getInstance().j5b_1;
+      tmp = VariableValidator_getInstance().i5d_1;
       break;
     case 'OBVx':
       tmp = index < 3 ? null : 'C1 supports only OBV0-OBV2 object variables';
       break;
     case 'OVxx':
-      tmp = VariableValidator_getInstance().k5b_1;
+      tmp = VariableValidator_getInstance().j5d_1;
       break;
     case 'MVxx':
-      tmp = VariableValidator_getInstance().n5b_1;
+      tmp = VariableValidator_getInstance().m5d_1;
       break;
     default:
       tmp = null;
@@ -527,14 +528,14 @@ function VariableValidator$C1$lambda(group, index) {
   return tmp;
 }
 function VariableValidator$C2$lambda(group, _unused_var__etf5q3) {
-  return group === 'MVxx' ? VariableValidator_getInstance().n5b_1 : null;
+  return group === 'MVxx' ? VariableValidator_getInstance().m5d_1 : null;
 }
 function VariableValidator$C2e$lambda(group, _unused_var__etf5q3) {
   switch (group) {
     case 'VARx':
-      return VariableValidator_getInstance().i5b_1;
+      return VariableValidator_getInstance().h5d_1;
     case 'OBVx':
-      return VariableValidator_getInstance().m5b_1;
+      return VariableValidator_getInstance().l5d_1;
     default:
       return null;
   }
@@ -548,28 +549,28 @@ function VariableValidator_getInstance() {
 function collectErrors(variant, isCaos2, items, commandCalls, controlStatementErrors, looseTokens, suggestions, ceEnabled, checkCancelled) {
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
-  var destination = ArrayList.b2();
+  var destination = ArrayList.u1();
   var inductionVariable = 0;
   var last = items.length;
   while (inductionVariable < last) {
     var element = items[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
     if (!(element instanceof ErrorVal)) {
-      destination.g2(element);
+      destination.z1(element);
     }
   }
   // Inline function 'kotlin.collections.toTypedArray' call
   var itemsWithoutErrors = copyToArray(destination);
   // Inline function 'kotlin.collections.filter' call
   // Inline function 'kotlin.collections.filterTo' call
-  var destination_0 = ArrayList.b2();
+  var destination_0 = ArrayList.u1();
   var inductionVariable_0 = 0;
   var last_0 = itemsWithoutErrors.length;
   while (inductionVariable_0 < last_0) {
     var element_0 = itemsWithoutErrors[inductionVariable_0];
     inductionVariable_0 = inductionVariable_0 + 1 | 0;
     if (isInterface(element_0, WhitespaceParseTreeItem)) {
-      destination_0.g2(element_0);
+      destination_0.z1(element_0);
     }
   }
   // Inline function 'kotlin.collections.toTypedArray' call
@@ -583,25 +584,25 @@ function collectErrors(variant, isCaos2, items, commandCalls, controlStatementEr
   var getSuggestion = tmp;
   // Inline function 'kotlin.collections.filterIsInstance' call
   // Inline function 'kotlin.collections.filterIsInstanceTo' call
-  var destination_1 = ArrayList.b2();
+  var destination_1 = ArrayList.u1();
   var inductionVariable_1 = 0;
   var last_1 = items.length;
   while (inductionVariable_1 < last_1) {
     var element_1 = items[inductionVariable_1];
     inductionVariable_1 = inductionVariable_1 + 1 | 0;
     if (element_1 instanceof ErrorVal) {
-      destination_1.g2(element_1);
+      destination_1.z1(element_1);
     }
   }
   // Inline function 'kotlin.collections.map' call
   var this_0 = plus(destination_1, controlStatementErrors);
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_2 = ArrayList.f2(collectionSizeOrDefault(this_0, 10));
-  var _iterator__ex2g4s = this_0.d1();
-  while (_iterator__ex2g4s.e1()) {
-    var item = _iterator__ex2g4s.f1();
+  var destination_2 = ArrayList.y1(collectionSizeOrDefault(this_0, 10));
+  var _iterator__ex2g4s = this_0.w();
+  while (_iterator__ex2g4s.x()) {
+    var item = _iterator__ex2g4s.y();
     var tmp$ret$12 = new Tuple(item, getSuggestion(item));
-    destination_2.g2(tmp$ret$12);
+    destination_2.z1(tmp$ret$12);
   }
   var errors = toMutableList(destination_2);
   try {
@@ -635,24 +636,24 @@ function collectErrors$lambda(error) {
       // Inline function 'kotlin.text.toRegex' call
 
       var this_0 = '.+`([^`]+)`$';
-      var tmp1_safe_receiver = Regex.xf(this_0).dg(error.message);
-      var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.mg();
-      var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.k2(1);
-      var terminator = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.lg_1;
+      var tmp1_safe_receiver = Regex.uf(this_0).ag(error.message);
+      var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.jg();
+      var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.d2(1);
+      var terminator = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.ig_1;
       tmp = 'Remove extraneous `' + terminator + '`';
       break;
     case 4:
       // Inline function 'kotlin.text.toRegex' call
 
       var this_1 = '.+terminating\\s+`([^`]+)`$';
-      var tmp4_safe_receiver = Regex.xf(this_1).dg(error.message);
-      var tmp5_safe_receiver = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.mg();
-      var tmp6_safe_receiver = tmp5_safe_receiver == null ? null : tmp5_safe_receiver.k2(1);
-      var terminator_0 = tmp6_safe_receiver == null ? null : tmp6_safe_receiver.lg_1;
+      var tmp4_safe_receiver = Regex.uf(this_1).ag(error.message);
+      var tmp5_safe_receiver = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.jg();
+      var tmp6_safe_receiver = tmp5_safe_receiver == null ? null : tmp5_safe_receiver.d2(1);
+      var terminator_0 = tmp6_safe_receiver == null ? null : tmp6_safe_receiver.ig_1;
       tmp = 'Add missing `' + terminator_0 + '`';
       break;
     case 8:
-      var tmp7_subject = charCodeAt(error.l1o_1, 0);
+      var tmp7_subject = charCodeAt(error.i1o_1, 0);
       var tmp_0;
       if (tmp7_subject === _Char___init__impl__6a9atx(91)) {
         tmp_0 = ']';
@@ -663,10 +664,10 @@ function collectErrors$lambda(error) {
       }
 
       var closingQuote = tmp_0;
-      tmp = 'Add closing `' + closingQuote + '` to `' + error.l1o_1 + '` -> `' + error.l1o_1 + closingQuote + '`';
+      tmp = 'Add closing `' + closingQuote + '` to `' + error.i1o_1 + '` -> `' + error.i1o_1 + closingQuote + '`';
       break;
     case 8:
-      var tmp8_subject = charCodeAt(error.l1o_1, 0);
+      var tmp8_subject = charCodeAt(error.i1o_1, 0);
       var tmp_1;
       if (tmp8_subject === _Char___init__impl__6a9atx(91)) {
         tmp_1 = ']';
@@ -679,7 +680,7 @@ function collectErrors$lambda(error) {
       }
 
       var closingQuote_0 = tmp_1;
-      tmp = 'Add closing `' + closingQuote_0 + '` to `' + error.l1o_1 + '` -> `' + error.l1o_1 + closingQuote_0 + '`';
+      tmp = 'Add closing `' + closingQuote_0 + '` to `' + error.i1o_1 + '` -> `' + error.i1o_1 + closingQuote_0 + '`';
       break;
     default:
       return null;
@@ -692,8 +693,8 @@ function collectErrors$lambda_0(it) {
 }
 function collectErrors$lambda_1(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = a.l1j_1.k1o_1.j1e();
-  var tmp$ret$2 = b.l1j_1.k1o_1.j1e();
+  var tmp = a.i1j_1.h1o_1.g1e();
+  var tmp$ret$2 = b.i1j_1.h1o_1.g1e();
   return compareValues(tmp, tmp$ret$2);
 }
 function get_caos2ScriptDelimiters() {
@@ -708,9 +709,9 @@ function addCommandErrors(variant, isCaos2, ceEnabled, commandCalls, errors, sug
   while (inductionVariable < last) {
     var commandCall = commandCalls[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
-    collectTypeErrors(variant.j24(), commandCall, errors, suggestions, checkCancelled);
-    collectIncompleteCommandErrors(variant.j24(), commandCall, errors, suggestions, checkCancelled);
-    outOfVariantCommandErrors(variant.j24(), commandCall, isCaos2, ceEnabled, errors, suggestions, checkCancelled);
+    collectTypeErrors(variant.i24(), commandCall, errors, suggestions, checkCancelled);
+    collectIncompleteCommandErrors(variant.i24(), commandCall, errors, suggestions, checkCancelled);
+    outOfVariantCommandErrors(variant.i24(), commandCall, isCaos2, ceEnabled, errors, suggestions, checkCancelled);
     collectOutOfVariantParameterErrors(variant, commandCall, errors, suggestions, checkCancelled);
     collectCommandCallInspections(variant, commandCall, errors, suggestions, checkCancelled);
   }
@@ -744,13 +745,13 @@ function collectTypeErrors(variant, call, errors, suggestions, checkCancelled) {
     }
     var parameter = tmp_0;
     var parameterType = Companion_instance.fromIntValue(parameter.typeId);
-    var argumentType = Companion_instance.fromIntValue(argument.t22());
+    var argumentType = Companion_instance.fromIntValue(argument.q22());
     if (parameterType.equals(ValueType_VARIABLE_getInstance()) && argumentType.equals(ValueType_VARIABLE_getInstance()) || (!parameterType.equals(ValueType_VARIABLE_getInstance()) && like(parameterType, argumentType))) {
       continue $l$loop_0;
     }
     var suggestion_0 = suggestion(suggestions, collectTypeErrors$lambda(variant, i, command, argumentType, parameterType));
-    var error = new ErrorVal(argument.g1e(), ErrorFormatter_instance.f5b(call.c50_1, parameter, argumentType.simpleName), 1, argument.m1f());
-    errors.g2(new Tuple(error, suggestion_0));
+    var error = new ErrorVal(argument.d1e(), ErrorFormatter_instance.e5d(call.d50_1, parameter, argumentType.simpleName), 1, argument.j1f());
+    errors.z1(new Tuple(error, suggestion_0));
   }
 }
 function collectIncompleteCommandErrors(variant, call, errors, suggestions, checkCancelled) {
@@ -768,13 +769,13 @@ function collectIncompleteCommandErrors(variant, call, errors, suggestions, chec
   if (call.arguments.length > command.parameters.length) {
     return Unit_instance;
   }
-  if (call.d51(command)) {
+  if (call.e51(command)) {
     return Unit_instance;
   }
   // Inline function 'kotlin.collections.orEmpty' call
   var tmp0_elvis_lhs_0 = missingParameters(call, variant);
   var missingParameters_0 = tmp0_elvis_lhs_0 == null ? emptyList() : tmp0_elvis_lhs_0;
-  if (missingParameters_0.i2() === 1 && command.command === get_ConditionCommand().command) {
+  if (missingParameters_0.b2() === 1 && command.command === get_ConditionCommand().command) {
     return Unit_instance;
   }
   var tmp_0;
@@ -782,21 +783,21 @@ function collectIncompleteCommandErrors(variant, call, errors, suggestions, chec
   if (call.arguments.length === 0) {
     // Inline function 'kotlin.let' call
     var it = call.tokenTextRange;
-    tmp_0 = empty(it) ? call.d50_1 : it;
+    tmp_0 = empty(it) ? call.e50_1 : it;
   } else {
     // Inline function 'kotlin.let' call
-    var end = last(call.arguments).g1e();
-    var tmp0_startIndex = end.m1e();
-    var tmp1_endIndex = end.m1e();
-    var tmp2_start = end.i1e();
-    var tmp3_end = end.i1e();
+    var end = last(call.arguments).d1e();
+    var tmp0_startIndex = end.j1e();
+    var tmp1_endIndex = end.j1e();
+    var tmp2_start = end.f1e();
+    var tmp3_end = end.f1e();
     tmp_0 = new RangeWithIndexImpl(tmp2_start, tmp3_end, tmp0_startIndex, tmp1_endIndex);
   }
   var range = tmp_0;
   var missingParameterString = joinToString_0(missingParameters_0, VOID, VOID, VOID, VOID, VOID, collectIncompleteCommandErrors$lambda);
   var suggestion_0 = suggestion(suggestions, collectIncompleteCommandErrors$lambda_0(missingParameterString));
-  var error = new ErrorVal(range, call.c50_1 + ' is missing parameters [' + missingParameterString + '] (Index:' + range.j1e() + ', Line:' + range.o1().h1e() + ',Column:' + range.o1().l1e() + ')', 2, call.l50_1);
-  errors.g2(new Tuple(error, suggestion_0));
+  var error = new ErrorVal(range, call.d50_1 + ' is missing parameters [' + missingParameterString + '] (Index:' + range.g1e() + ', Line:' + range.h1().e1e() + ',Column:' + range.h1().i1e() + ')', 2, call.m50_1);
+  errors.z1(new Tuple(error, suggestion_0));
 }
 function outOfVariantCommandErrors(variant, call, isCaos2, ceEnabled, errors, suggestions, checkCancelled) {
   _init_properties_commandErrors_kt__53g9j8();
@@ -804,13 +805,13 @@ function outOfVariantCommandErrors(variant, call, isCaos2, ceEnabled, errors, su
   if (call.inVariant) {
     return Unit_instance;
   }
-  if (isCaos2 && get_caos2ScriptDelimiters().yf(call.c50_1)) {
+  if (isCaos2 && get_caos2ScriptDelimiters().vf(call.d50_1)) {
     return Unit_instance;
   }
   var tmp;
   // Inline function 'kotlin.text.uppercase' call
   // Inline function 'kotlin.js.asDynamic' call
-  if (call.c50_1.toUpperCase() === 'ELIF') {
+  if (call.d50_1.toUpperCase() === 'ELIF') {
     tmp = suggestion(suggestions, outOfVariantCommandErrors$lambda(variant));
   } else {
     tmp = null;
@@ -832,7 +833,7 @@ function outOfVariantCommandErrors(variant, call, isCaos2, ceEnabled, errors, su
       return Unit_instance;
     }
   }
-  errors.g2(new Tuple(new ErrorVal(call.tokenTextRange, ErrorFormatter_instance.e5b(call.c50_1, ErrorFormatter_instance.h5b(variants)), 3, call.l50_1), suggestion_0));
+  errors.z1(new Tuple(new ErrorVal(call.tokenTextRange, ErrorFormatter_instance.d5d(call.d50_1, ErrorFormatter_instance.g5d(variants)), 3, call.m50_1), suggestion_0));
 }
 function collectOutOfVariantParameterErrors(variant, call, errors, suggestions, checkCancelled) {
   _init_properties_commandErrors_kt__53g9j8();
@@ -843,7 +844,7 @@ function collectOutOfVariantParameterErrors(variant, call, errors, suggestions, 
   $l$loop: while (inductionVariable < last) {
     var element = indexedObject[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
-    var tmp0_elvis_lhs = CommandLookupUtil_instance.parameterFromArgument(variant.j24(), element);
+    var tmp0_elvis_lhs = CommandLookupUtil_instance.parameterFromArgument(variant.i24(), element);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       continue $l$loop;
@@ -852,7 +853,7 @@ function collectOutOfVariantParameterErrors(variant, call, errors, suggestions, 
     }
     var parameter = tmp;
     var parameterType = Companion_instance.fromIntValue(parameter.typeId);
-    var argumentType = Companion_instance.fromIntValue(element.t22());
+    var argumentType = Companion_instance.fromIntValue(element.q22());
     annotateByteStringVariantError(variant, element, parameterType, argumentType, errors, suggestions, checkCancelled);
   }
 }
@@ -873,7 +874,7 @@ function addCEOnlyError(variant, ceEnabled, commandCall, command, errors, sugges
     return false;
   }
   var suggestion_0 = suggestion(suggestions, addCEOnlyError$lambda);
-  errors.g2(new Tuple(new ErrorVal(commandCall.tokenTextRange, command.command + ' ' + Companion_instance.wrappedSimpleName(command.returnTypeId) + ' is Community Edition only.', 10, commandCall.l50_1), suggestion_0));
+  errors.z1(new Tuple(new ErrorVal(commandCall.tokenTextRange, command.command + ' ' + Companion_instance.wrappedSimpleName(command.returnTypeId) + ' is Community Edition only.', 10, commandCall.m50_1), suggestion_0));
   return true;
 }
 function annotateByteStringVariantError(variant, argument, parameterType, argumentType, errors, suggestions, checkCancelled) {
@@ -889,7 +890,7 @@ function annotateByteStringVariantError(variant, argument, parameterType, argume
     return Unit_instance;
   }
   // Inline function 'kotlin.let' call
-  var it = trim(argument.m1f(), charArrayOf([_Char___init__impl__6a9atx(32)]));
+  var it = trim(argument.j1f(), charArrayOf([_Char___init__impl__6a9atx(32)]));
   var tmp;
   if (startsWith(it, _Char___init__impl__6a9atx(91)) || startsWith(it, _Char___init__impl__6a9atx(93))) {
     tmp = substring(it, 1, get_lastIndex(it));
@@ -900,17 +901,17 @@ function annotateByteStringVariantError(variant, argument, parameterType, argume
   // Inline function 'kotlin.js.asDynamic' call
   var textWithoutBrackets = tmp.toUpperCase();
   var tmp_0;
-  if (variant.k24() && contains(textWithoutBrackets, ' ')) {
+  if (variant.j24() && contains(textWithoutBrackets, ' ')) {
     var suggestion_0 = suggestion(suggestions, annotateByteStringVariantError$lambda);
-    tmp_0 = new Tuple(new ErrorVal(argument.g1e(), 'Animation strings cannot contain spaces in [C1, C2] variants', 3, argument.m1f(), argumentType.value), suggestion_0);
-  } else if (variant.m24() && endsWith(textWithoutBrackets, _Char___init__impl__6a9atx(82))) {
+    tmp_0 = new Tuple(new ErrorVal(argument.d1e(), 'Animation strings cannot contain spaces in [C1, C2] variants', 3, argument.j1f(), argumentType.value), suggestion_0);
+  } else if (variant.l24() && endsWith(textWithoutBrackets, _Char___init__impl__6a9atx(82))) {
     var suggestion_1 = suggestion(suggestions, annotateByteStringVariantError$lambda_0);
-    tmp_0 = new Tuple(new ErrorVal(argument.g1e(), "Repeat char 'R' is invalid in CV+ variants. Use 255 instead", 3, argument.m1f(), argumentType.value), suggestion_1);
+    tmp_0 = new Tuple(new ErrorVal(argument.d1e(), "Repeat char 'R' is invalid in CV+ variants. Use 255 instead", 3, argument.j1f(), argumentType.value), suggestion_1);
   } else {
     return Unit_instance;
   }
   var error = tmp_0;
-  errors.g2(error);
+  errors.z1(error);
 }
 function collectTypeErrors$lambda($variant, $i, $command, $argumentType, $parameterType) {
   return () => {
@@ -921,7 +922,7 @@ function collectTypeErrors$lambda($variant, $i, $command, $argumentType, $parame
       // Inline function 'kotlin.text.uppercase' call
       // Inline function 'kotlin.js.asDynamic' call
       var tmp$ret$0 = $command.command.toUpperCase();
-      tmp_0 = tmp_1.n2(tmp$ret$0);
+      tmp_0 = tmp_1.g2(tmp$ret$0);
     } else {
       tmp_0 = false;
     }
@@ -980,80 +981,80 @@ function _init_properties_commandErrors_kt__53g9j8() {
     var tmp0 = 'iscr|rscr';
     // Inline function 'kotlin.text.toRegex' call
     var option = RegexOption_IGNORE_CASE_getInstance();
-    caos2ScriptDelimiters = Regex.wf(tmp0, option);
+    caos2ScriptDelimiters = Regex.tf(tmp0, option);
   }
 }
 function addEqErrors(variant, items, errors, suggestions, checkCancelled) {
   // Inline function 'kotlin.collections.filterIsInstance' call
   // Inline function 'kotlin.collections.filterIsInstanceTo' call
-  var destination = ArrayList.b2();
+  var destination = ArrayList.u1();
   var inductionVariable = 0;
   var last = items.length;
   while (inductionVariable < last) {
     var element = items[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
     if (element instanceof EqOpVal) {
-      destination.g2(element);
+      destination.z1(element);
     }
   }
   var eqOps = destination;
   var tmp;
-  if (variant.k24()) {
+  if (variant.j24()) {
     var tmp0 = 'EQ|NE|GT|GE|LT|LE|BT|BF';
     // Inline function 'kotlin.text.toRegex' call
     var option = RegexOption_IGNORE_CASE_getInstance();
-    tmp = Regex.wf(tmp0, option);
+    tmp = Regex.tf(tmp0, option);
   } else {
     var tmp0_0 = 'EQ|NE|GT|GE|LT|LE|(<=)|(>=)|(<>)|<|>|=';
     // Inline function 'kotlin.text.toRegex' call
     var option_0 = RegexOption_IGNORE_CASE_getInstance();
-    tmp = Regex.wf(tmp0_0, option_0);
+    tmp = Regex.tf(tmp0_0, option_0);
   }
   var validRegex = tmp;
   var tmp_0;
-  if (suggestions && variant.k24()) {
+  if (suggestions && variant.j24()) {
     tmp_0 = addEqErrors$lambda;
-  } else if (suggestions && variant.m24()) {
+  } else if (suggestions && variant.l24()) {
     tmp_0 = addEqErrors$lambda_0;
   } else {
     tmp_0 = addEqErrors$lambda_1;
   }
   var createSuggestion = tmp_0;
-  var _iterator__ex2g4s = eqOps.d1();
-  $l$loop: while (_iterator__ex2g4s.e1()) {
-    var op = _iterator__ex2g4s.f1();
+  var _iterator__ex2g4s = eqOps.w();
+  $l$loop: while (_iterator__ex2g4s.x()) {
+    var op = _iterator__ex2g4s.y();
     checkCancelled();
-    if (validRegex.yf(op.u1n_1)) {
+    if (validRegex.vf(op.r1n_1)) {
       continue $l$loop;
     }
     var suggestion_0 = createSuggestion(op);
-    var error = new ErrorVal(op.t1n_1, op.u1n_1 === '!=' ? "Eq op '!=' is invalid. Use '<>' or 'ne' instead" : "EqOp '" + op.u1n_1 + "' is invalid in " + variant.toString(), 3, op.x1n_1);
-    errors.g2(new Tuple(error, suggestion_0));
+    var error = new ErrorVal(op.q1n_1, op.r1n_1 === '!=' ? "Eq op '!=' is invalid. Use '<>' or 'ne' instead" : "EqOp '" + op.r1n_1 + "' is invalid in " + variant.toString(), 3, op.u1n_1);
+    errors.z1(new Tuple(error, suggestion_0));
   }
-  if (variant.k24()) {
+  if (variant.j24()) {
     var suggestion_1 = suggestion(suggestions, addEqErrors$lambda_2(variant));
     // Inline function 'kotlin.collections.filterIsInstance' call
     // Inline function 'kotlin.collections.filterIsInstanceTo' call
-    var destination_0 = ArrayList.b2();
+    var destination_0 = ArrayList.u1();
     var inductionVariable_0 = 0;
     var last_0 = items.length;
     while (inductionVariable_0 < last_0) {
       var element_0 = items[inductionVariable_0];
       inductionVariable_0 = inductionVariable_0 + 1 | 0;
       if (element_0 instanceof EqJoinVal) {
-        destination_0.g2(element_0);
+        destination_0.z1(element_0);
       }
     }
-    var _iterator__ex2g4s_0 = destination_0.d1();
-    while (_iterator__ex2g4s_0.e1()) {
-      var join = _iterator__ex2g4s_0.f1();
-      var error_0 = new ErrorVal(join.l1n_1, 'Equality joins are only available in CV+', 3, join.p1n_1);
-      errors.g2(new Tuple(error_0, suggestion_1));
+    var _iterator__ex2g4s_0 = destination_0.w();
+    while (_iterator__ex2g4s_0.x()) {
+      var join = _iterator__ex2g4s_0.y();
+      var error_0 = new ErrorVal(join.i1n_1, 'Equality joins are only available in CV+', 3, join.m1n_1);
+      errors.z1(new Tuple(error_0, suggestion_1));
     }
   }
 }
 function getC1eVariantEqOpSuggestion(eqOp) {
-  switch (eqOp.x1n_1) {
+  switch (eqOp.u1n_1) {
     case '=':
       return 'replace with `eq`';
     case '!=':
@@ -1072,7 +1073,7 @@ function getC1eVariantEqOpSuggestion(eqOp) {
   }
 }
 function getC2eVariantEqOpSuggestion(eqOp) {
-  switch (eqOp.x1n_1) {
+  switch (eqOp.u1n_1) {
     case '!=':
       return 'replace with `<>`';
     case 'bt':
@@ -1109,25 +1110,25 @@ function addLooseParserItemErrors(looseParserItems, errors, suggestions, checkCa
       if (item instanceof CommandToken) {
         var tmp_1;
         var tmp_2;
-        if (!(item.d1q_1.length === 4)) {
+        if (!(item.a1q_1.length === 4)) {
           tmp_2 = true;
         } else {
           var tmp_3 = CaosLibs_getInstance();
           // Inline function 'kotlin.intArrayOf' call
-          var tmp$ret$0 = new Int32Array([token(item.d1q_1)]);
-          var tmp1_safe_receiver = tmp_3.x4x(tmp$ret$0);
+          var tmp$ret$0 = new Int32Array([token(item.a1q_1)]);
+          var tmp1_safe_receiver = tmp_3.w4x(tmp$ret$0);
           // Inline function 'kotlin.collections.isNullOrEmpty' call
           var this_0 = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.first;
-          tmp_2 = this_0 == null || this_0.b1();
+          tmp_2 = this_0 == null || this_0.u();
         }
         if (tmp_2) {
-          tmp_1 = new ErrorVal(item.c1q_1, "Invalid input '" + item.d1q_1 + "'", 0, item.f1q_1);
+          tmp_1 = new ErrorVal(item.z1p_1, "Invalid input '" + item.a1q_1 + "'", 0, item.c1q_1);
         } else {
-          tmp_1 = new ErrorVal(item.c1q_1, "Unexpected command token '" + item.d1q_1 + "'", 0, item.f1q_1);
+          tmp_1 = new ErrorVal(item.z1p_1, "Unexpected command token '" + item.a1q_1 + "'", 0, item.c1q_1);
         }
         tmp_0 = tmp_1;
       } else {
-        tmp_0 = new ErrorVal(item.g1e(), "Unexpected value '" + toString(item.r3()) + "'", 0, item.m1f());
+        tmp_0 = new ErrorVal(item.d1e(), "Unexpected value '" + toString(item.k3()) + "'", 0, item.j1f());
       }
       tmp = tmp_0;
     } else {
@@ -1135,16 +1136,16 @@ function addLooseParserItemErrors(looseParserItems, errors, suggestions, checkCa
     }
     var error = tmp;
     var suggestion_0 = suggestion(suggestions, addLooseParserItemErrors$lambda);
-    errors.g2(new Tuple(error, suggestion_0));
+    errors.z1(new Tuple(error, suggestion_0));
   }
 }
 function addLooseParserItemErrors$lambda() {
   return new Suggestion(null, 'check calling command syntax or remove extraneous input');
 }
 function addTokenFormatErrors(variant, commandCalls, errors, suggestions, checkCancelled) {
-  if (variant.k24()) {
+  if (variant.j24()) {
     // Inline function 'kotlin.collections.mutableListOf' call
-    var tokens = ArrayList.b2();
+    var tokens = ArrayList.u1();
     // Inline function 'kotlin.collections.forEach' call
     var inductionVariable = 0;
     var last = commandCalls.length;
@@ -1152,12 +1153,12 @@ function addTokenFormatErrors(variant, commandCalls, errors, suggestions, checkC
       var element = commandCalls[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       checkCancelled();
-      tokenArguments(variant.j24(), element, tokens);
+      tokenArguments(variant.i24(), element, tokens);
     }
     validateTokensC1e(tokens, errors, suggestions);
   } else {
     // Inline function 'kotlin.collections.mutableListOf' call
-    var tokens_0 = ArrayList.b2();
+    var tokens_0 = ArrayList.u1();
     // Inline function 'kotlin.collections.forEach' call
     var inductionVariable_0 = 0;
     var last_0 = commandCalls.length;
@@ -1166,12 +1167,12 @@ function addTokenFormatErrors(variant, commandCalls, errors, suggestions, checkC
       inductionVariable_0 = inductionVariable_0 + 1 | 0;
       $l$block_0: {
         checkCancelled();
-        var command = element_0.c50_1;
+        var command = element_0.d50_1;
         if (!(command === 'GSUB') && !(command === 'SUBR') && !(command === 'GOTO')) {
           break $l$block_0;
         }
         var tmp0_safe_receiver = getOrNull(element_0.arguments, 0);
-        var tmp = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.e4y();
+        var tmp = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.d4y();
         var tmp1_elvis_lhs = (tmp == null ? true : tmp instanceof TokenVal) ? tmp : null;
         var tmp_0;
         if (tmp1_elvis_lhs == null) {
@@ -1180,7 +1181,7 @@ function addTokenFormatErrors(variant, commandCalls, errors, suggestions, checkC
           tmp_0 = tmp1_elvis_lhs;
         }
         var parserItem = tmp_0;
-        tokens_0.g2(parserItem);
+        tokens_0.z1(parserItem);
       }
     }
     validateTokensC2e(tokens_0, errors, suggestions);
@@ -1207,7 +1208,7 @@ function tokenArguments(variant, command, tokenItems) {
       if (!(parameter.typeId === ValueType_TOKEN_getInstance().value)) {
         continue $l$loop_1;
       }
-      var tmp1_elvis_lhs = argument.e4y();
+      var tmp1_elvis_lhs = argument.d4y();
       var tmp_0;
       if (tmp1_elvis_lhs == null) {
         continue $l$loop_1;
@@ -1237,39 +1238,39 @@ function tokenArguments(variant, command, tokenItems) {
             type = null;
             break;
         }
-        tokenItems.g2(new Tuple(item, type));
+        tokenItems.z1(new Tuple(item, type));
       }
     }
   }
 }
 function validateTokensC1e(tokens, errors, suggestions) {
-  var _iterator__ex2g4s = tokens.d1();
-  while (_iterator__ex2g4s.e1()) {
-    var _destruct__k2r9zo = _iterator__ex2g4s.f1();
-    var token = _destruct__k2r9zo.ni();
-    var item = _destruct__k2r9zo.oi();
+  var _iterator__ex2g4s = tokens.w();
+  while (_iterator__ex2g4s.x()) {
+    var _destruct__k2r9zo = _iterator__ex2g4s.y();
+    var token = _destruct__k2r9zo.ki();
+    var item = _destruct__k2r9zo.li();
     var tmp = suggestions && !(item == null);
     var suggestion_0 = suggestion(tmp, validateTokensC1e$lambda(item));
-    if (!(token.e1n_1.length === 4)) {
-      errors.g2(new Tuple(new ErrorVal(token.d1n_1, 'Tokens must be exactly 4 characters long', 0, token.h1n_1), suggestion_0));
+    if (!(token.b1n_1.length === 4)) {
+      errors.z1(new Tuple(new ErrorVal(token.a1n_1, 'Tokens must be exactly 4 characters long', 0, token.e1n_1), suggestion_0));
     }
   }
 }
 function validateTokensC2e(tokens, errors, suggestions) {
   var suggestion_0 = suggestion(suggestions, validateTokensC2e$lambda);
-  var _iterator__ex2g4s = tokens.d1();
-  while (_iterator__ex2g4s.e1()) {
-    var token = _iterator__ex2g4s.f1();
+  var _iterator__ex2g4s = tokens.w();
+  while (_iterator__ex2g4s.x()) {
+    var token = _iterator__ex2g4s.y();
     var tmp;
-    var containsArg = charCodeAt(token.e1n_1, 0);
+    var containsArg = charCodeAt(token.b1n_1, 0);
     if (!(_Char___init__impl__6a9atx(97) <= containsArg ? containsArg <= _Char___init__impl__6a9atx(122) : false)) {
-      var containsArg_0 = charCodeAt(token.e1n_1, 0);
+      var containsArg_0 = charCodeAt(token.b1n_1, 0);
       tmp = !(_Char___init__impl__6a9atx(65) <= containsArg_0 ? containsArg_0 <= _Char___init__impl__6a9atx(90) : false);
     } else {
       tmp = false;
     }
     if (tmp) {
-      errors.g2(new Tuple(new ErrorVal(token.d1n_1, 'Tokens should begin with a letter', 0, token.h1n_1), suggestion_0));
+      errors.z1(new Tuple(new ErrorVal(token.a1n_1, 'Tokens should begin with a letter', 0, token.e1n_1), suggestion_0));
     }
   }
 }
@@ -1292,21 +1293,21 @@ function validateTokensC2e$lambda() {
 function addVarErrors(variant, items, errors, suggestions, checkCancelled) {
   // Inline function 'kotlin.collections.filterIsInstance' call
   // Inline function 'kotlin.collections.filterIsInstanceTo' call
-  var destination = ArrayList.b2();
+  var destination = ArrayList.u1();
   var inductionVariable = 0;
   var last = items.length;
   while (inductionVariable < last) {
     var element = items[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
     if (element instanceof IndexedVarVal) {
-      destination.g2(element);
+      destination.z1(element);
     }
   }
   var variables = destination;
-  var getError = variant.equals(C1_getInstance()) ? VariableValidator_getInstance().o5b_1 : variant.equals(C2_getInstance()) ? VariableValidator_getInstance().p5b_1 : VariableValidator_getInstance().q5b_1;
-  var _iterator__ex2g4s = variables.d1();
-  $l$loop: while (_iterator__ex2g4s.e1()) {
-    var variable = _iterator__ex2g4s.f1();
+  var getError = variant.equals(C1_getInstance()) ? VariableValidator_getInstance().n5d_1 : variant.equals(C2_getInstance()) ? VariableValidator_getInstance().o5d_1 : VariableValidator_getInstance().p5d_1;
+  var _iterator__ex2g4s = variables.w();
+  $l$loop: while (_iterator__ex2g4s.x()) {
+    var variable = _iterator__ex2g4s.y();
     checkCancelled();
     var tmp1_elvis_lhs = getError(variable.type, variable.index);
     var tmp;
@@ -1316,7 +1317,7 @@ function addVarErrors(variant, items, errors, suggestions, checkCancelled) {
       tmp = tmp1_elvis_lhs;
     }
     var error = tmp;
-    errors.g2(new Tuple(new ErrorVal(variable.s1o_1, error, 3, variable.w1o_1), null));
+    errors.z1(new Tuple(new ErrorVal(variable.p1o_1, error, 3, variable.t1o_1), null));
   }
 }
 function get_C1E_ANIMATION_BYTE_STRING() {
@@ -1331,7 +1332,7 @@ function get_stringLikeTypesAsInt() {
 var stringLikeTypesAsInt;
 function addVariantStringErrors(variant, items, commandCalls, errors, suggestions, checkCancelled) {
   _init_properties_variantStringErrors_kt__ebvegf();
-  var isOldVariant = variant.k24();
+  var isOldVariant = variant.j24();
   var tmp;
   if (isOldVariant) {
     tmp = 'Quote strings are invalid in ' + variant.toString();
@@ -1343,7 +1344,7 @@ function addVariantStringErrors(variant, items, commandCalls, errors, suggestion
   if (isOldVariant) {
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.b2();
+    var destination = ArrayList.u1();
     var inductionVariable = 0;
     var last = items.length;
     while (inductionVariable < last) {
@@ -1351,14 +1352,14 @@ function addVariantStringErrors(variant, items, commandCalls, errors, suggestion
       inductionVariable = inductionVariable + 1 | 0;
       checkCancelled();
       if (element.typeToken === TypeTokens_getInstance().QUOTE_STRING) {
-        destination.g2(element);
+        destination.z1(element);
       }
     }
     tmp_0 = destination;
   } else {
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_0 = ArrayList.b2();
+    var destination_0 = ArrayList.u1();
     var inductionVariable_0 = 0;
     var last_0 = items.length;
     while (inductionVariable_0 < last_0) {
@@ -1371,11 +1372,11 @@ function addVariantStringErrors(variant, items, commandCalls, errors, suggestion
           tmp$ret$5 = false;
           break $l$block_4;
         }
-        if (!equals(element_0.r3(), '') && element_0.typeToken === TypeTokens_getInstance().BRACKET_STRING && !get_C1E_ANIMATION_BYTE_STRING().yf(element_0.m1f())) {
+        if (!equals(element_0.k3(), '') && element_0.typeToken === TypeTokens_getInstance().BRACKET_STRING && !get_C1E_ANIMATION_BYTE_STRING().vf(element_0.j1f())) {
           tmp$ret$5 = true;
           break $l$block_4;
         }
-        var range = element_0.g1e();
+        var range = element_0.d1e();
         var tmp$ret$6;
         $l$block_1: {
           // Inline function 'kotlin.collections.firstOrNull' call
@@ -1384,7 +1385,7 @@ function addVariantStringErrors(variant, items, commandCalls, errors, suggestion
           while (inductionVariable_1 < last_1) {
             var element_1 = commandCalls[inductionVariable_1];
             inductionVariable_1 = inductionVariable_1 + 1 | 0;
-            if (inRange(element_1.d50_1, range.o1().h1e(), range.o1().l1e(), false, true)) {
+            if (inRange(element_1.e50_1, range.h1().e1e(), range.h1().i1e(), false, true)) {
               tmp$ret$6 = element_1;
               break $l$block_1;
             }
@@ -1400,7 +1401,7 @@ function addVariantStringErrors(variant, items, commandCalls, errors, suggestion
           tmp_1 = tmp0_elvis_lhs;
         }
         var command = tmp_1;
-        var tmp1_safe_receiver = drillDownToParameter(variant.j24(), command, range.o1().h1e(), range.o1().l1e() + 1 | 0);
+        var tmp1_safe_receiver = drillDownToParameter(variant.i24(), command, range.h1().e1e(), range.h1().i1e() + 1 | 0);
         var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.typeId;
         var tmp_2;
         if (tmp2_elvis_lhs == null) {
@@ -1418,7 +1419,7 @@ function addVariantStringErrors(variant, items, commandCalls, errors, suggestion
               tmp_4 = true;
             } else {
               // Inline function 'kotlin.text.trim' call
-              var this_0 = toString(element_0.r3());
+              var this_0 = toString(element_0.k3());
               tmp_4 = !(toString(trim_0(isCharSequence(this_0) ? this_0 : THROW_CCE())) === '');
             }
             tmp_3 = tmp_4;
@@ -1431,7 +1432,7 @@ function addVariantStringErrors(variant, items, commandCalls, errors, suggestion
         tmp$ret$5 = (!(expectedType === ValueType_BYTE_STRING_getInstance().value) && !(expectedType === ValueType_ANIMATION_getInstance().value));
       }
       if (tmp$ret$5) {
-        destination_0.g2(element_0);
+        destination_0.z1(element_0);
       }
     }
     tmp_0 = destination_0;
@@ -1439,22 +1440,22 @@ function addVariantStringErrors(variant, items, commandCalls, errors, suggestion
   // Inline function 'kotlin.collections.map' call
   var this_1 = tmp_0;
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_1 = ArrayList.f2(collectionSizeOrDefault(this_1, 10));
-  var _iterator__ex2g4s = this_1.d1();
-  while (_iterator__ex2g4s.e1()) {
-    var item = _iterator__ex2g4s.f1();
+  var destination_1 = ArrayList.y1(collectionSizeOrDefault(this_1, 10));
+  var _iterator__ex2g4s = this_1.w();
+  while (_iterator__ex2g4s.x()) {
+    var item = _iterator__ex2g4s.y();
     var suggestion_0 = suggestion(suggestions, addVariantStringErrors$lambda(item, variant));
     checkCancelled();
-    var tmp$ret$11 = new Tuple(new ErrorVal(item.g1e(), error, 3, item.m1f()), suggestion_0);
-    destination_1.g2(tmp$ret$11);
+    var tmp$ret$11 = new Tuple(new ErrorVal(item.d1e(), error, 3, item.j1f()), suggestion_0);
+    destination_1.z1(tmp$ret$11);
   }
   var badStrings = destination_1;
-  errors.j2(badStrings);
+  errors.c2(badStrings);
   if (isOldVariant) {
     var suggestion_1 = suggestion(suggestions, addVariantStringErrors$lambda_0);
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_2 = ArrayList.b2();
+    var destination_2 = ArrayList.u1();
     var inductionVariable_2 = 0;
     var last_2 = commandCalls.length;
     while (inductionVariable_2 < last_2) {
@@ -1463,27 +1464,27 @@ function addVariantStringErrors(variant, items, commandCalls, errors, suggestion
       checkCancelled();
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
-      if (element_2.c50_1.toLowerCase() === '{eq}') {
-        destination_2.g2(element_2);
+      if (element_2.d50_1.toLowerCase() === '{eq}') {
+        destination_2.z1(element_2);
       }
     }
     // Inline function 'kotlin.collections.flatMap' call
     // Inline function 'kotlin.collections.flatMapTo' call
-    var destination_3 = ArrayList.b2();
-    var _iterator__ex2g4s_0 = destination_2.d1();
-    while (_iterator__ex2g4s_0.e1()) {
-      var element_3 = _iterator__ex2g4s_0.f1();
+    var destination_3 = ArrayList.u1();
+    var _iterator__ex2g4s_0 = destination_2.w();
+    while (_iterator__ex2g4s_0.x()) {
+      var element_3 = _iterator__ex2g4s_0.y();
       // Inline function 'kotlin.collections.filter' call
       var tmp0 = element_3.arguments;
       // Inline function 'kotlin.collections.filterTo' call
-      var destination_4 = ArrayList.b2();
+      var destination_4 = ArrayList.u1();
       var inductionVariable_3 = 0;
       var last_3 = tmp0.length;
       while (inductionVariable_3 < last_3) {
         var element_4 = tmp0[inductionVariable_3];
         inductionVariable_3 = inductionVariable_3 + 1 | 0;
-        if (get_stringLikeTypesAsInt().n2(element_4.t22())) {
-          destination_4.g2(element_4);
+        if (get_stringLikeTypesAsInt().g2(element_4.q22())) {
+          destination_4.z1(element_4);
         }
       }
       var list = destination_4;
@@ -1491,16 +1492,16 @@ function addVariantStringErrors(variant, items, commandCalls, errors, suggestion
     }
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_5 = ArrayList.f2(collectionSizeOrDefault(destination_3, 10));
-    var _iterator__ex2g4s_1 = destination_3.d1();
-    while (_iterator__ex2g4s_1.e1()) {
-      var item_0 = _iterator__ex2g4s_1.f1();
+    var destination_5 = ArrayList.y1(collectionSizeOrDefault(destination_3, 10));
+    var _iterator__ex2g4s_1 = destination_3.w();
+    while (_iterator__ex2g4s_1.x()) {
+      var item_0 = _iterator__ex2g4s_1.y();
       checkCancelled();
-      var tmp$ret$25 = new Tuple(new ErrorVal(item_0.g1e(), 'Strings in equality statement are allowed in CV+ variants only', 3, item_0.m1f()), suggestion_1);
-      destination_5.g2(tmp$ret$25);
+      var tmp$ret$25 = new Tuple(new ErrorVal(item_0.d1e(), 'Strings in equality statement are allowed in CV+ variants only', 3, item_0.j1f()), suggestion_1);
+      destination_5.z1(tmp$ret$25);
     }
     var stringInEqErrors = destination_5;
-    errors.j2(stringInEqErrors);
+    errors.c2(stringInEqErrors);
   }
 }
 function drillDownToParameter(variant, command, line, character) {
@@ -1512,7 +1513,7 @@ function drillDownToParameter(variant, command, line, character) {
     var i = inductionVariable;
     var arg = indexedObject[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
-    if (!inRange(arg.g1e(), line, character, false, true)) {
+    if (!inRange(arg.d1e(), line, character, false, true)) {
       continue $l$loop;
     }
     var tmp;
@@ -1528,18 +1529,18 @@ function drillDownToParameter(variant, command, line, character) {
 }
 function addVariantStringErrors$lambda($it, $variant) {
   return () => {
-    var text = $it.m1f();
+    var text = $it.j1f();
     var tmp;
-    if ($variant.k24() && !contains(text, ']')) {
+    if ($variant.j24() && !contains(text, ']')) {
       // Inline function 'kotlin.text.toRegex' call
       var this_0 = '^"((?:[^"]|\\.)*)"';
       // Inline function 'kotlin.text.replace' call
-      tmp = Regex.xf(this_0).eg(text, '[$1]');
-    } else if ($variant.m24()) {
+      tmp = Regex.uf(this_0).bg(text, '[$1]');
+    } else if ($variant.l24()) {
       // Inline function 'kotlin.text.toRegex' call
       var this_1 = '^\\[((?:[^"]|\\.)*)\\]';
       // Inline function 'kotlin.text.replace' call
-      tmp = Regex.xf(this_1).eg(text, '[$1]');
+      tmp = Regex.uf(this_1).bg(text, '[$1]');
     } else {
       tmp = null;
     }
@@ -1563,12 +1564,12 @@ function _init_properties_variantStringErrors_kt__ebvegf() {
     properties_initialized_variantStringErrors_kt_i6fy5t = true;
     // Inline function 'kotlin.text.toRegex' call
     var this_0 = '\\[\\s*\\d+(\\s*\\d+)(\\s*[Rr])\\s*\\]';
-    C1E_ANIMATION_BYTE_STRING = Regex.xf(this_0);
+    C1E_ANIMATION_BYTE_STRING = Regex.uf(this_0);
     stringLikeTypesAsInt = listOf([ValueType_STRING_getInstance().value, ValueType_C1_STRING_getInstance().value, ValueType_HEXADECIMAL_getInstance().value, ValueType_BYTE_STRING_getInstance().value, ValueType_ANIMATION_getInstance().value]);
   }
 }
 function addWhitespaceErrors(caosVariant, items, whitespaceItems, errors, suggestions, checkCancelled) {
-  if (caosVariant.k24()) {
+  if (caosVariant.j24()) {
     annotateWhitespaceC1e(items, whitespaceItems, errors, suggestions, checkCancelled);
   } else {
     annotateWhitespaceC2e(whitespaceItems, errors, suggestions, checkCancelled);
@@ -1585,12 +1586,12 @@ function annotateWhitespaceC1e(items, whitespaceItems, errors, suggestions, chec
   var itemsSorted = sortedWith_0(this_0, tmp$ret$3);
   // Inline function 'kotlin.collections.mapIndexedNotNull' call
   // Inline function 'kotlin.collections.mapIndexedNotNullTo' call
-  var destination = ArrayList.b2();
+  var destination = ArrayList.u1();
   // Inline function 'kotlin.collections.forEachIndexed' call
   var index = 0;
-  var _iterator__ex2g4s = itemsSorted.d1();
-  while (_iterator__ex2g4s.e1()) {
-    var item = _iterator__ex2g4s.f1();
+  var _iterator__ex2g4s = itemsSorted.w();
+  while (_iterator__ex2g4s.x()) {
+    var item = _iterator__ex2g4s.y();
     var _unary__edvuaz = index;
     index = _unary__edvuaz + 1 | 0;
     var i = checkIndexOverflow(_unary__edvuaz);
@@ -1606,52 +1607,52 @@ function annotateWhitespaceC1e(items, whitespaceItems, errors, suggestions, chec
       null;
     else {
       // Inline function 'kotlin.let' call
-      destination.g2(tmp0_safe_receiver);
+      destination.z1(tmp0_safe_receiver);
     }
   }
   var whitespacePositional = destination;
   // Inline function 'kotlin.collections.mapNotNull' call
   // Inline function 'kotlin.collections.mapNotNullTo' call
-  var destination_0 = ArrayList.b2();
+  var destination_0 = ArrayList.u1();
   // Inline function 'kotlin.collections.forEach' call
-  var _iterator__ex2g4s_0 = whitespacePositional.d1();
-  while (_iterator__ex2g4s_0.e1()) {
-    var element = _iterator__ex2g4s_0.f1();
-    var i_0 = element.ni();
-    var item_0 = element.oi();
+  var _iterator__ex2g4s_0 = whitespacePositional.w();
+  while (_iterator__ex2g4s_0.x()) {
+    var element = _iterator__ex2g4s_0.y();
+    var i_0 = element.ki();
+    var item_0 = element.li();
     checkCancelled();
     var tmp0_safe_receiver_0 = annotateWhitespaceC1e_0(i_0, item_0, itemsSorted, suggestions);
     if (tmp0_safe_receiver_0 == null)
       null;
     else {
       // Inline function 'kotlin.let' call
-      destination_0.g2(tmp0_safe_receiver_0);
+      destination_0.z1(tmp0_safe_receiver_0);
     }
   }
   var whitespaceErrors = destination_0;
-  errors.j2(whitespaceErrors);
+  errors.c2(whitespaceErrors);
 }
 function annotateWhitespaceC2e(whitespaceItems, errors, suggestions, checkCancelled) {
   // Inline function 'kotlin.collections.filterIsInstance' call
   // Inline function 'kotlin.collections.filterIsInstanceTo' call
-  var destination = ArrayList.b2();
+  var destination = ArrayList.u1();
   var inductionVariable = 0;
   var last = whitespaceItems.length;
   while (inductionVariable < last) {
     var element = whitespaceItems[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
     if (element instanceof Spaces) {
-      destination.g2(element);
+      destination.z1(element);
     }
   }
   var spaces = destination;
-  var _iterator__ex2g4s = spaces.d1();
-  while (_iterator__ex2g4s.e1()) {
-    var item = _iterator__ex2g4s.f1();
+  var _iterator__ex2g4s = spaces.w();
+  while (_iterator__ex2g4s.x()) {
+    var item = _iterator__ex2g4s.y();
     var startIndex = get_startIndex(item);
     var startLine = get_startLine(item);
     var startCharacter = get_startCharacter(item);
-    var text = item.i1r_1;
+    var text = item.f1r_1;
     var inductionVariable_0 = 0;
     var last_0 = text.length;
     $l$loop: while (inductionVariable_0 < last_0) {
@@ -1668,14 +1669,14 @@ function annotateWhitespaceC2e(whitespaceItems, errors, suggestions, checkCancel
       }
       var error = tmp;
       var suggestion_0 = suggestion(suggestions, annotateWhitespaceC2e$lambda);
-      errors.g2(new Tuple(error, suggestion_0));
+      errors.z1(new Tuple(error, suggestion_0));
     }
   }
 }
 function annotateWhitespaceC1e_0(i, item, items, suggestions) {
-  var before = i > 0 ? items.k2(i - 1 | 0) : null;
+  var before = i > 0 ? items.d2(i - 1 | 0) : null;
   var newlineBefore = orElse(before == null ? null : get_endLine(before), 0) < get_startLine(item);
-  var after = (i + 1 | 0) < items.i2() ? items.k2(i + 1 | 0) : null;
+  var after = (i + 1 | 0) < items.b2() ? items.d2(i + 1 | 0) : null;
   var newlineAfter = orElse(after == null ? null : get_endLine(after), get_endLine(item)) > get_endLine(item);
   var tmp;
   var tmp_0;
@@ -1686,7 +1687,7 @@ function annotateWhitespaceC1e_0(i, item, items, suggestions) {
   }
   if (tmp_0) {
     var suggestion_0 = suggestion(suggestions, annotateWhitespaceC1e$lambda_0);
-    var error = new ErrorVal(item.h1r_1, 'Trailing whitespace is not allowed', 6, item.i1r_1);
+    var error = new ErrorVal(item.e1r_1, 'Trailing whitespace is not allowed', 6, item.f1r_1);
     tmp = new Tuple(error, suggestion_0);
   } else {
     var tmp_1;
@@ -1697,13 +1698,13 @@ function annotateWhitespaceC1e_0(i, item, items, suggestions) {
       tmp_2 = false;
     }
     if (tmp_2) {
-      tmp_1 = item.i1r_1.length > 1;
+      tmp_1 = item.f1r_1.length > 1;
     } else {
       tmp_1 = false;
     }
     if (tmp_1) {
       var suggestion_1 = suggestion(suggestions, annotateWhitespaceC1e$lambda_1);
-      var error_0 = new ErrorVal(item.h1r_1, 'Only one space or comma allowed', 6, item.i1r_1);
+      var error_0 = new ErrorVal(item.e1r_1, 'Only one space or comma allowed', 6, item.f1r_1);
       tmp = new Tuple(error_0, suggestion_1);
     } else {
       tmp = null;
@@ -1748,7 +1749,7 @@ function validateCaosParseResult(result, ceEnabled, checkCancelled) {
   // Inline function 'kotlin.text.uppercase' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$0 = result.variant.toUpperCase();
-  var variant = orElse_0(tmp_0.n24(tmp$ret$0), DS_getInstance());
+  var variant = orElse_0(tmp_0.m24(tmp$ret$0), DS_getInstance());
   var tmp_1 = get_isCaos2(result.caos2Comments);
   var tmp0 = result.items;
   // Inline function 'kotlin.collections.plus' call
@@ -1769,7 +1770,7 @@ function validateCaosParseResult(result, ceEnabled, checkCancelled) {
   var tmp_5 = Array(tmp_4);
   while (tmp_3 < tmp_4) {
     var tmp_6 = tmp_3;
-    tmp_5[tmp_6] = errors[tmp_6].l1j_1;
+    tmp_5[tmp_6] = errors[tmp_6].i1j_1;
     tmp_3 = tmp_3 + 1 | 0;
   }
   return tmp_5;
@@ -1788,7 +1789,7 @@ function validateCaosParseResultWithSuggestions(result, withSuggestions, ceEnabl
   // Inline function 'kotlin.text.uppercase' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$0 = result.variant.toUpperCase();
-  var variant = orElse_0(tmp_0.n24(tmp$ret$0), DS_getInstance());
+  var variant = orElse_0(tmp_0.m24(tmp$ret$0), DS_getInstance());
   var tmp_1 = get_isCaos2(result.caos2Comments);
   var tmp0 = result.items;
   // Inline function 'kotlin.collections.plus' call
@@ -1813,6 +1814,7 @@ function validateCaos(variant, caos, ceEnabled, checkCancelled) {
     tmp = checkCancelled;
   }
   checkCancelled = tmp;
+  assertValidVariant(variant);
   var tmp_0 = CaosParser_instance;
   var parseResult = tmp_0.m4z(variant, caos, validateCaos$lambda_0(checkCancelled));
   return validateCaosParseResult(parseResult, ceEnabled, checkCancelled);
@@ -1822,8 +1824,8 @@ function validateCaosParseResult$lambda() {
 }
 function validateCaosParseResult$lambda_0(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = get_sortValue(a.g1e());
-  var tmp$ret$2 = get_sortValue(b.g1e());
+  var tmp = get_sortValue(a.d1e());
+  var tmp$ret$2 = get_sortValue(b.d1e());
   return compareValues(tmp, tmp$ret$2);
 }
 function validateCaosParseResultWithSuggestions$lambda() {
@@ -1831,8 +1833,8 @@ function validateCaosParseResultWithSuggestions$lambda() {
 }
 function validateCaosParseResultWithSuggestions$lambda_0(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = get_sortValue(a.g1e());
-  var tmp$ret$2 = get_sortValue(b.g1e());
+  var tmp = get_sortValue(a.d1e());
+  var tmp$ret$2 = get_sortValue(b.d1e());
   return compareValues(tmp, tmp$ret$2);
 }
 function validateCaos$lambda() {
@@ -1860,7 +1862,7 @@ function validateCaos_0(variant, data, checkCancelled) {
     var tmp0_elvis_lhs = parseResultFromDynamic_JsApi(data);
     var tmp_1;
     if (tmp0_elvis_lhs == null) {
-      throw Exception.lc('Invalid data passed to validateCaos. Expected string or ParseResult object');
+      throw Exception.gc('Invalid data passed to validateCaos. Expected string or ParseResult object');
     } else {
       tmp_1 = tmp0_elvis_lhs;
     }
@@ -1871,9 +1873,9 @@ function validateCaos_0(variant, data, checkCancelled) {
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer(this_1, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(ErrorVal), arrayOf([]), false))]), false));
+  var this_2 = serializer(this_1, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(ErrorVal), arrayOf([]), false))]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
   return encodeToDynamic(this_0, tmp$ret$1, errors);
 }
@@ -1888,7 +1890,7 @@ function validateCaos_jsApi$lambda_0($checkCancelled) {
     } catch ($p) {
       var tmp_0;
       var _unused_var__etf5q3 = $p;
-      throw ParseCancelledException.m1v();
+      throw ParseCancelledException.j1v();
     }
     return Unit_instance;
   };
@@ -1910,6 +1912,7 @@ export {
 };
 export {
   validateCaosParseResultWithSuggestions as validateCaosParseResultWithSuggestions6ja6r8bm15x2,
+  validateCaosParseResult as validateCaosParseResult29oci7ckbg7ha,
 };
 //endregion
 

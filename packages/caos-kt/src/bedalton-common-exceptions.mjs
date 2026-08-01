@@ -9,10 +9,10 @@ import {
 //endregion
 //region block: pre-declaration
 class AlreadyDisposedException extends Exception {
-  static j1g(message) {
+  static g1g(message) {
     message = message === VOID ? 'Cache already disposed' : message;
-    var $this = this.lc(message);
-    captureStack($this, $this.i1g_1);
+    var $this = this.gc(message);
+    captureStack($this, $this.f1g_1);
     return $this;
   }
 }
@@ -23,7 +23,7 @@ function rethrowCancellationException(_this__u8e3s4) {
   }
 }
 //region block: post-declaration
-initMetadataForClass(AlreadyDisposedException, 'AlreadyDisposedException', AlreadyDisposedException.j1g);
+initMetadataForClass(AlreadyDisposedException, 'AlreadyDisposedException', AlreadyDisposedException.g1g);
 //endregion
 //region block: exports
 export {

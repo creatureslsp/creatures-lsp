@@ -34,8 +34,8 @@ var imul = Math.imul;
 //region block: pre-declaration
 class ClosestItemResult {
   constructor(closest, previous) {
-    this.l56_1 = closest;
-    this.m56_1 = previous;
+    this.m56_1 = closest;
+    this.n56_1 = previous;
   }
   equals(other) {
     if (this === other)
@@ -44,19 +44,19 @@ class ClosestItemResult {
       return false;
     if (!(other instanceof ClosestItemResult))
       THROW_CCE();
-    if (!equals(this.l56_1, other.l56_1))
+    if (!equals(this.m56_1, other.m56_1))
       return false;
-    if (!contentEquals(this.m56_1, other.m56_1))
+    if (!contentEquals(this.n56_1, other.n56_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = hashCode(this.l56_1);
-    result = imul(31, result) + contentHashCode(this.m56_1) | 0;
+    var result = hashCode(this.m56_1);
+    result = imul(31, result) + contentHashCode(this.n56_1) | 0;
     return result;
   }
   toString() {
-    return 'ClosestItemResult(closest=' + toString(this.l56_1) + ', previous=' + toString(this.m56_1) + ')';
+    return 'ClosestItemResult(closest=' + toString(this.m56_1) + ', previous=' + toString(this.n56_1) + ')';
   }
 }
 class Companion {
@@ -64,19 +64,19 @@ class Companion {
     Companion_instance = this;
     var tmp = this;
     var tmp_0 = LazyThreadSafetyMode_PUBLICATION_getInstance();
-    tmp.n56_1 = lazy(tmp_0, CursorPosition$Companion$_anonymous__riyxn4);
+    tmp.o56_1 = lazy(tmp_0, CursorPosition$Companion$_anonymous__riyxn4);
   }
-  n1e() {
+  k1e() {
     return _get_$cachedSerializer__te6jhj(this);
   }
-  b15(typeParamsSerializers) {
-    return this.n1e();
+  y14(typeParamsSerializers) {
+    return this.k1e();
   }
 }
 class CursorPosition extends Enum {
   constructor(name, ordinal, value) {
     super(name, ordinal);
-    this.q56_1 = value;
+    this.r56_1 = value;
   }
 }
 class Companion_0 {}
@@ -84,59 +84,59 @@ class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.cursor.Distance', this, 2);
-    tmp0_serialDesc.z13('lineOffset', false);
-    tmp0_serialDesc.z13('columnOffset', false);
-    this.r56_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('lineOffset', false);
+    tmp0_serialDesc.w13('columnOffset', false);
+    this.s56_1 = tmp0_serialDesc;
   }
-  s56(encoder, value) {
-    var tmp0_desc = this.r56_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    tmp1_output.px(tmp0_desc, 0, value.t56_1);
-    tmp1_output.px(tmp0_desc, 1, value.u56_1);
-    tmp1_output.fw(tmp0_desc);
+  t56(encoder, value) {
+    var tmp0_desc = this.s56_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    tmp1_output.mx(tmp0_desc, 0, value.u56_1);
+    tmp1_output.mx(tmp0_desc, 1, value.v56_1);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.s56(encoder, value instanceof Distance ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.t56(encoder, value instanceof Distance ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.r56_1;
+  nr(decoder) {
+    var tmp0_desc = this.s56_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = 0;
     var tmp5_local1 = 0;
-    var tmp6_input = decoder.ew(tmp0_desc);
-    if (tmp6_input.vw()) {
-      tmp4_local0 = tmp6_input.jw(tmp0_desc, 0);
+    var tmp6_input = decoder.bw(tmp0_desc);
+    if (tmp6_input.sw()) {
+      tmp4_local0 = tmp6_input.gw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp6_input.jw(tmp0_desc, 1);
+      tmp5_local1 = tmp6_input.gw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp6_input.ww(tmp0_desc);
+        tmp2_index = tmp6_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp6_input.jw(tmp0_desc, 0);
+            tmp4_local0 = tmp6_input.gw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp6_input.jw(tmp0_desc, 1);
+            tmp5_local1 = tmp6_input.gw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp6_input.fw(tmp0_desc);
-    return Distance.v56(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    tmp6_input.cw(tmp0_desc);
+    return Distance.w56(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
-  or() {
-    return this.r56_1;
+  lr() {
+    return this.s56_1;
   }
-  o14() {
+  l14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -145,15 +145,15 @@ class $serializer {
 }
 class Distance {
   constructor(lineOffset, columnOffset) {
-    this.t56_1 = lineOffset;
-    this.u56_1 = columnOffset;
+    this.u56_1 = lineOffset;
+    this.v56_1 = columnOffset;
   }
   toString() {
-    return 'Distance(lineOffset=' + this.t56_1 + ', columnOffset=' + this.u56_1 + ')';
+    return 'Distance(lineOffset=' + this.u56_1 + ', columnOffset=' + this.v56_1 + ')';
   }
   hashCode() {
-    var result = this.t56_1;
-    result = imul(result, 31) + this.u56_1 | 0;
+    var result = this.u56_1;
+    result = imul(result, 31) + this.v56_1 | 0;
     return result;
   }
   equals(other) {
@@ -161,19 +161,19 @@ class Distance {
       return true;
     if (!(other instanceof Distance))
       return false;
-    if (!(this.t56_1 === other.t56_1))
-      return false;
     if (!(this.u56_1 === other.u56_1))
+      return false;
+    if (!(this.v56_1 === other.v56_1))
       return false;
     return true;
   }
-  static v56(seen0, lineOffset, columnOffset, serializationConstructorMarker) {
+  static w56(seen0, lineOffset, columnOffset, serializationConstructorMarker) {
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance().r56_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance().s56_1);
     }
     var $this = createThis(this);
-    $this.t56_1 = lineOffset;
-    $this.u56_1 = columnOffset;
+    $this.u56_1 = lineOffset;
+    $this.v56_1 = columnOffset;
     return $this;
   }
 }
@@ -181,104 +181,104 @@ class Companion_1 {
   constructor() {
     Companion_instance_1 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.cursor.Distanced', null, 2);
-    tmp0_serialDesc.z13('item', false);
-    tmp0_serialDesc.z13('distance', false);
-    this.w56_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('item', false);
+    tmp0_serialDesc.w13('distance', false);
+    this.x56_1 = tmp0_serialDesc;
   }
-  p26(typeSerial0) {
-    return $serializer_0.z56(typeSerial0);
+  o26(typeSerial0) {
+    return $serializer_0.a57(typeSerial0);
   }
-  b15(typeParamsSerializers) {
-    return this.p26(typeParamsSerializers[0]);
+  y14(typeParamsSerializers) {
+    return this.o26(typeParamsSerializers[0]);
   }
 }
 class $serializer_0 {
-  static a57() {
+  static b57() {
     var $this = createThis(this);
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.cursor.Distanced', $this, 2);
-    tmp0_serialDesc.z13('item', false);
-    tmp0_serialDesc.z13('distance', false);
-    $this.x56_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('item', false);
+    tmp0_serialDesc.w13('distance', false);
+    $this.y56_1 = tmp0_serialDesc;
     return $this;
   }
-  b57(encoder, value) {
-    var tmp0_desc = this.x56_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    tmp1_output.wx(tmp0_desc, 0, this.y56_1, value.c57_1);
-    tmp1_output.wx(tmp0_desc, 1, $serializer_getInstance(), value.d57_1);
-    tmp1_output.fw(tmp0_desc);
+  c57(encoder, value) {
+    var tmp0_desc = this.y56_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    tmp1_output.tx(tmp0_desc, 0, this.z56_1, value.d57_1);
+    tmp1_output.tx(tmp0_desc, 1, $serializer_getInstance(), value.e57_1);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.b57(encoder, value instanceof Distanced ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.c57(encoder, value instanceof Distanced ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.x56_1;
+  nr(decoder) {
+    var tmp0_desc = this.y56_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
     var tmp4_local0 = null;
     var tmp5_local1 = null;
-    var tmp6_input = decoder.ew(tmp0_desc);
-    if (tmp6_input.vw()) {
-      tmp4_local0 = tmp6_input.qw(tmp0_desc, 0, this.y56_1, tmp4_local0);
+    var tmp6_input = decoder.bw(tmp0_desc);
+    if (tmp6_input.sw()) {
+      tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, this.z56_1, tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp6_input.qw(tmp0_desc, 1, $serializer_getInstance(), tmp5_local1);
+      tmp5_local1 = tmp6_input.nw(tmp0_desc, 1, $serializer_getInstance(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp6_input.ww(tmp0_desc);
+        tmp2_index = tmp6_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp6_input.qw(tmp0_desc, 0, this.y56_1, tmp4_local0);
+            tmp4_local0 = tmp6_input.nw(tmp0_desc, 0, this.z56_1, tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp6_input.qw(tmp0_desc, 1, $serializer_getInstance(), tmp5_local1);
+            tmp5_local1 = tmp6_input.nw(tmp0_desc, 1, $serializer_getInstance(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp6_input.fw(tmp0_desc);
-    return Distanced.e57(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
+    tmp6_input.cw(tmp0_desc);
+    return Distanced.f57(tmp3_bitMask0, tmp4_local0, tmp5_local1, null);
   }
-  or() {
-    return this.x56_1;
+  lr() {
+    return this.y56_1;
   }
-  o14() {
+  l14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [this.y56_1, $serializer_getInstance()];
+    return [this.z56_1, $serializer_getInstance()];
   }
-  p14() {
+  m14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [this.y56_1];
+    return [this.z56_1];
   }
-  static z56(typeSerial0) {
-    var $this = this.a57();
-    $this.y56_1 = typeSerial0;
+  static a57(typeSerial0) {
+    var $this = this.b57();
+    $this.z56_1 = typeSerial0;
     return $this;
   }
 }
 class Distanced {
   constructor(item, distance) {
     Companion_getInstance_1();
-    this.c57_1 = item;
-    this.d57_1 = distance;
+    this.d57_1 = item;
+    this.e57_1 = distance;
   }
   toString() {
-    return 'Distanced(item=' + toString(this.c57_1) + ', distance=' + this.d57_1.toString() + ')';
+    return 'Distanced(item=' + toString(this.d57_1) + ', distance=' + this.e57_1.toString() + ')';
   }
   hashCode() {
-    var result = hashCode(this.c57_1);
-    result = imul(result, 31) + this.d57_1.hashCode() | 0;
+    var result = hashCode(this.d57_1);
+    result = imul(result, 31) + this.e57_1.hashCode() | 0;
     return result;
   }
   equals(other) {
@@ -286,26 +286,26 @@ class Distanced {
       return true;
     if (!(other instanceof Distanced))
       return false;
-    if (!equals(this.c57_1, other.c57_1))
+    if (!equals(this.d57_1, other.d57_1))
       return false;
-    if (!this.d57_1.equals(other.d57_1))
+    if (!this.e57_1.equals(other.e57_1))
       return false;
     return true;
   }
-  static e57(seen0, item, distance, serializationConstructorMarker) {
+  static f57(seen0, item, distance, serializationConstructorMarker) {
     Companion_getInstance_1();
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, Companion_getInstance_1().w56_1);
+      throwMissingFieldException(seen0, 3, Companion_getInstance_1().x56_1);
     }
     var $this = createThis(this);
-    $this.c57_1 = item;
-    $this.d57_1 = distance;
+    $this.d57_1 = item;
+    $this.e57_1 = distance;
     return $this;
   }
 }
 //endregion
 function _get_$cachedSerializer__te6jhj($this) {
-  return $this.n56_1.r3();
+  return $this.o56_1.k3();
 }
 function CursorPosition$Companion$_anonymous__riyxn4() {
   return createSimpleEnumSerializer('com.bedalton.common.lsp.cursor.CursorPosition', values());
@@ -374,12 +374,12 @@ function Companion_getInstance_1() {
   return Companion_instance_1;
 }
 function getDistanceFromStart(range, lineNumber, column) {
-  var tmp = lineNumber - range.o1().h1e() | 0;
+  var tmp = lineNumber - range.h1().e1e() | 0;
   var tmp_0;
-  if (lineNumber === range.o1().h1e()) {
-    tmp_0 = column - range.o1().l1e() | 0;
+  if (lineNumber === range.h1().e1e()) {
+    tmp_0 = column - range.h1().i1e() | 0;
   } else {
-    tmp_0 = range.o1().l1e();
+    tmp_0 = range.h1().i1e();
   }
   return new Distance(tmp, tmp_0);
 }
@@ -387,61 +387,61 @@ function getAbsoluteDistanceFromNearestEdge(range, lineNumber, column) {
   return getDistance(range, lineNumber, column, true);
 }
 function getDistance(range, lineNumber, column, absolute) {
-  if (lineNumber === range.o1().h1e()) {
-    if (column >= range.o1().l1e()) {
-      if (lineNumber < range.i1e().h1e()) {
+  if (lineNumber === range.h1().e1e()) {
+    if (column >= range.h1().i1e()) {
+      if (lineNumber < range.f1e().e1e()) {
         return new Distance(0, 0);
-      } else if (column <= range.i1e().l1e()) {
+      } else if (column <= range.f1e().i1e()) {
         return new Distance(0, 0);
       }
     }
   }
   var tmp;
-  if (lineNumber === range.i1e().h1e()) {
+  if (lineNumber === range.f1e().e1e()) {
     var tmp_0;
-    if (column <= range.i1e().l1e()) {
+    if (column <= range.f1e().i1e()) {
       return new Distance(0, 0);
     } else {
-      tmp_0 = range.i1e();
+      tmp_0 = range.f1e();
     }
     tmp = tmp_0;
   } else {
-    tmp = range.o1();
+    tmp = range.h1();
   }
   var point = tmp;
   var tmp_1;
-  if (lineNumber === point.h1e()) {
-    tmp_1 = column - point.l1e() | 0;
+  if (lineNumber === point.e1e()) {
+    tmp_1 = column - point.i1e() | 0;
   } else {
-    tmp_1 = point.l1e();
+    tmp_1 = point.i1e();
   }
   var characterDistance = tmp_1;
   if (absolute && characterDistance < 0) {
     characterDistance = imul(characterDistance, -1);
   }
-  return new Distance(lineNumber - point.h1e() | 0, characterDistance);
+  return new Distance(lineNumber - point.e1e() | 0, characterDistance);
 }
 function getRelativeCursorPosition(parseTreeItem, line, character) {
-  var range = parseTreeItem.g1e();
-  var start = range.o1();
-  var end = range.i1e();
-  if (line === start.h1e()) {
-    if (end.h1e() === start.h1e()) {
+  var range = parseTreeItem.d1e();
+  var start = range.h1();
+  var end = range.f1e();
+  if (line === start.e1e()) {
+    if (end.e1e() === start.e1e()) {
       var tmp;
-      if (character === start.l1e()) {
+      if (character === start.i1e()) {
         tmp = CursorPosition_START_getInstance();
       } else {
-        if (character === end.l1e()) {
+        if (character === end.i1e()) {
           tmp = CursorPosition_END_getInstance();
         } else {
-          if (character < start.l1e()) {
+          if (character < start.i1e()) {
             tmp = CursorPosition_BEFORE_getInstance();
           } else {
-            if (character > end.l1e()) {
+            if (character > end.i1e()) {
               tmp = CursorPosition_AFTER_getInstance();
             } else {
-              var containsLower = start.l1e();
-              if (character <= end.l1e() ? containsLower <= character : false) {
+              var containsLower = start.i1e();
+              if (character <= end.i1e() ? containsLower <= character : false) {
                 tmp = CursorPosition_INSIDE_getInstance();
               } else {
                 tmp = CursorPosition_INSIDE_getInstance();
@@ -452,13 +452,13 @@ function getRelativeCursorPosition(parseTreeItem, line, character) {
       }
       return tmp;
     } else {
-      return character === start.l1e() ? CursorPosition_START_getInstance() : character < start.l1e() ? CursorPosition_BEFORE_getInstance() : CursorPosition_INSIDE_getInstance();
+      return character === start.i1e() ? CursorPosition_START_getInstance() : character < start.i1e() ? CursorPosition_BEFORE_getInstance() : CursorPosition_INSIDE_getInstance();
     }
-  } else if (line === end.h1e()) {
-    return character === end.l1e() ? CursorPosition_END_getInstance() : character > end.l1e() ? CursorPosition_AFTER_getInstance() : CursorPosition_INSIDE_getInstance();
-  } else if (line < start.h1e()) {
+  } else if (line === end.e1e()) {
+    return character === end.i1e() ? CursorPosition_END_getInstance() : character > end.i1e() ? CursorPosition_AFTER_getInstance() : CursorPosition_INSIDE_getInstance();
+  } else if (line < start.e1e()) {
     return CursorPosition_BEFORE_getInstance();
-  } else if (line > end.h1e()) {
+  } else if (line > end.e1e()) {
     return CursorPosition_AFTER_getInstance();
   } else {
     return CursorPosition_INSIDE_getInstance();
@@ -469,7 +469,7 @@ initMetadataForClass(ClosestItemResult, 'ClosestItemResult');
 initMetadataForCompanion(Companion, VOID, [SerializerFactory]);
 initMetadataForClass(CursorPosition, 'CursorPosition', VOID, VOID, VOID, VOID, VOID, {0: Companion_getInstance});
 initMetadataForCompanion(Companion_0);
-protoOf($serializer).p14 = typeParametersSerializers;
+protoOf($serializer).m14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(Distance, 'Distance', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance});
 initMetadataForCompanion(Companion_1, VOID, [SerializerFactory]);

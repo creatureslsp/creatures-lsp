@@ -77,50 +77,50 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.d5e_1 = [null, null, null, lazy(tmp_0, InlayHintImpl$Companion$$childSerializers$_anonymous__uk33a4), null, null, null];
+    tmp.k5l_1 = [null, null, null, lazy(tmp_0, InlayHintImpl$Companion$$childSerializers$_anonymous__uk33a4), null, null, null];
   }
 }
 class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.ast.hints.InlayHintImpl', this, 7);
-    tmp0_serialDesc.z13('position', false);
-    tmp0_serialDesc.z13('label', false);
-    tmp0_serialDesc.z13('kind', true);
-    tmp0_serialDesc.z13('textEdits', true);
-    tmp0_serialDesc.z13('tooltip', true);
-    tmp0_serialDesc.z13('paddingLeft', true);
-    tmp0_serialDesc.z13('paddingRight', true);
-    this.e5e_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('position', false);
+    tmp0_serialDesc.w13('label', false);
+    tmp0_serialDesc.w13('kind', true);
+    tmp0_serialDesc.w13('textEdits', true);
+    tmp0_serialDesc.w13('tooltip', true);
+    tmp0_serialDesc.w13('paddingLeft', true);
+    tmp0_serialDesc.w13('paddingRight', true);
+    this.l5l_1 = tmp0_serialDesc;
   }
-  f5e(encoder, value) {
-    var tmp0_desc = this.e5e_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance().d5e_1;
-    tmp1_output.wx(tmp0_desc, 0, PositionSerializer_getInstance(), value.g5e_1);
-    tmp1_output.ux(tmp0_desc, 1, value.h5e_1);
-    if (tmp1_output.cy(tmp0_desc, 2) ? true : !(value.i5e_1 === 1)) {
-      tmp1_output.yx(tmp0_desc, 2, IntSerializer_getInstance(), value.i5e_1);
+  m5l(encoder, value) {
+    var tmp0_desc = this.l5l_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance().k5l_1;
+    tmp1_output.tx(tmp0_desc, 0, PositionSerializer_getInstance(), value.n5l_1);
+    tmp1_output.rx(tmp0_desc, 1, value.o5l_1);
+    if (tmp1_output.zx(tmp0_desc, 2) ? true : !(value.p5l_1 === 1)) {
+      tmp1_output.vx(tmp0_desc, 2, IntSerializer_getInstance(), value.p5l_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 3) ? true : !(value.j5e_1 == null)) {
-      tmp1_output.yx(tmp0_desc, 3, tmp2_cached[3].r3(), value.j5e_1);
+    if (tmp1_output.zx(tmp0_desc, 3) ? true : !(value.q5l_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 3, tmp2_cached[3].k3(), value.q5l_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 4) ? true : !(value.k5e_1 == null)) {
-      tmp1_output.yx(tmp0_desc, 4, StringSerializer_getInstance(), value.k5e_1);
+    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.r5l_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 4, StringSerializer_getInstance(), value.r5l_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 5) ? true : !(value.l5e_1 == null)) {
-      tmp1_output.yx(tmp0_desc, 5, BooleanSerializer_getInstance(), value.l5e_1);
+    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.s5l_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 5, BooleanSerializer_getInstance(), value.s5l_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 6) ? true : !(value.m5e_1 == null)) {
-      tmp1_output.yx(tmp0_desc, 6, BooleanSerializer_getInstance(), value.m5e_1);
+    if (tmp1_output.zx(tmp0_desc, 6) ? true : !(value.t5l_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 6, BooleanSerializer_getInstance(), value.t5l_1);
     }
-    tmp1_output.fw(tmp0_desc);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.f5e(encoder, value instanceof InlayHintImpl ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.m5l(encoder, value instanceof InlayHintImpl ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.e5e_1;
+  nr(decoder) {
+    var tmp0_desc = this.l5l_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -131,74 +131,74 @@ class $serializer {
     var tmp8_local4 = null;
     var tmp9_local5 = null;
     var tmp10_local6 = null;
-    var tmp11_input = decoder.ew(tmp0_desc);
-    var tmp12_cached = Companion_getInstance().d5e_1;
-    if (tmp11_input.vw()) {
-      tmp4_local0 = tmp11_input.qw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
+    var tmp11_input = decoder.bw(tmp0_desc);
+    var tmp12_cached = Companion_getInstance().k5l_1;
+    if (tmp11_input.sw()) {
+      tmp4_local0 = tmp11_input.nw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp11_input.ow(tmp0_desc, 1);
+      tmp5_local1 = tmp11_input.lw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp11_input.sw(tmp0_desc, 2, IntSerializer_getInstance(), tmp6_local2);
+      tmp6_local2 = tmp11_input.pw(tmp0_desc, 2, IntSerializer_getInstance(), tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp11_input.sw(tmp0_desc, 3, tmp12_cached[3].r3(), tmp7_local3);
+      tmp7_local3 = tmp11_input.pw(tmp0_desc, 3, tmp12_cached[3].k3(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp11_input.sw(tmp0_desc, 4, StringSerializer_getInstance(), tmp8_local4);
+      tmp8_local4 = tmp11_input.pw(tmp0_desc, 4, StringSerializer_getInstance(), tmp8_local4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp11_input.sw(tmp0_desc, 5, BooleanSerializer_getInstance(), tmp9_local5);
+      tmp9_local5 = tmp11_input.pw(tmp0_desc, 5, BooleanSerializer_getInstance(), tmp9_local5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp11_input.sw(tmp0_desc, 6, BooleanSerializer_getInstance(), tmp10_local6);
+      tmp10_local6 = tmp11_input.pw(tmp0_desc, 6, BooleanSerializer_getInstance(), tmp10_local6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp11_input.ww(tmp0_desc);
+        tmp2_index = tmp11_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp11_input.qw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
+            tmp4_local0 = tmp11_input.nw(tmp0_desc, 0, PositionSerializer_getInstance(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp11_input.ow(tmp0_desc, 1);
+            tmp5_local1 = tmp11_input.lw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp11_input.sw(tmp0_desc, 2, IntSerializer_getInstance(), tmp6_local2);
+            tmp6_local2 = tmp11_input.pw(tmp0_desc, 2, IntSerializer_getInstance(), tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp11_input.sw(tmp0_desc, 3, tmp12_cached[3].r3(), tmp7_local3);
+            tmp7_local3 = tmp11_input.pw(tmp0_desc, 3, tmp12_cached[3].k3(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp11_input.sw(tmp0_desc, 4, StringSerializer_getInstance(), tmp8_local4);
+            tmp8_local4 = tmp11_input.pw(tmp0_desc, 4, StringSerializer_getInstance(), tmp8_local4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp11_input.sw(tmp0_desc, 5, BooleanSerializer_getInstance(), tmp9_local5);
+            tmp9_local5 = tmp11_input.pw(tmp0_desc, 5, BooleanSerializer_getInstance(), tmp9_local5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp11_input.sw(tmp0_desc, 6, BooleanSerializer_getInstance(), tmp10_local6);
+            tmp10_local6 = tmp11_input.pw(tmp0_desc, 6, BooleanSerializer_getInstance(), tmp10_local6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp11_input.fw(tmp0_desc);
-    return InlayHintImpl.n5e(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
+    tmp11_input.cw(tmp0_desc);
+    return InlayHintImpl.u5l(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, null);
   }
-  or() {
-    return this.e5e_1;
+  lr() {
+    return this.l5l_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance().d5e_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance().k5l_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [PositionSerializer_getInstance(), StringSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), get_nullable(tmp0_cached[3].r3()), get_nullable(StringSerializer_getInstance()), get_nullable(BooleanSerializer_getInstance()), get_nullable(BooleanSerializer_getInstance())];
+    return [PositionSerializer_getInstance(), StringSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), get_nullable(tmp0_cached[3].k3()), get_nullable(StringSerializer_getInstance()), get_nullable(BooleanSerializer_getInstance()), get_nullable(BooleanSerializer_getInstance())];
   }
 }
 class InlayHintImpl {
@@ -209,143 +209,143 @@ class InlayHintImpl {
     tooltip = tooltip === VOID ? null : tooltip;
     paddingLeft = paddingLeft === VOID ? null : paddingLeft;
     paddingRight = paddingRight === VOID ? null : paddingRight;
-    this.g5e_1 = position;
-    this.h5e_1 = label;
-    this.i5e_1 = kind;
-    this.j5e_1 = textEdits;
-    this.k5e_1 = tooltip;
-    this.l5e_1 = paddingLeft;
-    this.m5e_1 = paddingRight;
+    this.n5l_1 = position;
+    this.o5l_1 = label;
+    this.p5l_1 = kind;
+    this.q5l_1 = textEdits;
+    this.r5l_1 = tooltip;
+    this.s5l_1 = paddingLeft;
+    this.t5l_1 = paddingRight;
   }
-  m2k() {
-    return this.g5e_1;
+  l2k() {
+    return this.n5l_1;
   }
-  y5d() {
-    return this.h5e_1;
+  f5l() {
+    return this.o5l_1;
   }
-  lu() {
-    return this.i5e_1;
+  iu() {
+    return this.p5l_1;
   }
-  z5d() {
-    return this.j5e_1;
+  g5l() {
+    return this.q5l_1;
   }
-  a5e() {
-    return this.k5e_1;
+  h5l() {
+    return this.r5l_1;
   }
-  b5e() {
-    return this.l5e_1;
+  i5l() {
+    return this.s5l_1;
   }
-  c5e() {
-    return this.m5e_1;
+  j5l() {
+    return this.t5l_1;
   }
   equals(other) {
     if (this === other)
       return true;
     if (!(other instanceof InlayHintImpl))
       return false;
-    if (!equals(this.g5e_1, other.g5e_1))
+    if (!equals(this.n5l_1, other.n5l_1))
       return false;
-    if (!(this.h5e_1 === other.h5e_1))
+    if (!(this.o5l_1 === other.o5l_1))
       return false;
-    if (!(this.i5e_1 == other.i5e_1))
+    if (!(this.p5l_1 == other.p5l_1))
       return false;
-    if (!(this.j5e_1 == null)) {
-      if (other.j5e_1 == null)
+    if (!(this.q5l_1 == null)) {
+      if (other.q5l_1 == null)
         return false;
-      if (!contentEquals(this.j5e_1, other.j5e_1))
+      if (!contentEquals(this.q5l_1, other.q5l_1))
         return false;
-    } else if (!(other.j5e_1 == null))
+    } else if (!(other.q5l_1 == null))
       return false;
-    if (!(this.k5e_1 == other.k5e_1))
+    if (!(this.r5l_1 == other.r5l_1))
       return false;
-    if (!(this.l5e_1 == other.l5e_1))
+    if (!(this.s5l_1 == other.s5l_1))
       return false;
-    if (!(this.m5e_1 == other.m5e_1))
+    if (!(this.t5l_1 == other.t5l_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = hashCode(this.g5e_1);
-    result = imul(31, result) + getStringHashCode(this.h5e_1) | 0;
+    var result = hashCode(this.n5l_1);
+    result = imul(31, result) + getStringHashCode(this.o5l_1) | 0;
     var tmp = imul(31, result);
-    var tmp0_elvis_lhs = this.i5e_1;
+    var tmp0_elvis_lhs = this.p5l_1;
     result = tmp + (tmp0_elvis_lhs == null ? 0 : tmp0_elvis_lhs) | 0;
     var tmp_0 = imul(31, result);
-    var tmp1_safe_receiver = this.j5e_1;
+    var tmp1_safe_receiver = this.q5l_1;
     var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : contentHashCode(tmp1_safe_receiver);
     result = tmp_0 + (tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs) | 0;
     var tmp_1 = imul(31, result);
-    var tmp3_safe_receiver = this.k5e_1;
+    var tmp3_safe_receiver = this.r5l_1;
     var tmp4_elvis_lhs = tmp3_safe_receiver == null ? null : getStringHashCode(tmp3_safe_receiver);
     result = tmp_1 + (tmp4_elvis_lhs == null ? 0 : tmp4_elvis_lhs) | 0;
     var tmp_2 = imul(31, result);
-    var tmp5_safe_receiver = this.l5e_1;
+    var tmp5_safe_receiver = this.s5l_1;
     var tmp6_elvis_lhs = tmp5_safe_receiver == null ? null : getBooleanHashCode(tmp5_safe_receiver);
     result = tmp_2 + (tmp6_elvis_lhs == null ? 0 : tmp6_elvis_lhs) | 0;
     var tmp_3 = imul(31, result);
-    var tmp7_safe_receiver = this.m5e_1;
+    var tmp7_safe_receiver = this.t5l_1;
     var tmp8_elvis_lhs = tmp7_safe_receiver == null ? null : getBooleanHashCode(tmp7_safe_receiver);
     result = tmp_3 + (tmp8_elvis_lhs == null ? 0 : tmp8_elvis_lhs) | 0;
     return result;
   }
   toString() {
-    return 'InlayHintImpl(position=' + toString(this.g5e_1) + ', label=' + this.h5e_1 + ', kind=' + this.i5e_1 + ', textEdits=' + toString(this.j5e_1) + ', tooltip=' + this.k5e_1 + ', paddingLeft=' + this.l5e_1 + ', paddingRight=' + this.m5e_1 + ')';
+    return 'InlayHintImpl(position=' + toString(this.n5l_1) + ', label=' + this.o5l_1 + ', kind=' + this.p5l_1 + ', textEdits=' + toString(this.q5l_1) + ', tooltip=' + this.r5l_1 + ', paddingLeft=' + this.s5l_1 + ', paddingRight=' + this.t5l_1 + ')';
   }
-  static n5e(seen0, position, label, kind, textEdits, tooltip, paddingLeft, paddingRight, serializationConstructorMarker) {
+  static u5l(seen0, position, label, kind, textEdits, tooltip, paddingLeft, paddingRight, serializationConstructorMarker) {
     Companion_getInstance();
     if (!(3 === (3 & seen0))) {
-      throwMissingFieldException(seen0, 3, $serializer_getInstance().e5e_1);
+      throwMissingFieldException(seen0, 3, $serializer_getInstance().l5l_1);
     }
     var $this = createThis(this);
-    $this.g5e_1 = position;
-    $this.h5e_1 = label;
+    $this.n5l_1 = position;
+    $this.o5l_1 = label;
     if (0 === (seen0 & 4))
-      $this.i5e_1 = 1;
+      $this.p5l_1 = 1;
     else
-      $this.i5e_1 = kind;
+      $this.p5l_1 = kind;
     if (0 === (seen0 & 8))
-      $this.j5e_1 = null;
+      $this.q5l_1 = null;
     else
-      $this.j5e_1 = textEdits;
+      $this.q5l_1 = textEdits;
     if (0 === (seen0 & 16))
-      $this.k5e_1 = null;
+      $this.r5l_1 = null;
     else
-      $this.k5e_1 = tooltip;
+      $this.r5l_1 = tooltip;
     if (0 === (seen0 & 32))
-      $this.l5e_1 = null;
+      $this.s5l_1 = null;
     else
-      $this.l5e_1 = paddingLeft;
+      $this.s5l_1 = paddingLeft;
     if (0 === (seen0 & 64))
-      $this.m5e_1 = null;
+      $this.t5l_1 = null;
     else
-      $this.m5e_1 = paddingRight;
+      $this.t5l_1 = paddingRight;
     return $this;
   }
 }
 class InlayHintSerializer {
   constructor() {
     InlayHintSerializer_instance = this;
-    this.o5e_1 = get_nullable(ListSerializer(TextEditSerializer_getInstance()));
-    this.p5e_1 = 0;
-    this.q5e_1 = 1;
-    this.r5e_1 = 2;
-    this.s5e_1 = 3;
-    this.t5e_1 = 4;
-    this.u5e_1 = 5;
-    this.v5e_1 = 6;
+    this.v5l_1 = get_nullable(ListSerializer(TextEditSerializer_getInstance()));
+    this.w5l_1 = 0;
+    this.x5l_1 = 1;
+    this.y5l_1 = 2;
+    this.z5l_1 = 3;
+    this.a5m_1 = 4;
+    this.b5m_1 = 5;
+    this.c5m_1 = 6;
     var tmp = this;
-    tmp.w5e_1 = lazy_0(InlayHintSerializer$descriptor$delegate$lambda);
+    tmp.d5m_1 = lazy_0(InlayHintSerializer$descriptor$delegate$lambda);
   }
-  or() {
-    var tmp0 = this.w5e_1;
+  lr() {
+    var tmp0 = this.d5m_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('descriptor', 1, tmp, InlayHintSerializer$_get_descriptor_$ref_mbwu4p(), null);
-    return tmp0.r3();
+    return tmp0.k3();
   }
-  qr(decoder) {
-    var descriptor = this.or();
-    var ob = decoder.ew(descriptor);
+  nr(decoder) {
+    var descriptor = this.lr();
+    var ob = decoder.bw(descriptor);
     var index;
     var position = null;
     var label = null;
@@ -356,23 +356,23 @@ class InlayHintSerializer {
     var paddingRight = null;
     $l$loop: while (true) {
       // Inline function 'kotlin.also' call
-      var this_0 = ob.ww(descriptor);
+      var this_0 = ob.tw(descriptor);
       index = this_0;
       if (!!(this_0 === -1)) {
         break $l$loop;
       }
       switch (index) {
         case 0:
-          position = ob.rw(descriptor, index, Companion_instance.n1e());
+          position = ob.ow(descriptor, index, Companion_instance.k1e());
           break;
         case 1:
-          label = ob.ow(descriptor, index);
+          label = ob.lw(descriptor, index);
           break;
         case 2:
           kind = decodeNullableIntElement(ob, descriptor, index);
           break;
         case 3:
-          var tmp1_safe_receiver = ob.rw(descriptor, index, this.o5e_1);
+          var tmp1_safe_receiver = ob.ow(descriptor, index, this.v5l_1);
           var tmp;
           if (tmp1_safe_receiver == null) {
             tmp = null;
@@ -394,29 +394,29 @@ class InlayHintSerializer {
           break;
       }
     }
-    ob.fw(descriptor);
+    ob.cw(descriptor);
     if (position == null || label == null) {
       var tmp2_subject = position;
       var missing = tmp2_subject == null && label == null ? 'position, label' : tmp2_subject == null ? 'position' : 'label';
-      throw SerializationException.gt('InlayHint is missing element: [' + missing + ']');
+      throw SerializationException.dt('InlayHint is missing element: [' + missing + ']');
     }
     return new InlayHintImpl(position, label, kind, edits, tooltip, paddingLeft, paddingRight);
   }
-  x5e(encoder, value) {
-    var ob = encoder.ew(this.or());
-    ob.wx(this.or(), 0, PositionSerializer_getInstance(), value.m2k());
-    ob.ux(this.or(), 1, value.y5d());
-    encodeNullableIntElement(ob, this.or(), 2, value.lu());
-    var tmp = this.or();
-    var tmp0_safe_receiver = value.z5d();
-    ob.wx(tmp, 3, this.o5e_1, tmp0_safe_receiver == null ? null : toList(tmp0_safe_receiver));
-    encodeNullableStringElement(ob, this.or(), 4, value.a5e());
-    encodeNullableBooleanElement(ob, this.or(), 5, value.b5e());
-    encodeNullableBooleanElement(ob, this.or(), 6, value.c5e());
-    ob.fw(this.or());
+  e5m(encoder, value) {
+    var ob = encoder.bw(this.lr());
+    ob.tx(this.lr(), 0, PositionSerializer_getInstance(), value.l2k());
+    ob.rx(this.lr(), 1, value.f5l());
+    encodeNullableIntElement(ob, this.lr(), 2, value.iu());
+    var tmp = this.lr();
+    var tmp0_safe_receiver = value.g5l();
+    ob.tx(tmp, 3, this.v5l_1, tmp0_safe_receiver == null ? null : toList(tmp0_safe_receiver));
+    encodeNullableStringElement(ob, this.lr(), 4, value.h5l());
+    encodeNullableBooleanElement(ob, this.lr(), 5, value.i5l());
+    encodeNullableBooleanElement(ob, this.lr(), 6, value.j5l());
+    ob.cw(this.lr());
   }
-  pr(encoder, value) {
-    return this.x5e(encoder, (!(value == null) ? isInterface(value, InlayHint) : false) ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.e5m(encoder, (!(value == null) ? isInterface(value, InlayHint) : false) ? value : THROW_CCE());
   }
 }
 //endregion
@@ -439,56 +439,56 @@ function InlayHintSerializer$descriptor$delegate$lambda() {
   return buildClassSerialDescriptor('InlayHint', [], InlayHintSerializer$descriptor$delegate$lambda$lambda);
 }
 function InlayHintSerializer$descriptor$delegate$lambda$lambda($this$buildClassSerialDescriptor) {
-  $this$buildClassSerialDescriptor.zr('position', PositionSerializer_getInstance().or());
+  $this$buildClassSerialDescriptor.wr('position', PositionSerializer_getInstance().lr());
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var annotations = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().me(), arrayOf([]), false));
-  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av('label', descriptor, annotations, false);
+  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().je(), arrayOf([]), false));
+  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu('label', descriptor, annotations, false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var annotations_0 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().he(), arrayOf([]), true));
-  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av('kind', descriptor_0, annotations_0, false);
+  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), true));
+  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu('kind', descriptor_0, annotations_0, false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName = 'text_edits';
   var annotations_1 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer(createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(TextEdit), arrayOf([]), false))]), false));
-  var descriptor_1 = (isInterface(this_2, KSerializer) ? this_2 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av(elementName, descriptor_1, annotations_1, false);
+  var this_2 = serializer(createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(TextEdit), arrayOf([]), false))]), false));
+  var descriptor_1 = (isInterface(this_2, KSerializer) ? this_2 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName, descriptor_1, annotations_1, false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var annotations_2 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_3 = serializer(createKType(PrimitiveClasses_getInstance().me(), arrayOf([]), true));
-  var descriptor_2 = (isInterface(this_3, KSerializer) ? this_3 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av('tooltip', descriptor_2, annotations_2, false);
+  var this_3 = serializer(createKType(PrimitiveClasses_getInstance().je(), arrayOf([]), true));
+  var descriptor_2 = (isInterface(this_3, KSerializer) ? this_3 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu('tooltip', descriptor_2, annotations_2, false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName_0 = 'padding_left';
   var annotations_3 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_4 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
-  var descriptor_3 = (isInterface(this_4, KSerializer) ? this_4 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av(elementName_0, descriptor_3, annotations_3, false);
+  var this_4 = serializer(createKType(PrimitiveClasses_getInstance().be(), arrayOf([]), false));
+  var descriptor_3 = (isInterface(this_4, KSerializer) ? this_4 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_0, descriptor_3, annotations_3, false);
   // Inline function 'kotlinx.serialization.descriptors.element' call
   var elementName_1 = 'padding_right';
   var annotations_4 = emptyList();
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_5 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
-  var descriptor_4 = (isInterface(this_5, KSerializer) ? this_5 : THROW_CCE()).or();
-  $this$buildClassSerialDescriptor.av(elementName_1, descriptor_4, annotations_4, false);
+  var this_5 = serializer(createKType(PrimitiveClasses_getInstance().be(), arrayOf([]), false));
+  var descriptor_4 = (isInterface(this_5, KSerializer) ? this_5 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_1, descriptor_4, annotations_4, false);
   return Unit_instance;
 }
 function InlayHintSerializer$_get_descriptor_$ref_mbwu4p() {
-  return (p0) => p0.or();
+  return (p0) => p0.lr();
 }
 var InlayHintSerializer_instance;
 function InlayHintSerializer_getInstance() {
@@ -499,7 +499,7 @@ function InlayHintSerializer_getInstance() {
 var EMPTY_INLAY_LIST;
 function code(_this__u8e3s4) {
   _init_properties_util_kt__mcwhvi();
-  return '' + _this__u8e3s4.m2k().h1e() + ':' + _this__u8e3s4.m2k().l1e() + ':' + _this__u8e3s4.y5d();
+  return '' + _this__u8e3s4.l2k().e1e() + ':' + _this__u8e3s4.l2k().i1e() + ':' + _this__u8e3s4.f5l();
 }
 var properties_initialized_util_kt_qfsh5w;
 function _init_properties_util_kt__mcwhvi() {
@@ -511,7 +511,7 @@ function _init_properties_util_kt__mcwhvi() {
 //region block: post-declaration
 initMetadataForInterface(InlayHint, 'InlayHint', VOID, VOID, VOID, VOID, VOID, {0: InlayHintSerializer_getInstance});
 initMetadataForCompanion(Companion);
-protoOf($serializer).p14 = typeParametersSerializers;
+protoOf($serializer).m14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(InlayHintImpl, 'InlayHintImpl', VOID, VOID, [InlayHint], VOID, VOID, {0: $serializer_getInstance});
 initMetadataForObject(InlayHintSerializer, 'InlayHintSerializer', VOID, VOID, [KSerializer]);

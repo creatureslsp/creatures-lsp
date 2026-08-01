@@ -34,6 +34,7 @@ import {
 } from './common-lsp-validation.mjs';
 import {
   TypeTokens_getInstanceano5od1y9c5f as TypeTokens_getInstance,
+  assertValidVariantj6a091z2jtqp as assertValidVariant,
   get_caosCoreDefaultSerializersModule1aaqup6w7ri8s as get_caosCoreDefaultSerializersModule,
 } from './caos-core.mjs';
 import {
@@ -65,10 +66,10 @@ var imul = Math.imul;
 //endregion
 //region block: pre-declaration
 class CaosDiagnosticFormatter {
-  h5j(filename, variant, errors) {
+  o5q(filename, variant, errors) {
     var tmp0_safe_receiver = firstOrNull(errors);
-    var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.y59_1;
-    var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.i5a_1;
+    var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.x5b_1;
+    var tmp2_elvis_lhs = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.h5c_1;
     var indexing = tmp2_elvis_lhs == null ? '1-indexed' : tmp2_elvis_lhs;
     // Inline function 'kotlin.collections.isEmpty' call
     var tmp3_okay = errors.length === 0;
@@ -83,38 +84,38 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.i5j_1 = [null, null, null, null, lazy(tmp_0, DiagnosticReport$Companion$$childSerializers$_anonymous__g7dvv5), null];
+    tmp.p5q_1 = [null, null, null, null, lazy(tmp_0, DiagnosticReport$Companion$$childSerializers$_anonymous__g7dvv5), null];
   }
 }
 class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.validation.report.DiagnosticReport', this, 6);
-    tmp0_serialDesc.z13('okay', false);
-    tmp0_serialDesc.z13('file', false);
-    tmp0_serialDesc.z13('language', false);
-    tmp0_serialDesc.z13('variant', false);
-    tmp0_serialDesc.z13('diagnostics', false);
-    tmp0_serialDesc.z13('indexing', false);
-    this.j5j_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('okay', false);
+    tmp0_serialDesc.w13('file', false);
+    tmp0_serialDesc.w13('language', false);
+    tmp0_serialDesc.w13('variant', false);
+    tmp0_serialDesc.w13('diagnostics', false);
+    tmp0_serialDesc.w13('indexing', false);
+    this.q5q_1 = tmp0_serialDesc;
   }
-  k5j(encoder, value) {
-    var tmp0_desc = this.j5j_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance().i5j_1;
-    tmp1_output.mx(tmp0_desc, 0, value.l5j_1);
-    tmp1_output.yx(tmp0_desc, 1, StringSerializer_getInstance(), value.m5j_1);
-    tmp1_output.ux(tmp0_desc, 2, value.n5j_1);
-    tmp1_output.yx(tmp0_desc, 3, StringSerializer_getInstance(), value.o5j_1);
-    tmp1_output.wx(tmp0_desc, 4, tmp2_cached[4].r3(), value.p5j_1);
-    tmp1_output.ux(tmp0_desc, 5, value.q5j_1);
-    tmp1_output.fw(tmp0_desc);
+  r5q(encoder, value) {
+    var tmp0_desc = this.q5q_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance().p5q_1;
+    tmp1_output.jx(tmp0_desc, 0, value.s5q_1);
+    tmp1_output.vx(tmp0_desc, 1, StringSerializer_getInstance(), value.t5q_1);
+    tmp1_output.rx(tmp0_desc, 2, value.u5q_1);
+    tmp1_output.vx(tmp0_desc, 3, StringSerializer_getInstance(), value.v5q_1);
+    tmp1_output.tx(tmp0_desc, 4, tmp2_cached[4].k3(), value.w5q_1);
+    tmp1_output.rx(tmp0_desc, 5, value.x5q_1);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.k5j(encoder, value instanceof DiagnosticReport ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.r5q(encoder, value instanceof DiagnosticReport ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.j5j_1;
+  nr(decoder) {
+    var tmp0_desc = this.q5q_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -124,79 +125,79 @@ class $serializer {
     var tmp7_local3 = null;
     var tmp8_local4 = null;
     var tmp9_local5 = null;
-    var tmp10_input = decoder.ew(tmp0_desc);
-    var tmp11_cached = Companion_getInstance().i5j_1;
-    if (tmp10_input.vw()) {
-      tmp4_local0 = tmp10_input.gw(tmp0_desc, 0);
+    var tmp10_input = decoder.bw(tmp0_desc);
+    var tmp11_cached = Companion_getInstance().p5q_1;
+    if (tmp10_input.sw()) {
+      tmp4_local0 = tmp10_input.dw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp10_input.sw(tmp0_desc, 1, StringSerializer_getInstance(), tmp5_local1);
+      tmp5_local1 = tmp10_input.pw(tmp0_desc, 1, StringSerializer_getInstance(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp10_input.ow(tmp0_desc, 2);
+      tmp6_local2 = tmp10_input.lw(tmp0_desc, 2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp10_input.sw(tmp0_desc, 3, StringSerializer_getInstance(), tmp7_local3);
+      tmp7_local3 = tmp10_input.pw(tmp0_desc, 3, StringSerializer_getInstance(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp10_input.qw(tmp0_desc, 4, tmp11_cached[4].r3(), tmp8_local4);
+      tmp8_local4 = tmp10_input.nw(tmp0_desc, 4, tmp11_cached[4].k3(), tmp8_local4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp10_input.ow(tmp0_desc, 5);
+      tmp9_local5 = tmp10_input.lw(tmp0_desc, 5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp10_input.ww(tmp0_desc);
+        tmp2_index = tmp10_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp10_input.gw(tmp0_desc, 0);
+            tmp4_local0 = tmp10_input.dw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp10_input.sw(tmp0_desc, 1, StringSerializer_getInstance(), tmp5_local1);
+            tmp5_local1 = tmp10_input.pw(tmp0_desc, 1, StringSerializer_getInstance(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp10_input.ow(tmp0_desc, 2);
+            tmp6_local2 = tmp10_input.lw(tmp0_desc, 2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp10_input.sw(tmp0_desc, 3, StringSerializer_getInstance(), tmp7_local3);
+            tmp7_local3 = tmp10_input.pw(tmp0_desc, 3, StringSerializer_getInstance(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp10_input.qw(tmp0_desc, 4, tmp11_cached[4].r3(), tmp8_local4);
+            tmp8_local4 = tmp10_input.nw(tmp0_desc, 4, tmp11_cached[4].k3(), tmp8_local4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp10_input.ow(tmp0_desc, 5);
+            tmp9_local5 = tmp10_input.lw(tmp0_desc, 5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp10_input.fw(tmp0_desc);
-    return DiagnosticReport.r5j(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, null);
+    tmp10_input.cw(tmp0_desc);
+    return DiagnosticReport.y5q(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, null);
   }
-  or() {
-    return this.j5j_1;
+  lr() {
+    return this.q5q_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance().i5j_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance().p5q_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [BooleanSerializer_getInstance(), get_nullable(StringSerializer_getInstance()), StringSerializer_getInstance(), get_nullable(StringSerializer_getInstance()), tmp0_cached[4].r3(), StringSerializer_getInstance()];
+    return [BooleanSerializer_getInstance(), get_nullable(StringSerializer_getInstance()), StringSerializer_getInstance(), get_nullable(StringSerializer_getInstance()), tmp0_cached[4].k3(), StringSerializer_getInstance()];
   }
 }
 class DiagnosticReport {
   constructor(okay, file, language, variant, diagnostics, indexing) {
     Companion_getInstance();
-    this.l5j_1 = okay;
-    this.m5j_1 = file;
-    this.n5j_1 = language;
-    this.o5j_1 = variant;
-    this.p5j_1 = diagnostics;
-    this.q5j_1 = indexing;
+    this.s5q_1 = okay;
+    this.t5q_1 = file;
+    this.u5q_1 = language;
+    this.v5q_1 = variant;
+    this.w5q_1 = diagnostics;
+    this.x5q_1 = indexing;
   }
   equals(other) {
     if (this === other)
@@ -205,50 +206,50 @@ class DiagnosticReport {
       return false;
     if (!(other instanceof DiagnosticReport))
       THROW_CCE();
-    if (!(this.l5j_1 === other.l5j_1))
+    if (!(this.s5q_1 === other.s5q_1))
       return false;
-    if (!(this.m5j_1 == other.m5j_1))
+    if (!(this.t5q_1 == other.t5q_1))
       return false;
-    if (!(this.n5j_1 === other.n5j_1))
+    if (!(this.u5q_1 === other.u5q_1))
       return false;
-    if (!(this.o5j_1 == other.o5j_1))
+    if (!(this.v5q_1 == other.v5q_1))
       return false;
-    if (!contentEquals(this.p5j_1, other.p5j_1))
+    if (!contentEquals(this.w5q_1, other.w5q_1))
       return false;
-    if (!(this.q5j_1 === other.q5j_1))
+    if (!(this.x5q_1 === other.x5q_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = getBooleanHashCode(this.l5j_1);
+    var result = getBooleanHashCode(this.s5q_1);
     var tmp = imul(31, result);
-    var tmp0_safe_receiver = this.m5j_1;
+    var tmp0_safe_receiver = this.t5q_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : getStringHashCode(tmp0_safe_receiver);
     result = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
-    result = imul(31, result) + getStringHashCode(this.n5j_1) | 0;
+    result = imul(31, result) + getStringHashCode(this.u5q_1) | 0;
     var tmp_0 = imul(31, result);
-    var tmp2_safe_receiver = this.o5j_1;
+    var tmp2_safe_receiver = this.v5q_1;
     var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : getStringHashCode(tmp2_safe_receiver);
     result = tmp_0 + (tmp3_elvis_lhs == null ? 0 : tmp3_elvis_lhs) | 0;
-    result = imul(31, result) + contentHashCode(this.p5j_1) | 0;
-    result = imul(31, result) + getStringHashCode(this.q5j_1) | 0;
+    result = imul(31, result) + contentHashCode(this.w5q_1) | 0;
+    result = imul(31, result) + getStringHashCode(this.x5q_1) | 0;
     return result;
   }
   toString() {
-    return 'DiagnosticReport(okay=' + this.l5j_1 + ', file=' + this.m5j_1 + ', language=' + this.n5j_1 + ', variant=' + this.o5j_1 + ', diagnostics=' + toString(this.p5j_1) + ', indexing=' + this.q5j_1 + ')';
+    return 'DiagnosticReport(okay=' + this.s5q_1 + ', file=' + this.t5q_1 + ', language=' + this.u5q_1 + ', variant=' + this.v5q_1 + ', diagnostics=' + toString(this.w5q_1) + ', indexing=' + this.x5q_1 + ')';
   }
-  static r5j(seen0, okay, file, language, variant, diagnostics, indexing, serializationConstructorMarker) {
+  static y5q(seen0, okay, file, language, variant, diagnostics, indexing, serializationConstructorMarker) {
     Companion_getInstance();
     if (!(63 === (63 & seen0))) {
-      throwMissingFieldException(seen0, 63, $serializer_getInstance_0().j5j_1);
+      throwMissingFieldException(seen0, 63, $serializer_getInstance_0().q5q_1);
     }
     var $this = createThis(this);
-    $this.l5j_1 = okay;
-    $this.m5j_1 = file;
-    $this.n5j_1 = language;
-    $this.o5j_1 = variant;
-    $this.p5j_1 = diagnostics;
-    $this.q5j_1 = indexing;
+    $this.s5q_1 = okay;
+    $this.t5q_1 = file;
+    $this.u5q_1 = language;
+    $this.v5q_1 = variant;
+    $this.w5q_1 = diagnostics;
+    $this.x5q_1 = indexing;
     return $this;
   }
 }
@@ -259,8 +260,8 @@ function CaosDiagnosticFormatter_getInstance() {
 }
 function createCaosDiagnostic(lines, error, suggestion) {
   suggestion = suggestion === VOID ? null : suggestion;
-  var location = Location.v5a(error.k1o_1);
-  var source = Companion_instance.x5a(lines, location);
+  var location = Location.u5c(error.h1o_1);
+  var source = Companion_instance.w5c(lines, location);
   return new Diagnostic(severity(error), errorCodeFromInt(error.errorCode), error.message, location, source, suggestion);
 }
 function severity(error) {
@@ -318,6 +319,7 @@ function validateCaosAsDiagnostics(variant, caos, withSuggestions, checkCancelle
     tmp = checkCancelled;
   }
   checkCancelled = tmp;
+  assertValidVariant(variant);
   var tmp_0 = CaosParser_instance;
   var parseResult = tmp_0.m4z(variant, caos, validateCaosAsDiagnostics$lambda_0(checkCancelled));
   return validateCaosParseResultAsDiagnostics(parseResult, withSuggestions, checkCancelled);
@@ -335,7 +337,7 @@ function validateCaosParseResultAsDiagnostics(result, withSuggestions, checkCanc
   var tmp0 = result.originalText;
   // Inline function 'kotlin.text.toRegex' call
   // Inline function 'kotlin.text.split' call
-  var lines = Regex.xf('\r?\n').hg(tmp0, 0);
+  var lines = Regex.uf('\r?\n').eg(tmp0, 0);
   var tmp_0 = 0;
   var tmp_1 = errors.length;
   // Inline function 'kotlin.arrayOfNulls' call
@@ -343,8 +345,8 @@ function validateCaosParseResultAsDiagnostics(result, withSuggestions, checkCanc
   while (tmp_0 < tmp_1) {
     var tmp_3 = tmp_0;
     var _destruct__k2r9zo = errors[tmp_3];
-    var error = _destruct__k2r9zo.ni();
-    var suggestion = _destruct__k2r9zo.oi();
+    var error = _destruct__k2r9zo.ki();
+    var suggestion = _destruct__k2r9zo.li();
     tmp_2[tmp_3] = createCaosDiagnostic(lines, error, suggestion);
     tmp_0 = tmp_0 + 1 | 0;
   }
@@ -363,6 +365,7 @@ function validateCaosParseResultAsDiagnostics$lambda() {
   return Unit_instance;
 }
 function getDiagnostics(variant, data, withSuggestions, checkCancelled) {
+  assertValidVariant(variant);
   var tmp;
   if (!(data == null) ? typeof data === 'string' : false) {
     tmp = validateCaosAsDiagnostics(variant, (!(data == null) ? typeof data === 'string' : false) ? data : THROW_CCE(), withSuggestions, checkCancelled);
@@ -370,7 +373,7 @@ function getDiagnostics(variant, data, withSuggestions, checkCancelled) {
     var tmp0_elvis_lhs = parseResultFromDynamic_JsApi(data);
     var tmp_0;
     if (tmp0_elvis_lhs == null) {
-      throw Exception.lc('Invalid data passed to validateCaos. Expected string or ParseResult object');
+      throw Exception.gc('Invalid data passed to validateCaos. Expected string or ParseResult object');
     } else {
       tmp_0 = tmp0_elvis_lhs;
     }
@@ -384,11 +387,11 @@ function json(pretty) {
 }
 function json$lambda($pretty) {
   return ($this$Json) => {
+    $this$Json.x4i_1 = false;
     $this$Json.y4i_1 = false;
-    $this$Json.z4i_1 = false;
-    $this$Json.c4j_1 = $pretty;
-    $this$Json.a4j_1 = true;
-    $this$Json.p4j_1 = get_caosCoreDefaultSerializersModule();
+    $this$Json.b4j_1 = $pretty;
+    $this$Json.z4i_1 = true;
+    $this$Json.o4j_1 = get_caosCoreDefaultSerializersModule();
     return Unit_instance;
   };
 }
@@ -401,13 +404,14 @@ function caosValidationAsDiagnostics(variant, data, withSuggestions, checkCancel
     tmp = checkCancelled;
   }
   checkCancelled = tmp;
+  assertValidVariant(variant);
   var diagnostics = getDiagnostics(variant, data, withSuggestions, checkCancelled);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = json(false);
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer(this_1, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(Diagnostic), arrayOf([]), false))]), false));
+  var this_2 = serializer(this_1, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(Diagnostic), arrayOf([]), false))]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
   return encodeToDynamic(this_0, tmp$ret$1, diagnostics);
 }
@@ -422,8 +426,9 @@ function caosValidationReportAsFlatString(variant, data, withSuggestions, checkC
     tmp = checkCancelled;
   }
   checkCancelled = tmp;
+  assertValidVariant(variant);
   var errors = getDiagnostics(variant, data, withSuggestions, checkCancelled);
-  return DiagnosticFormatter_instance.n5a(null, errors);
+  return DiagnosticFormatter_instance.m5c(null, errors);
 }
 function caosValidationReport(variant, data, withSuggestions, pretty, checkCancelled) {
   var tmp;
@@ -433,12 +438,13 @@ function caosValidationReport(variant, data, withSuggestions, pretty, checkCance
     tmp = checkCancelled;
   }
   checkCancelled = tmp;
+  assertValidVariant(variant);
   var errors = getDiagnostics(variant, data, withSuggestions, checkCancelled);
-  var report = CaosDiagnosticFormatter_instance.h5j(null, variant, errors);
+  var report = CaosDiagnosticFormatter_instance.o5q(null, variant, errors);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
-  var this_0 = json(false);
+  var this_0 = json(pretty);
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer(this_1, createKType(getKClass(DiagnosticReport), arrayOf([]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -448,12 +454,12 @@ function caosDiagnosticsAsFlatString(data) {
   // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
   var this_0 = json(false);
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer(this_1, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(Diagnostic), arrayOf([]), false))]), false));
+  var this_2 = serializer(this_1, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(Diagnostic), arrayOf([]), false))]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
   var errors = decodeFromDynamic(this_0, tmp$ret$1, data);
-  return DiagnosticFormatter_instance.n5a(null, errors);
+  return DiagnosticFormatter_instance.m5c(null, errors);
 }
 function getValidationReportAsFlatReport$lambda() {
   return Unit_instance;
@@ -464,7 +470,7 @@ function getValidationReportAsObject$lambda() {
 //region block: post-declaration
 initMetadataForObject(CaosDiagnosticFormatter, 'CaosDiagnosticFormatter');
 initMetadataForCompanion(Companion);
-protoOf($serializer).p14 = typeParametersSerializers;
+protoOf($serializer).m14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(DiagnosticReport, 'DiagnosticReport', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance_0});
 //endregion

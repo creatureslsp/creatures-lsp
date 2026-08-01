@@ -92,13 +92,18 @@ export async function getCompletionItems(
         opts?.incomplete ?? true,
     ) : text as CaosParseResult;
     
-    cursor = getCaosCursorPosition(
-        parseResult,
-        position.line,
-        position.character,// Math.max(position.character - 1, 0),
-        opts?.incomplete ?? true,
-        true,
-    );
+    try {
+        cursor = getCaosCursorPosition(
+            parseResult,
+            position.line,
+            position.character,// Math.max(position.character - 1, 0),
+            opts?.incomplete ?? true,
+            true,
+        );
+    } catch (e) {
+        const error = e instanceof Error ? `${e.message}\n${e.stack}` : e;
+        console.error("Failed to get cursor in completions; ", error);
+    }
     
     if (cursorPointer) {
         cursorPointer.cursor = cursor;
@@ -383,7 +388,7 @@ async function getInitialCompletionItemsSafe(
             thisFileName,
             variant,
             getCommands(variant),
-            cursor!!,
+            cursor,
             opts,
             completionSettings,
             caos2Comments

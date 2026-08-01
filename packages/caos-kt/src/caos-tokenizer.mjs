@@ -16,6 +16,7 @@ import {
   ParseCancelledException3cxkvagaunc24 as ParseCancelledException,
   Spaceswpw95f7xynx5 as Spaces,
   NewLine7ewm0zm3x4no as NewLine,
+  assertValidVariantj6a091z2jtqp as assertValidVariant_0,
   StopCommands_getInstanceww9khnkxn2u5 as StopCommands_getInstance,
   TokenVal3b9joyqhswndr as TokenVal,
   C2eStringValng17h4k5nfdl as C2eStringVal,
@@ -212,42 +213,42 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.k4t_1 = [null, null, tmp_1, tmp_3, tmp_5, tmp_7, tmp_9, lazy(tmp_10, CaosTokenParseResult$Companion$$childSerializers$_anonymous__udjadt_4)];
+    tmp.j4t_1 = [null, null, tmp_1, tmp_3, tmp_5, tmp_7, tmp_9, lazy(tmp_10, CaosTokenParseResult$Companion$$childSerializers$_anonymous__udjadt_4)];
   }
 }
 class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.tokenizer.CaosTokenParseResult', this, 8);
-    tmp0_serialDesc.z13('variant', false);
-    tmp0_serialDesc.z13('originalText', false);
-    tmp0_serialDesc.z13('items', false);
-    tmp0_serialDesc.z13('whitespaceItems', false);
-    tmp0_serialDesc.z13('controlStatementErrors', false);
-    tmp0_serialDesc.z13('scripts', false);
-    tmp0_serialDesc.z13('comments', false);
-    tmp0_serialDesc.z13('caos2Comments', false);
-    this.l4t_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('variant', false);
+    tmp0_serialDesc.w13('originalText', false);
+    tmp0_serialDesc.w13('items', false);
+    tmp0_serialDesc.w13('whitespaceItems', false);
+    tmp0_serialDesc.w13('controlStatementErrors', false);
+    tmp0_serialDesc.w13('scripts', false);
+    tmp0_serialDesc.w13('comments', false);
+    tmp0_serialDesc.w13('caos2Comments', false);
+    this.k4t_1 = tmp0_serialDesc;
   }
-  m4t(encoder, value) {
-    var tmp0_desc = this.l4t_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_1().k4t_1;
-    tmp1_output.ux(tmp0_desc, 0, value.variant);
-    tmp1_output.ux(tmp0_desc, 1, value.originalText);
-    tmp1_output.wx(tmp0_desc, 2, tmp2_cached[2].r3(), value.items);
-    tmp1_output.wx(tmp0_desc, 3, tmp2_cached[3].r3(), value.whitespace);
-    tmp1_output.wx(tmp0_desc, 4, tmp2_cached[4].r3(), value.errors);
-    tmp1_output.wx(tmp0_desc, 5, tmp2_cached[5].r3(), value.scripts);
-    tmp1_output.wx(tmp0_desc, 6, tmp2_cached[6].r3(), value.comments);
-    tmp1_output.wx(tmp0_desc, 7, tmp2_cached[7].r3(), value.caos2Comments);
-    tmp1_output.fw(tmp0_desc);
+  l4t(encoder, value) {
+    var tmp0_desc = this.k4t_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_1().j4t_1;
+    tmp1_output.rx(tmp0_desc, 0, value.variant);
+    tmp1_output.rx(tmp0_desc, 1, value.originalText);
+    tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.items);
+    tmp1_output.tx(tmp0_desc, 3, tmp2_cached[3].k3(), value.whitespace);
+    tmp1_output.tx(tmp0_desc, 4, tmp2_cached[4].k3(), value.errors);
+    tmp1_output.tx(tmp0_desc, 5, tmp2_cached[5].k3(), value.scripts);
+    tmp1_output.tx(tmp0_desc, 6, tmp2_cached[6].k3(), value.comments);
+    tmp1_output.tx(tmp0_desc, 7, tmp2_cached[7].k3(), value.caos2Comments);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.m4t(encoder, value instanceof CaosTokenParseResult ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.l4t(encoder, value instanceof CaosTokenParseResult ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.l4t_1;
+  nr(decoder) {
+    var tmp0_desc = this.k4t_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -259,84 +260,84 @@ class $serializer {
     var tmp9_local5 = null;
     var tmp10_local6 = null;
     var tmp11_local7 = null;
-    var tmp12_input = decoder.ew(tmp0_desc);
-    var tmp13_cached = Companion_getInstance_1().k4t_1;
-    if (tmp12_input.vw()) {
-      tmp4_local0 = tmp12_input.ow(tmp0_desc, 0);
+    var tmp12_input = decoder.bw(tmp0_desc);
+    var tmp13_cached = Companion_getInstance_1().j4t_1;
+    if (tmp12_input.sw()) {
+      tmp4_local0 = tmp12_input.lw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp12_input.ow(tmp0_desc, 1);
+      tmp5_local1 = tmp12_input.lw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp12_input.qw(tmp0_desc, 2, tmp13_cached[2].r3(), tmp6_local2);
+      tmp6_local2 = tmp12_input.nw(tmp0_desc, 2, tmp13_cached[2].k3(), tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp12_input.qw(tmp0_desc, 3, tmp13_cached[3].r3(), tmp7_local3);
+      tmp7_local3 = tmp12_input.nw(tmp0_desc, 3, tmp13_cached[3].k3(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp12_input.qw(tmp0_desc, 4, tmp13_cached[4].r3(), tmp8_local4);
+      tmp8_local4 = tmp12_input.nw(tmp0_desc, 4, tmp13_cached[4].k3(), tmp8_local4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp12_input.qw(tmp0_desc, 5, tmp13_cached[5].r3(), tmp9_local5);
+      tmp9_local5 = tmp12_input.nw(tmp0_desc, 5, tmp13_cached[5].k3(), tmp9_local5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp12_input.qw(tmp0_desc, 6, tmp13_cached[6].r3(), tmp10_local6);
+      tmp10_local6 = tmp12_input.nw(tmp0_desc, 6, tmp13_cached[6].k3(), tmp10_local6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
-      tmp11_local7 = tmp12_input.qw(tmp0_desc, 7, tmp13_cached[7].r3(), tmp11_local7);
+      tmp11_local7 = tmp12_input.nw(tmp0_desc, 7, tmp13_cached[7].k3(), tmp11_local7);
       tmp3_bitMask0 = tmp3_bitMask0 | 128;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp12_input.ww(tmp0_desc);
+        tmp2_index = tmp12_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp12_input.ow(tmp0_desc, 0);
+            tmp4_local0 = tmp12_input.lw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp12_input.ow(tmp0_desc, 1);
+            tmp5_local1 = tmp12_input.lw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp12_input.qw(tmp0_desc, 2, tmp13_cached[2].r3(), tmp6_local2);
+            tmp6_local2 = tmp12_input.nw(tmp0_desc, 2, tmp13_cached[2].k3(), tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp12_input.qw(tmp0_desc, 3, tmp13_cached[3].r3(), tmp7_local3);
+            tmp7_local3 = tmp12_input.nw(tmp0_desc, 3, tmp13_cached[3].k3(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp12_input.qw(tmp0_desc, 4, tmp13_cached[4].r3(), tmp8_local4);
+            tmp8_local4 = tmp12_input.nw(tmp0_desc, 4, tmp13_cached[4].k3(), tmp8_local4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp12_input.qw(tmp0_desc, 5, tmp13_cached[5].r3(), tmp9_local5);
+            tmp9_local5 = tmp12_input.nw(tmp0_desc, 5, tmp13_cached[5].k3(), tmp9_local5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp12_input.qw(tmp0_desc, 6, tmp13_cached[6].r3(), tmp10_local6);
+            tmp10_local6 = tmp12_input.nw(tmp0_desc, 6, tmp13_cached[6].k3(), tmp10_local6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           case 7:
-            tmp11_local7 = tmp12_input.qw(tmp0_desc, 7, tmp13_cached[7].r3(), tmp11_local7);
+            tmp11_local7 = tmp12_input.nw(tmp0_desc, 7, tmp13_cached[7].k3(), tmp11_local7);
             tmp3_bitMask0 = tmp3_bitMask0 | 128;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp12_input.fw(tmp0_desc);
-    return CaosTokenParseResult.n4t(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, null);
+    tmp12_input.cw(tmp0_desc);
+    return CaosTokenParseResult.m4t(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, null);
   }
-  or() {
-    return this.l4t_1;
+  lr() {
+    return this.k4t_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance_1().k4t_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance_1().j4t_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [StringSerializer_getInstance(), StringSerializer_getInstance(), tmp0_cached[2].r3(), tmp0_cached[3].r3(), tmp0_cached[4].r3(), tmp0_cached[5].r3(), tmp0_cached[6].r3(), tmp0_cached[7].r3()];
+    return [StringSerializer_getInstance(), StringSerializer_getInstance(), tmp0_cached[2].k3(), tmp0_cached[3].k3(), tmp0_cached[4].k3(), tmp0_cached[5].k3(), tmp0_cached[6].k3(), tmp0_cached[7].k3()];
   }
 }
 class CaosTokenParseResult {
-  static o4t(variant, originalText, items, whitespaceItems, controlStatementErrors, scripts, comments, caos2Comments) {
+  static n4t(variant, originalText, items, whitespaceItems, controlStatementErrors, scripts, comments, caos2Comments) {
     Companion_getInstance_1();
     var $this = createThis(this);
     $this.variant = variant;
@@ -349,33 +350,33 @@ class CaosTokenParseResult {
     $this.caos2Comments = caos2Comments;
     return $this;
   }
-  p4t() {
+  o4t() {
     return this.variant;
   }
-  q4t() {
+  p4t() {
     return this.originalText;
   }
-  e1t() {
+  b1t() {
     return this.items;
   }
-  r4t() {
+  q4t() {
     return this.whitespace;
   }
-  s4t() {
+  r4t() {
     return this.errors;
   }
-  t4t() {
+  s4t() {
     return this.scripts;
   }
-  u4t() {
+  t4t() {
     return this.comments;
   }
-  v4t() {
+  u4t() {
     return this.caos2Comments;
   }
   static withScriptOffsets(variant, originalText, items, whitespaceItems, controlStatementErrors, scriptOffsets, comments, caos2Comments) {
     Companion_getInstance_1();
-    return this.o4t(variant, originalText, items, whitespaceItems, controlStatementErrors, CaosTokenizerUtil_instance.w4t(scriptOffsets, items), comments, caos2Comments);
+    return this.n4t(variant, originalText, items, whitespaceItems, controlStatementErrors, CaosTokenizerUtil_instance.v4t(scriptOffsets, items), comments, caos2Comments);
   }
   equals(other) {
     if (this === other)
@@ -416,10 +417,10 @@ class CaosTokenParseResult {
   toString() {
     return 'CaosTokenParseResult(variant=' + this.variant + ', originalText=' + this.originalText + ', items=' + toString(this.items) + ', whitespaceItems=' + toString(this.whitespace) + ', controlStatementErrors=' + toString(this.errors) + ', scripts=' + toString(this.scripts) + ', comments=' + toString(this.comments) + ', caos2Comments=' + toString(this.caos2Comments) + ')';
   }
-  static n4t(seen0, variant, originalText, items, whitespaceItems, controlStatementErrors, scripts, comments, caos2Comments, serializationConstructorMarker) {
+  static m4t(seen0, variant, originalText, items, whitespaceItems, controlStatementErrors, scripts, comments, caos2Comments, serializationConstructorMarker) {
     Companion_getInstance_1();
     if (!(255 === (255 & seen0))) {
-      throwMissingFieldException(seen0, 255, $serializer_getInstance_3().l4t_1);
+      throwMissingFieldException(seen0, 255, $serializer_getInstance_3().k4t_1);
     }
     var $this = createThis(this);
     $this.variant = variant;
@@ -435,15 +436,47 @@ class CaosTokenParseResult {
 }
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
+    this.x4t_1 = function_0;
+  }
+  wg(a, b) {
+    return this.x4t_1(a, b);
+  }
+  compare(a, b) {
+    return this.wg(a, b);
+  }
+  f4() {
+    return this.x4t_1;
+  }
+  equals(other) {
+    var tmp;
+    if (!(other == null) ? isInterface(other, Comparator) : false) {
+      var tmp_0;
+      if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
+        tmp_0 = equals(this.f4(), other.f4());
+      } else {
+        tmp_0 = false;
+      }
+      tmp = tmp_0;
+    } else {
+      tmp = false;
+    }
+    return tmp;
+  }
+  hashCode() {
+    return hashCode(this.f4());
+  }
+}
+class sam$kotlin_Comparator$0_0 {
+  constructor(function_0) {
     this.y4t_1 = function_0;
   }
-  zg(a, b) {
+  wg(a, b) {
     return this.y4t_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
+  f4() {
     return this.y4t_1;
   }
   equals(other) {
@@ -451,7 +484,7 @@ class sam$kotlin_Comparator$0 {
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -462,20 +495,20 @@ class sam$kotlin_Comparator$0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
-class sam$kotlin_Comparator$0_0 {
+class sam$kotlin_Comparator$0_1 {
   constructor(function_0) {
     this.z4t_1 = function_0;
   }
-  zg(a, b) {
+  wg(a, b) {
     return this.z4t_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
+  f4() {
     return this.z4t_1;
   }
   equals(other) {
@@ -483,7 +516,7 @@ class sam$kotlin_Comparator$0_0 {
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -494,75 +527,43 @@ class sam$kotlin_Comparator$0_0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
-  }
-}
-class sam$kotlin_Comparator$0_1 {
-  constructor(function_0) {
-    this.a4u_1 = function_0;
-  }
-  zg(a, b) {
-    return this.a4u_1(a, b);
-  }
-  compare(a, b) {
-    return this.zg(a, b);
-  }
-  m4() {
-    return this.a4u_1;
-  }
-  equals(other) {
-    var tmp;
-    if (!(other == null) ? isInterface(other, Comparator) : false) {
-      var tmp_0;
-      if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
-      } else {
-        tmp_0 = false;
-      }
-      tmp = tmp_0;
-    } else {
-      tmp = false;
-    }
-    return tmp;
-  }
-  hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
 class CaosTokenizer {
-  b4u(variant, text, items, scriptOffsets, checkErrors) {
+  a4u(variant, text, items, scriptOffsets, checkErrors) {
     assertValidVariant(variant);
     // Inline function 'kotlin.collections.filterNot' call
     // Inline function 'kotlin.collections.filterNotTo' call
-    var destination = ArrayList.b2();
+    var destination = ArrayList.u1();
     var inductionVariable = 0;
     var last = items.length;
     while (inductionVariable < last) {
       var element = items[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       if (!get_isWhitespace(element)) {
-        destination.g2(element);
+        destination.z1(element);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
     var nonWhitespaceItems = copyToArray(destination);
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_0 = ArrayList.b2();
+    var destination_0 = ArrayList.u1();
     var inductionVariable_0 = 0;
     var last_0 = items.length;
     while (inductionVariable_0 < last_0) {
       var element_0 = items[inductionVariable_0];
       inductionVariable_0 = inductionVariable_0 + 1 | 0;
       if (get_isWhitespace(element_0)) {
-        destination_0.g2(element_0);
+        destination_0.z1(element_0);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
     var whitespaceItems = copyToArray(destination_0);
     var tmp;
     if (!(checkErrors === false)) {
-      tmp = CaosTokenizerUtil_instance.c4u(variant, items);
+      tmp = CaosTokenizerUtil_instance.b4u(variant, items);
     } else {
       // Inline function 'kotlin.emptyArray' call
       tmp = [];
@@ -570,28 +571,28 @@ class CaosTokenizer {
     var controlStatementErrors = tmp;
     // Inline function 'kotlin.collections.filterIsInstance' call
     // Inline function 'kotlin.collections.filterIsInstanceTo' call
-    var destination_1 = ArrayList.b2();
+    var destination_1 = ArrayList.u1();
     var inductionVariable_1 = 0;
     var last_1 = items.length;
     while (inductionVariable_1 < last_1) {
       var element_1 = items[inductionVariable_1];
       inductionVariable_1 = inductionVariable_1 + 1 | 0;
       if (element_1 instanceof Comment) {
-        destination_1.g2(element_1);
+        destination_1.z1(element_1);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
     var comments = copyToArray(destination_1);
     // Inline function 'kotlin.collections.filterIsInstance' call
     // Inline function 'kotlin.collections.filterIsInstanceTo' call
-    var destination_2 = ArrayList.b2();
+    var destination_2 = ArrayList.u1();
     var inductionVariable_2 = 0;
     var last_2 = items.length;
     while (inductionVariable_2 < last_2) {
       var element_2 = items[inductionVariable_2];
       inductionVariable_2 = inductionVariable_2 + 1 | 0;
       if (element_2 instanceof Caos2Comment) {
-        destination_2.g2(element_2);
+        destination_2.z1(element_2);
       }
     }
     var tmp0_elvis_lhs = nullIfEmpty(destination_2);
@@ -599,24 +600,24 @@ class CaosTokenizer {
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.collections.filter' call
       // Inline function 'kotlin.collections.filterTo' call
-      var destination_3 = ArrayList.b2();
+      var destination_3 = ArrayList.u1();
       var inductionVariable_3 = 0;
       var last_3 = items.length;
       while (inductionVariable_3 < last_3) {
         var element_3 = items[inductionVariable_3];
         inductionVariable_3 = inductionVariable_3 + 1 | 0;
         if (element_3.typeToken === TypeTokens_getInstance().CAOS2_COMMENT) {
-          destination_3.g2(element_3);
+          destination_3.z1(element_3);
         }
       }
       // Inline function 'kotlin.collections.map' call
       // Inline function 'kotlin.collections.mapTo' call
-      var destination_4 = ArrayList.f2(collectionSizeOrDefault(destination_3, 10));
-      var _iterator__ex2g4s = destination_3.d1();
-      while (_iterator__ex2g4s.e1()) {
-        var item = _iterator__ex2g4s.f1();
+      var destination_4 = ArrayList.y1(collectionSizeOrDefault(destination_3, 10));
+      var _iterator__ex2g4s = destination_3.w();
+      while (_iterator__ex2g4s.x()) {
+        var item = _iterator__ex2g4s.y();
         var tmp$ret$20 = item instanceof Caos2Comment ? item : THROW_CCE();
-        destination_4.g2(tmp$ret$20);
+        destination_4.z1(tmp$ret$20);
       }
       tmp_0 = destination_4;
     } else {
@@ -627,19 +628,19 @@ class CaosTokenizer {
     var caos2Comments = copyToArray(this_0);
     return CaosTokenParseResult.withScriptOffsets(variant, text, nonWhitespaceItems, whitespaceItems, controlStatementErrors, scriptOffsets, comments, caos2Comments);
   }
-  d4u(variant, text, line, character, checkErrors, checkDelay, keepGoing) {
+  c4u(variant, text, line, character, checkErrors, checkDelay, keepGoing) {
     assertValidVariant(variant);
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = CaosTokenizerUtil_instance.e4u(text, false);
+    var tmp0 = CaosTokenizerUtil_instance.d4u(text, false);
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.b2();
+    var destination = ArrayList.u1();
     var inductionVariable = 0;
     var last = tmp0.length;
     while (inductionVariable < last) {
       var element = tmp0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       if (inRange(element, line, character, true, false)) {
-        destination.g2(element);
+        destination.z1(element);
       }
     }
     // Inline function 'kotlin.collections.sortedByDescending' call
@@ -649,19 +650,19 @@ class CaosTokenizer {
     var containingScopes = sortedWith(destination, tmp$ret$4);
     return parseCaosTokensInNearestScope(this, variant, text, containingScopes, checkErrors, checkDelay, keepGoing);
   }
-  f4u(variant, text, startLine, startCharacter, endLine, endCharacter, checkErrors, checkDelay, keepGoing) {
+  e4u(variant, text, startLine, startCharacter, endLine, endCharacter, checkErrors, checkDelay, keepGoing) {
     assertValidVariant(variant);
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = CaosTokenizerUtil_instance.e4u(text, true);
+    var tmp0 = CaosTokenizerUtil_instance.d4u(text, true);
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.b2();
+    var destination = ArrayList.u1();
     var inductionVariable = 0;
     var last = tmp0.length;
     while (inductionVariable < last) {
       var element = tmp0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      if ((element.g1k_1.h1e() - element.f1k_1.h1e() | 0) > 1 && inRange(element, startLine, startCharacter, true, true) && inRange(element, endLine, endCharacter, true, true)) {
-        destination.g2(element);
+      if ((element.d1k_1.e1e() - element.c1k_1.e1e() | 0) > 1 && inRange(element, startLine, startCharacter, true, true) && inRange(element, endLine, endCharacter, true, true)) {
+        destination.z1(element);
       }
     }
     // Inline function 'kotlin.collections.sortedByDescending' call
@@ -671,7 +672,7 @@ class CaosTokenizer {
     var containingScopes = sortedWith(destination, tmp$ret$4);
     return parseCaosTokensInNearestScope(this, variant, text, containingScopes, checkErrors, checkDelay, keepGoing);
   }
-  x4t(variant, text, offsetIndex, offsetLine, offsetColumn, checkErrors, checkDelay, keepGoing) {
+  w4t(variant, text, offsetIndex, offsetLine, offsetColumn, checkErrors, checkDelay, keepGoing) {
     if (isBlank(text)) {
       // Inline function 'kotlin.emptyArray' call
       var tmp = [];
@@ -687,27 +688,27 @@ class CaosTokenizer {
       var tmp$ret$5 = [];
       return CaosTokenParseResult.withScriptOffsets(variant, text, tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp$ret$5);
     }
-    var charStream = CharStreams_getInstance().l27(text);
+    var charStream = CharStreams_getInstance().k27(text);
     var lexer = new CaosUniversalLexer(charStream);
     // Inline function 'kotlin.apply' call
-    lexer.d2h();
+    lexer.c2h();
     var tokenStream = new CommonTokenStream(lexer);
     var parser = new CaosUniversalParser(tokenStream);
     var checkCancelled = createCheckCancelled(checkDelay, keepGoing);
     var collector = new RawTokenizer(offsetIndex, offsetLine, offsetColumn, checkCancelled);
-    lexer.a2i(collector);
-    parser.a2i(collector);
+    lexer.z2h(collector);
+    parser.z2h(collector);
     try {
-      var file = parser.e3h();
-      Companion_getInstance_0().t38_1.u38(collector, file);
+      var file = parser.d3h();
+      Companion_getInstance_0().s38_1.t38(collector, file);
     } catch ($p) {
       if ($p instanceof ParseCancelledException) {
         var _unused_var__etf5q3 = $p;
-        Log_getInstance().x1i('parseCaos()', 'Parse cancelled by keepGoing()');
+        Log_getInstance().u1i('parseCaos()', 'Parse cancelled by keepGoing()');
       } else {
         if ($p instanceof Exception) {
           var e = $p;
-          Log_getInstance().x1i('parseCaos()', 'Failed to parse file: ' + formatted(e, false));
+          Log_getInstance().u1i('parseCaos()', 'Failed to parse file: ' + formatted(e, false));
           throw e;
         } else {
           throw $p;
@@ -715,10 +716,10 @@ class CaosTokenizer {
       }
     }
     // Inline function 'kotlin.collections.isEmpty' call
-    if (collector.e1t().length === 0) {
-      Log_getInstance().t1i('parseCaos()', 'No tokens parsed');
+    if (collector.b1t().length === 0) {
+      Log_getInstance().q1i('parseCaos()', 'No tokens parsed');
     }
-    var rawAntlrTokens = tokenStream.m28(0, tokenStream.b28() - 1 | 0);
+    var rawAntlrTokens = tokenStream.l28(0, tokenStream.a28() - 1 | 0);
     var tmp_4;
     if (rawAntlrTokens == null) {
       tmp_4 = null;
@@ -738,24 +739,24 @@ class CaosTokenizer {
       if (tmp_6) {
         // Inline function 'kotlin.collections.filter' call
         // Inline function 'kotlin.collections.filterTo' call
-        var destination = ArrayList.b2();
-        var _iterator__ex2g4s = rawAntlrTokens.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var element = _iterator__ex2g4s.f1();
-          if (element.o28() === 2 || element.o28() === 3) {
-            destination.g2(element);
+        var destination = ArrayList.u1();
+        var _iterator__ex2g4s = rawAntlrTokens.w();
+        while (_iterator__ex2g4s.x()) {
+          var element = _iterator__ex2g4s.y();
+          if (element.n28() === 2 || element.n28() === 3) {
+            destination.z1(element);
           }
         }
         tmp_5 = destination;
       } else {
         // Inline function 'kotlin.collections.filter' call
         // Inline function 'kotlin.collections.filterTo' call
-        var destination_0 = ArrayList.b2();
-        var _iterator__ex2g4s_0 = rawAntlrTokens.d1();
-        while (_iterator__ex2g4s_0.e1()) {
-          var element_0 = _iterator__ex2g4s_0.f1();
-          if (element_0.o28() === 3) {
-            destination_0.g2(element_0);
+        var destination_0 = ArrayList.u1();
+        var _iterator__ex2g4s_0 = rawAntlrTokens.w();
+        while (_iterator__ex2g4s_0.x()) {
+          var element_0 = _iterator__ex2g4s_0.y();
+          if (element_0.n28() === 3) {
+            destination_0.z1(element_0);
           }
         }
         tmp_5 = destination_0;
@@ -763,11 +764,11 @@ class CaosTokenizer {
       var antlrTokens = tmp_5;
       // Inline function 'kotlin.collections.flatMap' call
       // Inline function 'kotlin.collections.flatMapTo' call
-      var destination_1 = ArrayList.b2();
-      var _iterator__ex2g4s_1 = antlrTokens.d1();
-      while (_iterator__ex2g4s_1.e1()) {
-        var element_1 = _iterator__ex2g4s_1.f1();
-        var list = CaosTokenizer_instance.r4u(element_1);
+      var destination_1 = ArrayList.u1();
+      var _iterator__ex2g4s_1 = antlrTokens.w();
+      while (_iterator__ex2g4s_1.x()) {
+        var element_1 = _iterator__ex2g4s_1.y();
+        var list = CaosTokenizer_instance.q4u(element_1);
         addAll(destination_1, list);
       }
       tmp_4 = destination_1;
@@ -775,19 +776,19 @@ class CaosTokenizer {
     var tmp1_elvis_lhs = tmp_4;
     var whitespace = tmp1_elvis_lhs == null ? emptyList() : tmp1_elvis_lhs;
     // Inline function 'kotlin.collections.sortedBy' call
-    var this_0 = plus(collector.e1t(), whitespace);
+    var this_0 = plus(collector.b1t(), whitespace);
     // Inline function 'kotlin.comparisons.compareBy' call
     var tmp_7 = CaosTokenizer$parseCaosTokens$lambda;
     var tmp$ret$25 = new sam$kotlin_Comparator$0_1(tmp_7);
     // Inline function 'kotlin.collections.toTypedArray' call
     var this_1 = sortedWith_0(this_0, tmp$ret$25);
     var tmp$ret$26 = copyToArray(this_1);
-    return this.b4u(variant, text, tmp$ret$26, collector.s4u(), checkErrors);
+    return this.a4u(variant, text, tmp$ret$26, collector.r4u(), checkErrors);
   }
-  r4u(it) {
+  q4u(it) {
     // Inline function 'kotlin.text.toRegex' call
-    var newlineRegex = Regex.xf('\r?\n');
-    var tmp0_elvis_lhs = it.m1f();
+    var newlineRegex = Regex.uf('\r?\n');
+    var tmp0_elvis_lhs = it.j1f();
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return emptyList();
@@ -796,7 +797,7 @@ class CaosTokenizer {
     }
     var whitespaces = tmp;
     // Inline function 'kotlin.text.replace' call
-    var normalizedWhitespace = newlineRegex.eg(whitespaces, '\n');
+    var normalizedWhitespace = newlineRegex.bg(whitespaces, '\n');
     var tmp$ret$2;
     $l$block: {
       // Inline function 'kotlin.text.none' call
@@ -837,25 +838,25 @@ class CaosTokenizer {
       var this_1 = new NewLine(range_0, whitespaces);
       return listOf(this_1);
     }
-    var start = it.j1e();
+    var start = it.g1e();
     var newline = null;
-    var startLine = it.h1e();
-    var string = StringBuilder.z();
+    var startLine = it.e1e();
+    var string = StringBuilder.s();
     // Inline function 'kotlin.collections.mutableListOf' call
-    var out = ArrayList.b2();
-    var startPositionInLine = it.m29();
-    var endPoint = it.a2a();
+    var out = ArrayList.u1();
+    var startPositionInLine = it.l29();
+    var endPoint = it.z29();
     var tmp_0;
     var tmp_1;
     if (!(endPoint == null)) {
-      var tmp_2 = it.h1e();
-      var tmp1_safe_receiver = it.a2a();
-      tmp_1 = tmp_2 === (tmp1_safe_receiver == null ? null : tmp1_safe_receiver.p2l_1);
+      var tmp_2 = it.e1e();
+      var tmp1_safe_receiver = it.z29();
+      tmp_1 = tmp_2 === (tmp1_safe_receiver == null ? null : tmp1_safe_receiver.o2l_1);
     } else {
       tmp_1 = false;
     }
     if (tmp_1) {
-      tmp_0 = endPoint.q2l_1;
+      tmp_0 = endPoint.p2l_1;
     } else {
       tmp_0 = startPositionInLine;
     }
@@ -877,7 +878,7 @@ class CaosTokenizer {
           // Inline function 'kotlin.text.toRegex' call
           // Inline function 'kotlin.text.replace' call
           // Inline function 'kotlin.text.count' call
-          var this_2 = Regex.xf('\r?\n').eg(whitespaces, '\n');
+          var this_2 = Regex.uf('\r?\n').bg(whitespaces, '\n');
           var lines = charSequenceLength(this_2);
           var range_1 = new RangeWithIndexImpl(new PositionImpl(startLine, startPositionInLine), new PositionImpl(startLine + lines | 0, endPositionInLine), start, start + i | 0);
           startLine = startLine + lines | 0;
@@ -888,12 +889,12 @@ class CaosTokenizer {
             tmp_3 = new Spaces(range_1, whitespace);
           }
           var item = tmp_3;
-          out.g2(item);
-          start = it.j1e() + i | 0;
+          out.z1(item);
+          start = it.g1e() + i | 0;
           startPositionInLine = endPositionInLine;
-          string.hf();
+          string.ef();
         }
-        string.c1(char);
+        string.v(char);
         if (char === _Char___init__impl__6a9atx(10)) {
           endPositionInLine = 0;
         }
@@ -903,40 +904,41 @@ class CaosTokenizer {
   }
 }
 class CaosTokenizerUtil {
-  t4u(text) {
-    var charStream = CharStreams_getInstance().l27(text);
+  s4u(text) {
+    var charStream = CharStreams_getInstance().k27(text);
     var lexer = new Caos2PrayLexer(charStream);
     var tokenStream = new CommonTokenStream(lexer);
     var parser = new Caos2PrayParser(tokenStream);
     var walker = new Caos2PrayWalker();
-    lexer.a2i(get_swallowError());
-    parser.a2i(get_swallowError());
-    Companion_getInstance_0().t38_1.u38(walker, parser.e3h());
+    lexer.z2h(get_swallowError());
+    parser.z2h(get_swallowError());
+    Companion_getInstance_0().s38_1.t38(walker, parser.d3h());
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = walker.v4t();
+    var this_0 = walker.u4t();
     return copyToArray(this_0);
   }
-  e4u(text, consumeIncompletes) {
-    var charStream = CharStreams_getInstance().l27(text);
+  d4u(text, consumeIncompletes) {
+    var charStream = CharStreams_getInstance().k27(text);
     var lexer = new CaosMinimalOffsetsLexer(charStream);
     var tokenStream = new CommonTokenStream(lexer);
     var parser = new CaosMinimalOffsetsParser(tokenStream);
     var scriptOffsetListener = new CaosOffsetsWalker(consumeIncompletes);
-    lexer.a2i(get_swallowError());
-    parser.a2i(get_swallowError());
-    Companion_getInstance_0().t38_1.u38(scriptOffsetListener, parser.e3h());
-    return scriptOffsetListener.c4v();
+    lexer.z2h(get_swallowError());
+    parser.z2h(get_swallowError());
+    Companion_getInstance_0().s38_1.t38(scriptOffsetListener, parser.d3h());
+    return scriptOffsetListener.b4v();
   }
-  d4v(variant, tokens) {
+  c4v(variant, tokens) {
+    assertValidVariant_0(variant);
     var walker = new ControlStatementOffsetsTokenWalker(variant, tokens);
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = walker.m4v();
+    var this_0 = walker.l4v();
     return copyToArray(this_0);
   }
-  w4t(scriptOffsets, items) {
+  v4t(scriptOffsets, items) {
     // Inline function 'kotlin.collections.mapNotNull' call
     // Inline function 'kotlin.collections.mapNotNullTo' call
-    var destination = ArrayList.b2();
+    var destination = ArrayList.u1();
     // Inline function 'kotlin.collections.forEach' call
     var inductionVariable = 0;
     var last = scriptOffsets.length;
@@ -947,14 +949,14 @@ class CaosTokenizerUtil {
       $l$block: {
         // Inline function 'kotlin.collections.filter' call
         // Inline function 'kotlin.collections.filterTo' call
-        var destination_0 = ArrayList.b2();
+        var destination_0 = ArrayList.u1();
         var inductionVariable_0 = 0;
         var last_0 = items.length;
         while (inductionVariable_0 < last_0) {
           var element_0 = items[inductionVariable_0];
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
-          if (inside(element_0.g1e(), element)) {
-            destination_0.g2(element_0);
+          if (inside(element_0.d1e(), element)) {
+            destination_0.z1(element_0);
           }
         }
         var tmp0_safe_receiver = nullIfEmpty(destination_0);
@@ -974,7 +976,7 @@ class CaosTokenizerUtil {
           tmp_0 = tmp1_elvis_lhs;
         }
         var scriptItems = tmp_0;
-        var tmp_1 = first(scriptItems).r3();
+        var tmp_1 = first(scriptItems).k3();
         var tmp2_safe_receiver = typeof tmp_1 === 'string' ? tmp_1 : null;
         var tmp_2;
         if (tmp2_safe_receiver == null) {
@@ -1002,28 +1004,29 @@ class CaosTokenizerUtil {
         null;
       else {
         // Inline function 'kotlin.let' call
-        destination.g2(tmp0_safe_receiver_0);
+        destination.z1(tmp0_safe_receiver_0);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
     return copyToArray(destination);
   }
-  n4v(text) {
-    var charStream = CharStreams_getInstance().l27(text);
+  m4v(text) {
+    var charStream = CharStreams_getInstance().k27(text);
     var lexer = new CaosUniversalLexer(charStream);
     var tokenStream = new CommonTokenStream(lexer);
     var parser = new CaosUniversalParser(tokenStream);
     var scriptOffsetListener = new ScriptOffsetsWalker();
-    lexer.a2i(get_swallowError());
-    parser.a2i(get_swallowError());
-    Companion_getInstance_0().t38_1.u38(scriptOffsetListener, parser.e3h());
-    return scriptOffsetListener.t4v();
+    lexer.z2h(get_swallowError());
+    parser.z2h(get_swallowError());
+    Companion_getInstance_0().s38_1.t38(scriptOffsetListener, parser.d3h());
+    return scriptOffsetListener.s4v();
   }
-  u4v(variant, text) {
-    var charStream = CharStreams_getInstance().l27(text);
+  t4v(variant, text) {
+    assertValidVariant_0(variant);
+    var charStream = CharStreams_getInstance().k27(text);
     var lexer = new CaosUniversalLexer(charStream);
-    lexer.a2i(get_swallowError());
-    var tmp0_elvis_lhs = StopCommands_getInstance().ng(variant);
+    lexer.z2h(get_swallowError());
+    var tmp0_elvis_lhs = StopCommands_getInstance().kg(variant);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.intArrayOf' call
@@ -1031,16 +1034,17 @@ class CaosTokenizerUtil {
     } else {
       tmp = tmp0_elvis_lhs;
     }
-    return (new StopsWalker(tmp, lexer)).x4v();
+    return (new StopsWalker(tmp, lexer)).w4v();
   }
-  c4u(variant, items) {
-    var ranges = this.d4v(variant, items);
-    return this.y4v(ranges, items);
+  b4u(variant, items) {
+    assertValidVariant_0(variant);
+    var ranges = this.c4v(variant, items);
+    return this.x4v(ranges, items);
   }
-  y4v(statements, items) {
+  x4v(statements, items) {
     // Inline function 'kotlin.collections.mapNotNull' call
     // Inline function 'kotlin.collections.mapNotNullTo' call
-    var destination = ArrayList.b2();
+    var destination = ArrayList.u1();
     // Inline function 'kotlin.collections.forEach' call
     var inductionVariable = 0;
     var last = statements.length;
@@ -1049,55 +1053,55 @@ class CaosTokenizerUtil {
       inductionVariable = inductionVariable + 1 | 0;
       var tmp;
       if (get_isOpenBlock(element)) {
-        var tmp_0 = element.g1k_1.h1e();
+        var tmp_0 = element.d1k_1.e1e();
         // Inline function 'kotlin.comparisons.maxOf' call
-        var b = element.g1k_1.l1e();
+        var b = element.d1k_1.i1e();
         var tmp$ret$5 = Math.max(0, b);
         var position = new PositionImpl(tmp_0, tmp$ret$5);
-        var tmp0_startIndex = element.e1k_1;
-        var tmp1_endIndex = element.e1k_1;
+        var tmp0_startIndex = element.b1k_1;
+        var tmp1_endIndex = element.b1k_1;
         var tmp_1 = new RangeWithIndexImpl(position, position, tmp0_startIndex, tmp1_endIndex);
         var tmp_2 = 'Missing terminating `' + getTerminator(ensureNotNull(element.startToken)) + '`';
         // Inline function 'kotlin.collections.filter' call
         // Inline function 'kotlin.collections.filterTo' call
-        var destination_0 = ArrayList.b2();
+        var destination_0 = ArrayList.u1();
         var inductionVariable_0 = 0;
         var last_0 = items.length;
         while (inductionVariable_0 < last_0) {
           var element_0 = items[inductionVariable_0];
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
-          if (contains_2(element, element_0.g1e())) {
-            destination_0.g2(element_0);
+          if (contains_2(element, element_0.d1e())) {
+            destination_0.z1(element_0);
           }
         }
         tmp = new ErrorVal(tmp_1, tmp_2, 4, stitch(destination_0));
       } else if (element.startToken == null) {
         var _destruct__k2r9zo = sortTokens(element);
-        var start = _destruct__k2r9zo.ni();
-        var end = _destruct__k2r9zo.oi();
-        var tmp0 = element.d1k_1;
+        var start = _destruct__k2r9zo.ki();
+        var end = _destruct__k2r9zo.li();
+        var tmp0 = element.a1k_1;
         // Inline function 'kotlin.math.min' call
-        var b_0 = element.e1k_1;
+        var b_0 = element.b1k_1;
         var tmp2_startIndex = Math.min(tmp0, b_0);
-        var tmp0_0 = element.d1k_1;
+        var tmp0_0 = element.a1k_1;
         // Inline function 'kotlin.math.max' call
-        var b_1 = element.e1k_1;
+        var b_1 = element.b1k_1;
         var tmp3_endIndex = Math.max(tmp0_0, b_1);
-        var tmp4_end = new PositionImpl(end.h1e(), end.l1e() + 1 | 0);
+        var tmp4_end = new PositionImpl(end.e1e(), end.i1e() + 1 | 0);
         var tmp_3 = new RangeWithIndexImpl(start, tmp4_end, tmp2_startIndex, tmp3_endIndex);
         // Inline function 'kotlin.text.uppercase' call
         // Inline function 'kotlin.js.asDynamic' call
         var tmp_4 = 'Unexpected `' + ensureNotNull(element.endToken).toUpperCase() + '`';
         // Inline function 'kotlin.collections.filter' call
         // Inline function 'kotlin.collections.filterTo' call
-        var destination_1 = ArrayList.b2();
+        var destination_1 = ArrayList.u1();
         var inductionVariable_1 = 0;
         var last_1 = items.length;
         while (inductionVariable_1 < last_1) {
           var element_1 = items[inductionVariable_1];
           inductionVariable_1 = inductionVariable_1 + 1 | 0;
-          if (contains_2(element, element_1.g1e())) {
-            destination_1.g2(element_1);
+          if (contains_2(element, element_1.d1e())) {
+            destination_1.z1(element_1);
           }
         }
         tmp = new ErrorVal(tmp_3, tmp_4, 5, stitch(destination_1));
@@ -1109,34 +1113,34 @@ class CaosTokenizerUtil {
         null;
       else {
         // Inline function 'kotlin.let' call
-        destination.g2(tmp0_safe_receiver);
+        destination.z1(tmp0_safe_receiver);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
     return copyToArray(destination);
   }
-  z4v(text) {
-    var charStream = CharStreams_getInstance().l27(text);
+  y4v(text) {
+    var charStream = CharStreams_getInstance().k27(text);
     var lexer = new CaosWhitespaceLexer(charStream);
     var tokenStream = new CommonTokenStream(lexer);
     var parser = new CaosWhitespaceParser(tokenStream);
     var walker = new WhitespaceCollector();
-    lexer.a2i(get_swallowError());
-    parser.a2i(get_swallowError());
-    Companion_getInstance_0().t38_1.u38(walker, parser.e3h());
+    lexer.z2h(get_swallowError());
+    parser.z2h(get_swallowError());
+    Companion_getInstance_0().s38_1.t38(walker, parser.d3h());
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = walker.r4t();
+    var this_0 = walker.q4t();
     return copyToArray(this_0);
   }
 }
 class swallowError$3$1 {
-  m27(recognizer, offendingSymbol, line, charPositionInLine, msg, e) {
+  l27(recognizer, offendingSymbol, line, charPositionInLine, msg, e) {
   }
-  n27(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs) {
+  m27(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs) {
   }
-  o27(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs) {
+  n27(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs) {
   }
-  p27(recognizer, dfa, startIndex, stopIndex, prediction, configs) {
+  o27(recognizer, dfa, startIndex, stopIndex, prediction, configs) {
   }
 }
 class Caos2PrayWalker extends Caos2PrayParserBaseListener {
@@ -1144,98 +1148,98 @@ class Caos2PrayWalker extends Caos2PrayParserBaseListener {
     super();
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.u4u_1 = ArrayList.b2();
+    tmp.t4u_1 = ArrayList.u1();
   }
-  v4t() {
-    return this.u4u_1;
+  u4t() {
+    return this.t4u_1;
   }
-  w3f(ctx) {
-    super.w3f(ctx);
-    var start = ctx.s3f().x2k();
-    var wordContext = ctx.t3f();
-    var eq = ctx.u3f().x2k();
-    var token = new TokenVal(textRangeWithoutParserIndex(wordContext), stripSurroundingQuotes(wordContext.m1f()));
+  v3f(ctx) {
+    super.v3f(ctx);
+    var start = ctx.r3f().w2k();
+    var wordContext = ctx.s3f();
+    var eq = ctx.t3f().w2k();
+    var token = new TokenVal(textRangeWithoutParserIndex(wordContext), stripSurroundingQuotes(wordContext.j1f()));
     var tmp = textRangeWithoutParserIndex(ctx);
     // Inline function 'kotlin.text.trim' call
-    var this_0 = ctx.m1f();
+    var this_0 = ctx.j1f();
     var tmp$ret$0 = toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
-    this.u4u_1.g2(new Caos2Comment(tmp, tmp$ret$0, token, caos2Values(this, ctx), new TokenVal(textRangeWithoutParserIndex_0(eq), '='), new TokenVal(textRangeWithoutParserIndex_0(start), '*#')));
+    this.t4u_1.z1(new Caos2Comment(tmp, tmp$ret$0, token, caos2Values(this, ctx), new TokenVal(textRangeWithoutParserIndex_0(eq), '='), new TokenVal(textRangeWithoutParserIndex_0(start), '*#')));
   }
-  d3g(ctx) {
-    super.d3g(ctx);
-    var start = ctx.s3f().x2k();
-    var wordContext = ctx.b3g();
-    var token = new TokenVal(createRangeWithIndex(ensureNotNull(wordContext.n2j_1), ensureNotNull(wordContext.o2j_1), -1), stripSurroundingQuotes(wordContext.m1f()));
+  c3g(ctx) {
+    super.c3g(ctx);
+    var start = ctx.r3f().w2k();
+    var wordContext = ctx.a3g();
+    var token = new TokenVal(createRangeWithIndex(ensureNotNull(wordContext.m2j_1), ensureNotNull(wordContext.n2j_1), -1), stripSurroundingQuotes(wordContext.j1f()));
     var tmp = textRangeWithoutParserIndex(ctx);
     // Inline function 'kotlin.text.trim' call
-    var this_0 = ctx.m1f();
+    var this_0 = ctx.j1f();
     var tmp$ret$0 = toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
-    this.u4u_1.g2(new Caos2Comment(tmp, tmp$ret$0, token, caos2Values(this, ctx), null, new TokenVal(textRangeWithoutParserIndex_0(start), '*#')));
+    this.t4u_1.z1(new Caos2Comment(tmp, tmp$ret$0, token, caos2Values(this, ctx), null, new TokenVal(textRangeWithoutParserIndex_0(start), '*#')));
   }
 }
 class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
   constructor(consumeIncompletes) {
     super();
-    this.v4u_1 = consumeIncompletes;
+    this.u4u_1 = consumeIncompletes;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.w4u_1 = ArrayList.b2();
+    tmp.v4u_1 = ArrayList.u1();
+    this.w4u_1 = null;
     this.x4u_1 = null;
-    this.y4u_1 = null;
-    this.z4u_1 = false;
-    this.a4v_1 = token('dde:');
-    this.b4v_1 = 0;
+    this.y4u_1 = false;
+    this.z4u_1 = token('dde:');
+    this.a4v_1 = 0;
   }
-  c4v() {
+  b4v() {
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = this.w4u_1;
+    var this_0 = this.v4u_1;
     return copyToArray(this_0);
   }
-  s2j(ctx) {
-    super.s2j(ctx);
-    if (this.x4u_1 == null) {
-      this.y4u_1 = null;
-      this.x4u_1 = ctx.n2j_1;
+  r2j(ctx) {
+    super.r2j(ctx);
+    if (this.w4u_1 == null) {
+      this.x4u_1 = null;
+      this.w4u_1 = ctx.m2j_1;
     }
   }
-  v3t(ctx) {
-    super.v3t(ctx);
-    if (this.z4u_1) {
-      this.z4u_1 = false;
+  u3t(ctx) {
+    super.u3t(ctx);
+    if (this.y4u_1) {
+      this.y4u_1 = false;
       return Unit_instance;
     }
-    var start = this.x4u_1;
-    var newStart = ensureNotNull(ctx.n2j_1);
-    if (!(start == null) && !(start.j1e() === ensureNotNull(ctx.n2j_1).j1e())) {
-      var tmp = this.y4u_1;
-      var tmp_0 = start.j1e();
-      var tmp0 = start.q29();
+    var start = this.w4u_1;
+    var newStart = ensureNotNull(ctx.m2j_1);
+    if (!(start == null) && !(start.g1e() === ensureNotNull(ctx.m2j_1).g1e())) {
+      var tmp = this.x4u_1;
+      var tmp_0 = start.g1e();
+      var tmp0 = start.p29();
       // Inline function 'kotlin.math.max' call
-      var b = newStart.j1e() - 1 | 0;
+      var b = newStart.g1e() - 1 | 0;
       var tmp$ret$0 = Math.max(tmp0, b);
-      this.w4u_1.g2(new BlockRange(tmp, null, tmp_0, tmp$ret$0, new PositionImpl(start.h1e() - 1 | 0, start.m29()), new PositionImpl(newStart.h1e() - 1 | 0, newStart.m29()), null, 0));
+      this.v4u_1.z1(new BlockRange(tmp, null, tmp_0, tmp$ret$0, new PositionImpl(start.e1e() - 1 | 0, start.l29()), new PositionImpl(newStart.e1e() - 1 | 0, newStart.l29()), null, 0));
     }
-    this.b4v_1 = this.b4v_1 + 1 | 0;
-    this.x4u_1 = newStart;
-    this.y4u_1 = ctx.m1f();
+    this.a4v_1 = this.a4v_1 + 1 | 0;
+    this.w4u_1 = newStart;
+    this.x4u_1 = ctx.j1f();
+  }
+  a3s(ctx) {
+    super.a3s(ctx);
+    if (this.u4u_1 && !(ctx.y3r() == null)) {
+      return Unit_instance;
+    }
+    this.a4v_1 = this.a4v_1 + 1 | 0;
   }
   b3s(ctx) {
     super.b3s(ctx);
-    if (this.v4u_1 && !(ctx.z3r() == null)) {
+    if (this.u4u_1 && !(ctx.y3r() == null)) {
       return Unit_instance;
     }
-    this.b4v_1 = this.b4v_1 + 1 | 0;
+    this.a4v_1 = this.a4v_1 - 1 | 0;
   }
-  c3s(ctx) {
-    super.c3s(ctx);
-    if (this.v4u_1 && !(ctx.z3r() == null)) {
-      return Unit_instance;
-    }
-    this.b4v_1 = this.b4v_1 - 1 | 0;
-  }
-  y3t(ctx) {
-    super.y3t(ctx);
-    var tmp0_elvis_lhs = this.x4u_1;
+  x3t(ctx) {
+    super.x3t(ctx);
+    var tmp0_elvis_lhs = this.w4u_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1243,13 +1247,13 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var start = tmp;
-    this.w4u_1.g2(blockRangeFromTokens(this.y4u_1, ctx.m1f(), start, ensureNotNull(ctx.o2j_1), null, 0));
-    this.y4u_1 = null;
+    this.v4u_1.z1(blockRangeFromTokens(this.x4u_1, ctx.j1f(), start, ensureNotNull(ctx.n2j_1), null, 0));
     this.x4u_1 = null;
-    this.b4v_1 = this.b4v_1 - 1 | 0;
+    this.w4u_1 = null;
+    this.a4v_1 = this.a4v_1 - 1 | 0;
   }
-  o3s(ctx) {
-    var tmp0_elvis_lhs = ctx.n2j_1;
+  n3s(ctx) {
+    var tmp0_elvis_lhs = ctx.m2j_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1257,7 +1261,7 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var start = tmp;
-    var tmp1_elvis_lhs = ctx.o2j_1;
+    var tmp1_elvis_lhs = ctx.n2j_1;
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       return Unit_instance;
@@ -1265,13 +1269,13 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp_0 = tmp1_elvis_lhs;
     }
     var end = tmp_0;
-    var tmp2_safe_receiver = ctx.u2k(0);
-    var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.m1f();
-    this.w4u_1.g2(blockRangeFromTokens(tmp3_elvis_lhs == null ? 'enum' : tmp3_elvis_lhs, 'next', start, end, null, this.b4v_1));
+    var tmp2_safe_receiver = ctx.t2k(0);
+    var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.j1f();
+    this.v4u_1.z1(blockRangeFromTokens(tmp3_elvis_lhs == null ? 'enum' : tmp3_elvis_lhs, 'next', start, end, null, this.a4v_1));
   }
-  u3s(ctx) {
-    super.u3s(ctx);
-    var tmp0_elvis_lhs = ctx.n2j_1;
+  t3s(ctx) {
+    super.t3s(ctx);
+    var tmp0_elvis_lhs = ctx.m2j_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1279,7 +1283,7 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var start = tmp;
-    var tmp1_elvis_lhs = ctx.o2j_1;
+    var tmp1_elvis_lhs = ctx.n2j_1;
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       return Unit_instance;
@@ -1287,11 +1291,11 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp_0 = tmp1_elvis_lhs;
     }
     var end = tmp_0;
-    this.w4u_1.g2(blockRangeFromTokens('escn', 'nscn', start, end, null, this.b4v_1));
+    this.v4u_1.z1(blockRangeFromTokens('escn', 'nscn', start, end, null, this.a4v_1));
   }
-  b3t(ctx) {
-    super.b3t(ctx);
-    var tmp0_elvis_lhs = ctx.n2j_1;
+  a3t(ctx) {
+    super.a3t(ctx);
+    var tmp0_elvis_lhs = ctx.m2j_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1299,7 +1303,7 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var start = tmp;
-    var tmp1_elvis_lhs = ctx.o2j_1;
+    var tmp1_elvis_lhs = ctx.n2j_1;
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       return Unit_instance;
@@ -1307,11 +1311,11 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp_0 = tmp1_elvis_lhs;
     }
     var end = tmp_0;
-    this.w4u_1.g2(blockRangeFromTokens('loop', !(ctx.y3s() == null) ? 'ever' : 'untl', start, end, null, this.b4v_1));
+    this.v4u_1.z1(blockRangeFromTokens('loop', !(ctx.x3s() == null) ? 'ever' : 'untl', start, end, null, this.a4v_1));
   }
-  h3t(ctx) {
-    super.h3t(ctx);
-    var tmp0_elvis_lhs = ctx.n2j_1;
+  g3t(ctx) {
+    super.g3t(ctx);
+    var tmp0_elvis_lhs = ctx.m2j_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1319,7 +1323,7 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var start = tmp;
-    var tmp1_elvis_lhs = ctx.o2j_1;
+    var tmp1_elvis_lhs = ctx.n2j_1;
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       return Unit_instance;
@@ -1327,11 +1331,11 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp_0 = tmp1_elvis_lhs;
     }
     var end = tmp_0;
-    this.w4u_1.g2(blockRangeFromTokens('reps', 'repe', start, end, null, this.b4v_1));
+    this.v4u_1.z1(blockRangeFromTokens('reps', 'repe', start, end, null, this.a4v_1));
   }
-  n3t(ctx) {
-    super.n3t(ctx);
-    var tmp0_elvis_lhs = ctx.n2j_1;
+  m3t(ctx) {
+    super.m3t(ctx);
+    var tmp0_elvis_lhs = ctx.m2j_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1339,7 +1343,7 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var start = tmp;
-    var tmp1_elvis_lhs = ctx.o2j_1;
+    var tmp1_elvis_lhs = ctx.n2j_1;
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       return Unit_instance;
@@ -1347,11 +1351,11 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp_0 = tmp1_elvis_lhs;
     }
     var end = tmp_0;
-    this.w4u_1.g2(blockRangeFromTokens('subr', 'retn', start, end, null, this.b4v_1));
+    this.v4u_1.z1(blockRangeFromTokens('subr', 'retn', start, end, null, this.a4v_1));
   }
-  i3s(ctx) {
-    super.i3s(ctx);
-    var tmp0_elvis_lhs = ctx.n2j_1;
+  h3s(ctx) {
+    super.h3s(ctx);
+    var tmp0_elvis_lhs = ctx.m2j_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1359,7 +1363,7 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var start = tmp;
-    var tmp1_elvis_lhs = ctx.o2j_1;
+    var tmp1_elvis_lhs = ctx.n2j_1;
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       return Unit_instance;
@@ -1367,14 +1371,14 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp_0 = tmp1_elvis_lhs;
     }
     var end = tmp_0;
-    this.w4u_1.g2(blockRangeFromTokens('doif', 'endi', start, end, null, this.b4v_1));
+    this.v4u_1.z1(blockRangeFromTokens('doif', 'endi', start, end, null, this.a4v_1));
   }
-  f3s(ctx) {
-    super.f3s(ctx);
-    if (this.v4u_1) {
+  e3s(ctx) {
+    super.e3s(ctx);
+    if (this.u4u_1) {
       return Unit_instance;
     }
-    var tmp0_elvis_lhs = ctx.n2j_1;
+    var tmp0_elvis_lhs = ctx.m2j_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1382,7 +1386,7 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var start = tmp;
-    var tmp1_elvis_lhs = ctx.o2j_1;
+    var tmp1_elvis_lhs = ctx.n2j_1;
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       return Unit_instance;
@@ -1390,76 +1394,76 @@ class CaosOffsetsWalker extends CaosMinimalOffsetsParserBaseListener {
       tmp_0 = tmp1_elvis_lhs;
     }
     var end = tmp_0;
-    var tmp2_safe_receiver = ctx.u2k(0);
-    this.w4u_1.g2(blockRangeFromTokens(tmp2_safe_receiver == null ? null : tmp2_safe_receiver.m1f(), null, start, end, null, this.b4v_1));
+    var tmp2_safe_receiver = ctx.t2k(0);
+    this.v4u_1.z1(blockRangeFromTokens(tmp2_safe_receiver == null ? null : tmp2_safe_receiver.j1f(), null, start, end, null, this.a4v_1));
   }
-  r3r(ctx) {
-    super.r3r(ctx);
-    var start = this.x4u_1;
-    var end = ensureNotNull(ctx.n2j_1);
+  q3r(ctx) {
+    super.q3r(ctx);
+    var start = this.w4u_1;
+    var end = ensureNotNull(ctx.m2j_1);
     if (!(start == null)) {
-      this.w4u_1.g2(blockRangeFromTokens(this.y4u_1, null, start, end, null, 0));
+      this.v4u_1.z1(blockRangeFromTokens(this.x4u_1, null, start, end, null, 0));
     }
   }
 }
 class Companion_0 {
   constructor() {
     Companion_instance_1 = this;
-    this.b4w_1 = token('scrp');
+    this.a4w_1 = token('scrp');
     var tmp = this;
     // Inline function 'kotlin.intArrayOf' call
-    tmp.c4w_1 = new Int32Array([token('doif')]);
+    tmp.b4w_1 = new Int32Array([token('doif')]);
     var tmp_0 = this;
     // Inline function 'kotlin.intArrayOf' call
-    tmp_0.d4w_1 = new Int32Array([token('escn')]);
+    tmp_0.c4w_1 = new Int32Array([token('escn')]);
     var tmp_1 = this;
     // Inline function 'kotlin.intArrayOf' call
-    tmp_1.e4w_1 = new Int32Array([token('enum'), token('epas'), token('etch'), token('esee'), token('econ'), token('elst')]);
+    tmp_1.d4w_1 = new Int32Array([token('enum'), token('epas'), token('etch'), token('esee'), token('econ'), token('elst')]);
     var tmp_2 = this;
     // Inline function 'kotlin.intArrayOf' call
-    tmp_2.f4w_1 = new Int32Array([token('loop')]);
+    tmp_2.e4w_1 = new Int32Array([token('loop')]);
     var tmp_3 = this;
     // Inline function 'kotlin.intArrayOf' call
-    tmp_3.g4w_1 = new Int32Array([token('subr')]);
+    tmp_3.f4w_1 = new Int32Array([token('subr')]);
     var tmp_4 = this;
     // Inline function 'kotlin.intArrayOf' call
-    tmp_4.h4w_1 = new Int32Array([token('reps')]);
-    this.i4w_1 = token('endi');
-    this.j4w_1 = token('ever');
-    this.k4w_1 = token('next');
-    this.l4w_1 = token('nscn');
-    this.m4w_1 = token('repe');
-    this.n4w_1 = token('retn');
-    this.o4w_1 = token('untl');
-    this.p4w_1 = token('endm');
+    tmp_4.g4w_1 = new Int32Array([token('reps')]);
+    this.h4w_1 = token('endi');
+    this.i4w_1 = token('ever');
+    this.j4w_1 = token('next');
+    this.k4w_1 = token('nscn');
+    this.l4w_1 = token('repe');
+    this.m4w_1 = token('retn');
+    this.n4w_1 = token('untl');
+    this.o4w_1 = token('endm');
     var tmp_5 = this;
-    var tmp0 = this.c4w_1;
+    var tmp0 = this.b4w_1;
     // Inline function 'kotlin.collections.plus' call
-    var elements = this.d4w_1;
+    var elements = this.c4w_1;
     var tmp0_0 = primitiveArrayConcat([tmp0, elements]);
     // Inline function 'kotlin.collections.plus' call
-    var elements_0 = this.e4w_1;
+    var elements_0 = this.d4w_1;
     var tmp0_1 = primitiveArrayConcat([tmp0_0, elements_0]);
     // Inline function 'kotlin.collections.plus' call
-    var elements_1 = this.f4w_1;
+    var elements_1 = this.e4w_1;
     var tmp0_2 = primitiveArrayConcat([tmp0_1, elements_1]);
     // Inline function 'kotlin.collections.plus' call
-    var elements_2 = this.g4w_1;
+    var elements_2 = this.f4w_1;
     var tmp0_3 = primitiveArrayConcat([tmp0_2, elements_2]);
     // Inline function 'kotlin.collections.plus' call
-    var elements_3 = this.h4w_1;
-    tmp_5.q4w_1 = primitiveArrayConcat([tmp0_3, elements_3]);
+    var elements_3 = this.g4w_1;
+    tmp_5.p4w_1 = primitiveArrayConcat([tmp0_3, elements_3]);
     var tmp_6 = this;
     // Inline function 'kotlin.intArrayOf' call
-    tmp_6.r4w_1 = new Int32Array([this.i4w_1, this.l4w_1, this.k4w_1, this.j4w_1, this.o4w_1, this.n4w_1, this.m4w_1]);
+    tmp_6.q4w_1 = new Int32Array([this.h4w_1, this.k4w_1, this.j4w_1, this.i4w_1, this.n4w_1, this.m4w_1, this.l4w_1]);
     var tmp_7 = this;
     // Inline function 'kotlin.intArrayOf' call
-    tmp_7.s4w_1 = new Int32Array([this.b4w_1, token('iscr'), token('rscr'), token('endm')]);
+    tmp_7.r4w_1 = new Int32Array([this.a4w_1, token('iscr'), token('rscr'), token('endm')]);
     var tmp_8 = this;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp_8.t4w_1 = [token('pray'), token('hist')];
+    tmp_8.s4w_1 = [token('pray'), token('hist')];
   }
 }
 class ControlStatementOffsetsTokenWalker {
@@ -1467,22 +1471,22 @@ class ControlStatementOffsetsTokenWalker {
     Companion_getInstance_2();
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.e4v_1 = ArrayList.b2();
-    this.f4v_1 = null;
-    this.g4v_1 = 0;
-    this.h4v_1 = false;
+    tmp.d4v_1 = ArrayList.u1();
+    this.e4v_1 = null;
+    this.f4v_1 = 0;
+    this.g4v_1 = false;
     var tmp_0 = this;
     var tmp_1 = listOf_0(['C1', 'C2']);
     // Inline function 'kotlin.text.uppercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$1 = variant.toUpperCase();
-    tmp_0.i4v_1 = !tmp_1.n2(tmp$ret$1);
-    this.j4v_1 = false;
-    this.k4v_1 = token('dde:');
-    this.l4v_1 = tokens;
+    tmp_0.h4v_1 = !tmp_1.g2(tmp$ret$1);
+    this.i4v_1 = false;
+    this.j4v_1 = token('dde:');
+    this.k4v_1 = tokens;
   }
-  m4v() {
-    var tmp0_safe_receiver = this.f4v_1;
+  l4v() {
+    var tmp0_safe_receiver = this.e4v_1;
     if (tmp0_safe_receiver == null)
       null;
     else {
@@ -1494,7 +1498,7 @@ class ControlStatementOffsetsTokenWalker {
 }
 class Companion_1 {
   constructor() {
-    this.u4w_1 = 'RawTokenizer';
+    this.t4w_1 = 'RawTokenizer';
   }
 }
 class RawTokenizer extends CaosUniversalParserBaseListener {
@@ -1503,64 +1507,64 @@ class RawTokenizer extends CaosUniversalParserBaseListener {
     offsetLine = offsetLine === VOID ? null : offsetLine;
     offsetColumn = offsetColumn === VOID ? null : offsetColumn;
     super();
-    this.g4u_1 = offsetIndex;
-    this.h4u_1 = offsetLine;
-    this.i4u_1 = offsetColumn;
-    this.j4u_1 = checkCancelled;
+    this.f4u_1 = offsetIndex;
+    this.g4u_1 = offsetLine;
+    this.h4u_1 = offsetColumn;
+    this.i4u_1 = checkCancelled;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.k4u_1 = ArrayList.b2();
-    this.l4u_1 = null;
+    tmp.j4u_1 = ArrayList.u1();
+    this.k4u_1 = null;
     var tmp_0 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_0.m4u_1 = ArrayList.b2();
+    tmp_0.l4u_1 = ArrayList.u1();
     var tmp_1 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_1.n4u_1 = ArrayList.b2();
+    tmp_1.m4u_1 = ArrayList.u1();
     var tmp_2 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_2.o4u_1 = ArrayList.b2();
+    tmp_2.n4u_1 = ArrayList.u1();
     var tmp_3 = this;
-    tmp_3.p4u_1 = lazy_0(RawTokenizer$errorStrategy$delegate$lambda);
+    tmp_3.o4u_1 = lazy_0(RawTokenizer$errorStrategy$delegate$lambda);
     var tmp_4 = this;
-    tmp_4.q4u_1 = lazy_0(RawTokenizer$toRange$delegate$lambda(this));
+    tmp_4.p4u_1 = lazy_0(RawTokenizer$toRange$delegate$lambda(this));
   }
-  s4u() {
+  r4u() {
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = this.k4u_1;
+    var this_0 = this.j4u_1;
     return copyToArray(this_0);
   }
-  e1t() {
+  b1t() {
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = this.m4u_1;
+    var this_0 = this.l4u_1;
     return copyToArray(this_0);
   }
-  w2j(ctx) {
-    super.w2j(ctx);
-    this.j4u_1();
+  v2j(ctx) {
+    super.v2j(ctx);
+    this.i4u_1();
   }
-  i48(ctx) {
-    super.i48(ctx);
-    if (this.l4u_1 == null) {
-      this.l4u_1 = new Pair(_get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.n2j_1)), '');
+  h48(ctx) {
+    super.h48(ctx);
+    if (this.k4u_1 == null) {
+      this.k4u_1 = new Pair(_get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.m2j_1)), '');
     }
   }
-  t49(ctx) {
-    super.t49(ctx);
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    var token = new ByteString(range, ctx.m1f());
-    this.m4u_1.g2(token);
+  s49(ctx) {
+    super.s49(ctx);
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    var token = new ByteString(range, ctx.j1f());
+    this.l4u_1.z1(token);
   }
-  i49(ctx) {
-    super.i49(ctx);
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    var token = new CommandToken(range, ctx.m1f());
-    this.m4u_1.g2(token);
+  h49(ctx) {
+    super.h49(ctx);
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    var token = new CommandToken(range, ctx.j1f());
+    this.l4u_1.z1(token);
   }
-  j4b(ctx) {
-    super.j4b(ctx);
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    var text = ctx.m1f();
+  i4b(ctx) {
+    super.i4b(ctx);
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    var text = ctx.j1f();
     // Inline function 'kotlin.code' call
     var this_0 = charCodeAt(text, 0);
     var tmp = Char__toInt_impl_vasixd(this_0);
@@ -1568,29 +1572,29 @@ class RawTokenizer extends CaosUniversalParserBaseListener {
     var this_1 = charCodeAt(text, 2);
     var tmp$ret$1 = Char__toInt_impl_vasixd(this_1);
     var values = new Pair(tmp, tmp$ret$1);
-    this.m4u_1.g2(new DdePictVal(range, values, text));
+    this.l4u_1.z1(new DdePictVal(range, values, text));
   }
-  u48(ctx) {
-    super.u48(ctx);
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    var token = new CommandToken(range, ctx.m1f());
-    this.m4u_1.g2(token);
+  t48(ctx) {
+    super.t48(ctx);
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    var token = new CommandToken(range, ctx.j1f());
+    this.l4u_1.z1(token);
   }
-  l48(ctx) {
-    super.l48(ctx);
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    var token = new CommandToken(range, ctx.m1f());
-    this.m4u_1.g2(token);
+  k48(ctx) {
+    super.k48(ctx);
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    var token = new CommandToken(range, ctx.j1f());
+    this.l4u_1.z1(token);
   }
-  q49(ctx) {
-    super.q49(ctx);
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    var token = new TokenVal(range, ctx.m1f());
-    this.m4u_1.g2(token);
+  p49(ctx) {
+    super.p49(ctx);
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    var token = new TokenVal(range, ctx.j1f());
+    this.l4u_1.z1(token);
   }
-  n49(ctx) {
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    if (ctx.k49() == null)
+  m49(ctx) {
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    if (ctx.j49() == null)
       null;
     else {
       // Inline function 'kotlin.let' call
@@ -1603,57 +1607,57 @@ class RawTokenizer extends CaosUniversalParserBaseListener {
       } else {
         tmp_1 = TypeTokens_getInstance().QUOTE_STRING;
       }
-      this.m4u_1.g2(new ErrorVal(range, tmp, 8, rawText, tmp_0, tmp_1));
+      this.l4u_1.z1(new ErrorVal(range, tmp, 8, rawText, tmp_0, tmp_1));
       return Unit_instance;
     }
-    if (ctx.l49() == null)
+    if (ctx.k49() == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       var rawText_0 = get_trueText(ctx);
-      this.m4u_1.g2(new ErrorVal(range, 'Unterminated CHAR', 8, rawText_0, ValueType_INT_getInstance().value, TypeTokens_getInstance().CHAR));
+      this.l4u_1.z1(new ErrorVal(range, 'Unterminated CHAR', 8, rawText_0, ValueType_INT_getInstance().value, TypeTokens_getInstance().CHAR));
       return Unit_instance;
     }
     var tmp_2;
     var tmp_3;
     var tmp_4;
-    if (ctx.m1f().length === 3 && this.m4u_1.i2() > 1) {
+    if (ctx.j1f().length === 3 && this.l4u_1.b2() > 1) {
       // Inline function 'kotlin.text.uppercase' call
       // Inline function 'kotlin.js.asDynamic' call
-      tmp_4 = toString(last_1(this.m4u_1).r3()).toUpperCase() === 'PICT';
+      tmp_4 = toString(last_1(this.l4u_1).k3()).toUpperCase() === 'PICT';
     } else {
       tmp_4 = false;
     }
     if (tmp_4) {
       // Inline function 'kotlin.text.uppercase' call
       // Inline function 'kotlin.js.asDynamic' call
-      tmp_3 = toString_0(getOrNull(this.m4u_1, get_lastIndex_0(this.m4u_1) - 1 | 0)).toUpperCase() === 'DDE:';
+      tmp_3 = toString_0(getOrNull(this.l4u_1, get_lastIndex_0(this.l4u_1) - 1 | 0)).toUpperCase() === 'DDE:';
     } else {
       tmp_3 = false;
     }
     if (tmp_3) {
       // Inline function 'kotlin.code' call
-      var this_0 = first_0(ctx.m1f());
+      var this_0 = first_0(ctx.j1f());
       var tmp_5 = Char__toInt_impl_vasixd(this_0);
       // Inline function 'kotlin.code' call
-      var this_1 = last_0(ctx.m1f());
+      var this_1 = last_0(ctx.j1f());
       var tmp$ret$9 = Char__toInt_impl_vasixd(this_1);
-      tmp_2 = new DdePictVal(range, new Pair(tmp_5, tmp$ret$9), ctx.m1f());
+      tmp_2 = new DdePictVal(range, new Pair(tmp_5, tmp$ret$9), ctx.j1f());
     } else {
-      tmp_2 = new TokenVal(range, ctx.m1f());
+      tmp_2 = new TokenVal(range, ctx.j1f());
     }
     var token = tmp_2;
-    this.m4u_1.g2(token);
+    this.l4u_1.z1(token);
   }
-  f4a(ctx) {
-    super.f4a(ctx);
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
+  e4a(ctx) {
+    super.e4a(ctx);
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
     var tmp;
-    if (!(ctx.c4a() == null)) {
-      tmp = new BinaryVal(range, binaryToInteger(ctx.m1f()), ctx.m1f());
-    } else if (!(ctx.d4a() == null)) {
-      var tmp_0 = lastOrNull(dropLast(toCharArray(ctx.m1f()), 1));
-      var tmp0_safe_receiver = tmp_0 == null ? null : tmp_0.c3_1;
+    if (!(ctx.b4a() == null)) {
+      tmp = new BinaryVal(range, binaryToInteger(ctx.j1f()), ctx.j1f());
+    } else if (!(ctx.c4a() == null)) {
+      var tmp_0 = lastOrNull(dropLast(toCharArray(ctx.j1f()), 1));
+      var tmp0_safe_receiver = tmp_0 == null ? null : tmp_0.v2_1;
       var tmp_1;
       var tmp_2 = tmp0_safe_receiver;
       if ((tmp_2 == null ? null : new Char(tmp_2)) == null) {
@@ -1663,71 +1667,71 @@ class RawTokenizer extends CaosUniversalParserBaseListener {
         tmp_1 = Char__toInt_impl_vasixd(tmp0_safe_receiver);
       }
       var tmp1_elvis_lhs = tmp_1;
-      tmp = new CharVal(range, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, ctx.m1f());
+      tmp = new CharVal(range, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs, ctx.j1f());
+    } else if (!(ctx.z49() == null)) {
+      tmp = new FloatVal(range, ctx.j1f());
     } else if (!(ctx.a4a() == null)) {
-      tmp = new FloatVal(range, ctx.m1f());
-    } else if (!(ctx.b4a() == null)) {
-      tmp = new IntVal(range, toInt(ctx.m1f()));
+      tmp = new IntVal(range, toInt(ctx.j1f()));
     } else {
-      Log_getInstance().x1i('RawTokenizer', "Unhandled number context: '" + ctx.m1f() + "'");
+      Log_getInstance().u1i('RawTokenizer', "Unhandled number context: '" + ctx.j1f() + "'");
       return Unit_instance;
     }
     var item = tmp;
-    this.m4u_1.g2(item);
+    this.l4u_1.z1(item);
   }
-  l4a(ctx) {
-    super.l4a(ctx);
-    var token = new EqJoinVal(_get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1)), ctx.m1f());
-    this.m4u_1.g2(token);
+  k4a(ctx) {
+    super.k4a(ctx);
+    var token = new EqJoinVal(_get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1)), ctx.j1f());
+    this.l4u_1.z1(token);
   }
-  i4a(ctx) {
-    super.i4a(ctx);
-    var token = new EqOpVal(_get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1)), ctx.m1f());
-    this.m4u_1.g2(token);
+  h4a(ctx) {
+    super.h4a(ctx);
+    var token = new EqOpVal(_get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1)), ctx.j1f());
+    this.l4u_1.z1(token);
   }
-  u4a(ctx) {
-    super.u4a(ctx);
-    var start = ctx.s3f().x2k();
-    var wordContext = ctx.t3f();
-    var eq = ctx.u3f().x2k();
-    var token = new TokenVal(textRangeWithParserIndex(wordContext, this.m4u_1.i2()), stripSurroundingQuotes(get_trueText(wordContext)));
-    var tmp = textRangeWithParserIndex(ctx, this.m4u_1.i2());
+  t4a(ctx) {
+    super.t4a(ctx);
+    var start = ctx.r3f().w2k();
+    var wordContext = ctx.s3f();
+    var eq = ctx.t3f().w2k();
+    var token = new TokenVal(textRangeWithParserIndex(wordContext, this.l4u_1.b2()), stripSurroundingQuotes(get_trueText(wordContext)));
+    var tmp = textRangeWithParserIndex(ctx, this.l4u_1.b2());
     // Inline function 'kotlin.text.trim' call
     var this_0 = get_trueText(ctx);
     var tmp$ret$0 = toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
-    var parserItem = new Caos2Comment(tmp, tmp$ret$0, token, caos2Values_0(this, ctx), new TokenVal(textRangeWithParserIndex_0(eq, this.m4u_1.i2()), '='), new TokenVal(textRangeWithParserIndex_0(start, this.m4u_1.i2()), '*#'));
-    this.o4u_1.g2(parserItem);
-    this.m4u_1.g2(parserItem);
+    var parserItem = new Caos2Comment(tmp, tmp$ret$0, token, caos2Values_0(this, ctx), new TokenVal(textRangeWithParserIndex_0(eq, this.l4u_1.b2()), '='), new TokenVal(textRangeWithParserIndex_0(start, this.l4u_1.b2()), '*#'));
+    this.n4u_1.z1(parserItem);
+    this.l4u_1.z1(parserItem);
   }
-  a4b(ctx) {
-    super.a4b(ctx);
-    var start = ctx.s3f().x2k();
-    var wordContext = ctx.b3g();
-    var token = new TokenVal(textRangeWithParserIndex(wordContext, this.m4u_1.i2()), stripSurroundingQuotes(get_trueText(wordContext)));
-    var tmp = textRangeWithParserIndex(ctx, this.m4u_1.i2());
+  z4a(ctx) {
+    super.z4a(ctx);
+    var start = ctx.r3f().w2k();
+    var wordContext = ctx.a3g();
+    var token = new TokenVal(textRangeWithParserIndex(wordContext, this.l4u_1.b2()), stripSurroundingQuotes(get_trueText(wordContext)));
+    var tmp = textRangeWithParserIndex(ctx, this.l4u_1.b2());
     // Inline function 'kotlin.text.trim' call
     var this_0 = get_trueText(ctx);
     var tmp$ret$0 = toString(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
-    var parserItem = new Caos2Comment(tmp, tmp$ret$0, token, caos2Values_0(this, ctx), null, new TokenVal(textRangeWithParserIndex_0(start, this.m4u_1.i2()), '*#'));
-    this.o4u_1.g2(parserItem);
-    this.m4u_1.g2(parserItem);
+    var parserItem = new Caos2Comment(tmp, tmp$ret$0, token, caos2Values_0(this, ctx), null, new TokenVal(textRangeWithParserIndex_0(start, this.l4u_1.b2()), '*#'));
+    this.n4u_1.z1(parserItem);
+    this.l4u_1.z1(parserItem);
   }
-  o4a(ctx) {
-    super.o4a(ctx);
-    var token = new Comment(_get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1)), ctx.m1f());
-    this.m4u_1.g2(token);
+  n4a(ctx) {
+    super.n4a(ctx);
+    var token = new Comment(_get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1)), ctx.j1f());
+    this.l4u_1.z1(token);
   }
-  y49(ctx) {
-    super.y49(ctx);
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
+  x49(ctx) {
+    super.x49(ctx);
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
     var rawText = get_trueText(ctx);
     var stringValue = getUnquotedStringText(this, rawText);
-    if (!(ctx.w49() == null)) {
-      this.m4u_1.g2(new ErrorVal(range, 'Single quote strings are not allowed in CAOS', 0, rawText, ValueType_STRING_getInstance().value, TypeTokens_getInstance().QUOTE_STRING));
+    if (!(ctx.v49() == null)) {
+      this.l4u_1.z1(new ErrorVal(range, 'Single quote strings are not allowed in CAOS', 0, rawText, ValueType_STRING_getInstance().value, TypeTokens_getInstance().QUOTE_STRING));
       return Unit_instance;
     }
     var tmp;
-    if (ctx.v49() == null) {
+    if (ctx.u49() == null) {
       tmp = null;
     } else {
       // Inline function 'kotlin.let' call
@@ -1735,110 +1739,110 @@ class RawTokenizer extends CaosUniversalParserBaseListener {
     }
     var tmp1_elvis_lhs = tmp;
     var token = tmp1_elvis_lhs == null ? new C2eStringVal(range, stringValue) : tmp1_elvis_lhs;
-    this.m4u_1.g2(token);
+    this.l4u_1.z1(token);
   }
-  f49(ctx) {
-    super.f49(ctx);
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    var textLength = !(ctx.d49() == null) || !(ctx.c49() == null) ? 3 : 2;
+  e49(ctx) {
+    super.e49(ctx);
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    var textLength = !(ctx.c49() == null) || !(ctx.b49() == null) ? 3 : 2;
     // Inline function 'kotlin.text.uppercase' call
     // Inline function 'kotlin.js.asDynamic' call
-    var tmp$ret$0 = substring(ctx.m1f(), 0, textLength).toUpperCase();
+    var tmp$ret$0 = substring(ctx.j1f(), 0, textLength).toUpperCase();
     var type = padEnd(tmp$ret$0, 4, _Char___init__impl__6a9atx(120));
-    var index = toInt(substring_0(ctx.m1f(), textLength));
-    var token = new IndexedVarVal(range, ctx.m1f(), type, index);
-    this.n4u_1.g2(token);
-    this.m4u_1.g2(token);
+    var index = toInt(substring_0(ctx.j1f(), textLength));
+    var token = new IndexedVarVal(range, ctx.j1f(), type, index);
+    this.m4u_1.z1(token);
+    this.l4u_1.z1(token);
   }
-  x48(ctx) {
-    super.x48(ctx);
-    var lastScriptStart = this.l4u_1;
-    if (!(lastScriptStart == null) && !(lastScriptStart.first.j1e() === ensureNotNull(ctx.n2j_1).j1e())) {
-      var tmp = lastScriptStart.first.j1e();
-      var tmp0_elvis_lhs = this.g4u_1;
+  w48(ctx) {
+    super.w48(ctx);
+    var lastScriptStart = this.k4u_1;
+    if (!(lastScriptStart == null) && !(lastScriptStart.first.g1e() === ensureNotNull(ctx.m2j_1).g1e())) {
+      var tmp = lastScriptStart.first.g1e();
+      var tmp0_elvis_lhs = this.f4u_1;
       var tmp_0 = tmp + (tmp0_elvis_lhs == null ? 0 : tmp0_elvis_lhs) | 0;
-      var tmp_1 = ensureNotNull(ctx.n2j_1).j1e();
-      var tmp1_elvis_lhs = this.g4u_1;
+      var tmp_1 = ensureNotNull(ctx.m2j_1).g1e();
+      var tmp1_elvis_lhs = this.f4u_1;
       var tmp_2 = tmp_1 + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
-      var tmp_3 = lastScriptStart.first.o1().h1e();
-      var tmp2_elvis_lhs = this.h4u_1;
+      var tmp_3 = lastScriptStart.first.h1().e1e();
+      var tmp2_elvis_lhs = this.g4u_1;
       var tmp_4 = tmp_3 + (tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs) | 0;
-      var tmp_5 = lastScriptStart.first.o1().l1e();
+      var tmp_5 = lastScriptStart.first.h1().i1e();
       var tmp_6;
-      if (lastScriptStart.first.o1().h1e() === 0) {
-        var tmp3_elvis_lhs = this.i4u_1;
+      if (lastScriptStart.first.h1().e1e() === 0) {
+        var tmp3_elvis_lhs = this.h4u_1;
         tmp_6 = tmp3_elvis_lhs == null ? 0 : tmp3_elvis_lhs;
       } else {
         tmp_6 = 0;
       }
       var tmp_7 = new PositionImpl(tmp_4, tmp_5 + tmp_6 | 0);
-      var tmp_8 = ensureNotNull(ctx.n2j_1).h1e() - 1 | 0;
-      var tmp4_elvis_lhs = this.h4u_1;
+      var tmp_8 = ensureNotNull(ctx.m2j_1).e1e() - 1 | 0;
+      var tmp4_elvis_lhs = this.g4u_1;
       var tmp_9 = tmp_8 + (tmp4_elvis_lhs == null ? 0 : tmp4_elvis_lhs) | 0;
-      var tmp_10 = ensureNotNull(ctx.n2j_1).m29();
+      var tmp_10 = ensureNotNull(ctx.m2j_1).l29();
       var tmp_11;
-      if (ensureNotNull(ctx.n2j_1).h1e() === 0) {
-        var tmp5_elvis_lhs = this.i4u_1;
+      if (ensureNotNull(ctx.m2j_1).e1e() === 0) {
+        var tmp5_elvis_lhs = this.h4u_1;
         tmp_11 = tmp5_elvis_lhs == null ? 0 : tmp5_elvis_lhs;
       } else {
         tmp_11 = 0;
       }
-      this.k4u_1.g2(new BlockRange(lastScriptStart.second, '', tmp_0, tmp_2, tmp_7, new PositionImpl(tmp_9, tmp_10 + tmp_11 | 0), this.e1t().length, 0));
+      this.j4u_1.z1(new BlockRange(lastScriptStart.second, '', tmp_0, tmp_2, tmp_7, new PositionImpl(tmp_9, tmp_10 + tmp_11 | 0), this.b1t().length, 0));
     }
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    this.l4u_1 = new Pair(_get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1)), ctx.m1f());
-    this.m4u_1.g2(new CommandToken(range, ctx.m1f()));
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    this.k4u_1 = new Pair(_get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1)), ctx.j1f());
+    this.l4u_1.z1(new CommandToken(range, ctx.j1f()));
   }
-  a49(ctx) {
-    super.a49(ctx);
-    var tmp0_elvis_lhs = this.l4u_1;
-    var lastScriptStart = tmp0_elvis_lhs == null ? new Pair(_get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.n2j_1)), '') : tmp0_elvis_lhs;
-    this.l4u_1 = null;
-    var endToken = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
+  z48(ctx) {
+    super.z48(ctx);
+    var tmp0_elvis_lhs = this.k4u_1;
+    var lastScriptStart = tmp0_elvis_lhs == null ? new Pair(_get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.m2j_1)), '') : tmp0_elvis_lhs;
+    this.k4u_1 = null;
+    var endToken = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
     var tmp;
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
-    if (ctx.m1f().toLowerCase() === 'endm') {
-      tmp = ctx.m1f();
+    if (ctx.j1f().toLowerCase() === 'endm') {
+      tmp = ctx.j1f();
     } else {
       tmp = '';
     }
     var tmp_0 = tmp;
-    var tmp_1 = lastScriptStart.first.j1e();
-    var tmp1_elvis_lhs = this.g4u_1;
+    var tmp_1 = lastScriptStart.first.g1e();
+    var tmp1_elvis_lhs = this.f4u_1;
     var tmp_2 = tmp_1 + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
-    var tmp_3 = endToken.m1e();
-    var tmp2_elvis_lhs = this.g4u_1;
+    var tmp_3 = endToken.j1e();
+    var tmp2_elvis_lhs = this.f4u_1;
     var tmp_4 = tmp_3 + (tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs) | 0;
-    var tmp_5 = lastScriptStart.first.o1().h1e();
-    var tmp3_elvis_lhs = this.h4u_1;
+    var tmp_5 = lastScriptStart.first.h1().e1e();
+    var tmp3_elvis_lhs = this.g4u_1;
     var tmp_6 = tmp_5 + (tmp3_elvis_lhs == null ? 0 : tmp3_elvis_lhs) | 0;
-    var tmp_7 = lastScriptStart.first.o1().l1e();
+    var tmp_7 = lastScriptStart.first.h1().i1e();
     var tmp_8;
-    if (lastScriptStart.first.o1().h1e() === 0) {
-      var tmp4_elvis_lhs = this.i4u_1;
+    if (lastScriptStart.first.h1().e1e() === 0) {
+      var tmp4_elvis_lhs = this.h4u_1;
       tmp_8 = tmp4_elvis_lhs == null ? 0 : tmp4_elvis_lhs;
     } else {
       tmp_8 = 0;
     }
     var tmp_9 = new PositionImpl(tmp_6, tmp_7 + tmp_8 | 0);
-    var tmp_10 = endToken.i1e().h1e();
-    var tmp5_elvis_lhs = this.h4u_1;
+    var tmp_10 = endToken.f1e().e1e();
+    var tmp5_elvis_lhs = this.g4u_1;
     var tmp_11 = tmp_10 + (tmp5_elvis_lhs == null ? 0 : tmp5_elvis_lhs) | 0;
-    var tmp_12 = endToken.i1e().l1e();
+    var tmp_12 = endToken.f1e().i1e();
     var tmp_13;
-    if (endToken.i1e().h1e() === 0) {
-      var tmp6_elvis_lhs = this.i4u_1;
+    if (endToken.f1e().e1e() === 0) {
+      var tmp6_elvis_lhs = this.h4u_1;
       tmp_13 = tmp6_elvis_lhs == null ? 0 : tmp6_elvis_lhs;
     } else {
       tmp_13 = 0;
     }
-    this.k4u_1.g2(new BlockRange(lastScriptStart.second, tmp_0, tmp_2, tmp_4, tmp_9, new PositionImpl(tmp_11, tmp_12 + tmp_13 | 0), this.e1t().length, 0));
-    this.m4u_1.g2(new CommandToken(endToken, ctx.m1f()));
+    this.j4u_1.z1(new BlockRange(lastScriptStart.second, tmp_0, tmp_2, tmp_4, tmp_9, new PositionImpl(tmp_11, tmp_12 + tmp_13 | 0), this.b1t().length, 0));
+    this.l4u_1.z1(new CommandToken(endToken, ctx.j1f()));
   }
-  b48(ctx) {
-    super.b48(ctx);
-    var tmp0_elvis_lhs = this.l4u_1;
+  a48(ctx) {
+    super.a48(ctx);
+    var tmp0_elvis_lhs = this.k4u_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1846,59 +1850,59 @@ class RawTokenizer extends CaosUniversalParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var lastScriptStart = tmp;
-    this.l4u_1 = null;
-    var endToken = _get_toRange__509vin(this)(ensureNotNull(ctx.o2j_1), ensureNotNull(ctx.o2j_1));
-    var tmp_0 = lastScriptStart.first.j1e();
-    var tmp1_elvis_lhs = this.g4u_1;
+    this.k4u_1 = null;
+    var endToken = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.n2j_1));
+    var tmp_0 = lastScriptStart.first.g1e();
+    var tmp1_elvis_lhs = this.f4u_1;
     var tmp_1 = tmp_0 + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
-    var tmp_2 = endToken.m1e();
-    var tmp2_elvis_lhs = this.g4u_1;
+    var tmp_2 = endToken.j1e();
+    var tmp2_elvis_lhs = this.f4u_1;
     var tmp_3 = tmp_2 + (tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs) | 0;
-    var tmp_4 = lastScriptStart.first.o1().h1e();
-    var tmp3_elvis_lhs = this.h4u_1;
+    var tmp_4 = lastScriptStart.first.h1().e1e();
+    var tmp3_elvis_lhs = this.g4u_1;
     var tmp_5 = tmp_4 + (tmp3_elvis_lhs == null ? 0 : tmp3_elvis_lhs) | 0;
-    var tmp_6 = lastScriptStart.first.o1().l1e();
+    var tmp_6 = lastScriptStart.first.h1().i1e();
     var tmp_7;
-    if (lastScriptStart.first.o1().h1e() === 0) {
-      var tmp4_elvis_lhs = this.i4u_1;
+    if (lastScriptStart.first.h1().e1e() === 0) {
+      var tmp4_elvis_lhs = this.h4u_1;
       tmp_7 = tmp4_elvis_lhs == null ? 0 : tmp4_elvis_lhs;
     } else {
       tmp_7 = 0;
     }
     var tmp_8 = new PositionImpl(tmp_5, tmp_6 + tmp_7 | 0);
-    var tmp_9 = endToken.i1e().h1e();
-    var tmp5_elvis_lhs = this.h4u_1;
+    var tmp_9 = endToken.f1e().e1e();
+    var tmp5_elvis_lhs = this.g4u_1;
     var tmp_10 = tmp_9 + (tmp5_elvis_lhs == null ? 0 : tmp5_elvis_lhs) | 0;
-    var tmp_11 = endToken.i1e().l1e();
+    var tmp_11 = endToken.f1e().i1e();
     var tmp_12;
-    if (endToken.i1e().h1e() === 0) {
-      var tmp6_elvis_lhs = this.i4u_1;
+    if (endToken.f1e().e1e() === 0) {
+      var tmp6_elvis_lhs = this.h4u_1;
       tmp_12 = tmp6_elvis_lhs == null ? 0 : tmp6_elvis_lhs;
     } else {
       tmp_12 = 0;
     }
-    this.k4u_1.g2(new BlockRange(lastScriptStart.second, '', tmp_1, tmp_3, tmp_8, new PositionImpl(tmp_10, tmp_11 + tmp_12 | 0), this.e1t().length, 0));
+    this.j4u_1.z1(new BlockRange(lastScriptStart.second, '', tmp_1, tmp_3, tmp_8, new PositionImpl(tmp_10, tmp_11 + tmp_12 | 0), this.b1t().length, 0));
   }
-  m4b(ctx) {
-    super.m4b(ctx);
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    this.m4u_1.g2(new AutocompleteHint(range, ctx.m1f()));
+  l4b(ctx) {
+    super.l4b(ctx);
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    this.l4u_1.z1(new AutocompleteHint(range, ctx.j1f()));
   }
-  o48(ctx) {
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    this.m4u_1.g2(new ListBrace(range, ctx.m1f()));
+  n48(ctx) {
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    this.l4u_1.z1(new ListBrace(range, ctx.j1f()));
   }
-  r48(ctx) {
-    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1));
-    this.m4u_1.g2(new ListBrace(range, ctx.m1f()));
+  q48(ctx) {
+    var range = _get_toRange__509vin(this)(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1));
+    this.l4u_1.z1(new ListBrace(range, ctx.j1f()));
   }
-  n27(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs) {
+  m27(recognizer, dfa, startIndex, stopIndex, exact, ambigAlts, configs) {
   }
-  o27(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs) {
+  n27(recognizer, dfa, startIndex, stopIndex, conflictingAlts, configs) {
   }
-  p27(recognizer, dfa, startIndex, stopIndex, prediction, configs) {
+  o27(recognizer, dfa, startIndex, stopIndex, prediction, configs) {
   }
-  m27(recognizer, offendingSymbol, line, charPositionInLine, msg, e) {
+  l27(recognizer, offendingSymbol, line, charPositionInLine, msg, e) {
     var tmp0_elvis_lhs = offendingSymbol instanceof CommonToken ? offendingSymbol : null;
     var tmp;
     if (tmp0_elvis_lhs == null) {
@@ -1909,15 +1913,15 @@ class RawTokenizer extends CaosUniversalParserBaseListener {
         tmp_1 = null;
       } else {
         // Inline function 'kotlin.let' call
-        tmp_1 = getKClassFromExpression(offendingSymbol).x();
+        tmp_1 = getKClassFromExpression(offendingSymbol).q();
       }
-      tmp_0.u1i('Offending symbol is not CommonToken but was: ' + tmp_1);
+      tmp_0.r1i('Offending symbol is not CommonToken but was: ' + tmp_1);
       return Unit_instance;
     } else {
       tmp = tmp0_elvis_lhs;
     }
     var ctx = tmp;
-    var tmp1_elvis_lhs = ctx.m1f();
+    var tmp1_elvis_lhs = ctx.j1f();
     var tmp_2;
     if (tmp1_elvis_lhs == null) {
       return Unit_instance;
@@ -1925,8 +1929,8 @@ class RawTokenizer extends CaosUniversalParserBaseListener {
       tmp_2 = tmp1_elvis_lhs;
     }
     var text = tmp_2;
-    var range = toRange(ctx, this.g4u_1, this.h4u_1, this.i4u_1);
-    this.m4u_1.g2(new ErrorVal(range, "Invalid input '" + text + "'", 0, text));
+    var range = toRange(ctx, this.f4u_1, this.g4u_1, this.h4u_1);
+    this.l4u_1.z1(new ErrorVal(range, "Invalid input '" + text + "'", 0, text));
   }
 }
 class ScriptOffsetsWalker extends CaosUniversalParserBaseListener {
@@ -1934,34 +1938,34 @@ class ScriptOffsetsWalker extends CaosUniversalParserBaseListener {
     super();
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.o4v_1 = ArrayList.b2();
+    tmp.n4v_1 = ArrayList.u1();
+    this.o4v_1 = null;
     this.p4v_1 = null;
-    this.q4v_1 = null;
-    this.r4v_1 = false;
-    this.s4v_1 = token('dde:');
+    this.q4v_1 = false;
+    this.r4v_1 = token('dde:');
   }
-  t4v() {
+  s4v() {
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = this.o4v_1;
+    var this_0 = this.n4v_1;
     return copyToArray(this_0);
   }
-  x48(ctx) {
-    super.x48(ctx);
-    if (this.r4v_1) {
-      this.r4v_1 = false;
+  w48(ctx) {
+    super.w48(ctx);
+    if (this.q4v_1) {
+      this.q4v_1 = false;
       return Unit_instance;
     }
-    var start = this.p4v_1;
-    var newStart = ensureNotNull(ctx.n2j_1);
-    if (!(start == null) && !(start.j1e() === ensureNotNull(ctx.n2j_1).j1e())) {
-      this.o4v_1.g2(blockRangeFromTokens(this.q4v_1, null, start, newStart, null, 0));
+    var start = this.o4v_1;
+    var newStart = ensureNotNull(ctx.m2j_1);
+    if (!(start == null) && !(start.g1e() === ensureNotNull(ctx.m2j_1).g1e())) {
+      this.n4v_1.z1(blockRangeFromTokens(this.p4v_1, null, start, newStart, null, 0));
     }
-    this.p4v_1 = newStart;
-    this.q4v_1 = ctx.m1f();
+    this.o4v_1 = newStart;
+    this.p4v_1 = ctx.j1f();
   }
-  a49(ctx) {
-    super.a49(ctx);
-    var tmp0_elvis_lhs = this.p4v_1;
+  z48(ctx) {
+    super.z48(ctx);
+    var tmp0_elvis_lhs = this.o4v_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1969,28 +1973,28 @@ class ScriptOffsetsWalker extends CaosUniversalParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var start = tmp;
-    this.o4v_1.g2(blockRangeFromTokens(this.q4v_1, ctx.m1f(), start, ensureNotNull(ctx.o2j_1), null, 0));
-    this.q4v_1 = null;
+    this.n4v_1.z1(blockRangeFromTokens(this.p4v_1, ctx.j1f(), start, ensureNotNull(ctx.n2j_1), null, 0));
+    this.p4v_1 = null;
+    this.o4v_1 = null;
+  }
+  h49(ctx) {
+    super.h49(ctx);
+    this.q4v_1 = token(ctx.j1f()) === this.r4v_1;
+  }
+  h48(ctx) {
+    super.h48(ctx);
+    if (!(this.o4v_1 == null)) {
+      return Unit_instance;
+    }
+    if (!(ctx.f48() == null)) {
+      return Unit_instance;
+    }
+    this.o4v_1 = ctx.m2j_1;
     this.p4v_1 = null;
   }
-  i49(ctx) {
-    super.i49(ctx);
-    this.r4v_1 = token(ctx.m1f()) === this.s4v_1;
-  }
-  i48(ctx) {
-    super.i48(ctx);
-    if (!(this.p4v_1 == null)) {
-      return Unit_instance;
-    }
-    if (!(ctx.g48() == null)) {
-      return Unit_instance;
-    }
-    this.p4v_1 = ctx.n2j_1;
-    this.q4v_1 = null;
-  }
-  b48(ctx) {
-    super.b48(ctx);
-    var tmp0_elvis_lhs = this.p4v_1;
+  a48(ctx) {
+    super.a48(ctx);
+    var tmp0_elvis_lhs = this.o4v_1;
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -1998,68 +2002,68 @@ class ScriptOffsetsWalker extends CaosUniversalParserBaseListener {
       tmp = tmp0_elvis_lhs;
     }
     var start = tmp;
-    var end = ensureNotNull(ctx.n2j_1);
-    this.o4v_1.g2(blockRangeFromTokens(this.q4v_1, null, start, end, null, 0));
+    var end = ensureNotNull(ctx.m2j_1);
+    this.n4v_1.z1(blockRangeFromTokens(this.p4v_1, null, start, end, null, 0));
   }
 }
 class StopsWalker extends CaosUniversalParserBaseListener {
   constructor(stopTokens, lexer) {
     super();
-    this.v4v_1 = stopTokens;
+    this.u4v_1 = stopTokens;
     var tmp = this;
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = lexer.c2h();
+    var tmp0 = lexer.b2h();
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.b2();
-    var _iterator__ex2g4s = tmp0.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var element = _iterator__ex2g4s.f1();
+    var destination = ArrayList.u1();
+    var _iterator__ex2g4s = tmp0.w();
+    while (_iterator__ex2g4s.x()) {
+      var element = _iterator__ex2g4s.y();
       var tmp_0;
-      if (element.o28() === 2) {
-        var tmp0_safe_receiver = element.m1f();
+      if (element.n28() === 2) {
+        var tmp0_safe_receiver = element.j1f();
         tmp_0 = orFalse(tmp0_safe_receiver == null ? null : contains_1(tmp0_safe_receiver, _Char___init__impl__6a9atx(10)));
       } else {
         tmp_0 = false;
       }
       if (tmp_0) {
-        destination.g2(element);
+        destination.z1(element);
       }
     }
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_0 = ArrayList.f2(collectionSizeOrDefault(destination, 10));
-    var _iterator__ex2g4s_0 = destination.d1();
-    while (_iterator__ex2g4s_0.e1()) {
-      var item = _iterator__ex2g4s_0.f1();
-      var tmp$ret$5 = item.j1e();
-      destination_0.g2(tmp$ret$5);
+    var destination_0 = ArrayList.y1(collectionSizeOrDefault(destination, 10));
+    var _iterator__ex2g4s_0 = destination.w();
+    while (_iterator__ex2g4s_0.x()) {
+      var item = _iterator__ex2g4s_0.y();
+      var tmp$ret$5 = item.g1e();
+      destination_0.z1(tmp$ret$5);
     }
-    tmp.w4v_1 = toMutableList(destination_0);
+    tmp.v4v_1 = toMutableList(destination_0);
   }
-  x4v() {
-    return toIntArray(this.w4v_1);
+  w4v() {
+    return toIntArray(this.v4v_1);
   }
-  i49(ctx) {
-    super.i49(ctx);
-    if (contains(this.v4v_1, token(ctx.m1f()))) {
-      this.w4v_1.g2(ensureNotNull(ctx.n2j_1).j1e());
+  h49(ctx) {
+    super.h49(ctx);
+    if (contains(this.u4v_1, token(ctx.j1f()))) {
+      this.v4v_1.z1(ensureNotNull(ctx.m2j_1).g1e());
     }
   }
-  a49(ctx) {
-    super.a49(ctx);
-    this.w4v_1.g2(ensureNotNull(ctx.n2j_1).j1e());
+  z48(ctx) {
+    super.z48(ctx);
+    this.v4v_1.z1(ensureNotNull(ctx.m2j_1).g1e());
   }
-  x48(ctx) {
-    super.x48(ctx);
-    this.w4v_1.g2(ensureNotNull(ctx.n2j_1).j1e());
+  w48(ctx) {
+    super.w48(ctx);
+    this.v4v_1.z1(ensureNotNull(ctx.m2j_1).g1e());
   }
-  l48(ctx) {
-    super.l48(ctx);
-    this.w4v_1.g2(ensureNotNull(ctx.n2j_1).j1e());
+  k48(ctx) {
+    super.k48(ctx);
+    this.v4v_1.z1(ensureNotNull(ctx.m2j_1).g1e());
   }
-  u48(ctx) {
-    super.u48(ctx);
-    this.w4v_1.g2(ensureNotNull(ctx.n2j_1).j1e());
+  t48(ctx) {
+    super.t48(ctx);
+    this.v4v_1.z1(ensureNotNull(ctx.m2j_1).g1e());
   }
 }
 class WhitespaceCollector extends CaosWhitespaceParserBaseListener {
@@ -2067,26 +2071,26 @@ class WhitespaceCollector extends CaosWhitespaceParserBaseListener {
     super();
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.a4w_1 = ArrayList.b2();
+    tmp.z4v_1 = ArrayList.u1();
   }
-  r4t() {
-    return this.a4w_1;
+  q4t() {
+    return this.z4v_1;
   }
-  u4h(ctx) {
-    super.u4h(ctx);
-    this.a4w_1.g2(new Spaces(createRangeWithIndex(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1)), get_trueText(ctx)));
+  t4h(ctx) {
+    super.t4h(ctx);
+    this.z4v_1.z1(new Spaces(createRangeWithIndex(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1)), get_trueText(ctx)));
   }
-  r4h(ctx) {
-    super.r4h(ctx);
-    this.a4w_1.g2(new NewLine(createRangeWithIndex(ensureNotNull(ctx.n2j_1), ensureNotNull(ctx.o2j_1)), get_trueText(ctx)));
+  q4h(ctx) {
+    super.q4h(ctx);
+    this.z4v_1.z1(new NewLine(createRangeWithIndex(ensureNotNull(ctx.m2j_1), ensureNotNull(ctx.n2j_1)), get_trueText(ctx)));
   }
 }
 //endregion
 function CaosTokenParseResult$Companion$$childSerializers$_anonymous__udjadt() {
-  return new ReferenceArraySerializer(getKClass(CaosParserItem), Companion_getInstance().n1e());
+  return new ReferenceArraySerializer(getKClass(CaosParserItem), Companion_getInstance().k1e());
 }
 function CaosTokenParseResult$Companion$$childSerializers$_anonymous__udjadt_0() {
-  return new ReferenceArraySerializer(getKClass(CaosParserItem), Companion_getInstance().n1e());
+  return new ReferenceArraySerializer(getKClass(CaosParserItem), Companion_getInstance().k1e());
 }
 function CaosTokenParseResult$Companion$$childSerializers$_anonymous__udjadt_1() {
   return new ReferenceArraySerializer(getKClass(ErrorVal), $serializer_getInstance());
@@ -2117,17 +2121,17 @@ function parseCaosTokensInNearestScope($this, variant, text, containingScopes, c
   checkDelay = checkDelay === VOID ? null : checkDelay;
   keepGoing = keepGoing === VOID ? null : keepGoing;
   var knock = 1;
-  var _iterator__ex2g4s = containingScopes.d1();
-  $l$loop: while (_iterator__ex2g4s.e1()) {
-    var scope = _iterator__ex2g4s.f1();
-    var scriptSlice = substring(text, scope.d1k_1, scope.e1k_1);
+  var _iterator__ex2g4s = containingScopes.w();
+  $l$loop: while (_iterator__ex2g4s.x()) {
+    var scope = _iterator__ex2g4s.y();
+    var scriptSlice = substring(text, scope.a1k_1, scope.b1k_1);
     // Inline function 'kotlin.text.lowercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$0 = scriptSlice.toLowerCase();
     if (endsWith(tmp$ret$0, 'untl')) {
       scriptSlice = scriptSlice + ' 1 eq 1';
     }
-    var result = $this.x4t(variant, scriptSlice, scope.d1k_1, scope.f1k_1.h1e(), scope.f1k_1.l1e(), checkErrors, checkDelay, keepGoing);
+    var result = $this.w4t(variant, scriptSlice, scope.a1k_1, scope.c1k_1.e1e(), scope.c1k_1.i1e(), checkErrors, checkDelay, keepGoing);
     var tmp;
     if (checkErrors === true) {
       var tmp0 = result.errors;
@@ -2164,18 +2168,18 @@ function parseCaosTokensInNearestScope($this, variant, text, containingScopes, c
     }
     return result;
   }
-  return $this.x4t(variant, text, 0, 0, 0, checkErrors, checkDelay, keepGoing);
+  return $this.w4t(variant, text, 0, 0, 0, checkErrors, checkDelay, keepGoing);
 }
 function CaosTokenizer$parseCaosTokensNear$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = b.f1k_1.h1e() << (16 + b.f1k_1.l1e() | 0);
-  var tmp$ret$2 = a.f1k_1.h1e() << (16 + a.f1k_1.l1e() | 0);
+  var tmp = b.c1k_1.e1e() << (16 + b.c1k_1.i1e() | 0);
+  var tmp$ret$2 = a.c1k_1.e1e() << (16 + a.c1k_1.i1e() | 0);
   return compareValues(tmp, tmp$ret$2);
 }
 function CaosTokenizer$parseCaosTokensWithin$lambda(a, b) {
   // Inline function 'kotlin.comparisons.compareValuesBy' call
-  var tmp = b.f1k_1.h1e() << (16 + b.f1k_1.l1e() | 0);
-  var tmp$ret$2 = a.f1k_1.h1e() << (16 + a.f1k_1.l1e() | 0);
+  var tmp = b.c1k_1.e1e() << (16 + b.c1k_1.i1e() | 0);
+  var tmp$ret$2 = a.c1k_1.e1e() << (16 + a.c1k_1.i1e() | 0);
   return compareValues(tmp, tmp$ret$2);
 }
 function CaosTokenizer$parseCaosTokens$lambda(a, b) {
@@ -2194,7 +2198,7 @@ function get_swallowError() {
   var tmp = KProperty0;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('swallowError', 0, tmp, _get_swallowError_$ref_bhi77b(), null);
-  return tmp0.r3();
+  return tmp0.k3();
 }
 var swallowError$delegate;
 var CaosTokenizerUtil_instance;
@@ -2235,30 +2239,30 @@ function getTerminator(start) {
       tmp = 'RETN';
       break;
     default:
-      throw Exception.lc("Unexpected start token '" + start + "' for getTerminator()");
+      throw Exception.gc("Unexpected start token '" + start + "' for getTerminator()");
   }
   return tmp;
 }
 function sortTokens(range) {
   _init_properties_CaosTokenizerUtil_kt__xz8lsr();
-  var length = range.e1k_1 - range.d1k_1 | 0;
+  var length = range.b1k_1 - range.a1k_1 | 0;
   var start;
   var end;
   if (length <= 0) {
-    start = range.g1k_1;
-    end = range.g1k_1;
-  } else if (range.f1k_1.h1e() < range.g1k_1.h1e()) {
-    start = range.f1k_1;
-    end = range.g1k_1;
-  } else if (range.f1k_1.h1e() > range.g1k_1.h1e()) {
-    start = range.g1k_1;
-    end = range.f1k_1;
-  } else if (range.f1k_1.l1e() <= range.g1k_1.l1e()) {
-    start = range.f1k_1;
-    end = range.g1k_1;
+    start = range.d1k_1;
+    end = range.d1k_1;
+  } else if (range.c1k_1.e1e() < range.d1k_1.e1e()) {
+    start = range.c1k_1;
+    end = range.d1k_1;
+  } else if (range.c1k_1.e1e() > range.d1k_1.e1e()) {
+    start = range.d1k_1;
+    end = range.c1k_1;
+  } else if (range.c1k_1.i1e() <= range.d1k_1.i1e()) {
+    start = range.c1k_1;
+    end = range.d1k_1;
   } else {
-    start = range.g1k_1;
-    end = range.f1k_1;
+    start = range.d1k_1;
+    end = range.c1k_1;
   }
   return new Pair(start, end);
 }
@@ -2279,30 +2283,30 @@ function _init_properties_CaosTokenizerUtil_kt__xz8lsr() {
 function caos2Values($this, ctx) {
   // Inline function 'kotlin.text.toRegex' call
   var this_0 = '[-+]?\\d+';
-  var intRegex = Regex.xf(this_0);
+  var intRegex = Regex.uf(this_0);
   // Inline function 'kotlin.collections.orEmpty' call
-  var tmp0_elvis_lhs = ctx.m2j_1;
+  var tmp0_elvis_lhs = ctx.l2j_1;
   // Inline function 'kotlin.collections.filterIsInstance' call
   var tmp0 = tmp0_elvis_lhs == null ? emptyList() : tmp0_elvis_lhs;
   // Inline function 'kotlin.collections.filterIsInstanceTo' call
-  var destination = ArrayList.b2();
-  var _iterator__ex2g4s = tmp0.d1();
-  while (_iterator__ex2g4s.e1()) {
-    var element = _iterator__ex2g4s.f1();
+  var destination = ArrayList.u1();
+  var _iterator__ex2g4s = tmp0.w();
+  while (_iterator__ex2g4s.x()) {
+    var element = _iterator__ex2g4s.y();
     if (element instanceof Caos2ValueContext) {
-      destination.g2(element);
+      destination.z1(element);
     }
   }
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_0 = ArrayList.f2(collectionSizeOrDefault(destination, 10));
-  var _iterator__ex2g4s_0 = destination.d1();
-  while (_iterator__ex2g4s_0.e1()) {
-    var item = _iterator__ex2g4s_0.f1();
-    var text = item.m1f();
+  var destination_0 = ArrayList.y1(collectionSizeOrDefault(destination, 10));
+  var _iterator__ex2g4s_0 = destination.w();
+  while (_iterator__ex2g4s_0.x()) {
+    var item = _iterator__ex2g4s_0.y();
+    var text = item.j1f();
     var range = textRangeWithoutParserIndex(item);
     var tmp;
-    if (intRegex.yf(text)) {
+    if (intRegex.vf(text)) {
       tmp = new IntVal(range, toInt(text));
     } else if (startsWith(text, _Char___init__impl__6a9atx(34)) && endsWith_0(text, _Char___init__impl__6a9atx(34))) {
       tmp = new C2eStringVal(range, stripSurroundingQuotes(text));
@@ -2310,16 +2314,16 @@ function caos2Values($this, ctx) {
       tmp = new TokenVal(range, stripSurroundingQuotes(text));
     }
     var tmp$ret$6 = tmp;
-    destination_0.g2(tmp$ret$6);
+    destination_0.z1(tmp$ret$6);
   }
   // Inline function 'kotlin.collections.toTypedArray' call
   return copyToArray(destination_0);
 }
 function _get_tokens__ivj641($this) {
-  var tmp0_elvis_lhs = $this.l4v_1;
+  var tmp0_elvis_lhs = $this.k4v_1;
   var tmp;
   if (tmp0_elvis_lhs == null) {
-    throw AlreadyDisposedException.j1g('Tokens already disposed');
+    throw AlreadyDisposedException.g1g('Tokens already disposed');
   } else {
     tmp = tmp0_elvis_lhs;
   }
@@ -2328,7 +2332,7 @@ function _get_tokens__ivj641($this) {
 function calculateOffsets($this, tokens) {
   var tmp = $this;
   // Inline function 'kotlin.collections.mutableListOf' call
-  tmp.f4v_1 = ArrayList.b2();
+  tmp.e4v_1 = ArrayList.u1();
   // Inline function 'kotlin.collections.isEmpty' call
   if (tokens.length === 0) {
     return emptyList();
@@ -2343,35 +2347,35 @@ function calculateOffsets($this, tokens) {
     }
   }
   enterEof($this, last(tokens));
-  $this.l4v_1 = null;
-  return ensureNotNull($this.f4v_1);
+  $this.k4v_1 = null;
+  return ensureNotNull($this.e4v_1);
 }
 function enterWord($this, ctx) {
   var token = ctx.token;
-  $this.j4v_1 = (!$this.i4v_1 && token === $this.k4v_1);
-  if (contains(Companion_getInstance_2().q4w_1, token)) {
+  $this.i4v_1 = (!$this.h4v_1 && token === $this.j4v_1);
+  if (contains(Companion_getInstance_2().p4w_1, token)) {
     enterControlStatementStart($this, token, ctx);
-  } else if (contains(Companion_getInstance_2().r4w_1, token)) {
+  } else if (contains(Companion_getInstance_2().q4w_1, token)) {
     exitControlStatementEnd($this, token, ctx);
-  } else if (contains(Companion_getInstance_2().s4w_1, token)) {
+  } else if (contains(Companion_getInstance_2().r4w_1, token)) {
     closeScript($this, token, ctx);
   }
-  $this.h4v_1 = ($this.i4v_1 && contains_0(Companion_getInstance_2().t4w_1, token));
+  $this.g4v_1 = ($this.h4v_1 && contains_0(Companion_getInstance_2().s4w_1, token));
 }
 function enterControlStatementStart($this, token, ctx) {
-  $this.j4v_1 = false;
-  insertFront($this.e4v_1, new Pair(token, ctx));
-  $this.g4v_1 = $this.g4v_1 + 1 | 0;
+  $this.i4v_1 = false;
+  insertFront($this.d4v_1, new Pair(token, ctx));
+  $this.f4v_1 = $this.f4v_1 + 1 | 0;
 }
 function exitControlStatementEnd($this, token, ctx) {
-  $this.j4v_1 = false;
-  if ($this.h4v_1) {
-    $this.h4v_1 = false;
-    if (token === Companion_getInstance_2().k4w_1) {
+  $this.i4v_1 = false;
+  if ($this.g4v_1) {
+    $this.g4v_1 = false;
+    if (token === Companion_getInstance_2().j4w_1) {
       return Unit_instance;
     }
   }
-  var tmp1_elvis_lhs = token === Companion_getInstance_2().i4w_1 ? Companion_getInstance_2().c4w_1 : token === Companion_getInstance_2().j4w_1 || token === Companion_getInstance_2().o4w_1 ? Companion_getInstance_2().f4w_1 : token === Companion_getInstance_2().n4w_1 ? $this.e4v_1.i2() <= 1 ? Companion_getInstance_2().g4w_1 : null : token === Companion_getInstance_2().k4w_1 ? Companion_getInstance_2().e4w_1 : token === Companion_getInstance_2().m4w_1 ? Companion_getInstance_2().h4w_1 : token === Companion_getInstance_2().l4w_1 ? Companion_getInstance_2().d4w_1 : null;
+  var tmp1_elvis_lhs = token === Companion_getInstance_2().h4w_1 ? Companion_getInstance_2().b4w_1 : token === Companion_getInstance_2().i4w_1 || token === Companion_getInstance_2().n4w_1 ? Companion_getInstance_2().e4w_1 : token === Companion_getInstance_2().m4w_1 ? $this.d4v_1.b2() <= 1 ? Companion_getInstance_2().f4w_1 : null : token === Companion_getInstance_2().j4w_1 ? Companion_getInstance_2().d4w_1 : token === Companion_getInstance_2().l4w_1 ? Companion_getInstance_2().g4w_1 : token === Companion_getInstance_2().k4w_1 ? Companion_getInstance_2().c4w_1 : null;
   var tmp;
   if (tmp1_elvis_lhs == null) {
     return Unit_instance;
@@ -2382,24 +2386,24 @@ function exitControlStatementEnd($this, token, ctx) {
   popUntil($this, start, ctx);
 }
 function closeScript($this, token, ctx) {
-  if ($this.j4v_1) {
-    $this.j4v_1 = false;
-    if (token === Companion_getInstance_2().b4w_1) {
+  if ($this.i4v_1) {
+    $this.i4v_1 = false;
+    if (token === Companion_getInstance_2().a4w_1) {
       return Unit_instance;
     }
   }
-  $this.j4v_1 = false;
+  $this.i4v_1 = false;
   popAll($this, ctx, true);
-  $this.g4v_1 = 0;
+  $this.f4v_1 = 0;
 }
 function enterEof($this, ctx) {
   popAll($this, ctx);
 }
 function popAll($this, ctx, markBefore) {
   markBefore = markBefore === VOID ? false : markBefore;
-  $this.g4v_1 = 0;
+  $this.f4v_1 = 0;
   while (true) {
-    var tmp0_elvis_lhs = removeFirstOrNull($this.e4v_1);
+    var tmp0_elvis_lhs = removeFirstOrNull($this.d4v_1);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return Unit_instance;
@@ -2407,13 +2411,13 @@ function popAll($this, ctx, markBefore) {
       tmp = tmp0_elvis_lhs;
     }
     var item = tmp;
-    popMismatch($this, item.second.d1q_1, item.second.c1q_1, ctx.g1e(), markBefore);
+    popMismatch($this, item.second.a1q_1, item.second.z1p_1, ctx.d1e(), markBefore);
   }
 }
 function popUntil($this, startToken, endCtx) {
   var didFindStart = false;
   $l$loop_1: while (true) {
-    var tmp0_elvis_lhs = removeFirstOrNull($this.e4v_1);
+    var tmp0_elvis_lhs = removeFirstOrNull($this.d4v_1);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       break $l$loop_1;
@@ -2421,34 +2425,34 @@ function popUntil($this, startToken, endCtx) {
       tmp = tmp0_elvis_lhs;
     }
     var item = tmp;
-    $this.g4v_1 = $this.g4v_1 - 1 | 0;
-    if ($this.g4v_1 < 0) {
-      $this.g4v_1 = 0;
+    $this.f4v_1 = $this.f4v_1 - 1 | 0;
+    if ($this.f4v_1 < 0) {
+      $this.f4v_1 = 0;
     }
     if (!contains(startToken, item.first)) {
-      popMismatch($this, item.second.d1q_1, item.second.c1q_1, endCtx.c1q_1);
+      popMismatch($this, item.second.a1q_1, item.second.z1p_1, endCtx.z1p_1);
     } else {
       var token = item.second;
-      var tokenRange = token.c1q_1;
+      var tokenRange = token.z1p_1;
       if (tokenRange == null) {
         continue $l$loop_1;
       }
       didFindStart = true;
       // Inline function 'kotlin.text.lowercase' call
       // Inline function 'kotlin.js.asDynamic' call
-      var tmp$ret$0 = endCtx.d1q_1.toLowerCase();
-      popMatch($this, item.second.d1q_1, tmp$ret$0, item.second.c1q_1, endCtx.c1q_1);
+      var tmp$ret$0 = endCtx.a1q_1.toLowerCase();
+      popMatch($this, item.second.a1q_1, tmp$ret$0, item.second.z1p_1, endCtx.z1p_1);
       break $l$loop_1;
     }
   }
   if (!didFindStart) {
-    var start = endCtx.c1q_1;
-    var end = endCtx.c1q_1;
-    ensureNotNull($this.f4v_1).g2(Companion_instance.createWithStartEnd(null, endCtx.d1q_1, start, end, null, $this.g4v_1));
+    var start = endCtx.z1p_1;
+    var end = endCtx.z1p_1;
+    ensureNotNull($this.e4v_1).z1(Companion_instance.createWithStartEnd(null, endCtx.a1q_1, start, end, null, $this.f4v_1));
   }
 }
 function popMatch($this, startCommand, endToken, start, end) {
-  var tmp = ensureNotNull($this.f4v_1);
+  var tmp = ensureNotNull($this.e4v_1);
   var tmp_0 = Companion_instance;
   // Inline function 'kotlin.text.lowercase' call
   // Inline function 'kotlin.js.asDynamic' call
@@ -2456,41 +2460,41 @@ function popMatch($this, startCommand, endToken, start, end) {
   // Inline function 'kotlin.text.lowercase' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$2 = endToken.toLowerCase();
-  tmp.g2(tmp_0.createWithStartEnd(tmp_1, tmp$ret$2, start, end, null, $this.g4v_1));
+  tmp.z1(tmp_0.createWithStartEnd(tmp_1, tmp$ret$2, start, end, null, $this.f4v_1));
 }
 function popMismatch($this, startCommand, start, newStart, markBefore) {
   markBefore = markBefore === VOID ? true : markBefore;
-  var tmp = ensureNotNull($this.f4v_1);
-  var tmp_0 = start.j1e();
+  var tmp = ensureNotNull($this.e4v_1);
+  var tmp_0 = start.g1e();
   var tmp_1;
   if (markBefore) {
-    var tmp0 = start.m1e();
+    var tmp0 = start.j1e();
     // Inline function 'kotlin.comparisons.maxOf' call
-    var b = newStart.j1e();
+    var b = newStart.g1e();
     tmp_1 = Math.max(tmp0, b);
   } else {
-    var tmp0_0 = start.m1e();
+    var tmp0_0 = start.j1e();
     // Inline function 'kotlin.comparisons.maxOf' call
-    var b_0 = newStart.m1e();
+    var b_0 = newStart.j1e();
     tmp_1 = Math.max(tmp0_0, b_0);
   }
   var tmp_2 = tmp_1;
-  var tmp_3 = new PositionImpl(start.o1().h1e(), start.o1().l1e());
+  var tmp_3 = new PositionImpl(start.h1().e1e(), start.h1().i1e());
   var tmp_4;
   if (markBefore) {
-    var tmp_5 = newStart.o1().h1e();
+    var tmp_5 = newStart.h1().e1e();
     // Inline function 'kotlin.comparisons.maxOf' call
-    var b_1 = newStart.o1().l1e();
+    var b_1 = newStart.h1().i1e();
     var tmp$ret$2 = Math.max(0, b_1);
     tmp_4 = new PositionImpl(tmp_5, tmp$ret$2);
   } else {
-    var tmp_6 = newStart.i1e().h1e();
+    var tmp_6 = newStart.f1e().e1e();
     // Inline function 'kotlin.comparisons.maxOf' call
-    var b_2 = newStart.i1e().l1e();
+    var b_2 = newStart.f1e().i1e();
     var tmp$ret$3 = Math.max(0, b_2);
     tmp_4 = new PositionImpl(tmp_6, tmp$ret$3);
   }
-  tmp.g2(new BlockRange(startCommand, null, tmp_0, tmp_2, tmp_3, tmp_4, null, $this.g4v_1));
+  tmp.z1(new BlockRange(startCommand, null, tmp_0, tmp_2, tmp_3, tmp_4, null, $this.f4v_1));
 }
 var Companion_instance_1;
 function Companion_getInstance_2() {
@@ -2499,39 +2503,39 @@ function Companion_getInstance_2() {
   return Companion_instance_1;
 }
 function _get_toRange__509vin($this) {
-  var tmp0 = $this.q4u_1;
+  var tmp0 = $this.p4u_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('toRange', 1, tmp, RawTokenizer$_get_toRange_$ref_gjcmo9(), null);
-  return tmp0.r3();
+  return tmp0.k3();
 }
 function caos2Values_0($this, ctx) {
   // Inline function 'kotlin.text.toRegex' call
   var this_0 = '[-+]?\\d+';
-  var intRegex = Regex.xf(this_0);
+  var intRegex = Regex.uf(this_0);
   // Inline function 'kotlin.collections.orEmpty' call
-  var tmp0_elvis_lhs = ctx.m2j_1;
+  var tmp0_elvis_lhs = ctx.l2j_1;
   // Inline function 'kotlin.collections.filterIsInstance' call
   var tmp0 = tmp0_elvis_lhs == null ? emptyList() : tmp0_elvis_lhs;
   // Inline function 'kotlin.collections.filterIsInstanceTo' call
-  var destination = ArrayList.b2();
-  var _iterator__ex2g4s = tmp0.d1();
-  while (_iterator__ex2g4s.e1()) {
-    var element = _iterator__ex2g4s.f1();
+  var destination = ArrayList.u1();
+  var _iterator__ex2g4s = tmp0.w();
+  while (_iterator__ex2g4s.x()) {
+    var element = _iterator__ex2g4s.y();
     if (element instanceof Caos2ValueContext_0) {
-      destination.g2(element);
+      destination.z1(element);
     }
   }
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_0 = ArrayList.f2(collectionSizeOrDefault(destination, 10));
-  var _iterator__ex2g4s_0 = destination.d1();
-  while (_iterator__ex2g4s_0.e1()) {
-    var item = _iterator__ex2g4s_0.f1();
+  var destination_0 = ArrayList.y1(collectionSizeOrDefault(destination, 10));
+  var _iterator__ex2g4s_0 = destination.w();
+  while (_iterator__ex2g4s_0.x()) {
+    var item = _iterator__ex2g4s_0.y();
     var text = get_trueText(item);
-    var range = textRangeWithParserIndex(item, $this.m4u_1.i2());
+    var range = textRangeWithParserIndex(item, $this.l4u_1.b2());
     var tmp;
-    if (intRegex.yf(text)) {
+    if (intRegex.vf(text)) {
       tmp = new IntVal(range, toInt(text));
     } else if (startsWith(text, _Char___init__impl__6a9atx(34)) && endsWith_0(text, _Char___init__impl__6a9atx(34))) {
       tmp = new C2eStringVal(range, stripSurroundingQuotes(text));
@@ -2539,7 +2543,7 @@ function caos2Values_0($this, ctx) {
       tmp = new TokenVal(range, stripSurroundingQuotes(text));
     }
     var tmp$ret$6 = tmp;
-    destination_0.g2(tmp$ret$6);
+    destination_0.z1(tmp$ret$6);
   }
   // Inline function 'kotlin.collections.toTypedArray' call
   return copyToArray(destination_0);
@@ -2569,20 +2573,20 @@ function RawTokenizer$errorStrategy$delegate$lambda() {
 }
 function RawTokenizer$toRange$delegate$lambda$lambda(this$0) {
   return (start, end) => {
-    var tmp = this$0.m4u_1.i2();
-    var tmp0_elvis_lhs = this$0.h4u_1;
+    var tmp = this$0.l4u_1.b2();
+    var tmp0_elvis_lhs = this$0.g4u_1;
     var tmp_0 = tmp0_elvis_lhs == null ? 0 : tmp0_elvis_lhs;
-    var tmp1_elvis_lhs = this$0.i4u_1;
-    return createRangeWithIndex_0(start, end, tmp, this$0.g4u_1, tmp_0, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs);
+    var tmp1_elvis_lhs = this$0.h4u_1;
+    return createRangeWithIndex_0(start, end, tmp, this$0.f4u_1, tmp_0, tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs);
   };
 }
 function RawTokenizer$toRange$delegate$lambda$lambda_0(this$0) {
-  return (start, end) => createRangeWithIndex(start, end, this$0.m4u_1.i2());
+  return (start, end) => createRangeWithIndex(start, end, this$0.l4u_1.b2());
 }
 function RawTokenizer$toRange$delegate$lambda(this$0) {
   return () => {
     var tmp;
-    if (!(this$0.g4u_1 == null)) {
+    if (!(this$0.f4u_1 == null)) {
       tmp = RawTokenizer$toRange$delegate$lambda$lambda(this$0);
     } else {
       tmp = RawTokenizer$toRange$delegate$lambda$lambda_0(this$0);
@@ -2594,17 +2598,18 @@ function RawTokenizer$_get_toRange_$ref_gjcmo9() {
   return (p0) => _get_toRange__509vin(p0);
 }
 function blockRangeFromTokens(startToken, endToken, start, end, parserIndex, depth) {
-  return new BlockRange(startToken, endToken, start.j1e(), end.q29() + 1 | 0, toPosition(start), toPosition(end), parserIndex, depth);
+  return new BlockRange(startToken, endToken, start.g1e(), end.p29() + 1 | 0, toPosition(start), toPosition(end), parserIndex, depth);
 }
 function parseCaosTokensNear(variant, text, line, character, checkErrors, checkDelay, keepGoing) {
   checkErrors = checkErrors === VOID ? null : checkErrors;
   checkDelay = checkDelay === VOID ? null : checkDelay;
   keepGoing = keepGoing === VOID ? null : keepGoing;
-  var out = CaosTokenizer_instance.d4u(variant, text, line, character, checkErrors, checkDelay, keepGoing);
+  assertValidVariant_0(variant);
+  var out = CaosTokenizer_instance.c4u(variant, text, line, character, checkErrors, checkDelay, keepGoing);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_json();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer(this_1, createKType(getKClass(CaosTokenParseResult), arrayOf([]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -2614,11 +2619,11 @@ function parseCaosTokensWithin(variant, text, startLine, startCharacter, endLine
   checkErrors = checkErrors === VOID ? null : checkErrors;
   checkDelay = checkDelay === VOID ? null : checkDelay;
   keepGoing = keepGoing === VOID ? null : keepGoing;
-  var out = CaosTokenizer_instance.f4u(variant, text, startLine, startCharacter, endLine, endCharacter, checkErrors, checkDelay, keepGoing);
+  var out = CaosTokenizer_instance.e4u(variant, text, startLine, startCharacter, endLine, endCharacter, checkErrors, checkDelay, keepGoing);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_json();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer(this_1, createKType(getKClass(CaosTokenParseResult), arrayOf([]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -2626,11 +2631,11 @@ function parseCaosTokensWithin(variant, text, startLine, startCharacter, endLine
 }
 function parseCaosTokens(variant, text, keepGoing) {
   keepGoing = keepGoing === VOID ? null : keepGoing;
-  var out = CaosTokenizer_instance.x4t(variant, text, 0, 0, 0, null, null, keepGoing);
+  var out = CaosTokenizer_instance.w4t(variant, text, 0, 0, 0, null, null, keepGoing);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_json();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer(this_1, createKType(getKClass(CaosTokenParseResult), arrayOf([]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -2646,8 +2651,8 @@ function json$lambda($this$Json) {
   var tmp = $this$Json;
   // Inline function 'kotlinx.serialization.modules.SerializersModule' call
   var builder = new SerializersModuleBuilder();
-  builder.u1d(get_caosCoreDefaultSerializersModule());
-  tmp.p4j_1 = builder.y11();
+  builder.r1d(get_caosCoreDefaultSerializersModule());
+  tmp.o4j_1 = builder.v11();
   return Unit_instance;
 }
 var properties_initialized_util_kt_qfsh5w;
@@ -2659,7 +2664,7 @@ function _init_properties_util_kt__mcwhvi() {
 }
 //region block: post-declaration
 initMetadataForCompanion(Companion);
-protoOf($serializer).p14 = typeParametersSerializers;
+protoOf($serializer).m14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CaosTokenParseResult, 'CaosTokenParseResult', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance_3});
 initMetadataForClass(sam$kotlin_Comparator$0, 'sam$kotlin_Comparator$0', VOID, VOID, [Comparator, FunctionAdapter]);

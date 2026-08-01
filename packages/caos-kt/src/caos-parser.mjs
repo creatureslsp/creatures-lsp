@@ -164,6 +164,7 @@ import {
   EqOpVal1x8wuy0bp0elw as EqOpVal,
   ValueType_EQ_OP_getInstance2xourbxqn8lva as ValueType_EQ_OP_getInstance,
   throwOnInvalid3qrq0nbcv2ih3 as throwOnInvalid,
+  assertValidVariantj6a091z2jtqp as assertValidVariant_0,
   BlockRange1mpuhdlzngrid as BlockRange,
   _CommandType___init__impl__hcrq8k3umnyadjtc9uy as _CommandType___init__impl__hcrq8k,
   TypeTokens_getInstanceano5od1y9c5f as TypeTokens_getInstance,
@@ -222,9 +223,9 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.g4y_1 = [null, null, null, null, null, tmp_1, null, null, null, null, null, lazy(tmp_2, CaosList$Companion$$childSerializers$_anonymous__8eujbq_0)];
+    tmp.f4y_1 = [null, null, null, null, null, tmp_1, null, null, null, null, null, lazy(tmp_2, CaosList$Companion$$childSerializers$_anonymous__8eujbq_0)];
   }
-  n1e() {
+  k1e() {
     return $serializer_getInstance_8();
   }
 }
@@ -232,67 +233,67 @@ class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.CaosList', this, 12);
-    tmp0_serialDesc.z13('parameterIndex', false);
-    tmp0_serialDesc.z13('openBrace', false);
-    tmp0_serialDesc.z13('inEqualityExpression', false);
-    tmp0_serialDesc.z13('containingCommand', false);
-    tmp0_serialDesc.z13('type', true);
-    tmp0_serialDesc.z13('parserItem', true);
-    tmp0_serialDesc.z13('textRange', true);
-    tmp0_serialDesc.z13('parserIndexStart', true);
-    tmp0_serialDesc.z13('parserIndexEnd', true);
-    tmp0_serialDesc.z13('closeBrace', true);
-    tmp0_serialDesc.z13('complete', true);
-    tmp0_serialDesc.z13('mItems', true);
-    this.h4y_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('parameterIndex', false);
+    tmp0_serialDesc.w13('openBrace', false);
+    tmp0_serialDesc.w13('inEqualityExpression', false);
+    tmp0_serialDesc.w13('containingCommand', false);
+    tmp0_serialDesc.w13('type', true);
+    tmp0_serialDesc.w13('parserItem', true);
+    tmp0_serialDesc.w13('textRange', true);
+    tmp0_serialDesc.w13('parserIndexStart', true);
+    tmp0_serialDesc.w13('parserIndexEnd', true);
+    tmp0_serialDesc.w13('closeBrace', true);
+    tmp0_serialDesc.w13('complete', true);
+    tmp0_serialDesc.w13('mItems', true);
+    this.g4y_1 = tmp0_serialDesc;
   }
-  i4y(encoder, value) {
-    var tmp0_desc = this.h4y_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_1().g4y_1;
-    tmp1_output.px(tmp0_desc, 0, value.j4y_1);
-    tmp1_output.wx(tmp0_desc, 1, $serializer_getInstance(), value.k4y_1);
-    tmp1_output.mx(tmp0_desc, 2, value.l4y_1);
-    tmp1_output.yx(tmp0_desc, 3, $serializer_getInstance_12(), value.m4y_1);
-    if (tmp1_output.cy(tmp0_desc, 4) ? true : !(value.n4y_1 === ValueType_LIST_getInstance().value)) {
-      tmp1_output.px(tmp0_desc, 4, value.n4y_1);
+  h4y(encoder, value) {
+    var tmp0_desc = this.g4y_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_1().f4y_1;
+    tmp1_output.mx(tmp0_desc, 0, value.i4y_1);
+    tmp1_output.tx(tmp0_desc, 1, $serializer_getInstance(), value.j4y_1);
+    tmp1_output.jx(tmp0_desc, 2, value.k4y_1);
+    tmp1_output.vx(tmp0_desc, 3, $serializer_getInstance_12(), value.l4y_1);
+    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.m4y_1 === ValueType_LIST_getInstance().value)) {
+      tmp1_output.mx(tmp0_desc, 4, value.m4y_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 5) ? true : !equals(value.o4y_1, value.k4y_1)) {
-      tmp1_output.wx(tmp0_desc, 5, tmp2_cached[5].r3(), value.o4y_1);
+    if (tmp1_output.zx(tmp0_desc, 5) ? true : !equals(value.n4y_1, value.j4y_1)) {
+      tmp1_output.tx(tmp0_desc, 5, tmp2_cached[5].k3(), value.n4y_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 6) ? true : !equals(value.p4y_1, value.k4y_1.p1r_1)) {
-      tmp1_output.wx(tmp0_desc, 6, RangeWithIndexSerializer_getInstance(), value.p4y_1);
+    if (tmp1_output.zx(tmp0_desc, 6) ? true : !equals(value.o4y_1, value.j4y_1.m1r_1)) {
+      tmp1_output.tx(tmp0_desc, 6, RangeWithIndexSerializer_getInstance(), value.o4y_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 7) ? true : !(value.q4y_1 == value.k4y_1.f1g())) {
-      tmp1_output.yx(tmp0_desc, 7, IntSerializer_getInstance(), value.q4y_1);
+    if (tmp1_output.zx(tmp0_desc, 7) ? true : !(value.p4y_1 == value.j4y_1.c1g())) {
+      tmp1_output.vx(tmp0_desc, 7, IntSerializer_getInstance(), value.p4y_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 8) ? true : !(value.r4y_1 == value.k4y_1.g1g())) {
-      tmp1_output.yx(tmp0_desc, 8, IntSerializer_getInstance(), value.r4y_1);
+    if (tmp1_output.zx(tmp0_desc, 8) ? true : !(value.q4y_1 == value.j4y_1.d1g())) {
+      tmp1_output.vx(tmp0_desc, 8, IntSerializer_getInstance(), value.q4y_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 9) ? true : !(value.s4y_1 == null)) {
-      tmp1_output.yx(tmp0_desc, 9, $serializer_getInstance(), value.s4y_1);
+    if (tmp1_output.zx(tmp0_desc, 9) ? true : !(value.r4y_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 9, $serializer_getInstance(), value.r4y_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 10) ? true : !(value.t4y_1 === false)) {
-      tmp1_output.mx(tmp0_desc, 10, value.t4y_1);
+    if (tmp1_output.zx(tmp0_desc, 10) ? true : !(value.s4y_1 === false)) {
+      tmp1_output.jx(tmp0_desc, 10, value.s4y_1);
     }
     var tmp;
-    if (tmp1_output.cy(tmp0_desc, 11)) {
+    if (tmp1_output.zx(tmp0_desc, 11)) {
       tmp = true;
     } else {
       // Inline function 'kotlin.collections.mutableListOf' call
-      var tmp$ret$0 = ArrayList.b2();
-      tmp = !equals(value.u4y_1, tmp$ret$0);
+      var tmp$ret$0 = ArrayList.u1();
+      tmp = !equals(value.t4y_1, tmp$ret$0);
     }
     if (tmp) {
-      tmp1_output.wx(tmp0_desc, 11, tmp2_cached[11].r3(), value.u4y_1);
+      tmp1_output.tx(tmp0_desc, 11, tmp2_cached[11].k3(), value.t4y_1);
     }
-    tmp1_output.fw(tmp0_desc);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.i4y(encoder, value instanceof CaosList ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.h4y(encoder, value instanceof CaosList ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.h4y_1;
+  nr(decoder) {
+    var tmp0_desc = this.g4y_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -308,179 +309,179 @@ class $serializer {
     var tmp13_local9 = null;
     var tmp14_local10 = false;
     var tmp15_local11 = null;
-    var tmp16_input = decoder.ew(tmp0_desc);
-    var tmp17_cached = Companion_getInstance_1().g4y_1;
-    if (tmp16_input.vw()) {
-      tmp4_local0 = tmp16_input.jw(tmp0_desc, 0);
+    var tmp16_input = decoder.bw(tmp0_desc);
+    var tmp17_cached = Companion_getInstance_1().f4y_1;
+    if (tmp16_input.sw()) {
+      tmp4_local0 = tmp16_input.gw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp16_input.qw(tmp0_desc, 1, $serializer_getInstance(), tmp5_local1);
+      tmp5_local1 = tmp16_input.nw(tmp0_desc, 1, $serializer_getInstance(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp16_input.gw(tmp0_desc, 2);
+      tmp6_local2 = tmp16_input.dw(tmp0_desc, 2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp16_input.sw(tmp0_desc, 3, $serializer_getInstance_12(), tmp7_local3);
+      tmp7_local3 = tmp16_input.pw(tmp0_desc, 3, $serializer_getInstance_12(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp16_input.jw(tmp0_desc, 4);
+      tmp8_local4 = tmp16_input.gw(tmp0_desc, 4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp16_input.qw(tmp0_desc, 5, tmp17_cached[5].r3(), tmp9_local5);
+      tmp9_local5 = tmp16_input.nw(tmp0_desc, 5, tmp17_cached[5].k3(), tmp9_local5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp16_input.qw(tmp0_desc, 6, RangeWithIndexSerializer_getInstance(), tmp10_local6);
+      tmp10_local6 = tmp16_input.nw(tmp0_desc, 6, RangeWithIndexSerializer_getInstance(), tmp10_local6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
-      tmp11_local7 = tmp16_input.sw(tmp0_desc, 7, IntSerializer_getInstance(), tmp11_local7);
+      tmp11_local7 = tmp16_input.pw(tmp0_desc, 7, IntSerializer_getInstance(), tmp11_local7);
       tmp3_bitMask0 = tmp3_bitMask0 | 128;
-      tmp12_local8 = tmp16_input.sw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
+      tmp12_local8 = tmp16_input.pw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
       tmp3_bitMask0 = tmp3_bitMask0 | 256;
-      tmp13_local9 = tmp16_input.sw(tmp0_desc, 9, $serializer_getInstance(), tmp13_local9);
+      tmp13_local9 = tmp16_input.pw(tmp0_desc, 9, $serializer_getInstance(), tmp13_local9);
       tmp3_bitMask0 = tmp3_bitMask0 | 512;
-      tmp14_local10 = tmp16_input.gw(tmp0_desc, 10);
+      tmp14_local10 = tmp16_input.dw(tmp0_desc, 10);
       tmp3_bitMask0 = tmp3_bitMask0 | 1024;
-      tmp15_local11 = tmp16_input.qw(tmp0_desc, 11, tmp17_cached[11].r3(), tmp15_local11);
+      tmp15_local11 = tmp16_input.nw(tmp0_desc, 11, tmp17_cached[11].k3(), tmp15_local11);
       tmp3_bitMask0 = tmp3_bitMask0 | 2048;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp16_input.ww(tmp0_desc);
+        tmp2_index = tmp16_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp16_input.jw(tmp0_desc, 0);
+            tmp4_local0 = tmp16_input.gw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp16_input.qw(tmp0_desc, 1, $serializer_getInstance(), tmp5_local1);
+            tmp5_local1 = tmp16_input.nw(tmp0_desc, 1, $serializer_getInstance(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp16_input.gw(tmp0_desc, 2);
+            tmp6_local2 = tmp16_input.dw(tmp0_desc, 2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp16_input.sw(tmp0_desc, 3, $serializer_getInstance_12(), tmp7_local3);
+            tmp7_local3 = tmp16_input.pw(tmp0_desc, 3, $serializer_getInstance_12(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp16_input.jw(tmp0_desc, 4);
+            tmp8_local4 = tmp16_input.gw(tmp0_desc, 4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp16_input.qw(tmp0_desc, 5, tmp17_cached[5].r3(), tmp9_local5);
+            tmp9_local5 = tmp16_input.nw(tmp0_desc, 5, tmp17_cached[5].k3(), tmp9_local5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp16_input.qw(tmp0_desc, 6, RangeWithIndexSerializer_getInstance(), tmp10_local6);
+            tmp10_local6 = tmp16_input.nw(tmp0_desc, 6, RangeWithIndexSerializer_getInstance(), tmp10_local6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           case 7:
-            tmp11_local7 = tmp16_input.sw(tmp0_desc, 7, IntSerializer_getInstance(), tmp11_local7);
+            tmp11_local7 = tmp16_input.pw(tmp0_desc, 7, IntSerializer_getInstance(), tmp11_local7);
             tmp3_bitMask0 = tmp3_bitMask0 | 128;
             break;
           case 8:
-            tmp12_local8 = tmp16_input.sw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
+            tmp12_local8 = tmp16_input.pw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
             tmp3_bitMask0 = tmp3_bitMask0 | 256;
             break;
           case 9:
-            tmp13_local9 = tmp16_input.sw(tmp0_desc, 9, $serializer_getInstance(), tmp13_local9);
+            tmp13_local9 = tmp16_input.pw(tmp0_desc, 9, $serializer_getInstance(), tmp13_local9);
             tmp3_bitMask0 = tmp3_bitMask0 | 512;
             break;
           case 10:
-            tmp14_local10 = tmp16_input.gw(tmp0_desc, 10);
+            tmp14_local10 = tmp16_input.dw(tmp0_desc, 10);
             tmp3_bitMask0 = tmp3_bitMask0 | 1024;
             break;
           case 11:
-            tmp15_local11 = tmp16_input.qw(tmp0_desc, 11, tmp17_cached[11].r3(), tmp15_local11);
+            tmp15_local11 = tmp16_input.nw(tmp0_desc, 11, tmp17_cached[11].k3(), tmp15_local11);
             tmp3_bitMask0 = tmp3_bitMask0 | 2048;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp16_input.fw(tmp0_desc);
-    return CaosList.v4y(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, null);
+    tmp16_input.cw(tmp0_desc);
+    return CaosList.u4y(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, null);
   }
-  or() {
-    return this.h4y_1;
+  lr() {
+    return this.g4y_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance_1().g4y_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance_1().f4y_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [IntSerializer_getInstance(), $serializer_getInstance(), BooleanSerializer_getInstance(), get_nullable($serializer_getInstance_12()), IntSerializer_getInstance(), tmp0_cached[5].r3(), RangeWithIndexSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance()), get_nullable($serializer_getInstance()), BooleanSerializer_getInstance(), tmp0_cached[11].r3()];
+    return [IntSerializer_getInstance(), $serializer_getInstance(), BooleanSerializer_getInstance(), get_nullable($serializer_getInstance_12()), IntSerializer_getInstance(), tmp0_cached[5].k3(), RangeWithIndexSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance()), get_nullable($serializer_getInstance()), BooleanSerializer_getInstance(), tmp0_cached[11].k3()];
   }
 }
 class CaosList {
   constructor(parameterIndex, openBrace, inEqualityExpression, containingCommand) {
     Companion_getInstance_1();
-    this.j4y_1 = parameterIndex;
-    this.k4y_1 = openBrace;
-    this.l4y_1 = inEqualityExpression;
-    this.m4y_1 = containingCommand;
-    this.n4y_1 = ValueType_LIST_getInstance().value;
-    this.o4y_1 = this.k4y_1;
-    this.p4y_1 = this.k4y_1.p1r_1;
-    this.q4y_1 = this.k4y_1.f1g();
-    this.r4y_1 = this.k4y_1.g1g();
-    this.s4y_1 = null;
-    this.t4y_1 = false;
+    this.i4y_1 = parameterIndex;
+    this.j4y_1 = openBrace;
+    this.k4y_1 = inEqualityExpression;
+    this.l4y_1 = containingCommand;
+    this.m4y_1 = ValueType_LIST_getInstance().value;
+    this.n4y_1 = this.j4y_1;
+    this.o4y_1 = this.j4y_1.m1r_1;
+    this.p4y_1 = this.j4y_1.c1g();
+    this.q4y_1 = this.j4y_1.d1g();
+    this.r4y_1 = null;
+    this.s4y_1 = false;
     var tmp = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp.u4y_1 = ArrayList.b2();
+    tmp.t4y_1 = ArrayList.u1();
+  }
+  b4y() {
+    return this.i4y_1;
   }
   c4y() {
-    return this.j4y_1;
-  }
-  d4y() {
-    return this.l4y_1;
-  }
-  f4y() {
-    return this.m4y_1;
-  }
-  t22() {
-    return this.n4y_1;
+    return this.k4y_1;
   }
   e4y() {
+    return this.l4y_1;
+  }
+  q22() {
+    return this.m4y_1;
+  }
+  d4y() {
+    return this.n4y_1;
+  }
+  d1e() {
     return this.o4y_1;
   }
-  g1e() {
+  c1g() {
     return this.p4y_1;
   }
-  f1g() {
+  d1g() {
     return this.q4y_1;
   }
-  g1g() {
-    return this.r4y_1;
-  }
-  e1t() {
+  b1t() {
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = this.u4y_1;
+    var this_0 = this.t4y_1;
     return copyToArray(this_0);
   }
-  w4y(argument) {
-    this.u4y_1.g2(argument);
-    var tmp0_safe_receiver = argument.g1g();
+  v4y(argument) {
+    this.t4y_1.z1(argument);
+    var tmp0_safe_receiver = argument.d1g();
     if (tmp0_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
       var tmp;
-      if (this.r4y_1 == null) {
+      if (this.q4y_1 == null) {
         tmp = true;
       } else {
-        var tmp0_elvis_lhs = this.r4y_1;
+        var tmp0_elvis_lhs = this.q4y_1;
         tmp = tmp0_safe_receiver > (tmp0_elvis_lhs == null ? 1 : tmp0_elvis_lhs);
       }
       if (tmp) {
-        this.r4y_1 = tmp0_safe_receiver;
+        this.q4y_1 = tmp0_safe_receiver;
       }
     }
-    this.x4y();
+    this.w4y();
   }
-  x4y() {
-    var tmp0_safe_receiver = this.s4y_1;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.p1r_1;
+  w4y() {
+    var tmp0_safe_receiver = this.r4y_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.m1r_1;
     var tmp;
     if (tmp1_elvis_lhs == null) {
-      var tmp0 = this.e1t();
+      var tmp0 = this.b1t();
       var tmp$ret$0;
       $l$block_0: {
         // Inline function 'kotlin.collections.maxByOrNull' call
@@ -496,14 +497,14 @@ class CaosList {
           break $l$block_0;
         }
         var it = maxElem;
-        var maxValue = (it.g1e().i1e().h1e() << 16) + it.g1e().i1e().l1e() | 0;
+        var maxValue = (it.d1e().f1e().e1e() << 16) + it.d1e().f1e().i1e() | 0;
         var inductionVariable = 1;
         if (inductionVariable <= lastIndex)
           do {
             var i = inductionVariable;
             inductionVariable = inductionVariable + 1 | 0;
             var e = tmp0[i];
-            var v = (e.g1e().i1e().h1e() << 16) + e.g1e().i1e().l1e() | 0;
+            var v = (e.d1e().f1e().e1e() << 16) + e.d1e().f1e().i1e() | 0;
             if (compareTo(maxValue, v) < 0) {
               maxElem = e;
               maxValue = v;
@@ -513,7 +514,7 @@ class CaosList {
         tmp$ret$0 = maxElem;
       }
       var tmp2_safe_receiver = tmp$ret$0;
-      tmp = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.g1e();
+      tmp = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.d1e();
     } else {
       tmp = tmp1_elvis_lhs;
     }
@@ -526,14 +527,14 @@ class CaosList {
     }
     var end = tmp_0;
     var tmp_1 = this;
-    var tmp4_start = this.k4y_1.p1r_1.o1();
-    var tmp5_end = end.i1e();
-    var tmp6_parserIndex = this.k4y_1.p1r_1.k1e();
-    var tmp7_startIndex = this.k4y_1.p1r_1.j1e();
-    var tmp8_endIndex = end.m1e();
-    tmp_1.p4y_1 = new RangeWithIndexImpl(tmp4_start, tmp5_end, tmp7_startIndex, tmp8_endIndex, tmp6_parserIndex);
+    var tmp4_start = this.j4y_1.m1r_1.h1();
+    var tmp5_end = end.f1e();
+    var tmp6_parserIndex = this.j4y_1.m1r_1.h1e();
+    var tmp7_startIndex = this.j4y_1.m1r_1.g1e();
+    var tmp8_endIndex = end.j1e();
+    tmp_1.o4y_1 = new RangeWithIndexImpl(tmp4_start, tmp5_end, tmp7_startIndex, tmp8_endIndex, tmp6_parserIndex);
   }
-  y4y(brace) {
+  x4y(brace) {
     var tmp = this;
     var tmp_0;
     if (brace == null) {
@@ -541,19 +542,19 @@ class CaosList {
     } else {
       tmp_0 = brace;
     }
-    tmp.s4y_1 = tmp_0;
-    var tmp1_safe_receiver = brace.g1g();
+    tmp.r4y_1 = tmp_0;
+    var tmp1_safe_receiver = brace.d1g();
     if (tmp1_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
-      this.r4y_1 = tmp1_safe_receiver;
+      this.q4y_1 = tmp1_safe_receiver;
     }
-    this.t4y_1 = true;
-    this.x4y();
+    this.s4y_1 = true;
+    this.w4y();
   }
-  m1f() {
-    return stitch(listOfNotNull(arrayConcat([[this.o4y_1], this.e1t(), [this.s4y_1]])));
+  j1f() {
+    return stitch(listOfNotNull(arrayConcat([[this.n4y_1], this.b1t(), [this.r4y_1]])));
   }
   equals(other) {
     if (this === other)
@@ -562,100 +563,100 @@ class CaosList {
       return false;
     if (!(other instanceof CaosList))
       THROW_CCE();
-    if (!(this.j4y_1 === other.j4y_1))
+    if (!(this.i4y_1 === other.i4y_1))
       return false;
-    if (!(this.n4y_1 === other.n4y_1))
+    if (!(this.m4y_1 === other.m4y_1))
       return false;
-    if (!(this.l4y_1 === other.l4y_1))
+    if (!(this.k4y_1 === other.k4y_1))
+      return false;
+    if (!(this.p4y_1 == other.p4y_1))
       return false;
     if (!(this.q4y_1 == other.q4y_1))
       return false;
-    if (!(this.r4y_1 == other.r4y_1))
-      return false;
-    if (!(this.m1f() === other.m1f()))
-      return false;
-    if (!equals(this.p4y_1, other.p4y_1))
+    if (!(this.j1f() === other.j1f()))
       return false;
     if (!equals(this.o4y_1, other.o4y_1))
       return false;
-    if (!equals(this.m4y_1, other.m4y_1))
+    if (!equals(this.n4y_1, other.n4y_1))
       return false;
-    if (!contentEquals(this.e1t(), other.e1t()))
+    if (!equals(this.l4y_1, other.l4y_1))
+      return false;
+    if (!contentEquals(this.b1t(), other.b1t()))
       return false;
     return true;
   }
   hashCode() {
-    var result = this.j4y_1;
-    result = imul(31, result) + this.n4y_1 | 0;
-    result = imul(31, result) + getBooleanHashCode(this.l4y_1) | 0;
+    var result = this.i4y_1;
+    result = imul(31, result) + this.m4y_1 | 0;
+    result = imul(31, result) + getBooleanHashCode(this.k4y_1) | 0;
     var tmp = imul(31, result);
     // Inline function 'kotlin.hashCode' call
-    var tmp0_safe_receiver = this.q4y_1;
+    var tmp0_safe_receiver = this.p4y_1;
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : hashCode(tmp0_safe_receiver);
     result = tmp + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
     var tmp_0 = imul(31, result);
     // Inline function 'kotlin.hashCode' call
-    var tmp0_safe_receiver_0 = this.r4y_1;
+    var tmp0_safe_receiver_0 = this.q4y_1;
     var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : hashCode(tmp0_safe_receiver_0);
     result = tmp_0 + (tmp1_elvis_lhs_0 == null ? 0 : tmp1_elvis_lhs_0) | 0;
-    result = imul(31, result) + getStringHashCode(this.m1f()) | 0;
-    result = imul(31, result) + hashCode(this.p4y_1) | 0;
+    result = imul(31, result) + getStringHashCode(this.j1f()) | 0;
     result = imul(31, result) + hashCode(this.o4y_1) | 0;
+    result = imul(31, result) + hashCode(this.n4y_1) | 0;
     var tmp_1 = imul(31, result);
     // Inline function 'kotlin.hashCode' call
-    var tmp0_safe_receiver_1 = this.m4y_1;
+    var tmp0_safe_receiver_1 = this.l4y_1;
     var tmp1_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : hashCode(tmp0_safe_receiver_1);
     result = tmp_1 + (tmp1_elvis_lhs_1 == null ? 0 : tmp1_elvis_lhs_1) | 0;
-    result = imul(31, result) + contentHashCode(this.e1t()) | 0;
+    result = imul(31, result) + contentHashCode(this.b1t()) | 0;
     return result;
   }
   toString() {
-    return 'CaosList(parameterIndex=' + this.j4y_1 + ', openBrace=' + this.k4y_1.toString() + ', inEqualityExpression=' + this.l4y_1 + ', containingCommand=' + toString(this.m4y_1) + ')';
+    return 'CaosList(parameterIndex=' + this.i4y_1 + ', openBrace=' + this.j4y_1.toString() + ', inEqualityExpression=' + this.k4y_1 + ', containingCommand=' + toString(this.l4y_1) + ')';
   }
-  static v4y(seen0, parameterIndex, openBrace, inEqualityExpression, containingCommand, type, parserItem, textRange, parserIndexStart, parserIndexEnd, closeBrace, complete, mItems, serializationConstructorMarker) {
+  static u4y(seen0, parameterIndex, openBrace, inEqualityExpression, containingCommand, type, parserItem, textRange, parserIndexStart, parserIndexEnd, closeBrace, complete, mItems, serializationConstructorMarker) {
     Companion_getInstance_1();
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance_8().h4y_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance_8().g4y_1);
     }
     var $this = createThis(this);
-    $this.j4y_1 = parameterIndex;
-    $this.k4y_1 = openBrace;
-    $this.l4y_1 = inEqualityExpression;
-    $this.m4y_1 = containingCommand;
+    $this.i4y_1 = parameterIndex;
+    $this.j4y_1 = openBrace;
+    $this.k4y_1 = inEqualityExpression;
+    $this.l4y_1 = containingCommand;
     if (0 === (seen0 & 16))
-      $this.n4y_1 = ValueType_LIST_getInstance().value;
+      $this.m4y_1 = ValueType_LIST_getInstance().value;
     else
-      $this.n4y_1 = type;
+      $this.m4y_1 = type;
     if (0 === (seen0 & 32))
-      $this.o4y_1 = $this.k4y_1;
+      $this.n4y_1 = $this.j4y_1;
     else
-      $this.o4y_1 = parserItem;
+      $this.n4y_1 = parserItem;
     if (0 === (seen0 & 64))
-      $this.p4y_1 = $this.k4y_1.p1r_1;
+      $this.o4y_1 = $this.j4y_1.m1r_1;
     else
-      $this.p4y_1 = textRange;
+      $this.o4y_1 = textRange;
     if (0 === (seen0 & 128))
-      $this.q4y_1 = $this.k4y_1.f1g();
+      $this.p4y_1 = $this.j4y_1.c1g();
     else
-      $this.q4y_1 = parserIndexStart;
+      $this.p4y_1 = parserIndexStart;
     if (0 === (seen0 & 256))
-      $this.r4y_1 = $this.k4y_1.g1g();
+      $this.q4y_1 = $this.j4y_1.d1g();
     else
-      $this.r4y_1 = parserIndexEnd;
+      $this.q4y_1 = parserIndexEnd;
     if (0 === (seen0 & 512))
-      $this.s4y_1 = null;
+      $this.r4y_1 = null;
     else
-      $this.s4y_1 = closeBrace;
+      $this.r4y_1 = closeBrace;
     if (0 === (seen0 & 1024))
-      $this.t4y_1 = false;
+      $this.s4y_1 = false;
     else
-      $this.t4y_1 = complete;
+      $this.s4y_1 = complete;
     if (0 === (seen0 & 2048)) {
       var tmp = $this;
       // Inline function 'kotlin.collections.mutableListOf' call
-      tmp.u4y_1 = ArrayList.b2();
+      tmp.t4y_1 = ArrayList.u1();
     } else
-      $this.u4y_1 = mItems;
+      $this.t4y_1 = mItems;
     return $this;
   }
 }
@@ -682,53 +683,57 @@ class Companion_0 {
     var tmp_16 = LazyThreadSafetyMode_PUBLICATION_getInstance();
     var tmp_17 = lazy(tmp_16, CaosParseResult$Companion$$childSerializers$_anonymous__ue15ng_7);
     var tmp_18 = LazyThreadSafetyMode_PUBLICATION_getInstance();
+    var tmp_19 = lazy(tmp_18, CaosParseResult$Companion$$childSerializers$_anonymous__ue15ng_8);
+    var tmp_20 = LazyThreadSafetyMode_PUBLICATION_getInstance();
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.z4y_1 = [null, null, tmp_1, tmp_3, tmp_5, tmp_7, tmp_9, tmp_11, tmp_13, tmp_15, tmp_17, lazy(tmp_18, CaosParseResult$Companion$$childSerializers$_anonymous__ue15ng_8)];
+    tmp.y4y_1 = [null, null, tmp_1, tmp_3, tmp_5, tmp_7, tmp_9, tmp_11, tmp_13, tmp_15, tmp_17, tmp_19, lazy(tmp_20, CaosParseResult$Companion$$childSerializers$_anonymous__ue15ng_9)];
   }
 }
 class $serializer_0 {
   constructor() {
     $serializer_instance_0 = this;
-    var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.CaosParseResult', this, 12);
-    tmp0_serialDesc.z13('variant', false);
-    tmp0_serialDesc.z13('originalText', false);
-    tmp0_serialDesc.z13('items', false);
-    tmp0_serialDesc.z13('whitespaceItems', false);
-    tmp0_serialDesc.z13('controlStatementErrors', false);
-    tmp0_serialDesc.z13('scripts', false);
-    tmp0_serialDesc.z13('equalityStatements', false);
-    tmp0_serialDesc.z13('equalityStatementRanges', false);
-    tmp0_serialDesc.z13('commandCalls', false);
-    tmp0_serialDesc.z13('comments', false);
-    tmp0_serialDesc.z13('caos2Comments', false);
-    tmp0_serialDesc.z13('looseTokens', false);
-    this.a4z_1 = tmp0_serialDesc;
+    var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.CaosParseResult', this, 13);
+    tmp0_serialDesc.w13('variant', false);
+    tmp0_serialDesc.w13('originalText', false);
+    tmp0_serialDesc.w13('items', false);
+    tmp0_serialDesc.w13('whitespaceItems', false);
+    tmp0_serialDesc.w13('controlStatementErrors', false);
+    tmp0_serialDesc.w13('scripts', false);
+    tmp0_serialDesc.w13('equalityStatements', false);
+    tmp0_serialDesc.w13('equalityStatementRanges', false);
+    tmp0_serialDesc.w13('commandCalls', false);
+    tmp0_serialDesc.w13('comments', false);
+    tmp0_serialDesc.w13('caos2Comments', false);
+    tmp0_serialDesc.w13('looseTokens', false);
+    tmp0_serialDesc.w13('listRanges', false);
+    this.z4y_1 = tmp0_serialDesc;
   }
-  b4z(encoder, value) {
-    var tmp0_desc = this.a4z_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_2().z4y_1;
-    tmp1_output.ux(tmp0_desc, 0, value.variant);
-    tmp1_output.ux(tmp0_desc, 1, value.originalText);
-    tmp1_output.wx(tmp0_desc, 2, tmp2_cached[2].r3(), value.items);
-    tmp1_output.wx(tmp0_desc, 3, tmp2_cached[3].r3(), value.whitespace);
-    tmp1_output.wx(tmp0_desc, 4, tmp2_cached[4].r3(), value.errors);
-    tmp1_output.wx(tmp0_desc, 5, tmp2_cached[5].r3(), value.scripts);
-    tmp1_output.wx(tmp0_desc, 6, tmp2_cached[6].r3(), value.equalityStatements);
-    tmp1_output.wx(tmp0_desc, 7, tmp2_cached[7].r3(), value.equalityStatementRanges);
-    tmp1_output.wx(tmp0_desc, 8, tmp2_cached[8].r3(), value.commandCalls);
-    tmp1_output.wx(tmp0_desc, 9, tmp2_cached[9].r3(), value.comments);
-    tmp1_output.wx(tmp0_desc, 10, tmp2_cached[10].r3(), value.caos2Comments);
-    tmp1_output.wx(tmp0_desc, 11, tmp2_cached[11].r3(), value.looseTokens);
-    tmp1_output.fw(tmp0_desc);
+  a4z(encoder, value) {
+    var tmp0_desc = this.z4y_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_2().y4y_1;
+    tmp1_output.rx(tmp0_desc, 0, value.variant);
+    tmp1_output.rx(tmp0_desc, 1, value.originalText);
+    tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.items);
+    tmp1_output.tx(tmp0_desc, 3, tmp2_cached[3].k3(), value.whitespace);
+    tmp1_output.tx(tmp0_desc, 4, tmp2_cached[4].k3(), value.errors);
+    tmp1_output.tx(tmp0_desc, 5, tmp2_cached[5].k3(), value.scripts);
+    tmp1_output.tx(tmp0_desc, 6, tmp2_cached[6].k3(), value.equalityStatements);
+    tmp1_output.tx(tmp0_desc, 7, tmp2_cached[7].k3(), value.equalityStatementRanges);
+    tmp1_output.tx(tmp0_desc, 8, tmp2_cached[8].k3(), value.commandCalls);
+    tmp1_output.tx(tmp0_desc, 9, tmp2_cached[9].k3(), value.comments);
+    tmp1_output.tx(tmp0_desc, 10, tmp2_cached[10].k3(), value.caos2Comments);
+    tmp1_output.tx(tmp0_desc, 11, tmp2_cached[11].k3(), value.looseTokens);
+    tmp1_output.tx(tmp0_desc, 12, tmp2_cached[12].k3(), value.listRanges);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.b4z(encoder, value instanceof ParseResult ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.a4z(encoder, value instanceof ParseResult ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.a4z_1;
+  nr(decoder) {
+    var tmp0_desc = this.z4y_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -744,108 +749,115 @@ class $serializer_0 {
     var tmp13_local9 = null;
     var tmp14_local10 = null;
     var tmp15_local11 = null;
-    var tmp16_input = decoder.ew(tmp0_desc);
-    var tmp17_cached = Companion_getInstance_2().z4y_1;
-    if (tmp16_input.vw()) {
-      tmp4_local0 = tmp16_input.ow(tmp0_desc, 0);
+    var tmp16_local12 = null;
+    var tmp17_input = decoder.bw(tmp0_desc);
+    var tmp18_cached = Companion_getInstance_2().y4y_1;
+    if (tmp17_input.sw()) {
+      tmp4_local0 = tmp17_input.lw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp16_input.ow(tmp0_desc, 1);
+      tmp5_local1 = tmp17_input.lw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp16_input.qw(tmp0_desc, 2, tmp17_cached[2].r3(), tmp6_local2);
+      tmp6_local2 = tmp17_input.nw(tmp0_desc, 2, tmp18_cached[2].k3(), tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp16_input.qw(tmp0_desc, 3, tmp17_cached[3].r3(), tmp7_local3);
+      tmp7_local3 = tmp17_input.nw(tmp0_desc, 3, tmp18_cached[3].k3(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp16_input.qw(tmp0_desc, 4, tmp17_cached[4].r3(), tmp8_local4);
+      tmp8_local4 = tmp17_input.nw(tmp0_desc, 4, tmp18_cached[4].k3(), tmp8_local4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp16_input.qw(tmp0_desc, 5, tmp17_cached[5].r3(), tmp9_local5);
+      tmp9_local5 = tmp17_input.nw(tmp0_desc, 5, tmp18_cached[5].k3(), tmp9_local5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp16_input.qw(tmp0_desc, 6, tmp17_cached[6].r3(), tmp10_local6);
+      tmp10_local6 = tmp17_input.nw(tmp0_desc, 6, tmp18_cached[6].k3(), tmp10_local6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
-      tmp11_local7 = tmp16_input.qw(tmp0_desc, 7, tmp17_cached[7].r3(), tmp11_local7);
+      tmp11_local7 = tmp17_input.nw(tmp0_desc, 7, tmp18_cached[7].k3(), tmp11_local7);
       tmp3_bitMask0 = tmp3_bitMask0 | 128;
-      tmp12_local8 = tmp16_input.qw(tmp0_desc, 8, tmp17_cached[8].r3(), tmp12_local8);
+      tmp12_local8 = tmp17_input.nw(tmp0_desc, 8, tmp18_cached[8].k3(), tmp12_local8);
       tmp3_bitMask0 = tmp3_bitMask0 | 256;
-      tmp13_local9 = tmp16_input.qw(tmp0_desc, 9, tmp17_cached[9].r3(), tmp13_local9);
+      tmp13_local9 = tmp17_input.nw(tmp0_desc, 9, tmp18_cached[9].k3(), tmp13_local9);
       tmp3_bitMask0 = tmp3_bitMask0 | 512;
-      tmp14_local10 = tmp16_input.qw(tmp0_desc, 10, tmp17_cached[10].r3(), tmp14_local10);
+      tmp14_local10 = tmp17_input.nw(tmp0_desc, 10, tmp18_cached[10].k3(), tmp14_local10);
       tmp3_bitMask0 = tmp3_bitMask0 | 1024;
-      tmp15_local11 = tmp16_input.qw(tmp0_desc, 11, tmp17_cached[11].r3(), tmp15_local11);
+      tmp15_local11 = tmp17_input.nw(tmp0_desc, 11, tmp18_cached[11].k3(), tmp15_local11);
       tmp3_bitMask0 = tmp3_bitMask0 | 2048;
+      tmp16_local12 = tmp17_input.nw(tmp0_desc, 12, tmp18_cached[12].k3(), tmp16_local12);
+      tmp3_bitMask0 = tmp3_bitMask0 | 4096;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp16_input.ww(tmp0_desc);
+        tmp2_index = tmp17_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp16_input.ow(tmp0_desc, 0);
+            tmp4_local0 = tmp17_input.lw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp16_input.ow(tmp0_desc, 1);
+            tmp5_local1 = tmp17_input.lw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp16_input.qw(tmp0_desc, 2, tmp17_cached[2].r3(), tmp6_local2);
+            tmp6_local2 = tmp17_input.nw(tmp0_desc, 2, tmp18_cached[2].k3(), tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp16_input.qw(tmp0_desc, 3, tmp17_cached[3].r3(), tmp7_local3);
+            tmp7_local3 = tmp17_input.nw(tmp0_desc, 3, tmp18_cached[3].k3(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp16_input.qw(tmp0_desc, 4, tmp17_cached[4].r3(), tmp8_local4);
+            tmp8_local4 = tmp17_input.nw(tmp0_desc, 4, tmp18_cached[4].k3(), tmp8_local4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp16_input.qw(tmp0_desc, 5, tmp17_cached[5].r3(), tmp9_local5);
+            tmp9_local5 = tmp17_input.nw(tmp0_desc, 5, tmp18_cached[5].k3(), tmp9_local5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp16_input.qw(tmp0_desc, 6, tmp17_cached[6].r3(), tmp10_local6);
+            tmp10_local6 = tmp17_input.nw(tmp0_desc, 6, tmp18_cached[6].k3(), tmp10_local6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           case 7:
-            tmp11_local7 = tmp16_input.qw(tmp0_desc, 7, tmp17_cached[7].r3(), tmp11_local7);
+            tmp11_local7 = tmp17_input.nw(tmp0_desc, 7, tmp18_cached[7].k3(), tmp11_local7);
             tmp3_bitMask0 = tmp3_bitMask0 | 128;
             break;
           case 8:
-            tmp12_local8 = tmp16_input.qw(tmp0_desc, 8, tmp17_cached[8].r3(), tmp12_local8);
+            tmp12_local8 = tmp17_input.nw(tmp0_desc, 8, tmp18_cached[8].k3(), tmp12_local8);
             tmp3_bitMask0 = tmp3_bitMask0 | 256;
             break;
           case 9:
-            tmp13_local9 = tmp16_input.qw(tmp0_desc, 9, tmp17_cached[9].r3(), tmp13_local9);
+            tmp13_local9 = tmp17_input.nw(tmp0_desc, 9, tmp18_cached[9].k3(), tmp13_local9);
             tmp3_bitMask0 = tmp3_bitMask0 | 512;
             break;
           case 10:
-            tmp14_local10 = tmp16_input.qw(tmp0_desc, 10, tmp17_cached[10].r3(), tmp14_local10);
+            tmp14_local10 = tmp17_input.nw(tmp0_desc, 10, tmp18_cached[10].k3(), tmp14_local10);
             tmp3_bitMask0 = tmp3_bitMask0 | 1024;
             break;
           case 11:
-            tmp15_local11 = tmp16_input.qw(tmp0_desc, 11, tmp17_cached[11].r3(), tmp15_local11);
+            tmp15_local11 = tmp17_input.nw(tmp0_desc, 11, tmp18_cached[11].k3(), tmp15_local11);
             tmp3_bitMask0 = tmp3_bitMask0 | 2048;
             break;
+          case 12:
+            tmp16_local12 = tmp17_input.nw(tmp0_desc, 12, tmp18_cached[12].k3(), tmp16_local12);
+            tmp3_bitMask0 = tmp3_bitMask0 | 4096;
+            break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp16_input.fw(tmp0_desc);
-    return ParseResult.c4z(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, null);
+    tmp17_input.cw(tmp0_desc);
+    return ParseResult.b4z(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, null);
   }
-  or() {
-    return this.a4z_1;
+  lr() {
+    return this.z4y_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance_2().z4y_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance_2().y4y_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [StringSerializer_getInstance(), StringSerializer_getInstance(), tmp0_cached[2].r3(), tmp0_cached[3].r3(), tmp0_cached[4].r3(), tmp0_cached[5].r3(), tmp0_cached[6].r3(), tmp0_cached[7].r3(), tmp0_cached[8].r3(), tmp0_cached[9].r3(), tmp0_cached[10].r3(), tmp0_cached[11].r3()];
+    return [StringSerializer_getInstance(), StringSerializer_getInstance(), tmp0_cached[2].k3(), tmp0_cached[3].k3(), tmp0_cached[4].k3(), tmp0_cached[5].k3(), tmp0_cached[6].k3(), tmp0_cached[7].k3(), tmp0_cached[8].k3(), tmp0_cached[9].k3(), tmp0_cached[10].k3(), tmp0_cached[11].k3(), tmp0_cached[12].k3()];
   }
 }
 class ParseResult {
-  static d4z(variant, originalText, items, whitespaceItems, controlStatementErrors, scripts, equalityStatements, equalityStatementRanges, commandCalls, comments, caos2Comments, looseTokens) {
+  static c4z(variant, originalText, items, whitespaceItems, controlStatementErrors, scripts, equalityStatements, equalityStatementRanges, commandCalls, comments, caos2Comments, looseTokens, listRanges) {
     Companion_getInstance_2();
     var $this = createThis(this);
     $this.variant = variant;
@@ -860,47 +872,51 @@ class ParseResult {
     $this.comments = comments;
     $this.caos2Comments = caos2Comments;
     $this.looseTokens = looseTokens;
+    $this.listRanges = listRanges;
     return $this;
   }
-  p4t() {
+  o4t() {
     return this.variant;
   }
-  q4t() {
+  p4t() {
     return this.originalText;
   }
-  e1t() {
+  b1t() {
     return this.items;
   }
-  r4t() {
+  q4t() {
     return this.whitespace;
   }
-  s4t() {
+  r4t() {
     return this.errors;
   }
-  t4t() {
+  s4t() {
     return this.scripts;
   }
-  e4z() {
+  d4z() {
     return this.equalityStatements;
   }
-  f4z() {
+  e4z() {
     return this.equalityStatementRanges;
   }
-  g4z() {
+  f4z() {
     return this.commandCalls;
   }
-  u4t() {
+  t4t() {
     return this.comments;
   }
-  v4t() {
+  u4t() {
     return this.caos2Comments;
   }
-  h4z() {
+  g4z() {
     return this.looseTokens;
   }
-  static withScriptOffsets(variant, originalText, items, whitespaceItems, controlStatementErrors, scriptOffsets, equalityStatements, equalityStatementRanges, commandCalls, comments, caos2Comments, looseTokens) {
+  h4z() {
+    return this.listRanges;
+  }
+  static withScriptOffsets(variant, originalText, items, whitespaceItems, controlStatementErrors, scriptOffsets, equalityStatements, equalityStatementRanges, commandCalls, comments, caos2Comments, looseTokens, listRanges) {
     Companion_getInstance_2();
-    return this.d4z(variant, originalText, items, whitespaceItems, controlStatementErrors, CaosTokenizerUtil_instance.w4t(scriptOffsets, items), equalityStatements, equalityStatementRanges, commandCalls, comments, caos2Comments, looseTokens);
+    return this.c4z(variant, originalText, items, whitespaceItems, controlStatementErrors, CaosTokenizerUtil_instance.v4t(scriptOffsets, items), equalityStatements, equalityStatementRanges, commandCalls, comments, caos2Comments, looseTokens, listRanges);
   }
   equals(other) {
     if (this === other)
@@ -951,12 +967,12 @@ class ParseResult {
     return result;
   }
   toString() {
-    return 'CaosParseResult(variant=' + this.variant + ', originalText=' + this.originalText + ', items=' + toString_0(this.items) + ', whitespaceItems=' + toString_0(this.whitespace) + ', controlStatementErrors=' + toString_0(this.errors) + ', scripts=' + toString_0(this.scripts) + ', equalityStatements=' + toString_0(this.equalityStatements) + ', equalityStatementRanges=' + toString_0(this.equalityStatementRanges) + ', commandCalls=' + toString_0(this.commandCalls) + ', comments=' + toString_0(this.comments) + ', caos2Comments=' + toString_0(this.caos2Comments) + ', looseTokens=' + toString_0(this.looseTokens) + ')';
+    return 'CaosParseResult(variant=' + this.variant + ', originalText=' + this.originalText + ', items=' + toString_0(this.items) + ', whitespaceItems=' + toString_0(this.whitespace) + ', controlStatementErrors=' + toString_0(this.errors) + ', scripts=' + toString_0(this.scripts) + ', equalityStatements=' + toString_0(this.equalityStatements) + ', equalityStatementRanges=' + toString_0(this.equalityStatementRanges) + ', commandCalls=' + toString_0(this.commandCalls) + ', comments=' + toString_0(this.comments) + ', caos2Comments=' + toString_0(this.caos2Comments) + ', looseTokens=' + toString_0(this.looseTokens) + ', listRanges=' + toString_0(this.listRanges) + ')';
   }
-  static c4z(seen0, variant, originalText, items, whitespaceItems, controlStatementErrors, scripts, equalityStatements, equalityStatementRanges, commandCalls, comments, caos2Comments, looseTokens, serializationConstructorMarker) {
+  static b4z(seen0, variant, originalText, items, whitespaceItems, controlStatementErrors, scripts, equalityStatements, equalityStatementRanges, commandCalls, comments, caos2Comments, looseTokens, listRanges, serializationConstructorMarker) {
     Companion_getInstance_2();
-    if (!(4095 === (4095 & seen0))) {
-      throwMissingFieldException(seen0, 4095, $serializer_getInstance_9().a4z_1);
+    if (!(8191 === (8191 & seen0))) {
+      throwMissingFieldException(seen0, 8191, $serializer_getInstance_9().z4y_1);
     }
     var $this = createThis(this);
     $this.variant = variant;
@@ -971,13 +987,14 @@ class ParseResult {
     $this.comments = comments;
     $this.caos2Comments = caos2Comments;
     $this.looseTokens = looseTokens;
+    $this.listRanges = listRanges;
     return $this;
   }
 }
 class CaosParser {
   j4z(variant, text, line, character, checkErrors, checkDelay, keepGoing) {
     assertValidVariant(variant);
-    var items = CaosTokenizer_instance.d4u(variant, text, line, character, checkErrors, checkDelay, keepGoing);
+    var items = CaosTokenizer_instance.c4u(variant, text, line, character, checkErrors, checkDelay, keepGoing);
     return this.i4z(items, checkDelay, keepGoing);
   }
   k4z(variant, text, line, character, checkErrors, checkDelay, keepGoing, $super) {
@@ -988,7 +1005,7 @@ class CaosParser {
   }
   l4z(variant, text, startLine, startCharacter, endLine, endCharacter, checkErrors, checkDelay, keepGoing) {
     assertValidVariant(variant);
-    var items = CaosTokenizer_instance.f4u(variant, text, startLine, startCharacter, endLine, endCharacter, checkErrors, checkDelay, keepGoing);
+    var items = CaosTokenizer_instance.e4u(variant, text, startLine, startCharacter, endLine, endCharacter, checkErrors, checkDelay, keepGoing);
     return this.i4z(items, checkDelay, keepGoing);
   }
   m4z(variant, text, keepGoing) {
@@ -1004,58 +1021,58 @@ class CaosParser {
     // Inline function 'kotlin.text.uppercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$1 = variant.toUpperCase();
-    var lib = tmp.ng(tmp$ret$1);
+    var lib = tmp.kg(tmp$ret$1);
     var checkCancelled = createCheckCancelled(checkDelay, keepGoing);
     // Inline function 'kotlin.collections.filterNot' call
     // Inline function 'kotlin.collections.filterNotTo' call
-    var destination = ArrayList.b2();
+    var destination = ArrayList.u1();
     var inductionVariable = 0;
     var last = items.length;
     while (inductionVariable < last) {
       var element = items[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       if (!get_isWhitespace(element)) {
-        destination.g2(element);
+        destination.z1(element);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
     var nonWhitespaceItems = copyToArray(destination);
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_0 = ArrayList.b2();
+    var destination_0 = ArrayList.u1();
     var inductionVariable_0 = 0;
     var last_0 = items.length;
     while (inductionVariable_0 < last_0) {
       var element_0 = items[inductionVariable_0];
       inductionVariable_0 = inductionVariable_0 + 1 | 0;
       if (get_isWhitespace(element_0)) {
-        destination_0.g2(element_0);
+        destination_0.z1(element_0);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
     var whitespaceItems = copyToArray(destination_0);
     var tmp_0;
     if (!(checkErrors === false)) {
-      tmp_0 = CaosTokenizerUtil_instance.c4u(variant, nonWhitespaceItems);
+      tmp_0 = CaosTokenizerUtil_instance.b4u(variant, nonWhitespaceItems);
     } else {
       // Inline function 'kotlin.emptyArray' call
       tmp_0 = [];
     }
     var controlStatementErrors = tmp_0;
     var caosWalker = new CaosWalker(lib, text, items, checkCancelled);
-    var tmp0_elvis_lhs = this.y4x(caosWalker.v4t());
+    var tmp0_elvis_lhs = this.x4x(caosWalker.u4t());
     var tmp_1;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.collections.filterIsInstance' call
       // Inline function 'kotlin.collections.filterIsInstanceTo' call
-      var destination_1 = ArrayList.b2();
+      var destination_1 = ArrayList.u1();
       var inductionVariable_1 = 0;
       var last_1 = items.length;
       while (inductionVariable_1 < last_1) {
         var element_1 = items[inductionVariable_1];
         inductionVariable_1 = inductionVariable_1 + 1 | 0;
         if (element_1 instanceof Caos2Comment) {
-          destination_1.g2(element_1);
+          destination_1.z1(element_1);
         }
       }
       tmp_1 = destination_1;
@@ -1063,18 +1080,32 @@ class CaosParser {
       tmp_1 = tmp0_elvis_lhs;
     }
     var caos2comments = tmp_1;
-    var tmp_2 = CaosTokenizerUtil_instance.w4t(scriptOffsets, items);
-    var tmp_3 = caosWalker.e4z();
-    var tmp_4 = caosWalker.f4z();
-    var tmp_5 = caosWalker.g4z();
+    // Inline function 'kotlin.collections.map' call
+    var this_0 = caosWalker.v4z();
+    // Inline function 'kotlin.collections.mapTo' call
+    var destination_2 = ArrayList.y1(this_0.length);
+    var inductionVariable_2 = 0;
+    var last_2 = this_0.length;
+    while (inductionVariable_2 < last_2) {
+      var item = this_0[inductionVariable_2];
+      inductionVariable_2 = inductionVariable_2 + 1 | 0;
+      var tmp$ret$16 = item.o4y_1;
+      destination_2.z1(tmp$ret$16);
+    }
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = caosWalker.u4t();
-    var tmp_6 = copyToArray(this_0);
+    var listRanges = copyToArray(destination_2);
+    var tmp_2 = CaosTokenizerUtil_instance.v4t(scriptOffsets, items);
+    var tmp_3 = caosWalker.d4z();
+    var tmp_4 = caosWalker.e4z();
+    var tmp_5 = caosWalker.f4z();
     // Inline function 'kotlin.collections.toTypedArray' call
-    var tmp$ret$15 = copyToArray(caos2comments);
-    return ParseResult.d4z(variant, text, items, whitespaceItems, controlStatementErrors, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, tmp$ret$15, caosWalker.h4z());
+    var this_1 = caosWalker.t4t();
+    var tmp_6 = copyToArray(this_1);
+    // Inline function 'kotlin.collections.toTypedArray' call
+    var tmp$ret$19 = copyToArray(caos2comments);
+    return ParseResult.c4z(variant, text, items, whitespaceItems, controlStatementErrors, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, tmp$ret$19, caosWalker.g4z(), listRanges);
   }
-  v4z(variant, text, items, scriptOffsets, checkErrors, checkDelay, keepGoing, $super) {
+  w4z(variant, text, items, scriptOffsets, checkErrors, checkDelay, keepGoing, $super) {
     var tmp;
     if (scriptOffsets === VOID) {
       // Inline function 'kotlin.emptyArray' call
@@ -1095,23 +1126,23 @@ class CaosParser {
     // Inline function 'kotlin.text.uppercase' call
     // Inline function 'kotlin.js.asDynamic' call
     var tmp$ret$0 = variant.toUpperCase();
-    var lib = tmp.ng(tmp$ret$0);
+    var lib = tmp.kg(tmp$ret$0);
     var checkCancelled = createCheckCancelled(checkDelay, keepGoing);
     var caosWalker = new CaosWalker(lib, items.originalText, items.items, checkCancelled);
-    var tmp0_elvis_lhs = this.y4x(caosWalker.v4t());
+    var tmp0_elvis_lhs = this.x4x(caosWalker.u4t());
     var tmp_0;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.collections.filterIsInstance' call
       var tmp0 = items.items;
       // Inline function 'kotlin.collections.filterIsInstanceTo' call
-      var destination = ArrayList.b2();
+      var destination = ArrayList.u1();
       var inductionVariable = 0;
       var last = tmp0.length;
       while (inductionVariable < last) {
         var element = tmp0[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
         if (element instanceof Caos2Comment) {
-          destination.g2(element);
+          destination.z1(element);
         }
       }
       tmp_0 = destination;
@@ -1119,23 +1150,37 @@ class CaosParser {
       tmp_0 = tmp0_elvis_lhs;
     }
     var caos2comments = tmp_0;
-    var tmp_1 = caosWalker.e4z();
-    var tmp_2 = caosWalker.f4z();
-    var tmp_3 = caosWalker.g4z();
+    // Inline function 'kotlin.collections.map' call
+    var this_0 = caosWalker.v4z();
+    // Inline function 'kotlin.collections.mapTo' call
+    var destination_0 = ArrayList.y1(this_0.length);
+    var inductionVariable_0 = 0;
+    var last_0 = this_0.length;
+    while (inductionVariable_0 < last_0) {
+      var item = this_0[inductionVariable_0];
+      inductionVariable_0 = inductionVariable_0 + 1 | 0;
+      var tmp$ret$6 = item.o4y_1;
+      destination_0.z1(tmp$ret$6);
+    }
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = caosWalker.u4t();
-    var tmp_4 = copyToArray(this_0);
+    var listRanges = copyToArray(destination_0);
+    var tmp_1 = caosWalker.d4z();
+    var tmp_2 = caosWalker.e4z();
+    var tmp_3 = caosWalker.f4z();
     // Inline function 'kotlin.collections.toTypedArray' call
-    var tmp$ret$5 = copyToArray(caos2comments);
-    return ParseResult.d4z(variant, items.originalText, items.items, items.whitespace, items.errors, items.scripts, tmp_1, tmp_2, tmp_3, tmp_4, tmp$ret$5, caosWalker.h4z());
+    var this_1 = caosWalker.t4t();
+    var tmp_4 = copyToArray(this_1);
+    // Inline function 'kotlin.collections.toTypedArray' call
+    var tmp$ret$9 = copyToArray(caos2comments);
+    return ParseResult.c4z(variant, items.originalText, items.items, items.whitespace, items.errors, items.scripts, tmp_1, tmp_2, tmp_3, tmp_4, tmp$ret$9, caosWalker.g4z(), listRanges);
   }
-  w4z(parseResult) {
+  x4z(parseResult) {
     // Inline function 'kotlin.collections.isNotEmpty' call
     // Inline function 'kotlin.collections.isEmpty' call
     if (!(parseResult.scripts.length === 0)) {
       return parseResult.scripts;
     }
-    var tmp0_elvis_lhs = this.x4z(CaosTokenizerUtil_instance.n4v(parseResult.originalText));
+    var tmp0_elvis_lhs = this.y4z(CaosTokenizerUtil_instance.m4v(parseResult.originalText));
     var tmp;
     if (tmp0_elvis_lhs == null) {
       // Inline function 'kotlin.emptyArray' call
@@ -1144,9 +1189,9 @@ class CaosParser {
       tmp = tmp0_elvis_lhs;
     }
     var scriptOffsets = tmp;
-    return CaosTokenizerUtil_instance.w4t(scriptOffsets, parseResult.items);
+    return CaosTokenizerUtil_instance.v4t(scriptOffsets, parseResult.items);
   }
-  x4z(_this__u8e3s4) {
+  y4z(_this__u8e3s4) {
     var tmp;
     // Inline function 'kotlin.collections.isNullOrEmpty' call
     var tmp_0;
@@ -1163,10 +1208,10 @@ class CaosParser {
     }
     return tmp;
   }
-  y4x(_this__u8e3s4) {
+  x4x(_this__u8e3s4) {
     var tmp;
     // Inline function 'kotlin.collections.isNullOrEmpty' call
-    if (_this__u8e3s4 == null || _this__u8e3s4.b1()) {
+    if (_this__u8e3s4 == null || _this__u8e3s4.u()) {
       tmp = null;
     } else {
       tmp = _this__u8e3s4;
@@ -1184,9 +1229,9 @@ class Companion_1 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.y4z_1 = [null, null, tmp_1, null, null, null, null, null, null, lazy(tmp_2, CommandCall$Companion$$childSerializers$_anonymous__x1p6u7_0), null, null, null, null, null, null, null];
+    tmp.z4z_1 = [null, null, tmp_1, null, null, null, null, null, null, lazy(tmp_2, CommandCall$Companion$$childSerializers$_anonymous__x1p6u7_0), null, null, null, null, null, null, null];
   }
-  n1e() {
+  k1e() {
     return $serializer_getInstance_10();
   }
 }
@@ -1194,33 +1239,33 @@ class $serializer_1 {
   constructor() {
     $serializer_instance_1 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.CommandCall', this, 17);
-    tmp0_serialDesc.z13('typeId', false);
-    tmp0_serialDesc.z13('commandString', false);
-    tmp0_serialDesc.z13('arguments', true);
-    tmp0_serialDesc.z13('tokenTextRange', false);
-    tmp0_serialDesc.z13('inVariant', false);
-    tmp0_serialDesc.z13('textRange', false);
-    tmp0_serialDesc.z13('parameterIndex', false);
-    tmp0_serialDesc.z13('inEqualityExpression', false);
-    tmp0_serialDesc.z13('containingCommand', false);
-    tmp0_serialDesc.z13('tokens', false);
-    tmp0_serialDesc.z13('callType', false);
-    tmp0_serialDesc.z13('expectType', false);
-    tmp0_serialDesc.z13('dropLast', true);
-    tmp0_serialDesc.z13('callTypeId', true);
-    tmp0_serialDesc.z13('text', true);
-    tmp0_serialDesc.z13('parserIndexStart', true);
-    tmp0_serialDesc.z13('parserIndexEnd', true);
-    this.z4z_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('typeId', false);
+    tmp0_serialDesc.w13('commandString', false);
+    tmp0_serialDesc.w13('arguments', true);
+    tmp0_serialDesc.w13('tokenTextRange', false);
+    tmp0_serialDesc.w13('inVariant', false);
+    tmp0_serialDesc.w13('textRange', false);
+    tmp0_serialDesc.w13('parameterIndex', false);
+    tmp0_serialDesc.w13('inEqualityExpression', false);
+    tmp0_serialDesc.w13('containingCommand', false);
+    tmp0_serialDesc.w13('tokens', false);
+    tmp0_serialDesc.w13('callType', false);
+    tmp0_serialDesc.w13('expectType', false);
+    tmp0_serialDesc.w13('dropLast', true);
+    tmp0_serialDesc.w13('callTypeId', true);
+    tmp0_serialDesc.w13('text', true);
+    tmp0_serialDesc.w13('parserIndexStart', true);
+    tmp0_serialDesc.w13('parserIndexEnd', true);
+    this.a50_1 = tmp0_serialDesc;
   }
-  a50(encoder, value) {
-    var tmp0_desc = this.z4z_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_3().y4z_1;
-    tmp1_output.px(tmp0_desc, 0, value.b50_1);
-    tmp1_output.ux(tmp0_desc, 1, value.c50_1);
+  b50(encoder, value) {
+    var tmp0_desc = this.a50_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_3().z4z_1;
+    tmp1_output.mx(tmp0_desc, 0, value.c50_1);
+    tmp1_output.rx(tmp0_desc, 1, value.d50_1);
     var tmp;
-    if (tmp1_output.cy(tmp0_desc, 2)) {
+    if (tmp1_output.zx(tmp0_desc, 2)) {
       tmp = true;
     } else {
       var tmp_0 = value.arguments;
@@ -1229,42 +1274,42 @@ class $serializer_1 {
       tmp = !equals(tmp_0, tmp$ret$0);
     }
     if (tmp) {
-      tmp1_output.wx(tmp0_desc, 2, tmp2_cached[2].r3(), value.arguments);
+      tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.arguments);
     }
-    tmp1_output.wx(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), value.tokenTextRange);
-    tmp1_output.mx(tmp0_desc, 4, value.inVariant);
-    tmp1_output.wx(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), value.d50_1);
-    tmp1_output.px(tmp0_desc, 6, value.e50_1);
-    tmp1_output.mx(tmp0_desc, 7, value.f50_1);
-    tmp1_output.yx(tmp0_desc, 8, $serializer_getInstance_12(), value.g50_1);
-    tmp1_output.wx(tmp0_desc, 9, tmp2_cached[9].r3(), value.tokens);
-    tmp1_output.wx(tmp0_desc, 10, CommandTypeSerializer_getInstance(), new CommandType(value.callType));
-    tmp1_output.px(tmp0_desc, 11, value.h50_1);
-    if (tmp1_output.cy(tmp0_desc, 12) ? true : !(value.i50_1 == null)) {
-      tmp1_output.yx(tmp0_desc, 12, IntSerializer_getInstance(), value.i50_1);
+    tmp1_output.tx(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), value.tokenTextRange);
+    tmp1_output.jx(tmp0_desc, 4, value.inVariant);
+    tmp1_output.tx(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), value.e50_1);
+    tmp1_output.mx(tmp0_desc, 6, value.f50_1);
+    tmp1_output.jx(tmp0_desc, 7, value.g50_1);
+    tmp1_output.vx(tmp0_desc, 8, $serializer_getInstance_12(), value.h50_1);
+    tmp1_output.tx(tmp0_desc, 9, tmp2_cached[9].k3(), value.tokens);
+    tmp1_output.tx(tmp0_desc, 10, CommandTypeSerializer_getInstance(), new CommandType(value.callType));
+    tmp1_output.mx(tmp0_desc, 11, value.i50_1);
+    if (tmp1_output.zx(tmp0_desc, 12) ? true : !(value.j50_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 12, IntSerializer_getInstance(), value.j50_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 13) ? true : !(value.j50_1 === _CommandType___get_value__impl__hr7s20(value.callType))) {
-      tmp1_output.px(tmp0_desc, 13, value.j50_1);
+    if (tmp1_output.zx(tmp0_desc, 13) ? true : !(value.k50_1 === _CommandType___get_value__impl__hr7s20(value.callType))) {
+      tmp1_output.mx(tmp0_desc, 13, value.k50_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 14) ? true : !(value.l50_1 === stitch(plus_0(listOf(value.e4y()), value.arguments)))) {
-      tmp1_output.ux(tmp0_desc, 14, value.l50_1);
+    if (tmp1_output.zx(tmp0_desc, 14) ? true : !(value.m50_1 === stitch(plus_0(listOf(value.d4y()), value.arguments)))) {
+      tmp1_output.rx(tmp0_desc, 14, value.m50_1);
     }
     var tmp_1;
-    if (tmp1_output.cy(tmp0_desc, 15)) {
+    if (tmp1_output.zx(tmp0_desc, 15)) {
       tmp_1 = true;
     } else {
       var tmp0_safe_receiver = firstOrNull(value.tokens);
       var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : get_parserIndex(tmp0_safe_receiver);
-      tmp_1 = !(value.m50_1 == (tmp1_elvis_lhs == null ? value.d50_1.k1e() : tmp1_elvis_lhs));
+      tmp_1 = !(value.n50_1 == (tmp1_elvis_lhs == null ? value.e50_1.h1e() : tmp1_elvis_lhs));
     }
     if (tmp_1) {
-      tmp1_output.yx(tmp0_desc, 15, IntSerializer_getInstance(), value.m50_1);
+      tmp1_output.vx(tmp0_desc, 15, IntSerializer_getInstance(), value.n50_1);
     }
     var tmp_2;
-    if (tmp1_output.cy(tmp0_desc, 16)) {
+    if (tmp1_output.zx(tmp0_desc, 16)) {
       tmp_2 = true;
     } else {
-      var tmp_3 = value.n50_1;
+      var tmp_3 = value.o50_1;
       var tmp0_safe_receiver_0 = lastOrNull(value.arguments);
       var tmp_4;
       if (tmp0_safe_receiver_0 == null) {
@@ -1273,12 +1318,12 @@ class $serializer_1 {
         // Inline function 'kotlin.let' call
         var tmp_5;
         if (tmp0_safe_receiver_0 instanceof CommandCall) {
-          tmp_5 = tmp0_safe_receiver_0.n50_1;
+          tmp_5 = tmp0_safe_receiver_0.o50_1;
         } else {
           if (tmp0_safe_receiver_0 instanceof Argument) {
-            tmp_5 = tmp0_safe_receiver_0.w50_1;
+            tmp_5 = tmp0_safe_receiver_0.x50_1;
           } else {
-            tmp_5 = tmp0_safe_receiver_0.g1e().k1e();
+            tmp_5 = tmp0_safe_receiver_0.d1e().h1e();
           }
         }
         tmp_4 = tmp_5;
@@ -1292,18 +1337,18 @@ class $serializer_1 {
         tmp_6 = tmp1_elvis_lhs_0;
       }
       var tmp3_elvis_lhs = tmp_6;
-      tmp_2 = !(tmp_3 == (tmp3_elvis_lhs == null ? value.d50_1.k1e() : tmp3_elvis_lhs));
+      tmp_2 = !(tmp_3 == (tmp3_elvis_lhs == null ? value.e50_1.h1e() : tmp3_elvis_lhs));
     }
     if (tmp_2) {
-      tmp1_output.yx(tmp0_desc, 16, IntSerializer_getInstance(), value.n50_1);
+      tmp1_output.vx(tmp0_desc, 16, IntSerializer_getInstance(), value.o50_1);
     }
-    tmp1_output.fw(tmp0_desc);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.a50(encoder, value instanceof CommandCall ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.b50(encoder, value instanceof CommandCall ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.z4z_1;
+  nr(decoder) {
+    var tmp0_desc = this.a50_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -1324,140 +1369,140 @@ class $serializer_1 {
     var tmp18_local14 = null;
     var tmp19_local15 = null;
     var tmp20_local16 = null;
-    var tmp22_input = decoder.ew(tmp0_desc);
-    var tmp23_cached = Companion_getInstance_3().y4z_1;
-    if (tmp22_input.vw()) {
-      tmp4_local0 = tmp22_input.jw(tmp0_desc, 0);
+    var tmp22_input = decoder.bw(tmp0_desc);
+    var tmp23_cached = Companion_getInstance_3().z4z_1;
+    if (tmp22_input.sw()) {
+      tmp4_local0 = tmp22_input.gw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp22_input.ow(tmp0_desc, 1);
+      tmp5_local1 = tmp22_input.lw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp22_input.qw(tmp0_desc, 2, tmp23_cached[2].r3(), tmp6_local2);
+      tmp6_local2 = tmp22_input.nw(tmp0_desc, 2, tmp23_cached[2].k3(), tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp22_input.qw(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), tmp7_local3);
+      tmp7_local3 = tmp22_input.nw(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp22_input.gw(tmp0_desc, 4);
+      tmp8_local4 = tmp22_input.dw(tmp0_desc, 4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp22_input.qw(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), tmp9_local5);
+      tmp9_local5 = tmp22_input.nw(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), tmp9_local5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp22_input.jw(tmp0_desc, 6);
+      tmp10_local6 = tmp22_input.gw(tmp0_desc, 6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
-      tmp11_local7 = tmp22_input.gw(tmp0_desc, 7);
+      tmp11_local7 = tmp22_input.dw(tmp0_desc, 7);
       tmp3_bitMask0 = tmp3_bitMask0 | 128;
-      tmp12_local8 = tmp22_input.sw(tmp0_desc, 8, $serializer_getInstance_12(), tmp12_local8);
+      tmp12_local8 = tmp22_input.pw(tmp0_desc, 8, $serializer_getInstance_12(), tmp12_local8);
       tmp3_bitMask0 = tmp3_bitMask0 | 256;
-      tmp13_local9 = tmp22_input.qw(tmp0_desc, 9, tmp23_cached[9].r3(), tmp13_local9);
+      tmp13_local9 = tmp22_input.nw(tmp0_desc, 9, tmp23_cached[9].k3(), tmp13_local9);
       tmp3_bitMask0 = tmp3_bitMask0 | 512;
       var tmp = CommandTypeSerializer_getInstance();
       var tmp_0 = tmp14_local10;
-      var tmp_1 = tmp22_input.qw(tmp0_desc, 10, tmp, tmp_0 == null ? null : new CommandType(tmp_0));
-      tmp14_local10 = tmp_1 == null ? null : tmp_1.n1t_1;
+      var tmp_1 = tmp22_input.nw(tmp0_desc, 10, tmp, tmp_0 == null ? null : new CommandType(tmp_0));
+      tmp14_local10 = tmp_1 == null ? null : tmp_1.k1t_1;
       tmp3_bitMask0 = tmp3_bitMask0 | 1024;
-      tmp15_local11 = tmp22_input.jw(tmp0_desc, 11);
+      tmp15_local11 = tmp22_input.gw(tmp0_desc, 11);
       tmp3_bitMask0 = tmp3_bitMask0 | 2048;
-      tmp16_local12 = tmp22_input.sw(tmp0_desc, 12, IntSerializer_getInstance(), tmp16_local12);
+      tmp16_local12 = tmp22_input.pw(tmp0_desc, 12, IntSerializer_getInstance(), tmp16_local12);
       tmp3_bitMask0 = tmp3_bitMask0 | 4096;
-      tmp17_local13 = tmp22_input.jw(tmp0_desc, 13);
+      tmp17_local13 = tmp22_input.gw(tmp0_desc, 13);
       tmp3_bitMask0 = tmp3_bitMask0 | 8192;
-      tmp18_local14 = tmp22_input.ow(tmp0_desc, 14);
+      tmp18_local14 = tmp22_input.lw(tmp0_desc, 14);
       tmp3_bitMask0 = tmp3_bitMask0 | 16384;
-      tmp19_local15 = tmp22_input.sw(tmp0_desc, 15, IntSerializer_getInstance(), tmp19_local15);
+      tmp19_local15 = tmp22_input.pw(tmp0_desc, 15, IntSerializer_getInstance(), tmp19_local15);
       tmp3_bitMask0 = tmp3_bitMask0 | 32768;
-      tmp20_local16 = tmp22_input.sw(tmp0_desc, 16, IntSerializer_getInstance(), tmp20_local16);
+      tmp20_local16 = tmp22_input.pw(tmp0_desc, 16, IntSerializer_getInstance(), tmp20_local16);
       tmp3_bitMask0 = tmp3_bitMask0 | 65536;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp22_input.ww(tmp0_desc);
+        tmp2_index = tmp22_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp22_input.jw(tmp0_desc, 0);
+            tmp4_local0 = tmp22_input.gw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp22_input.ow(tmp0_desc, 1);
+            tmp5_local1 = tmp22_input.lw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp22_input.qw(tmp0_desc, 2, tmp23_cached[2].r3(), tmp6_local2);
+            tmp6_local2 = tmp22_input.nw(tmp0_desc, 2, tmp23_cached[2].k3(), tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp22_input.qw(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), tmp7_local3);
+            tmp7_local3 = tmp22_input.nw(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp22_input.gw(tmp0_desc, 4);
+            tmp8_local4 = tmp22_input.dw(tmp0_desc, 4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp22_input.qw(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), tmp9_local5);
+            tmp9_local5 = tmp22_input.nw(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), tmp9_local5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp22_input.jw(tmp0_desc, 6);
+            tmp10_local6 = tmp22_input.gw(tmp0_desc, 6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           case 7:
-            tmp11_local7 = tmp22_input.gw(tmp0_desc, 7);
+            tmp11_local7 = tmp22_input.dw(tmp0_desc, 7);
             tmp3_bitMask0 = tmp3_bitMask0 | 128;
             break;
           case 8:
-            tmp12_local8 = tmp22_input.sw(tmp0_desc, 8, $serializer_getInstance_12(), tmp12_local8);
+            tmp12_local8 = tmp22_input.pw(tmp0_desc, 8, $serializer_getInstance_12(), tmp12_local8);
             tmp3_bitMask0 = tmp3_bitMask0 | 256;
             break;
           case 9:
-            tmp13_local9 = tmp22_input.qw(tmp0_desc, 9, tmp23_cached[9].r3(), tmp13_local9);
+            tmp13_local9 = tmp22_input.nw(tmp0_desc, 9, tmp23_cached[9].k3(), tmp13_local9);
             tmp3_bitMask0 = tmp3_bitMask0 | 512;
             break;
           case 10:
             var tmp_2 = CommandTypeSerializer_getInstance();
             var tmp_3 = tmp14_local10;
-            var tmp_4 = tmp22_input.qw(tmp0_desc, 10, tmp_2, tmp_3 == null ? null : new CommandType(tmp_3));
-            tmp14_local10 = tmp_4 == null ? null : tmp_4.n1t_1;
+            var tmp_4 = tmp22_input.nw(tmp0_desc, 10, tmp_2, tmp_3 == null ? null : new CommandType(tmp_3));
+            tmp14_local10 = tmp_4 == null ? null : tmp_4.k1t_1;
             tmp3_bitMask0 = tmp3_bitMask0 | 1024;
             break;
           case 11:
-            tmp15_local11 = tmp22_input.jw(tmp0_desc, 11);
+            tmp15_local11 = tmp22_input.gw(tmp0_desc, 11);
             tmp3_bitMask0 = tmp3_bitMask0 | 2048;
             break;
           case 12:
-            tmp16_local12 = tmp22_input.sw(tmp0_desc, 12, IntSerializer_getInstance(), tmp16_local12);
+            tmp16_local12 = tmp22_input.pw(tmp0_desc, 12, IntSerializer_getInstance(), tmp16_local12);
             tmp3_bitMask0 = tmp3_bitMask0 | 4096;
             break;
           case 13:
-            tmp17_local13 = tmp22_input.jw(tmp0_desc, 13);
+            tmp17_local13 = tmp22_input.gw(tmp0_desc, 13);
             tmp3_bitMask0 = tmp3_bitMask0 | 8192;
             break;
           case 14:
-            tmp18_local14 = tmp22_input.ow(tmp0_desc, 14);
+            tmp18_local14 = tmp22_input.lw(tmp0_desc, 14);
             tmp3_bitMask0 = tmp3_bitMask0 | 16384;
             break;
           case 15:
-            tmp19_local15 = tmp22_input.sw(tmp0_desc, 15, IntSerializer_getInstance(), tmp19_local15);
+            tmp19_local15 = tmp22_input.pw(tmp0_desc, 15, IntSerializer_getInstance(), tmp19_local15);
             tmp3_bitMask0 = tmp3_bitMask0 | 32768;
             break;
           case 16:
-            tmp20_local16 = tmp22_input.sw(tmp0_desc, 16, IntSerializer_getInstance(), tmp20_local16);
+            tmp20_local16 = tmp22_input.pw(tmp0_desc, 16, IntSerializer_getInstance(), tmp20_local16);
             tmp3_bitMask0 = tmp3_bitMask0 | 65536;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp22_input.fw(tmp0_desc);
-    return CommandCall.x50(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, tmp17_local13, tmp18_local14, tmp19_local15, tmp20_local16, null);
+    tmp22_input.cw(tmp0_desc);
+    return CommandCall.y50(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, tmp17_local13, tmp18_local14, tmp19_local15, tmp20_local16, null);
   }
-  or() {
-    return this.z4z_1;
+  lr() {
+    return this.a50_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance_3().y4z_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance_3().z4z_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [IntSerializer_getInstance(), StringSerializer_getInstance(), tmp0_cached[2].r3(), RangeWithIndexSerializer_getInstance(), BooleanSerializer_getInstance(), RangeWithIndexSerializer_getInstance(), IntSerializer_getInstance(), BooleanSerializer_getInstance(), get_nullable($serializer_getInstance_12()), tmp0_cached[9].r3(), CommandTypeSerializer_getInstance(), IntSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), IntSerializer_getInstance(), StringSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance())];
+    return [IntSerializer_getInstance(), StringSerializer_getInstance(), tmp0_cached[2].k3(), RangeWithIndexSerializer_getInstance(), BooleanSerializer_getInstance(), RangeWithIndexSerializer_getInstance(), IntSerializer_getInstance(), BooleanSerializer_getInstance(), get_nullable($serializer_getInstance_12()), tmp0_cached[9].k3(), CommandTypeSerializer_getInstance(), IntSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), IntSerializer_getInstance(), StringSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance())];
   }
 }
 class CommandCall {
@@ -1472,27 +1517,27 @@ class CommandCall {
     }
     arguments_0 = tmp;
     dropLast = dropLast === VOID ? null : dropLast;
-    this.b50_1 = type;
-    this.c50_1 = commandString;
+    this.c50_1 = type;
+    this.d50_1 = commandString;
     this.arguments = arguments_0;
     this.tokenTextRange = tokenTextRange;
     this.inVariant = inVariant;
-    this.d50_1 = textRange;
-    this.e50_1 = parameterIndex;
-    this.f50_1 = inEqualityExpression;
-    this.g50_1 = containingCommand;
+    this.e50_1 = textRange;
+    this.f50_1 = parameterIndex;
+    this.g50_1 = inEqualityExpression;
+    this.h50_1 = containingCommand;
     this.tokens = tokens;
     this.callType = callType;
-    this.h50_1 = expectType;
-    this.i50_1 = dropLast;
-    this.j50_1 = _CommandType___get_value__impl__hr7s20(this.callType);
+    this.i50_1 = expectType;
+    this.j50_1 = dropLast;
+    this.k50_1 = _CommandType___get_value__impl__hr7s20(this.callType);
     var tmp_0 = this;
-    tmp_0.k50_1 = lazy_0(CommandCall$parserItem$delegate$lambda(this));
-    this.l50_1 = stitch(plus_0(listOf(this.e4y()), this.arguments));
+    tmp_0.l50_1 = lazy_0(CommandCall$parserItem$delegate$lambda(this));
+    this.m50_1 = stitch(plus_0(listOf(this.d4y()), this.arguments));
     var tmp_1 = this;
     var tmp0_safe_receiver = firstOrNull(this.tokens);
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : get_parserIndex(tmp0_safe_receiver);
-    tmp_1.m50_1 = tmp1_elvis_lhs == null ? this.d50_1.k1e() : tmp1_elvis_lhs;
+    tmp_1.n50_1 = tmp1_elvis_lhs == null ? this.e50_1.h1e() : tmp1_elvis_lhs;
     var tmp_2 = this;
     var tmp0_safe_receiver_0 = lastOrNull(this.arguments);
     var tmp_3;
@@ -1502,12 +1547,12 @@ class CommandCall {
       // Inline function 'kotlin.let' call
       var tmp_4;
       if (tmp0_safe_receiver_0 instanceof CommandCall) {
-        tmp_4 = tmp0_safe_receiver_0.n50_1;
+        tmp_4 = tmp0_safe_receiver_0.o50_1;
       } else {
         if (tmp0_safe_receiver_0 instanceof Argument) {
-          tmp_4 = tmp0_safe_receiver_0.w50_1;
+          tmp_4 = tmp0_safe_receiver_0.x50_1;
         } else {
-          tmp_4 = tmp0_safe_receiver_0.g1e().k1e();
+          tmp_4 = tmp0_safe_receiver_0.d1e().h1e();
         }
       }
       tmp_3 = tmp_4;
@@ -1521,122 +1566,122 @@ class CommandCall {
       tmp_5 = tmp1_elvis_lhs_0;
     }
     var tmp3_elvis_lhs = tmp_5;
-    tmp_2.n50_1 = tmp3_elvis_lhs == null ? this.d50_1.k1e() : tmp3_elvis_lhs;
+    tmp_2.o50_1 = tmp3_elvis_lhs == null ? this.e50_1.h1e() : tmp3_elvis_lhs;
   }
-  t22() {
-    return this.b50_1;
+  q22() {
+    return this.c50_1;
   }
-  y50(_set____db54di) {
+  z50(_set____db54di) {
     this.arguments = _set____db54di;
   }
-  t() {
+  m() {
     return this.arguments;
   }
-  z50() {
+  a51() {
     return this.tokenTextRange;
   }
-  a51() {
+  b51() {
     return this.inVariant;
   }
-  g1e() {
-    return this.d50_1;
-  }
-  c4y() {
+  d1e() {
     return this.e50_1;
   }
-  d4y() {
+  b4y() {
     return this.f50_1;
   }
-  f4y() {
+  c4y() {
     return this.g50_1;
   }
-  s1s() {
+  e4y() {
+    return this.h50_1;
+  }
+  p1s() {
     return this.tokens;
   }
-  b51() {
+  c51() {
     return this.callType;
   }
-  a22() {
-    return this.callType === Companion_getInstance_0().k1t_1;
+  x21() {
+    return this.callType === Companion_getInstance_0().h1t_1;
   }
-  c51(expectedParameterCount) {
+  d51(expectedParameterCount) {
     var tmp = this.arguments.length;
-    var tmp0_elvis_lhs = this.i50_1;
+    var tmp0_elvis_lhs = this.j50_1;
     return tmp >= (expectedParameterCount - (tmp0_elvis_lhs == null ? 0 : tmp0_elvis_lhs) | 0);
   }
-  d51(command) {
-    return this.c51(command.parameters.length);
+  e51(command) {
+    return this.d51(command.parameters.length);
   }
-  e4y() {
-    var tmp0 = this.k50_1;
+  d4y() {
+    var tmp0 = this.l50_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('parserItem', 1, tmp, CommandCall$_get_parserItem_$ref_4sg7i5(), null);
-    return tmp0.r3();
-  }
-  e51() {
-    return first(this.tokens).token;
+    return tmp0.k3();
   }
   f51() {
+    return first(this.tokens).token;
+  }
+  g51() {
     // Inline function 'kotlin.collections.map' call
     var this_0 = this.tokens;
     // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList.f2(this_0.length);
+    var destination = ArrayList.y1(this_0.length);
     var inductionVariable = 0;
     var last = this_0.length;
     while (inductionVariable < last) {
       var item = this_0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       var tmp$ret$2 = item.token;
-      destination.g2(tmp$ret$2);
+      destination.z1(tmp$ret$2);
     }
     return destination;
   }
-  m1f() {
-    return this.l50_1;
-  }
-  f1g() {
+  j1f() {
     return this.m50_1;
   }
-  g1g() {
+  c1g() {
     return this.n50_1;
   }
-  g51() {
-    this.h51();
+  d1g() {
+    return this.o50_1;
   }
   h51() {
+    this.i51();
+  }
+  i51() {
     // Inline function 'kotlin.collections.filterIsInstance' call
     var tmp0 = this.arguments;
     // Inline function 'kotlin.collections.filterIsInstanceTo' call
-    var destination = ArrayList.b2();
+    var destination = ArrayList.u1();
     var inductionVariable = 0;
     var last = tmp0.length;
     while (inductionVariable < last) {
       var element = tmp0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       if (element instanceof CommandCall) {
-        destination.g2(element);
+        destination.z1(element);
       }
     }
     // Inline function 'kotlin.collections.forEach' call
-    var _iterator__ex2g4s = destination.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var element_0 = _iterator__ex2g4s.f1();
-      element_0.h51();
+    var _iterator__ex2g4s = destination.w();
+    while (_iterator__ex2g4s.x()) {
+      var element_0 = _iterator__ex2g4s.y();
+      element_0.i51();
     }
-    this.l50_1 = stitch(plus_0(listOf(this.e4y()), this.arguments));
+    this.m50_1 = stitch(plus_0(listOf(this.d4y()), this.arguments));
   }
   toString() {
-    return this.l50_1;
+    return this.m50_1;
   }
   equals(other) {
     if (this === other)
       return true;
     if (!(other instanceof CommandCall))
       return false;
-    if (!(this.b50_1 === other.b50_1))
-      return false;
     if (!(this.c50_1 === other.c50_1))
+      return false;
+    if (!(this.d50_1 === other.d50_1))
       return false;
     if (!contentEquals(this.arguments, other.arguments))
       return false;
@@ -1644,27 +1689,27 @@ class CommandCall {
       return false;
     if (!(this.inVariant === other.inVariant))
       return false;
-    if (!equals(this.d50_1, other.d50_1))
+    if (!equals(this.e50_1, other.e50_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = this.b50_1;
-    result = imul(31, result) + getStringHashCode(this.c50_1) | 0;
+    var result = this.c50_1;
+    result = imul(31, result) + getStringHashCode(this.d50_1) | 0;
     result = imul(31, result) + contentHashCode(this.arguments) | 0;
     result = imul(31, result) + hashCode(this.tokenTextRange) | 0;
     result = imul(31, result) + getBooleanHashCode(this.inVariant) | 0;
-    result = imul(31, result) + hashCode(this.d50_1) | 0;
+    result = imul(31, result) + hashCode(this.e50_1) | 0;
     return result;
   }
-  static x50(seen0, type, commandString, arguments_0, tokenTextRange, inVariant, textRange, parameterIndex, inEqualityExpression, containingCommand, tokens, callType, expectType, dropLast, callTypeId, text, parserIndexStart, parserIndexEnd, serializationConstructorMarker) {
+  static y50(seen0, type, commandString, arguments_0, tokenTextRange, inVariant, textRange, parameterIndex, inEqualityExpression, containingCommand, tokens, callType, expectType, dropLast, callTypeId, text, parserIndexStart, parserIndexEnd, serializationConstructorMarker) {
     Companion_getInstance_3();
     if (!(4091 === (4091 & seen0))) {
-      throwMissingFieldException(seen0, 4091, $serializer_getInstance_10().z4z_1);
+      throwMissingFieldException(seen0, 4091, $serializer_getInstance_10().a50_1);
     }
     var $this = createThis(this);
-    $this.b50_1 = type;
-    $this.c50_1 = commandString;
+    $this.c50_1 = type;
+    $this.d50_1 = commandString;
     if (0 === (seen0 & 4)) {
       var tmp = $this;
       // Inline function 'kotlin.emptyArray' call
@@ -1673,34 +1718,34 @@ class CommandCall {
       $this.arguments = arguments_0;
     $this.tokenTextRange = tokenTextRange;
     $this.inVariant = inVariant;
-    $this.d50_1 = textRange;
-    $this.e50_1 = parameterIndex;
-    $this.f50_1 = inEqualityExpression;
-    $this.g50_1 = containingCommand;
+    $this.e50_1 = textRange;
+    $this.f50_1 = parameterIndex;
+    $this.g50_1 = inEqualityExpression;
+    $this.h50_1 = containingCommand;
     $this.tokens = tokens;
     $this.callType = callType;
-    $this.h50_1 = expectType;
+    $this.i50_1 = expectType;
     if (0 === (seen0 & 4096))
-      $this.i50_1 = null;
+      $this.j50_1 = null;
     else
-      $this.i50_1 = dropLast;
+      $this.j50_1 = dropLast;
     if (0 === (seen0 & 8192))
-      $this.j50_1 = _CommandType___get_value__impl__hr7s20($this.callType);
+      $this.k50_1 = _CommandType___get_value__impl__hr7s20($this.callType);
     else
-      $this.j50_1 = callTypeId;
+      $this.k50_1 = callTypeId;
     var tmp_0 = $this;
-    tmp_0.k50_1 = lazy_0(CommandCall$_init_$lambda_284c8y($this));
+    tmp_0.l50_1 = lazy_0(CommandCall$_init_$lambda_284c8y($this));
     if (0 === (seen0 & 16384))
-      $this.l50_1 = stitch(plus_0(listOf($this.e4y()), $this.arguments));
+      $this.m50_1 = stitch(plus_0(listOf($this.d4y()), $this.arguments));
     else
-      $this.l50_1 = text;
+      $this.m50_1 = text;
     if (0 === (seen0 & 32768)) {
       var tmp_1 = $this;
       var tmp0_safe_receiver = firstOrNull($this.tokens);
       var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : get_parserIndex(tmp0_safe_receiver);
-      tmp_1.m50_1 = tmp1_elvis_lhs == null ? $this.d50_1.k1e() : tmp1_elvis_lhs;
+      tmp_1.n50_1 = tmp1_elvis_lhs == null ? $this.e50_1.h1e() : tmp1_elvis_lhs;
     } else
-      $this.m50_1 = parserIndexStart;
+      $this.n50_1 = parserIndexStart;
     if (0 === (seen0 & 65536)) {
       var tmp_2 = $this;
       var tmp0_safe_receiver_0 = lastOrNull($this.arguments);
@@ -1711,12 +1756,12 @@ class CommandCall {
         // Inline function 'kotlin.let' call
         var tmp_4;
         if (tmp0_safe_receiver_0 instanceof CommandCall) {
-          tmp_4 = tmp0_safe_receiver_0.n50_1;
+          tmp_4 = tmp0_safe_receiver_0.o50_1;
         } else {
           if (tmp0_safe_receiver_0 instanceof Argument) {
-            tmp_4 = tmp0_safe_receiver_0.w50_1;
+            tmp_4 = tmp0_safe_receiver_0.x50_1;
           } else {
-            tmp_4 = tmp0_safe_receiver_0.g1e().k1e();
+            tmp_4 = tmp0_safe_receiver_0.d1e().h1e();
           }
         }
         tmp_3 = tmp_4;
@@ -1730,9 +1775,9 @@ class CommandCall {
         tmp_5 = tmp1_elvis_lhs_0;
       }
       var tmp3_elvis_lhs = tmp_5;
-      tmp_2.n50_1 = tmp3_elvis_lhs == null ? $this.d50_1.k1e() : tmp3_elvis_lhs;
+      tmp_2.o50_1 = tmp3_elvis_lhs == null ? $this.e50_1.h1e() : tmp3_elvis_lhs;
     } else
-      $this.n50_1 = parserIndexEnd;
+      $this.o50_1 = parserIndexEnd;
     return $this;
   }
 }
@@ -1746,9 +1791,9 @@ class Companion_2 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.i51_1 = [null, null, tmp_1, null, null, null, null, null, null, lazy(tmp_2, CommandCallJs$Companion$$childSerializers$_anonymous__6gr4zs_0), null, null, null, null, null, null, null, null, null];
+    tmp.j51_1 = [null, null, tmp_1, null, null, null, null, null, null, lazy(tmp_2, CommandCallJs$Companion$$childSerializers$_anonymous__6gr4zs_0), null, null, null, null, null, null, null, null, null];
   }
-  n1e() {
+  k1e() {
     return $serializer_getInstance_11();
   }
 }
@@ -1756,69 +1801,69 @@ class $serializer_2 {
   constructor() {
     $serializer_instance_2 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.CommandCallJs', this, 19);
-    tmp0_serialDesc.z13('typeId', false);
-    tmp0_serialDesc.z13('command', false);
-    tmp0_serialDesc.z13('arguments', false);
-    tmp0_serialDesc.z13('tokenTextRange', false);
-    tmp0_serialDesc.z13('inVariant', false);
-    tmp0_serialDesc.z13('textRange', false);
-    tmp0_serialDesc.z13('parameterIndex', false);
-    tmp0_serialDesc.z13('inEqualityExpression', false);
-    tmp0_serialDesc.z13('containingCommand', false);
-    tmp0_serialDesc.z13('tokens', false);
-    tmp0_serialDesc.z13('callType', false);
-    tmp0_serialDesc.z13('isRvalue', true);
-    tmp0_serialDesc.z13('isLvalue', true);
-    tmp0_serialDesc.z13('isCommand', true);
-    tmp0_serialDesc.z13('parserItem', true);
-    tmp0_serialDesc.z13('text', true);
-    tmp0_serialDesc.z13('commandString', true);
-    tmp0_serialDesc.z13('parserIndexStart', false);
-    tmp0_serialDesc.z13('parserIndexEnd', false);
-    this.j51_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('typeId', false);
+    tmp0_serialDesc.w13('command', false);
+    tmp0_serialDesc.w13('arguments', false);
+    tmp0_serialDesc.w13('tokenTextRange', false);
+    tmp0_serialDesc.w13('inVariant', false);
+    tmp0_serialDesc.w13('textRange', false);
+    tmp0_serialDesc.w13('parameterIndex', false);
+    tmp0_serialDesc.w13('inEqualityExpression', false);
+    tmp0_serialDesc.w13('containingCommand', false);
+    tmp0_serialDesc.w13('tokens', false);
+    tmp0_serialDesc.w13('callType', false);
+    tmp0_serialDesc.w13('isRvalue', true);
+    tmp0_serialDesc.w13('isLvalue', true);
+    tmp0_serialDesc.w13('isCommand', true);
+    tmp0_serialDesc.w13('parserItem', true);
+    tmp0_serialDesc.w13('text', true);
+    tmp0_serialDesc.w13('commandString', true);
+    tmp0_serialDesc.w13('parserIndexStart', false);
+    tmp0_serialDesc.w13('parserIndexEnd', false);
+    this.k51_1 = tmp0_serialDesc;
   }
-  k51(encoder, value) {
-    var tmp0_desc = this.j51_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_4().i51_1;
-    tmp1_output.px(tmp0_desc, 0, value.l51_1);
-    tmp1_output.wx(tmp0_desc, 1, $serializer_getInstance_7(), value.command);
-    tmp1_output.wx(tmp0_desc, 2, tmp2_cached[2].r3(), value.arguments);
-    tmp1_output.wx(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), value.tokenTextRange);
-    tmp1_output.mx(tmp0_desc, 4, value.inVariant);
-    tmp1_output.wx(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), value.m51_1);
-    tmp1_output.px(tmp0_desc, 6, value.n51_1);
-    tmp1_output.mx(tmp0_desc, 7, value.o51_1);
-    tmp1_output.yx(tmp0_desc, 8, $serializer_getInstance_12(), value.p51_1);
-    tmp1_output.wx(tmp0_desc, 9, tmp2_cached[9].r3(), value.tokens);
-    tmp1_output.wx(tmp0_desc, 10, CommandTypeSerializer_getInstance(), new CommandType(value.callType));
-    if (tmp1_output.cy(tmp0_desc, 11) ? true : !(value.isRvalue === (value.callType === Companion_getInstance_0().m1t_1))) {
-      tmp1_output.mx(tmp0_desc, 11, value.isRvalue);
+  l51(encoder, value) {
+    var tmp0_desc = this.k51_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_4().j51_1;
+    tmp1_output.mx(tmp0_desc, 0, value.m51_1);
+    tmp1_output.tx(tmp0_desc, 1, $serializer_getInstance_7(), value.command);
+    tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.arguments);
+    tmp1_output.tx(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), value.tokenTextRange);
+    tmp1_output.jx(tmp0_desc, 4, value.inVariant);
+    tmp1_output.tx(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), value.n51_1);
+    tmp1_output.mx(tmp0_desc, 6, value.o51_1);
+    tmp1_output.jx(tmp0_desc, 7, value.p51_1);
+    tmp1_output.vx(tmp0_desc, 8, $serializer_getInstance_12(), value.q51_1);
+    tmp1_output.tx(tmp0_desc, 9, tmp2_cached[9].k3(), value.tokens);
+    tmp1_output.tx(tmp0_desc, 10, CommandTypeSerializer_getInstance(), new CommandType(value.callType));
+    if (tmp1_output.zx(tmp0_desc, 11) ? true : !(value.isRvalue === (value.callType === Companion_getInstance_0().j1t_1))) {
+      tmp1_output.jx(tmp0_desc, 11, value.isRvalue);
     }
-    if (tmp1_output.cy(tmp0_desc, 12) ? true : !(value.isLvalue === (value.callType === Companion_getInstance_0().l1t_1))) {
-      tmp1_output.mx(tmp0_desc, 12, value.isLvalue);
+    if (tmp1_output.zx(tmp0_desc, 12) ? true : !(value.isLvalue === (value.callType === Companion_getInstance_0().i1t_1))) {
+      tmp1_output.jx(tmp0_desc, 12, value.isLvalue);
     }
-    if (tmp1_output.cy(tmp0_desc, 13) ? true : !(value.isCommand === (value.callType === Companion_getInstance_0().k1t_1))) {
-      tmp1_output.mx(tmp0_desc, 13, value.isCommand);
+    if (tmp1_output.zx(tmp0_desc, 13) ? true : !(value.isCommand === (value.callType === Companion_getInstance_0().h1t_1))) {
+      tmp1_output.jx(tmp0_desc, 13, value.isCommand);
     }
-    if (tmp1_output.cy(tmp0_desc, 14) ? true : !value.q51_1.equals(new CompoundCommandToken(value.tokens))) {
-      tmp1_output.wx(tmp0_desc, 14, $serializer_getInstance_5(), value.q51_1);
+    if (tmp1_output.zx(tmp0_desc, 14) ? true : !value.r51_1.equals(new CompoundCommandToken(value.tokens))) {
+      tmp1_output.tx(tmp0_desc, 14, $serializer_getInstance_5(), value.r51_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 15) ? true : !(value.r51_1 === stitch(listOf_0(arrayConcat([value.tokens, value.arguments]))))) {
-      tmp1_output.ux(tmp0_desc, 15, value.r51_1);
+    if (tmp1_output.zx(tmp0_desc, 15) ? true : !(value.s51_1 === stitch(listOf_0(arrayConcat([value.tokens, value.arguments]))))) {
+      tmp1_output.rx(tmp0_desc, 15, value.s51_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 16) ? true : !(value.s51_1 === value.command.command)) {
-      tmp1_output.ux(tmp0_desc, 16, value.s51_1);
+    if (tmp1_output.zx(tmp0_desc, 16) ? true : !(value.t51_1 === value.command.command)) {
+      tmp1_output.rx(tmp0_desc, 16, value.t51_1);
     }
-    tmp1_output.yx(tmp0_desc, 17, IntSerializer_getInstance(), value.t51_1);
-    tmp1_output.yx(tmp0_desc, 18, IntSerializer_getInstance(), value.u51_1);
-    tmp1_output.fw(tmp0_desc);
+    tmp1_output.vx(tmp0_desc, 17, IntSerializer_getInstance(), value.u51_1);
+    tmp1_output.vx(tmp0_desc, 18, IntSerializer_getInstance(), value.v51_1);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.k51(encoder, value instanceof CommandCallJs ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.l51(encoder, value instanceof CommandCallJs ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.j51_1;
+  nr(decoder) {
+    var tmp0_desc = this.k51_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -1841,239 +1886,239 @@ class $serializer_2 {
     var tmp20_local16 = null;
     var tmp21_local17 = null;
     var tmp22_local18 = null;
-    var tmp23_input = decoder.ew(tmp0_desc);
-    var tmp24_cached = Companion_getInstance_4().i51_1;
-    if (tmp23_input.vw()) {
-      tmp4_local0 = tmp23_input.jw(tmp0_desc, 0);
+    var tmp23_input = decoder.bw(tmp0_desc);
+    var tmp24_cached = Companion_getInstance_4().j51_1;
+    if (tmp23_input.sw()) {
+      tmp4_local0 = tmp23_input.gw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp23_input.qw(tmp0_desc, 1, $serializer_getInstance_7(), tmp5_local1);
+      tmp5_local1 = tmp23_input.nw(tmp0_desc, 1, $serializer_getInstance_7(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp23_input.qw(tmp0_desc, 2, tmp24_cached[2].r3(), tmp6_local2);
+      tmp6_local2 = tmp23_input.nw(tmp0_desc, 2, tmp24_cached[2].k3(), tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp23_input.qw(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), tmp7_local3);
+      tmp7_local3 = tmp23_input.nw(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp23_input.gw(tmp0_desc, 4);
+      tmp8_local4 = tmp23_input.dw(tmp0_desc, 4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp23_input.qw(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), tmp9_local5);
+      tmp9_local5 = tmp23_input.nw(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), tmp9_local5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp23_input.jw(tmp0_desc, 6);
+      tmp10_local6 = tmp23_input.gw(tmp0_desc, 6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
-      tmp11_local7 = tmp23_input.gw(tmp0_desc, 7);
+      tmp11_local7 = tmp23_input.dw(tmp0_desc, 7);
       tmp3_bitMask0 = tmp3_bitMask0 | 128;
-      tmp12_local8 = tmp23_input.sw(tmp0_desc, 8, $serializer_getInstance_12(), tmp12_local8);
+      tmp12_local8 = tmp23_input.pw(tmp0_desc, 8, $serializer_getInstance_12(), tmp12_local8);
       tmp3_bitMask0 = tmp3_bitMask0 | 256;
-      tmp13_local9 = tmp23_input.qw(tmp0_desc, 9, tmp24_cached[9].r3(), tmp13_local9);
+      tmp13_local9 = tmp23_input.nw(tmp0_desc, 9, tmp24_cached[9].k3(), tmp13_local9);
       tmp3_bitMask0 = tmp3_bitMask0 | 512;
       var tmp = CommandTypeSerializer_getInstance();
       var tmp_0 = tmp14_local10;
-      var tmp_1 = tmp23_input.qw(tmp0_desc, 10, tmp, tmp_0 == null ? null : new CommandType(tmp_0));
-      tmp14_local10 = tmp_1 == null ? null : tmp_1.n1t_1;
+      var tmp_1 = tmp23_input.nw(tmp0_desc, 10, tmp, tmp_0 == null ? null : new CommandType(tmp_0));
+      tmp14_local10 = tmp_1 == null ? null : tmp_1.k1t_1;
       tmp3_bitMask0 = tmp3_bitMask0 | 1024;
-      tmp15_local11 = tmp23_input.gw(tmp0_desc, 11);
+      tmp15_local11 = tmp23_input.dw(tmp0_desc, 11);
       tmp3_bitMask0 = tmp3_bitMask0 | 2048;
-      tmp16_local12 = tmp23_input.gw(tmp0_desc, 12);
+      tmp16_local12 = tmp23_input.dw(tmp0_desc, 12);
       tmp3_bitMask0 = tmp3_bitMask0 | 4096;
-      tmp17_local13 = tmp23_input.gw(tmp0_desc, 13);
+      tmp17_local13 = tmp23_input.dw(tmp0_desc, 13);
       tmp3_bitMask0 = tmp3_bitMask0 | 8192;
-      tmp18_local14 = tmp23_input.qw(tmp0_desc, 14, $serializer_getInstance_5(), tmp18_local14);
+      tmp18_local14 = tmp23_input.nw(tmp0_desc, 14, $serializer_getInstance_5(), tmp18_local14);
       tmp3_bitMask0 = tmp3_bitMask0 | 16384;
-      tmp19_local15 = tmp23_input.ow(tmp0_desc, 15);
+      tmp19_local15 = tmp23_input.lw(tmp0_desc, 15);
       tmp3_bitMask0 = tmp3_bitMask0 | 32768;
-      tmp20_local16 = tmp23_input.ow(tmp0_desc, 16);
+      tmp20_local16 = tmp23_input.lw(tmp0_desc, 16);
       tmp3_bitMask0 = tmp3_bitMask0 | 65536;
-      tmp21_local17 = tmp23_input.sw(tmp0_desc, 17, IntSerializer_getInstance(), tmp21_local17);
+      tmp21_local17 = tmp23_input.pw(tmp0_desc, 17, IntSerializer_getInstance(), tmp21_local17);
       tmp3_bitMask0 = tmp3_bitMask0 | 131072;
-      tmp22_local18 = tmp23_input.sw(tmp0_desc, 18, IntSerializer_getInstance(), tmp22_local18);
+      tmp22_local18 = tmp23_input.pw(tmp0_desc, 18, IntSerializer_getInstance(), tmp22_local18);
       tmp3_bitMask0 = tmp3_bitMask0 | 262144;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp23_input.ww(tmp0_desc);
+        tmp2_index = tmp23_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp23_input.jw(tmp0_desc, 0);
+            tmp4_local0 = tmp23_input.gw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp23_input.qw(tmp0_desc, 1, $serializer_getInstance_7(), tmp5_local1);
+            tmp5_local1 = tmp23_input.nw(tmp0_desc, 1, $serializer_getInstance_7(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp23_input.qw(tmp0_desc, 2, tmp24_cached[2].r3(), tmp6_local2);
+            tmp6_local2 = tmp23_input.nw(tmp0_desc, 2, tmp24_cached[2].k3(), tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp23_input.qw(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), tmp7_local3);
+            tmp7_local3 = tmp23_input.nw(tmp0_desc, 3, RangeWithIndexSerializer_getInstance(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp23_input.gw(tmp0_desc, 4);
+            tmp8_local4 = tmp23_input.dw(tmp0_desc, 4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp23_input.qw(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), tmp9_local5);
+            tmp9_local5 = tmp23_input.nw(tmp0_desc, 5, RangeWithIndexSerializer_getInstance(), tmp9_local5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp23_input.jw(tmp0_desc, 6);
+            tmp10_local6 = tmp23_input.gw(tmp0_desc, 6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           case 7:
-            tmp11_local7 = tmp23_input.gw(tmp0_desc, 7);
+            tmp11_local7 = tmp23_input.dw(tmp0_desc, 7);
             tmp3_bitMask0 = tmp3_bitMask0 | 128;
             break;
           case 8:
-            tmp12_local8 = tmp23_input.sw(tmp0_desc, 8, $serializer_getInstance_12(), tmp12_local8);
+            tmp12_local8 = tmp23_input.pw(tmp0_desc, 8, $serializer_getInstance_12(), tmp12_local8);
             tmp3_bitMask0 = tmp3_bitMask0 | 256;
             break;
           case 9:
-            tmp13_local9 = tmp23_input.qw(tmp0_desc, 9, tmp24_cached[9].r3(), tmp13_local9);
+            tmp13_local9 = tmp23_input.nw(tmp0_desc, 9, tmp24_cached[9].k3(), tmp13_local9);
             tmp3_bitMask0 = tmp3_bitMask0 | 512;
             break;
           case 10:
             var tmp_2 = CommandTypeSerializer_getInstance();
             var tmp_3 = tmp14_local10;
-            var tmp_4 = tmp23_input.qw(tmp0_desc, 10, tmp_2, tmp_3 == null ? null : new CommandType(tmp_3));
-            tmp14_local10 = tmp_4 == null ? null : tmp_4.n1t_1;
+            var tmp_4 = tmp23_input.nw(tmp0_desc, 10, tmp_2, tmp_3 == null ? null : new CommandType(tmp_3));
+            tmp14_local10 = tmp_4 == null ? null : tmp_4.k1t_1;
             tmp3_bitMask0 = tmp3_bitMask0 | 1024;
             break;
           case 11:
-            tmp15_local11 = tmp23_input.gw(tmp0_desc, 11);
+            tmp15_local11 = tmp23_input.dw(tmp0_desc, 11);
             tmp3_bitMask0 = tmp3_bitMask0 | 2048;
             break;
           case 12:
-            tmp16_local12 = tmp23_input.gw(tmp0_desc, 12);
+            tmp16_local12 = tmp23_input.dw(tmp0_desc, 12);
             tmp3_bitMask0 = tmp3_bitMask0 | 4096;
             break;
           case 13:
-            tmp17_local13 = tmp23_input.gw(tmp0_desc, 13);
+            tmp17_local13 = tmp23_input.dw(tmp0_desc, 13);
             tmp3_bitMask0 = tmp3_bitMask0 | 8192;
             break;
           case 14:
-            tmp18_local14 = tmp23_input.qw(tmp0_desc, 14, $serializer_getInstance_5(), tmp18_local14);
+            tmp18_local14 = tmp23_input.nw(tmp0_desc, 14, $serializer_getInstance_5(), tmp18_local14);
             tmp3_bitMask0 = tmp3_bitMask0 | 16384;
             break;
           case 15:
-            tmp19_local15 = tmp23_input.ow(tmp0_desc, 15);
+            tmp19_local15 = tmp23_input.lw(tmp0_desc, 15);
             tmp3_bitMask0 = tmp3_bitMask0 | 32768;
             break;
           case 16:
-            tmp20_local16 = tmp23_input.ow(tmp0_desc, 16);
+            tmp20_local16 = tmp23_input.lw(tmp0_desc, 16);
             tmp3_bitMask0 = tmp3_bitMask0 | 65536;
             break;
           case 17:
-            tmp21_local17 = tmp23_input.sw(tmp0_desc, 17, IntSerializer_getInstance(), tmp21_local17);
+            tmp21_local17 = tmp23_input.pw(tmp0_desc, 17, IntSerializer_getInstance(), tmp21_local17);
             tmp3_bitMask0 = tmp3_bitMask0 | 131072;
             break;
           case 18:
-            tmp22_local18 = tmp23_input.sw(tmp0_desc, 18, IntSerializer_getInstance(), tmp22_local18);
+            tmp22_local18 = tmp23_input.pw(tmp0_desc, 18, IntSerializer_getInstance(), tmp22_local18);
             tmp3_bitMask0 = tmp3_bitMask0 | 262144;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp23_input.fw(tmp0_desc);
-    return CommandCallJs.v51(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, tmp17_local13, tmp18_local14, tmp19_local15, tmp20_local16, tmp21_local17, tmp22_local18, null);
+    tmp23_input.cw(tmp0_desc);
+    return CommandCallJs.w51(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, tmp17_local13, tmp18_local14, tmp19_local15, tmp20_local16, tmp21_local17, tmp22_local18, null);
   }
-  or() {
-    return this.j51_1;
+  lr() {
+    return this.k51_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance_4().i51_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance_4().j51_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [IntSerializer_getInstance(), $serializer_getInstance_7(), tmp0_cached[2].r3(), RangeWithIndexSerializer_getInstance(), BooleanSerializer_getInstance(), RangeWithIndexSerializer_getInstance(), IntSerializer_getInstance(), BooleanSerializer_getInstance(), get_nullable($serializer_getInstance_12()), tmp0_cached[9].r3(), CommandTypeSerializer_getInstance(), BooleanSerializer_getInstance(), BooleanSerializer_getInstance(), BooleanSerializer_getInstance(), $serializer_getInstance_5(), StringSerializer_getInstance(), StringSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance())];
+    return [IntSerializer_getInstance(), $serializer_getInstance_7(), tmp0_cached[2].k3(), RangeWithIndexSerializer_getInstance(), BooleanSerializer_getInstance(), RangeWithIndexSerializer_getInstance(), IntSerializer_getInstance(), BooleanSerializer_getInstance(), get_nullable($serializer_getInstance_12()), tmp0_cached[9].k3(), CommandTypeSerializer_getInstance(), BooleanSerializer_getInstance(), BooleanSerializer_getInstance(), BooleanSerializer_getInstance(), $serializer_getInstance_5(), StringSerializer_getInstance(), StringSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance())];
   }
 }
 class CommandCallJs {
   constructor(type, command, arguments_0, tokenTextRange, inVariant, textRange, parameterIndex, inEqualityExpression, containingCommand, tokens, callType, isRvalue, isLvalue, isCommand, parserItem, text, commandString, parserIndexStart, parserIndexEnd) {
     Companion_getInstance_4();
-    isRvalue = isRvalue === VOID ? callType === Companion_getInstance_0().m1t_1 : isRvalue;
-    isLvalue = isLvalue === VOID ? callType === Companion_getInstance_0().l1t_1 : isLvalue;
-    isCommand = isCommand === VOID ? callType === Companion_getInstance_0().k1t_1 : isCommand;
+    isRvalue = isRvalue === VOID ? callType === Companion_getInstance_0().j1t_1 : isRvalue;
+    isLvalue = isLvalue === VOID ? callType === Companion_getInstance_0().i1t_1 : isLvalue;
+    isCommand = isCommand === VOID ? callType === Companion_getInstance_0().h1t_1 : isCommand;
     parserItem = parserItem === VOID ? new CompoundCommandToken(tokens) : parserItem;
     text = text === VOID ? stitch(listOf_0(arrayConcat([tokens, arguments_0]))) : text;
     commandString = commandString === VOID ? command.command : commandString;
-    this.l51_1 = type;
+    this.m51_1 = type;
     this.command = command;
     this.arguments = arguments_0;
     this.tokenTextRange = tokenTextRange;
     this.inVariant = inVariant;
-    this.m51_1 = textRange;
-    this.n51_1 = parameterIndex;
-    this.o51_1 = inEqualityExpression;
-    this.p51_1 = containingCommand;
+    this.n51_1 = textRange;
+    this.o51_1 = parameterIndex;
+    this.p51_1 = inEqualityExpression;
+    this.q51_1 = containingCommand;
     this.tokens = tokens;
     this.callType = callType;
     this.isRvalue = isRvalue;
     this.isLvalue = isLvalue;
     this.isCommand = isCommand;
-    this.q51_1 = parserItem;
-    this.r51_1 = text;
-    this.s51_1 = commandString;
-    this.t51_1 = parserIndexStart;
-    this.u51_1 = parserIndexEnd;
+    this.r51_1 = parserItem;
+    this.s51_1 = text;
+    this.t51_1 = commandString;
+    this.u51_1 = parserIndexStart;
+    this.v51_1 = parserIndexEnd;
   }
-  t22() {
-    return this.l51_1;
-  }
-  p1s() {
-    return this.command;
-  }
-  y50(_set____db54di) {
-    this.arguments = _set____db54di;
-  }
-  t() {
-    return this.arguments;
-  }
-  z50() {
-    return this.tokenTextRange;
-  }
-  a51() {
-    return this.inVariant;
-  }
-  g1e() {
+  q22() {
     return this.m51_1;
   }
-  c4y() {
-    return this.n51_1;
+  m1s() {
+    return this.command;
   }
-  d4y() {
-    return this.o51_1;
+  z50(_set____db54di) {
+    this.arguments = _set____db54di;
   }
-  f4y() {
-    return this.p51_1;
+  m() {
+    return this.arguments;
   }
-  s1s() {
-    return this.tokens;
+  a51() {
+    return this.tokenTextRange;
   }
   b51() {
-    return this.callType;
+    return this.inVariant;
   }
-  u25() {
-    return this.isRvalue;
+  d1e() {
+    return this.n51_1;
   }
-  t25() {
-    return this.isLvalue;
+  b4y() {
+    return this.o51_1;
   }
-  a22() {
-    return this.isCommand;
+  c4y() {
+    return this.p51_1;
   }
   e4y() {
     return this.q51_1;
   }
-  m1f() {
+  p1s() {
+    return this.tokens;
+  }
+  c51() {
+    return this.callType;
+  }
+  t25() {
+    return this.isRvalue;
+  }
+  s25() {
+    return this.isLvalue;
+  }
+  x21() {
+    return this.isCommand;
+  }
+  d4y() {
     return this.r51_1;
   }
-  f1g() {
-    return this.t51_1;
+  j1f() {
+    return this.s51_1;
   }
-  g1g() {
+  c1g() {
     return this.u51_1;
+  }
+  d1g() {
+    return this.v51_1;
   }
   equals(other) {
     if (this === other)
@@ -2082,13 +2127,13 @@ class CommandCallJs {
       return false;
     if (!(other instanceof CommandCallJs))
       THROW_CCE();
-    if (!(this.l51_1 === other.l51_1))
+    if (!(this.m51_1 === other.m51_1))
       return false;
     if (!(this.inVariant === other.inVariant))
       return false;
-    if (!(this.n51_1 === other.n51_1))
-      return false;
     if (!(this.o51_1 === other.o51_1))
+      return false;
+    if (!(this.p51_1 === other.p51_1))
       return false;
     if (!(this.isRvalue === other.isRvalue))
       return false;
@@ -2096,9 +2141,9 @@ class CommandCallJs {
       return false;
     if (!(this.isCommand === other.isCommand))
       return false;
-    if (!(this.t51_1 == other.t51_1))
-      return false;
     if (!(this.u51_1 == other.u51_1))
+      return false;
+    if (!(this.v51_1 == other.v51_1))
       return false;
     if (!this.command.equals(other.command))
       return false;
@@ -2106,119 +2151,119 @@ class CommandCallJs {
       return false;
     if (!equals(this.tokenTextRange, other.tokenTextRange))
       return false;
-    if (!equals(this.m51_1, other.m51_1))
+    if (!equals(this.n51_1, other.n51_1))
       return false;
-    if (!equals(this.p51_1, other.p51_1))
+    if (!equals(this.q51_1, other.q51_1))
       return false;
     if (!contentEquals(this.tokens, other.tokens))
       return false;
     if (!(this.callType === other.callType))
       return false;
-    if (!this.q51_1.equals(other.q51_1))
-      return false;
-    if (!(this.r51_1 === other.r51_1))
+    if (!this.r51_1.equals(other.r51_1))
       return false;
     if (!(this.s51_1 === other.s51_1))
+      return false;
+    if (!(this.t51_1 === other.t51_1))
       return false;
     return true;
   }
   hashCode() {
-    var result = this.l51_1;
+    var result = this.m51_1;
     result = imul(31, result) + getBooleanHashCode(this.inVariant) | 0;
-    result = imul(31, result) + this.n51_1 | 0;
-    result = imul(31, result) + getBooleanHashCode(this.o51_1) | 0;
+    result = imul(31, result) + this.o51_1 | 0;
+    result = imul(31, result) + getBooleanHashCode(this.p51_1) | 0;
     result = imul(31, result) + getBooleanHashCode(this.isRvalue) | 0;
     result = imul(31, result) + getBooleanHashCode(this.isLvalue) | 0;
     result = imul(31, result) + getBooleanHashCode(this.isCommand) | 0;
     var tmp = imul(31, result);
-    var tmp0_elvis_lhs = this.t51_1;
+    var tmp0_elvis_lhs = this.u51_1;
     result = tmp + (tmp0_elvis_lhs == null ? 0 : tmp0_elvis_lhs) | 0;
     var tmp_0 = imul(31, result);
-    var tmp1_elvis_lhs = this.u51_1;
+    var tmp1_elvis_lhs = this.v51_1;
     result = tmp_0 + (tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs) | 0;
     result = imul(31, result) + this.command.hashCode() | 0;
     result = imul(31, result) + contentHashCode(this.arguments) | 0;
     result = imul(31, result) + hashCode(this.tokenTextRange) | 0;
-    result = imul(31, result) + hashCode(this.m51_1) | 0;
+    result = imul(31, result) + hashCode(this.n51_1) | 0;
     var tmp_1 = imul(31, result);
-    var tmp2_safe_receiver = this.p51_1;
+    var tmp2_safe_receiver = this.q51_1;
     var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.hashCode();
     result = tmp_1 + (tmp3_elvis_lhs == null ? 0 : tmp3_elvis_lhs) | 0;
     result = imul(31, result) + contentHashCode(this.tokens) | 0;
     result = imul(31, result) + CommandType__hashCode_impl_xhutpv(this.callType) | 0;
-    result = imul(31, result) + this.q51_1.hashCode() | 0;
-    result = imul(31, result) + getStringHashCode(this.r51_1) | 0;
+    result = imul(31, result) + this.r51_1.hashCode() | 0;
     result = imul(31, result) + getStringHashCode(this.s51_1) | 0;
+    result = imul(31, result) + getStringHashCode(this.t51_1) | 0;
     return result;
   }
   toString() {
-    return 'CommandCallJs(type=' + this.l51_1 + ', command=' + this.command.toString() + ', arguments=' + toString_0(this.arguments) + ', tokenTextRange=' + toString_0(this.tokenTextRange) + ', inVariant=' + this.inVariant + ', textRange=' + toString_0(this.m51_1) + ', parameterIndex=' + this.n51_1 + ', inEqualityExpression=' + this.o51_1 + ', containingCommand=' + toString(this.p51_1) + ', tokens=' + toString_0(this.tokens) + ', callType=' + CommandType__toString_impl_bqowx0(this.callType) + ', isRvalue=' + this.isRvalue + ', isLvalue=' + this.isLvalue + ', isCommand=' + this.isCommand + ', parserItem=' + this.q51_1.toString() + ', text=' + this.r51_1 + ', commandString=' + this.s51_1 + ', parserIndexStart=' + this.t51_1 + ', parserIndexEnd=' + this.u51_1 + ')';
+    return 'CommandCallJs(type=' + this.m51_1 + ', command=' + this.command.toString() + ', arguments=' + toString_0(this.arguments) + ', tokenTextRange=' + toString_0(this.tokenTextRange) + ', inVariant=' + this.inVariant + ', textRange=' + toString_0(this.n51_1) + ', parameterIndex=' + this.o51_1 + ', inEqualityExpression=' + this.p51_1 + ', containingCommand=' + toString(this.q51_1) + ', tokens=' + toString_0(this.tokens) + ', callType=' + CommandType__toString_impl_bqowx0(this.callType) + ', isRvalue=' + this.isRvalue + ', isLvalue=' + this.isLvalue + ', isCommand=' + this.isCommand + ', parserItem=' + this.r51_1.toString() + ', text=' + this.s51_1 + ', commandString=' + this.t51_1 + ', parserIndexStart=' + this.u51_1 + ', parserIndexEnd=' + this.v51_1 + ')';
   }
-  static v51(seen0, type, command, arguments_0, tokenTextRange, inVariant, textRange, parameterIndex, inEqualityExpression, containingCommand, tokens, callType, isRvalue, isLvalue, isCommand, parserItem, text, commandString, parserIndexStart, parserIndexEnd, serializationConstructorMarker) {
+  static w51(seen0, type, command, arguments_0, tokenTextRange, inVariant, textRange, parameterIndex, inEqualityExpression, containingCommand, tokens, callType, isRvalue, isLvalue, isCommand, parserItem, text, commandString, parserIndexStart, parserIndexEnd, serializationConstructorMarker) {
     Companion_getInstance_4();
     if (!(395263 === (395263 & seen0))) {
-      throwMissingFieldException(seen0, 395263, $serializer_getInstance_11().j51_1);
+      throwMissingFieldException(seen0, 395263, $serializer_getInstance_11().k51_1);
     }
     var $this = createThis(this);
-    $this.l51_1 = type;
+    $this.m51_1 = type;
     $this.command = command;
     $this.arguments = arguments_0;
     $this.tokenTextRange = tokenTextRange;
     $this.inVariant = inVariant;
-    $this.m51_1 = textRange;
-    $this.n51_1 = parameterIndex;
-    $this.o51_1 = inEqualityExpression;
-    $this.p51_1 = containingCommand;
+    $this.n51_1 = textRange;
+    $this.o51_1 = parameterIndex;
+    $this.p51_1 = inEqualityExpression;
+    $this.q51_1 = containingCommand;
     $this.tokens = tokens;
     $this.callType = callType;
     if (0 === (seen0 & 2048))
-      $this.isRvalue = $this.callType === Companion_getInstance_0().m1t_1;
+      $this.isRvalue = $this.callType === Companion_getInstance_0().j1t_1;
     else
       $this.isRvalue = isRvalue;
     if (0 === (seen0 & 4096))
-      $this.isLvalue = $this.callType === Companion_getInstance_0().l1t_1;
+      $this.isLvalue = $this.callType === Companion_getInstance_0().i1t_1;
     else
       $this.isLvalue = isLvalue;
     if (0 === (seen0 & 8192))
-      $this.isCommand = $this.callType === Companion_getInstance_0().k1t_1;
+      $this.isCommand = $this.callType === Companion_getInstance_0().h1t_1;
     else
       $this.isCommand = isCommand;
     if (0 === (seen0 & 16384))
-      $this.q51_1 = new CompoundCommandToken($this.tokens);
+      $this.r51_1 = new CompoundCommandToken($this.tokens);
     else
-      $this.q51_1 = parserItem;
+      $this.r51_1 = parserItem;
     if (0 === (seen0 & 32768))
-      $this.r51_1 = stitch(listOf_0(arrayConcat([$this.tokens, $this.arguments])));
+      $this.s51_1 = stitch(listOf_0(arrayConcat([$this.tokens, $this.arguments])));
     else
-      $this.r51_1 = text;
+      $this.s51_1 = text;
     if (0 === (seen0 & 65536))
-      $this.s51_1 = $this.command.command;
+      $this.t51_1 = $this.command.command;
     else
-      $this.s51_1 = commandString;
-    $this.t51_1 = parserIndexStart;
-    $this.u51_1 = parserIndexEnd;
+      $this.t51_1 = commandString;
+    $this.u51_1 = parserIndexStart;
+    $this.v51_1 = parserIndexEnd;
     return $this;
   }
 }
 class sam$kotlin_Comparator$0 {
   constructor(function_0) {
-    this.w51_1 = function_0;
+    this.x51_1 = function_0;
   }
-  zg(a, b) {
-    return this.w51_1(a, b);
+  wg(a, b) {
+    return this.x51_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
-    return this.w51_1;
+  f4() {
+    return this.x51_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -2229,7 +2274,7 @@ class sam$kotlin_Comparator$0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
 class CommandLookupUtil {
@@ -2237,10 +2282,10 @@ class CommandLookupUtil {
     if (call == null) {
       return null;
     }
-    if (call.c50_1 === get_ConditionCommand().command) {
+    if (call.d50_1 === get_ConditionCommand().command) {
       return get_ConditionCommand();
     }
-    var tmp0_safe_receiver = CaosLibs_getInstance().ng(variant).s4x(call.callType, call.c50_1, Companion_instance.fromIntValue(call.h50_1));
+    var tmp0_safe_receiver = CaosLibs_getInstance().kg(variant).r4x(call.callType, call.d50_1, Companion_instance.fromIntValue(call.i50_1));
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.first;
     return tmp1_safe_receiver == null ? null : toVariantCommand(tmp1_safe_receiver, variant);
   }
@@ -2248,7 +2293,7 @@ class CommandLookupUtil {
     if (commandString === get_ConditionCommand().command) {
       return get_ConditionCommand();
     }
-    var tmp0_safe_receiver = CaosLibs_getInstance().ng(variant).s4x(callType, commandString, Companion_instance.fromIntValue(bias));
+    var tmp0_safe_receiver = CaosLibs_getInstance().kg(variant).r4x(callType, commandString, Companion_instance.fromIntValue(bias));
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.first;
     return tmp1_safe_receiver == null ? null : toVariantCommand(tmp1_safe_receiver, variant);
   }
@@ -2256,11 +2301,11 @@ class CommandLookupUtil {
     if (call == null) {
       return null;
     }
-    if (call.c50_1 === get_ConditionCommand().command) {
+    if (call.d50_1 === get_ConditionCommand().command) {
       return get_ConditionCommand();
     }
-    var tokens = toIntArray(call.f51());
-    var tmp0_elvis_lhs = CaosLibs_getInstance().x4x(tokens);
+    var tokens = toIntArray(call.g51());
+    var tmp0_elvis_lhs = CaosLibs_getInstance().w4x(tokens);
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return null;
@@ -2268,51 +2313,51 @@ class CommandLookupUtil {
       tmp = tmp0_elvis_lhs;
     }
     var _destruct__k2r9zo = tmp;
-    var commandsRaw = _destruct__k2r9zo.ni();
-    var matchLength = _destruct__k2r9zo.oi();
+    var commandsRaw = _destruct__k2r9zo.ki();
+    var matchLength = _destruct__k2r9zo.li();
     if (!(matchLength === tokens.length)) {
       return null;
     }
     var callType = call.callType;
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.b2();
-    var _iterator__ex2g4s = commandsRaw.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var element = _iterator__ex2g4s.f1();
-      if (callType === Companion_getInstance_0().k1t_1 ? element.a22() : callType === Companion_getInstance_0().m1t_1 ? element.n21_1 : callType === Companion_getInstance_0().l1t_1 ? element.o21_1 : false) {
-        destination.g2(element);
+    var destination = ArrayList.u1();
+    var _iterator__ex2g4s = commandsRaw.w();
+    while (_iterator__ex2g4s.x()) {
+      var element = _iterator__ex2g4s.y();
+      if (callType === Companion_getInstance_0().h1t_1 ? element.x21() : callType === Companion_getInstance_0().j1t_1 ? element.k21_1 : callType === Companion_getInstance_0().i1t_1 ? element.l21_1 : false) {
+        destination.z1(element);
       }
     }
     var forType = destination;
     // Inline function 'kotlin.collections.map' call
     var this_0 = call.arguments;
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_0 = ArrayList.f2(this_0.length);
+    var destination_0 = ArrayList.y1(this_0.length);
     var inductionVariable = 0;
     var last = this_0.length;
     while (inductionVariable < last) {
       var item = this_0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
-      var tmp$ret$5 = Companion_instance.fromIntValue(item.t22());
-      destination_0.g2(tmp$ret$5);
+      var tmp$ret$5 = Companion_instance.fromIntValue(item.q22());
+      destination_0.z1(tmp$ret$5);
     }
     var argumentTypes = destination_0;
     // Inline function 'kotlin.collections.filter' call
     // Inline function 'kotlin.collections.filterTo' call
-    var destination_1 = ArrayList.b2();
-    var _iterator__ex2g4s_0 = forType.d1();
-    while (_iterator__ex2g4s_0.e1()) {
-      var element_0 = _iterator__ex2g4s_0.f1();
+    var destination_1 = ArrayList.u1();
+    var _iterator__ex2g4s_0 = forType.w();
+    while (_iterator__ex2g4s_0.x()) {
+      var element_0 = _iterator__ex2g4s_0.y();
       var tmp_0;
-      if (element_0.h21_1.length === argumentTypes.i2()) {
-        var tmp0 = withIndex(element_0.h21_1);
+      if (element_0.e21_1.length === argumentTypes.b2()) {
+        var tmp0 = withIndex(element_0.e21_1);
         var tmp$ret$9;
         $l$block_0: {
           // Inline function 'kotlin.collections.all' call
           var tmp_1;
           if (isInterface(tmp0, Collection)) {
-            tmp_1 = tmp0.b1();
+            tmp_1 = tmp0.u();
           } else {
             tmp_1 = false;
           }
@@ -2320,12 +2365,12 @@ class CommandLookupUtil {
             tmp$ret$9 = true;
             break $l$block_0;
           }
-          var _iterator__ex2g4s_1 = tmp0.d1();
-          while (_iterator__ex2g4s_1.e1()) {
-            var element_1 = _iterator__ex2g4s_1.f1();
-            var index = element_1.ni();
-            var parameter = element_1.oi();
-            if (!like(parameter.g1s(), argumentTypes.k2(index))) {
+          var _iterator__ex2g4s_1 = tmp0.w();
+          while (_iterator__ex2g4s_1.x()) {
+            var element_1 = _iterator__ex2g4s_1.y();
+            var index = element_1.ki();
+            var parameter = element_1.li();
+            if (!like(parameter.d1s(), argumentTypes.d2(index))) {
               tmp$ret$9 = false;
               break $l$block_0;
             }
@@ -2337,7 +2382,7 @@ class CommandLookupUtil {
         tmp_0 = false;
       }
       if (tmp_0) {
-        destination_1.g2(element_0);
+        destination_1.z1(element_0);
       }
     }
     var withArgumentTypes = destination_1;
@@ -2349,10 +2394,10 @@ class CommandLookupUtil {
     var tmp$ret$13;
     $l$block_1: {
       // Inline function 'kotlin.collections.firstOrNull' call
-      var _iterator__ex2g4s_2 = tmp0_0.d1();
-      while (_iterator__ex2g4s_2.e1()) {
-        var element_2 = _iterator__ex2g4s_2.f1();
-        if (element_2.i21_1 === call.h50_1) {
+      var _iterator__ex2g4s_2 = tmp0_0.w();
+      while (_iterator__ex2g4s_2.x()) {
+        var element_2 = _iterator__ex2g4s_2.y();
+        if (element_2.f21_1 === call.i50_1) {
           tmp$ret$13 = element_2;
           break $l$block_1;
         }
@@ -2369,28 +2414,28 @@ class CommandLookupUtil {
     var tmp$ret$17;
     $l$block_3: {
       // Inline function 'kotlin.collections.minByOrNull' call
-      var iterator = forType.d1();
-      if (!iterator.e1()) {
+      var iterator = forType.w();
+      if (!iterator.x()) {
         tmp$ret$17 = null;
         break $l$block_3;
       }
-      var minElem = iterator.f1();
-      if (!iterator.e1()) {
+      var minElem = iterator.y();
+      if (!iterator.x()) {
         tmp$ret$17 = minElem;
         break $l$block_3;
       }
       var it = minElem;
       var tmp_3;
-      if (variant === 'DS' && it.t21_1 === true) {
+      if (variant === 'DS' && it.q21_1 === true) {
         tmp_3 = 0;
       } else {
         tmp_3 = 1;
       }
       var minValue = tmp_3;
       do {
-        var e = iterator.f1();
+        var e = iterator.y();
         var tmp_4;
-        if (variant === 'DS' && e.t21_1 === true) {
+        if (variant === 'DS' && e.q21_1 === true) {
           tmp_4 = 0;
         } else {
           tmp_4 = 1;
@@ -2401,7 +2446,7 @@ class CommandLookupUtil {
           minValue = v;
         }
       }
-       while (iterator.e1());
+       while (iterator.x());
       tmp$ret$17 = minElem;
     }
     var tmp2_safe_receiver = tmp$ret$17;
@@ -2411,10 +2456,10 @@ class CommandLookupUtil {
     if (reference == null) {
       return null;
     }
-    if (reference.x51_1 === get_ConditionCommand().command) {
+    if (reference.y51_1 === get_ConditionCommand().command) {
       return get_ConditionCommand();
     }
-    var tmp0_safe_receiver = CaosLibs_getInstance().ng(variant).s4x(reference.commandType, reference.x51_1, Companion_instance.fromIntValue(reference.returnType));
+    var tmp0_safe_receiver = CaosLibs_getInstance().kg(variant).r4x(reference.commandType, reference.y51_1, Companion_instance.fromIntValue(reference.returnType));
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.first;
     return tmp1_safe_receiver == null ? null : toVariantCommand(tmp1_safe_receiver, variant);
   }
@@ -2422,7 +2467,7 @@ class CommandLookupUtil {
     if (arg == null) {
       return null;
     }
-    var tmp0_elvis_lhs = arg.f4y();
+    var tmp0_elvis_lhs = arg.e4y();
     var tmp;
     if (tmp0_elvis_lhs == null) {
       return null;
@@ -2430,11 +2475,11 @@ class CommandLookupUtil {
       tmp = tmp0_elvis_lhs;
     }
     var containingCommand = tmp;
-    var tmp1_safe_receiver = CaosLibs_getInstance().ng(variant).s4x(containingCommand.commandType, containingCommand.x51_1, Companion_instance.fromIntValue(containingCommand.returnType));
+    var tmp1_safe_receiver = CaosLibs_getInstance().kg(variant).r4x(containingCommand.commandType, containingCommand.y51_1, Companion_instance.fromIntValue(containingCommand.returnType));
     var tmp2_safe_receiver = tmp1_safe_receiver == null ? null : tmp1_safe_receiver.first;
     var tmp3_safe_receiver = tmp2_safe_receiver == null ? null : toVariantCommand(tmp2_safe_receiver, variant);
     var tmp4_safe_receiver = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.parameters;
-    return tmp4_safe_receiver == null ? null : getOrNull(tmp4_safe_receiver, arg.c4y());
+    return tmp4_safe_receiver == null ? null : getOrNull(tmp4_safe_receiver, arg.b4y());
   }
 }
 class Companion_3 {}
@@ -2442,30 +2487,30 @@ class $serializer_3 {
   constructor() {
     $serializer_instance_3 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.CommandReference', this, 6);
-    tmp0_serialDesc.z13('commandString', false);
-    tmp0_serialDesc.z13('commandType', false);
-    tmp0_serialDesc.z13('line', false);
-    tmp0_serialDesc.z13('column', false);
-    tmp0_serialDesc.z13('commandCallIndex', false);
-    tmp0_serialDesc.z13('returnType', false);
-    this.y51_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('commandString', false);
+    tmp0_serialDesc.w13('commandType', false);
+    tmp0_serialDesc.w13('line', false);
+    tmp0_serialDesc.w13('column', false);
+    tmp0_serialDesc.w13('commandCallIndex', false);
+    tmp0_serialDesc.w13('returnType', false);
+    this.z51_1 = tmp0_serialDesc;
   }
-  z51(encoder, value) {
-    var tmp0_desc = this.y51_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    tmp1_output.ux(tmp0_desc, 0, value.x51_1);
-    tmp1_output.wx(tmp0_desc, 1, CommandTypeSerializer_getInstance(), new CommandType(value.commandType));
-    tmp1_output.px(tmp0_desc, 2, value.line);
-    tmp1_output.px(tmp0_desc, 3, value.column);
-    tmp1_output.px(tmp0_desc, 4, value.commandCallIndex);
-    tmp1_output.px(tmp0_desc, 5, value.returnType);
-    tmp1_output.fw(tmp0_desc);
+  a52(encoder, value) {
+    var tmp0_desc = this.z51_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    tmp1_output.rx(tmp0_desc, 0, value.y51_1);
+    tmp1_output.tx(tmp0_desc, 1, CommandTypeSerializer_getInstance(), new CommandType(value.commandType));
+    tmp1_output.mx(tmp0_desc, 2, value.line);
+    tmp1_output.mx(tmp0_desc, 3, value.column);
+    tmp1_output.mx(tmp0_desc, 4, value.commandCallIndex);
+    tmp1_output.mx(tmp0_desc, 5, value.returnType);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.z51(encoder, value instanceof CommandReference ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.a52(encoder, value instanceof CommandReference ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.y51_1;
+  nr(decoder) {
+    var tmp0_desc = this.z51_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -2475,68 +2520,68 @@ class $serializer_3 {
     var tmp7_local3 = 0;
     var tmp8_local4 = 0;
     var tmp9_local5 = 0;
-    var tmp10_input = decoder.ew(tmp0_desc);
-    if (tmp10_input.vw()) {
-      tmp4_local0 = tmp10_input.ow(tmp0_desc, 0);
+    var tmp10_input = decoder.bw(tmp0_desc);
+    if (tmp10_input.sw()) {
+      tmp4_local0 = tmp10_input.lw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
       var tmp = CommandTypeSerializer_getInstance();
       var tmp_0 = tmp5_local1;
-      var tmp_1 = tmp10_input.qw(tmp0_desc, 1, tmp, tmp_0 == null ? null : new CommandType(tmp_0));
-      tmp5_local1 = tmp_1 == null ? null : tmp_1.n1t_1;
+      var tmp_1 = tmp10_input.nw(tmp0_desc, 1, tmp, tmp_0 == null ? null : new CommandType(tmp_0));
+      tmp5_local1 = tmp_1 == null ? null : tmp_1.k1t_1;
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp10_input.jw(tmp0_desc, 2);
+      tmp6_local2 = tmp10_input.gw(tmp0_desc, 2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp10_input.jw(tmp0_desc, 3);
+      tmp7_local3 = tmp10_input.gw(tmp0_desc, 3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp10_input.jw(tmp0_desc, 4);
+      tmp8_local4 = tmp10_input.gw(tmp0_desc, 4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp10_input.jw(tmp0_desc, 5);
+      tmp9_local5 = tmp10_input.gw(tmp0_desc, 5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp10_input.ww(tmp0_desc);
+        tmp2_index = tmp10_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp10_input.ow(tmp0_desc, 0);
+            tmp4_local0 = tmp10_input.lw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
             var tmp_2 = CommandTypeSerializer_getInstance();
             var tmp_3 = tmp5_local1;
-            var tmp_4 = tmp10_input.qw(tmp0_desc, 1, tmp_2, tmp_3 == null ? null : new CommandType(tmp_3));
-            tmp5_local1 = tmp_4 == null ? null : tmp_4.n1t_1;
+            var tmp_4 = tmp10_input.nw(tmp0_desc, 1, tmp_2, tmp_3 == null ? null : new CommandType(tmp_3));
+            tmp5_local1 = tmp_4 == null ? null : tmp_4.k1t_1;
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp10_input.jw(tmp0_desc, 2);
+            tmp6_local2 = tmp10_input.gw(tmp0_desc, 2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp10_input.jw(tmp0_desc, 3);
+            tmp7_local3 = tmp10_input.gw(tmp0_desc, 3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp10_input.jw(tmp0_desc, 4);
+            tmp8_local4 = tmp10_input.gw(tmp0_desc, 4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp10_input.jw(tmp0_desc, 5);
+            tmp9_local5 = tmp10_input.gw(tmp0_desc, 5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp10_input.fw(tmp0_desc);
-    return CommandReference.a52(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, null);
+    tmp10_input.cw(tmp0_desc);
+    return CommandReference.b52(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, null);
   }
-  or() {
-    return this.y51_1;
+  lr() {
+    return this.z51_1;
   }
-  o14() {
+  l14() {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
@@ -2544,9 +2589,9 @@ class $serializer_3 {
   }
 }
 class CommandReference {
-  static b52(commandString, commandType, line, column, commandCallIndex, returnType) {
+  static c52(commandString, commandType, line, column, commandCallIndex, returnType) {
     var $this = createThis(this);
-    $this.x51_1 = commandString;
+    $this.y51_1 = commandString;
     $this.commandType = commandType;
     $this.line = line;
     $this.column = column;
@@ -2554,29 +2599,29 @@ class CommandReference {
     $this.returnType = returnType;
     return $this;
   }
-  c52() {
+  d52() {
     return this.commandType;
   }
-  h1e() {
+  e1e() {
     return this.line;
   }
-  d52() {
+  e52() {
     return this.column;
   }
-  e52() {
+  f52() {
     return this.commandCallIndex;
   }
-  y21() {
+  v21() {
     return this.returnType;
   }
   static withCommandCall(commandCall, callIndex) {
-    return this.b52(commandCall.c50_1, commandCall.callType, commandCall.d50_1.o1().h1e(), commandCall.d50_1.o1().l1e(), callIndex, commandCall.h50_1);
+    return this.c52(commandCall.d50_1, commandCall.callType, commandCall.e50_1.h1().e1e(), commandCall.e50_1.h1().i1e(), callIndex, commandCall.i50_1);
   }
   toString() {
-    return 'CommandReference(commandString=' + this.x51_1 + ', commandType=' + CommandType__toString_impl_bqowx0(this.commandType) + ', line=' + this.line + ', column=' + this.column + ', commandCallIndex=' + this.commandCallIndex + ', returnType=' + this.returnType + ')';
+    return 'CommandReference(commandString=' + this.y51_1 + ', commandType=' + CommandType__toString_impl_bqowx0(this.commandType) + ', line=' + this.line + ', column=' + this.column + ', commandCallIndex=' + this.commandCallIndex + ', returnType=' + this.returnType + ')';
   }
   hashCode() {
-    var result = getStringHashCode(this.x51_1);
+    var result = getStringHashCode(this.y51_1);
     result = imul(result, 31) + CommandType__hashCode_impl_xhutpv(this.commandType) | 0;
     result = imul(result, 31) + this.line | 0;
     result = imul(result, 31) + this.column | 0;
@@ -2589,7 +2634,7 @@ class CommandReference {
       return true;
     if (!(other instanceof CommandReference))
       return false;
-    if (!(this.x51_1 === other.x51_1))
+    if (!(this.y51_1 === other.y51_1))
       return false;
     if (!(this.commandType === other.commandType))
       return false;
@@ -2603,12 +2648,12 @@ class CommandReference {
       return false;
     return true;
   }
-  static a52(seen0, commandString, commandType, line, column, commandCallIndex, returnType, serializationConstructorMarker) {
+  static b52(seen0, commandString, commandType, line, column, commandCallIndex, returnType, serializationConstructorMarker) {
     if (!(63 === (63 & seen0))) {
-      throwMissingFieldException(seen0, 63, $serializer_getInstance_12().y51_1);
+      throwMissingFieldException(seen0, 63, $serializer_getInstance_12().z51_1);
     }
     var $this = createThis(this);
-    $this.x51_1 = commandString;
+    $this.y51_1 = commandString;
     $this.commandType = commandType;
     $this.line = line;
     $this.column = column;
@@ -2625,9 +2670,9 @@ class Companion_4 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.f52_1 = [null, null, null, null, null, null, lazy(tmp_0, EqOp$Companion$$childSerializers$_anonymous__e3di0z), null, null, null];
+    tmp.g52_1 = [null, null, null, null, null, null, lazy(tmp_0, EqOp$Companion$$childSerializers$_anonymous__e3di0z), null, null, null];
   }
-  n1e() {
+  k1e() {
     return $serializer_getInstance_13();
   }
 }
@@ -2635,57 +2680,57 @@ class $serializer_4 {
   constructor() {
     $serializer_instance_4 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.EqOp', this, 10);
-    tmp0_serialDesc.z13('eqOpToken', false);
-    tmp0_serialDesc.z13('text', true);
-    tmp0_serialDesc.z13('textRange', true);
-    tmp0_serialDesc.z13('parserIndexStart', true);
-    tmp0_serialDesc.z13('parserIndexEnd', true);
-    tmp0_serialDesc.z13('parameterIndex', true);
-    tmp0_serialDesc.z13('parserItem', true);
-    tmp0_serialDesc.z13('containingCommand', true);
-    tmp0_serialDesc.z13('typeId', true);
-    tmp0_serialDesc.z13('inEqualityExpression', true);
-    this.g52_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('eqOpToken', false);
+    tmp0_serialDesc.w13('text', true);
+    tmp0_serialDesc.w13('textRange', true);
+    tmp0_serialDesc.w13('parserIndexStart', true);
+    tmp0_serialDesc.w13('parserIndexEnd', true);
+    tmp0_serialDesc.w13('parameterIndex', true);
+    tmp0_serialDesc.w13('parserItem', true);
+    tmp0_serialDesc.w13('containingCommand', true);
+    tmp0_serialDesc.w13('typeId', true);
+    tmp0_serialDesc.w13('inEqualityExpression', true);
+    this.h52_1 = tmp0_serialDesc;
   }
-  h52(encoder, value) {
-    var tmp0_desc = this.g52_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_6().f52_1;
-    tmp1_output.wx(tmp0_desc, 0, $serializer_getInstance_6(), value.i52_1);
-    if (tmp1_output.cy(tmp0_desc, 1) ? true : !(value.j52_1 === value.i52_1.u1n_1)) {
-      tmp1_output.ux(tmp0_desc, 1, value.j52_1);
+  i52(encoder, value) {
+    var tmp0_desc = this.h52_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_6().g52_1;
+    tmp1_output.tx(tmp0_desc, 0, $serializer_getInstance_6(), value.j52_1);
+    if (tmp1_output.zx(tmp0_desc, 1) ? true : !(value.k52_1 === value.j52_1.r1n_1)) {
+      tmp1_output.rx(tmp0_desc, 1, value.k52_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 2) ? true : !equals(value.k52_1, value.i52_1.t1n_1)) {
-      tmp1_output.wx(tmp0_desc, 2, RangeWithIndexSerializer_getInstance(), value.k52_1);
+    if (tmp1_output.zx(tmp0_desc, 2) ? true : !equals(value.l52_1, value.j52_1.q1n_1)) {
+      tmp1_output.tx(tmp0_desc, 2, RangeWithIndexSerializer_getInstance(), value.l52_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 3) ? true : !(value.l52_1 == value.i52_1.f1g())) {
-      tmp1_output.yx(tmp0_desc, 3, IntSerializer_getInstance(), value.l52_1);
+    if (tmp1_output.zx(tmp0_desc, 3) ? true : !(value.m52_1 == value.j52_1.c1g())) {
+      tmp1_output.vx(tmp0_desc, 3, IntSerializer_getInstance(), value.m52_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 4) ? true : !(value.m52_1 == value.i52_1.g1g())) {
-      tmp1_output.yx(tmp0_desc, 4, IntSerializer_getInstance(), value.m52_1);
+    if (tmp1_output.zx(tmp0_desc, 4) ? true : !(value.n52_1 == value.j52_1.d1g())) {
+      tmp1_output.vx(tmp0_desc, 4, IntSerializer_getInstance(), value.n52_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 5) ? true : !(value.n52_1 === 1)) {
-      tmp1_output.px(tmp0_desc, 5, value.n52_1);
+    if (tmp1_output.zx(tmp0_desc, 5) ? true : !(value.o52_1 === 1)) {
+      tmp1_output.mx(tmp0_desc, 5, value.o52_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 6) ? true : !equals(value.o52_1, value.i52_1)) {
-      tmp1_output.yx(tmp0_desc, 6, tmp2_cached[6].r3(), value.o52_1);
+    if (tmp1_output.zx(tmp0_desc, 6) ? true : !equals(value.p52_1, value.j52_1)) {
+      tmp1_output.vx(tmp0_desc, 6, tmp2_cached[6].k3(), value.p52_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 7) ? true : !(value.p52_1 == null)) {
-      tmp1_output.yx(tmp0_desc, 7, $serializer_getInstance_12(), value.p52_1);
+    if (tmp1_output.zx(tmp0_desc, 7) ? true : !(value.q52_1 == null)) {
+      tmp1_output.vx(tmp0_desc, 7, $serializer_getInstance_12(), value.q52_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 8) ? true : !(value.q52_1 === value.i52_1.w1n_1)) {
-      tmp1_output.px(tmp0_desc, 8, value.q52_1);
+    if (tmp1_output.zx(tmp0_desc, 8) ? true : !(value.r52_1 === value.j52_1.t1n_1)) {
+      tmp1_output.mx(tmp0_desc, 8, value.r52_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 9) ? true : !(value.r52_1 === true)) {
-      tmp1_output.mx(tmp0_desc, 9, value.r52_1);
+    if (tmp1_output.zx(tmp0_desc, 9) ? true : !(value.s52_1 === true)) {
+      tmp1_output.jx(tmp0_desc, 9, value.s52_1);
     }
-    tmp1_output.fw(tmp0_desc);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.h52(encoder, value instanceof EqOp ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.i52(encoder, value instanceof EqOp ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.g52_1;
+  nr(decoder) {
+    var tmp0_desc = this.h52_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -2699,158 +2744,158 @@ class $serializer_4 {
     var tmp11_local7 = null;
     var tmp12_local8 = 0;
     var tmp13_local9 = false;
-    var tmp14_input = decoder.ew(tmp0_desc);
-    var tmp15_cached = Companion_getInstance_6().f52_1;
-    if (tmp14_input.vw()) {
-      tmp4_local0 = tmp14_input.qw(tmp0_desc, 0, $serializer_getInstance_6(), tmp4_local0);
+    var tmp14_input = decoder.bw(tmp0_desc);
+    var tmp15_cached = Companion_getInstance_6().g52_1;
+    if (tmp14_input.sw()) {
+      tmp4_local0 = tmp14_input.nw(tmp0_desc, 0, $serializer_getInstance_6(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp14_input.ow(tmp0_desc, 1);
+      tmp5_local1 = tmp14_input.lw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp14_input.qw(tmp0_desc, 2, RangeWithIndexSerializer_getInstance(), tmp6_local2);
+      tmp6_local2 = tmp14_input.nw(tmp0_desc, 2, RangeWithIndexSerializer_getInstance(), tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp14_input.sw(tmp0_desc, 3, IntSerializer_getInstance(), tmp7_local3);
+      tmp7_local3 = tmp14_input.pw(tmp0_desc, 3, IntSerializer_getInstance(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp14_input.sw(tmp0_desc, 4, IntSerializer_getInstance(), tmp8_local4);
+      tmp8_local4 = tmp14_input.pw(tmp0_desc, 4, IntSerializer_getInstance(), tmp8_local4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp14_input.jw(tmp0_desc, 5);
+      tmp9_local5 = tmp14_input.gw(tmp0_desc, 5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp14_input.sw(tmp0_desc, 6, tmp15_cached[6].r3(), tmp10_local6);
+      tmp10_local6 = tmp14_input.pw(tmp0_desc, 6, tmp15_cached[6].k3(), tmp10_local6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
-      tmp11_local7 = tmp14_input.sw(tmp0_desc, 7, $serializer_getInstance_12(), tmp11_local7);
+      tmp11_local7 = tmp14_input.pw(tmp0_desc, 7, $serializer_getInstance_12(), tmp11_local7);
       tmp3_bitMask0 = tmp3_bitMask0 | 128;
-      tmp12_local8 = tmp14_input.jw(tmp0_desc, 8);
+      tmp12_local8 = tmp14_input.gw(tmp0_desc, 8);
       tmp3_bitMask0 = tmp3_bitMask0 | 256;
-      tmp13_local9 = tmp14_input.gw(tmp0_desc, 9);
+      tmp13_local9 = tmp14_input.dw(tmp0_desc, 9);
       tmp3_bitMask0 = tmp3_bitMask0 | 512;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp14_input.ww(tmp0_desc);
+        tmp2_index = tmp14_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp14_input.qw(tmp0_desc, 0, $serializer_getInstance_6(), tmp4_local0);
+            tmp4_local0 = tmp14_input.nw(tmp0_desc, 0, $serializer_getInstance_6(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp14_input.ow(tmp0_desc, 1);
+            tmp5_local1 = tmp14_input.lw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp14_input.qw(tmp0_desc, 2, RangeWithIndexSerializer_getInstance(), tmp6_local2);
+            tmp6_local2 = tmp14_input.nw(tmp0_desc, 2, RangeWithIndexSerializer_getInstance(), tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp14_input.sw(tmp0_desc, 3, IntSerializer_getInstance(), tmp7_local3);
+            tmp7_local3 = tmp14_input.pw(tmp0_desc, 3, IntSerializer_getInstance(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp14_input.sw(tmp0_desc, 4, IntSerializer_getInstance(), tmp8_local4);
+            tmp8_local4 = tmp14_input.pw(tmp0_desc, 4, IntSerializer_getInstance(), tmp8_local4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp14_input.jw(tmp0_desc, 5);
+            tmp9_local5 = tmp14_input.gw(tmp0_desc, 5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp14_input.sw(tmp0_desc, 6, tmp15_cached[6].r3(), tmp10_local6);
+            tmp10_local6 = tmp14_input.pw(tmp0_desc, 6, tmp15_cached[6].k3(), tmp10_local6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           case 7:
-            tmp11_local7 = tmp14_input.sw(tmp0_desc, 7, $serializer_getInstance_12(), tmp11_local7);
+            tmp11_local7 = tmp14_input.pw(tmp0_desc, 7, $serializer_getInstance_12(), tmp11_local7);
             tmp3_bitMask0 = tmp3_bitMask0 | 128;
             break;
           case 8:
-            tmp12_local8 = tmp14_input.jw(tmp0_desc, 8);
+            tmp12_local8 = tmp14_input.gw(tmp0_desc, 8);
             tmp3_bitMask0 = tmp3_bitMask0 | 256;
             break;
           case 9:
-            tmp13_local9 = tmp14_input.gw(tmp0_desc, 9);
+            tmp13_local9 = tmp14_input.dw(tmp0_desc, 9);
             tmp3_bitMask0 = tmp3_bitMask0 | 512;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp14_input.fw(tmp0_desc);
-    return EqOp.s52(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, null);
+    tmp14_input.cw(tmp0_desc);
+    return EqOp.t52(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, null);
   }
-  or() {
-    return this.g52_1;
+  lr() {
+    return this.h52_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance_6().f52_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance_6().g52_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [$serializer_getInstance_6(), StringSerializer_getInstance(), RangeWithIndexSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance()), IntSerializer_getInstance(), get_nullable(tmp0_cached[6].r3()), get_nullable($serializer_getInstance_12()), IntSerializer_getInstance(), BooleanSerializer_getInstance()];
+    return [$serializer_getInstance_6(), StringSerializer_getInstance(), RangeWithIndexSerializer_getInstance(), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance()), IntSerializer_getInstance(), get_nullable(tmp0_cached[6].k3()), get_nullable($serializer_getInstance_12()), IntSerializer_getInstance(), BooleanSerializer_getInstance()];
   }
 }
 class EqOp {
   constructor(eqOpToken, text, textRange, parserIndexStart, parserIndexEnd, parameterIndex, parserItem, containingCommand, type, inEqualityExpression) {
     Companion_getInstance_6();
-    text = text === VOID ? eqOpToken.u1n_1 : text;
-    textRange = textRange === VOID ? eqOpToken.t1n_1 : textRange;
-    parserIndexStart = parserIndexStart === VOID ? eqOpToken.f1g() : parserIndexStart;
-    parserIndexEnd = parserIndexEnd === VOID ? eqOpToken.g1g() : parserIndexEnd;
+    text = text === VOID ? eqOpToken.r1n_1 : text;
+    textRange = textRange === VOID ? eqOpToken.q1n_1 : textRange;
+    parserIndexStart = parserIndexStart === VOID ? eqOpToken.c1g() : parserIndexStart;
+    parserIndexEnd = parserIndexEnd === VOID ? eqOpToken.d1g() : parserIndexEnd;
     parameterIndex = parameterIndex === VOID ? 1 : parameterIndex;
     parserItem = parserItem === VOID ? eqOpToken : parserItem;
     containingCommand = containingCommand === VOID ? null : containingCommand;
-    type = type === VOID ? eqOpToken.w1n_1 : type;
+    type = type === VOID ? eqOpToken.t1n_1 : type;
     inEqualityExpression = inEqualityExpression === VOID ? true : inEqualityExpression;
-    this.i52_1 = eqOpToken;
-    this.j52_1 = text;
-    this.k52_1 = textRange;
-    this.l52_1 = parserIndexStart;
-    this.m52_1 = parserIndexEnd;
-    this.n52_1 = parameterIndex;
-    this.o52_1 = parserItem;
-    this.p52_1 = containingCommand;
-    this.q52_1 = type;
-    this.r52_1 = inEqualityExpression;
+    this.j52_1 = eqOpToken;
+    this.k52_1 = text;
+    this.l52_1 = textRange;
+    this.m52_1 = parserIndexStart;
+    this.n52_1 = parserIndexEnd;
+    this.o52_1 = parameterIndex;
+    this.p52_1 = parserItem;
+    this.q52_1 = containingCommand;
+    this.r52_1 = type;
+    this.s52_1 = inEqualityExpression;
   }
-  m1f() {
-    return this.j52_1;
-  }
-  g1e() {
+  j1f() {
     return this.k52_1;
   }
-  f1g() {
+  d1e() {
     return this.l52_1;
   }
-  g1g() {
+  c1g() {
     return this.m52_1;
   }
-  c4y() {
+  d1g() {
     return this.n52_1;
   }
-  e4y() {
+  b4y() {
     return this.o52_1;
   }
-  f4y() {
+  d4y() {
     return this.p52_1;
   }
-  t22() {
+  e4y() {
     return this.q52_1;
   }
-  d4y() {
+  q22() {
     return this.r52_1;
   }
+  c4y() {
+    return this.s52_1;
+  }
   toString() {
-    return this.i52_1.u1n_1;
+    return this.j52_1.r1n_1;
   }
   hashCode() {
-    var result = this.i52_1.hashCode();
-    result = imul(result, 31) + getStringHashCode(this.j52_1) | 0;
-    result = imul(result, 31) + hashCode(this.k52_1) | 0;
-    result = imul(result, 31) + (this.l52_1 == null ? 0 : this.l52_1) | 0;
+    var result = this.j52_1.hashCode();
+    result = imul(result, 31) + getStringHashCode(this.k52_1) | 0;
+    result = imul(result, 31) + hashCode(this.l52_1) | 0;
     result = imul(result, 31) + (this.m52_1 == null ? 0 : this.m52_1) | 0;
-    result = imul(result, 31) + this.n52_1 | 0;
-    result = imul(result, 31) + (this.o52_1 == null ? 0 : hashCode(this.o52_1)) | 0;
-    result = imul(result, 31) + (this.p52_1 == null ? 0 : this.p52_1.hashCode()) | 0;
-    result = imul(result, 31) + this.q52_1 | 0;
-    result = imul(result, 31) + getBooleanHashCode(this.r52_1) | 0;
+    result = imul(result, 31) + (this.n52_1 == null ? 0 : this.n52_1) | 0;
+    result = imul(result, 31) + this.o52_1 | 0;
+    result = imul(result, 31) + (this.p52_1 == null ? 0 : hashCode(this.p52_1)) | 0;
+    result = imul(result, 31) + (this.q52_1 == null ? 0 : this.q52_1.hashCode()) | 0;
+    result = imul(result, 31) + this.r52_1 | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.s52_1) | 0;
     return result;
   }
   equals(other) {
@@ -2858,71 +2903,71 @@ class EqOp {
       return true;
     if (!(other instanceof EqOp))
       return false;
-    if (!this.i52_1.equals(other.i52_1))
+    if (!this.j52_1.equals(other.j52_1))
       return false;
-    if (!(this.j52_1 === other.j52_1))
+    if (!(this.k52_1 === other.k52_1))
       return false;
-    if (!equals(this.k52_1, other.k52_1))
-      return false;
-    if (!(this.l52_1 == other.l52_1))
+    if (!equals(this.l52_1, other.l52_1))
       return false;
     if (!(this.m52_1 == other.m52_1))
       return false;
-    if (!(this.n52_1 === other.n52_1))
+    if (!(this.n52_1 == other.n52_1))
       return false;
-    if (!equals(this.o52_1, other.o52_1))
+    if (!(this.o52_1 === other.o52_1))
       return false;
     if (!equals(this.p52_1, other.p52_1))
       return false;
-    if (!(this.q52_1 === other.q52_1))
+    if (!equals(this.q52_1, other.q52_1))
       return false;
     if (!(this.r52_1 === other.r52_1))
       return false;
+    if (!(this.s52_1 === other.s52_1))
+      return false;
     return true;
   }
-  static s52(seen0, eqOpToken, text, textRange, parserIndexStart, parserIndexEnd, parameterIndex, parserItem, containingCommand, type, inEqualityExpression, serializationConstructorMarker) {
+  static t52(seen0, eqOpToken, text, textRange, parserIndexStart, parserIndexEnd, parameterIndex, parserItem, containingCommand, type, inEqualityExpression, serializationConstructorMarker) {
     Companion_getInstance_6();
     if (!(1 === (1 & seen0))) {
-      throwMissingFieldException(seen0, 1, $serializer_getInstance_13().g52_1);
+      throwMissingFieldException(seen0, 1, $serializer_getInstance_13().h52_1);
     }
     var $this = createThis(this);
-    $this.i52_1 = eqOpToken;
+    $this.j52_1 = eqOpToken;
     if (0 === (seen0 & 2))
-      $this.j52_1 = $this.i52_1.u1n_1;
+      $this.k52_1 = $this.j52_1.r1n_1;
     else
-      $this.j52_1 = text;
+      $this.k52_1 = text;
     if (0 === (seen0 & 4))
-      $this.k52_1 = $this.i52_1.t1n_1;
+      $this.l52_1 = $this.j52_1.q1n_1;
     else
-      $this.k52_1 = textRange;
+      $this.l52_1 = textRange;
     if (0 === (seen0 & 8))
-      $this.l52_1 = $this.i52_1.f1g();
+      $this.m52_1 = $this.j52_1.c1g();
     else
-      $this.l52_1 = parserIndexStart;
+      $this.m52_1 = parserIndexStart;
     if (0 === (seen0 & 16))
-      $this.m52_1 = $this.i52_1.g1g();
+      $this.n52_1 = $this.j52_1.d1g();
     else
-      $this.m52_1 = parserIndexEnd;
+      $this.n52_1 = parserIndexEnd;
     if (0 === (seen0 & 32))
-      $this.n52_1 = 1;
+      $this.o52_1 = 1;
     else
-      $this.n52_1 = parameterIndex;
+      $this.o52_1 = parameterIndex;
     if (0 === (seen0 & 64))
-      $this.o52_1 = $this.i52_1;
+      $this.p52_1 = $this.j52_1;
     else
-      $this.o52_1 = parserItem;
+      $this.p52_1 = parserItem;
     if (0 === (seen0 & 128))
-      $this.p52_1 = null;
+      $this.q52_1 = null;
     else
-      $this.p52_1 = containingCommand;
+      $this.q52_1 = containingCommand;
     if (0 === (seen0 & 256))
-      $this.q52_1 = $this.i52_1.w1n_1;
+      $this.r52_1 = $this.j52_1.t1n_1;
     else
-      $this.q52_1 = type;
+      $this.r52_1 = type;
     if (0 === (seen0 & 512))
-      $this.r52_1 = true;
+      $this.s52_1 = true;
     else
-      $this.r52_1 = inEqualityExpression;
+      $this.s52_1 = inEqualityExpression;
     return $this;
   }
 }
@@ -2940,9 +2985,9 @@ class Companion_5 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.t52_1 = [null, tmp_1, tmp_3, null, null, null, null, null, null, tmp_5, lazy(tmp_6, EqualityStatement$Companion$$childSerializers$_anonymous__i59u0b_2), null, null];
+    tmp.u52_1 = [null, tmp_1, tmp_3, null, null, null, null, null, null, tmp_5, lazy(tmp_6, EqualityStatement$Companion$$childSerializers$_anonymous__i59u0b_2), null, null];
   }
-  n1e() {
+  k1e() {
     return $serializer_getInstance_14();
   }
 }
@@ -2950,48 +2995,48 @@ class $serializer_5 {
   constructor() {
     $serializer_instance_5 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.EqualityStatement', this, 13);
-    tmp0_serialDesc.z13('textRange', false);
-    tmp0_serialDesc.z13('first', false);
-    tmp0_serialDesc.z13('second', false);
-    tmp0_serialDesc.z13('eqToken', false);
-    tmp0_serialDesc.z13('containingCommand', false);
-    tmp0_serialDesc.z13('parameterIndex', false);
-    tmp0_serialDesc.z13('text', false);
-    tmp0_serialDesc.z13('typeId', true);
-    tmp0_serialDesc.z13('inEqualityExpression', true);
-    tmp0_serialDesc.z13('parserItem', true);
-    tmp0_serialDesc.z13('arguments', true);
-    tmp0_serialDesc.z13('parserIndexStart', true);
-    tmp0_serialDesc.z13('parserIndexEnd', true);
-    this.u52_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('textRange', false);
+    tmp0_serialDesc.w13('first', false);
+    tmp0_serialDesc.w13('second', false);
+    tmp0_serialDesc.w13('eqToken', false);
+    tmp0_serialDesc.w13('containingCommand', false);
+    tmp0_serialDesc.w13('parameterIndex', false);
+    tmp0_serialDesc.w13('text', false);
+    tmp0_serialDesc.w13('typeId', true);
+    tmp0_serialDesc.w13('inEqualityExpression', true);
+    tmp0_serialDesc.w13('parserItem', true);
+    tmp0_serialDesc.w13('arguments', true);
+    tmp0_serialDesc.w13('parserIndexStart', true);
+    tmp0_serialDesc.w13('parserIndexEnd', true);
+    this.v52_1 = tmp0_serialDesc;
   }
-  v52(encoder, value) {
-    var tmp0_desc = this.u52_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_7().t52_1;
-    tmp1_output.wx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.w52_1);
-    tmp1_output.yx(tmp0_desc, 1, tmp2_cached[1].r3(), value.first);
-    tmp1_output.yx(tmp0_desc, 2, tmp2_cached[2].r3(), value.second);
-    tmp1_output.yx(tmp0_desc, 3, $serializer_getInstance_13(), value.eqToken);
-    tmp1_output.yx(tmp0_desc, 4, $serializer_getInstance_12(), value.x52_1);
-    tmp1_output.px(tmp0_desc, 5, value.y52_1);
-    tmp1_output.ux(tmp0_desc, 6, value.z52_1);
-    if (tmp1_output.cy(tmp0_desc, 7) ? true : !(value.a53_1 === ValueType_CONDITION_getInstance().value)) {
-      tmp1_output.px(tmp0_desc, 7, value.a53_1);
+  w52(encoder, value) {
+    var tmp0_desc = this.v52_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_7().u52_1;
+    tmp1_output.tx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.x52_1);
+    tmp1_output.vx(tmp0_desc, 1, tmp2_cached[1].k3(), value.first);
+    tmp1_output.vx(tmp0_desc, 2, tmp2_cached[2].k3(), value.second);
+    tmp1_output.vx(tmp0_desc, 3, $serializer_getInstance_13(), value.eqToken);
+    tmp1_output.vx(tmp0_desc, 4, $serializer_getInstance_12(), value.y52_1);
+    tmp1_output.mx(tmp0_desc, 5, value.z52_1);
+    tmp1_output.rx(tmp0_desc, 6, value.a53_1);
+    if (tmp1_output.zx(tmp0_desc, 7) ? true : !(value.b53_1 === ValueType_CONDITION_getInstance().value)) {
+      tmp1_output.mx(tmp0_desc, 7, value.b53_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 8) ? true : !(value.b53_1 === true)) {
-      tmp1_output.mx(tmp0_desc, 8, value.b53_1);
+    if (tmp1_output.zx(tmp0_desc, 8) ? true : !(value.c53_1 === true)) {
+      tmp1_output.jx(tmp0_desc, 8, value.c53_1);
     }
     var tmp;
-    if (tmp1_output.cy(tmp0_desc, 9)) {
+    if (tmp1_output.zx(tmp0_desc, 9)) {
       tmp = true;
     } else {
       var tmp0_safe_receiver = value.first;
-      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.e4y();
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.d4y();
       var tmp_0;
       if (tmp1_elvis_lhs == null) {
         var tmp2_safe_receiver = value.eqToken;
-        tmp_0 = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.i52_1;
+        tmp_0 = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.j52_1;
       } else {
         tmp_0 = tmp1_elvis_lhs;
       }
@@ -2999,28 +3044,28 @@ class $serializer_5 {
       var tmp_1;
       if (tmp3_elvis_lhs == null) {
         var tmp4_safe_receiver = value.second;
-        tmp_1 = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.e4y();
+        tmp_1 = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.d4y();
       } else {
         tmp_1 = tmp3_elvis_lhs;
       }
-      tmp = !equals(value.c53_1, tmp_1);
+      tmp = !equals(value.d53_1, tmp_1);
     }
     if (tmp) {
-      tmp1_output.yx(tmp0_desc, 9, tmp2_cached[9].r3(), value.c53_1);
+      tmp1_output.vx(tmp0_desc, 9, tmp2_cached[9].k3(), value.d53_1);
     }
-    if (tmp1_output.cy(tmp0_desc, 10) ? true : !equals(value.d53_1, listOfNotNull([value.first, value.eqToken, value.second]))) {
-      tmp1_output.wx(tmp0_desc, 10, tmp2_cached[10].r3(), value.d53_1);
+    if (tmp1_output.zx(tmp0_desc, 10) ? true : !equals(value.e53_1, listOfNotNull([value.first, value.eqToken, value.second]))) {
+      tmp1_output.tx(tmp0_desc, 10, tmp2_cached[10].k3(), value.e53_1);
     }
     var tmp_2;
-    if (tmp1_output.cy(tmp0_desc, 11)) {
+    if (tmp1_output.zx(tmp0_desc, 11)) {
       tmp_2 = true;
     } else {
       var tmp0_safe_receiver_0 = value.first;
-      var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.f1g();
+      var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.c1g();
       var tmp_3;
       if (tmp1_elvis_lhs_0 == null) {
         var tmp2_safe_receiver_0 = value.eqToken;
-        tmp_3 = tmp2_safe_receiver_0 == null ? null : tmp2_safe_receiver_0.l52_1;
+        tmp_3 = tmp2_safe_receiver_0 == null ? null : tmp2_safe_receiver_0.m52_1;
       } else {
         tmp_3 = tmp1_elvis_lhs_0;
       }
@@ -3028,25 +3073,25 @@ class $serializer_5 {
       var tmp_4;
       if (tmp3_elvis_lhs_0 == null) {
         var tmp4_safe_receiver_0 = value.second;
-        tmp_4 = tmp4_safe_receiver_0 == null ? null : tmp4_safe_receiver_0.f1g();
+        tmp_4 = tmp4_safe_receiver_0 == null ? null : tmp4_safe_receiver_0.c1g();
       } else {
         tmp_4 = tmp3_elvis_lhs_0;
       }
-      tmp_2 = !(value.e53_1 == tmp_4);
+      tmp_2 = !(value.f53_1 == tmp_4);
     }
     if (tmp_2) {
-      tmp1_output.yx(tmp0_desc, 11, IntSerializer_getInstance(), value.e53_1);
+      tmp1_output.vx(tmp0_desc, 11, IntSerializer_getInstance(), value.f53_1);
     }
     var tmp_5;
-    if (tmp1_output.cy(tmp0_desc, 12)) {
+    if (tmp1_output.zx(tmp0_desc, 12)) {
       tmp_5 = true;
     } else {
       var tmp0_safe_receiver_1 = value.second;
-      var tmp1_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : tmp0_safe_receiver_1.g1g();
+      var tmp1_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : tmp0_safe_receiver_1.d1g();
       var tmp_6;
       if (tmp1_elvis_lhs_1 == null) {
         var tmp2_safe_receiver_1 = value.eqToken;
-        tmp_6 = tmp2_safe_receiver_1 == null ? null : tmp2_safe_receiver_1.m52_1;
+        tmp_6 = tmp2_safe_receiver_1 == null ? null : tmp2_safe_receiver_1.n52_1;
       } else {
         tmp_6 = tmp1_elvis_lhs_1;
       }
@@ -3054,22 +3099,22 @@ class $serializer_5 {
       var tmp_7;
       if (tmp3_elvis_lhs_1 == null) {
         var tmp4_safe_receiver_1 = value.eqToken;
-        tmp_7 = tmp4_safe_receiver_1 == null ? null : tmp4_safe_receiver_1.l52_1;
+        tmp_7 = tmp4_safe_receiver_1 == null ? null : tmp4_safe_receiver_1.m52_1;
       } else {
         tmp_7 = tmp3_elvis_lhs_1;
       }
-      tmp_5 = !(value.f53_1 == tmp_7);
+      tmp_5 = !(value.g53_1 == tmp_7);
     }
     if (tmp_5) {
-      tmp1_output.yx(tmp0_desc, 12, IntSerializer_getInstance(), value.f53_1);
+      tmp1_output.vx(tmp0_desc, 12, IntSerializer_getInstance(), value.g53_1);
     }
-    tmp1_output.fw(tmp0_desc);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.v52(encoder, value instanceof EqualityStatement ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.w52(encoder, value instanceof EqualityStatement ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.u52_1;
+  nr(decoder) {
+    var tmp0_desc = this.v52_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -3086,131 +3131,131 @@ class $serializer_5 {
     var tmp14_local10 = null;
     var tmp15_local11 = null;
     var tmp16_local12 = null;
-    var tmp17_input = decoder.ew(tmp0_desc);
-    var tmp18_cached = Companion_getInstance_7().t52_1;
-    if (tmp17_input.vw()) {
-      tmp4_local0 = tmp17_input.qw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
+    var tmp17_input = decoder.bw(tmp0_desc);
+    var tmp18_cached = Companion_getInstance_7().u52_1;
+    if (tmp17_input.sw()) {
+      tmp4_local0 = tmp17_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp17_input.sw(tmp0_desc, 1, tmp18_cached[1].r3(), tmp5_local1);
+      tmp5_local1 = tmp17_input.pw(tmp0_desc, 1, tmp18_cached[1].k3(), tmp5_local1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp17_input.sw(tmp0_desc, 2, tmp18_cached[2].r3(), tmp6_local2);
+      tmp6_local2 = tmp17_input.pw(tmp0_desc, 2, tmp18_cached[2].k3(), tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp17_input.sw(tmp0_desc, 3, $serializer_getInstance_13(), tmp7_local3);
+      tmp7_local3 = tmp17_input.pw(tmp0_desc, 3, $serializer_getInstance_13(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp17_input.sw(tmp0_desc, 4, $serializer_getInstance_12(), tmp8_local4);
+      tmp8_local4 = tmp17_input.pw(tmp0_desc, 4, $serializer_getInstance_12(), tmp8_local4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp17_input.jw(tmp0_desc, 5);
+      tmp9_local5 = tmp17_input.gw(tmp0_desc, 5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp17_input.ow(tmp0_desc, 6);
+      tmp10_local6 = tmp17_input.lw(tmp0_desc, 6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
-      tmp11_local7 = tmp17_input.jw(tmp0_desc, 7);
+      tmp11_local7 = tmp17_input.gw(tmp0_desc, 7);
       tmp3_bitMask0 = tmp3_bitMask0 | 128;
-      tmp12_local8 = tmp17_input.gw(tmp0_desc, 8);
+      tmp12_local8 = tmp17_input.dw(tmp0_desc, 8);
       tmp3_bitMask0 = tmp3_bitMask0 | 256;
-      tmp13_local9 = tmp17_input.sw(tmp0_desc, 9, tmp18_cached[9].r3(), tmp13_local9);
+      tmp13_local9 = tmp17_input.pw(tmp0_desc, 9, tmp18_cached[9].k3(), tmp13_local9);
       tmp3_bitMask0 = tmp3_bitMask0 | 512;
-      tmp14_local10 = tmp17_input.qw(tmp0_desc, 10, tmp18_cached[10].r3(), tmp14_local10);
+      tmp14_local10 = tmp17_input.nw(tmp0_desc, 10, tmp18_cached[10].k3(), tmp14_local10);
       tmp3_bitMask0 = tmp3_bitMask0 | 1024;
-      tmp15_local11 = tmp17_input.sw(tmp0_desc, 11, IntSerializer_getInstance(), tmp15_local11);
+      tmp15_local11 = tmp17_input.pw(tmp0_desc, 11, IntSerializer_getInstance(), tmp15_local11);
       tmp3_bitMask0 = tmp3_bitMask0 | 2048;
-      tmp16_local12 = tmp17_input.sw(tmp0_desc, 12, IntSerializer_getInstance(), tmp16_local12);
+      tmp16_local12 = tmp17_input.pw(tmp0_desc, 12, IntSerializer_getInstance(), tmp16_local12);
       tmp3_bitMask0 = tmp3_bitMask0 | 4096;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp17_input.ww(tmp0_desc);
+        tmp2_index = tmp17_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp17_input.qw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
+            tmp4_local0 = tmp17_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp17_input.sw(tmp0_desc, 1, tmp18_cached[1].r3(), tmp5_local1);
+            tmp5_local1 = tmp17_input.pw(tmp0_desc, 1, tmp18_cached[1].k3(), tmp5_local1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp17_input.sw(tmp0_desc, 2, tmp18_cached[2].r3(), tmp6_local2);
+            tmp6_local2 = tmp17_input.pw(tmp0_desc, 2, tmp18_cached[2].k3(), tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp17_input.sw(tmp0_desc, 3, $serializer_getInstance_13(), tmp7_local3);
+            tmp7_local3 = tmp17_input.pw(tmp0_desc, 3, $serializer_getInstance_13(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp17_input.sw(tmp0_desc, 4, $serializer_getInstance_12(), tmp8_local4);
+            tmp8_local4 = tmp17_input.pw(tmp0_desc, 4, $serializer_getInstance_12(), tmp8_local4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp17_input.jw(tmp0_desc, 5);
+            tmp9_local5 = tmp17_input.gw(tmp0_desc, 5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp17_input.ow(tmp0_desc, 6);
+            tmp10_local6 = tmp17_input.lw(tmp0_desc, 6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           case 7:
-            tmp11_local7 = tmp17_input.jw(tmp0_desc, 7);
+            tmp11_local7 = tmp17_input.gw(tmp0_desc, 7);
             tmp3_bitMask0 = tmp3_bitMask0 | 128;
             break;
           case 8:
-            tmp12_local8 = tmp17_input.gw(tmp0_desc, 8);
+            tmp12_local8 = tmp17_input.dw(tmp0_desc, 8);
             tmp3_bitMask0 = tmp3_bitMask0 | 256;
             break;
           case 9:
-            tmp13_local9 = tmp17_input.sw(tmp0_desc, 9, tmp18_cached[9].r3(), tmp13_local9);
+            tmp13_local9 = tmp17_input.pw(tmp0_desc, 9, tmp18_cached[9].k3(), tmp13_local9);
             tmp3_bitMask0 = tmp3_bitMask0 | 512;
             break;
           case 10:
-            tmp14_local10 = tmp17_input.qw(tmp0_desc, 10, tmp18_cached[10].r3(), tmp14_local10);
+            tmp14_local10 = tmp17_input.nw(tmp0_desc, 10, tmp18_cached[10].k3(), tmp14_local10);
             tmp3_bitMask0 = tmp3_bitMask0 | 1024;
             break;
           case 11:
-            tmp15_local11 = tmp17_input.sw(tmp0_desc, 11, IntSerializer_getInstance(), tmp15_local11);
+            tmp15_local11 = tmp17_input.pw(tmp0_desc, 11, IntSerializer_getInstance(), tmp15_local11);
             tmp3_bitMask0 = tmp3_bitMask0 | 2048;
             break;
           case 12:
-            tmp16_local12 = tmp17_input.sw(tmp0_desc, 12, IntSerializer_getInstance(), tmp16_local12);
+            tmp16_local12 = tmp17_input.pw(tmp0_desc, 12, IntSerializer_getInstance(), tmp16_local12);
             tmp3_bitMask0 = tmp3_bitMask0 | 4096;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp17_input.fw(tmp0_desc);
-    return EqualityStatement.g53(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, null);
+    tmp17_input.cw(tmp0_desc);
+    return EqualityStatement.h53(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, tmp13_local9, tmp14_local10, tmp15_local11, tmp16_local12, null);
   }
-  or() {
-    return this.u52_1;
+  lr() {
+    return this.v52_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance_7().t52_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance_7().u52_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [RangeWithIndexSerializer_getInstance(), get_nullable(tmp0_cached[1].r3()), get_nullable(tmp0_cached[2].r3()), get_nullable($serializer_getInstance_13()), get_nullable($serializer_getInstance_12()), IntSerializer_getInstance(), StringSerializer_getInstance(), IntSerializer_getInstance(), BooleanSerializer_getInstance(), get_nullable(tmp0_cached[9].r3()), tmp0_cached[10].r3(), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance())];
+    return [RangeWithIndexSerializer_getInstance(), get_nullable(tmp0_cached[1].k3()), get_nullable(tmp0_cached[2].k3()), get_nullable($serializer_getInstance_13()), get_nullable($serializer_getInstance_12()), IntSerializer_getInstance(), StringSerializer_getInstance(), IntSerializer_getInstance(), BooleanSerializer_getInstance(), get_nullable(tmp0_cached[9].k3()), tmp0_cached[10].k3(), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance())];
   }
 }
 class EqualityStatement {
   constructor(textRange, first, second, eqToken, containingCommand, parameterIndex, text) {
     Companion_getInstance_7();
-    this.w52_1 = textRange;
+    this.x52_1 = textRange;
     this.first = first;
     this.second = second;
     this.eqToken = eqToken;
-    this.x52_1 = containingCommand;
-    this.y52_1 = parameterIndex;
-    this.z52_1 = text;
-    this.a53_1 = ValueType_CONDITION_getInstance().value;
-    this.b53_1 = true;
+    this.y52_1 = containingCommand;
+    this.z52_1 = parameterIndex;
+    this.a53_1 = text;
+    this.b53_1 = ValueType_CONDITION_getInstance().value;
+    this.c53_1 = true;
     var tmp = this;
     var tmp0_safe_receiver = this.first;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.e4y();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.d4y();
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       var tmp2_safe_receiver = this.eqToken;
-      tmp_0 = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.i52_1;
+      tmp_0 = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.j52_1;
     } else {
       tmp_0 = tmp1_elvis_lhs;
     }
@@ -3218,19 +3263,19 @@ class EqualityStatement {
     var tmp_1;
     if (tmp3_elvis_lhs == null) {
       var tmp4_safe_receiver = this.second;
-      tmp_1 = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.e4y();
+      tmp_1 = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.d4y();
     } else {
       tmp_1 = tmp3_elvis_lhs;
     }
-    tmp.c53_1 = tmp_1;
-    this.d53_1 = listOfNotNull([this.first, this.eqToken, this.second]);
+    tmp.d53_1 = tmp_1;
+    this.e53_1 = listOfNotNull([this.first, this.eqToken, this.second]);
     var tmp_2 = this;
     var tmp0_safe_receiver_0 = this.first;
-    var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.f1g();
+    var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.c1g();
     var tmp_3;
     if (tmp1_elvis_lhs_0 == null) {
       var tmp2_safe_receiver_0 = this.eqToken;
-      tmp_3 = tmp2_safe_receiver_0 == null ? null : tmp2_safe_receiver_0.l52_1;
+      tmp_3 = tmp2_safe_receiver_0 == null ? null : tmp2_safe_receiver_0.m52_1;
     } else {
       tmp_3 = tmp1_elvis_lhs_0;
     }
@@ -3238,18 +3283,18 @@ class EqualityStatement {
     var tmp_4;
     if (tmp3_elvis_lhs_0 == null) {
       var tmp4_safe_receiver_0 = this.second;
-      tmp_4 = tmp4_safe_receiver_0 == null ? null : tmp4_safe_receiver_0.f1g();
+      tmp_4 = tmp4_safe_receiver_0 == null ? null : tmp4_safe_receiver_0.c1g();
     } else {
       tmp_4 = tmp3_elvis_lhs_0;
     }
-    tmp_2.e53_1 = tmp_4;
+    tmp_2.f53_1 = tmp_4;
     var tmp_5 = this;
     var tmp0_safe_receiver_1 = this.second;
-    var tmp1_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : tmp0_safe_receiver_1.g1g();
+    var tmp1_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : tmp0_safe_receiver_1.d1g();
     var tmp_6;
     if (tmp1_elvis_lhs_1 == null) {
       var tmp2_safe_receiver_1 = this.eqToken;
-      tmp_6 = tmp2_safe_receiver_1 == null ? null : tmp2_safe_receiver_1.m52_1;
+      tmp_6 = tmp2_safe_receiver_1 == null ? null : tmp2_safe_receiver_1.n52_1;
     } else {
       tmp_6 = tmp1_elvis_lhs_1;
     }
@@ -3257,74 +3302,74 @@ class EqualityStatement {
     var tmp_7;
     if (tmp3_elvis_lhs_1 == null) {
       var tmp4_safe_receiver_1 = this.eqToken;
-      tmp_7 = tmp4_safe_receiver_1 == null ? null : tmp4_safe_receiver_1.l52_1;
+      tmp_7 = tmp4_safe_receiver_1 == null ? null : tmp4_safe_receiver_1.m52_1;
     } else {
       tmp_7 = tmp3_elvis_lhs_1;
     }
-    tmp_5.f53_1 = tmp_7;
+    tmp_5.g53_1 = tmp_7;
     var tmp0_safe_receiver_2 = this.eqToken;
     if (tmp0_safe_receiver_2 == null)
       null;
     else {
-      tmp0_safe_receiver_2.p52_1 = this.x52_1;
+      tmp0_safe_receiver_2.q52_1 = this.y52_1;
     }
   }
-  g1e() {
-    return this.w52_1;
-  }
-  h53(_set____db54di) {
-    this.first = _set____db54di;
-  }
-  gp() {
-    return this.first;
-  }
-  i53(_set____db54di) {
-    this.second = _set____db54di;
-  }
-  hp() {
-    return this.second;
-  }
-  j53(_set____db54di) {
-    this.eqToken = _set____db54di;
-  }
-  k53() {
-    return this.eqToken;
-  }
-  f4y() {
+  d1e() {
     return this.x52_1;
   }
-  c4y() {
-    return this.y52_1;
+  i53(_set____db54di) {
+    this.first = _set____db54di;
   }
-  m1f() {
-    return this.z52_1;
+  dp() {
+    return this.first;
   }
-  t22() {
-    return this.a53_1;
+  j53(_set____db54di) {
+    this.second = _set____db54di;
   }
-  d4y() {
-    return this.b53_1;
+  ep() {
+    return this.second;
+  }
+  k53(_set____db54di) {
+    this.eqToken = _set____db54di;
+  }
+  l53() {
+    return this.eqToken;
   }
   e4y() {
+    return this.y52_1;
+  }
+  b4y() {
+    return this.z52_1;
+  }
+  j1f() {
+    return this.a53_1;
+  }
+  q22() {
+    return this.b53_1;
+  }
+  c4y() {
     return this.c53_1;
   }
-  f1g() {
-    return this.e53_1;
+  d4y() {
+    return this.d53_1;
   }
-  g1g() {
+  c1g() {
     return this.f53_1;
   }
+  d1g() {
+    return this.g53_1;
+  }
   toString() {
-    return 'EqualityStatement(textRange=' + toString_0(this.w52_1) + ', first=' + toString(this.first) + ', second=' + toString(this.second) + ', eqToken=' + toString(this.eqToken) + ', containingCommand=' + toString(this.x52_1) + ', parameterIndex=' + this.y52_1 + ', text=' + this.z52_1 + ')';
+    return 'EqualityStatement(textRange=' + toString_0(this.x52_1) + ', first=' + toString(this.first) + ', second=' + toString(this.second) + ', eqToken=' + toString(this.eqToken) + ', containingCommand=' + toString(this.y52_1) + ', parameterIndex=' + this.z52_1 + ', text=' + this.a53_1 + ')';
   }
   hashCode() {
-    var result = hashCode(this.w52_1);
+    var result = hashCode(this.x52_1);
     result = imul(result, 31) + (this.first == null ? 0 : hashCode(this.first)) | 0;
     result = imul(result, 31) + (this.second == null ? 0 : hashCode(this.second)) | 0;
     result = imul(result, 31) + (this.eqToken == null ? 0 : this.eqToken.hashCode()) | 0;
-    result = imul(result, 31) + (this.x52_1 == null ? 0 : this.x52_1.hashCode()) | 0;
-    result = imul(result, 31) + this.y52_1 | 0;
-    result = imul(result, 31) + getStringHashCode(this.z52_1) | 0;
+    result = imul(result, 31) + (this.y52_1 == null ? 0 : this.y52_1.hashCode()) | 0;
+    result = imul(result, 31) + this.z52_1 | 0;
+    result = imul(result, 31) + getStringHashCode(this.a53_1) | 0;
     return result;
   }
   equals(other) {
@@ -3332,7 +3377,7 @@ class EqualityStatement {
       return true;
     if (!(other instanceof EqualityStatement))
       return false;
-    if (!equals(this.w52_1, other.w52_1))
+    if (!equals(this.x52_1, other.x52_1))
       return false;
     if (!equals(this.first, other.first))
       return false;
@@ -3340,43 +3385,43 @@ class EqualityStatement {
       return false;
     if (!equals(this.eqToken, other.eqToken))
       return false;
-    if (!equals(this.x52_1, other.x52_1))
-      return false;
-    if (!(this.y52_1 === other.y52_1))
+    if (!equals(this.y52_1, other.y52_1))
       return false;
     if (!(this.z52_1 === other.z52_1))
       return false;
+    if (!(this.a53_1 === other.a53_1))
+      return false;
     return true;
   }
-  static g53(seen0, textRange, first, second, eqToken, containingCommand, parameterIndex, text, type, inEqualityExpression, parserItem, arguments_0, parserIndexStart, parserIndexEnd, serializationConstructorMarker) {
+  static h53(seen0, textRange, first, second, eqToken, containingCommand, parameterIndex, text, type, inEqualityExpression, parserItem, arguments_0, parserIndexStart, parserIndexEnd, serializationConstructorMarker) {
     Companion_getInstance_7();
     if (!(127 === (127 & seen0))) {
-      throwMissingFieldException(seen0, 127, $serializer_getInstance_14().u52_1);
+      throwMissingFieldException(seen0, 127, $serializer_getInstance_14().v52_1);
     }
     var $this = createThis(this);
-    $this.w52_1 = textRange;
+    $this.x52_1 = textRange;
     $this.first = first;
     $this.second = second;
     $this.eqToken = eqToken;
-    $this.x52_1 = containingCommand;
-    $this.y52_1 = parameterIndex;
-    $this.z52_1 = text;
+    $this.y52_1 = containingCommand;
+    $this.z52_1 = parameterIndex;
+    $this.a53_1 = text;
     if (0 === (seen0 & 128))
-      $this.a53_1 = ValueType_CONDITION_getInstance().value;
+      $this.b53_1 = ValueType_CONDITION_getInstance().value;
     else
-      $this.a53_1 = type;
+      $this.b53_1 = type;
     if (0 === (seen0 & 256))
-      $this.b53_1 = true;
+      $this.c53_1 = true;
     else
-      $this.b53_1 = inEqualityExpression;
+      $this.c53_1 = inEqualityExpression;
     if (0 === (seen0 & 512)) {
       var tmp = $this;
       var tmp0_safe_receiver = $this.first;
-      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.e4y();
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.d4y();
       var tmp_0;
       if (tmp1_elvis_lhs == null) {
         var tmp2_safe_receiver = $this.eqToken;
-        tmp_0 = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.i52_1;
+        tmp_0 = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.j52_1;
       } else {
         tmp_0 = tmp1_elvis_lhs;
       }
@@ -3384,25 +3429,25 @@ class EqualityStatement {
       var tmp_1;
       if (tmp3_elvis_lhs == null) {
         var tmp4_safe_receiver = $this.second;
-        tmp_1 = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.e4y();
+        tmp_1 = tmp4_safe_receiver == null ? null : tmp4_safe_receiver.d4y();
       } else {
         tmp_1 = tmp3_elvis_lhs;
       }
-      tmp.c53_1 = tmp_1;
+      tmp.d53_1 = tmp_1;
     } else
-      $this.c53_1 = parserItem;
+      $this.d53_1 = parserItem;
     if (0 === (seen0 & 1024))
-      $this.d53_1 = listOfNotNull([$this.first, $this.eqToken, $this.second]);
+      $this.e53_1 = listOfNotNull([$this.first, $this.eqToken, $this.second]);
     else
-      $this.d53_1 = arguments_0;
+      $this.e53_1 = arguments_0;
     if (0 === (seen0 & 2048)) {
       var tmp_2 = $this;
       var tmp0_safe_receiver_0 = $this.first;
-      var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.f1g();
+      var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.c1g();
       var tmp_3;
       if (tmp1_elvis_lhs_0 == null) {
         var tmp2_safe_receiver_0 = $this.eqToken;
-        tmp_3 = tmp2_safe_receiver_0 == null ? null : tmp2_safe_receiver_0.l52_1;
+        tmp_3 = tmp2_safe_receiver_0 == null ? null : tmp2_safe_receiver_0.m52_1;
       } else {
         tmp_3 = tmp1_elvis_lhs_0;
       }
@@ -3410,21 +3455,21 @@ class EqualityStatement {
       var tmp_4;
       if (tmp3_elvis_lhs_0 == null) {
         var tmp4_safe_receiver_0 = $this.second;
-        tmp_4 = tmp4_safe_receiver_0 == null ? null : tmp4_safe_receiver_0.f1g();
+        tmp_4 = tmp4_safe_receiver_0 == null ? null : tmp4_safe_receiver_0.c1g();
       } else {
         tmp_4 = tmp3_elvis_lhs_0;
       }
-      tmp_2.e53_1 = tmp_4;
+      tmp_2.f53_1 = tmp_4;
     } else
-      $this.e53_1 = parserIndexStart;
+      $this.f53_1 = parserIndexStart;
     if (0 === (seen0 & 4096)) {
       var tmp_5 = $this;
       var tmp0_safe_receiver_1 = $this.second;
-      var tmp1_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : tmp0_safe_receiver_1.g1g();
+      var tmp1_elvis_lhs_1 = tmp0_safe_receiver_1 == null ? null : tmp0_safe_receiver_1.d1g();
       var tmp_6;
       if (tmp1_elvis_lhs_1 == null) {
         var tmp2_safe_receiver_1 = $this.eqToken;
-        tmp_6 = tmp2_safe_receiver_1 == null ? null : tmp2_safe_receiver_1.m52_1;
+        tmp_6 = tmp2_safe_receiver_1 == null ? null : tmp2_safe_receiver_1.n52_1;
       } else {
         tmp_6 = tmp1_elvis_lhs_1;
       }
@@ -3432,18 +3477,18 @@ class EqualityStatement {
       var tmp_7;
       if (tmp3_elvis_lhs_1 == null) {
         var tmp4_safe_receiver_1 = $this.eqToken;
-        tmp_7 = tmp4_safe_receiver_1 == null ? null : tmp4_safe_receiver_1.l52_1;
+        tmp_7 = tmp4_safe_receiver_1 == null ? null : tmp4_safe_receiver_1.m52_1;
       } else {
         tmp_7 = tmp3_elvis_lhs_1;
       }
-      tmp_5.f53_1 = tmp_7;
+      tmp_5.g53_1 = tmp_7;
     } else
-      $this.f53_1 = parserIndexEnd;
+      $this.g53_1 = parserIndexEnd;
     var tmp0_safe_receiver_2 = $this.eqToken;
     if (tmp0_safe_receiver_2 == null)
       null;
     else {
-      tmp0_safe_receiver_2.p52_1 = $this.x52_1;
+      tmp0_safe_receiver_2.q52_1 = $this.y52_1;
     }
     return $this;
   }
@@ -3456,9 +3501,9 @@ class Companion_6 {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.l53_1 = [null, null, null, null, null, lazy(tmp_0, ParserItemArgument$Companion$$childSerializers$_anonymous__mn06t7), null, null, null];
+    tmp.m53_1 = [null, null, null, null, null, lazy(tmp_0, ParserItemArgument$Companion$$childSerializers$_anonymous__mn06t7), null, null, null];
   }
-  n1e() {
+  k1e() {
     return $serializer_getInstance_15();
   }
 }
@@ -3466,57 +3511,57 @@ class $serializer_6 {
   constructor() {
     $serializer_instance_6 = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.creatures.caos.collectors.ParserItemArgument', this, 9);
-    tmp0_serialDesc.z13('textRange', false);
-    tmp0_serialDesc.z13('parameterIndex', false);
-    tmp0_serialDesc.z13('typeId', false);
-    tmp0_serialDesc.z13('text', false);
-    tmp0_serialDesc.z13('inEqualityExpression', false);
-    tmp0_serialDesc.z13('parserItem', false);
-    tmp0_serialDesc.z13('containingCommand', false);
-    tmp0_serialDesc.z13('parserIndexStart', true);
-    tmp0_serialDesc.z13('parserIndexEnd', true);
-    this.m53_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('textRange', false);
+    tmp0_serialDesc.w13('parameterIndex', false);
+    tmp0_serialDesc.w13('typeId', false);
+    tmp0_serialDesc.w13('text', false);
+    tmp0_serialDesc.w13('inEqualityExpression', false);
+    tmp0_serialDesc.w13('parserItem', false);
+    tmp0_serialDesc.w13('containingCommand', false);
+    tmp0_serialDesc.w13('parserIndexStart', true);
+    tmp0_serialDesc.w13('parserIndexEnd', true);
+    this.n53_1 = tmp0_serialDesc;
   }
-  n53(encoder, value) {
-    var tmp0_desc = this.m53_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance_8().l53_1;
-    tmp1_output.wx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.o50_1);
-    tmp1_output.px(tmp0_desc, 1, value.p50_1);
-    tmp1_output.px(tmp0_desc, 2, value.q50_1);
-    tmp1_output.ux(tmp0_desc, 3, value.r50_1);
-    tmp1_output.mx(tmp0_desc, 4, value.s50_1);
-    tmp1_output.yx(tmp0_desc, 5, tmp2_cached[5].r3(), value.t50_1);
-    tmp1_output.yx(tmp0_desc, 6, $serializer_getInstance_12(), value.u50_1);
+  o53(encoder, value) {
+    var tmp0_desc = this.n53_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance_8().m53_1;
+    tmp1_output.tx(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), value.p50_1);
+    tmp1_output.mx(tmp0_desc, 1, value.q50_1);
+    tmp1_output.mx(tmp0_desc, 2, value.r50_1);
+    tmp1_output.rx(tmp0_desc, 3, value.s50_1);
+    tmp1_output.jx(tmp0_desc, 4, value.t50_1);
+    tmp1_output.vx(tmp0_desc, 5, tmp2_cached[5].k3(), value.u50_1);
+    tmp1_output.vx(tmp0_desc, 6, $serializer_getInstance_12(), value.v50_1);
     var tmp;
-    if (tmp1_output.cy(tmp0_desc, 7)) {
+    if (tmp1_output.zx(tmp0_desc, 7)) {
       tmp = true;
     } else {
-      var tmp0_safe_receiver = value.t50_1;
-      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.f1g();
-      tmp = !(value.v50_1 == (tmp1_elvis_lhs == null ? value.o50_1.k1e() : tmp1_elvis_lhs));
+      var tmp0_safe_receiver = value.u50_1;
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.c1g();
+      tmp = !(value.w50_1 == (tmp1_elvis_lhs == null ? value.p50_1.h1e() : tmp1_elvis_lhs));
     }
     if (tmp) {
-      tmp1_output.yx(tmp0_desc, 7, IntSerializer_getInstance(), value.v50_1);
+      tmp1_output.vx(tmp0_desc, 7, IntSerializer_getInstance(), value.w50_1);
     }
     var tmp_0;
-    if (tmp1_output.cy(tmp0_desc, 8)) {
+    if (tmp1_output.zx(tmp0_desc, 8)) {
       tmp_0 = true;
     } else {
-      var tmp0_safe_receiver_0 = value.t50_1;
-      var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.g1g();
-      tmp_0 = !(value.w50_1 == (tmp1_elvis_lhs_0 == null ? value.o50_1.k1e() : tmp1_elvis_lhs_0));
+      var tmp0_safe_receiver_0 = value.u50_1;
+      var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.d1g();
+      tmp_0 = !(value.x50_1 == (tmp1_elvis_lhs_0 == null ? value.p50_1.h1e() : tmp1_elvis_lhs_0));
     }
     if (tmp_0) {
-      tmp1_output.yx(tmp0_desc, 8, IntSerializer_getInstance(), value.w50_1);
+      tmp1_output.vx(tmp0_desc, 8, IntSerializer_getInstance(), value.x50_1);
     }
-    tmp1_output.fw(tmp0_desc);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.n53(encoder, value instanceof Argument ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.o53(encoder, value instanceof Argument ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.m53_1;
+  nr(decoder) {
+    var tmp0_desc = this.n53_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -3529,145 +3574,145 @@ class $serializer_6 {
     var tmp10_local6 = null;
     var tmp11_local7 = null;
     var tmp12_local8 = null;
-    var tmp13_input = decoder.ew(tmp0_desc);
-    var tmp14_cached = Companion_getInstance_8().l53_1;
-    if (tmp13_input.vw()) {
-      tmp4_local0 = tmp13_input.qw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
+    var tmp13_input = decoder.bw(tmp0_desc);
+    var tmp14_cached = Companion_getInstance_8().m53_1;
+    if (tmp13_input.sw()) {
+      tmp4_local0 = tmp13_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp13_input.jw(tmp0_desc, 1);
+      tmp5_local1 = tmp13_input.gw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp13_input.jw(tmp0_desc, 2);
+      tmp6_local2 = tmp13_input.gw(tmp0_desc, 2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp13_input.ow(tmp0_desc, 3);
+      tmp7_local3 = tmp13_input.lw(tmp0_desc, 3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
-      tmp8_local4 = tmp13_input.gw(tmp0_desc, 4);
+      tmp8_local4 = tmp13_input.dw(tmp0_desc, 4);
       tmp3_bitMask0 = tmp3_bitMask0 | 16;
-      tmp9_local5 = tmp13_input.sw(tmp0_desc, 5, tmp14_cached[5].r3(), tmp9_local5);
+      tmp9_local5 = tmp13_input.pw(tmp0_desc, 5, tmp14_cached[5].k3(), tmp9_local5);
       tmp3_bitMask0 = tmp3_bitMask0 | 32;
-      tmp10_local6 = tmp13_input.sw(tmp0_desc, 6, $serializer_getInstance_12(), tmp10_local6);
+      tmp10_local6 = tmp13_input.pw(tmp0_desc, 6, $serializer_getInstance_12(), tmp10_local6);
       tmp3_bitMask0 = tmp3_bitMask0 | 64;
-      tmp11_local7 = tmp13_input.sw(tmp0_desc, 7, IntSerializer_getInstance(), tmp11_local7);
+      tmp11_local7 = tmp13_input.pw(tmp0_desc, 7, IntSerializer_getInstance(), tmp11_local7);
       tmp3_bitMask0 = tmp3_bitMask0 | 128;
-      tmp12_local8 = tmp13_input.sw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
+      tmp12_local8 = tmp13_input.pw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
       tmp3_bitMask0 = tmp3_bitMask0 | 256;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp13_input.ww(tmp0_desc);
+        tmp2_index = tmp13_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp13_input.qw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
+            tmp4_local0 = tmp13_input.nw(tmp0_desc, 0, RangeWithIndexSerializer_getInstance(), tmp4_local0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp13_input.jw(tmp0_desc, 1);
+            tmp5_local1 = tmp13_input.gw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp13_input.jw(tmp0_desc, 2);
+            tmp6_local2 = tmp13_input.gw(tmp0_desc, 2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp13_input.ow(tmp0_desc, 3);
+            tmp7_local3 = tmp13_input.lw(tmp0_desc, 3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           case 4:
-            tmp8_local4 = tmp13_input.gw(tmp0_desc, 4);
+            tmp8_local4 = tmp13_input.dw(tmp0_desc, 4);
             tmp3_bitMask0 = tmp3_bitMask0 | 16;
             break;
           case 5:
-            tmp9_local5 = tmp13_input.sw(tmp0_desc, 5, tmp14_cached[5].r3(), tmp9_local5);
+            tmp9_local5 = tmp13_input.pw(tmp0_desc, 5, tmp14_cached[5].k3(), tmp9_local5);
             tmp3_bitMask0 = tmp3_bitMask0 | 32;
             break;
           case 6:
-            tmp10_local6 = tmp13_input.sw(tmp0_desc, 6, $serializer_getInstance_12(), tmp10_local6);
+            tmp10_local6 = tmp13_input.pw(tmp0_desc, 6, $serializer_getInstance_12(), tmp10_local6);
             tmp3_bitMask0 = tmp3_bitMask0 | 64;
             break;
           case 7:
-            tmp11_local7 = tmp13_input.sw(tmp0_desc, 7, IntSerializer_getInstance(), tmp11_local7);
+            tmp11_local7 = tmp13_input.pw(tmp0_desc, 7, IntSerializer_getInstance(), tmp11_local7);
             tmp3_bitMask0 = tmp3_bitMask0 | 128;
             break;
           case 8:
-            tmp12_local8 = tmp13_input.sw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
+            tmp12_local8 = tmp13_input.pw(tmp0_desc, 8, IntSerializer_getInstance(), tmp12_local8);
             tmp3_bitMask0 = tmp3_bitMask0 | 256;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp13_input.fw(tmp0_desc);
-    return Argument.o53(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, null);
+    tmp13_input.cw(tmp0_desc);
+    return Argument.p53(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, tmp8_local4, tmp9_local5, tmp10_local6, tmp11_local7, tmp12_local8, null);
   }
-  or() {
-    return this.m53_1;
+  lr() {
+    return this.n53_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance_8().l53_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance_8().m53_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [RangeWithIndexSerializer_getInstance(), IntSerializer_getInstance(), IntSerializer_getInstance(), StringSerializer_getInstance(), BooleanSerializer_getInstance(), get_nullable(tmp0_cached[5].r3()), get_nullable($serializer_getInstance_12()), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance())];
+    return [RangeWithIndexSerializer_getInstance(), IntSerializer_getInstance(), IntSerializer_getInstance(), StringSerializer_getInstance(), BooleanSerializer_getInstance(), get_nullable(tmp0_cached[5].k3()), get_nullable($serializer_getInstance_12()), get_nullable(IntSerializer_getInstance()), get_nullable(IntSerializer_getInstance())];
   }
 }
 class Argument {
   constructor(textRange, parameterIndex, type, text, inEqualityExpression, parserItem, containingCommand) {
     Companion_getInstance_8();
-    this.o50_1 = textRange;
-    this.p50_1 = parameterIndex;
-    this.q50_1 = type;
-    this.r50_1 = text;
-    this.s50_1 = inEqualityExpression;
-    this.t50_1 = parserItem;
-    this.u50_1 = containingCommand;
+    this.p50_1 = textRange;
+    this.q50_1 = parameterIndex;
+    this.r50_1 = type;
+    this.s50_1 = text;
+    this.t50_1 = inEqualityExpression;
+    this.u50_1 = parserItem;
+    this.v50_1 = containingCommand;
     var tmp = this;
-    var tmp0_safe_receiver = this.t50_1;
-    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.f1g();
-    tmp.v50_1 = tmp1_elvis_lhs == null ? this.o50_1.k1e() : tmp1_elvis_lhs;
+    var tmp0_safe_receiver = this.u50_1;
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.c1g();
+    tmp.w50_1 = tmp1_elvis_lhs == null ? this.p50_1.h1e() : tmp1_elvis_lhs;
     var tmp_0 = this;
-    var tmp0_safe_receiver_0 = this.t50_1;
-    var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.g1g();
-    tmp_0.w50_1 = tmp1_elvis_lhs_0 == null ? this.o50_1.k1e() : tmp1_elvis_lhs_0;
+    var tmp0_safe_receiver_0 = this.u50_1;
+    var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.d1g();
+    tmp_0.x50_1 = tmp1_elvis_lhs_0 == null ? this.p50_1.h1e() : tmp1_elvis_lhs_0;
   }
-  g1e() {
-    return this.o50_1;
-  }
-  c4y() {
+  d1e() {
     return this.p50_1;
   }
-  t22() {
+  b4y() {
     return this.q50_1;
   }
-  m1f() {
+  q22() {
     return this.r50_1;
   }
-  d4y() {
+  j1f() {
     return this.s50_1;
   }
-  e4y() {
+  c4y() {
     return this.t50_1;
   }
-  f4y() {
+  d4y() {
     return this.u50_1;
   }
-  f1g() {
+  e4y() {
     return this.v50_1;
   }
-  g1g() {
+  c1g() {
     return this.w50_1;
   }
+  d1g() {
+    return this.x50_1;
+  }
   toString() {
-    return 'ParserItemArgument(textRange=' + toString_0(this.o50_1) + ', parameterIndex=' + this.p50_1 + ', type=' + this.q50_1 + ', text=' + this.r50_1 + ', inEqualityExpression=' + this.s50_1 + ', parserItem=' + toString(this.t50_1) + ', containingCommand=' + toString(this.u50_1) + ')';
+    return 'ParserItemArgument(textRange=' + toString_0(this.p50_1) + ', parameterIndex=' + this.q50_1 + ', type=' + this.r50_1 + ', text=' + this.s50_1 + ', inEqualityExpression=' + this.t50_1 + ', parserItem=' + toString(this.u50_1) + ', containingCommand=' + toString(this.v50_1) + ')';
   }
   hashCode() {
-    var result = hashCode(this.o50_1);
-    result = imul(result, 31) + this.p50_1 | 0;
+    var result = hashCode(this.p50_1);
     result = imul(result, 31) + this.q50_1 | 0;
-    result = imul(result, 31) + getStringHashCode(this.r50_1) | 0;
-    result = imul(result, 31) + getBooleanHashCode(this.s50_1) | 0;
-    result = imul(result, 31) + (this.t50_1 == null ? 0 : hashCode(this.t50_1)) | 0;
-    result = imul(result, 31) + (this.u50_1 == null ? 0 : this.u50_1.hashCode()) | 0;
+    result = imul(result, 31) + this.r50_1 | 0;
+    result = imul(result, 31) + getStringHashCode(this.s50_1) | 0;
+    result = imul(result, 31) + getBooleanHashCode(this.t50_1) | 0;
+    result = imul(result, 31) + (this.u50_1 == null ? 0 : hashCode(this.u50_1)) | 0;
+    result = imul(result, 31) + (this.v50_1 == null ? 0 : this.v50_1.hashCode()) | 0;
     return result;
   }
   equals(other) {
@@ -3675,9 +3720,7 @@ class Argument {
       return true;
     if (!(other instanceof Argument))
       return false;
-    if (!equals(this.o50_1, other.o50_1))
-      return false;
-    if (!(this.p50_1 === other.p50_1))
+    if (!equals(this.p50_1, other.p50_1))
       return false;
     if (!(this.q50_1 === other.q50_1))
       return false;
@@ -3685,39 +3728,41 @@ class Argument {
       return false;
     if (!(this.s50_1 === other.s50_1))
       return false;
-    if (!equals(this.t50_1, other.t50_1))
+    if (!(this.t50_1 === other.t50_1))
       return false;
     if (!equals(this.u50_1, other.u50_1))
       return false;
+    if (!equals(this.v50_1, other.v50_1))
+      return false;
     return true;
   }
-  static o53(seen0, textRange, parameterIndex, type, text, inEqualityExpression, parserItem, containingCommand, parserIndexStart, parserIndexEnd, serializationConstructorMarker) {
+  static p53(seen0, textRange, parameterIndex, type, text, inEqualityExpression, parserItem, containingCommand, parserIndexStart, parserIndexEnd, serializationConstructorMarker) {
     Companion_getInstance_8();
     if (!(127 === (127 & seen0))) {
-      throwMissingFieldException(seen0, 127, $serializer_getInstance_15().m53_1);
+      throwMissingFieldException(seen0, 127, $serializer_getInstance_15().n53_1);
     }
     var $this = createThis(this);
-    $this.o50_1 = textRange;
-    $this.p50_1 = parameterIndex;
-    $this.q50_1 = type;
-    $this.r50_1 = text;
-    $this.s50_1 = inEqualityExpression;
-    $this.t50_1 = parserItem;
-    $this.u50_1 = containingCommand;
+    $this.p50_1 = textRange;
+    $this.q50_1 = parameterIndex;
+    $this.r50_1 = type;
+    $this.s50_1 = text;
+    $this.t50_1 = inEqualityExpression;
+    $this.u50_1 = parserItem;
+    $this.v50_1 = containingCommand;
     if (0 === (seen0 & 128)) {
       var tmp = $this;
-      var tmp0_safe_receiver = $this.t50_1;
-      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.f1g();
-      tmp.v50_1 = tmp1_elvis_lhs == null ? $this.o50_1.k1e() : tmp1_elvis_lhs;
+      var tmp0_safe_receiver = $this.u50_1;
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.c1g();
+      tmp.w50_1 = tmp1_elvis_lhs == null ? $this.p50_1.h1e() : tmp1_elvis_lhs;
     } else
-      $this.v50_1 = parserIndexStart;
+      $this.w50_1 = parserIndexStart;
     if (0 === (seen0 & 256)) {
       var tmp_0 = $this;
-      var tmp0_safe_receiver_0 = $this.t50_1;
-      var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.g1g();
-      tmp_0.w50_1 = tmp1_elvis_lhs_0 == null ? $this.o50_1.k1e() : tmp1_elvis_lhs_0;
+      var tmp0_safe_receiver_0 = $this.u50_1;
+      var tmp1_elvis_lhs_0 = tmp0_safe_receiver_0 == null ? null : tmp0_safe_receiver_0.d1g();
+      tmp_0.x50_1 = tmp1_elvis_lhs_0 == null ? $this.p50_1.h1e() : tmp1_elvis_lhs_0;
     } else
-      $this.w50_1 = parserIndexEnd;
+      $this.x50_1 = parserIndexEnd;
     return $this;
   }
 }
@@ -3728,14 +3773,14 @@ class CaosWalker {
     var tmp = this;
     // Inline function 'kotlin.collections.filterNot' call
     // Inline function 'kotlin.collections.filterNotTo' call
-    var destination = ArrayList.b2();
+    var destination = ArrayList.u1();
     var inductionVariable = 0;
     var last = items.length;
     while (inductionVariable < last) {
       var element = items[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       if (!get_isWhitespaceOrComment(element)) {
-        destination.g2(element);
+        destination.z1(element);
       }
     }
     // Inline function 'kotlin.collections.toTypedArray' call
@@ -3747,52 +3792,55 @@ class CaosWalker {
     var tmp_2 = this;
     tmp_2.u4z_1 = lazy_0(CaosWalker$equalityStatementRanges$delegate$lambda(this));
   }
+  f4z() {
+    return _get_commandWalker__3vw9zk(this).f4z();
+  }
   g4z() {
     return _get_commandWalker__3vw9zk(this).g4z();
   }
-  h4z() {
-    return _get_commandWalker__3vw9zk(this).h4z();
-  }
-  e4z() {
+  d4z() {
     var tmp0 = this.t4z_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('equalityStatements', 1, tmp, CaosWalker$_get_equalityStatements_$ref_axgl08(), null);
-    return tmp0.r3();
+    return tmp0.k3();
   }
-  f4z() {
+  e4z() {
     var tmp0 = this.u4z_1;
     var tmp = KProperty1;
     // Inline function 'kotlin.getValue' call
     getPropertyCallableRef('equalityStatementRanges', 1, tmp, CaosWalker$_get_equalityStatementRanges_$ref_q6751z(), null);
-    return tmp0.r3();
+    return tmp0.k3();
+  }
+  t4t() {
+    return _get_commandWalker__3vw9zk(this).w53_1;
   }
   u4t() {
-    return _get_commandWalker__3vw9zk(this).v53_1;
+    return _get_commandWalker__3vw9zk(this).x53_1;
   }
-  v4t() {
-    return _get_commandWalker__3vw9zk(this).w53_1;
+  v4z() {
+    return _get_commandWalker__3vw9zk(this).v4z();
   }
 }
 class sam$kotlin_Comparator$0_0 {
   constructor(function_0) {
-    this.l54_1 = function_0;
+    this.m54_1 = function_0;
   }
-  zg(a, b) {
-    return this.l54_1(a, b);
+  wg(a, b) {
+    return this.m54_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
-    return this.l54_1;
+  f4() {
+    return this.m54_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -3803,20 +3851,20 @@ class sam$kotlin_Comparator$0_0 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
 class Companion_7 {
   constructor() {
-    this.m54_1 = 'CommandWalker';
+    this.n54_1 = 'CommandWalker';
   }
-  n54(equalityStatementIn, tokens) {
+  o54(equalityStatementIn, tokens) {
     // Inline function 'kotlin.collections.sortedBy' call
     // Inline function 'kotlin.comparisons.compareBy' call
     var tmp = CommandWalker$Companion$getEqualityStatementRanges$lambda;
     var tmp$ret$1 = new sam$kotlin_Comparator$0_0(tmp);
     var equalityStatements = sortedWith_0(equalityStatementIn, tmp$ret$1);
-    if (equalityStatements.b1()) {
+    if (equalityStatements.u()) {
       return emptyList();
     }
     // Inline function 'kotlin.collections.sortedBy' call
@@ -3827,27 +3875,27 @@ class Companion_7 {
     // Inline function 'kotlin.collections.filterIsInstance' call
     var tmp0 = sortedWith(this_0, tmp$ret$3);
     // Inline function 'kotlin.collections.filterIsInstanceTo' call
-    var destination = ArrayList.b2();
-    var _iterator__ex2g4s = tmp0.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var element = _iterator__ex2g4s.f1();
+    var destination = ArrayList.u1();
+    var _iterator__ex2g4s = tmp0.w();
+    while (_iterator__ex2g4s.x()) {
+      var element = _iterator__ex2g4s.y();
       if (element instanceof EqJoinVal) {
-        destination.g2(element);
+        destination.z1(element);
       }
     }
     var joins = toMutableList(destination);
     // Inline function 'kotlin.collections.mutableListOf' call
-    var out = ArrayList.b2();
+    var out = ArrayList.u1();
     var i = 0;
-    $l$loop_0: while (i < equalityStatements.i2()) {
+    $l$loop_0: while (i < equalityStatements.b2()) {
       var _unary__edvuaz = i;
       i = _unary__edvuaz + 1 | 0;
-      var statement = equalityStatements.k2(_unary__edvuaz);
+      var statement = equalityStatements.d2(_unary__edvuaz);
       var tmp0_elvis_lhs = statement.second;
       var tmp1_elvis_lhs = tmp0_elvis_lhs == null ? statement.eqToken : tmp0_elvis_lhs;
       var last = tmp1_elvis_lhs == null ? statement.first : tmp1_elvis_lhs;
       if (last == null) {
-        out.g2(statement.w52_1);
+        out.z1(statement.x52_1);
         continue $l$loop_0;
       }
       var join = firstOrNull_0(joins);
@@ -3856,16 +3904,16 @@ class Companion_7 {
         join = firstOrNull_0(joins);
       }
       if (join == null) {
-        out.g2(statement.w52_1);
+        out.z1(statement.x52_1);
         continue $l$loop_0;
       }
-      var range = statement.w52_1;
+      var range = statement.x52_1;
       join: while (!(join == null) && !(last == null) && isConsecutive(last, join)) {
         removeFirst(joins);
         var _unary__edvuaz_0 = i;
         i = _unary__edvuaz_0 + 1 | 0;
-        var next = equalityStatements.k2(_unary__edvuaz_0);
-        range = plus(statement.w52_1, next.w52_1);
+        var next = equalityStatements.d2(_unary__edvuaz_0);
+        range = plus(statement.x52_1, next.x52_1);
         var tmp2_elvis_lhs = next.second;
         var tmp3_elvis_lhs = tmp2_elvis_lhs == null ? next.eqToken : tmp2_elvis_lhs;
         var tmp4_elvis_lhs = tmp3_elvis_lhs == null ? next.first : tmp3_elvis_lhs;
@@ -3885,30 +3933,30 @@ class Companion_7 {
         }
         join = tmp_2;
       }
-      out.g2(range);
+      out.z1(range);
     }
     return out;
   }
 }
 class sam$kotlin_Comparator$0_1 {
   constructor(function_0) {
-    this.o54_1 = function_0;
+    this.p54_1 = function_0;
   }
-  zg(a, b) {
-    return this.o54_1(a, b);
+  wg(a, b) {
+    return this.p54_1(a, b);
   }
   compare(a, b) {
-    return this.zg(a, b);
+    return this.wg(a, b);
   }
-  m4() {
-    return this.o54_1;
+  f4() {
+    return this.p54_1;
   }
   equals(other) {
     var tmp;
     if (!(other == null) ? isInterface(other, Comparator) : false) {
       var tmp_0;
       if (!(other == null) ? isInterface(other, FunctionAdapter) : false) {
-        tmp_0 = equals(this.m4(), other.m4());
+        tmp_0 = equals(this.f4(), other.f4());
       } else {
         tmp_0 = false;
       }
@@ -3919,56 +3967,56 @@ class sam$kotlin_Comparator$0_1 {
     return tmp;
   }
   hashCode() {
-    return hashCode(this.m4());
+    return hashCode(this.f4());
   }
 }
 class CommandWalker {
   constructor(lib, originalText, tokens, checkCancelled) {
-    this.p53_1 = lib;
-    this.q53_1 = originalText;
-    this.r53_1 = tokens;
-    this.s53_1 = checkCancelled;
+    this.q53_1 = lib;
+    this.r53_1 = originalText;
+    this.s53_1 = tokens;
+    this.t53_1 = checkCancelled;
     var tmp = this;
-    tmp.t53_1 = lazy_0(CommandWalker$variant$delegate$lambda(this));
-    this.u53_1 = get_getClosestByVariantFilter()(this.p53_1.g4x_1);
+    tmp.u53_1 = lazy_0(CommandWalker$variant$delegate$lambda(this));
+    this.v53_1 = get_getClosestByVariantFilter()(this.q53_1.f4x_1);
     var tmp_0 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_0.v53_1 = ArrayList.b2();
+    tmp_0.w53_1 = ArrayList.u1();
     var tmp_1 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_1.w53_1 = ArrayList.b2();
-    this.x53_1 = ensureNotNull(StopCommands_getInstance().ng(this.p53_1.g4x_1));
+    tmp_1.x53_1 = ArrayList.u1();
+    this.y53_1 = ensureNotNull(StopCommands_getInstance().kg(this.q53_1.f4x_1));
     var tmp_2 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_2.y53_1 = ArrayList.b2();
+    tmp_2.z53_1 = ArrayList.u1();
     var tmp_3 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_3.z53_1 = ArrayList.b2();
+    tmp_3.a54_1 = ArrayList.u1();
     var tmp_4 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_4.a54_1 = ArrayList.b2();
+    tmp_4.b54_1 = ArrayList.u1();
     var tmp_5 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_5.b54_1 = ArrayList.b2();
+    tmp_5.c54_1 = ArrayList.u1();
     var tmp_6 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_6.c54_1 = ArrayList.b2();
+    tmp_6.d54_1 = ArrayList.u1();
     var tmp_7 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_7.d54_1 = ArrayList.b2();
+    tmp_7.e54_1 = ArrayList.u1();
     var tmp_8 = this;
     // Inline function 'kotlin.collections.mutableListOf' call
-    tmp_8.e54_1 = ArrayList.b2();
+    tmp_8.f54_1 = ArrayList.u1();
     var tmp_9 = this;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp_9.f54_1 = [];
-    this.g54_1 = 0;
+    tmp_9.g54_1 = [];
     this.h54_1 = 0;
     this.i54_1 = 0;
     this.j54_1 = 0;
-    this.k54_1 = true;
+    this.k54_1 = 0;
+    this.l54_1 = true;
     try {
       walk(this);
     } catch ($p) {
@@ -3980,13 +4028,13 @@ class CommandWalker {
     }
     try {
       // Inline function 'kotlin.collections.forEach' call
-      var indexedObject = this.g4z();
+      var indexedObject = this.f4z();
       var inductionVariable = 0;
       var last = indexedObject.length;
       while (inductionVariable < last) {
         var element = indexedObject[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
-        element.g51();
+        element.h51();
       }
     } catch ($p) {
       if ($p instanceof Exception) {
@@ -3996,50 +4044,55 @@ class CommandWalker {
       }
     }
   }
+  f4z() {
+    // Inline function 'kotlin.collections.toTypedArray' call
+    var this_0 = this.z53_1;
+    return copyToArray(this_0);
+  }
   g4z() {
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = this.y53_1;
+    var this_0 = this.f54_1;
     return copyToArray(this_0);
   }
-  h4z() {
+  v4z() {
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = this.e54_1;
+    var this_0 = this.a54_1;
     return copyToArray(this_0);
   }
-  e4z() {
+  d4z() {
     // Inline function 'kotlin.collections.filter' call
-    var tmp0 = this.y53_1;
+    var tmp0 = this.z53_1;
     // Inline function 'kotlin.collections.filterTo' call
-    var destination = ArrayList.b2();
-    var _iterator__ex2g4s = tmp0.d1();
-    while (_iterator__ex2g4s.e1()) {
-      var element = _iterator__ex2g4s.f1();
-      if (element.b50_1 === ValueType_CONDITION_getInstance().value) {
-        destination.g2(element);
+    var destination = ArrayList.u1();
+    var _iterator__ex2g4s = tmp0.w();
+    while (_iterator__ex2g4s.x()) {
+      var element = _iterator__ex2g4s.y();
+      if (element.c50_1 === ValueType_CONDITION_getInstance().value) {
+        destination.z1(element);
       }
     }
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
-    var destination_0 = ArrayList.f2(collectionSizeOrDefault(destination, 10));
-    var _iterator__ex2g4s_0 = destination.d1();
-    while (_iterator__ex2g4s_0.e1()) {
-      var item = _iterator__ex2g4s_0.f1();
+    var destination_0 = ArrayList.y1(collectionSizeOrDefault(destination, 10));
+    var _iterator__ex2g4s_0 = destination.w();
+    while (_iterator__ex2g4s_0.x()) {
+      var item = _iterator__ex2g4s_0.y();
       var tmp0_safe_receiver = getOrNull(item.arguments, 0);
-      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.g1e();
-      var start = tmp1_elvis_lhs == null ? item.d50_1 : tmp1_elvis_lhs;
+      var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.d1e();
+      var start = tmp1_elvis_lhs == null ? item.e50_1 : tmp1_elvis_lhs;
       var tmp2_safe_receiver = lastOrNull(item.arguments);
-      var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.g1e();
-      var last = tmp3_elvis_lhs == null ? item.d50_1 : tmp3_elvis_lhs;
-      var same = start.o1().h1e() === last.i1e().h1e() && start.o1().l1e() === last.i1e().l1e();
-      var tmp4_startIndex = start.j1e();
-      var tmp5_endIndex = same ? start.j1e() : last.m1e();
-      var tmp6_start = start.o1();
-      var tmp7_end = last.i1e();
+      var tmp3_elvis_lhs = tmp2_safe_receiver == null ? null : tmp2_safe_receiver.d1e();
+      var last = tmp3_elvis_lhs == null ? item.e50_1 : tmp3_elvis_lhs;
+      var same = start.h1().e1e() === last.f1e().e1e() && start.h1().i1e() === last.f1e().i1e();
+      var tmp4_startIndex = start.g1e();
+      var tmp5_endIndex = same ? start.g1e() : last.j1e();
+      var tmp6_start = start.h1();
+      var tmp7_end = last.f1e();
       var range = new RangeWithIndexImpl(tmp6_start, tmp7_end, tmp4_startIndex, tmp5_endIndex);
       var tmp = getOrNull(item.arguments, 0);
       var tmp_0 = getOrNull(item.arguments, 2);
       var tmp8_safe_receiver = getOrNull(item.arguments, 1);
-      var tmp_1 = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.e4y();
+      var tmp_1 = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.d4y();
       var tmp9_safe_receiver = tmp_1 instanceof EqOpVal ? tmp_1 : null;
       var tmp_2;
       if (tmp9_safe_receiver == null) {
@@ -4050,10 +4103,10 @@ class CommandWalker {
       }
       var tmp_3 = tmp_2;
       // Inline function 'kotlin.text.trim' call
-      var this_0 = substring(this.q53_1, range.g1f_1, range.h1f_1);
+      var this_0 = substring(this.r53_1, range.d1f_1, range.e1f_1);
       var tmp$ret$8 = toString_0(trim(isCharSequence(this_0) ? this_0 : THROW_CCE()));
-      var tmp$ret$5 = new EqualityStatement(range, tmp, tmp_0, tmp_3, item.g50_1, item.e50_1, tmp$ret$8);
-      destination_0.g2(tmp$ret$5);
+      var tmp$ret$5 = new EqualityStatement(range, tmp, tmp_0, tmp_3, item.h50_1, item.f50_1, tmp$ret$8);
+      destination_0.z1(tmp$ret$5);
     }
     // Inline function 'kotlin.collections.sortedBy' call
     // Inline function 'kotlin.comparisons.compareBy' call
@@ -4063,14 +4116,14 @@ class CommandWalker {
     var this_1 = sortedWith(destination_0, tmp$ret$10);
     return copyToArray(this_1);
   }
-  f4z() {
+  e4z() {
     // Inline function 'kotlin.collections.toTypedArray' call
-    var this_0 = Companion_instance_8.n54(this.e4z(), this.r53_1);
+    var this_0 = Companion_instance_8.o54(this.d4z(), this.s53_1);
     return copyToArray(this_0);
   }
 }
 class AgentClassUtils {
-  p54(clasInt) {
+  q54(clasInt) {
     var family = clasInt >> 24 & 255;
     var genus = clasInt >> 16 & 255;
     var species = clasInt >> 8 & 255;
@@ -4081,17 +4134,17 @@ class AgentClassUtils {
 class CommandCallType {
   constructor() {
     CommandCallType_instance = this;
-    this.COMMAND = _CommandType___get_value__impl__hr7s20(Companion_getInstance_0().k1t_1);
-    this.LVALUE = _CommandType___get_value__impl__hr7s20(Companion_getInstance_0().l1t_1);
-    this.RVALUE = _CommandType___get_value__impl__hr7s20(Companion_getInstance_0().m1t_1);
-  }
-  q54() {
-    return this.COMMAND;
+    this.COMMAND = _CommandType___get_value__impl__hr7s20(Companion_getInstance_0().h1t_1);
+    this.LVALUE = _CommandType___get_value__impl__hr7s20(Companion_getInstance_0().i1t_1);
+    this.RVALUE = _CommandType___get_value__impl__hr7s20(Companion_getInstance_0().j1t_1);
   }
   r54() {
-    return this.LVALUE;
+    return this.COMMAND;
   }
   s54() {
+    return this.LVALUE;
+  }
+  t54() {
     return this.RVALUE;
   }
 }
@@ -4099,15 +4152,15 @@ class CommandCallType {
 function end(_this__u8e3s4, lineOffset, characterOffset) {
   lineOffset = lineOffset === VOID ? null : lineOffset;
   characterOffset = characterOffset === VOID ? 1 : characterOffset;
-  return offset(_this__u8e3s4.g1e().i1e(), lineOffset, characterOffset);
+  return offset(_this__u8e3s4.d1e().f1e(), lineOffset, characterOffset);
 }
 function start(_this__u8e3s4, lineOffset, characterOffset) {
   lineOffset = lineOffset === VOID ? null : lineOffset;
   characterOffset = characterOffset === VOID ? null : characterOffset;
-  return offset(_this__u8e3s4.g1e().o1(), lineOffset, characterOffset);
+  return offset(_this__u8e3s4.d1e().h1(), lineOffset, characterOffset);
 }
 function CaosList$Companion$$childSerializers$_anonymous__8eujbq() {
-  return Companion_getInstance().n1e();
+  return Companion_getInstance().k1e();
 }
 function CaosList$Companion$$childSerializers$_anonymous__8eujbq_0() {
   var tmp = getKClass(IArgument);
@@ -4115,7 +4168,7 @@ function CaosList$Companion$$childSerializers$_anonymous__8eujbq_0() {
   // Inline function 'kotlin.js.unsafeCast' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$0 = [];
-  return new ArrayListSerializer(PolymorphicSerializer.gs(tmp, tmp$ret$0));
+  return new ArrayListSerializer(PolymorphicSerializer.ds(tmp, tmp$ret$0));
 }
 var Companion_instance_0;
 function Companion_getInstance_1() {
@@ -4138,16 +4191,16 @@ var CAOS_OPEN_BRACE_PARAMETER$delegate;
 var CAOS_CLOSE_BRACE_PARAMETER$delegate;
 function caosListParameter(index) {
   _init_properties_CaosListParameter_kt__nnzwq1();
-  var tmp0_safe_receiver = get_listParameterCache().y3(index);
+  var tmp0_safe_receiver = get_listParameterCache().r3(index);
   if (tmp0_safe_receiver == null)
     null;
   else {
     // Inline function 'kotlin.let' call
     return tmp0_safe_receiver;
   }
-  var parameter = ICaosParameter.l26(index, index.toString(), ValueType_ANY_getInstance().value, 'ANY');
+  var parameter = ICaosParameter.k26(index, index.toString(), ValueType_ANY_getInstance().value, 'ANY');
   // Inline function 'kotlin.collections.set' call
-  get_listParameterCache().s3(index, parameter);
+  get_listParameterCache().l3(index, parameter);
   return parameter;
 }
 function CAOS_OPEN_BRACE_PARAMETER$delegate$lambda() {
@@ -4163,16 +4216,16 @@ function _init_properties_CaosListParameter_kt__nnzwq1() {
   if (!properties_initialized_CaosListParameter_kt_w0sk0p) {
     properties_initialized_CaosListParameter_kt_w0sk0p = true;
     // Inline function 'kotlin.collections.mutableMapOf' call
-    listParameterCache = LinkedHashMap.tb();
+    listParameterCache = LinkedHashMap.mb();
     CAOS_OPEN_BRACE_PARAMETER$delegate = lazy_0(CAOS_OPEN_BRACE_PARAMETER$delegate$lambda);
     CAOS_CLOSE_BRACE_PARAMETER$delegate = lazy_0(CAOS_CLOSE_BRACE_PARAMETER$delegate$lambda);
   }
 }
 function CaosParseResult$Companion$$childSerializers$_anonymous__ue15ng() {
-  return new ReferenceArraySerializer(getKClass(CaosParserItem), Companion_getInstance().n1e());
+  return new ReferenceArraySerializer(getKClass(CaosParserItem), Companion_getInstance().k1e());
 }
 function CaosParseResult$Companion$$childSerializers$_anonymous__ue15ng_0() {
-  return new ReferenceArraySerializer(getKClass(CaosParserItem), Companion_getInstance().n1e());
+  return new ReferenceArraySerializer(getKClass(CaosParserItem), Companion_getInstance().k1e());
 }
 function CaosParseResult$Companion$$childSerializers$_anonymous__ue15ng_1() {
   return new ReferenceArraySerializer(getKClass(ErrorVal), $serializer_getInstance_0());
@@ -4196,7 +4249,10 @@ function CaosParseResult$Companion$$childSerializers$_anonymous__ue15ng_7() {
   return new ReferenceArraySerializer(getKClass(Caos2Comment), $serializer_getInstance_3());
 }
 function CaosParseResult$Companion$$childSerializers$_anonymous__ue15ng_8() {
-  return new ReferenceArraySerializer(getKClass(CaosParserItem), Companion_getInstance().n1e());
+  return new ReferenceArraySerializer(getKClass(CaosParserItem), Companion_getInstance().k1e());
+}
+function CaosParseResult$Companion$$childSerializers$_anonymous__ue15ng_9() {
+  return new ReferenceArraySerializer(getKClass(RangeWithIndex), RangeWithIndexSerializer_getInstance());
 }
 var Companion_instance_1;
 function Companion_getInstance_2() {
@@ -4214,6 +4270,7 @@ function parseCaosAtOffset($this, variant, text, offsetIndex, offsetLine, offset
   checkErrors = checkErrors === VOID ? null : checkErrors;
   checkDelay = checkDelay === VOID ? null : checkDelay;
   keepGoing = keepGoing === VOID ? null : keepGoing;
+  assertValidVariant(variant);
   if (isBlank(text)) {
     // Inline function 'kotlin.emptyArray' call
     var tmp = [];
@@ -4234,10 +4291,12 @@ function parseCaosAtOffset($this, variant, text, offsetIndex, offsetLine, offset
     // Inline function 'kotlin.emptyArray' call
     var tmp_7 = [];
     // Inline function 'kotlin.emptyArray' call
-    var tmp$ret$9 = [];
-    return ParseResult.d4z(variant, text, tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, tmp_7, tmp$ret$9);
+    var tmp_8 = [];
+    // Inline function 'kotlin.emptyArray' call
+    var tmp$ret$10 = [];
+    return ParseResult.c4z(variant, text, tmp, tmp_0, tmp_1, tmp_2, tmp_3, tmp_4, tmp_5, tmp_6, tmp_7, tmp_8, tmp$ret$10);
   }
-  var items = CaosTokenizer_instance.x4t(variant, text, offsetIndex, offsetLine, offsetColumn, checkErrors, checkDelay, keepGoing);
+  var items = CaosTokenizer_instance.w4t(variant, text, offsetIndex, offsetLine, offsetColumn, checkErrors, checkDelay, keepGoing);
   return $this.i4z(items, checkDelay, keepGoing);
 }
 var CaosParser_instance;
@@ -4251,7 +4310,7 @@ function CommandCall$Companion$$childSerializers$_anonymous__x1p6u7() {
   // Inline function 'kotlin.js.unsafeCast' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$0 = [];
-  return new ReferenceArraySerializer(tmp, PolymorphicSerializer.gs(tmp_0, tmp$ret$0));
+  return new ReferenceArraySerializer(tmp, PolymorphicSerializer.ds(tmp_0, tmp$ret$0));
 }
 function CommandCall$Companion$$childSerializers$_anonymous__x1p6u7_0() {
   return new ReferenceArraySerializer(getKClass(CommandToken), $serializer_getInstance_4());
@@ -4272,7 +4331,7 @@ function CommandCall$parserItem$delegate$lambda(this$0) {
   return () => new CompoundCommandToken(this$0.tokens);
 }
 function CommandCall$_get_parserItem_$ref_4sg7i5() {
-  return (p0) => p0.e4y();
+  return (p0) => p0.d4y();
 }
 function CommandCall$_init_$lambda_284c8y(this$0) {
   return () => new CompoundCommandToken(this$0.tokens);
@@ -4284,7 +4343,7 @@ function CommandCallJs$Companion$$childSerializers$_anonymous__6gr4zs() {
   // Inline function 'kotlin.js.unsafeCast' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$0 = [];
-  return new ReferenceArraySerializer(tmp, PolymorphicSerializer.gs(tmp_0, tmp$ret$0));
+  return new ReferenceArraySerializer(tmp, PolymorphicSerializer.ds(tmp_0, tmp$ret$0));
 }
 function CommandCallJs$Companion$$childSerializers$_anonymous__6gr4zs_0() {
   return new ReferenceArraySerializer(getKClass(CommandToken), $serializer_getInstance_4());
@@ -4305,14 +4364,14 @@ function CommandLookupUtil$commandFromAnyVariantForCommandCall$lambda($variant) 
   return (a, b) => {
     // Inline function 'kotlin.comparisons.compareValuesBy' call
     var tmp;
-    if ($variant === 'DS' && a.t21_1 === true) {
+    if ($variant === 'DS' && a.q21_1 === true) {
       tmp = 0;
     } else {
       tmp = 1;
     }
     var tmp_0 = tmp;
     var tmp_1;
-    if ($variant === 'DS' && b.t21_1 === true) {
+    if ($variant === 'DS' && b.q21_1 === true) {
       tmp_1 = 0;
     } else {
       tmp_1 = 1;
@@ -4333,7 +4392,7 @@ function missingParameters(_this__u8e3s4, variant) {
     tmp = null;
   } else {
     var tmp_0 = _this__u8e3s4.arguments.length;
-    var tmp2_elvis_lhs = _this__u8e3s4.i50_1;
+    var tmp2_elvis_lhs = _this__u8e3s4.j50_1;
     // Inline function 'kotlin.math.max' call
     var a = tmp_0 - (tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs) | 0;
     var tmp$ret$0 = Math.max(a, 0);
@@ -4350,13 +4409,13 @@ function command(_this__u8e3s4, variant) {
     tmp = tmp0_elvis_lhs;
   }
   var command = tmp;
-  var dropLast_0 = _this__u8e3s4.i50_1;
+  var dropLast_0 = _this__u8e3s4.j50_1;
   if (!(dropLast_0 == null) && dropLast_0 > 0) {
     var tmp_0 = command;
     // Inline function 'kotlin.collections.toTypedArray' call
     var this_0 = dropLast(command.parameters, dropLast_0);
     var tmp$ret$0 = copyToArray(this_0);
-    command = tmp_0.h26(VOID, tmp$ret$0);
+    command = tmp_0.g26(VOID, tmp$ret$0);
   }
   return command;
 }
@@ -4367,7 +4426,7 @@ function parameters(_this__u8e3s4, variant) {
   if (tmp1_safe_receiver == null) {
     tmp = null;
   } else {
-    var tmp2_elvis_lhs = _this__u8e3s4.i50_1;
+    var tmp2_elvis_lhs = _this__u8e3s4.j50_1;
     tmp = dropLast(tmp1_safe_receiver, tmp2_elvis_lhs == null ? 0 : tmp2_elvis_lhs);
   }
   var tmp3_safe_receiver = tmp;
@@ -4416,7 +4475,7 @@ function _init_properties_EqCondition_kt__cpzjvn() {
   }
 }
 function EqOp$Companion$$childSerializers$_anonymous__e3di0z() {
-  return Companion_getInstance().n1e();
+  return Companion_getInstance().k1e();
 }
 var Companion_instance_5;
 function Companion_getInstance_6() {
@@ -4436,7 +4495,7 @@ function EqualityStatement$Companion$$childSerializers$_anonymous__i59u0b() {
   // Inline function 'kotlin.js.unsafeCast' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$0 = [];
-  return PolymorphicSerializer.gs(tmp, tmp$ret$0);
+  return PolymorphicSerializer.ds(tmp, tmp$ret$0);
 }
 function EqualityStatement$Companion$$childSerializers$_anonymous__i59u0b_0() {
   var tmp = getKClass(IArgument);
@@ -4444,10 +4503,10 @@ function EqualityStatement$Companion$$childSerializers$_anonymous__i59u0b_0() {
   // Inline function 'kotlin.js.unsafeCast' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$0 = [];
-  return PolymorphicSerializer.gs(tmp, tmp$ret$0);
+  return PolymorphicSerializer.ds(tmp, tmp$ret$0);
 }
 function EqualityStatement$Companion$$childSerializers$_anonymous__i59u0b_1() {
-  return Companion_getInstance().n1e();
+  return Companion_getInstance().k1e();
 }
 function EqualityStatement$Companion$$childSerializers$_anonymous__i59u0b_2() {
   var tmp = getKClass(IArgument);
@@ -4455,7 +4514,7 @@ function EqualityStatement$Companion$$childSerializers$_anonymous__i59u0b_2() {
   // Inline function 'kotlin.js.unsafeCast' call
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$0 = [];
-  return new ArrayListSerializer(PolymorphicSerializer.gs(tmp, tmp$ret$0));
+  return new ArrayListSerializer(PolymorphicSerializer.ds(tmp, tmp$ret$0));
 }
 var Companion_instance_6;
 function Companion_getInstance_7() {
@@ -4470,7 +4529,7 @@ function $serializer_getInstance_14() {
   return $serializer_instance_5;
 }
 function ParserItemArgument$Companion$$childSerializers$_anonymous__mn06t7() {
-  return Companion_getInstance().n1e();
+  return Companion_getInstance().k1e();
 }
 var Companion_instance_7;
 function Companion_getInstance_8() {
@@ -4490,7 +4549,7 @@ function get_caosParserSerializersModule() {
   var tmp = KProperty0;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('caosParserSerializersModule', 0, tmp, _get_caosParserSerializersModule_$ref_mxy3fw(), null);
-  return tmp0.r3();
+  return tmp0.k3();
 }
 var caosParserSerializersModule$delegate;
 function initCaosParserSerializersModule(_this__u8e3s4, positionSerializer, positionPolymorphic, hasTextSerializer, hasTextPolymorphic, rangeSerializer, rangePolymorphic, rangeWithIndexSerializer, rangeWithIndexPolymorphic, textWithRangeSerializer, textWithRangePolymorphic, hasRangeSerializer, hasRangePolymorphic, argumentsSerializer, argumentsPolymorphic, eqArgumentsSerializer, eqArgumentsPolymorphic, init) {
@@ -4638,16 +4697,16 @@ function caosParserEqArgumentPolymorphic(_this__u8e3s4, init) {
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_0 = serializer(createKType(getKClass(EqualityStatement), arrayOf([]), false));
   var tmp$ret$3 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-  builder.y1c(clazz, tmp$ret$3);
+  builder.v1c(clazz, tmp$ret$3);
   // Inline function 'kotlinx.serialization.modules.subclass' call
   var clazz_0 = getKClass(EqJoinVal);
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_1 = serializer(createKType(getKClass(EqJoinVal), arrayOf([]), false));
   var tmp$ret$6 = isInterface(this_1, KSerializer) ? this_1 : THROW_CCE();
-  builder.y1c(clazz_0, tmp$ret$6);
+  builder.v1c(clazz_0, tmp$ret$6);
   init(builder);
-  builder.a1d(_this__u8e3s4);
+  builder.x1c(_this__u8e3s4);
   return _this__u8e3s4;
 }
 function caosParserEqArgumentDefaultSerializer(_this__u8e3s4, getSerializer) {
@@ -4660,7 +4719,7 @@ function caosParserEqArgumentDefaultSerializer(_this__u8e3s4, getSerializer) {
   getSerializer = tmp;
   _init_properties_caosParserSerializersModule_kt__48lyqu();
   var tmp_0 = getKClass(EqArgument);
-  _this__u8e3s4.q1d(tmp_0, caosParserEqArgumentDefaultSerializer$lambda_0(getSerializer));
+  _this__u8e3s4.n1d(tmp_0, caosParserEqArgumentDefaultSerializer$lambda_0(getSerializer));
   return _this__u8e3s4;
 }
 function caosParserArgumentPolymorphic(_this__u8e3s4, init) {
@@ -4681,44 +4740,44 @@ function caosParserArgumentPolymorphic(_this__u8e3s4, init) {
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_0 = serializer(createKType(getKClass(CommandCall), arrayOf([]), false));
   var tmp$ret$3 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-  builder.y1c(clazz, tmp$ret$3);
+  builder.v1c(clazz, tmp$ret$3);
   // Inline function 'kotlinx.serialization.modules.subclass' call
   var clazz_0 = getKClass(CommandCallJs);
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_1 = serializer(createKType(getKClass(CommandCallJs), arrayOf([]), false));
   var tmp$ret$6 = isInterface(this_1, KSerializer) ? this_1 : THROW_CCE();
-  builder.y1c(clazz_0, tmp$ret$6);
+  builder.v1c(clazz_0, tmp$ret$6);
   // Inline function 'kotlinx.serialization.modules.subclass' call
   var clazz_1 = getKClass(EqOp);
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer(createKType(getKClass(EqOp), arrayOf([]), false));
   var tmp$ret$9 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
-  builder.y1c(clazz_1, tmp$ret$9);
+  builder.v1c(clazz_1, tmp$ret$9);
   // Inline function 'kotlinx.serialization.modules.subclass' call
   var clazz_2 = getKClass(EqualityStatement);
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_3 = serializer(createKType(getKClass(EqualityStatement), arrayOf([]), false));
   var tmp$ret$12 = isInterface(this_3, KSerializer) ? this_3 : THROW_CCE();
-  builder.y1c(clazz_2, tmp$ret$12);
+  builder.v1c(clazz_2, tmp$ret$12);
   // Inline function 'kotlinx.serialization.modules.subclass' call
   var clazz_3 = getKClass(Argument);
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_4 = serializer(createKType(getKClass(Argument), arrayOf([]), false));
   var tmp$ret$15 = isInterface(this_4, KSerializer) ? this_4 : THROW_CCE();
-  builder.y1c(clazz_3, tmp$ret$15);
+  builder.v1c(clazz_3, tmp$ret$15);
   // Inline function 'kotlinx.serialization.modules.subclass' call
   var clazz_4 = getKClass(CaosList);
   // Inline function 'kotlinx.serialization.serializer' call
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_5 = serializer(createKType(getKClass(CaosList), arrayOf([]), false));
   var tmp$ret$18 = isInterface(this_5, KSerializer) ? this_5 : THROW_CCE();
-  builder.y1c(clazz_4, tmp$ret$18);
+  builder.v1c(clazz_4, tmp$ret$18);
   init(builder);
-  builder.a1d(_this__u8e3s4);
+  builder.x1c(_this__u8e3s4);
   return _this__u8e3s4;
 }
 function caosParserArgumentDefaultSerializer(_this__u8e3s4, getSerializer) {
@@ -4731,7 +4790,7 @@ function caosParserArgumentDefaultSerializer(_this__u8e3s4, getSerializer) {
   getSerializer = tmp;
   _init_properties_caosParserSerializersModule_kt__48lyqu();
   var tmp_0 = getKClass(IArgument);
-  _this__u8e3s4.q1d(tmp_0, caosParserArgumentDefaultSerializer$lambda_0(getSerializer));
+  _this__u8e3s4.n1d(tmp_0, caosParserArgumentDefaultSerializer$lambda_0(getSerializer));
   return _this__u8e3s4;
 }
 function caosParserHasRangePolymorphic(_this__u8e3s4, init) {
@@ -4787,7 +4846,7 @@ function caosParserSerializersModule$delegate$lambda() {
   // Inline function 'kotlinx.serialization.modules.SerializersModule' call
   var builder = new SerializersModuleBuilder();
   initCaosParserSerializersModule(builder);
-  return builder.y11();
+  return builder.v11();
 }
 function _get_caosParserSerializersModule_$ref_mxy3fw() {
   return () => get_caosParserSerializersModule();
@@ -4864,7 +4923,7 @@ function initCaosParserSerializersModule$lambda_16($hasTextSerializer) {
   return (instance) => {
     var tmp;
     if (instance instanceof CaosParserItem) {
-      var tmp_0 = Companion_getInstance().n1e();
+      var tmp_0 = Companion_getInstance().k1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       tmp = $hasTextSerializer(instance);
@@ -4891,11 +4950,11 @@ function caosParserEqArgumentDefaultSerializer$lambda_0($getSerializer) {
   return (instance) => {
     var tmp;
     if (instance instanceof EqualityStatement) {
-      var tmp_0 = Companion_getInstance_7().n1e();
+      var tmp_0 = Companion_getInstance_7().k1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       if (instance instanceof EqJoinVal) {
-        var tmp_1 = Companion_getInstance_4().n1e();
+        var tmp_1 = Companion_getInstance_4().k1e();
         tmp = isInterface(tmp_1, SerializationStrategy) ? tmp_1 : THROW_CCE();
       } else {
         tmp = $getSerializer(instance);
@@ -4916,27 +4975,27 @@ function caosParserArgumentDefaultSerializer$lambda_0($getSerializer) {
   return (instance) => {
     var tmp;
     if (instance instanceof CommandCall) {
-      var tmp_0 = Companion_getInstance_3().n1e();
+      var tmp_0 = Companion_getInstance_3().k1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       if (instance instanceof CommandCallJs) {
-        var tmp_1 = Companion_getInstance_4().n1e();
+        var tmp_1 = Companion_getInstance_4().k1e();
         tmp = isInterface(tmp_1, SerializationStrategy) ? tmp_1 : THROW_CCE();
       } else {
         if (instance instanceof EqOp) {
-          var tmp_2 = Companion_getInstance_6().n1e();
+          var tmp_2 = Companion_getInstance_6().k1e();
           tmp = isInterface(tmp_2, SerializationStrategy) ? tmp_2 : THROW_CCE();
         } else {
           if (instance instanceof EqualityStatement) {
-            var tmp_3 = Companion_getInstance_7().n1e();
+            var tmp_3 = Companion_getInstance_7().k1e();
             tmp = isInterface(tmp_3, SerializationStrategy) ? tmp_3 : THROW_CCE();
           } else {
             if (instance instanceof Argument) {
-              var tmp_4 = Companion_getInstance_8().n1e();
+              var tmp_4 = Companion_getInstance_8().k1e();
               tmp = isInterface(tmp_4, SerializationStrategy) ? tmp_4 : THROW_CCE();
             } else {
               if (instance instanceof CaosList) {
-                var tmp_5 = Companion_getInstance_1().n1e();
+                var tmp_5 = Companion_getInstance_1().k1e();
                 tmp = isInterface(tmp_5, SerializationStrategy) ? tmp_5 : THROW_CCE();
               } else {
                 tmp = $getSerializer(instance);
@@ -4962,35 +5021,35 @@ function caosParserHasRangePolymorphic$lambda_0($init) {
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_0 = serializer(createKType(getKClass(CommandCall), arrayOf([]), false));
     var tmp$ret$1 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-    $this$caosCoreHasRangePolymorphic.y1c(clazz, tmp$ret$1);
+    $this$caosCoreHasRangePolymorphic.v1c(clazz, tmp$ret$1);
     // Inline function 'kotlinx.serialization.modules.subclass' call
     var clazz_0 = getKClass(CommandCallJs);
     // Inline function 'kotlinx.serialization.serializer' call
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_1 = serializer(createKType(getKClass(CommandCallJs), arrayOf([]), false));
     var tmp$ret$4 = isInterface(this_1, KSerializer) ? this_1 : THROW_CCE();
-    $this$caosCoreHasRangePolymorphic.y1c(clazz_0, tmp$ret$4);
+    $this$caosCoreHasRangePolymorphic.v1c(clazz_0, tmp$ret$4);
     // Inline function 'kotlinx.serialization.modules.subclass' call
     var clazz_1 = getKClass(EqOp);
     // Inline function 'kotlinx.serialization.serializer' call
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_2 = serializer(createKType(getKClass(EqOp), arrayOf([]), false));
     var tmp$ret$7 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
-    $this$caosCoreHasRangePolymorphic.y1c(clazz_1, tmp$ret$7);
+    $this$caosCoreHasRangePolymorphic.v1c(clazz_1, tmp$ret$7);
     // Inline function 'kotlinx.serialization.modules.subclass' call
     var clazz_2 = getKClass(EqualityStatement);
     // Inline function 'kotlinx.serialization.serializer' call
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_3 = serializer(createKType(getKClass(EqualityStatement), arrayOf([]), false));
     var tmp$ret$10 = isInterface(this_3, KSerializer) ? this_3 : THROW_CCE();
-    $this$caosCoreHasRangePolymorphic.y1c(clazz_2, tmp$ret$10);
+    $this$caosCoreHasRangePolymorphic.v1c(clazz_2, tmp$ret$10);
     // Inline function 'kotlinx.serialization.modules.subclass' call
     var clazz_3 = getKClass(Argument);
     // Inline function 'kotlinx.serialization.serializer' call
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_4 = serializer(createKType(getKClass(Argument), arrayOf([]), false));
     var tmp$ret$13 = isInterface(this_4, KSerializer) ? this_4 : THROW_CCE();
-    $this$caosCoreHasRangePolymorphic.y1c(clazz_3, tmp$ret$13);
+    $this$caosCoreHasRangePolymorphic.v1c(clazz_3, tmp$ret$13);
     $init($this$caosCoreHasRangePolymorphic);
     return Unit_instance;
   };
@@ -5003,27 +5062,27 @@ function caosParserHasRangeDefaultSerializer$lambda_0($getSerializer) {
   return (instance) => {
     var tmp;
     if (instance instanceof CaosParserItem) {
-      var tmp_0 = Companion_getInstance().n1e();
+      var tmp_0 = Companion_getInstance().k1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       if (instance instanceof CommandCall) {
-        var tmp_1 = Companion_getInstance_3().n1e();
+        var tmp_1 = Companion_getInstance_3().k1e();
         tmp = isInterface(tmp_1, SerializationStrategy) ? tmp_1 : THROW_CCE();
       } else {
         if (instance instanceof CommandCallJs) {
-          var tmp_2 = Companion_getInstance_4().n1e();
+          var tmp_2 = Companion_getInstance_4().k1e();
           tmp = isInterface(tmp_2, SerializationStrategy) ? tmp_2 : THROW_CCE();
         } else {
           if (instance instanceof EqOp) {
-            var tmp_3 = Companion_getInstance_6().n1e();
+            var tmp_3 = Companion_getInstance_6().k1e();
             tmp = isInterface(tmp_3, SerializationStrategy) ? tmp_3 : THROW_CCE();
           } else {
             if (instance instanceof EqualityStatement) {
-              var tmp_4 = Companion_getInstance_7().n1e();
+              var tmp_4 = Companion_getInstance_7().k1e();
               tmp = isInterface(tmp_4, SerializationStrategy) ? tmp_4 : THROW_CCE();
             } else {
               if (instance instanceof Argument) {
-                var tmp_5 = Companion_getInstance_8().n1e();
+                var tmp_5 = Companion_getInstance_8().k1e();
                 tmp = isInterface(tmp_5, SerializationStrategy) ? tmp_5 : THROW_CCE();
               } else {
                 var tmp_6 = $getSerializer(instance);
@@ -5050,35 +5109,35 @@ function caosParserTextWithRangePolymorphic$lambda_0($init) {
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_0 = serializer(createKType(getKClass(CommandCall), arrayOf([]), false));
     var tmp$ret$1 = isInterface(this_0, KSerializer) ? this_0 : THROW_CCE();
-    $this$caosCoreTextWithRangePolymorphic.y1c(clazz, tmp$ret$1);
+    $this$caosCoreTextWithRangePolymorphic.v1c(clazz, tmp$ret$1);
     // Inline function 'kotlinx.serialization.modules.subclass' call
     var clazz_0 = getKClass(CommandCallJs);
     // Inline function 'kotlinx.serialization.serializer' call
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_1 = serializer(createKType(getKClass(CommandCallJs), arrayOf([]), false));
     var tmp$ret$4 = isInterface(this_1, KSerializer) ? this_1 : THROW_CCE();
-    $this$caosCoreTextWithRangePolymorphic.y1c(clazz_0, tmp$ret$4);
+    $this$caosCoreTextWithRangePolymorphic.v1c(clazz_0, tmp$ret$4);
     // Inline function 'kotlinx.serialization.modules.subclass' call
     var clazz_1 = getKClass(EqOp);
     // Inline function 'kotlinx.serialization.serializer' call
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_2 = serializer(createKType(getKClass(EqOp), arrayOf([]), false));
     var tmp$ret$7 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
-    $this$caosCoreTextWithRangePolymorphic.y1c(clazz_1, tmp$ret$7);
+    $this$caosCoreTextWithRangePolymorphic.v1c(clazz_1, tmp$ret$7);
     // Inline function 'kotlinx.serialization.modules.subclass' call
     var clazz_2 = getKClass(EqualityStatement);
     // Inline function 'kotlinx.serialization.serializer' call
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_3 = serializer(createKType(getKClass(EqualityStatement), arrayOf([]), false));
     var tmp$ret$10 = isInterface(this_3, KSerializer) ? this_3 : THROW_CCE();
-    $this$caosCoreTextWithRangePolymorphic.y1c(clazz_2, tmp$ret$10);
+    $this$caosCoreTextWithRangePolymorphic.v1c(clazz_2, tmp$ret$10);
     // Inline function 'kotlinx.serialization.modules.subclass' call
     var clazz_3 = getKClass(Argument);
     // Inline function 'kotlinx.serialization.serializer' call
     // Inline function 'kotlinx.serialization.internal.cast' call
     var this_4 = serializer(createKType(getKClass(Argument), arrayOf([]), false));
     var tmp$ret$13 = isInterface(this_4, KSerializer) ? this_4 : THROW_CCE();
-    $this$caosCoreTextWithRangePolymorphic.y1c(clazz_3, tmp$ret$13);
+    $this$caosCoreTextWithRangePolymorphic.v1c(clazz_3, tmp$ret$13);
     $init($this$caosCoreTextWithRangePolymorphic);
     return Unit_instance;
   };
@@ -5091,27 +5150,27 @@ function caosParserTextWithRangeDefaultSerializer$lambda_0($getSerializer) {
   return (instance) => {
     var tmp;
     if (instance instanceof CaosParserItem) {
-      var tmp_0 = Companion_getInstance().n1e();
+      var tmp_0 = Companion_getInstance().k1e();
       tmp = isInterface(tmp_0, SerializationStrategy) ? tmp_0 : THROW_CCE();
     } else {
       if (instance instanceof CommandCall) {
-        var tmp_1 = Companion_getInstance_3().n1e();
+        var tmp_1 = Companion_getInstance_3().k1e();
         tmp = isInterface(tmp_1, SerializationStrategy) ? tmp_1 : THROW_CCE();
       } else {
         if (instance instanceof CommandCallJs) {
-          var tmp_2 = Companion_getInstance_4().n1e();
+          var tmp_2 = Companion_getInstance_4().k1e();
           tmp = isInterface(tmp_2, SerializationStrategy) ? tmp_2 : THROW_CCE();
         } else {
           if (instance instanceof EqOp) {
-            var tmp_3 = Companion_getInstance_6().n1e();
+            var tmp_3 = Companion_getInstance_6().k1e();
             tmp = isInterface(tmp_3, SerializationStrategy) ? tmp_3 : THROW_CCE();
           } else {
             if (instance instanceof EqualityStatement) {
-              var tmp_4 = Companion_getInstance_7().n1e();
+              var tmp_4 = Companion_getInstance_7().k1e();
               tmp = isInterface(tmp_4, SerializationStrategy) ? tmp_4 : THROW_CCE();
             } else {
               if (instance instanceof Argument) {
-                var tmp_5 = Companion_getInstance_8().n1e();
+                var tmp_5 = Companion_getInstance_8().k1e();
                 tmp = isInterface(tmp_5, SerializationStrategy) ? tmp_5 : THROW_CCE();
               } else {
                 tmp = $getSerializer(instance);
@@ -5136,7 +5195,7 @@ function _get_commandWalker__3vw9zk($this) {
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('commandWalker', 1, tmp, CaosWalker$_get_commandWalker_$ref_n95x8z(), null);
-  return tmp0.r3();
+  return tmp0.k3();
 }
 function CaosWalker$commandWalker$delegate$lambda(this$0, $originalText) {
   return () => new CommandWalker(this$0.p4z_1, $originalText, this$0.r4z_1, this$0.q4z_1);
@@ -5145,16 +5204,16 @@ function CaosWalker$_get_commandWalker_$ref_n95x8z() {
   return (p0) => _get_commandWalker__3vw9zk(p0);
 }
 function CaosWalker$equalityStatements$delegate$lambda(this$0) {
-  return () => _get_commandWalker__3vw9zk(this$0).e4z();
+  return () => _get_commandWalker__3vw9zk(this$0).d4z();
 }
 function CaosWalker$_get_equalityStatements_$ref_axgl08() {
-  return (p0) => p0.e4z();
+  return (p0) => p0.d4z();
 }
 function CaosWalker$equalityStatementRanges$delegate$lambda(this$0) {
-  return () => _get_commandWalker__3vw9zk(this$0).f4z();
+  return () => _get_commandWalker__3vw9zk(this$0).e4z();
 }
 function CaosWalker$_get_equalityStatementRanges_$ref_q6751z() {
-  return (p0) => p0.f4z();
+  return (p0) => p0.e4z();
 }
 function get_leftValueNoVar() {
   _init_properties_CommandWalker_kt__21j6oh();
@@ -5179,16 +5238,16 @@ function CommandWalker$Companion$getEqualityStatementRanges$lambda_0(a, b) {
   return compareValues(tmp, tmp$ret$2);
 }
 function _get_variant__eht2jw($this) {
-  var tmp0 = $this.t53_1;
+  var tmp0 = $this.u53_1;
   var tmp = KProperty1;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('variant', 1, tmp, CommandWalker$_get_variant_$ref_hjzp14(), null);
-  return tmp0.r3();
+  return tmp0.k3();
 }
 function walk($this) {
-  var lastIndex = get_lastIndex($this.r53_1);
-  $l$loop_0: while ($this.j54_1 <= lastIndex) {
-    var tmp0_elvis_lhs = $this.r53_1[$this.j54_1];
+  var lastIndex = get_lastIndex($this.s53_1);
+  $l$loop_0: while ($this.k54_1 <= lastIndex) {
+    var tmp0_elvis_lhs = $this.s53_1[$this.k54_1];
     var tmp;
     if (tmp0_elvis_lhs == null) {
       continue $l$loop_0;
@@ -5199,9 +5258,9 @@ function walk($this) {
     var tmp_0;
     var tmp_1;
     var tmp_2;
-    var tmp1_safe_receiver = lastOrNull_0($this.c54_1);
+    var tmp1_safe_receiver = lastOrNull_0($this.d54_1);
     if ((tmp1_safe_receiver == null ? null : get_done(tmp1_safe_receiver)) === false) {
-      tmp_2 = !($this.g54_1 === token.g1e().o1().h1e());
+      tmp_2 = !($this.h54_1 === token.d1e().h1().e1e());
     } else {
       tmp_2 = false;
     }
@@ -5216,38 +5275,38 @@ function walk($this) {
       tmp_0 = false;
     }
     if (tmp_0) {
-      $this.d54_1.b4();
-      $this.c54_1.b4();
-      $this.g54_1 = token.c1q_1.o1().h1e();
+      $this.e54_1.u3();
+      $this.d54_1.u3();
+      $this.h54_1 = token.z1p_1.h1().e1e();
       if (popTokens($this)) {
         continue $l$loop_0;
       }
     }
     if (!(token instanceof EqJoinVal)) {
-      while (equals(firstOrNull_0($this.d54_1), get_EQ_JOIN())) {
-        removeFirst($this.d54_1);
+      while (equals(firstOrNull_0($this.e54_1), get_EQ_JOIN())) {
+        removeFirst($this.e54_1);
       }
     }
     if (token instanceof CommandToken) {
-      var tmp2_safe_receiver = firstOrNull_0($this.d54_1);
+      var tmp2_safe_receiver = firstOrNull_0($this.e54_1);
       if ((tmp2_safe_receiver == null ? null : tmp2_safe_receiver.typeId) === ValueType_TOKEN_getInstance().value) {
-        var altered = new TokenVal(token.c1q_1, token.d1q_1);
-        $this.r53_1[$this.j54_1] = altered;
+        var altered = new TokenVal(token.z1p_1, token.a1q_1);
+        $this.s53_1[$this.k54_1] = altered;
         pushArgument($this, altered);
       } else {
         pushCommandToken($this, token);
       }
     } else {
       if (token instanceof TokenVal) {
-        var tmp3_safe_receiver = firstOrNull_0($this.d54_1);
+        var tmp3_safe_receiver = firstOrNull_0($this.e54_1);
         var tmp4_subject = tmp3_safe_receiver == null ? null : tmp3_safe_receiver.typeId;
         if (tmp4_subject === ValueType_TOKEN_getInstance().value) {
           pushArgument($this, token);
         } else if (tmp4_subject === ValueType_PICT_DIMENSION_getInstance().value) {
           // Inline function 'kotlin.code' call
-          var this_0 = charCodeAt(token.e1n_1, 0);
+          var this_0 = charCodeAt(token.b1n_1, 0);
           var tmp_3 = Char__toInt_impl_vasixd(this_0);
-          var tmp5_safe_receiver = getOrNull_0(token.e1n_1, 2);
+          var tmp5_safe_receiver = getOrNull_0(token.b1n_1, 2);
           var tmp_4;
           var tmp_5 = tmp5_safe_receiver;
           if ((tmp_5 == null ? null : new Char(tmp_5)) == null) {
@@ -5257,63 +5316,63 @@ function walk($this) {
             tmp_4 = Char__toInt_impl_vasixd(tmp5_safe_receiver);
           }
           var tmp6_elvis_lhs = tmp_4;
-          var altered_0 = new DdePictVal(token.d1n_1, new Pair(tmp_3, tmp6_elvis_lhs == null ? -1 : tmp6_elvis_lhs), token.h1n_1);
-          $this.r53_1[$this.j54_1] = altered_0;
+          var altered_0 = new DdePictVal(token.a1n_1, new Pair(tmp_3, tmp6_elvis_lhs == null ? -1 : tmp6_elvis_lhs), token.e1n_1);
+          $this.s53_1[$this.k54_1] = altered_0;
           pushArgument($this, altered_0);
         } else {
           pushArgument($this, token);
-          $this.e54_1.g2(token);
+          $this.f54_1.z1(token);
         }
       } else {
         if (token instanceof DdePictVal) {
           pushArgument($this, token);
         } else {
           if (token instanceof EqJoinVal) {
-            if (equals(firstOrNull_0($this.d54_1), get_EQ_JOIN())) {
-              var tmp7_safe_receiver = firstOrNull_0($this.c54_1);
+            if (equals(firstOrNull_0($this.e54_1), get_EQ_JOIN())) {
+              var tmp7_safe_receiver = firstOrNull_0($this.d54_1);
               var tmp8_safe_receiver = tmp7_safe_receiver == null ? null : tmp7_safe_receiver.first;
               if ((tmp8_safe_receiver == null ? null : tmp8_safe_receiver.command) === '{eq}') {
-                removeFirst($this.c54_1);
+                removeFirst($this.d54_1);
                 done($this);
               } else {
-                var tmp9_safe_receiver = firstOrNull_0($this.c54_1);
+                var tmp9_safe_receiver = firstOrNull_0($this.d54_1);
                 if ((tmp9_safe_receiver == null ? null : get_done(tmp9_safe_receiver)) === true) {
                   done($this);
                 }
               }
-              $this.d54_1.j2(get_conditionParameters());
+              $this.e54_1.c2(get_conditionParameters());
               var tmp_6 = get_ConditionCommand();
-              var tmp10_safe_receiver = firstOrNull_0($this.c54_1);
+              var tmp10_safe_receiver = firstOrNull_0($this.d54_1);
               var tmp_7;
               if (tmp10_safe_receiver == null) {
                 tmp_7 = null;
               } else {
                 // Inline function 'kotlin.let' call
-                tmp_7 = CommandReference.withCommandCall(tmp10_safe_receiver.second, get_lastIndex_0($this.y53_1));
+                tmp_7 = CommandReference.withCommandCall(tmp10_safe_receiver.second, get_lastIndex_0($this.z53_1));
               }
               var tmp_8 = tmp_7;
-              var tmp11_elvis_lhs = firstOrNull_0($this.d54_1);
-              pushCommand($this, tmp_6, createConditionCommandCall(tmp_8, tmp11_elvis_lhs == null ? get_CONDITION_PARAMETER() : tmp11_elvis_lhs, token.l1n_1));
+              var tmp11_elvis_lhs = firstOrNull_0($this.e54_1);
+              pushCommand($this, tmp_6, createConditionCommandCall(tmp_8, tmp11_elvis_lhs == null ? get_CONDITION_PARAMETER() : tmp11_elvis_lhs, token.i1n_1));
             } else {
-              $this.e54_1.g2(token);
+              $this.f54_1.z1(token);
             }
           } else {
             if (token instanceof Comment) {
-              $this.v53_1.g2(token);
+              $this.w53_1.z1(token);
             } else {
               if (token instanceof Caos2Comment) {
-                $this.w53_1.g2(token);
+                $this.x53_1.z1(token);
               } else {
                 var tmp_9;
                 if (token instanceof IntVal) {
-                  var tmp12_safe_receiver = firstOrNull_0($this.d54_1);
+                  var tmp12_safe_receiver = firstOrNull_0($this.e54_1);
                   tmp_9 = (tmp12_safe_receiver == null ? null : tmp12_safe_receiver.typeId) === ValueType_TOKEN_getInstance().value;
                 } else {
                   tmp_9 = false;
                 }
                 if (tmp_9) {
-                  var altered_1 = new TokenVal(token.h1l_1, token.l1l_1);
-                  $this.r53_1[$this.j54_1] = altered_1;
+                  var altered_1 = new TokenVal(token.e1l_1, token.i1l_1);
+                  $this.s53_1[$this.k54_1] = altered_1;
                   pushArgument($this, altered_1);
                 } else {
                   if (token instanceof ListBrace) {
@@ -5328,15 +5387,15 @@ function walk($this) {
                       if (token instanceof ByteString) {
                         var tmp_11;
                         var tmp_12;
-                        var tmp13_safe_receiver = firstOrNull_0($this.d54_1);
+                        var tmp13_safe_receiver = firstOrNull_0($this.e54_1);
                         if ((tmp13_safe_receiver == null ? null : tmp13_safe_receiver.typeId) === ValueType_C1_STRING_getInstance().value) {
                           tmp_12 = true;
                         } else {
-                          var tmp14_safe_receiver = firstOrNull_0($this.d54_1);
+                          var tmp14_safe_receiver = firstOrNull_0($this.e54_1);
                           tmp_12 = (tmp14_safe_receiver == null ? null : tmp14_safe_receiver.typeId) === ValueType_STRING_getInstance().value;
                         }
                         if (tmp_12) {
-                          tmp_11 = new C1eStringVal(token.f1m_1, token.g1m_1);
+                          tmp_11 = new C1eStringVal(token.c1m_1, token.d1m_1);
                         } else {
                           tmp_11 = token;
                         }
@@ -5345,18 +5404,18 @@ function walk($this) {
                         if (token instanceof C1eStringVal) {
                           var tmp_13;
                           var tmp_14;
-                          var tmp15_safe_receiver = firstOrNull_0($this.d54_1);
+                          var tmp15_safe_receiver = firstOrNull_0($this.e54_1);
                           if (!((tmp15_safe_receiver == null ? null : tmp15_safe_receiver.typeId) === ValueType_C1_STRING_getInstance().value)) {
                             var tmp_15 = get_BYTE_STRING_REGEX();
                             // Inline function 'kotlin.text.trim' call
-                            var this_1 = token.w1m_1;
+                            var this_1 = token.t1m_1;
                             var tmp$ret$4 = toString_0(trim(isCharSequence(this_1) ? this_1 : THROW_CCE()));
-                            tmp_14 = tmp_15.yf(tmp$ret$4);
+                            tmp_14 = tmp_15.vf(tmp$ret$4);
                           } else {
                             tmp_14 = false;
                           }
                           if (tmp_14) {
-                            tmp_13 = new ByteString(token.v1m_1, token.w1m_1);
+                            tmp_13 = new ByteString(token.s1m_1, token.t1m_1);
                           } else {
                             tmp_13 = token;
                           }
@@ -5367,7 +5426,7 @@ function walk($this) {
                       }
                       var altered_2 = tmp_10;
                       if (!equals(altered_2, token)) {
-                        $this.r53_1[$this.j54_1] = altered_2;
+                        $this.s53_1[$this.k54_1] = altered_2;
                       }
                       pushArgument($this, altered_2);
                     }
@@ -5379,23 +5438,23 @@ function walk($this) {
         }
       }
     }
-    $this.k54_1 = !(token.g1e().i1e().h1e() === $this.g54_1);
-    $this.g54_1 = token.g1e().i1e().h1e();
-    $this.h54_1 = token.g1e().i1e().l1e();
-    $this.i54_1 = token.g1e().m1e();
-    $this.j54_1 = $this.j54_1 + 1 | 0;
-    $this.s53_1();
+    $this.l54_1 = !(token.d1e().f1e().e1e() === $this.h54_1);
+    $this.h54_1 = token.d1e().f1e().e1e();
+    $this.i54_1 = token.d1e().f1e().i1e();
+    $this.j54_1 = token.d1e().j1e();
+    $this.k54_1 = $this.k54_1 + 1 | 0;
+    $this.t53_1();
   }
   knock($this, null);
   finalize($this);
 }
 function popTokens($this) {
   // Inline function 'kotlin.collections.isEmpty' call
-  if ($this.f54_1.length === 0)
+  if ($this.g54_1.length === 0)
     return false;
   // Inline function 'kotlin.collections.copyOf' call
   // Inline function 'kotlin.js.asDynamic' call
-  var temp = $this.f54_1.slice();
+  var temp = $this.g54_1.slice();
   var length = temp.length;
   var inductionVariable = 0;
   if (inductionVariable < length)
@@ -5404,28 +5463,28 @@ function popTokens($this) {
       inductionVariable = inductionVariable + 1 | 0;
       var tmp = $this;
       // Inline function 'kotlin.emptyArray' call
-      tmp.f54_1 = [];
+      tmp.g54_1 = [];
       var inductionVariable_0 = i;
       if (inductionVariable_0 < length)
         do {
           var j = inductionVariable_0;
           inductionVariable_0 = inductionVariable_0 + 1 | 0;
           if (pushCommandToken($this, temp[j].second)) {
-            $this.j54_1 = $this.j54_1 - (j - 1 | 0) | 0;
+            $this.k54_1 = $this.k54_1 - (j - 1 | 0) | 0;
             var tmp_0 = $this;
             // Inline function 'kotlin.emptyArray' call
-            tmp_0.f54_1 = [];
+            tmp_0.g54_1 = [];
             var inductionVariable_1 = 0;
             if (inductionVariable_1 < j)
               do {
                 var k = inductionVariable_1;
                 inductionVariable_1 = inductionVariable_1 + 1 | 0;
-                $this.e54_1.g2(temp[k].second);
+                $this.f54_1.z1(temp[k].second);
               }
                while (inductionVariable_1 < j);
             var startToken = temp[j].second;
-            $this.g54_1 = startToken.c1q_1.i1e().h1e();
-            $this.h54_1 = startToken.c1q_1.i1e().l1e();
+            $this.h54_1 = startToken.z1p_1.f1e().e1e();
+            $this.i54_1 = startToken.z1p_1.f1e().i1e();
             return true;
           }
         }
@@ -5434,27 +5493,27 @@ function popTokens($this) {
      while (inductionVariable < length);
   var tmp_1 = $this;
   // Inline function 'kotlin.emptyArray' call
-  tmp_1.f54_1 = [];
+  tmp_1.g54_1 = [];
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.f2(temp.length);
+  var destination = ArrayList.y1(temp.length);
   var inductionVariable_2 = 0;
   var last = temp.length;
   while (inductionVariable_2 < last) {
     var item = temp[inductionVariable_2];
     inductionVariable_2 = inductionVariable_2 + 1 | 0;
     var tmp$ret$8 = item.second;
-    destination.g2(tmp$ret$8);
+    destination.z1(tmp$ret$8);
   }
-  $this.e54_1.j2(destination);
+  $this.f54_1.c2(destination);
   return false;
 }
 function nextCommandValid($this, token) {
   // Inline function 'kotlin.collections.copyOf' call
   // Inline function 'kotlin.js.asDynamic' call
-  var commandTokens = $this.f54_1.slice();
+  var commandTokens = $this.g54_1.slice();
   var tmp;
-  if (!(token.c1q_1.o1().h1e() === $this.g54_1)) {
+  if (!(token.z1p_1.h1().e1e() === $this.h54_1)) {
     // Inline function 'kotlin.collections.isNotEmpty' call
     // Inline function 'kotlin.collections.isEmpty' call
     tmp = !(commandTokens.length === 0);
@@ -5464,16 +5523,16 @@ function nextCommandValid($this, token) {
   if (tmp) {
     // Inline function 'kotlin.collections.map' call
     // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList.f2(commandTokens.length);
+    var destination = ArrayList.y1(commandTokens.length);
     var inductionVariable = 0;
     var last = commandTokens.length;
     while (inductionVariable < last) {
       var item = commandTokens[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       var tmp$ret$6 = item.second;
-      destination.g2(tmp$ret$6);
+      destination.z1(tmp$ret$6);
     }
-    $this.e54_1.j2(destination);
+    $this.f54_1.c2(destination);
     return false;
   }
   return !(pushCommandTokenToList($this, token, false) == null);
@@ -5481,42 +5540,42 @@ function nextCommandValid($this, token) {
 function pushCommandToken($this, token) {
   knock($this, token);
   var tmp;
-  if (!(token.c1q_1.o1().h1e() === $this.g54_1)) {
+  if (!(token.z1p_1.h1().e1e() === $this.h54_1)) {
     // Inline function 'kotlin.collections.isNotEmpty' call
     // Inline function 'kotlin.collections.isEmpty' call
-    tmp = !($this.f54_1.length === 0);
+    tmp = !($this.g54_1.length === 0);
   } else {
     tmp = false;
   }
   if (tmp) {
     // Inline function 'kotlin.collections.map' call
-    var this_0 = $this.f54_1;
+    var this_0 = $this.g54_1;
     // Inline function 'kotlin.collections.mapTo' call
-    var destination = ArrayList.f2(this_0.length);
+    var destination = ArrayList.y1(this_0.length);
     var inductionVariable = 0;
     var last = this_0.length;
     while (inductionVariable < last) {
       var item = this_0[inductionVariable];
       inductionVariable = inductionVariable + 1 | 0;
       var tmp$ret$4 = item.second;
-      destination.g2(tmp$ret$4);
+      destination.z1(tmp$ret$4);
     }
-    $this.e54_1.j2(destination);
+    $this.f54_1.c2(destination);
     var tmp_0 = $this;
     // Inline function 'kotlin.emptyArray' call
-    tmp_0.f54_1 = [];
+    tmp_0.g54_1 = [];
   }
   var tmp_1;
   // Inline function 'kotlin.collections.isNotEmpty' call
-  if (!$this.a54_1.b1()) {
+  if (!$this.b54_1.u()) {
     tmp_1 = pushCommandTokenToList($this, token, false) == null;
   } else {
     tmp_1 = false;
   }
   if (tmp_1) {
-    $this.a54_1.b4();
-    $this.d54_1.b4();
-    $this.b54_1.b4();
+    $this.b54_1.u3();
+    $this.e54_1.u3();
+    $this.c54_1.u3();
   }
   var tmp0_elvis_lhs = pushCommandTokenToList($this, token, true);
   var tmp_2;
@@ -5526,39 +5585,39 @@ function pushCommandToken($this, token) {
     tmp_2 = tmp0_elvis_lhs;
   }
   var _destruct__k2r9zo = tmp_2;
-  var newCommandTokens = _destruct__k2r9zo.ni();
-  var command = _destruct__k2r9zo.oi();
-  var tokensUsed = _destruct__k2r9zo.mp();
-  $this.f54_1 = newCommandTokens;
+  var newCommandTokens = _destruct__k2r9zo.ki();
+  var command = _destruct__k2r9zo.li();
+  var tokensUsed = _destruct__k2r9zo.jp();
+  $this.g54_1 = newCommandTokens;
   var commandType = getWaitingCommandType($this);
-  var startToken = first($this.f54_1).second.c1q_1;
-  var endToken = $this.f54_1[tokensUsed - 1 | 0].second.c1q_1;
-  var tmp1_startIndex = startToken.j1e();
-  var tmp2_endIndex = endToken.m1e();
-  var tmp3_start = startToken.o1();
-  var tmp4_end = endToken.i1e();
+  var startToken = first($this.g54_1).second.z1p_1;
+  var endToken = $this.g54_1[tokensUsed - 1 | 0].second.z1p_1;
+  var tmp1_startIndex = startToken.g1e();
+  var tmp2_endIndex = endToken.j1e();
+  var tmp3_start = startToken.h1();
+  var tmp4_end = endToken.f1e();
   var tmp5_parserIndex = get_parserIndex(token);
   var commandTokenRange = new RangeWithIndexImpl(tmp3_start, tmp4_end, tmp1_startIndex, tmp2_endIndex, tmp5_parserIndex);
   var tmp_3;
-  if (tokensUsed < $this.f54_1.length) {
-    tmp_3 = sliceArray($this.f54_1, until(0, tokensUsed));
+  if (tokensUsed < $this.g54_1.length) {
+    tmp_3 = sliceArray($this.g54_1, until(0, tokensUsed));
   } else {
-    tmp_3 = $this.f54_1;
+    tmp_3 = $this.g54_1;
   }
   var theseTokens = tmp_3;
   var tmp_4 = $this;
   var tmp_5;
-  if (tokensUsed < $this.f54_1.length) {
-    tmp_5 = sliceArray($this.f54_1, until(tokensUsed, $this.f54_1.length));
+  if (tokensUsed < $this.g54_1.length) {
+    tmp_5 = sliceArray($this.g54_1, until(tokensUsed, $this.g54_1.length));
   } else {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
     tmp_5 = [];
   }
-  tmp_4.f54_1 = tmp_5;
-  var workingList = lastOrNull_0($this.a54_1);
-  var tmp6_elvis_lhs = firstOrNull_0($this.d54_1);
+  tmp_4.g54_1 = tmp_5;
+  var workingList = lastOrNull_0($this.b54_1);
+  var tmp6_elvis_lhs = firstOrNull_0($this.e54_1);
   var tmp_6;
   if (tmp6_elvis_lhs == null) {
     var tmp_7;
@@ -5566,7 +5625,7 @@ function pushCommandToken($this, token) {
       tmp_7 = null;
     } else {
       // Inline function 'kotlin.let' call
-      tmp_7 = caosListParameter($this.a54_1.i2());
+      tmp_7 = caosListParameter($this.b54_1.b2());
     }
     tmp_6 = tmp_7;
   } else {
@@ -5576,24 +5635,24 @@ function pushCommandToken($this, token) {
   var commandDefinition = toVariantCommand(command, _get_variant__eht2jw($this));
   // Inline function 'kotlin.collections.map' call
   // Inline function 'kotlin.collections.mapTo' call
-  var destination_0 = ArrayList.f2(theseTokens.length);
+  var destination_0 = ArrayList.y1(theseTokens.length);
   var inductionVariable_0 = 0;
   var last_0 = theseTokens.length;
   while (inductionVariable_0 < last_0) {
     var item_0 = theseTokens[inductionVariable_0];
     inductionVariable_0 = inductionVariable_0 + 1 | 0;
     var tmp$ret$14 = item_0.second;
-    destination_0.g2(tmp$ret$14);
+    destination_0.z1(tmp$ret$14);
   }
   // Inline function 'kotlin.collections.toTypedArray' call
   var theseTokensArray = copyToArray(destination_0);
   var tmp_8;
   var tmp_9;
-  if (command.g21_1 === 'SETV') {
+  if (command.d21_1 === 'SETV') {
     var tmp_10 = get_leftValueNoVar();
-    var tmp_11 = getOrNull($this.r53_1, $this.j54_1 + 1 | 0);
+    var tmp_11 = getOrNull($this.s53_1, $this.k54_1 + 1 | 0);
     var tmp8_safe_receiver = tmp_11 instanceof CommandToken ? tmp_11 : null;
-    var tmp9_safe_receiver = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.d1q_1;
+    var tmp9_safe_receiver = tmp8_safe_receiver == null ? null : tmp8_safe_receiver.a1q_1;
     var tmp_12;
     if (tmp9_safe_receiver == null) {
       tmp_12 = null;
@@ -5612,9 +5671,9 @@ function pushCommandToken($this, token) {
     tmp_8 = null;
   }
   var dropLast_0 = tmp_8;
-  var tmp18_type = commandType === Companion_getInstance_0().l1t_1 ? ValueType_VARIABLE_getInstance().value : command.i21_1;
+  var tmp18_type = commandType === Companion_getInstance_0().i1t_1 ? ValueType_VARIABLE_getInstance().value : command.f21_1;
   var tmp19_commandString = commandDefinition.command;
-  var tmp20_inVariant = indexOf(command.m21_1, _get_variant__eht2jw($this)) >= 0;
+  var tmp20_inVariant = indexOf(command.j21_1, _get_variant__eht2jw($this)) >= 0;
   var tmp11_elvis_lhs = parameter == null ? null : parameter.index;
   var tmp21_parameterIndex = tmp11_elvis_lhs == null ? 0 : tmp11_elvis_lhs;
   var tmp_13;
@@ -5622,9 +5681,9 @@ function pushCommandToken($this, token) {
   var tmp_15;
   var tmp_16;
   var tmp_17;
-  var tmp12_safe_receiver = firstOrNull_0($this.c54_1);
+  var tmp12_safe_receiver = firstOrNull_0($this.d54_1);
   var tmp13_safe_receiver = tmp12_safe_receiver == null ? null : tmp12_safe_receiver.second;
-  if ((tmp13_safe_receiver == null ? null : tmp13_safe_receiver.b50_1) === ValueType_CONDITION_getInstance().value) {
+  if ((tmp13_safe_receiver == null ? null : tmp13_safe_receiver.c50_1) === ValueType_CONDITION_getInstance().value) {
     tmp_17 = true;
   } else {
     tmp_17 = equals(parameter, get_EQ_JOIN());
@@ -5647,21 +5706,21 @@ function pushCommandToken($this, token) {
   if (tmp_14) {
     tmp_13 = true;
   } else {
-    tmp_13 = (workingList == null ? null : workingList.l4y_1) === true;
+    tmp_13 = (workingList == null ? null : workingList.k4y_1) === true;
   }
   var tmp22_inEqualityExpression = tmp_13;
-  var tmp15_safe_receiver = firstOrNull_0($this.c54_1);
+  var tmp15_safe_receiver = firstOrNull_0($this.d54_1);
   var tmp_18;
   if (tmp15_safe_receiver == null) {
     tmp_18 = null;
   } else {
     // Inline function 'kotlin.let' call
-    tmp_18 = CommandReference.withCommandCall(tmp15_safe_receiver.second, get_lastIndex_0($this.y53_1));
+    tmp_18 = CommandReference.withCommandCall(tmp15_safe_receiver.second, get_lastIndex_0($this.z53_1));
   }
   var tmp16_elvis_lhs = tmp_18;
   var tmp_19;
   if (tmp16_elvis_lhs == null) {
-    tmp_19 = workingList == null ? null : workingList.m4y_1;
+    tmp_19 = workingList == null ? null : workingList.l4y_1;
   } else {
     tmp_19 = tmp16_elvis_lhs;
   }
@@ -5673,7 +5732,7 @@ function pushCommandToken($this, token) {
     // Inline function 'kotlin.collections.toTypedArray' call
     var this_1 = dropLast(parameters, dropLast_0);
     parameters = copyToArray(this_1);
-    commandDefinition = commandDefinition.h26(VOID, parameters);
+    commandDefinition = commandDefinition.g26(VOID, parameters);
   }
   pushCommand($this, commandDefinition, commandCall);
   // Inline function 'kotlin.collections.isEmpty' call
@@ -5694,17 +5753,17 @@ function pushCommandTokenToList($this, token_0, write) {
   var setTokens = tmp;
   var tmp_0;
   if (write) {
-    tmp_0 = $this.f54_1;
+    tmp_0 = $this.g54_1;
   } else {
     // Inline function 'kotlin.collections.copyOf' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp_0 = $this.f54_1.slice();
+    tmp_0 = $this.g54_1.slice();
   }
   var commandTokens = tmp_0;
   var tmp0 = commandTokens;
   // Inline function 'kotlin.text.lowercase' call
   // Inline function 'kotlin.js.asDynamic' call
-  var tmp$ret$2 = token_0.d1q_1.toLowerCase();
+  var tmp$ret$2 = token_0.a1q_1.toLowerCase();
   // Inline function 'kotlin.collections.plus' call
   // Inline function 'kotlin.js.asDynamic' call
   // Inline function 'kotlin.arrayOf' call
@@ -5714,24 +5773,24 @@ function pushCommandTokenToList($this, token_0, write) {
   commandTokens = setTokens(setTokens(tmp0.concat(tmp$ret$6)));
   while (commandTokens.length > 3) {
     var badCommand = first(commandTokens).second;
-    $this.e54_1.g2(badCommand);
+    $this.f54_1.z1(badCommand);
     commandTokens = setTokens(sliceArray(commandTokens, until(1, commandTokens.length)));
   }
   var commandType = getWaitingCommandType($this);
   // Inline function 'kotlin.collections.map' call
   var this_0 = commandTokens;
   // Inline function 'kotlin.collections.mapTo' call
-  var destination = ArrayList.f2(this_0.length);
+  var destination = ArrayList.y1(this_0.length);
   var inductionVariable = 0;
   var last = this_0.length;
   while (inductionVariable < last) {
     var item = this_0[inductionVariable];
     inductionVariable = inductionVariable + 1 | 0;
     var tmp$ret$11 = item.first;
-    destination.g2(tmp$ret$11);
+    destination.z1(tmp$ret$11);
   }
   var commandSearchTokens = toIntArray(destination);
-  var tmp0_safe_receiver = firstOrNull_0($this.d54_1);
+  var tmp0_safe_receiver = firstOrNull_0($this.e54_1);
   var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.typeId;
   var tmp_1;
   if (tmp1_safe_receiver == null) {
@@ -5742,7 +5801,7 @@ function pushCommandTokenToList($this, token_0, write) {
   }
   var tmp2_elvis_lhs = tmp_1;
   var bias = tmp2_elvis_lhs == null ? ValueType_ANY_getInstance() : tmp2_elvis_lhs;
-  var tmp3_elvis_lhs = $this.p53_1.p4x(commandType).r4x(commandSearchTokens, bias);
+  var tmp3_elvis_lhs = $this.q53_1.o4x(commandType).q4x(commandSearchTokens, bias);
   var tmp4_elvis_lhs = tmp3_elvis_lhs == null ? getFallback($this, commandType, commandSearchTokens) : tmp3_elvis_lhs;
   var tmp_2;
   if (tmp4_elvis_lhs == null) {
@@ -5751,57 +5810,57 @@ function pushCommandTokenToList($this, token_0, write) {
     tmp_2 = tmp4_elvis_lhs;
   }
   var _destruct__k2r9zo = tmp_2;
-  var command = _destruct__k2r9zo.ni();
-  var tokensUsed = _destruct__k2r9zo.oi();
+  var command = _destruct__k2r9zo.ki();
+  var tokensUsed = _destruct__k2r9zo.li();
   return new Triple(commandTokens, command, tokensUsed);
 }
 function addParameters($this, parameters, textRange) {
   var indexedObject = reversed(parameters);
   var inductionVariable = 0;
-  var last = indexedObject.i2();
+  var last = indexedObject.b2();
   while (inductionVariable < last) {
-    var parameter = indexedObject.k2(inductionVariable);
+    var parameter = indexedObject.d2(inductionVariable);
     inductionVariable = inductionVariable + 1 | 0;
-    insertFront($this.d54_1, parameter);
+    insertFront($this.e54_1, parameter);
     if (parameter.typeId === ValueType_CONDITION_getInstance().value) {
       var tmp = get_ConditionCommand();
-      var tmp0_safe_receiver = firstOrNull_0($this.c54_1);
+      var tmp0_safe_receiver = firstOrNull_0($this.d54_1);
       var tmp_0;
       if (tmp0_safe_receiver == null) {
         tmp_0 = null;
       } else {
         // Inline function 'kotlin.let' call
-        tmp_0 = CommandReference.withCommandCall(tmp0_safe_receiver.second, get_lastIndex_0($this.y53_1));
+        tmp_0 = CommandReference.withCommandCall(tmp0_safe_receiver.second, get_lastIndex_0($this.z53_1));
       }
       var tmp_1 = tmp_0;
-      var tmp1_elvis_lhs = firstOrNull_0($this.d54_1);
+      var tmp1_elvis_lhs = firstOrNull_0($this.e54_1);
       pushCommand($this, tmp, createConditionCommandCall(tmp_1, tmp1_elvis_lhs == null ? get_CONDITION_PARAMETER() : tmp1_elvis_lhs, textRange));
-      insertFront_0($this.d54_1, get_conditionParameters());
+      insertFront_0($this.e54_1, get_conditionParameters());
     }
   }
 }
 function getWaitingCommandType($this) {
   var tmp;
-  var tmp0_safe_receiver = firstOrNull_0($this.d54_1);
+  var tmp0_safe_receiver = firstOrNull_0($this.e54_1);
   if ((tmp0_safe_receiver == null ? null : tmp0_safe_receiver.typeId) === ValueType_VARIABLE_getInstance().value) {
-    tmp = Companion_getInstance_0().l1t_1;
+    tmp = Companion_getInstance_0().i1t_1;
   } else {
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!$this.d54_1.b1()) {
-      tmp = Companion_getInstance_0().m1t_1;
+    if (!$this.e54_1.u()) {
+      tmp = Companion_getInstance_0().j1t_1;
     } else {
       // Inline function 'kotlin.collections.isNotEmpty' call
-      if (!$this.a54_1.b1()) {
-        tmp = Companion_getInstance_0().m1t_1;
+      if (!$this.b54_1.u()) {
+        tmp = Companion_getInstance_0().j1t_1;
       } else {
-        tmp = Companion_getInstance_0().k1t_1;
+        tmp = Companion_getInstance_0().h1t_1;
       }
     }
   }
   return tmp;
 }
 function done($this) {
-  var tmp0_elvis_lhs = $this.r53_1[$this.j54_1];
+  var tmp0_elvis_lhs = $this.s53_1[$this.k54_1];
   var tmp;
   if (tmp0_elvis_lhs == null) {
     return Unit_instance;
@@ -5809,9 +5868,9 @@ function done($this) {
     tmp = tmp0_elvis_lhs;
   }
   var token = tmp;
-  $this.i54_1 = token.g1e().m1e();
+  $this.j54_1 = token.d1e().j1e();
   $l$loop: while (true) {
-    var tmp1_elvis_lhs = removeFirstOrNull($this.c54_1);
+    var tmp1_elvis_lhs = removeFirstOrNull($this.d54_1);
     var tmp_0;
     if (tmp1_elvis_lhs == null) {
       return Unit_instance;
@@ -5820,7 +5879,7 @@ function done($this) {
     }
     var commandCall = tmp_0;
     if (!get_done(commandCall)) {
-      insertFront($this.c54_1, commandCall);
+      insertFront($this.d54_1, commandCall);
       break $l$loop;
     }
   }
@@ -5831,21 +5890,21 @@ function knock($this, item) {
     tmp = true;
   } else {
     var tmp_0;
-    if (contains_0($this.x53_1, item.token)) {
+    if (contains_0($this.y53_1, item.token)) {
       var tmp_1;
       var tmp_2;
       // Inline function 'kotlin.collections.isNotEmpty' call
-      if (!$this.c54_1.b1()) {
+      if (!$this.d54_1.u()) {
         tmp_2 = true;
       } else {
         // Inline function 'kotlin.collections.isNotEmpty' call
-        tmp_2 = !$this.d54_1.b1();
+        tmp_2 = !$this.e54_1.u();
       }
       if (tmp_2) {
         tmp_1 = true;
       } else {
         // Inline function 'kotlin.collections.isNotEmpty' call
-        tmp_1 = !$this.a54_1.b1();
+        tmp_1 = !$this.b54_1.u();
       }
       tmp_0 = tmp_1;
     } else {
@@ -5854,30 +5913,30 @@ function knock($this, item) {
     tmp = tmp_0;
   }
   if (tmp) {
-    $this.c54_1.b4();
-    $this.d54_1.b4();
-    $this.a54_1.b4();
-    $this.b54_1.b4();
+    $this.d54_1.u3();
+    $this.e54_1.u3();
+    $this.b54_1.u3();
+    $this.c54_1.u3();
     if (!popTokens($this)) {
       // Inline function 'kotlin.collections.map' call
-      var this_0 = $this.f54_1;
+      var this_0 = $this.g54_1;
       // Inline function 'kotlin.collections.mapTo' call
-      var destination = ArrayList.f2(this_0.length);
+      var destination = ArrayList.y1(this_0.length);
       var inductionVariable = 0;
       var last = this_0.length;
       while (inductionVariable < last) {
         var item_0 = this_0[inductionVariable];
         inductionVariable = inductionVariable + 1 | 0;
         var tmp$ret$5 = item_0.second;
-        destination.g2(tmp$ret$5);
+        destination.z1(tmp$ret$5);
       }
-      $this.e54_1.j2(destination);
+      $this.f54_1.c2(destination);
     }
   }
 }
 function openList($this, token) {
-  var waitingParameter = removeFirstOrNull($this.d54_1);
-  var enclosingList = lastOrNull_0($this.a54_1);
+  var waitingParameter = removeFirstOrNull($this.e54_1);
+  var enclosingList = lastOrNull_0($this.b54_1);
   var parameterIndex;
   var inEq;
   var containingCommand;
@@ -5887,9 +5946,9 @@ function openList($this, token) {
     var tmp_0;
     var tmp_1;
     var tmp_2;
-    var tmp0_safe_receiver = firstOrNull_0($this.c54_1);
+    var tmp0_safe_receiver = firstOrNull_0($this.d54_1);
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.second;
-    if ((tmp1_safe_receiver == null ? null : tmp1_safe_receiver.b50_1) === ValueType_CONDITION_getInstance().value) {
+    if ((tmp1_safe_receiver == null ? null : tmp1_safe_receiver.c50_1) === ValueType_CONDITION_getInstance().value) {
       tmp_2 = true;
     } else {
       tmp_2 = equals(waitingParameter, get_EQ_JOIN());
@@ -5910,27 +5969,27 @@ function openList($this, token) {
       tmp = equals(waitingParameter, get_EQ_SECOND_PARAM());
     }
     inEq = tmp;
-    var tmp2_safe_receiver = firstOrNull_0($this.c54_1);
+    var tmp2_safe_receiver = firstOrNull_0($this.d54_1);
     var tmp_3;
     if (tmp2_safe_receiver == null) {
       tmp_3 = null;
     } else {
       // Inline function 'kotlin.let' call
-      tmp_3 = CommandReference.withCommandCall(tmp2_safe_receiver.second, get_lastIndex_0($this.y53_1));
+      tmp_3 = CommandReference.withCommandCall(tmp2_safe_receiver.second, get_lastIndex_0($this.z53_1));
     }
     containingCommand = tmp_3;
   } else if (!(enclosingList == null)) {
-    parameterIndex = caosListParameter($this.a54_1.i2()).index;
-    inEq = enclosingList.l4y_1;
-    containingCommand = enclosingList.m4y_1;
+    parameterIndex = caosListParameter($this.b54_1.b2()).index;
+    inEq = enclosingList.k4y_1;
+    containingCommand = enclosingList.l4y_1;
   } else {
-    $this.e54_1.g2(token);
+    $this.f54_1.z1(token);
     return Unit_instance;
   }
   var newList = new CaosList(parameterIndex, token, inEq, containingCommand);
-  $this.z53_1.g2(newList);
+  $this.a54_1.z1(newList);
   if (!(waitingParameter == null)) {
-    var tmp3_safe_receiver = firstOrNull_0($this.c54_1);
+    var tmp3_safe_receiver = firstOrNull_0($this.d54_1);
     if (tmp3_safe_receiver == null)
       null;
     else {
@@ -5951,34 +6010,34 @@ function openList($this, token) {
     if (enclosingList == null)
       null;
     else {
-      enclosingList.w4y(newList);
+      enclosingList.v4y(newList);
     }
   }
-  $this.b54_1.g2(toList($this.d54_1));
-  $this.d54_1.b4();
-  $this.a54_1.g2(newList);
+  $this.c54_1.z1(toList($this.e54_1));
+  $this.e54_1.u3();
+  $this.b54_1.z1(newList);
 }
 function closeList($this, token) {
-  var list = removeLastOrNull($this.a54_1);
+  var list = removeLastOrNull($this.b54_1);
   if (list == null) {
-    $this.e54_1.g2(token);
+    $this.f54_1.z1(token);
     return Unit_instance;
   }
-  list.y4y(token);
-  $this.d54_1.b4();
-  var tmp0_safe_receiver = removeLastOrNull($this.b54_1);
+  list.x4y(token);
+  $this.e54_1.u3();
+  var tmp0_safe_receiver = removeLastOrNull($this.c54_1);
   if (tmp0_safe_receiver == null)
     null;
   else {
     // Inline function 'kotlin.let' call
-    $this.d54_1.j2(tmp0_safe_receiver);
+    $this.e54_1.c2(tmp0_safe_receiver);
   }
 }
 function pushCommand($this, command, commandCall) {
-  $this.y53_1.g2(commandCall);
-  var parameter = removeFirstOrNull($this.d54_1);
+  $this.z53_1.z1(commandCall);
+  var parameter = removeFirstOrNull($this.e54_1);
   if (!(parameter == null)) {
-    var tmp0_safe_receiver = firstOrNull_0($this.c54_1);
+    var tmp0_safe_receiver = firstOrNull_0($this.d54_1);
     if (tmp0_safe_receiver == null)
       null;
     else {
@@ -5996,42 +6055,42 @@ function pushCommand($this, command, commandCall) {
       done($this);
     }
   } else {
-    var tmp1_safe_receiver = lastOrNull_0($this.a54_1);
+    var tmp1_safe_receiver = lastOrNull_0($this.b54_1);
     if (tmp1_safe_receiver == null)
       null;
     else {
-      tmp1_safe_receiver.w4y(commandCall);
+      tmp1_safe_receiver.v4y(commandCall);
     }
   }
-  insertFront($this.c54_1, new Pair(command, commandCall));
+  insertFront($this.d54_1, new Pair(command, commandCall));
 }
 function pushArgument($this, item) {
-  var waitingParameter = removeFirstOrNull($this.d54_1);
+  var waitingParameter = removeFirstOrNull($this.e54_1);
   if (!(waitingParameter == null)) {
     attachToWorkingCommand($this, item, waitingParameter);
     return Unit_instance;
   }
-  var workingList = lastOrNull_0($this.a54_1);
+  var workingList = lastOrNull_0($this.b54_1);
   if (workingList == null) {
-    $this.e54_1.g2(item);
+    $this.f54_1.z1(item);
     return Unit_instance;
   }
-  workingList.w4y(new Argument(item.g1e(), caosListParameter($this.a54_1.i2()).index, item.actualType, item.m1f(), workingList.l4y_1, item, workingList.m4y_1));
+  workingList.v4y(new Argument(item.d1e(), caosListParameter($this.b54_1.b2()).index, item.actualType, item.j1f(), workingList.k4y_1, item, workingList.l4y_1));
 }
 function attachToWorkingCommand($this, item, parameter) {
-  var tmp0_elvis_lhs = firstOrNull_0($this.c54_1);
+  var tmp0_elvis_lhs = firstOrNull_0($this.d54_1);
   var tmp;
   if (tmp0_elvis_lhs == null) {
-    throw Exception.lc('Parameters found in waiting without working command: [' + joinToString($this.d54_1, VOID, VOID, VOID, VOID, VOID, CommandWalker$attachToWorkingCommand$lambda) + ']');
+    throw Exception.gc('Parameters found in waiting without working command: [' + joinToString($this.e54_1, VOID, VOID, VOID, VOID, VOID, CommandWalker$attachToWorkingCommand$lambda) + ']');
   } else {
     tmp = tmp0_elvis_lhs;
   }
   var _destruct__k2r9zo = tmp;
-  var commandDefinition = _destruct__k2r9zo.ni();
-  var commandCall = _destruct__k2r9zo.oi();
+  var commandDefinition = _destruct__k2r9zo.ki();
+  var commandCall = _destruct__k2r9zo.li();
   var tmp_0 = commandCall;
   var tmp0 = commandCall.arguments;
-  var tmp_1 = new Argument(item.g1e(), parameter.index, item.actualType, item.m1f(), commandCall.b50_1 === ValueType_CONDITION_getInstance().value || parameter.equals(get_EQ_JOIN()) || parameter.equals(get_EQ_OP()) || parameter.equals(get_EQ_FIRST_PARAM()) || parameter.equals(get_EQ_SECOND_PARAM()), item, CommandReference.withCommandCall(commandCall, get_lastIndex_0($this.y53_1)));
+  var tmp_1 = new Argument(item.d1e(), parameter.index, item.actualType, item.j1f(), commandCall.c50_1 === ValueType_CONDITION_getInstance().value || parameter.equals(get_EQ_JOIN()) || parameter.equals(get_EQ_OP()) || parameter.equals(get_EQ_FIRST_PARAM()) || parameter.equals(get_EQ_SECOND_PARAM()), item, CommandReference.withCommandCall(commandCall, get_lastIndex_0($this.z53_1)));
   // Inline function 'kotlin.collections.plus' call
   // Inline function 'kotlin.js.asDynamic' call
   // Inline function 'kotlin.arrayOf' call
@@ -6039,13 +6098,13 @@ function attachToWorkingCommand($this, item, parameter) {
   // Inline function 'kotlin.js.asDynamic' call
   var tmp$ret$2 = [isInterface(tmp_1, IArgument) ? tmp_1 : THROW_CCE()];
   tmp_0.arguments = tmp0.concat(tmp$ret$2);
-  if (equals(firstOrNull_0($this.d54_1), get_EQ_JOIN())) {
-    var tmp_2 = getOrNull($this.r53_1, $this.j54_1 + 1 | 0);
+  if (equals(firstOrNull_0($this.e54_1), get_EQ_JOIN())) {
+    var tmp_2 = getOrNull($this.s53_1, $this.k54_1 + 1 | 0);
     if (!(tmp_2 instanceof EqJoinVal)) {
-      removeFirstOrNull($this.d54_1);
+      removeFirstOrNull($this.e54_1);
       done($this);
     }
-  } else if (commandCall.d51(commandDefinition)) {
+  } else if (commandCall.e51(commandDefinition)) {
     done($this);
   }
 }
@@ -6056,26 +6115,26 @@ function getFallback($this, commandType, commandSearchTokens) {
   var result = null;
   var i = 1;
   $l$loop_0: while (tempTokens.length < 3) {
-    result = $this.p53_1.p4x(commandType).z4x(commandSearchTokens);
+    result = $this.q53_1.o4x(commandType).y4x(commandSearchTokens);
     if (!(result == null))
       break $l$loop_0;
     else {
-      var tmp = $this.j54_1;
+      var tmp = $this.k54_1;
       var _unary__edvuaz = i;
       i = _unary__edvuaz + 1 | 0;
-      var next = getOrNull($this.r53_1, tmp + _unary__edvuaz | 0);
+      var next = getOrNull($this.s53_1, tmp + _unary__edvuaz | 0);
       var tmp_0;
       if (!(next instanceof CommandToken)) {
         tmp_0 = true;
       } else {
-        tmp_0 = !(next.d1q_1.length === 4);
+        tmp_0 = !(next.a1q_1.length === 4);
       }
       if (tmp_0) {
         break $l$loop_0;
       }
       var tmp0 = tempTokens;
       // Inline function 'kotlin.collections.plus' call
-      var element = token(next.d1q_1);
+      var element = token(next.a1q_1);
       // Inline function 'kotlin.intArrayOf' call
       // Inline function 'kotlin.collections.plus' call
       var elements = new Int32Array([element]);
@@ -6083,19 +6142,19 @@ function getFallback($this, commandType, commandSearchTokens) {
     }
   }
   if (!(result == null)) {
-    $this.j54_1 = $this.j54_1 + i | 0;
+    $this.k54_1 = $this.k54_1 + i | 0;
   }
-  var tmp0_safe_receiver = filterByType(CaosLibs_getInstance().x4x(commandSearchTokens), commandType);
+  var tmp0_safe_receiver = filterByType(CaosLibs_getInstance().w4x(commandSearchTokens), commandType);
   var tmp_1;
   if (tmp0_safe_receiver == null) {
     tmp_1 = null;
   } else {
     // Inline function 'kotlin.let' call
-    var commands = tmp0_safe_receiver.ni();
+    var commands = tmp0_safe_receiver.ki();
     var tmp_2;
     // Inline function 'kotlin.collections.isNotEmpty' call
-    if (!commands.b1()) {
-      var tmp0_safe_receiver_0 = $this.u53_1(commands);
+    if (!commands.u()) {
+      var tmp0_safe_receiver_0 = $this.v53_1(commands);
       var tmp_3;
       if (tmp0_safe_receiver_0 == null) {
         tmp_3 = null;
@@ -6113,29 +6172,29 @@ function getFallback($this, commandType, commandSearchTokens) {
 }
 function finalize($this) {
   var inductionVariable = 0;
-  var last = $this.y53_1.i2() - 1 | 0;
+  var last = $this.z53_1.b2() - 1 | 0;
   if (inductionVariable <= last)
     do {
       var i = inductionVariable;
       inductionVariable = inductionVariable + 1 | 0;
-      var commandCall = $this.y53_1.k2(i);
+      var commandCall = $this.z53_1.d2(i);
       var trueEnd = endEnd($this, commandCall);
       if (!(trueEnd == null)) {
         var tmp = commandCall;
-        var tmp_0 = commandCall.d50_1;
+        var tmp_0 = commandCall.e50_1;
         var tmp0_$this = tmp_0 instanceof RangeWithIndexImpl ? tmp_0 : THROW_CCE();
-        var tmp1_endIndex = trueEnd.m1e();
-        var tmp2_end = trueEnd.i1e();
-        tmp.d50_1 = tmp0_$this.l1f(VOID, tmp2_end, VOID, tmp1_endIndex);
+        var tmp1_endIndex = trueEnd.j1e();
+        var tmp2_end = trueEnd.f1e();
+        tmp.e50_1 = tmp0_$this.i1f(VOID, tmp2_end, VOID, tmp1_endIndex);
       }
     }
      while (inductionVariable <= last);
-  var inductionVariable_0 = $this.z53_1.i2() - 1 | 0;
+  var inductionVariable_0 = $this.a54_1.b2() - 1 | 0;
   if (0 <= inductionVariable_0)
     do {
       var i_0 = inductionVariable_0;
       inductionVariable_0 = inductionVariable_0 + -1 | 0;
-      $this.z53_1.k2(i_0).x4y();
+      $this.a54_1.d2(i_0).w4y();
     }
      while (0 <= inductionVariable_0);
 }
@@ -6188,10 +6247,10 @@ function endEnd($this, commandCall) {
   var lastArgument = tmp_0;
   var tmp_1;
   if (!(lastArgument instanceof CommandCall)) {
-    tmp_1 = lastArgument.g1e();
+    tmp_1 = lastArgument.d1e();
   } else {
     var tmp2_elvis_lhs = endEnd($this, lastArgument);
-    tmp_1 = tmp2_elvis_lhs == null ? lastArgument.d50_1 : tmp2_elvis_lhs;
+    tmp_1 = tmp2_elvis_lhs == null ? lastArgument.e50_1 : tmp2_elvis_lhs;
   }
   return tmp_1;
 }
@@ -6200,7 +6259,7 @@ function Companion_getInstance_9() {
   return Companion_instance_8;
 }
 function CommandWalker$variant$delegate$lambda(this$0) {
-  return () => this$0.p53_1.g4x_1;
+  return () => this$0.q53_1.f4x_1;
 }
 function CommandWalker$_get_variant_$ref_hjzp14() {
   return (p0) => _get_variant__eht2jw(p0);
@@ -6213,7 +6272,7 @@ function CommandWalker$_get_equalityStatements_$lambda_iionhh(a, b) {
 }
 function CommandWalker$pushCommandTokenToList$lambda(this$0) {
   return (value) => {
-    this$0.f54_1 = value;
+    this$0.g54_1 = value;
     return value;
   };
 }
@@ -6225,23 +6284,23 @@ function CommandWalker$attachToWorkingCommand$lambda(it) {
 }
 function get_done(_this__u8e3s4) {
   _init_properties_CommandWalker_kt__21j6oh();
-  return _this__u8e3s4.second.d51(_this__u8e3s4.first);
+  return _this__u8e3s4.second.e51(_this__u8e3s4.first);
 }
 function insertFront(_this__u8e3s4, item) {
   _init_properties_CommandWalker_kt__21j6oh();
-  if (_this__u8e3s4.b1())
-    _this__u8e3s4.g2(item);
+  if (_this__u8e3s4.u())
+    _this__u8e3s4.z1(item);
   else {
-    _this__u8e3s4.d4(0, item);
+    _this__u8e3s4.w3(0, item);
   }
   return _this__u8e3s4;
 }
 function insertFront_0(_this__u8e3s4, more) {
   _init_properties_CommandWalker_kt__21j6oh();
-  if (_this__u8e3s4.b1())
-    _this__u8e3s4.j2(more);
+  if (_this__u8e3s4.u())
+    _this__u8e3s4.c2(more);
   else
-    _this__u8e3s4.a4(0, toList(more));
+    _this__u8e3s4.t3(0, toList(more));
   return _this__u8e3s4;
 }
 function nullIfEmpty(_this__u8e3s4) {
@@ -6266,18 +6325,18 @@ function isConsecutive(first, second) {
   _init_properties_CommandWalker_kt__21j6oh();
   var tmp;
   if (first instanceof CaosParserItem) {
-    tmp = first.g1g();
+    tmp = first.d1g();
   } else {
     if (first instanceof Argument) {
-      tmp = first.w50_1;
+      tmp = first.x50_1;
     } else {
       if (first instanceof CommandCall) {
-        tmp = first.n50_1;
+        tmp = first.o50_1;
       } else {
         if (first instanceof EqualityStatement) {
-          tmp = first.f53_1;
+          tmp = first.g53_1;
         } else {
-          tmp = first.g1e().k1e();
+          tmp = first.d1e().h1e();
         }
       }
     }
@@ -6292,18 +6351,18 @@ function isConsecutive(first, second) {
   var firstIndex = tmp_0;
   var tmp_1;
   if (second instanceof CaosParserItem) {
-    tmp_1 = second.f1g();
+    tmp_1 = second.c1g();
   } else {
     if (second instanceof Argument) {
-      tmp_1 = second.v50_1;
+      tmp_1 = second.w50_1;
     } else {
       if (second instanceof CommandCall) {
-        tmp_1 = second.m50_1;
+        tmp_1 = second.n50_1;
       } else {
         if (second instanceof EqualityStatement) {
-          tmp_1 = second.e53_1;
+          tmp_1 = second.f53_1;
         } else {
-          tmp_1 = second.g1e().k1e();
+          tmp_1 = second.d1e().h1e();
         }
       }
     }
@@ -6325,7 +6384,7 @@ function _init_properties_CommandWalker_kt__21j6oh() {
     leftValueNoVar = listOf_0(['PUHL', 'PUPT', 'CLS2']);
     // Inline function 'kotlin.text.toRegex' call
     var this_0 = '\\[\\s*(\\d\\s*)*R?\\s*\\]';
-    BYTE_STRING_REGEX = Regex.xf(this_0);
+    BYTE_STRING_REGEX = Regex.uf(this_0);
   }
 }
 function get_getClosestByVariantFilter() {
@@ -6394,28 +6453,28 @@ function getClosestByVariantFilter$lambda(variant) {
       tmp = get_closestToSM();
       break;
     default:
-      throw Exception.lc('Invalid variant found for get ClosestByVariant');
+      throw Exception.gc('Invalid variant found for get ClosestByVariant');
   }
   return tmp;
 }
 function closestToC1$lambda(commands) {
   _init_properties_closestByVariant_kt__4232y3();
   var tmp;
-  switch (commands.i2()) {
+  switch (commands.b2()) {
     case 0:
       tmp = null;
       break;
     case 1:
-      tmp = commands.k2(0);
+      tmp = commands.d2(0);
       break;
     default:
       var tmp$ret$0;
       $l$block: {
         // Inline function 'kotlin.collections.firstOrNull' call
-        var _iterator__ex2g4s = commands.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var element = _iterator__ex2g4s.f1();
-          if (indexOf(element.m21_1, 'C2') >= 0) {
+        var _iterator__ex2g4s = commands.w();
+        while (_iterator__ex2g4s.x()) {
+          var element = _iterator__ex2g4s.y();
+          if (indexOf(element.j21_1, 'C2') >= 0) {
             tmp$ret$0 = element;
             break $l$block;
           }
@@ -6429,10 +6488,10 @@ function closestToC1$lambda(commands) {
         var tmp$ret$2;
         $l$block_0: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_0 = commands.d1();
-          while (_iterator__ex2g4s_0.e1()) {
-            var element_0 = _iterator__ex2g4s_0.f1();
-            if (indexOf(element_0.m21_1, 'C3') >= 0) {
+          var _iterator__ex2g4s_0 = commands.w();
+          while (_iterator__ex2g4s_0.x()) {
+            var element_0 = _iterator__ex2g4s_0.y();
+            if (indexOf(element_0.j21_1, 'C3') >= 0) {
               tmp$ret$2 = element_0;
               break $l$block_0;
             }
@@ -6450,10 +6509,10 @@ function closestToC1$lambda(commands) {
         var tmp$ret$4;
         $l$block_1: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_1 = commands.d1();
-          while (_iterator__ex2g4s_1.e1()) {
-            var element_1 = _iterator__ex2g4s_1.f1();
-            if (indexOf(element_1.m21_1, 'DS') >= 0) {
+          var _iterator__ex2g4s_1 = commands.w();
+          while (_iterator__ex2g4s_1.x()) {
+            var element_1 = _iterator__ex2g4s_1.y();
+            if (indexOf(element_1.j21_1, 'DS') >= 0) {
               tmp$ret$4 = element_1;
               break $l$block_1;
             }
@@ -6474,21 +6533,21 @@ function closestToC1$lambda(commands) {
 function closestToC2$lambda(commands) {
   _init_properties_closestByVariant_kt__4232y3();
   var tmp;
-  switch (commands.i2()) {
+  switch (commands.b2()) {
     case 0:
       tmp = null;
       break;
     case 1:
-      tmp = commands.k2(0);
+      tmp = commands.d2(0);
       break;
     default:
       var tmp$ret$0;
       $l$block: {
         // Inline function 'kotlin.collections.firstOrNull' call
-        var _iterator__ex2g4s = commands.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var element = _iterator__ex2g4s.f1();
-          if (indexOf(element.m21_1, 'C1') >= 0) {
+        var _iterator__ex2g4s = commands.w();
+        while (_iterator__ex2g4s.x()) {
+          var element = _iterator__ex2g4s.y();
+          if (indexOf(element.j21_1, 'C1') >= 0) {
             tmp$ret$0 = element;
             break $l$block;
           }
@@ -6502,10 +6561,10 @@ function closestToC2$lambda(commands) {
         var tmp$ret$2;
         $l$block_0: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_0 = commands.d1();
-          while (_iterator__ex2g4s_0.e1()) {
-            var element_0 = _iterator__ex2g4s_0.f1();
-            if (indexOf(element_0.m21_1, 'C3') >= 0) {
+          var _iterator__ex2g4s_0 = commands.w();
+          while (_iterator__ex2g4s_0.x()) {
+            var element_0 = _iterator__ex2g4s_0.y();
+            if (indexOf(element_0.j21_1, 'C3') >= 0) {
               tmp$ret$2 = element_0;
               break $l$block_0;
             }
@@ -6523,10 +6582,10 @@ function closestToC2$lambda(commands) {
         var tmp$ret$4;
         $l$block_1: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_1 = commands.d1();
-          while (_iterator__ex2g4s_1.e1()) {
-            var element_1 = _iterator__ex2g4s_1.f1();
-            if (indexOf(element_1.m21_1, 'DS') >= 0) {
+          var _iterator__ex2g4s_1 = commands.w();
+          while (_iterator__ex2g4s_1.x()) {
+            var element_1 = _iterator__ex2g4s_1.y();
+            if (indexOf(element_1.j21_1, 'DS') >= 0) {
               tmp$ret$4 = element_1;
               break $l$block_1;
             }
@@ -6547,21 +6606,21 @@ function closestToC2$lambda(commands) {
 function closestToCV$lambda(commands) {
   _init_properties_closestByVariant_kt__4232y3();
   var tmp;
-  switch (commands.i2()) {
+  switch (commands.b2()) {
     case 0:
       tmp = null;
       break;
     case 1:
-      tmp = commands.k2(0);
+      tmp = commands.d2(0);
       break;
     default:
       var tmp$ret$0;
       $l$block: {
         // Inline function 'kotlin.collections.firstOrNull' call
-        var _iterator__ex2g4s = commands.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var element = _iterator__ex2g4s.f1();
-          if (indexOf(element.m21_1, 'C3') >= 0) {
+        var _iterator__ex2g4s = commands.w();
+        while (_iterator__ex2g4s.x()) {
+          var element = _iterator__ex2g4s.y();
+          if (indexOf(element.j21_1, 'C3') >= 0) {
             tmp$ret$0 = element;
             break $l$block;
           }
@@ -6575,10 +6634,10 @@ function closestToCV$lambda(commands) {
         var tmp$ret$2;
         $l$block_0: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_0 = commands.d1();
-          while (_iterator__ex2g4s_0.e1()) {
-            var element_0 = _iterator__ex2g4s_0.f1();
-            if (indexOf(element_0.m21_1, 'DS') >= 0) {
+          var _iterator__ex2g4s_0 = commands.w();
+          while (_iterator__ex2g4s_0.x()) {
+            var element_0 = _iterator__ex2g4s_0.y();
+            if (indexOf(element_0.j21_1, 'DS') >= 0) {
               tmp$ret$2 = element_0;
               break $l$block_0;
             }
@@ -6596,10 +6655,10 @@ function closestToCV$lambda(commands) {
         var tmp$ret$4;
         $l$block_1: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_1 = commands.d1();
-          while (_iterator__ex2g4s_1.e1()) {
-            var element_1 = _iterator__ex2g4s_1.f1();
-            if (indexOf(element_1.m21_1, 'SM') >= 0) {
+          var _iterator__ex2g4s_1 = commands.w();
+          while (_iterator__ex2g4s_1.x()) {
+            var element_1 = _iterator__ex2g4s_1.y();
+            if (indexOf(element_1.j21_1, 'SM') >= 0) {
               tmp$ret$4 = element_1;
               break $l$block_1;
             }
@@ -6620,21 +6679,21 @@ function closestToCV$lambda(commands) {
 function closestToC3$lambda(commands) {
   _init_properties_closestByVariant_kt__4232y3();
   var tmp;
-  switch (commands.i2()) {
+  switch (commands.b2()) {
     case 0:
       tmp = null;
       break;
     case 1:
-      tmp = commands.k2(0);
+      tmp = commands.d2(0);
       break;
     default:
       var tmp$ret$0;
       $l$block: {
         // Inline function 'kotlin.collections.firstOrNull' call
-        var _iterator__ex2g4s = commands.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var element = _iterator__ex2g4s.f1();
-          if (indexOf(element.m21_1, 'DS') >= 0) {
+        var _iterator__ex2g4s = commands.w();
+        while (_iterator__ex2g4s.x()) {
+          var element = _iterator__ex2g4s.y();
+          if (indexOf(element.j21_1, 'DS') >= 0) {
             tmp$ret$0 = element;
             break $l$block;
           }
@@ -6648,10 +6707,10 @@ function closestToC3$lambda(commands) {
         var tmp$ret$2;
         $l$block_0: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_0 = commands.d1();
-          while (_iterator__ex2g4s_0.e1()) {
-            var element_0 = _iterator__ex2g4s_0.f1();
-            if (indexOf(element_0.m21_1, 'DS:CE') >= 0) {
+          var _iterator__ex2g4s_0 = commands.w();
+          while (_iterator__ex2g4s_0.x()) {
+            var element_0 = _iterator__ex2g4s_0.y();
+            if (indexOf(element_0.j21_1, 'DS:CE') >= 0) {
               tmp$ret$2 = element_0;
               break $l$block_0;
             }
@@ -6669,10 +6728,10 @@ function closestToC3$lambda(commands) {
         var tmp$ret$4;
         $l$block_1: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_1 = commands.d1();
-          while (_iterator__ex2g4s_1.e1()) {
-            var element_1 = _iterator__ex2g4s_1.f1();
-            if (indexOf(element_1.m21_1, 'SM') >= 0) {
+          var _iterator__ex2g4s_1 = commands.w();
+          while (_iterator__ex2g4s_1.x()) {
+            var element_1 = _iterator__ex2g4s_1.y();
+            if (indexOf(element_1.j21_1, 'SM') >= 0) {
               tmp$ret$4 = element_1;
               break $l$block_1;
             }
@@ -6690,10 +6749,10 @@ function closestToC3$lambda(commands) {
         var tmp$ret$6;
         $l$block_2: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_2 = commands.d1();
-          while (_iterator__ex2g4s_2.e1()) {
-            var element_2 = _iterator__ex2g4s_2.f1();
-            if (indexOf(element_2.m21_1, 'CV') >= 0) {
+          var _iterator__ex2g4s_2 = commands.w();
+          while (_iterator__ex2g4s_2.x()) {
+            var element_2 = _iterator__ex2g4s_2.y();
+            if (indexOf(element_2.j21_1, 'CV') >= 0) {
               tmp$ret$6 = element_2;
               break $l$block_2;
             }
@@ -6714,21 +6773,21 @@ function closestToC3$lambda(commands) {
 function closestToDS$lambda(commands) {
   _init_properties_closestByVariant_kt__4232y3();
   var tmp;
-  switch (commands.i2()) {
+  switch (commands.b2()) {
     case 0:
       tmp = null;
       break;
     case 1:
-      tmp = commands.k2(0);
+      tmp = commands.d2(0);
       break;
     default:
       var tmp$ret$0;
       $l$block: {
         // Inline function 'kotlin.collections.firstOrNull' call
-        var _iterator__ex2g4s = commands.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var element = _iterator__ex2g4s.f1();
-          if (indexOf(element.m21_1, 'C3') >= 0) {
+        var _iterator__ex2g4s = commands.w();
+        while (_iterator__ex2g4s.x()) {
+          var element = _iterator__ex2g4s.y();
+          if (indexOf(element.j21_1, 'C3') >= 0) {
             tmp$ret$0 = element;
             break $l$block;
           }
@@ -6742,10 +6801,10 @@ function closestToDS$lambda(commands) {
         var tmp$ret$2;
         $l$block_0: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_0 = commands.d1();
-          while (_iterator__ex2g4s_0.e1()) {
-            var element_0 = _iterator__ex2g4s_0.f1();
-            if (indexOf(element_0.m21_1, 'DS:CE') >= 0) {
+          var _iterator__ex2g4s_0 = commands.w();
+          while (_iterator__ex2g4s_0.x()) {
+            var element_0 = _iterator__ex2g4s_0.y();
+            if (indexOf(element_0.j21_1, 'DS:CE') >= 0) {
               tmp$ret$2 = element_0;
               break $l$block_0;
             }
@@ -6763,10 +6822,10 @@ function closestToDS$lambda(commands) {
         var tmp$ret$4;
         $l$block_1: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_1 = commands.d1();
-          while (_iterator__ex2g4s_1.e1()) {
-            var element_1 = _iterator__ex2g4s_1.f1();
-            if (indexOf(element_1.m21_1, 'SM') >= 0) {
+          var _iterator__ex2g4s_1 = commands.w();
+          while (_iterator__ex2g4s_1.x()) {
+            var element_1 = _iterator__ex2g4s_1.y();
+            if (indexOf(element_1.j21_1, 'SM') >= 0) {
               tmp$ret$4 = element_1;
               break $l$block_1;
             }
@@ -6784,10 +6843,10 @@ function closestToDS$lambda(commands) {
         var tmp$ret$6;
         $l$block_2: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_2 = commands.d1();
-          while (_iterator__ex2g4s_2.e1()) {
-            var element_2 = _iterator__ex2g4s_2.f1();
-            if (indexOf(element_2.m21_1, 'CV') >= 0) {
+          var _iterator__ex2g4s_2 = commands.w();
+          while (_iterator__ex2g4s_2.x()) {
+            var element_2 = _iterator__ex2g4s_2.y();
+            if (indexOf(element_2.j21_1, 'CV') >= 0) {
               tmp$ret$6 = element_2;
               break $l$block_2;
             }
@@ -6808,21 +6867,21 @@ function closestToDS$lambda(commands) {
 function closestToCE$lambda(commands) {
   _init_properties_closestByVariant_kt__4232y3();
   var tmp;
-  switch (commands.i2()) {
+  switch (commands.b2()) {
     case 0:
       tmp = null;
       break;
     case 1:
-      tmp = commands.k2(0);
+      tmp = commands.d2(0);
       break;
     default:
       var tmp$ret$0;
       $l$block: {
         // Inline function 'kotlin.collections.firstOrNull' call
-        var _iterator__ex2g4s = commands.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var element = _iterator__ex2g4s.f1();
-          if (indexOf(element.m21_1, 'DS') >= 0) {
+        var _iterator__ex2g4s = commands.w();
+        while (_iterator__ex2g4s.x()) {
+          var element = _iterator__ex2g4s.y();
+          if (indexOf(element.j21_1, 'DS') >= 0) {
             tmp$ret$0 = element;
             break $l$block;
           }
@@ -6836,10 +6895,10 @@ function closestToCE$lambda(commands) {
         var tmp$ret$2;
         $l$block_0: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_0 = commands.d1();
-          while (_iterator__ex2g4s_0.e1()) {
-            var element_0 = _iterator__ex2g4s_0.f1();
-            if (indexOf(element_0.m21_1, 'C3') >= 0) {
+          var _iterator__ex2g4s_0 = commands.w();
+          while (_iterator__ex2g4s_0.x()) {
+            var element_0 = _iterator__ex2g4s_0.y();
+            if (indexOf(element_0.j21_1, 'C3') >= 0) {
               tmp$ret$2 = element_0;
               break $l$block_0;
             }
@@ -6857,10 +6916,10 @@ function closestToCE$lambda(commands) {
         var tmp$ret$4;
         $l$block_1: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_1 = commands.d1();
-          while (_iterator__ex2g4s_1.e1()) {
-            var element_1 = _iterator__ex2g4s_1.f1();
-            if (indexOf(element_1.m21_1, 'SM') >= 0) {
+          var _iterator__ex2g4s_1 = commands.w();
+          while (_iterator__ex2g4s_1.x()) {
+            var element_1 = _iterator__ex2g4s_1.y();
+            if (indexOf(element_1.j21_1, 'SM') >= 0) {
               tmp$ret$4 = element_1;
               break $l$block_1;
             }
@@ -6878,10 +6937,10 @@ function closestToCE$lambda(commands) {
         var tmp$ret$6;
         $l$block_2: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_2 = commands.d1();
-          while (_iterator__ex2g4s_2.e1()) {
-            var element_2 = _iterator__ex2g4s_2.f1();
-            if (indexOf(element_2.m21_1, 'CV') >= 0) {
+          var _iterator__ex2g4s_2 = commands.w();
+          while (_iterator__ex2g4s_2.x()) {
+            var element_2 = _iterator__ex2g4s_2.y();
+            if (indexOf(element_2.j21_1, 'CV') >= 0) {
               tmp$ret$6 = element_2;
               break $l$block_2;
             }
@@ -6902,21 +6961,21 @@ function closestToCE$lambda(commands) {
 function closestToSM$lambda(commands) {
   _init_properties_closestByVariant_kt__4232y3();
   var tmp;
-  switch (commands.i2()) {
+  switch (commands.b2()) {
     case 0:
       tmp = null;
       break;
     case 1:
-      tmp = commands.k2(0);
+      tmp = commands.d2(0);
       break;
     default:
       var tmp$ret$0;
       $l$block: {
         // Inline function 'kotlin.collections.firstOrNull' call
-        var _iterator__ex2g4s = commands.d1();
-        while (_iterator__ex2g4s.e1()) {
-          var element = _iterator__ex2g4s.f1();
-          if (indexOf(element.m21_1, 'C3') >= 0) {
+        var _iterator__ex2g4s = commands.w();
+        while (_iterator__ex2g4s.x()) {
+          var element = _iterator__ex2g4s.y();
+          if (indexOf(element.j21_1, 'C3') >= 0) {
             tmp$ret$0 = element;
             break $l$block;
           }
@@ -6930,10 +6989,10 @@ function closestToSM$lambda(commands) {
         var tmp$ret$2;
         $l$block_0: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_0 = commands.d1();
-          while (_iterator__ex2g4s_0.e1()) {
-            var element_0 = _iterator__ex2g4s_0.f1();
-            if (indexOf(element_0.m21_1, 'DS') >= 0) {
+          var _iterator__ex2g4s_0 = commands.w();
+          while (_iterator__ex2g4s_0.x()) {
+            var element_0 = _iterator__ex2g4s_0.y();
+            if (indexOf(element_0.j21_1, 'DS') >= 0) {
               tmp$ret$2 = element_0;
               break $l$block_0;
             }
@@ -6951,10 +7010,10 @@ function closestToSM$lambda(commands) {
         var tmp$ret$4;
         $l$block_1: {
           // Inline function 'kotlin.collections.firstOrNull' call
-          var _iterator__ex2g4s_1 = commands.d1();
-          while (_iterator__ex2g4s_1.e1()) {
-            var element_1 = _iterator__ex2g4s_1.f1();
-            if (indexOf(element_1.m21_1, 'CV') >= 0) {
+          var _iterator__ex2g4s_1 = commands.w();
+          while (_iterator__ex2g4s_1.x()) {
+            var element_1 = _iterator__ex2g4s_1.y();
+            if (indexOf(element_1.j21_1, 'CV') >= 0) {
               tmp$ret$4 = element_1;
               break $l$block_1;
             }
@@ -7018,11 +7077,11 @@ function get_conditionParameters() {
 var conditionParameters;
 function createConditionCommandCall(containingCommand, parameter, textRange) {
   _init_properties_condition_kt__r17znb();
-  var tmp0_startIndex = textRange.m1e();
-  var tmp1_endIndex = textRange.m1e();
-  var tmp2_start = textRange.i1e();
-  var tmp3_end = textRange.i1e();
-  var tmp4_parserIndex = textRange.k1e();
+  var tmp0_startIndex = textRange.j1e();
+  var tmp1_endIndex = textRange.j1e();
+  var tmp2_start = textRange.f1e();
+  var tmp3_end = textRange.f1e();
+  var tmp4_parserIndex = textRange.h1e();
   var range = new RangeWithIndexImpl(tmp2_start, tmp3_end, tmp0_startIndex, tmp1_endIndex, tmp4_parserIndex);
   var tmp5_type = ValueType_CONDITION_getInstance().value;
   var tmp6_commandString = get_ConditionCommand().command;
@@ -7032,7 +7091,7 @@ function createConditionCommandCall(containingCommand, parameter, textRange) {
   // Inline function 'kotlin.collections.toTypedArray' call
   var this_0 = listOfNotNull_0(new CommandToken(textRange, '{eq}'));
   var tmp9_tokens = copyToArray(this_0);
-  var tmp10_callType = Companion_getInstance_0().m1t_1;
+  var tmp10_callType = Companion_getInstance_0().j1t_1;
   var tmp11_expectType = ValueType_CONDITION_getInstance().value;
   return new CommandCall(tmp5_type, tmp6_commandString, tmp7_arguments, range, true, range, tmp8_parameterIndex, true, containingCommand, tmp9_tokens, tmp10_callType, tmp11_expectType);
 }
@@ -7040,11 +7099,11 @@ var properties_initialized_condition_kt_azo4dx;
 function _init_properties_condition_kt__r17znb() {
   if (!properties_initialized_condition_kt_azo4dx) {
     properties_initialized_condition_kt_azo4dx = true;
-    CONDITION_PARAMETER = ICaosParameter.l26(0, '{condition}', ValueType_CONDITION_getInstance().value, ValueType_CONDITION_getInstance().simpleName);
-    EQ_FIRST_PARAM = ICaosParameter.l26(0, '{first}', ValueType_ANY_getInstance().value, 'Any');
-    EQ_SECOND_PARAM = ICaosParameter.l26(2, '{second}', ValueType_ANY_getInstance().value, 'Any');
-    EQ_OP = ICaosParameter.l26(1, '{EQ}', ValueType_EQ_OP_getInstance().value, 'Any');
-    EQ_JOIN = ICaosParameter.l26(1, '{AND|OR}', ValueType_CONDITION_getInstance().value, ValueType_CONDITION_getInstance().simpleName);
+    CONDITION_PARAMETER = ICaosParameter.k26(0, '{condition}', ValueType_CONDITION_getInstance().value, ValueType_CONDITION_getInstance().simpleName);
+    EQ_FIRST_PARAM = ICaosParameter.k26(0, '{first}', ValueType_ANY_getInstance().value, 'Any');
+    EQ_SECOND_PARAM = ICaosParameter.k26(2, '{second}', ValueType_ANY_getInstance().value, 'Any');
+    EQ_OP = ICaosParameter.k26(1, '{EQ}', ValueType_EQ_OP_getInstance().value, 'Any');
+    EQ_JOIN = ICaosParameter.k26(1, '{AND|OR}', ValueType_CONDITION_getInstance().value, ValueType_CONDITION_getInstance().simpleName);
     conditionParameters = listOf_0([get_EQ_FIRST_PARAM(), get_EQ_OP(), get_EQ_SECOND_PARAM(), get_EQ_JOIN()]);
   }
 }
@@ -7055,12 +7114,12 @@ function filterByType(_this__u8e3s4, commandType) {
   // Inline function 'kotlin.collections.filter' call
   var tmp0 = _this__u8e3s4.first;
   // Inline function 'kotlin.collections.filterTo' call
-  var destination = ArrayList.b2();
-  var _iterator__ex2g4s = tmp0.d1();
-  while (_iterator__ex2g4s.e1()) {
-    var element = _iterator__ex2g4s.f1();
+  var destination = ArrayList.u1();
+  var _iterator__ex2g4s = tmp0.w();
+  while (_iterator__ex2g4s.x()) {
+    var element = _iterator__ex2g4s.y();
     if (filter(element)) {
-      destination.g2(element);
+      destination.z1(element);
     }
   }
   var filtered = destination;
@@ -7068,11 +7127,11 @@ function filterByType(_this__u8e3s4, commandType) {
 }
 function createIsCommandTypeFilter(_this__u8e3s4) {
   var tmp;
-  if (_this__u8e3s4 === Companion_getInstance_0().l1t_1) {
+  if (_this__u8e3s4 === Companion_getInstance_0().i1t_1) {
     tmp = createIsCommandTypeFilter$lambda;
-  } else if (_this__u8e3s4 === Companion_getInstance_0().m1t_1) {
+  } else if (_this__u8e3s4 === Companion_getInstance_0().j1t_1) {
     tmp = createIsCommandTypeFilter$lambda_0;
-  } else if (_this__u8e3s4 === Companion_getInstance_0().k1t_1) {
+  } else if (_this__u8e3s4 === Companion_getInstance_0().h1t_1) {
     tmp = createIsCommandTypeFilter$lambda_1;
   } else {
     throwOnInvalid(_this__u8e3s4);
@@ -7081,13 +7140,13 @@ function createIsCommandTypeFilter(_this__u8e3s4) {
   return filter;
 }
 function createIsCommandTypeFilter$lambda(command) {
-  return command.o21_1;
+  return command.l21_1;
 }
 function createIsCommandTypeFilter$lambda_0(command) {
-  return command.n21_1;
+  return command.k21_1;
 }
 function createIsCommandTypeFilter$lambda_1(command) {
-  return command.a22();
+  return command.x21();
 }
 var AgentClassUtils_instance;
 function AgentClassUtils_getInstance() {
@@ -7116,13 +7175,13 @@ function get_ValueType() {
 var valueTypes;
 function getCaos2PrayComments(text) {
   _init_properties_collectors_kt__pubhyy();
-  var comments = CaosTokenizerUtil_instance.t4u(text);
+  var comments = CaosTokenizerUtil_instance.s4u(text);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(Caos2Comment), arrayOf([]), false))]), false));
+  var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(Caos2Comment), arrayOf([]), false))]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
   return encodeToDynamic(this_0, tmp$ret$1, comments);
 }
@@ -7131,58 +7190,59 @@ function getScriptsFromCaosParseResult(parseResult) {
   // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer_0(this_1, createKType(getKClass(ParseResult), arrayOf([]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
   var parseResultKt = decodeFromDynamic(this_0, tmp$ret$1, parseResult);
-  var result = CaosParser_instance.w4z(parseResultKt);
+  var result = CaosParser_instance.x4z(parseResultKt);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_3 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_4 = this_3.uw();
+  var this_4 = this_3.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_5 = serializer_0(this_4, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CaosScript), arrayOf([]), false))]), false));
+  var this_5 = serializer_0(this_4, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CaosScript), arrayOf([]), false))]), false));
   var tmp$ret$4 = isInterface(this_5, KSerializer) ? this_5 : THROW_CCE();
   return encodeToDynamic(this_3, tmp$ret$4, result);
 }
 function getCaosWhitespace(text) {
   _init_properties_collectors_kt__pubhyy();
-  var result = CaosTokenizerUtil_instance.z4v(text);
+  var result = CaosTokenizerUtil_instance.y4v(text);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CaosParserItem), arrayOf([]), false))]), false));
+  var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CaosParserItem), arrayOf([]), false))]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
   return encodeToDynamic(this_0, tmp$ret$1, result);
 }
 function getCaosStops(variant, text) {
   _init_properties_collectors_kt__pubhyy();
-  return CaosTokenizerUtil_instance.u4v(variant, text);
+  assertValidVariant_0(variant);
+  return CaosTokenizerUtil_instance.t4v(variant, text);
 }
 function caosScriptOffsets(text) {
   _init_properties_collectors_kt__pubhyy();
-  var result = CaosTokenizerUtil_instance.n4v(text);
+  var result = CaosTokenizerUtil_instance.m4v(text);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(BlockRange), arrayOf([]), false))]), false));
+  var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(BlockRange), arrayOf([]), false))]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
   return encodeToDynamic(this_0, tmp$ret$1, result);
 }
 function caosScopeOffsets(text) {
   _init_properties_collectors_kt__pubhyy();
-  var result = CaosTokenizerUtil_instance.e4u(text, false);
+  var result = CaosTokenizerUtil_instance.d4u(text, false);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(BlockRange), arrayOf([]), false))]), false));
+  var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(BlockRange), arrayOf([]), false))]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
   return encodeToDynamic(this_0, tmp$ret$1, result);
 }
@@ -7192,12 +7252,13 @@ function parseCaosTokens(variant, text, items, scriptOffsets, checkErrors, check
   checkDelay = checkDelay === VOID ? null : checkDelay;
   keepGoing = keepGoing === VOID ? null : keepGoing;
   _init_properties_collectors_kt__pubhyy();
+  assertValidVariant_0(variant);
   // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
-  var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CaosParserItem), arrayOf([]), false))]), false));
+  var this_2 = serializer_0(this_1, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(CaosParserItem), arrayOf([]), false))]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
   var itemsKt = decodeFromDynamic(this_0, tmp$ret$1, items);
   var tmp;
@@ -7219,7 +7280,7 @@ function parseCaosTokens(variant, text, items, scriptOffsets, checkErrors, check
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_3 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_4 = this_3.uw();
+  var this_4 = this_3.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_5 = serializer_0(this_4, createKType(getKClass(ParseResult), arrayOf([]), false));
   var tmp$ret$5 = isInterface(this_5, KSerializer) ? this_5 : THROW_CCE();
@@ -7230,11 +7291,12 @@ function parseCaosNear(variant, text, line, character, checkErrors, checkDelay, 
   checkDelay = checkDelay === VOID ? null : checkDelay;
   keepGoing = keepGoing === VOID ? null : keepGoing;
   _init_properties_collectors_kt__pubhyy();
+  assertValidVariant_0(variant);
   var result = CaosParser_instance.j4z(variant, text, line, character, checkErrors, checkDelay, keepGoing);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer_0(this_1, createKType(getKClass(ParseResult), arrayOf([]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -7245,11 +7307,12 @@ function parseCaosWithin(variant, text, startLine, startCharacter, endLine, endC
   checkDelay = checkDelay === VOID ? null : checkDelay;
   keepGoing = keepGoing === VOID ? null : keepGoing;
   _init_properties_collectors_kt__pubhyy();
+  assertValidVariant_0(variant);
   var result = CaosParser_instance.l4z(variant, text, startLine, startCharacter, endLine, endCharacter, checkErrors, checkDelay, keepGoing);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer_0(this_1, createKType(getKClass(ParseResult), arrayOf([]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -7258,11 +7321,12 @@ function parseCaosWithin(variant, text, startLine, startCharacter, endLine, endC
 function parseCaos(variant, text, keepGoing) {
   keepGoing = keepGoing === VOID ? null : keepGoing;
   _init_properties_collectors_kt__pubhyy();
+  assertValidVariant_0(variant);
   var result = CaosParser_instance.m4z(variant, text, keepGoing);
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer_0(this_1, createKType(getKClass(ParseResult), arrayOf([]), false));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -7270,6 +7334,7 @@ function parseCaos(variant, text, keepGoing) {
 }
 function caosCommandDefinitionFromCommandCall(variant, commandCall) {
   _init_properties_collectors_kt__pubhyy();
+  assertValidVariant_0(variant);
   if (commandCall == null) {
     return null;
   }
@@ -7281,7 +7346,7 @@ function caosCommandDefinitionFromCommandCall(variant, commandCall) {
   // Inline function 'kotlinx.serialization.json.encodeToDynamic' call
   var this_0 = get_caosJsonSerializer();
   // Inline function 'kotlinx.serialization.serializer' call
-  var this_1 = this_0.uw();
+  var this_1 = this_0.rw();
   // Inline function 'kotlinx.serialization.internal.cast' call
   var this_2 = serializer_0(this_1, createKType(getKClass(ICaosCommand), arrayOf([]), true));
   var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -7293,9 +7358,9 @@ function parseTokens_JsApi$lambda($scriptOffsets) {
     // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
     var dynamic = $scriptOffsets;
     // Inline function 'kotlinx.serialization.serializer' call
-    var this_0 = tmp0.uw();
+    var this_0 = tmp0.rw();
     // Inline function 'kotlinx.serialization.internal.cast' call
-    var this_1 = serializer_0(this_0, createKType(PrimitiveClasses_getInstance().le(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(BlockRange), arrayOf([]), false))]), false));
+    var this_1 = serializer_0(this_0, createKType(PrimitiveClasses_getInstance().ie(), arrayOf([createInvariantKTypeProjection(createKType(getKClass(BlockRange), arrayOf([]), false))]), false));
     var tmp$ret$1 = isInterface(this_1, KSerializer) ? this_1 : THROW_CCE();
     return decodeFromDynamic(tmp0, tmp$ret$1, dynamic);
   };
@@ -7315,7 +7380,7 @@ function get_caosJsonSerializer() {
   var tmp = KProperty0;
   // Inline function 'kotlin.getValue' call
   getPropertyCallableRef('caosJsonSerializer', 0, tmp, _get_caosJsonSerializer_$ref_lz9d32(), null);
-  return tmp0.r3();
+  return tmp0.k3();
 }
 var caosJsonSerializer$delegate;
 function caosJsonSerializer$delegate$lambda() {
@@ -7324,12 +7389,12 @@ function caosJsonSerializer$delegate$lambda() {
 }
 function caosJsonSerializer$delegate$lambda$lambda($this$Json) {
   _init_properties_jsonSerializer_kt__2kxiai();
-  $this$Json.a4j_1 = true;
-  $this$Json.p4j_1 = get_caosParserSerializersModule();
-  $this$Json.y4i_1 = true;
   $this$Json.z4i_1 = true;
-  $this$Json.f4j_1 = 'json_type';
-  $this$Json.b4j_1 = true;
+  $this$Json.o4j_1 = get_caosParserSerializersModule();
+  $this$Json.x4i_1 = true;
+  $this$Json.y4i_1 = true;
+  $this$Json.e4j_1 = 'json_type';
+  $this$Json.a4j_1 = true;
   return Unit_instance;
 }
 function _get_caosJsonSerializer_$ref_lz9d32() {
@@ -7351,7 +7416,7 @@ function parseResultFromDynamic_JsApi(parseResultDynamic) {
       // Inline function 'kotlinx.serialization.json.decodeFromDynamic' call
       var this_0 = get_caosJsonSerializer();
       // Inline function 'kotlinx.serialization.serializer' call
-      var this_1 = this_0.uw();
+      var this_1 = this_0.rw();
       // Inline function 'kotlinx.serialization.internal.cast' call
       var this_2 = serializer_0(this_1, createKType(getKClass(ParseResult), arrayOf([]), false));
       var tmp$ret$1 = isInterface(this_2, KSerializer) ? this_2 : THROW_CCE();
@@ -7365,38 +7430,38 @@ function parseResultFromDynamic_JsApi(parseResultDynamic) {
 //region block: post-declaration
 initMetadataForInterface(IArgument, 'Argument', VOID, VOID, [TextWithRange]);
 initMetadataForCompanion(Companion);
-protoOf($serializer).p14 = typeParametersSerializers;
+protoOf($serializer).m14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CaosList, 'CaosList', VOID, VOID, [IArgument], VOID, VOID, {0: $serializer_getInstance_8});
 initMetadataForCompanion(Companion_0);
-protoOf($serializer_0).p14 = typeParametersSerializers;
+protoOf($serializer_0).m14 = typeParametersSerializers;
 initMetadataForObject($serializer_0, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(ParseResult, 'CaosParseResult', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance_9});
 initMetadataForObject(CaosParser, 'CaosParser');
 initMetadataForCompanion(Companion_1);
-protoOf($serializer_1).p14 = typeParametersSerializers;
+protoOf($serializer_1).m14 = typeParametersSerializers;
 initMetadataForObject($serializer_1, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CommandCall, 'CommandCall', VOID, VOID, [HasRange, IArgument, TextWithRange], VOID, VOID, {0: $serializer_getInstance_10});
 initMetadataForCompanion(Companion_2);
-protoOf($serializer_2).p14 = typeParametersSerializers;
+protoOf($serializer_2).m14 = typeParametersSerializers;
 initMetadataForObject($serializer_2, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CommandCallJs, 'CommandCallJs', VOID, VOID, [HasRange, IArgument, TextWithRange], VOID, VOID, {0: $serializer_getInstance_11});
 initMetadataForClass(sam$kotlin_Comparator$0, 'sam$kotlin_Comparator$0', VOID, VOID, [Comparator, FunctionAdapter]);
 initMetadataForObject(CommandLookupUtil, 'CommandLookupUtil');
 initMetadataForCompanion(Companion_3);
-protoOf($serializer_3).p14 = typeParametersSerializers;
+protoOf($serializer_3).m14 = typeParametersSerializers;
 initMetadataForObject($serializer_3, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(CommandReference, 'CommandReference', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance_12});
 initMetadataForCompanion(Companion_4);
-protoOf($serializer_4).p14 = typeParametersSerializers;
+protoOf($serializer_4).m14 = typeParametersSerializers;
 initMetadataForObject($serializer_4, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(EqOp, 'EqOp', VOID, VOID, [IArgument, TextWithRange], VOID, VOID, {0: $serializer_getInstance_13});
 initMetadataForCompanion(Companion_5);
-protoOf($serializer_5).p14 = typeParametersSerializers;
+protoOf($serializer_5).m14 = typeParametersSerializers;
 initMetadataForObject($serializer_5, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(EqualityStatement, 'EqualityStatement', VOID, VOID, [IArgument, EqArgument], VOID, VOID, {0: $serializer_getInstance_14});
 initMetadataForCompanion(Companion_6);
-protoOf($serializer_6).p14 = typeParametersSerializers;
+protoOf($serializer_6).m14 = typeParametersSerializers;
 initMetadataForObject($serializer_6, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(Argument, 'ParserItemArgument', VOID, VOID, [IArgument], VOID, VOID, {0: $serializer_getInstance_15});
 initMetadataForClass(CaosWalker, 'CaosWalker');

@@ -19,6 +19,19 @@ import {
   createThis2j2avj17cvnv2 as createThis,
   initMetadataForClassbxx6q50dy2s7 as initMetadataForClass,
   Enum3alwj03lh1n41 as Enum,
+  initMetadataForInterface1egvbzx539z91 as initMetadataForInterface,
+  lazy2hsh8ze7j6ikd as lazy_0,
+  KProperty1ca4yb4wlo496 as KProperty1,
+  getPropertyCallableRef3hckxc0xueiaj as getPropertyCallableRef,
+  numberToInt1ygmcfwhs2fkq as numberToInt,
+  emptyList1g2z5xcrvp2zy as emptyList,
+  PrimitiveClasses_getInstanceds06xwqrwfdm as PrimitiveClasses_getInstance,
+  arrayOf1akklvh2at202 as arrayOf,
+  createKType31ecntyyaay3k as createKType,
+  isInterface3d6p8outrmvmk as isInterface,
+  IntCompanionObject_instance38ap4zil98hon as IntCompanionObject_instance,
+  BooleanCompanionObject_instance1app94b8o3img as BooleanCompanionObject_instance,
+  StringCompanionObject_instance1v0ht40fz3tq0 as StringCompanionObject_instance,
 } from './kotlin-kotlin-stdlib.mjs';
 import {
   ReferenceArraySerializer3juj1vqolxkrs as ReferenceArraySerializer,
@@ -30,6 +43,13 @@ import {
   GeneratedSerializer1f7t7hssdd2ws as GeneratedSerializer,
   throwMissingFieldException2cmke0v3ynf14 as throwMissingFieldException,
   SerializableWithd2dap36updxd as SerializableWith,
+  get_nullable197rfua9r7fsz as get_nullable,
+  buildClassSerialDescriptors2a6xdp6mrtw as buildClassSerialDescriptor,
+  serializer1hwzc6m64v1op as serializer,
+  KSerializerzf77vz1967fq as KSerializer,
+  serializer1hu9wv9at41ww as serializer_0,
+  serializer3u3hsxnenk49x as serializer_1,
+  serializer1x79l67jvwntn as serializer_2,
 } from './kotlinx-serialization-kotlinx-serialization-core.mjs';
 //region block: imports
 var imul = Math.imul;
@@ -45,34 +65,34 @@ class Companion {
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    tmp.i59_1 = [null, null, tmp_1, lazy(tmp_2, FormatResult$Companion$$childSerializers$_anonymous__qoz48m_0)];
+    tmp.b59_1 = [null, null, tmp_1, lazy(tmp_2, FormatResult$Companion$$childSerializers$_anonymous__qoz48m_0)];
   }
 }
 class $serializer {
   constructor() {
     $serializer_instance = this;
     var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.formatter.FormatResult', this, 4);
-    tmp0_serialDesc.z13('formattedText', false);
-    tmp0_serialDesc.z13('oldText', false);
-    tmp0_serialDesc.z13('edits', false);
-    tmp0_serialDesc.z13('editReasons', false);
-    this.j59_1 = tmp0_serialDesc;
+    tmp0_serialDesc.w13('formattedText', false);
+    tmp0_serialDesc.w13('oldText', false);
+    tmp0_serialDesc.w13('edits', false);
+    tmp0_serialDesc.w13('editReasons', false);
+    this.c59_1 = tmp0_serialDesc;
   }
-  k59(encoder, value) {
-    var tmp0_desc = this.j59_1;
-    var tmp1_output = encoder.ew(tmp0_desc);
-    var tmp2_cached = Companion_getInstance().i59_1;
-    tmp1_output.ux(tmp0_desc, 0, value.formattedText);
-    tmp1_output.ux(tmp0_desc, 1, value.oldText);
-    tmp1_output.wx(tmp0_desc, 2, tmp2_cached[2].r3(), value.edits);
-    tmp1_output.wx(tmp0_desc, 3, tmp2_cached[3].r3(), value.editReasons);
-    tmp1_output.fw(tmp0_desc);
+  d59(encoder, value) {
+    var tmp0_desc = this.c59_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    var tmp2_cached = Companion_getInstance().b59_1;
+    tmp1_output.rx(tmp0_desc, 0, value.formattedText);
+    tmp1_output.rx(tmp0_desc, 1, value.oldText);
+    tmp1_output.tx(tmp0_desc, 2, tmp2_cached[2].k3(), value.edits);
+    tmp1_output.tx(tmp0_desc, 3, tmp2_cached[3].k3(), value.editReasons);
+    tmp1_output.cw(tmp0_desc);
   }
-  pr(encoder, value) {
-    return this.k59(encoder, value instanceof FormatResult ? value : THROW_CCE());
+  mr(encoder, value) {
+    return this.d59(encoder, value instanceof FormatResult ? value : THROW_CCE());
   }
-  qr(decoder) {
-    var tmp0_desc = this.j59_1;
+  nr(decoder) {
+    var tmp0_desc = this.c59_1;
     var tmp1_flag = true;
     var tmp2_index = 0;
     var tmp3_bitMask0 = 0;
@@ -80,56 +100,56 @@ class $serializer {
     var tmp5_local1 = null;
     var tmp6_local2 = null;
     var tmp7_local3 = null;
-    var tmp8_input = decoder.ew(tmp0_desc);
-    var tmp9_cached = Companion_getInstance().i59_1;
-    if (tmp8_input.vw()) {
-      tmp4_local0 = tmp8_input.ow(tmp0_desc, 0);
+    var tmp8_input = decoder.bw(tmp0_desc);
+    var tmp9_cached = Companion_getInstance().b59_1;
+    if (tmp8_input.sw()) {
+      tmp4_local0 = tmp8_input.lw(tmp0_desc, 0);
       tmp3_bitMask0 = tmp3_bitMask0 | 1;
-      tmp5_local1 = tmp8_input.ow(tmp0_desc, 1);
+      tmp5_local1 = tmp8_input.lw(tmp0_desc, 1);
       tmp3_bitMask0 = tmp3_bitMask0 | 2;
-      tmp6_local2 = tmp8_input.qw(tmp0_desc, 2, tmp9_cached[2].r3(), tmp6_local2);
+      tmp6_local2 = tmp8_input.nw(tmp0_desc, 2, tmp9_cached[2].k3(), tmp6_local2);
       tmp3_bitMask0 = tmp3_bitMask0 | 4;
-      tmp7_local3 = tmp8_input.qw(tmp0_desc, 3, tmp9_cached[3].r3(), tmp7_local3);
+      tmp7_local3 = tmp8_input.nw(tmp0_desc, 3, tmp9_cached[3].k3(), tmp7_local3);
       tmp3_bitMask0 = tmp3_bitMask0 | 8;
     } else
       while (tmp1_flag) {
-        tmp2_index = tmp8_input.ww(tmp0_desc);
+        tmp2_index = tmp8_input.tw(tmp0_desc);
         switch (tmp2_index) {
           case -1:
             tmp1_flag = false;
             break;
           case 0:
-            tmp4_local0 = tmp8_input.ow(tmp0_desc, 0);
+            tmp4_local0 = tmp8_input.lw(tmp0_desc, 0);
             tmp3_bitMask0 = tmp3_bitMask0 | 1;
             break;
           case 1:
-            tmp5_local1 = tmp8_input.ow(tmp0_desc, 1);
+            tmp5_local1 = tmp8_input.lw(tmp0_desc, 1);
             tmp3_bitMask0 = tmp3_bitMask0 | 2;
             break;
           case 2:
-            tmp6_local2 = tmp8_input.qw(tmp0_desc, 2, tmp9_cached[2].r3(), tmp6_local2);
+            tmp6_local2 = tmp8_input.nw(tmp0_desc, 2, tmp9_cached[2].k3(), tmp6_local2);
             tmp3_bitMask0 = tmp3_bitMask0 | 4;
             break;
           case 3:
-            tmp7_local3 = tmp8_input.qw(tmp0_desc, 3, tmp9_cached[3].r3(), tmp7_local3);
+            tmp7_local3 = tmp8_input.nw(tmp0_desc, 3, tmp9_cached[3].k3(), tmp7_local3);
             tmp3_bitMask0 = tmp3_bitMask0 | 8;
             break;
           default:
-            throw UnknownFieldException.ht(tmp2_index);
+            throw UnknownFieldException.et(tmp2_index);
         }
       }
-    tmp8_input.fw(tmp0_desc);
-    return FormatResult.l59(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
+    tmp8_input.cw(tmp0_desc);
+    return FormatResult.e59(tmp3_bitMask0, tmp4_local0, tmp5_local1, tmp6_local2, tmp7_local3, null);
   }
-  or() {
-    return this.j59_1;
+  lr() {
+    return this.c59_1;
   }
-  o14() {
-    var tmp0_cached = Companion_getInstance().i59_1;
+  l14() {
+    var tmp0_cached = Companion_getInstance().b59_1;
     // Inline function 'kotlin.arrayOf' call
     // Inline function 'kotlin.js.unsafeCast' call
     // Inline function 'kotlin.js.asDynamic' call
-    return [StringSerializer_getInstance(), StringSerializer_getInstance(), tmp0_cached[2].r3(), tmp0_cached[3].r3()];
+    return [StringSerializer_getInstance(), StringSerializer_getInstance(), tmp0_cached[2].k3(), tmp0_cached[3].k3()];
   }
 }
 class FormatResult {
@@ -140,16 +160,16 @@ class FormatResult {
     this.edits = edits;
     this.editReasons = editReasons;
   }
-  m59() {
+  f59() {
     return this.formattedText;
   }
-  n59() {
+  g59() {
     return this.oldText;
   }
-  o59() {
+  h59() {
     return this.edits;
   }
-  p59() {
+  i59() {
     return this.editReasons;
   }
   equals(other) {
@@ -174,10 +194,10 @@ class FormatResult {
   toString() {
     return 'FormatResult(formattedText=' + this.formattedText + ', oldText=' + this.oldText + ', edits=' + toString(this.edits) + ', editReasons=' + toString(this.editReasons) + ')';
   }
-  static l59(seen0, formattedText, oldText, edits, editReasons, serializationConstructorMarker) {
+  static e59(seen0, formattedText, oldText, edits, editReasons, serializationConstructorMarker) {
     Companion_getInstance();
     if (!(15 === (15 & seen0))) {
-      throwMissingFieldException(seen0, 15, $serializer_getInstance().j59_1);
+      throwMissingFieldException(seen0, 15, $serializer_getInstance().c59_1);
     }
     var $this = createThis(this);
     $this.formattedText = formattedText;
@@ -190,7 +210,404 @@ class FormatResult {
 class EditReason extends Enum {
   constructor(name, ordinal, commonName) {
     super(name, ordinal);
-    this.s59_1 = commonName;
+    this.l59_1 = commonName;
+  }
+}
+class FormatterOptions {}
+class FormatterOptionsBuilder {
+  constructor() {
+    this.x59_1 = null;
+    this.y59_1 = null;
+    this.z59_1 = null;
+    this.a5a_1 = null;
+    this.b5a_1 = null;
+    this.c5a_1 = null;
+    this.d5a_1 = null;
+    this.e5a_1 = null;
+    this.f5a_1 = null;
+    this.g5a_1 = null;
+    this.h5a_1 = null;
+  }
+  m59() {
+    var tmp0_elvis_lhs = this.x59_1;
+    return tmp0_elvis_lhs == null ? 4 : tmp0_elvis_lhs;
+  }
+  i5a(tabSize) {
+    this.x59_1 = tabSize;
+    return this;
+  }
+  n59() {
+    var tmp0_elvis_lhs = this.y59_1;
+    return tmp0_elvis_lhs == null ? true : tmp0_elvis_lhs;
+  }
+  j5a(insert) {
+    this.y59_1 = insert;
+    return this;
+  }
+  o59() {
+    return this.z59_1;
+  }
+  k5a(trim) {
+    this.z59_1 = trim;
+    return this;
+  }
+  p59() {
+    return this.a5a_1;
+  }
+  l5a(insert) {
+    this.a5a_1 = insert;
+    return this;
+  }
+  q59() {
+    return this.b5a_1;
+  }
+  m5a(trim) {
+    this.b5a_1 = trim;
+    return this;
+  }
+  r59() {
+    return this.c5a_1;
+  }
+  n5a(minBlankLines) {
+    this.c5a_1 = minBlankLines;
+    return this;
+  }
+  s59() {
+    return this.d5a_1;
+  }
+  o5a(maxBlankLines) {
+    this.d5a_1 = maxBlankLines;
+    return this;
+  }
+  t59() {
+    return this.e5a_1;
+  }
+  p5a(indent) {
+    this.e5a_1 = indent;
+    return this;
+  }
+  u59() {
+    return this.f5a_1;
+  }
+  q5a(indent) {
+    this.f5a_1 = indent;
+    return this;
+  }
+  v59() {
+    return this.g5a_1;
+  }
+  r5a(newline) {
+    this.g5a_1 = newline;
+    return this;
+  }
+  w59() {
+    return this.h5a_1;
+  }
+  s5a(force) {
+    this.h5a_1 = force;
+    return this;
+  }
+}
+class Companion_0 {
+  constructor() {
+    this.t5a_1 = 4;
+    this.u5a_1 = true;
+    this.v5a_1 = false;
+    this.w5a_1 = true;
+    this.x5a_1 = 0;
+    this.y5a_1 = '\n';
+    this.z5a_1 = false;
+  }
+}
+class $serializer_0 {
+  constructor() {
+    $serializer_instance_0 = this;
+    var tmp0_serialDesc = new PluginGeneratedSerialDescriptor('com.bedalton.common.lsp.formatter.FormatterOptionsImpl', this, 1);
+    tmp0_serialDesc.w13('opts', true);
+    this.a5b_1 = tmp0_serialDesc;
+  }
+  b5b(encoder, value) {
+    var tmp0_desc = this.a5b_1;
+    var tmp1_output = encoder.bw(tmp0_desc);
+    if (tmp1_output.zx(tmp0_desc, 0) ? true : !(value.o5b() == null)) {
+      tmp1_output.vx(tmp0_desc, 0, FormatterOptionsSerializer_getInstance(), value.o5b());
+    }
+    tmp1_output.cw(tmp0_desc);
+  }
+  mr(encoder, value) {
+    return this.b5b(encoder, value instanceof FormatterOptionsImpl ? value : THROW_CCE());
+  }
+  nr(decoder) {
+    var tmp0_desc = this.a5b_1;
+    var tmp1_flag = true;
+    var tmp2_index = 0;
+    var tmp3_bitMask0 = 0;
+    var tmp4_local0 = null;
+    var tmp16_input = decoder.bw(tmp0_desc);
+    if (tmp16_input.sw()) {
+      tmp4_local0 = tmp16_input.pw(tmp0_desc, 0, FormatterOptionsSerializer_getInstance(), tmp4_local0);
+      tmp3_bitMask0 = tmp3_bitMask0 | 1;
+    } else
+      while (tmp1_flag) {
+        tmp2_index = tmp16_input.tw(tmp0_desc);
+        switch (tmp2_index) {
+          case -1:
+            tmp1_flag = false;
+            break;
+          case 0:
+            tmp4_local0 = tmp16_input.pw(tmp0_desc, 0, FormatterOptionsSerializer_getInstance(), tmp4_local0);
+            tmp3_bitMask0 = tmp3_bitMask0 | 1;
+            break;
+          default:
+            throw UnknownFieldException.et(tmp2_index);
+        }
+      }
+    tmp16_input.cw(tmp0_desc);
+    return FormatterOptionsImpl.p5b(tmp3_bitMask0, tmp4_local0, null);
+  }
+  lr() {
+    return this.a5b_1;
+  }
+  l14() {
+    // Inline function 'kotlin.arrayOf' call
+    // Inline function 'kotlin.js.unsafeCast' call
+    // Inline function 'kotlin.js.asDynamic' call
+    return [get_nullable(FormatterOptionsSerializer_getInstance())];
+  }
+}
+class FormatterOptionsImpl {
+  constructor(opts) {
+    opts = opts === VOID ? null : opts;
+    this.c5b_1 = opts;
+    var tmp = this;
+    tmp.d5b_1 = lazy_0(FormatterOptionsImpl$tabSize$delegate$lambda(this));
+    var tmp_0 = this;
+    tmp_0.e5b_1 = lazy_0(FormatterOptionsImpl$insertSpaces$delegate$lambda(this));
+    var tmp_1 = this;
+    tmp_1.f5b_1 = lazy_0(FormatterOptionsImpl$trimTrailingWhitespace$delegate$lambda(this));
+    var tmp_2 = this;
+    tmp_2.g5b_1 = lazy_0(FormatterOptionsImpl$insertFinalNewline$delegate$lambda(this));
+    var tmp_3 = this;
+    tmp_3.h5b_1 = lazy_0(FormatterOptionsImpl$trimFinalNewlines$delegate$lambda(this));
+    var tmp_4 = this;
+    tmp_4.i5b_1 = lazy_0(FormatterOptionsImpl$indentComments$delegate$lambda(this));
+    var tmp_5 = this;
+    tmp_5.j5b_1 = lazy_0(FormatterOptionsImpl$continuationIndent$delegate$lambda(this));
+    var tmp_6 = this;
+    tmp_6.k5b_1 = lazy_0(FormatterOptionsImpl$minBlankLines$delegate$lambda(this));
+    var tmp_7 = this;
+    tmp_7.l5b_1 = lazy_0(FormatterOptionsImpl$maxBlankLines$delegate$lambda(this));
+    var tmp_8 = this;
+    tmp_8.m5b_1 = lazy_0(FormatterOptionsImpl$newLineChar$delegate$lambda(this));
+    var tmp_9 = this;
+    tmp_9.n5b_1 = lazy_0(FormatterOptionsImpl$forceMinBlankLinesAfterComments$delegate$lambda(this));
+  }
+  o5b() {
+    return this.c5b_1;
+  }
+  m59() {
+    var tmp0 = this.d5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('tabSize', 1, tmp, FormatterOptionsImpl$_get_tabSize_$ref_hwkkhy(), null);
+    return tmp0.k3();
+  }
+  n59() {
+    var tmp0 = this.e5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('insertSpaces', 1, tmp, FormatterOptionsImpl$_get_insertSpaces_$ref_pa5tks(), null);
+    return tmp0.k3();
+  }
+  o59() {
+    var tmp0 = this.f5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('trimTrailingWhitespace', 1, tmp, FormatterOptionsImpl$_get_trimTrailingWhitespace_$ref_5jjnm9(), null);
+    return tmp0.k3();
+  }
+  p59() {
+    var tmp0 = this.g5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('insertFinalNewline', 1, tmp, FormatterOptionsImpl$_get_insertFinalNewline_$ref_negokt(), null);
+    return tmp0.k3();
+  }
+  q59() {
+    var tmp0 = this.h5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('trimFinalNewlines', 1, tmp, FormatterOptionsImpl$_get_trimFinalNewlines_$ref_mabf19(), null);
+    return tmp0.k3();
+  }
+  t59() {
+    var tmp0 = this.i5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('indentComments', 1, tmp, FormatterOptionsImpl$_get_indentComments_$ref_3c1vuy(), null);
+    return tmp0.k3();
+  }
+  u59() {
+    var tmp0 = this.j5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('continuationIndent', 1, tmp, FormatterOptionsImpl$_get_continuationIndent_$ref_slxct5(), null);
+    return tmp0.k3();
+  }
+  r59() {
+    var tmp0 = this.k5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('minBlankLines', 1, tmp, FormatterOptionsImpl$_get_minBlankLines_$ref_ghgmtv(), null);
+    return tmp0.k3();
+  }
+  s59() {
+    var tmp0 = this.l5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('maxBlankLines', 1, tmp, FormatterOptionsImpl$_get_maxBlankLines_$ref_xwldq7(), null);
+    return tmp0.k3();
+  }
+  v59() {
+    var tmp0 = this.m5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('newLineChar', 1, tmp, FormatterOptionsImpl$_get_newLineChar_$ref_ipusee(), null);
+    return tmp0.k3();
+  }
+  w59() {
+    var tmp0 = this.n5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('forceMinBlankLinesAfterComments', 1, tmp, FormatterOptionsImpl$_get_forceMinBlankLinesAfterComments_$ref_axojzm(), null);
+    return tmp0.k3();
+  }
+  static p5b(seen0, opts, serializationConstructorMarker) {
+    if (!(0 === (0 & seen0))) {
+      throwMissingFieldException(seen0, 0, $serializer_getInstance_0().a5b_1);
+    }
+    var $this = createThis(this);
+    if (0 === (seen0 & 1))
+      $this.c5b_1 = null;
+    else
+      $this.c5b_1 = opts;
+    var tmp = $this;
+    tmp.d5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax($this));
+    var tmp_0 = $this;
+    tmp_0.e5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_0($this));
+    var tmp_1 = $this;
+    tmp_1.f5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_1($this));
+    var tmp_2 = $this;
+    tmp_2.g5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_2($this));
+    var tmp_3 = $this;
+    tmp_3.h5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_3($this));
+    var tmp_4 = $this;
+    tmp_4.i5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_4($this));
+    var tmp_5 = $this;
+    tmp_5.j5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_5($this));
+    var tmp_6 = $this;
+    tmp_6.k5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_6($this));
+    var tmp_7 = $this;
+    tmp_7.l5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_7($this));
+    var tmp_8 = $this;
+    tmp_8.m5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_8($this));
+    var tmp_9 = $this;
+    tmp_9.n5b_1 = lazy_0(FormatterOptionsImpl$_init_$lambda_68b2ax_9($this));
+    return $this;
+  }
+}
+class FormatterOptionsSerializer {
+  constructor() {
+    FormatterOptionsSerializer_instance = this;
+    var tmp = this;
+    tmp.q5b_1 = lazy_0(FormatterOptionsSerializer$descriptor$delegate$lambda);
+  }
+  lr() {
+    var tmp0 = this.q5b_1;
+    var tmp = KProperty1;
+    // Inline function 'kotlin.getValue' call
+    getPropertyCallableRef('descriptor', 1, tmp, FormatterOptionsSerializer$_get_descriptor_$ref_lajlo7(), null);
+    return tmp0.k3();
+  }
+  nr(decoder) {
+    var descriptor = this.lr();
+    var o = decoder.bw(descriptor);
+    var tabSize = null;
+    var insertSpaces = null;
+    var trimTrailingWhitespace = null;
+    var insertFinalNewline = null;
+    var trimFinalNewlines = null;
+    var minBlankLines = null;
+    var maxBlankLines = null;
+    var indentComments = null;
+    var continuationIndent = null;
+    var newLineChar = null;
+    var forceMinBlankLinesAfterComments = null;
+    var nullableInt = get_nullable(serializer_0(IntCompanionObject_instance));
+    var nullableBool = get_nullable(serializer_1(BooleanCompanionObject_instance));
+    $l$loop: while (true) {
+      var i = o.tw(descriptor);
+      switch (i) {
+        case 0:
+          tabSize = o.qw(descriptor, i, nullableInt);
+          break;
+        case 1:
+          insertSpaces = o.qw(descriptor, i, nullableBool);
+          break;
+        case 2:
+          trimTrailingWhitespace = o.qw(descriptor, i, nullableBool);
+          break;
+        case 3:
+          insertFinalNewline = o.qw(descriptor, i, nullableBool);
+          break;
+        case 4:
+          trimFinalNewlines = o.qw(descriptor, i, nullableBool);
+          break;
+        case 5:
+          minBlankLines = o.qw(descriptor, i, nullableInt);
+          break;
+        case 6:
+          maxBlankLines = o.qw(descriptor, i, nullableInt);
+          break;
+        case 7:
+          indentComments = o.qw(descriptor, i, nullableBool);
+          break;
+        case 8:
+          continuationIndent = o.qw(descriptor, i, nullableInt);
+          break;
+        case 9:
+          newLineChar = o.qw(descriptor, i, get_nullable(serializer_2(StringCompanionObject_instance)));
+          break;
+        case 10:
+          forceMinBlankLinesAfterComments = o.qw(descriptor, i, nullableBool);
+          break;
+        case -1:
+          break $l$loop;
+      }
+    }
+    o.cw(descriptor);
+    return (new FormatterOptionsBuilder()).i5a(tabSize).j5a(insertSpaces).k5a(trimTrailingWhitespace).l5a(insertFinalNewline).m5a(trimFinalNewlines).n5a(minBlankLines).o5a(maxBlankLines).p5a(indentComments).q5a(continuationIndent).r5a(newLineChar).s5a(forceMinBlankLinesAfterComments);
+  }
+  r5b(encoder, value) {
+    var nullableBool = get_nullable(serializer_1(BooleanCompanionObject_instance));
+    var nullableInt = get_nullable(serializer_0(IntCompanionObject_instance));
+    var descriptor = this.lr();
+    var o = encoder.bw(descriptor);
+    o.vx(descriptor, 0, nullableInt, value.m59());
+    o.vx(descriptor, 1, nullableBool, value.n59());
+    o.vx(descriptor, 2, nullableBool, value.o59());
+    o.vx(descriptor, 3, nullableBool, value.p59());
+    o.vx(descriptor, 4, nullableBool, value.q59());
+    o.vx(descriptor, 5, nullableInt, value.r59());
+    o.vx(descriptor, 6, nullableInt, value.s59());
+    o.vx(descriptor, 7, nullableBool, value.t59());
+    o.vx(descriptor, 8, nullableInt, value.u59());
+    o.vx(descriptor, 9, get_nullable(serializer_2(StringCompanionObject_instance)), value.v59());
+    o.vx(descriptor, 10, nullableBool, value.w59());
+    o.cw(descriptor);
+  }
+  mr(encoder, value) {
+    return this.r5b(encoder, (!(value == null) ? isInterface(value, FormatterOptions) : false) ? value : THROW_CCE());
   }
 }
 //endregion
@@ -287,16 +704,342 @@ function EditReason_TAB_CHANGE_getInstance() {
   EditReason_initEntries();
   return EditReason_TAB_CHANGE_instance;
 }
+var Companion_instance_0;
+function Companion_getInstance_0() {
+  return Companion_instance_0;
+}
+var $serializer_instance_0;
+function $serializer_getInstance_0() {
+  if ($serializer_instance_0 === VOID)
+    new $serializer_0();
+  return $serializer_instance_0;
+}
+function FormatterOptionsImpl$tabSize$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.m59();
+    return tmp1_elvis_lhs == null ? 4 : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_get_tabSize_$ref_hwkkhy() {
+  return (p0) => p0.m59();
+}
+function FormatterOptionsImpl$insertSpaces$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.n59();
+    return tmp1_elvis_lhs == null ? true : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_get_insertSpaces_$ref_pa5tks() {
+  return (p0) => p0.n59();
+}
+function FormatterOptionsImpl$trimTrailingWhitespace$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.o59();
+  };
+}
+function FormatterOptionsImpl$_get_trimTrailingWhitespace_$ref_5jjnm9() {
+  return (p0) => p0.o59();
+}
+function FormatterOptionsImpl$insertFinalNewline$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.p59();
+    return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_get_insertFinalNewline_$ref_negokt() {
+  return (p0) => p0.p59();
+}
+function FormatterOptionsImpl$trimFinalNewlines$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q59();
+  };
+}
+function FormatterOptionsImpl$_get_trimFinalNewlines_$ref_mabf19() {
+  return (p0) => p0.q59();
+}
+function FormatterOptionsImpl$indentComments$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.t59();
+    return tmp1_elvis_lhs == null ? true : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_get_indentComments_$ref_3c1vuy() {
+  return (p0) => p0.t59();
+}
+function FormatterOptionsImpl$continuationIndent$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.u59();
+    return tmp1_elvis_lhs == null ? get_defaultContinuationIndent(this$0) : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_get_continuationIndent_$ref_slxct5() {
+  return (p0) => p0.u59();
+}
+function FormatterOptionsImpl$minBlankLines$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.r59();
+    // Inline function 'kotlin.math.max' call
+    var b = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
+    return Math.max(0, b);
+  };
+}
+function FormatterOptionsImpl$_get_minBlankLines_$ref_ghgmtv() {
+  return (p0) => p0.r59();
+}
+function FormatterOptionsImpl$maxBlankLines$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    return coalesceMaxBlankLines(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.s59());
+  };
+}
+function FormatterOptionsImpl$_get_maxBlankLines_$ref_xwldq7() {
+  return (p0) => p0.s59();
+}
+function FormatterOptionsImpl$newLineChar$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.v59();
+    return tmp1_elvis_lhs == null ? '\n' : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_get_newLineChar_$ref_ipusee() {
+  return (p0) => p0.v59();
+}
+function FormatterOptionsImpl$forceMinBlankLinesAfterComments$delegate$lambda(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.w59();
+    return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_get_forceMinBlankLinesAfterComments_$ref_axojzm() {
+  return (p0) => p0.w59();
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.m59();
+    return tmp1_elvis_lhs == null ? 4 : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax_0(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.n59();
+    return tmp1_elvis_lhs == null ? true : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax_1(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.o59();
+  };
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax_2(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.p59();
+    return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax_3(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    return tmp0_safe_receiver == null ? null : tmp0_safe_receiver.q59();
+  };
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax_4(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.t59();
+    return tmp1_elvis_lhs == null ? true : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax_5(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.u59();
+    return tmp1_elvis_lhs == null ? get_defaultContinuationIndent(this$0) : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax_6(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.r59();
+    // Inline function 'kotlin.math.max' call
+    var b = tmp1_elvis_lhs == null ? 0 : tmp1_elvis_lhs;
+    return Math.max(0, b);
+  };
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax_7(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    return coalesceMaxBlankLines(tmp0_safe_receiver == null ? null : tmp0_safe_receiver.s59());
+  };
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax_8(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.v59();
+    return tmp1_elvis_lhs == null ? '\n' : tmp1_elvis_lhs;
+  };
+}
+function FormatterOptionsImpl$_init_$lambda_68b2ax_9(this$0) {
+  return () => {
+    var tmp0_safe_receiver = this$0.o5b();
+    var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.w59();
+    return tmp1_elvis_lhs == null ? false : tmp1_elvis_lhs;
+  };
+}
+function get_defaultContinuationIndent(_this__u8e3s4) {
+  // Inline function 'kotlin.math.floor' call
+  var x = _this__u8e3s4.m59() / 2.0;
+  var tmp$ret$0 = Math.floor(x);
+  // Inline function 'kotlin.math.max' call
+  var b = numberToInt(tmp$ret$0);
+  return Math.max(1, b);
+}
+function coalesceMaxBlankLines(maxBlankLines) {
+  var tmp;
+  if ((maxBlankLines == null ? -1 : maxBlankLines) < 0) {
+    tmp = 32767;
+  } else {
+    tmp = maxBlankLines == null ? 32767 : maxBlankLines;
+  }
+  return tmp;
+}
+function FormatterOptionsSerializer$descriptor$delegate$lambda() {
+  return buildClassSerialDescriptor('FormatterOptions', [], FormatterOptionsSerializer$descriptor$delegate$lambda$lambda);
+}
+function FormatterOptionsSerializer$descriptor$delegate$lambda$lambda($this$buildClassSerialDescriptor) {
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var annotations = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_0 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), false));
+  var descriptor = (isInterface(this_0, KSerializer) ? this_0 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu('tabSize', descriptor, annotations, false);
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var elementName = 'insertSpaces';
+  var annotations_0 = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_1 = serializer(createKType(PrimitiveClasses_getInstance().be(), arrayOf([]), false));
+  var descriptor_0 = (isInterface(this_1, KSerializer) ? this_1 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName, descriptor_0, annotations_0, false);
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var elementName_0 = 'trimTrailingWhitespace';
+  var annotations_1 = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_2 = serializer(createKType(PrimitiveClasses_getInstance().be(), arrayOf([]), true));
+  var descriptor_1 = (isInterface(this_2, KSerializer) ? this_2 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_0, descriptor_1, annotations_1, false);
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var elementName_1 = 'insertFinalNewline';
+  var annotations_2 = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_3 = serializer(createKType(PrimitiveClasses_getInstance().be(), arrayOf([]), true));
+  var descriptor_2 = (isInterface(this_3, KSerializer) ? this_3 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_1, descriptor_2, annotations_2, false);
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var elementName_2 = 'trimFinalNewlines';
+  var annotations_3 = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_4 = serializer(createKType(PrimitiveClasses_getInstance().be(), arrayOf([]), true));
+  var descriptor_3 = (isInterface(this_4, KSerializer) ? this_4 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_2, descriptor_3, annotations_3, false);
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var elementName_3 = 'minBlankLines';
+  var annotations_4 = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_5 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), true));
+  var descriptor_4 = (isInterface(this_5, KSerializer) ? this_5 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_3, descriptor_4, annotations_4, false);
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var elementName_4 = 'maxBlankLines';
+  var annotations_5 = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_6 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), true));
+  var descriptor_5 = (isInterface(this_6, KSerializer) ? this_6 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_4, descriptor_5, annotations_5, false);
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var elementName_5 = 'indentComments';
+  var annotations_6 = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_7 = serializer(createKType(PrimitiveClasses_getInstance().be(), arrayOf([]), true));
+  var descriptor_6 = (isInterface(this_7, KSerializer) ? this_7 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_5, descriptor_6, annotations_6, false);
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var elementName_6 = 'continuationIndent';
+  var annotations_7 = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_8 = serializer(createKType(PrimitiveClasses_getInstance().ee(), arrayOf([]), true));
+  var descriptor_7 = (isInterface(this_8, KSerializer) ? this_8 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_6, descriptor_7, annotations_7, false);
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var elementName_7 = 'newLineChar';
+  var annotations_8 = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_9 = serializer(createKType(PrimitiveClasses_getInstance().je(), arrayOf([]), true));
+  var descriptor_8 = (isInterface(this_9, KSerializer) ? this_9 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_7, descriptor_8, annotations_8, false);
+  // Inline function 'kotlinx.serialization.descriptors.element' call
+  var elementName_8 = 'forceMinBlankLinesAfterComments';
+  var annotations_9 = emptyList();
+  // Inline function 'kotlinx.serialization.serializer' call
+  // Inline function 'kotlinx.serialization.internal.cast' call
+  var this_10 = serializer(createKType(PrimitiveClasses_getInstance().be(), arrayOf([]), true));
+  var descriptor_9 = (isInterface(this_10, KSerializer) ? this_10 : THROW_CCE()).lr();
+  $this$buildClassSerialDescriptor.xu(elementName_8, descriptor_9, annotations_9, false);
+  return Unit_instance;
+}
+function FormatterOptionsSerializer$_get_descriptor_$ref_lajlo7() {
+  return (p0) => p0.lr();
+}
+var FormatterOptionsSerializer_instance;
+function FormatterOptionsSerializer_getInstance() {
+  if (FormatterOptionsSerializer_instance === VOID)
+    new FormatterOptionsSerializer();
+  return FormatterOptionsSerializer_instance;
+}
 //region block: post-declaration
 initMetadataForCompanion(Companion);
-protoOf($serializer).p14 = typeParametersSerializers;
+protoOf($serializer).m14 = typeParametersSerializers;
 initMetadataForObject($serializer, '$serializer', VOID, VOID, [GeneratedSerializer]);
 initMetadataForClass(FormatResult, 'FormatResult', VOID, VOID, VOID, VOID, VOID, {0: $serializer_getInstance});
 initMetadataForClass(EditReason, 'EditReason');
+initMetadataForInterface(FormatterOptions, 'FormatterOptions', VOID, VOID, VOID, VOID, VOID, {0: FormatterOptionsSerializer_getInstance});
+initMetadataForClass(FormatterOptionsBuilder, 'FormatterOptionsBuilder', FormatterOptionsBuilder, VOID, [FormatterOptions]);
+initMetadataForCompanion(Companion_0);
+protoOf($serializer_0).m14 = typeParametersSerializers;
+initMetadataForObject($serializer_0, '$serializer', VOID, VOID, [GeneratedSerializer]);
+initMetadataForClass(FormatterOptionsImpl, 'FormatterOptionsImpl', FormatterOptionsImpl, VOID, [FormatterOptions], VOID, VOID, {0: $serializer_getInstance_0});
+initMetadataForObject(FormatterOptionsSerializer, 'FormatterOptionsSerializer', VOID, VOID, [KSerializer]);
+//endregion
+//region block: init
+Companion_instance_0 = new Companion_0();
 //endregion
 //region block: exports
 export {
   FormatResult as FormatResult115095obxt6jw,
+  FormatterOptionsImpl as FormatterOptionsImplhxwshkac15d8,
+  FormatterOptions as FormatterOptions30b0j2hzx8867,
   EditReason_INCORRECT_CASE_getInstance as EditReason_INCORRECT_CASE_getInstance1y65lwjubz3iv,
   EditReason_NEWLINES_NEEDED_getInstance as EditReason_NEWLINES_NEEDED_getInstance24861lh5a763c,
   EditReason_NEWLINES_TOO_MANY_getInstance as EditReason_NEWLINES_TOO_MANY_getInstance3h5jgowgliuvp,

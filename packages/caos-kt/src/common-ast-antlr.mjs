@@ -28,21 +28,21 @@ function toRange(_this__u8e3s4, offsetIndex, offsetLine, offsetColumn) {
   offsetIndex = offsetIndex === VOID ? null : offsetIndex;
   offsetLine = offsetLine === VOID ? null : offsetLine;
   offsetColumn = offsetColumn === VOID ? null : offsetColumn;
-  var startIndex = _this__u8e3s4.j1e();
-  var startLine = _this__u8e3s4.h1e();
-  var startColumn = _this__u8e3s4.m29();
-  var stopIndex = _this__u8e3s4.q29();
+  var startIndex = _this__u8e3s4.g1e();
+  var startLine = _this__u8e3s4.e1e();
+  var startColumn = _this__u8e3s4.l29();
+  var stopIndex = _this__u8e3s4.p29();
   // Inline function 'kotlin.text.orEmpty' call
-  var tmp0_elvis_lhs = _this__u8e3s4.m1f();
+  var tmp0_elvis_lhs = _this__u8e3s4.j1f();
   var tmp$ret$0 = tmp0_elvis_lhs == null ? '' : tmp0_elvis_lhs;
   var lines = split(tmp$ret$0, ['\n']);
-  var endLine = (startLine + lines.i2() | 0) - 1 | 0;
+  var endLine = (startLine + lines.b2() | 0) - 1 | 0;
   var tmp;
-  if (lines.i2() > 1) {
+  if (lines.b2() > 1) {
     tmp = last(lines).length;
   } else {
     // Inline function 'kotlin.text.orEmpty' call
-    var tmp0_elvis_lhs_0 = _this__u8e3s4.m1f();
+    var tmp0_elvis_lhs_0 = _this__u8e3s4.j1f();
     tmp = startColumn + (tmp0_elvis_lhs_0 == null ? '' : tmp0_elvis_lhs_0).length | 0;
   }
   var stopColumn = tmp;
@@ -64,19 +64,19 @@ function textRangeWithoutParserIndex(_this__u8e3s4) {
   return createRangeWithIndex_1(_this__u8e3s4, null);
 }
 function textRangeWithoutParserIndex_0(_this__u8e3s4) {
-  return createRangeWithIndex_2(_this__u8e3s4.z29(), _this__u8e3s4.a2a(), _this__u8e3s4.j1e(), _this__u8e3s4.q29(), null);
+  return createRangeWithIndex_2(_this__u8e3s4.y29(), _this__u8e3s4.z29(), _this__u8e3s4.g1e(), _this__u8e3s4.p29(), null);
 }
 function get_trueText(_this__u8e3s4) {
-  var a = ensureNotNull(_this__u8e3s4.n2j_1).j1e();
-  var b = ensureNotNull(_this__u8e3s4.o2j_1).q29();
+  var a = ensureNotNull(_this__u8e3s4.m2j_1).g1e();
+  var b = ensureNotNull(_this__u8e3s4.n2j_1).p29();
   var interval = new Interval(a, b);
-  return ensureNotNull(ensureNotNull(_this__u8e3s4.n2j_1).r29()).q28(interval);
+  return ensureNotNull(ensureNotNull(_this__u8e3s4.m2j_1).q29()).p28(interval);
 }
 function textRangeWithParserIndex(_this__u8e3s4, parserIndex) {
   return createRangeWithIndex_1(_this__u8e3s4, parserIndex);
 }
 function textRangeWithParserIndex_0(_this__u8e3s4, parserIndex) {
-  return createRangeWithIndex_2(_this__u8e3s4.z29(), _this__u8e3s4.a2a(), _this__u8e3s4.j1e(), _this__u8e3s4.q29(), parserIndex);
+  return createRangeWithIndex_2(_this__u8e3s4.y29(), _this__u8e3s4.z29(), _this__u8e3s4.g1e(), _this__u8e3s4.p29(), parserIndex);
 }
 function createRangeWithIndex(start, end, parserIndex) {
   parserIndex = parserIndex === VOID ? null : parserIndex;
@@ -85,94 +85,94 @@ function createRangeWithIndex(start, end, parserIndex) {
 function createRangeWithIndex_0(start, end, parserIndex, offsetIndex, offsetLine, offsetColumn) {
   offsetColumn = offsetColumn === VOID ? 0 : offsetColumn;
   var tmp;
-  if (start.h1e() === end.h1e()) {
-    var tmp_0 = end.m29();
-    var tmp0_safe_receiver = start.m1f();
+  if (start.e1e() === end.e1e()) {
+    var tmp_0 = end.l29();
+    var tmp0_safe_receiver = start.j1f();
     var tmp1_elvis_lhs = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.length;
-    tmp = tmp_0 + (tmp1_elvis_lhs == null ? end.m29() - start.m29() | 0 : tmp1_elvis_lhs) | 0;
+    tmp = tmp_0 + (tmp1_elvis_lhs == null ? end.l29() - start.l29() | 0 : tmp1_elvis_lhs) | 0;
   } else {
-    tmp = end.m29();
+    tmp = end.l29();
   }
   var endColumn = tmp;
-  if (end.h1e() === start.h1e() && endColumn === start.m29() || (endColumn - 1 | 0) === start.m29()) {
-    var tmp_1 = start.m29() + (end.q29() - start.j1e() | 0) | 0;
+  if (end.e1e() === start.e1e() && endColumn === start.l29() || (endColumn - 1 | 0) === start.l29()) {
+    var tmp_1 = start.l29() + (end.p29() - start.g1e() | 0) | 0;
     var tmp_2 = endColumn;
-    var tmp2_safe_receiver = start.a2a();
-    var tmp3_elvis_lhs = maxByWithNulls([tmp_1, tmp_2, tmp2_safe_receiver == null ? null : tmp2_safe_receiver.q2l_1]);
-    endColumn = tmp3_elvis_lhs == null ? end.m29() : tmp3_elvis_lhs;
+    var tmp2_safe_receiver = start.z29();
+    var tmp3_elvis_lhs = maxByWithNulls([tmp_1, tmp_2, tmp2_safe_receiver == null ? null : tmp2_safe_receiver.p2l_1]);
+    endColumn = tmp3_elvis_lhs == null ? end.l29() : tmp3_elvis_lhs;
   }
-  if (end.h1e() === 1) {
+  if (end.e1e() === 1) {
     endColumn = endColumn + offsetColumn | 0;
   }
-  var offsetStartIndex = start.j1e() + offsetIndex | 0;
-  var offsetEndIndex = end.q29() + offsetIndex | 0;
-  var startColumn = start.m29() + (start.h1e() === 1 ? offsetColumn : 0) | 0;
-  if (start.h1e() === end.h1e()) {
+  var offsetStartIndex = start.g1e() + offsetIndex | 0;
+  var offsetEndIndex = end.p29() + offsetIndex | 0;
+  var startColumn = start.l29() + (start.e1e() === 1 ? offsetColumn : 0) | 0;
+  if (start.e1e() === end.e1e()) {
     // Inline function 'kotlin.comparisons.maxOf' call
     var a = endColumn;
     endColumn = Math.max(a, startColumn, 0);
   }
   // Inline function 'kotlin.comparisons.maxOf' call
   var tmp4_endIndex = Math.max(offsetEndIndex, offsetStartIndex);
-  var tmp5_start = new PositionImpl((start.h1e() - 1 | 0) + offsetLine | 0, startColumn);
-  var tmp6_end = new PositionImpl((end.h1e() - 1 | 0) + offsetLine | 0, sub1OrZero(endColumn));
+  var tmp5_start = new PositionImpl((start.e1e() - 1 | 0) + offsetLine | 0, startColumn);
+  var tmp6_end = new PositionImpl((end.e1e() - 1 | 0) + offsetLine | 0, sub1OrZero(endColumn));
   return new RangeWithIndexImpl(tmp5_start, tmp6_end, offsetStartIndex, tmp4_endIndex, parserIndex);
 }
 function createRangeWithIndex_1(ctx, parserIndex) {
   parserIndex = parserIndex === VOID ? null : parserIndex;
-  var start = ctx.n2j_1;
-  var tmp0_elvis_lhs = ctx.o2j_1;
+  var start = ctx.m2j_1;
+  var tmp0_elvis_lhs = ctx.n2j_1;
   var stop = tmp0_elvis_lhs == null ? start : tmp0_elvis_lhs;
   if (!(start == null) && !(stop == null)) {
-    if (stop.h1e() < start.h1e()) {
+    if (stop.e1e() < start.e1e()) {
       return createRangeWithIndex(start, start);
-    } else if (stop.h1e() === start.h1e() && stop.m29() <= start.m29()) {
+    } else if (stop.e1e() === start.e1e() && stop.l29() <= start.l29()) {
       return createRangeWithIndex(start, start);
     }
   }
   var position = getPositionSafe(ctx);
-  var startPosition = position == null ? null : position.a2m_1;
+  var startPosition = position == null ? null : position.z2l_1;
   if (start == null && startPosition == null) {
-    throw NullPointerException.uc('Start position cannot be null');
+    throw NullPointerException.rc('Start position cannot be null');
   }
   if (stop == null) {
-    throw NullPointerException.uc('Stop position cannot be null');
+    throw NullPointerException.rc('Stop position cannot be null');
   }
   var stopPosition = furthestPoint(start, stop);
-  var tmp3_elvis_lhs = start == null ? null : start.j1e();
+  var tmp3_elvis_lhs = start == null ? null : start.g1e();
   var startIndex = tmp3_elvis_lhs == null ? 0 : tmp3_elvis_lhs;
   // Inline function 'kotlin.comparisons.maxOf' call
-  var a = stop.q29() - 1 | 0;
+  var a = stop.p29() - 1 | 0;
   var endIndex = Math.max(a, startIndex);
-  var tmp5_elvis_lhs = start == null ? null : start.h1e();
+  var tmp5_elvis_lhs = start == null ? null : start.e1e();
   var tmp;
   if (tmp5_elvis_lhs == null) {
-    tmp = startPosition == null ? null : startPosition.p2l_1;
+    tmp = startPosition == null ? null : startPosition.o2l_1;
   } else {
     tmp = tmp5_elvis_lhs;
   }
   var tmp7_elvis_lhs = tmp;
   var tmp_0;
   if (tmp7_elvis_lhs == null) {
-    throw NullPointerException.uc('Line cannot be null');
+    throw NullPointerException.rc('Line cannot be null');
   } else {
     tmp_0 = tmp7_elvis_lhs;
   }
   var startLine = tmp_0;
-  var tmp_1 = start == null ? null : start.m29();
-  var tmp10_elvis_lhs = minByWithNulls([tmp_1, startPosition == null ? null : startPosition.q2l_1]);
+  var tmp_1 = start == null ? null : start.l29();
+  var tmp10_elvis_lhs = minByWithNulls([tmp_1, startPosition == null ? null : startPosition.p2l_1]);
   var tmp_2;
   if (tmp10_elvis_lhs == null) {
-    throw NullPointerException.uc('Start column cannot be null');
+    throw NullPointerException.rc('Start column cannot be null');
   } else {
     tmp_2 = tmp10_elvis_lhs;
   }
   var startColumn = tmp_2;
-  var stopLine = stop.h1e();
-  var tmp11_elvis_lhs = maxByWithNulls([stop.m29(), stopPosition.q2l_1, furthestChar(start, stop)]);
+  var stopLine = stop.e1e();
+  var tmp11_elvis_lhs = maxByWithNulls([stop.l29(), stopPosition.p2l_1, furthestChar(start, stop)]);
   var tmp_3;
   if (tmp11_elvis_lhs == null) {
-    throw NullPointerException.uc('stop column cannot be null');
+    throw NullPointerException.rc('stop column cannot be null');
   } else {
     tmp_3 = tmp11_elvis_lhs;
   }
@@ -185,22 +185,22 @@ function createRangeWithIndex_2(start, stop, startIndex, stopIndex, parserIndex)
   var stopNotNull = ensureNotNull(furthestPoint_0([stop, start]));
   // Inline function 'kotlin.comparisons.maxOf' call
   var tmp0_endIndex = Math.max(stopIndex, startIndex);
-  var tmp1_start = new PositionImpl(start.p2l_1 - 1 | 0, start.q2l_1);
-  var tmp = stopNotNull.p2l_1 - 1 | 0;
+  var tmp1_start = new PositionImpl(start.o2l_1 - 1 | 0, start.p2l_1);
+  var tmp = stopNotNull.o2l_1 - 1 | 0;
   var tmp_0;
-  if (stopNotNull.p2l_1 === start.p2l_1) {
-    var tmp2 = start.q2l_1;
+  if (stopNotNull.o2l_1 === start.o2l_1) {
+    var tmp2 = start.p2l_1;
     // Inline function 'kotlin.comparisons.maxOf' call
-    var c = stopNotNull.q2l_1;
+    var c = stopNotNull.p2l_1;
     tmp_0 = Math.max(0, tmp2, c);
   } else {
-    tmp_0 = stopNotNull.q2l_1;
+    tmp_0 = stopNotNull.p2l_1;
   }
   var tmp2_end = new PositionImpl(tmp, sub1OrZero(tmp_0));
   return new RangeWithIndexImpl(tmp1_start, tmp2_end, startIndex, tmp0_endIndex, parserIndex);
 }
 function toPosition(_this__u8e3s4) {
-  return new PositionImpl(_this__u8e3s4.h1e() - 1 | 0, _this__u8e3s4.m29());
+  return new PositionImpl(_this__u8e3s4.e1e() - 1 | 0, _this__u8e3s4.l29());
 }
 function maxByWithNulls(values) {
   return maxOrNull(filterNotNull(values));
@@ -215,13 +215,13 @@ function sub1OrZero(_this__u8e3s4) {
   return tmp;
 }
 function furthestPoint(start, end) {
-  var tmp = start == null ? null : start.z29();
-  var tmp_0 = start == null ? null : start.a2a();
-  var tmp_1 = end == null ? null : end.a2a();
-  var tmp4_elvis_lhs = furthestPoint_0([tmp, tmp_0, tmp_1, end == null ? null : end.z29()]);
+  var tmp = start == null ? null : start.y29();
+  var tmp_0 = start == null ? null : start.z29();
+  var tmp_1 = end == null ? null : end.z29();
+  var tmp4_elvis_lhs = furthestPoint_0([tmp, tmp_0, tmp_1, end == null ? null : end.y29()]);
   var tmp_2;
   if (tmp4_elvis_lhs == null) {
-    throw NullPointerException.uc('No valid point data found in tokens');
+    throw NullPointerException.rc('No valid point data found in tokens');
   } else {
     tmp_2 = tmp4_elvis_lhs;
   }
@@ -233,50 +233,50 @@ function minByWithNulls(values) {
 function furthestChar(start, end) {
   var tmp;
   if (!(start == null)) {
-    var tmp_0 = start.h1e();
-    tmp = tmp_0 === (end == null ? null : end.h1e());
+    var tmp_0 = start.e1e();
+    tmp = tmp_0 === (end == null ? null : end.e1e());
   } else {
     tmp = false;
   }
   if (tmp) {
-    var tmp0_safe_receiver = start.m1f();
+    var tmp0_safe_receiver = start.j1f();
     var tmp1_safe_receiver = tmp0_safe_receiver == null ? null : tmp0_safe_receiver.length;
     if (tmp1_safe_receiver == null)
       null;
     else {
       // Inline function 'kotlin.let' call
-      return start.m29() + tmp1_safe_receiver | 0;
+      return start.l29() + tmp1_safe_receiver | 0;
     }
   }
-  return furthestPoint(start, end).q2l_1;
+  return furthestPoint(start, end).p2l_1;
 }
 function furthestPoint_0(points) {
   var pointsNotNull = filterNotNull(points);
-  if (pointsNotNull.b1()) {
+  if (pointsNotNull.u()) {
     return null;
   }
-  if (pointsNotNull.i2() === 1) {
+  if (pointsNotNull.b2() === 1) {
     return points[0];
   }
   var currentPoint = first(pointsNotNull);
-  var _iterator__ex2g4s = drop(pointsNotNull, 1).d1();
-  $l$loop_0: while (_iterator__ex2g4s.e1()) {
-    var point = _iterator__ex2g4s.f1();
-    if (point.p2l_1 < currentPoint.p2l_1) {
+  var _iterator__ex2g4s = drop(pointsNotNull, 1).w();
+  $l$loop_0: while (_iterator__ex2g4s.x()) {
+    var point = _iterator__ex2g4s.y();
+    if (point.o2l_1 < currentPoint.o2l_1) {
       continue $l$loop_0;
     }
-    if (point.p2l_1 > currentPoint.p2l_1) {
+    if (point.o2l_1 > currentPoint.o2l_1) {
       currentPoint = point;
       continue $l$loop_0;
     }
-    if (point.q2l_1 > point.q2l_1) {
+    if (point.p2l_1 > point.p2l_1) {
       currentPoint = point;
     }
   }
   return currentPoint;
 }
 function getPositionSafe(_this__u8e3s4) {
-  var tmp0_elvis_lhs = _this__u8e3s4.n2j_1;
+  var tmp0_elvis_lhs = _this__u8e3s4.m2j_1;
   var tmp;
   if (tmp0_elvis_lhs == null) {
     return null;
@@ -286,14 +286,14 @@ function getPositionSafe(_this__u8e3s4) {
   var start = tmp;
   var tmp_0;
   try {
-    tmp_0 = _this__u8e3s4.m2k();
+    tmp_0 = _this__u8e3s4.l2k();
   } catch ($p) {
     var tmp_1;
     if ($p instanceof Error) {
       var _unused_var__etf5q3 = $p;
       var tmp_2;
       try {
-        tmp_2 = new Position(start.z29(), start.z29());
+        tmp_2 = new Position(start.y29(), start.y29());
       } catch ($p) {
         var tmp_3;
         if ($p instanceof Exception) {
