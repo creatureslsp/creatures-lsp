@@ -19,13 +19,10 @@ type ActionCreator = (params: CodeActionParams, getVariant: () => Promise<GameVa
 
 const errorTypes = ErrorTypes.getInstance();
 
-export function registerCaosCodeActions(register: boolean) {
-    if (register) {
-        connection.onCodeAction(codeActionHandler);
+export const caosCodeActionHandler = async (params: CodeActionParams): Promise<Action[]> => {
+    if (!params.textDocument.uri.toLowerCase().endsWith(".cos") ) {
+        return [];
     }
-}
-
-const codeActionHandler: ServerRequestHandler<CodeActionParams, Action[] | undefined | null, Action[], void> = async (params: CodeActionParams): Promise<Action[]> => {
     try {
         return await _codeActionHandler(params)
     } catch(e) {
@@ -36,6 +33,9 @@ const codeActionHandler: ServerRequestHandler<CodeActionParams, Action[] | undef
 };
 
 const _codeActionHandler = async (params: CodeActionParams): Promise<Action[]> => {
+    if (!params.context.diagnostics) {
+        return [];
+    }
     const actions: Action[] = [];
     const getDocumentAsync = createCacheablePromise(() => {
         return getDocumentText(params.textDocument.uri);

@@ -15,7 +15,7 @@ export async function handleCommandCatalogue(params: ExecuteCommandParams): Prom
     try {
         return await commandMap[params.command](params);
     } catch(e) {
-        Log.e(`Failure catalogue in command <${params.command}>; ${e}`);
+        Log.e(`Failure in catalogue command <${params.command}>; ${e}`);
         return {status: "error", message: `Failure in catalogue command <${params.command}>; ${e}`}
     }
 }
