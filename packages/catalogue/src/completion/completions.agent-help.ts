@@ -76,7 +76,7 @@ export function appendAgentHelpCompletion(cursor: CatalogueCursorData, out: Comp
     }
     
     out.push(createCompletionItem(
-        ("\"" + "Agent Help " + tail).replace(/  +/, " "),
+        ("Agent Help " + tail).replace(/  +/, " "),
         toVsRange(range, false, isVsCode() ? 1 : 0),
     ));
 }
