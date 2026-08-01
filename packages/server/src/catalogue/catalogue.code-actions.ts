@@ -8,6 +8,7 @@ import {Log} from "../ConnLogger.js";
 import {MALFORMED_AGENT_HELP_TAG_ERROR_CODE} from "./inspections/catalogue.inspections.agent-help.js";
 import {type CatalogueParseResult, type CatalogueParserItem, parseCatalogue} from "@creatureslsp/catalogue/core";
 import {createCatalogueParseResultGetter} from "./inspections/catalogue.parse-result-async.js";
+import {CodeActionKind} from "vscode-languageserver";
 
 type Action = Command | CodeAction;
 
@@ -105,6 +106,7 @@ const addMalformedAgentHelpActions: ActionCreator = async (
         title: `Set to "${expected}"`,
         diagnostics: [diagnostic],
         isPreferred: true,
+        kind: CodeActionKind.QuickFix,
         edit: {
             changes: {
                 [documentURI]: [
