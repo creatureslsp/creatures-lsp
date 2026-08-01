@@ -109,7 +109,7 @@ export class SemanticTokensWalker implements CatalogueTreeVisitor {
         }
         const lastChar = token.text.length ? token.text[token.text.length - 1] : undefined;
         this.tokens.push({
-            range: toSemanticRange(token.textRange, lastChar === "\"" || lastChar === "'" ? -1 : 0),
+            range: toSemanticRange(token.textRange),
             tokenType: CatalogueSemanticTokensTypes.STRING,
             modifiers: [CatalogueSemanticTokenModifiers.STRING_VALUE]
         });
@@ -117,7 +117,7 @@ export class SemanticTokensWalker implements CatalogueTreeVisitor {
     
     readonly onTagName = (token: CatalogueStringValue) => {
         this.tokens.push({
-            range: toSemanticRange(token.textRange),
+            range: toSemanticRange(token.textRange, 1),
             tokenType: CatalogueSemanticTokensTypes.TAG_NAME,
             modifiers: []
         });
