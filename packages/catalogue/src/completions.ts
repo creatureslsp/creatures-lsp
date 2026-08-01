@@ -54,7 +54,7 @@ export async function getCatalogueCompletionItems(
         cursor = getCatalogueCursor(
             parseResult,
             position.line,
-            position.character, // Math.max(position.character - 1, 0),
+            position.character - 1, // Math.max(position.character - 1, 0),
         )
     } catch (e) {
         const error = e instanceof Error ? e.message +"\n" + e.stack : e;
