@@ -48,24 +48,24 @@ import type {
 } from "vscode-languageserver-types";
 
 import {getCommands} from "./commands.js";
-import {
-    type AutocompleteHint,
-    type BinaryVal,
-    type ByteString,
-    type C1eStringVal,
-    type C2eStringVal,
-    type Caos2Comment,
-    type CharVal,
-    type CommandToken,
-    type DdePictVal,
-    type EqJoinVal,
-    type EqOpVal,
-    type FloatVal,
-    type IndexedVarVal,
-    type IntVal,
-    type TokenVal,
-    type CaosParserItem,
-    type ListBrace,
+import type {
+    AutocompleteHint,
+    BinaryVal,
+    ByteString,
+    C1eStringVal,
+    C2eStringVal,
+    Caos2Comment,
+    CharVal,
+    CommandToken,
+    DdePictVal,
+    EqJoinVal,
+    EqOpVal,
+    FloatVal,
+    IndexedVarVal,
+    IntVal,
+    TokenVal,
+    CaosParserItem,
+    ListBrace,
 } from "@creatureslsp/caos-kt/caos-core";
 import {
     type ICaosContextListener,
@@ -466,7 +466,7 @@ function addStringDecorations(tokens: SemanticToken[], call: CommandCall) {
                 null,
                 SemanticTokensTypes.STRING_ESCAPE_CHARACTER
             );
-        } else if (argument.typeId === ANIMATION_TYPE_ID || argument.typeId === BYTE_STRING_TYPE_ID) {
+        } else if (typeId === ANIMATION_TYPE_ID || typeId === BYTE_STRING_TYPE_ID) {
             expandStringComponents(
                 tokens,
                 argument.text,
